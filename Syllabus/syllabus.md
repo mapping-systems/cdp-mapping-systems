@@ -38,7 +38,8 @@ Getting started- IDE, environment, loading, and visualizing data
 - Projections
 - Vector data types
 
-	**Exercise** [[00_Getting Started]] (to be completed by next class)
+	**Exercise** [Getting Started](/Assignment_Descriptions/00_Getting_Started.md) (to be completed by next class)
+
 	**Readings**
 	- (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
@@ -46,10 +47,11 @@ Getting started- IDE, environment, loading, and visualizing data
 - Explore spatial and non-spatial attributes of tax lot dataset, MapPLUTO
 - Create static and interactive visualizations of dataset
 - Saving data
-	**Exercise:** [[01_Loading_Visualizing]]
+  
+	**Exercise:** [01_Loading and visualizing data](/Assignment_Descriptions/01_Loading_Visualizing.md)
 	
 ### Week 02
-Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotlib`, and `lonboard
+Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotlib`, and `lonboard`
 #### Class 03: The power of mapping
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
@@ -65,7 +67,9 @@ Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotl
 
 #### Class 04: Geoprocessing (Tutorial)
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
-	**Exercise:** [[02_Geoprocessing]]
+  
+	**Exercise:** [Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
+
 	**Final Project Deliverable**: Research question and draft data manifest due
 
 
@@ -86,7 +90,9 @@ Ways to think about and measure distance and spatial relatedness
 #### Class 06: Measuring Distance (Tutorial)
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Avery to local points of interest
 - **Desk crits** on final projects
-	**Exercise:** [[04_Networks]]
+  
+	**Exercise:** [Networks](/Assignment_Descriptions/03_Networks.md)
+
 	**Final Project Deliverable:** Conceptual methodology due
 
 ### Week 04
@@ -100,6 +106,8 @@ Raster analysis, STAC specification, change over time
 - **Desk Crits** + checking in
 
 	**Readings**
+	- Couclelis, H., 1992. People manipulate objects (but cultivate fields): Beyond the raster-vector debate in GIS, in: Frank, A.U., Campari, I., Formentini, U. (Eds.), Theories and Methods of Spatio-Temporal Reasoning in Geographic Space, Lecture Notes in Computer Science. Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 65–77. [https://doi.org/10.1007/3-540-55966-3_3](https://doi.org/10.1007/3-540-55966-3_3)
+	- Homer, C., Dewitz, J., Jin, S., Xian, G., Costello, C., Danielson, P., Gass, L., Funk, M., Wickham, J., Stehman, S., Auch, R., Riitters, K., 2020. Conterminous United States land cover change patterns 2001–2016 from the 2016 National Land Cover Database. ISPRS Journal of Photogrammetry and Remote Sensing 162, 184–199. [https://doi.org/10.1016/j.isprsjprs.2020.02.019](https://doi.org/10.1016/j.isprsjprs.2020.02.019)
 
 
 #### Class 08: Supervised classification using earth observation (EO) data
