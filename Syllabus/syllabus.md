@@ -1,5 +1,3 @@
-# Mapping Systems
-
 ## Introduction
 
 *Mapping Systems* will introduce CDP students to programming concepts and methods for spatial analysis, as well as their role in the production and interpretation of spatial data. 
@@ -12,7 +10,7 @@ The course will require students to complete exercises to gain proficiency in sp
 
 ##  Course Organization / Communication
 
-Class meets on Tuesdays and Thursday at **xx** from 6-8pm. Weeks will generally be organized as follows:
+Class meets on Tuesdays and Thursday at **xx_where_xx** from 6-8pm. Weeks will generally be organized as follows:
 **Tuesday**: Lecture, reading discussion, review of technical concepts
 **Thursday**: Tutorials, desk crits for exercises and final project
 
@@ -32,7 +30,7 @@ Office hours are by appointment, and preferable on Tuesday or Thursdays before o
 ## Schedule
 
 ### Week 01
-Getting started
+Getting started- IDE, environment, loading, and visualizing data
 #### Class 01: Introductions
 - Introductions, review of syllabus
 - Orientation to course Github
@@ -40,56 +38,68 @@ Getting started
 - Projections
 - Vector data types
 
-	**Exercise**: Install VSCode, create Python environment, join course Github (details tbd)
-
-	**Readings**: [tk]
+	**Exercise** [[00_Getting Started]] (to be completed by next class)
+	**Readings**
+	- (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
 #### Class 02: Loading, exploring, visualizing data (Tutorial)
-- Explore spatial and non-spatial attributes of tax lot dataset
+- Explore spatial and non-spatial attributes of tax lot dataset, MapPLUTO
 - Create static and interactive visualizations of dataset
 - Saving data
-	**Exercise:** tk, but something like loading and choosing an attribute of a dataset of their choice, explaining what the attribute can and cannot tell us, mapping it, saving it out to a FGB or another format
+	**Exercise:** [[01_Loading_Visualizing]]
 	
 ### Week 02
 Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotlib`, and `lonboard
 #### Class 03: The power of mapping
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
-
-	**Exercise:** tk
-	**Readings**: tk
+  
+	**Readings**: 
+	- Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
+	- Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
+	- Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
+	- (optional) Batlle-Baptiste, W., Rusert, B. (Eds.), 2018. WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
+	- (optional) Entrikin, J.N., 19291. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2
+	- (optional) Lynch, K., 1960. The city and its elements, in: The Image of the City. The MIT Press, Cambridge MA.
+	- (optional) Tuan, Y.-F., 1975. Place: An Experiential Perspective. Geographical Review 65, 151–165. [https://doi.org/10.2307/213970](https://doi.org/10.2307/213970)
 
 #### Class 04: Geoprocessing (Tutorial)
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
+	**Exercise:** [[02_Geoprocessing]]
 	**Final Project Deliverable**: Research question and draft data manifest due
 
 
 ### Week 03
 
 Ways to think about and measure distance and spatial relatedness 
+
 #### Class 05: Distance, Adjacency, Networks
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
 - Case study: CitiBike usage before and during the COVID-19 pandemic
-	**Exercise:** tk
-	**Readings**: tk, Barabasi, the Citibike example paper
+	
+	**Readings**:
+	- Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom.
+	- Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
+  
 #### Class 06: Measuring Distance (Tutorial)
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Avery to local points of interest
 - **Desk crits** on final projects
-
+	**Exercise:** [[04_Networks]]
 	**Final Project Deliverable:** Conceptual methodology due
 
 ### Week 04
 
 Raster analysis, STAC specification, change over time
+
 #### Class 07: Measuring Change
 - Introduction to raster data
 - Historical context for measuring change over time
 - Case study: National Land Cover Dataset
 - **Desk Crits** + checking in
 
-##### Readings
+	**Readings**
 
 
 #### Class 08: Supervised classification using earth observation (EO) data
@@ -105,5 +115,5 @@ Wrapping up + the things we didn't get to
 - **Desk crits**
 
 #### Class 10: Final Presentations
-- Present final projects 
+- Final project presentations 
 
