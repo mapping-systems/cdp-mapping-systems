@@ -39,7 +39,6 @@ Getting started- IDE, environment, loading, and visualizing data
 - Vector data types
 
 	**Exercise** [Getting Started](/Assignment_Descriptions/00_Getting_Started.md) (to be completed by next class)
-
 	**Readings**
 	- (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
@@ -67,9 +66,9 @@ Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotl
 
 #### Class 04: Geoprocessing (Tutorial)
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
-  
-	**Exercise:** [Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
 
+ 	**Exercise:** [Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
+  
 	**Final Project Deliverable**: Research question and draft data manifest due
 
 
