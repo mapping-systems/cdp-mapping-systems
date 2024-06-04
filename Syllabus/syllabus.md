@@ -39,6 +39,7 @@ Getting started- IDE, environment, loading, and visualizing data
 - Vector data types
 
 	**Exercise** [Getting Started](/Assignment_Descriptions/00_Getting_Started.md) (to be completed by next class)
+  
 	**Readings**
 	- (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
@@ -46,7 +47,8 @@ Getting started- IDE, environment, loading, and visualizing data
 - Explore spatial and non-spatial attributes of tax lot dataset, MapPLUTO
 - Create static and interactive visualizations of dataset
 - Saving data
-	**Exercise:** [01_Loading_Visualizing](/Assignment_Descriptions/01_Loading_Visualizing.md)
+
+	**Exercise:** [01_Loading and visualizing data](/Assignment_Descriptions/01_Loading_Visualizing.md)
 	
 ### Week 02
 Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotlib`, and `lonboard
@@ -65,7 +67,9 @@ Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotl
 
 #### Class 04: Geoprocessing (Tutorial)
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
-	**Exercise:** [02_Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
+
+ 	**Exercise:** [Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
+  
 	**Final Project Deliverable**: Research question and draft data manifest due
 
 
@@ -86,7 +90,9 @@ Ways to think about and measure distance and spatial relatedness
 #### Class 06: Measuring Distance (Tutorial)
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Avery to local points of interest
 - **Desk crits** on final projects
+  
 	**Exercise:** [03_Networks](/Assignment_Descriptions/03_Networks.md)
+  
 	**Final Project Deliverable:** Conceptual methodology due
 
 ### Week 04
