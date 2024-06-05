@@ -4,7 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: complex_notebook_playground
+# - file: complex_notebook_playground
+- file: ../../Tutorials/01_vector_data_apis
+- file: ../../Tutorials/03_networks
