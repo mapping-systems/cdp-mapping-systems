@@ -1,0 +1,2014 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_vector_data_apis';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting Started</a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_vector_data_apis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01_vector_data_apis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting Started</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting Started</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-pluto-data">load PLUTO data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-exploration">basic exploration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-column">categorical column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-column">numeric column</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#and-now-mapping">and now, mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-map">static map</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-interactive-mapping">prep for interactive mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-categorical-variable">visualize a categorical variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-continuous-variable">visualize a continuous variable</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#save-data">save data</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Download MapPLUTO data from <a class="reference external" href="https://s-media.nyc.gov/agencies/dcp/assets/files/zip/data-tools/bytes/nyc_mappluto_24v1_1_shp.zip">NYC DCP</a></p></li>
+<li><p>Unzip the file and place contents in the <code class="docutils literal notranslate"><span class="pre">Data</span></code> directory at the root of this repo</p></li>
+<li><p>Make sure you have installed all requisite libraries by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> <strong><em>with your virtual environment activated</em></strong></p></li>
+</ul>
+</section>
+<section id="goals">
+<h1>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Load data from file</p></li>
+<li><p>Demonstrate downloading data via API</p></li>
+<li><p>Explore the data</p></li>
+<li><p>Compare tradeoffs between different methods of loading data</p></li>
+<li><p>Demonstrate tradeoffs in different file formats</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the bare minimum</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="c1"># more advanced</span>
+<span class="kn">import</span> <span class="nn">pyogrio</span> <span class="k">as</span> <span class="nn">ogr</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">lonboard</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">PolygonLayer</span>
+<span class="kn">from</span> <span class="nn">lonboard.colormap</span> <span class="kn">import</span> <span class="n">apply_categorical_cmap</span><span class="p">,</span> <span class="n">apply_continuous_cmap</span>
+<span class="kn">from</span> <span class="nn">palettable.colorbrewer.sequential</span> <span class="kn">import</span> <span class="n">PuRd_9</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LogNorm</span>
+
+<span class="kn">import</span> <span class="nn">pydeck</span> <span class="k">as</span> <span class="nn">pdk</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="load-pluto-data">
+<h1>load PLUTO data<a class="headerlink" href="#load-pluto-data" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pluto = gpd.read_file(&quot;../Data/nyc_mappluto_24v1_1_shp/MapPLUTO.shp&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">read_dataframe</span><span class="p">(</span><span class="s2">&quot;../../Data/nyc_mappluto_24v1_1_shp/MapPLUTO.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type(pluto_ogrio), type(pluto)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="basic-exploration">
+<h1>basic exploration<a class="headerlink" href="#basic-exploration" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Borough&#39;, &#39;Block&#39;, &#39;Lot&#39;, &#39;CD&#39;, &#39;BCT2020&#39;, &#39;BCTCB2020&#39;, &#39;CT2010&#39;,
+       &#39;CB2010&#39;, &#39;SchoolDist&#39;, &#39;Council&#39;, &#39;ZipCode&#39;, &#39;FireComp&#39;, &#39;PolicePrct&#39;,
+       &#39;HealthCent&#39;, &#39;HealthArea&#39;, &#39;Sanitboro&#39;, &#39;SanitDistr&#39;, &#39;SanitSub&#39;,
+       &#39;Address&#39;, &#39;ZoneDist1&#39;, &#39;ZoneDist2&#39;, &#39;ZoneDist3&#39;, &#39;ZoneDist4&#39;,
+       &#39;Overlay1&#39;, &#39;Overlay2&#39;, &#39;SPDist1&#39;, &#39;SPDist2&#39;, &#39;SPDist3&#39;, &#39;LtdHeight&#39;,
+       &#39;SplitZone&#39;, &#39;BldgClass&#39;, &#39;LandUse&#39;, &#39;Easements&#39;, &#39;OwnerType&#39;,
+       &#39;OwnerName&#39;, &#39;LotArea&#39;, &#39;BldgArea&#39;, &#39;ComArea&#39;, &#39;ResArea&#39;, &#39;OfficeArea&#39;,
+       &#39;RetailArea&#39;, &#39;GarageArea&#39;, &#39;StrgeArea&#39;, &#39;FactryArea&#39;, &#39;OtherArea&#39;,
+       &#39;AreaSource&#39;, &#39;NumBldgs&#39;, &#39;NumFloors&#39;, &#39;UnitsRes&#39;, &#39;UnitsTotal&#39;,
+       &#39;LotFront&#39;, &#39;LotDepth&#39;, &#39;BldgFront&#39;, &#39;BldgDepth&#39;, &#39;Ext&#39;, &#39;ProxCode&#39;,
+       &#39;IrrLotCode&#39;, &#39;LotType&#39;, &#39;BsmtCode&#39;, &#39;AssessLand&#39;, &#39;AssessTot&#39;,
+       &#39;ExemptTot&#39;, &#39;YearBuilt&#39;, &#39;YearAlter1&#39;, &#39;YearAlter2&#39;, &#39;HistDist&#39;,
+       &#39;Landmark&#39;, &#39;BuiltFAR&#39;, &#39;ResidFAR&#39;, &#39;CommFAR&#39;, &#39;FacilFAR&#39;, &#39;BoroCode&#39;,
+       &#39;BBL&#39;, &#39;CondoNo&#39;, &#39;Tract2010&#39;, &#39;XCoord&#39;, &#39;YCoord&#39;, &#39;ZoneMap&#39;, &#39;ZMCode&#39;,
+       &#39;Sanborn&#39;, &#39;TaxMap&#39;, &#39;EDesigNum&#39;, &#39;APPBBL&#39;, &#39;APPDate&#39;, &#39;PLUTOMapID&#39;,
+       &#39;FIRM07_FLA&#39;, &#39;PFIRM15_FL&#39;, &#39;Version&#39;, &#39;DCPEdited&#39;, &#39;Latitude&#39;,
+       &#39;Longitude&#39;, &#39;Notes&#39;, &#39;Shape_Leng&#39;, &#39;Shape_Area&#39;, &#39;geometry&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Borough         object
+Block            int64
+Lot              int32
+CD               int32
+BCT2020         object
+                ...   
+Longitude      float64
+Notes           object
+Shape_Leng     float64
+Shape_Area     float64
+geometry      geometry
+Length: 95, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<section id="categorical-column">
+<h2>categorical column<a class="headerlink" href="#categorical-column" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">LandUse</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LandUse
+01    565933
+02    131623
+04     55966
+11     24904
+05     21260
+03     12916
+08     12052
+06      9431
+10      9344
+07      6033
+09      4708
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>🧐 What do those numbers mean? Let’s look at the <a class="reference external" href="https://s-media.nyc.gov/agencies/dcp/assets/files/pdf/data-tools/bytes/meta_mappluto.pdf">data dictionary</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now we can remap the numbers into something more meaningful</span>
+
+<span class="n">land_use_codes</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;01&quot;</span><span class="p">:</span> <span class="s2">&quot;One &amp; Two Family Buildings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;02&quot;</span><span class="p">:</span> <span class="s2">&quot;Multi-Family Walk-Up Buildings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;03&quot;</span><span class="p">:</span> <span class="s2">&quot;Multi-Family Elevator Buildings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;04&quot;</span><span class="p">:</span> <span class="s2">&quot;Mixed Residential &amp; Commercial Buildings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;05&quot;</span><span class="p">:</span> <span class="s2">&quot;Commercial &amp; Office Buildings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;06&quot;</span><span class="p">:</span> <span class="s2">&quot;Industrial &amp; Manufacturing&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;07&quot;</span><span class="p">:</span> <span class="s2">&quot;Transportation &amp; Utility&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;08&quot;</span><span class="p">:</span> <span class="s2">&quot;Public Facilities &amp; Institutions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;09&quot;</span><span class="p">:</span> <span class="s2">&quot;Open Space &amp; Outdoor Recreation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="s2">&quot;Parking Facilities&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;11&quot;</span><span class="p">:</span> <span class="s2">&quot;Vacant Land&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">LandUse</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">land_use_codes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LandUse
+One &amp; Two Family Buildings                  565933
+Multi-Family Walk-Up Buildings              131623
+Mixed Residential &amp; Commercial Buildings     55966
+Vacant Land                                  24904
+Commercial &amp; Office Buildings                21260
+Multi-Family Elevator Buildings              12916
+Public Facilities &amp; Institutions             12052
+Industrial &amp; Manufacturing                    9431
+Parking Facilities                            9344
+Transportation &amp; Utility                      6033
+Open Space &amp; Outdoor Recreation               4708
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Total # of lots by land use type&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total # of lots by land use type&#39;)
+</pre></div>
+</div>
+<img alt="_images/8fc4db4c92b1a86d82f8691e431d022d172674b810e445ec152e9b840fc35d93.png" src="_images/8fc4db4c92b1a86d82f8691e431d022d172674b810e445ec152e9b840fc35d93.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;LandUse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">LotArea</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Total lot area by land use type&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total lot area by land use type&#39;)
+</pre></div>
+</div>
+<img alt="_images/1360803cb911229d495941a4130c846d4acb0e8928668d84d4ba0a5c9a00732e.png" src="_images/1360803cb911229d495941a4130c846d4acb0e8928668d84d4ba0a5c9a00732e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now the same but for building area</span>
+<span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;LandUse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">BldgArea</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Total building area by land use type&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total building area by land use type&#39;)
+</pre></div>
+</div>
+<img alt="_images/2245487347fff61becd1e857541eb7b472ad45b1b9dc36c142b07afd50d64e5f.png" src="_images/2245487347fff61becd1e857541eb7b472ad45b1b9dc36c142b07afd50d64e5f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot both lot and building area on the same plot with a secondary y-axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">by_lot_area</span> <span class="o">=</span> <span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;LandUse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">LotArea</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">by_lot_area</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+
+<span class="c1"># get order to apply below</span>
+<span class="n">order</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">by_lot_area</span><span class="o">.</span><span class="n">index</span><span class="p">)}</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Lot Area&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Land Use Type&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;LandUse&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">BldgArea</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">by_lot_area</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;none&quot;</span>
+<span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Building Area&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Total lot and building area by land use type&quot;</span><span class="p">)</span>
+
+<span class="c1"># add legends</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Lot Area&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Building Area&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1861b0d50&gt;
+</pre></div>
+</div>
+<img alt="_images/3685cb3b07a9c46f073c93bb171ba5b00453f19e35ce3f0c7d574094b7a830e4.png" src="_images/3685cb3b07a9c46f073c93bb171ba5b00453f19e35ce3f0c7d574094b7a830e4.png" />
+</div>
+</div>
+</section>
+<section id="numeric-column">
+<h2>numeric column<a class="headerlink" href="#numeric-column" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    856819.000000
+mean          2.357554
+std           2.012707
+min           0.000000
+25%           2.000000
+50%           2.000000
+75%           2.500000
+max         104.000000
+Name: NumFloors, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/8389a084bd48c8176e684945586b546ce480d15753bc81d7bb9e881bd4821570.png" src="_images/8389a084bd48c8176e684945586b546ce480d15753bc81d7bb9e881bd4821570.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;Borough&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &#39;NumFloors&#39;}, xlabel=&#39;Borough&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/534a00a929e3463bb466e2e0c17ae65cae759a00ccd2654f2cb9da0100f45269.png" src="_images/534a00a929e3463bb466e2e0c17ae65cae759a00ccd2654f2cb9da0100f45269.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">Borough</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="s2">&quot;MN&quot;</span><span class="p">)][</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/44df339b45a9979e81a05cbec1f32a7499a2cd8a057aac611469f0ad27819917.png" src="_images/44df339b45a9979e81a05cbec1f32a7499a2cd8a057aac611469f0ad27819917.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get clusters using kmeans</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pluto_ogrio</span><span class="p">[[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">]])</span>
+
+<span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;NumFloorsCluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pluto_ogrio</span><span class="p">[[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;NumFloorsCluster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">NumFloors</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>NumFloorsCluster</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>567252.0</td>
+      <td>1.698166</td>
+      <td>0.585285</td>
+      <td>0.00</td>
+      <td>1.67</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.30</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>247338.0</td>
+      <td>2.943488</td>
+      <td>0.452372</td>
+      <td>2.33</td>
+      <td>2.50</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.33</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>36095.0</td>
+      <td>5.809637</td>
+      <td>1.092616</td>
+      <td>4.50</td>
+      <td>5.00</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>10.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5177.0</td>
+      <td>15.718370</td>
+      <td>4.117019</td>
+      <td>11.00</td>
+      <td>12.00</td>
+      <td>15.0</td>
+      <td>18.0</td>
+      <td>27.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>957.0</td>
+      <td>39.288924</td>
+      <td>10.434286</td>
+      <td>28.00</td>
+      <td>32.00</td>
+      <td>36.0</td>
+      <td>44.0</td>
+      <td>104.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;BldgArea&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;NumFloorsCluster&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;tab10&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;NumFloors&#39;, ylabel=&#39;BldgArea&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/d569617367cc328555bef48b9cfb12ee69af647e12af4218e5a1827473a04337.png" src="_images/d569617367cc328555bef48b9cfb12ee69af647e12af4218e5a1827473a04337.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;NumFloorsCluster&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/f3217e165bd0ac9ea3ed70640e30106164f8b51547464bca8b86d9e79b2805bf.png" src="_images/f3217e165bd0ac9ea3ed70640e30106164f8b51547464bca8b86d9e79b2805bf.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="and-now-mapping">
+<h1>and now, mapping<a class="headerlink" href="#and-now-mapping" title="Link to this heading">#</a></h1>
+<section id="static-map">
+<h2>static map<a class="headerlink" href="#static-map" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;NYC MapPLUTO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;NYC MapPLUTO&#39;)
+</pre></div>
+</div>
+<img alt="_images/dfaee4e55a8233067a8a8254caf4c5d08b3841ff5c4d4b83065426556dd0c26a.png" src="_images/dfaee4e55a8233067a8a8254caf4c5d08b3841ff5c4d4b83065426556dd0c26a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;One &amp; Two Family Buildings&quot;</span><span class="p">:</span> <span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Multi-Family Walk-Up Buildings&quot;</span><span class="p">:</span> <span class="s2">&quot;#00ff00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Multi-Family Elevator Buildings&quot;</span><span class="p">:</span> <span class="s2">&quot;#0000ff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mixed Residential &amp; Commercial Buildings&quot;</span><span class="p">:</span> <span class="s2">&quot;#ff00ff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Commercial &amp; Office Buildings&quot;</span><span class="p">:</span> <span class="s2">&quot;#00ffff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Industrial &amp; Manufacturing&quot;</span><span class="p">:</span> <span class="s2">&quot;#ffff00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Transportation &amp; Utility&quot;</span><span class="p">:</span> <span class="s2">&quot;#808080&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Public Facilities &amp; Institutions&quot;</span><span class="p">:</span> <span class="s2">&quot;#800000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Open Space &amp; Outdoor Recreation&quot;</span><span class="p">:</span> <span class="s2">&quot;#008000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Parking Facilities&quot;</span><span class="p">:</span> <span class="s2">&quot;#000080&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Vacant Land&quot;</span><span class="p">:</span> <span class="s2">&quot;#800080&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span><span class="s2">&quot;LandUse&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">cmap</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">pluto_ogrio</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="c1"># legend_kwds={&quot;loc&quot;: &quot;upper left&quot;},</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;NYC MapPLUTO&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># populate legend items based on dict from above</span>
+<span class="n">legend_colors</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cmap</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">cmap</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">legend_colors</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x184a36850&gt;
+</pre></div>
+</div>
+<img alt="_images/7da9e37882e5a713a1d30b5865428eb6e0a6c46a55bac718c84a9dcd4b6f17dd.png" src="_images/7da9e37882e5a713a1d30b5865428eb6e0a6c46a55bac718c84a9dcd4b6f17dd.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;loc&quot;</span><span class="p">:</span> <span class="s2">&quot;upper left&quot;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;NYC MapPLUTO&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;NYC MapPLUTO&#39;)
+</pre></div>
+</div>
+<img alt="_images/c30a9aa131086ef036a261b7b98ba8a76543dc9510de75b5c45f0c575a1ee27d.png" src="_images/c30a9aa131086ef036a261b7b98ba8a76543dc9510de75b5c45f0c575a1ee27d.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prep-for-interactive-mapping">
+<h1>prep for interactive mapping<a class="headerlink" href="#prep-for-interactive-mapping" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio_wgs</span> <span class="o">=</span> <span class="n">pluto_ogrio</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;epsg:4326&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="visualize-a-categorical-variable">
+<h2>visualize a categorical variable<a class="headerlink" href="#visualize-a-categorical-variable" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap_rgb</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">cmap</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap_rgb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;One &amp; Two Family Buildings&#39;: [255, 0, 0],
+ &#39;Multi-Family Walk-Up Buildings&#39;: [0, 255, 0],
+ &#39;Multi-Family Elevator Buildings&#39;: [0, 0, 255],
+ &#39;Mixed Residential &amp; Commercial Buildings&#39;: [255, 0, 255],
+ &#39;Commercial &amp; Office Buildings&#39;: [0, 255, 255],
+ &#39;Industrial &amp; Manufacturing&#39;: [255, 255, 0],
+ &#39;Transportation &amp; Utility&#39;: [128, 128, 128],
+ &#39;Public Facilities &amp; Institutions&#39;: [128, 0, 0],
+ &#39;Open Space &amp; Outdoor Recreation&#39;: [0, 128, 0],
+ &#39;Parking Facilities&#39;: [0, 0, 128],
+ &#39;Vacant Land&#39;: [128, 0, 128],
+ &#39;Unknown&#39;: [0, 0, 0]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;Unknown&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/g5/b592wl6x12s0tx4jfw9f7_j40000gn/T/ipykernel_93610/961482650.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  pluto_ogrio_wgs[&quot;LandUse&quot;].fillna(&quot;Unknown&quot;, inplace=True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pluto_ogrio_wgs</span><span class="p">[[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]]</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">PolygonLayer</span><span class="o">.</span><span class="n">from_geopandas</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]],</span>
+    <span class="n">get_fill_color</span><span class="o">=</span><span class="n">apply_categorical_cmap</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_rgb</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "67cae395a0ef4eb488a155ab82596ca7", "version_major": 2, "version_minor": 1}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pluto_ogrio_wgs</span><span class="p">[[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]]</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">PolygonLayer</span><span class="o">.</span><span class="n">from_geopandas</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]],</span>
+    <span class="n">get_fill_color</span><span class="o">=</span><span class="n">apply_categorical_cmap</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_rgb</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e38a3cc4683d4f14b5e399239c4ac826", "version_major": 2, "version_minor": 1}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio_wgs</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Borough&#39;, &#39;Block&#39;, &#39;Lot&#39;, &#39;CD&#39;, &#39;BCT2020&#39;, &#39;BCTCB2020&#39;, &#39;CT2010&#39;,
+       &#39;CB2010&#39;, &#39;SchoolDist&#39;, &#39;Council&#39;, &#39;ZipCode&#39;, &#39;FireComp&#39;, &#39;PolicePrct&#39;,
+       &#39;HealthCent&#39;, &#39;HealthArea&#39;, &#39;Sanitboro&#39;, &#39;SanitDistr&#39;, &#39;SanitSub&#39;,
+       &#39;Address&#39;, &#39;ZoneDist1&#39;, &#39;ZoneDist2&#39;, &#39;ZoneDist3&#39;, &#39;ZoneDist4&#39;,
+       &#39;Overlay1&#39;, &#39;Overlay2&#39;, &#39;SPDist1&#39;, &#39;SPDist2&#39;, &#39;SPDist3&#39;, &#39;LtdHeight&#39;,
+       &#39;SplitZone&#39;, &#39;BldgClass&#39;, &#39;LandUse&#39;, &#39;Easements&#39;, &#39;OwnerType&#39;,
+       &#39;OwnerName&#39;, &#39;LotArea&#39;, &#39;BldgArea&#39;, &#39;ComArea&#39;, &#39;ResArea&#39;, &#39;OfficeArea&#39;,
+       &#39;RetailArea&#39;, &#39;GarageArea&#39;, &#39;StrgeArea&#39;, &#39;FactryArea&#39;, &#39;OtherArea&#39;,
+       &#39;AreaSource&#39;, &#39;NumBldgs&#39;, &#39;NumFloors&#39;, &#39;UnitsRes&#39;, &#39;UnitsTotal&#39;,
+       &#39;LotFront&#39;, &#39;LotDepth&#39;, &#39;BldgFront&#39;, &#39;BldgDepth&#39;, &#39;Ext&#39;, &#39;ProxCode&#39;,
+       &#39;IrrLotCode&#39;, &#39;LotType&#39;, &#39;BsmtCode&#39;, &#39;AssessLand&#39;, &#39;AssessTot&#39;,
+       &#39;ExemptTot&#39;, &#39;YearBuilt&#39;, &#39;YearAlter1&#39;, &#39;YearAlter2&#39;, &#39;HistDist&#39;,
+       &#39;Landmark&#39;, &#39;BuiltFAR&#39;, &#39;ResidFAR&#39;, &#39;CommFAR&#39;, &#39;FacilFAR&#39;, &#39;BoroCode&#39;,
+       &#39;BBL&#39;, &#39;CondoNo&#39;, &#39;Tract2010&#39;, &#39;XCoord&#39;, &#39;YCoord&#39;, &#39;ZoneMap&#39;, &#39;ZMCode&#39;,
+       &#39;Sanborn&#39;, &#39;TaxMap&#39;, &#39;EDesigNum&#39;, &#39;APPBBL&#39;, &#39;APPDate&#39;, &#39;PLUTOMapID&#39;,
+       &#39;FIRM07_FLA&#39;, &#39;PFIRM15_FL&#39;, &#39;Version&#39;, &#39;DCPEdited&#39;, &#39;Latitude&#39;,
+       &#39;Longitude&#39;, &#39;Notes&#39;, &#39;Shape_Leng&#39;, &#39;Shape_Area&#39;, &#39;geometry&#39;,
+       &#39;NumFloorsCluster&#39;, &#39;color&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pluto_ogrio_wgs</span><span class="p">[[</span><span class="s2">&quot;LandUse&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LandUse</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Public Facilities &amp; Institutions</td>
+      <td>POLYGON ((-74.01208 40.69205, -74.01215 40.692...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Multi-Family Walk-Up Buildings</td>
+      <td>POLYGON ((-74.00202 40.70791, -74.00198 40.707...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mixed Residential &amp; Commercial Buildings</td>
+      <td>POLYGON ((-74.00213 40.70784, -74.00199 40.707...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mixed Residential &amp; Commercial Buildings</td>
+      <td>POLYGON ((-74.00231 40.70776, -74.00224 40.707...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mixed Residential &amp; Commercial Buildings</td>
+      <td>POLYGON ((-74.00271 40.70731, -74.00278 40.707...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>856814</th>
+      <td>One &amp; Two Family Buildings</td>
+      <td>POLYGON ((-74.25065 40.50927, -74.25055 40.509...</td>
+    </tr>
+    <tr>
+      <th>856815</th>
+      <td>One &amp; Two Family Buildings</td>
+      <td>POLYGON ((-74.25009 40.50929, -74.25015 40.509...</td>
+    </tr>
+    <tr>
+      <th>856816</th>
+      <td>One &amp; Two Family Buildings</td>
+      <td>POLYGON ((-74.24997 40.50916, -74.25004 40.509...</td>
+    </tr>
+    <tr>
+      <th>856817</th>
+      <td>One &amp; Two Family Buildings</td>
+      <td>POLYGON ((-74.24983 40.50903, -74.24990 40.509...</td>
+    </tr>
+    <tr>
+      <th>856818</th>
+      <td>One &amp; Two Family Buildings</td>
+      <td>POLYGON ((-74.24971 40.50891, -74.24978 40.508...</td>
+    </tr>
+  </tbody>
+</table>
+<p>856819 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pluto_ogrio_wgs</span><span class="p">[</span><span class="n">pluto_ogrio_wgs</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Borough</th>
+      <th>Block</th>
+      <th>Lot</th>
+      <th>CD</th>
+      <th>BCT2020</th>
+      <th>BCTCB2020</th>
+      <th>CT2010</th>
+      <th>CB2010</th>
+      <th>SchoolDist</th>
+      <th>Council</th>
+      <th>...</th>
+      <th>Version</th>
+      <th>DCPEdited</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Notes</th>
+      <th>Shape_Leng</th>
+      <th>Shape_Area</th>
+      <th>geometry</th>
+      <th>NumFloorsCluster</th>
+      <th>color</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p>0 rows × 97 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot using pydeck</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+    <span class="s2">&quot;PolygonLayer&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pluto_ogrio_wgs</span><span class="p">),</span>
+    <span class="n">get_fill_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="n">pickable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">auto_highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="c1"># use_binary_transport=True,</span>
+<span class="p">)</span>
+
+<span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">40.7</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">74</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">layer</span><span class="p">],</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s2">&quot;pluto.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">66</span><span class="p">],</span> <span class="n">line</span> <span class="mi">15</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">40.7</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">74</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">r</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">layer</span><span class="p">],</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">r</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s2">&quot;pluto.html&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/deck.py:208,</span> in <span class="ni">Deck.to_html</span><span class="nt">(self, filename, open_browser, notebook_display, iframe_width, iframe_height, as_string, offline, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span> <span class="k">def</span> <span class="nf">to_html</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Write a file and loads it to an iframe, if in a Jupyter environment;</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span><span class="sd">     otherwise, write a file and optionally open it in a web browser</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="sd">         Returns absolute path of the file</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">208</span>     <span class="n">deck_json</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="n">f</span> <span class="o">=</span> <span class="n">deck_to_html</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">deck_json</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span>         <span class="n">mapbox_key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mapbox_key</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="k">return</span> <span class="n">f</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:101,</span> in <span class="ni">JSONMixin.to_json</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="sd">     Return a JSON-ified version of the Deck object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">101</span>     <span class="k">return</span> <span class="n">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:86,</span> in <span class="ni">serialize</span><span class="nt">(serializable)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">serializable</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Takes a serializable object and JSONifies it&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">serializable</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default_serialize</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/__init__.py:238,</span> in <span class="ni">dumps</span><span class="nt">(obj, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONEncoder</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="n">skipkeys</span><span class="o">=</span><span class="n">skipkeys</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="n">ensure_ascii</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span>     <span class="n">check_circular</span><span class="o">=</span><span class="n">check_circular</span><span class="p">,</span> <span class="n">allow_nan</span><span class="o">=</span><span class="n">allow_nan</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="n">indent</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">separators</span><span class="o">=</span><span class="n">separators</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="n">sort_keys</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">238</span>     <span class="o">**</span><span class="n">kw</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:202,</span> in <span class="ni">JSONEncoder.encode</span><span class="nt">(self, o)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span> <span class="n">chunks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_one_shot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+<span class="ne">--&gt; </span><span class="mi">202</span>     <span class="n">chunks</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span> <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:440,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>     <span class="k">del</span> <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:432,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>     <span class="k">yield from</span> <span class="n">_iterencode_list</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>     <span class="k">yield from</span> <span class="n">_iterencode_dict</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:326,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_list</span><span class="nt">(lst, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:440,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>     <span class="k">del</span> <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:432,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>     <span class="k">yield from</span> <span class="n">_iterencode_list</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>     <span class="k">yield from</span> <span class="n">_iterencode_dict</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:326,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_list</span><span class="nt">(lst, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:439,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Circular reference detected&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="ne">--&gt; </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:74,</span> in <span class="ni">default_serialize</span><span class="nt">(o, remap_function)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">o</span><span class="p">),</span> <span class="n">PydeckType</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">74</span> <span class="n">attrs</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span> <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">attrs</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="k">for</span> <span class="n">ignore_attr</span> <span class="ow">in</span> <span class="n">IGNORE_KEYS</span><span class="p">:</span>
+
+<span class="ne">TypeError</span>: vars() argument must have __dict__ attribute
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoData</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">LayersControl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span>
+    <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">40.7</span><span class="p">,</span> <span class="o">-</span><span class="mi">74</span><span class="p">),</span>
+    <span class="n">zoom</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">geo_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span>
+    <span class="n">geo_dataframe</span><span class="o">=</span><span class="n">pluto_ogrio_wgs</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span>
+    <span class="n">style</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fillColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#3366cc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;opacity&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">1.9</span><span class="p">,</span>
+        <span class="s2">&quot;dashArray&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fillOpacity&quot;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fillColor&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;fillOpacity&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Countries&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">geo_data</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LayersControl</span><span class="p">())</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7d2cd39449b04f4fa895e22c421ebd8e", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.372</span><span class="p">,</span> <span class="o">-</span><span class="mf">121.6972</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.3288</span><span class="p">,</span> <span class="o">-</span><span class="mf">121.6625</span><span class="p">],</span>
+    <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;Mt. Hood Meadows&quot;</span><span class="p">,</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">icon</span><span class="o">=</span><span class="s2">&quot;cloud&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.3311</span><span class="p">,</span> <span class="o">-</span><span class="mf">121.7113</span><span class="p">],</span>
+    <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;Timberline Lodge&quot;</span><span class="p">,</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.3300</span><span class="p">,</span> <span class="o">-</span><span class="mf">121.6823</span><span class="p">],</span>
+    <span class="n">popup</span><span class="o">=</span><span class="s2">&quot;Some Other Location&quot;</span><span class="p">,</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;info-sign&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_fea2cf5ea132649c99bfc234542f33d9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_fea2cf5ea132649c99bfc234542f33d9&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_fea2cf5ea132649c99bfc234542f33d9 = L.map(
+                &quot;map_fea2cf5ea132649c99bfc234542f33d9&quot;,
+                {
+                    center: [45.372, -121.6972],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_386ff74609c751c3387bb01a6ef21ecc = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_386ff74609c751c3387bb01a6ef21ecc.addTo(map_fea2cf5ea132649c99bfc234542f33d9);
+        
+    
+            var marker_d55c5c43a0add8e707cd4e3c01d2e685 = L.marker(
+                [45.3288, -121.6625],
+                {}
+            ).addTo(map_fea2cf5ea132649c99bfc234542f33d9);
+        
+    
+            var icon_a5de0f469dd970446ac0dc5dd2ed5119 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;cloud&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d55c5c43a0add8e707cd4e3c01d2e685.setIcon(icon_a5de0f469dd970446ac0dc5dd2ed5119);
+        
+    
+        var popup_0cc129dadd3b6f2b2be3f574df132c59 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3cbac4308e8f30ea4a91d97a640e4503 = $(`&lt;div id=&quot;html_3cbac4308e8f30ea4a91d97a640e4503&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Mt. Hood Meadows&lt;/div&gt;`)[0];
+                popup_0cc129dadd3b6f2b2be3f574df132c59.setContent(html_3cbac4308e8f30ea4a91d97a640e4503);
+            
+        
+
+        marker_d55c5c43a0add8e707cd4e3c01d2e685.bindPopup(popup_0cc129dadd3b6f2b2be3f574df132c59)
+        ;
+
+        
+    
+    
+            var marker_1cd0761f01d68093f555395c5474eb56 = L.marker(
+                [45.3311, -121.7113],
+                {}
+            ).addTo(map_fea2cf5ea132649c99bfc234542f33d9);
+        
+    
+            var icon_a627ded030905aef2d628db4b4a5846e = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_1cd0761f01d68093f555395c5474eb56.setIcon(icon_a627ded030905aef2d628db4b4a5846e);
+        
+    
+        var popup_9dbe064cf1c2926726f0114a2079b18e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_0c6c4d8185adc4660e9d033457d613c1 = $(`&lt;div id=&quot;html_0c6c4d8185adc4660e9d033457d613c1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Timberline Lodge&lt;/div&gt;`)[0];
+                popup_9dbe064cf1c2926726f0114a2079b18e.setContent(html_0c6c4d8185adc4660e9d033457d613c1);
+            
+        
+
+        marker_1cd0761f01d68093f555395c5474eb56.bindPopup(popup_9dbe064cf1c2926726f0114a2079b18e)
+        ;
+
+        
+    
+    
+            var marker_fad9f0efa8ef5813c28482d55151cc02 = L.marker(
+                [45.33, -121.6823],
+                {}
+            ).addTo(map_fea2cf5ea132649c99bfc234542f33d9);
+        
+    
+            var icon_af23d0b9eaa02f6519d324b7f3110e3e = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_fad9f0efa8ef5813c28482d55151cc02.setIcon(icon_af23d0b9eaa02f6519d324b7f3110e3e);
+        
+    
+        var popup_a09a989ec91932c40d33748c59815cd8 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f53dab6ff05eb9307eae2d6f5437bbc8 = $(`&lt;div id=&quot;html_f53dab6ff05eb9307eae2d6f5437bbc8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Some Other Location&lt;/div&gt;`)[0];
+                popup_a09a989ec91932c40d33748c59815cd8.setContent(html_f53dab6ff05eb9307eae2d6f5437bbc8);
+            
+        
+
+        marker_fad9f0efa8ef5813c28482d55151cc02.bindPopup(popup_a09a989ec91932c40d33748c59815cd8)
+        ;
+
+        
+    
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use pydeck to plot the data as a polygon layer using the LandUse column as the fill color</span>
+
+<span class="c1"># layer = pdk.Layer(</span>
+<span class="c1">#     &quot;GeoJsonLayer&quot;,</span>
+<span class="c1">#     data=pd.DataFrame(pluto_ogrio_wgs[[&quot;LandUse&quot;]]),</span>
+<span class="c1">#     get_fill_color=[255, 255, 0],</span>
+<span class="c1">#     pickable=True,</span>
+<span class="c1">#     auto_highlight=True,</span>
+<span class="c1">#     # use_binary_transport=True,</span>
+<span class="c1"># )</span>
+
+<span class="n">l2</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+        <span class="s2">&quot;TextLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pluto_ogrio_wgs</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">representative_point</span><span class="p">()),</span>
+        <span class="n">get_position</span><span class="o">=</span><span class="s2">&quot;geometry.coordinates&quot;</span><span class="p">,</span>
+        <span class="n">get_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+        <span class="n">get_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">],</span>
+        <span class="n">get_text</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">40.7</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">74</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">l2</span><span class="p">],</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s2">&quot;pluto.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">75</span><span class="p">],</span> <span class="n">line</span> <span class="mi">26</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">40.7</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">74</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">r</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">l2</span><span class="p">],</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">26</span> <span class="n">r</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s2">&quot;pluto.html&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/deck.py:208,</span> in <span class="ni">Deck.to_html</span><span class="nt">(self, filename, open_browser, notebook_display, iframe_width, iframe_height, as_string, offline, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span> <span class="k">def</span> <span class="nf">to_html</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Write a file and loads it to an iframe, if in a Jupyter environment;</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span><span class="sd">     otherwise, write a file and optionally open it in a web browser</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="sd">         Returns absolute path of the file</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">208</span>     <span class="n">deck_json</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="n">f</span> <span class="o">=</span> <span class="n">deck_to_html</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">deck_json</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span>         <span class="n">mapbox_key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mapbox_key</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="k">return</span> <span class="n">f</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:101,</span> in <span class="ni">JSONMixin.to_json</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="sd">     Return a JSON-ified version of the Deck object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">101</span>     <span class="k">return</span> <span class="n">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:86,</span> in <span class="ni">serialize</span><span class="nt">(serializable)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="n">serializable</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Takes a serializable object and JSONifies it&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">86</span>     <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">serializable</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default_serialize</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/__init__.py:238,</span> in <span class="ni">dumps</span><span class="nt">(obj, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONEncoder</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="n">skipkeys</span><span class="o">=</span><span class="n">skipkeys</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="n">ensure_ascii</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span>     <span class="n">check_circular</span><span class="o">=</span><span class="n">check_circular</span><span class="p">,</span> <span class="n">allow_nan</span><span class="o">=</span><span class="n">allow_nan</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="n">indent</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">separators</span><span class="o">=</span><span class="n">separators</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="n">sort_keys</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">238</span>     <span class="o">**</span><span class="n">kw</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:202,</span> in <span class="ni">JSONEncoder.encode</span><span class="nt">(self, o)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span> <span class="n">chunks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_one_shot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+<span class="ne">--&gt; </span><span class="mi">202</span>     <span class="n">chunks</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span> <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:440,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>     <span class="k">del</span> <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:432,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>     <span class="k">yield from</span> <span class="n">_iterencode_list</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>     <span class="k">yield from</span> <span class="n">_iterencode_dict</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:326,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_list</span><span class="nt">(lst, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:326,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_list</span><span class="nt">(lst, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:440,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>     <span class="k">del</span> <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:432,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>     <span class="k">yield from</span> <span class="n">_iterencode_list</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>     <span class="k">yield from</span> <span class="n">_iterencode_dict</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:326,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_list</span><span class="nt">(lst, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">326</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:406,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode_dict</span><span class="nt">(dct, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>             <span class="n">chunks</span> <span class="o">=</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">yield from</span> <span class="n">chunks</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="k">if</span> <span class="n">newline_indent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span>     <span class="n">_current_indent_level</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/json/encoder.py:439,</span> in <span class="ni">_make_iterencode.&lt;locals&gt;._iterencode</span><span class="nt">(o, _current_indent_level)</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Circular reference detected&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">markers</span><span class="p">[</span><span class="n">markerid</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
+<span class="ne">--&gt; </span><span class="mi">439</span> <span class="n">o</span> <span class="o">=</span> <span class="n">_default</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span> <span class="k">yield from</span> <span class="n">_iterencode</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">_current_indent_level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">if</span> <span class="n">markers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/anaconda3/envs/cdp/lib/python3.11/site-packages/pydeck/bindings/json_tools.py:74,</span> in <span class="ni">default_serialize</span><span class="nt">(o, remap_function)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">o</span><span class="p">),</span> <span class="n">PydeckType</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">74</span> <span class="n">attrs</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span> <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">attrs</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="k">for</span> <span class="n">ignore_attr</span> <span class="ow">in</span> <span class="n">IGNORE_KEYS</span><span class="p">:</span>
+
+<span class="ne">TypeError</span>: vars() argument must have __dict__ attribute
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize-a-continuous-variable">
+<h2>visualize a continuous variable<a class="headerlink" href="#visualize-a-continuous-variable" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pluto_ogrio_wgs</span><span class="p">[[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]]</span>
+
+<span class="n">normalizer</span> <span class="o">=</span> <span class="n">LogNorm</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">NumFloors</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">normalized_floors</span> <span class="o">=</span> <span class="n">normalizer</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NumFloors</span><span class="p">)</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">PolygonLayer</span><span class="o">.</span><span class="n">from_geopandas</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;NumFloors&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]],</span>
+    <span class="n">get_fill_color</span><span class="o">=</span><span class="n">apply_continuous_cmap</span><span class="p">(</span><span class="n">normalized_floors</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">PuRd_9</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b43eb13d281d444fb4c739f537e58a3c", "version_major": 2, "version_minor": 1}</script></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="save-data">
+<h1>save data<a class="headerlink" href="#save-data" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save out as fgb using geopandas</span>
+<span class="c1"># pluto_ogrio.to_file(&quot;..Data/nyc_mappluto_24v1_1_shp/mappluto.fgb&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ogr.write_dataframe(pluto_ogrio, &quot;../Data/nyc_mappluto_24v1_1_shp/mappluto_ogr.fgb&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting Started</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-pluto-data">load PLUTO data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-exploration">basic exploration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-column">categorical column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-column">numeric column</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#and-now-mapping">and now, mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-map">static map</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-interactive-mapping">prep for interactive mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-categorical-variable">visualize a categorical variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-continuous-variable">visualize a continuous variable</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#save-data">save data</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
