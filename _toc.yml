@@ -5,5 +5,5 @@ format: jb-book
 root: intro
 chapters:
 # - file: complex_notebook_playground
-- file: ../../Tutorials/01_vector_data_apis
-- file: ../../Tutorials/03_networks
+- file: Tutorials/01_vector_data_apis
+- file: Tutorials/03_networks
