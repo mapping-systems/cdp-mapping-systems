@@ -4,7 +4,6 @@
 format: jb-book
 root: Syllabus/syllabus
 chapters:
-  - file: Syllabus/syllabus
   - file: Assignments/readme
   - file: Assignment_Descriptions/00_Getting_Started
   - file: Assignment_Descriptions/01_Loading_Visualizing
