@@ -4,5 +4,13 @@
 format: jb-book
 root: Syllabus/syllabus
 chapters:
-- file: Tutorials/01_vector_data_apis
-- file: Tutorials/03_networks
+  - file: Syllabus/syllabus
+  - file: Assignments/readme
+  - file: Assignment_Descriptions/00_Getting_Started
+  - file: Assignment_Descriptions/01_Loading_Visualizing
+  - file: Assignment_Descriptions/02_Geoprocessing
+  - file: Assignment_Descriptions/03_Networks
+  - file: Tutorials/01_vector_data_apis
+  - file: Tutorials/03_networks
+  
+
