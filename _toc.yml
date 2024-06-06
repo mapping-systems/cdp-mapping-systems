@@ -2,8 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: Syllabus/syllabus
 chapters:
-# - file: complex_notebook_playground
 - file: Tutorials/01_vector_data_apis
 - file: Tutorials/03_networks
