@@ -48,7 +48,7 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build Book/output_book --toc ./_toc.yml
+          jupyter-book build Book/output_book --toc ../../_toc.yml
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact
