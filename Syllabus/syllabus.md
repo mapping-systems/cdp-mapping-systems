@@ -116,11 +116,11 @@ Raster analysis, STAC specification, change over time
 ### Week 05
 
 Wrapping up + the things we didn't get to
-#### Class 09: Looking forward
+#### Class 09: Final Presentations
+- Final project presentations part one
+
+
+#### Class 10: Final Presentations + Looking Forward
+- Final project presentations part two
 - Implications for practice
 - Connections to other kinds of computational design practices
-- **Desk crits**
-
-#### Class 10: Final Presentations
-- Final project presentations 
-
