@@ -8,6 +8,7 @@ The course will require students to complete exercises to gain proficiency in sp
 
 ## Learning Objectives
 
+
 At the most basic level, the goal of this class is to introduce students to mapping in Python and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 - Load, explore, and visualize spatial data in Python
 - Understand and apply basic geoprocessing techniques
@@ -16,8 +17,6 @@ At the most basic level, the goal of this class is to introduce students to mapp
 - Articulate some combination of the above in a final project
 
 Furthermore, students should develop a deeper understanding of how spatial data is used in decision-making, and challenges associated with using data to inform arguments (agency in mapping; objective vs subjective / abstract vs experiential).
-
-
 ##  Course Organization / Communication
 
 Class meets on Tuesdays and Thursday at **xx_where_xx** from 6-8pm. Weeks will generally be organized as follows:
@@ -32,6 +31,7 @@ All slides and tutorials will be posted to the course's [Github repository](http
 
 Office hours are by appointment, and preferable on Tuesday or Thursdays before or after class. Email me to schedule a time to chat.
 
+
 ## Final Project
 
 Your final project will require you to develop a spatial research question and methodology, find the appropriate datasets to explore your question, and then analyze and visualize your results. You will present your findings in a final presentation, and submit a Github Pages site that includes your presentation and the notebook(s) you used to conduct your analysis. More information can be found in the [final project description](/Assignment_Descriptions/05_Final_Project.md). 
@@ -44,6 +44,7 @@ Your final project will require you to develop a spatial research question and m
 - Week 04 Class 08: Desk crits
 - Week 05 Class 09: Final presentations
 - Week 05 Class 10: Final presentations
+
 
 
 ## Schedule
@@ -135,6 +136,7 @@ Raster analysis, STAC specification, change over time
 ### Week 05
 
 Wrapping up + the things we didn't get to
+
 #### Class 09: Final Presentations
 - Final project presentations part one
 
@@ -143,3 +145,4 @@ Wrapping up + the things we didn't get to
 - Final project presentations part two
 - Implications for practice
 - Connections to other kinds of computational design practices
+
