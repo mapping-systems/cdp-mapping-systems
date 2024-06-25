@@ -4,6 +4,7 @@ name: deploy-book
 on:
   push:
     branches:
+
       - master
       - main
       - feat/jupyter-book
@@ -13,6 +14,7 @@ on:
       #
       # paths:
       - Tutorials/sample-book/_build
+
   workflow_dispatch:
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
@@ -23,6 +25,7 @@ jobs:
       pages: write
       id-token: write
     steps:
+
       - uses: actions/checkout@v3
 
       # Install dependencies
@@ -60,3 +63,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
