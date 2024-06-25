@@ -1,12 +1,15 @@
 ## Introduction
 
+
 _Mapping Systems_ will introduce CDP students to programming concepts and methods for spatial analysis, as well as their role in the production and interpretation of spatial data.
 
 The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, the course will also introduce students to some historical and conceptual context, as well as case studies.
 
+
 The course will require students to complete exercises to gain proficiency in spatial analytic tools, and will culminate in a final project investigating a spatial research question.
 
 ## Learning Objectives
+
 
 At the most basic level, the goal of this class is to introduce students to mapping in Python and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 
@@ -18,7 +21,9 @@ At the most basic level, the goal of this class is to introduce students to mapp
 
 Furthermore, students should develop a deeper understanding of how spatial data is used in decision-making, and challenges associated with using data to inform arguments (agency in mapping; objective vs subjective / abstract vs experiential).
 
+
 ## Course Organization / Communication
+
 
 Class meets on Tuesdays and Thursday at **xx_where_xx** from 6-8pm. Weeks will generally be organized as follows:
 **Tuesday**: Lecture, reading discussion, review of technical concepts
@@ -27,6 +32,7 @@ Class meets on Tuesdays and Thursday at **xx_where_xx** from 6-8pm. Weeks will g
 Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting can live in the course Discord thread. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
 All slides and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems). All exercises, as well as final project progress, will be saved and managed in Github as well (details below).
+
 
 ## Office Hours
 
@@ -48,6 +54,7 @@ Your final project will require you to develop a spatial research question and m
 - Week 06 Class 11: Final presentations part one
 - Week 06 Class 12: Final presentations part two
 
+
 ## Schedule
 
 ### Week 01
@@ -55,6 +62,7 @@ Your final project will require you to develop a spatial research question and m
 Getting started- IDE, environment, loading, and visualizing data
 
 #### Class 01: Introductions
+
 
 - Introductions, review of syllabus
 - Orientation to course Github
@@ -106,10 +114,12 @@ Ways to think about and measure distance and spatial relatedness
 
 #### Class 05: Distance, Adjacency, Networks
 
+
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
 - Case study: CitiBike usage before and during the COVID-19 pandemic
+
 
   **Readings**:
 
@@ -125,6 +135,7 @@ Ways to think about and measure distance and spatial relatedness
 
   **Final Project Deliverable:** Conceptual methodology due
 
+
 ### Week 04
 
 Raster analysis, STAC specification, change over time
@@ -135,6 +146,7 @@ Raster analysis, STAC specification, change over time
 - Historical context for measuring change over time
 - Case study: National Land Cover Dataset
 - **Desk Crits** + checking in
+
 
   **Readings**
 
@@ -169,3 +181,4 @@ Wrapping up + the things we didn't get to
 - Final project presentations part two
 - Implications for practice
 - Connections to other kinds of computational design practices
+
