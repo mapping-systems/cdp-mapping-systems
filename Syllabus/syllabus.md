@@ -40,11 +40,13 @@ Your final project will require you to develop a spatial research question and m
 
 - Week 01 Class 01: Introduce final project
 - Week 02 Class 04: Research Question + Data Sources due
-- Week 03 Class 06: Methodology due
+- Week 03 Class 06: Conceptual methodology due
 - Week 04 Class 07: Desk crits
 - Week 04 Class 08: Desk crits
-- Week 05 Class 09: Final presentations
-- Week 05 Class 10: Final presentations
+- Week 05 Class 09: Practical methodology due
+- Week 05 Class 10: Desk crits
+- Week 06 Class 11: Final presentations part one
+- Week 06 Class 12: Final presentations part two
 
 ## Schedule
 
@@ -77,7 +79,7 @@ Getting started- IDE, environment, loading, and visualizing data
 
 Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotlib`, and `lonboard`
 
-#### Class 03: The power of mapping
+#### Class 03: Why we map
 
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
@@ -85,12 +87,10 @@ Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotl
   **Readings**:
 
   - Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
-  - Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
-  - Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
-  - (optional) Batlle-Baptiste, W., Rusert, B. (Eds.), 2018. WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
+  - Batlle-Baptiste, W., Rusert, B. (Eds.), 2018. WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
   - (optional) Entrikin, J.N., 19291. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2
-  - (optional) Lynch, K., 1960. The city and its elements, in: The Image of the City. The MIT Press, Cambridge MA.
-  - (optional) Tuan, Y.-F., 1975. Place: An Experiential Perspective. Geographical Review 65, 151–165. [https://doi.org/10.2307/213970](https://doi.org/10.2307/213970)
+  - Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
+  - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
 
 #### Class 04: Geoprocessing (Tutorial)
 
@@ -143,7 +143,7 @@ Raster analysis, STAC specification, change over time
 
 #### Class 08: Supervised classification using earth observation (EO) data
 
-- Use `geemap`, `rasterio`, `ipyleaflet` to find, download, classify, and analyze raster data
+- Use `leafmap`, `rasterio`, `ipyleaflet` to find, download, classify, composite, and analyze raster data
 - **Desk crits**
 
 ### Week 05
@@ -152,17 +152,19 @@ Preparing for final presentations
 
 #### Class 09: Desk crits / work session
 
+**Final Project Deliverable**: Practical methodology due (be prepared to talk through this with me during class)
+
 #### Class 10: Desk crits / work session
 
 ### Week 06
 
 Wrapping up + the things we didn't get to
 
-#### Class 09: Final Presentations
+#### Class 11: Final Presentations
 
 - Final project presentations part one
 
-#### Class 10: Final Presentations + Looking Forward
+#### Class 12: Final Presentations + Looking Forward
 
 - Final project presentations part two
 - Implications for practice
