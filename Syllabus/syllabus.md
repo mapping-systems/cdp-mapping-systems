@@ -1,15 +1,12 @@
 ## Introduction
 
-
 _Mapping Systems_ will introduce CDP students to programming concepts and methods for spatial analysis, as well as their role in the production and interpretation of spatial data.
 
 The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, the course will also introduce students to some historical and conceptual context, as well as case studies.
 
-
-The course will require students to complete exercises to gain proficiency in spatial analytic tools, and will culminate in a final project investigating a spatial research question.
+The course will require students to complete exercises to gain proficiency in spatial analytic tools in service of being able to use said tools in their computational design practice.
 
 ## Learning Objectives
-
 
 At the most basic level, the goal of this class is to introduce students to mapping in Python and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 
@@ -17,43 +14,22 @@ At the most basic level, the goal of this class is to introduce students to mapp
 - Understand and apply basic geoprocessing techniques
 - Measure distance and spatial relatedness
 - Analyze change over time
-- Articulate some combination of the above in a final project
 
 Furthermore, students should develop a deeper understanding of how spatial data is used in decision-making, and challenges associated with using data to inform arguments (agency in mapping; objective vs subjective / abstract vs experiential).
 
-
 ## Course Organization / Communication
-
 
 Class meets on Tuesdays and Thursday in 300 Buell South from 6-8pm. Weeks will generally be organized as follows:
 **Tuesday**: Lecture, reading discussion, review of technical concepts
-**Thursday**: Tutorials, desk crits for exercises and final project
+**Thursday**: Tutorials, desk crits for exercises and colloquium final project
 
-Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting can live in the course Discord thread. All other questions can be sent to me directly via email at mag2382@columbia.edu.
+Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting can live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
-All slides and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems). All exercises, as well as final project progress, will be saved and managed in Github as well (details below).
-
+All slides and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems). All exercises will be saved and managed via Github (details below).
 
 ## Office Hours
 
 Office hours are by appointment, and preferable on Tuesday or Thursdays before or after class. Email me to schedule a time to chat.
-
-## Final Project
-
-Your final project will require you to develop a spatial research question and methodology, find the appropriate datasets to explore your question, and then analyze and visualize your results. You will present your findings in a final presentation, and submit a Github Pages site that includes your presentation and the notebook(s) you used to conduct your analysis. More information can be found in the [final project description](/Assignment_Descriptions/05_Final_Project.md).
-
-### Final Project Schedule
-
-- Week 01 Class 01: Introduce final project
-- Week 02 Class 04: Research Question + Data Sources due
-- Week 03 Class 06: Conceptual methodology due
-- Week 04 Class 07: Desk crits
-- Week 04 Class 08: Desk crits
-- Week 05 Class 09: Practical methodology due
-- Week 05 Class 10: Desk crits
-- Week 06 Class 11: Final presentations part one
-- Week 06 Class 12: Final presentations part two
-
 
 ## Schedule
 
@@ -62,7 +38,6 @@ Your final project will require you to develop a spatial research question and m
 Getting started- IDE, environment, loading, and visualizing data
 
 #### Class 01: Introductions
-
 
 - Introductions, review of syllabus
 - Orientation to course Github
@@ -106,20 +81,16 @@ Geoprocessing / vector data analysis basics using `pyogrio`, `pandas`, `matplotl
 
   **Exercise:** [Geoprocessing](/Assignment_Descriptions/02_Geoprocessing.md)
 
-  **Final Project Deliverable**: Research question and draft data manifest due
-
 ### Week 03
 
 Ways to think about and measure distance and spatial relatedness
 
 #### Class 05: Distance, Adjacency, Networks
 
-
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
 - Case study: CitiBike usage before and during the COVID-19 pandemic
-
 
   **Readings**:
 
@@ -133,9 +104,6 @@ Ways to think about and measure distance and spatial relatedness
 
   **Exercise:** [Networks](/Assignment_Descriptions/03_Networks.md)
 
-  **Final Project Deliverable:** Conceptual methodology due
-
-
 ### Week 04
 
 Raster analysis, STAC specification, change over time
@@ -146,7 +114,6 @@ Raster analysis, STAC specification, change over time
 - Historical context for measuring change over time
 - Case study: National Land Cover Dataset
 - **Desk Crits** + checking in
-
 
   **Readings**
 
@@ -164,21 +131,17 @@ Preparing for final presentations
 
 #### Class 09: Desk crits / work session
 
-**Final Project Deliverable**: Practical methodology due (be prepared to talk through this with me during class)
-
 #### Class 10: Desk crits / work session
 
 ### Week 06
 
-Wrapping up + the things we didn't get to
+Wrapping up + developing future practice
 
-#### Class 11: Final Presentations
+#### Class 11: Wrapping up + Looking Forward
 
-- Final project presentations part one
+- tk
 
-#### Class 12: Final Presentations + Looking Forward
+#### Class 12: Wrapping up + Looking Forward
 
-- Final project presentations part two
 - Implications for practice
 - Connections to other kinds of computational design practices
-
