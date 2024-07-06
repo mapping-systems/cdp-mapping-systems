@@ -1,3 +1,9 @@
+# Mapping Systems Summer 2024
+
+Tuesday and Thursdays, 6-8pm @ 300 Buell South
+
+Instructor: Mario Giampieri (mag2382@columbia.edu)
+
 ## Introduction
 
 _Mapping Systems_ will introduce CDP students to programming concepts and methods for spatial analysis, as well as their role in the production and interpretation of spatial data.
@@ -73,7 +79,7 @@ Geoprocessing / vector data analysis basics using `geopandas`, `pyogrio`, `panda
 
   - Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
   - Batlle-Baptiste, W., Rusert, B. (Eds.), 2018. WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
-  - (optional) Entrikin, J.N., 19291. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2
+  - (optional) Entrikin, J.N., 19291. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2)
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
 
@@ -143,4 +149,4 @@ Preparing for final colloquium presentations + presentations on August 14th
 
 #### Class 11: Desk crits / work session
 
-- Work session for final prjects
+- Work session for final projects
