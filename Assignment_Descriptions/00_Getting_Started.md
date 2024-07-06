@@ -1,3 +1,4 @@
+# Getting Started
 1. Install [VSCode](https://code.visualstudio.com/)
 2. Clone the repository
 3. Create a new Python environment. I recommend using [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) for this, but you can also use virtualenv. This will protect our system Python installation from any changes we make.
