@@ -2,8 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: 
-  title: CDP Mapping Systems Summer 2024
+root: Syllabus/syllabus
 chapters:
   - file: Assignments/readme
     sections:
