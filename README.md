@@ -8,7 +8,6 @@ Repository for CDP Mapping Systems summer 2024 course
 - [Assignment Descriptions](Assignment_Descriptions): this folder contains the descriptions for all assignments in the course.
 - [Assignments](Assignments): You will submit your assignments here, based on the assignment descriptions.
 - [Tutorial Notebooks](Tutorials): this folder contains the tutorial notebooks for the course. These are the notebooks that we will work through in class.
-- [Book](Book): this folder will contain your assignment outputs and will compile into your course project website. You will never have to manually add anything to this folder; a github action will automatically update it with your assignment outputs.
 
 ## Getting started
 
