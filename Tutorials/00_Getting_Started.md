@@ -2,11 +2,11 @@
 
 1. Install [VSCode](https://code.visualstudio.com/)
 2. Create a new Python environment. I *strongly* recommend using [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) for this, but you can also use virtualenv. This will protect our system Python installation from any changes we make.
-   - If you're using Conda, you can create a new environment with the following command:
+   - If you're using Conda, you can create a new environment with the following command (with no brackets around the name). You could choose a name like `gis` or `cdp` for example:
       ```
       conda create -n [pick-a-name] python=3.12
       ```
-    Be sure to replace `[pick-a-name]` with a name of your choice for the environment. You can activate the environment with:
+    Be sure to replace `[pick-a-name]` with a name of your choice for the environment. You can activate the environment (with no brackets around the name) with:
       ```
       conda activate [pick-a-name]
       ```

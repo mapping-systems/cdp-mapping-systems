@@ -1,3 +1,14 @@
 {
-    "markdown-pdf.displayHeaderFooter": false
+  "markdown-pdf.displayHeaderFooter": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "black-formatter.showNotifications": "always",
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  // this is extra but will help
+  "notebook.diff.ignoreMetadata": true
 }
