@@ -1,6 +1,6 @@
-# Mapping Systems Summer 2024
+# Mapping Systems Summer 2025
 
-Tuesday and Thursdays, 6-8pm @ 300 Buell South
+Tuesday and Thursdays, 6-8pm @ 209 Fayerweather
 
 Instructor: Mario Giampieri (mag2382@columbia.edu)
 
@@ -78,6 +78,7 @@ Geoprocessing / vector data analysis basics using `geopandas`, `pyogrio`, `panda
   **Readings**:
 
   - Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
+  - Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation.
   - Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
   - (optional) Entrikin, J.N., 1991. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2)
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.

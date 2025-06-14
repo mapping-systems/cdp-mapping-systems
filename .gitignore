@@ -7,3 +7,6 @@ wip/
 Book/
 _config.yml
 _toc.yml
+
+# MyST build outputs
+_build
