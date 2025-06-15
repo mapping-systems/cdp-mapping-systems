@@ -114,10 +114,29 @@ Ways to think about and measure distance and spatial relatedness
   **Exercise:** [03_Networks](/Assignment_Descriptions/03_Networks.md)
 
 ### Week 04
+Web mapping, interactive visualization, and crowd-sourced information
+#### Class 07: Web mapping
+- Introduction to web mapping
+- Web 2.0 and the rise of interactive mapping
+- Case study: OpenStreetMap and the Humanitarian OpenStreetMap Team
+- Web map basic components 
+
+  **Readings**
+  - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+  - Haklay, M., Weber, P., 2008. OpenStreetMap: User-generated street maps. IEEE Pervasive Computing 7, 12–18. [https://doi.org/10.1109/MPRV.2008.80](https://doi.org/10.1109/MPRV.2008.80)
+  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
+
+#### Class 08: Web mapping (Tutorial)
+- Use `leafmap`, `ipyleaflet`, and `folium` to create interactive web maps
+- Loading data via API 
+- Launching a basic web map
+**Exercise:** [04_Web Mapping](/Assignment_Descriptions/04_Web_Mapping.md)
+
+### Week 05
 
 Raster analysis, STAC specification, change over time
 
-#### Class 07: Measuring Change
+#### Class 09: Measuring Change
 
 - Introduction to raster data
 - Historical context for measuring change over time
@@ -129,20 +148,10 @@ Raster analysis, STAC specification, change over time
   - Couclelis, H., 1992. People manipulate objects (but cultivate fields): Beyond the raster-vector debate in GIS, in: Frank, A.U., Campari, I., Formentini, U. (Eds.), Theories and Methods of Spatio-Temporal Reasoning in Geographic Space, Lecture Notes in Computer Science. Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 65–77. [https://doi.org/10.1007/3-540-55966-3_3](https://doi.org/10.1007/3-540-55966-3_3)
   - Homer, C., Dewitz, J., Jin, S., Xian, G., Costello, C., Danielson, P., Gass, L., Funk, M., Wickham, J., Stehman, S., Auch, R., Riitters, K., 2020. Conterminous United States land cover change patterns 2001–2016 from the 2016 National Land Cover Database. ISPRS Journal of Photogrammetry and Remote Sensing 162, 184–199. [https://doi.org/10.1016/j.isprsjprs.2020.02.019](https://doi.org/10.1016/j.isprsjprs.2020.02.019)
 
-#### Class 08: Supervised classification using earth observation (EO) data (Tutorial)
+#### Class 10: Supervised classification using earth observation (EO) data (Tutorial)
 
 - Use `leafmap`, `rasterio`, `ipyleaflet` to find, download, classify, composite, and analyze raster data
 - **Desk crits**
-
-### Week 05
-
-Wrapping up + developing future practice
-
-#### Class 09: Wrapping up + Looking Forward
-
-- Additional workshop on advanced topic or guest lecture (TBD based on class interest)
-
-#### Class 10: Desk crits / work session
 
 ### Week 06
 
