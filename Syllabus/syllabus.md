@@ -122,7 +122,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 - Web map basic components 
 
   **Readings**
-  - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
   - Haklay, M., Weber, P., 2008. OpenStreetMap: User-generated street maps. IEEE Pervasive Computing 7, 12–18. [https://doi.org/10.1109/MPRV.2008.80](https://doi.org/10.1109/MPRV.2008.80)
   - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
 

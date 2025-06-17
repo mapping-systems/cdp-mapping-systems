@@ -1,6 +1,6 @@
-# CDP Mapping Systems Summer 2024
+# CDP Mapping Systems Summer 2025
 
-Repository for CDP Mapping Systems summer 2024 course
+Repository for CDP Mapping Systems summer 2025 course
 
 ## Important Links
 
