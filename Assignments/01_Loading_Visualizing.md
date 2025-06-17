@@ -1,4 +1,4 @@
-# Loading and visualizing data
+# 01. Loading and visualizing data
 
 Load and visualize a dataset of interest, either from [NYC Open Data](https://opendata.cityofnewyork.us/) or elsewhere. (If you already have an idea of what your final colloquium project topic will be, this would be a good opportunity to get a head start on that).
 

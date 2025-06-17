@@ -127,7 +127,7 @@ Web mapping, interactive visualization, and crowd-sourced information
   - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
 
 #### Class 08: Web mapping (Tutorial)
-- Use `leafmap`, `ipyleaflet`, and `folium` to create interactive web maps
+- Use `leafleft`, and `maplibre` to create interactive web maps
 - Loading data via API 
 - Launching a basic web map
 **Exercise:** [04_Web Mapping](/Assignment_Descriptions/04_Web_Mapping.md)

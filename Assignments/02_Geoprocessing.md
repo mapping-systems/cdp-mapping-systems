@@ -1,4 +1,4 @@
-# Geoprocessing
+# 02. Geoprocessing
 
 Create a dataset that expresses a narrative from part of your daily life, either now or in the past. This can be based on a mental map of your experience in New York / another city, based on geolocated map tracks (i.e. Google Maps history), or some other source. Based on the data type (point, line, polygon), consider how it would or could relate to other datasets that lend themselves to describing your mental image of the city- subway routes, the location of open space, your favorite coffee cart, etc. We will spend time in the next class relating these kinds of datasets together. 
 - Use https://geojson.io/, https://play.placemark.io/, QGIS, or another software  to create your dataset

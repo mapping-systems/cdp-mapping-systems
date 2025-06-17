@@ -11,4 +11,4 @@ Repository for CDP Mapping Systems summer 2025 course
 
 ## Getting started
 
-Visit the [Getting Started](Tutorials/00_Getting_Started.md) tutorial notebook to set up your programming environment and get started with the course.
+Visit the [01. Setting up your environment](Tutorials/00_Getting_Started.md) tutorial notebook to set up your programming environment and get started with the course.
