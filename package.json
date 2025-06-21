@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "myst": "^0.0.1-alpha",
+    "mystmd": "^1.4.0"
+  }
+}
