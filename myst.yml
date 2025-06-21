@@ -39,7 +39,8 @@ site:
     favicon: favicon.ico
     navbar_title: CDP Mapping Systems  # <- This controls the top-left title
     footer: "© 2025 CDP Mapping Systems"  # <- This replaces the MyST footer text
+    logo: logo.svg
   nav:
-    - title: CDP Mapping Systems
-      url: https://mapping-systems.github.io/cdp-mapping-systems/
-    # logo: site_logo.png
+    # - title: CDP Mapping Systems
+      # url: https://mapping-systems.github.io/cdp-mapping-systems/
+  
