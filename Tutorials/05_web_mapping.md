@@ -143,3 +143,25 @@ fetch('https://data.cityofnewyork.us/resource/43nn-pn8j.geojson?cuisine_descript
     .catch(error => console.error('Error fetching data:', error));
 ```
 
+This code uses the `fetch` API to make a request to the NYC Open Data API endpoint for pizza restaurants. The `cuisine_description=Pizza` query parameter filters the data to only include pizza restaurants, and the `$limit=10000` parameter increases the maximum number of records returned to 10,000. We will then chain a series of `.then()` methods to process the data once it is returned. This is a common pattern in JavaScript for handling asynchronous operations like fetching data from an API. The first `.then()` method converts the response to JSON format, and the second `.then()` method will be used to process the data. The `.catch()` method will log any errors that occur during the fetch operation.
+
+Next we'll reshape the raw `JSON` that's returned into a format that Leaflet can understand. Copy and paste query above into your browser. You should see something like the following: 
+
+![Pizza API head](image-4.png)
+
+There's a lot of information here, including a `latitude` and `longitude` for each restaurant, but mapping libraries expect a specially-formatted `geometry` field. We can use an iterator to loop through the `features` array in the JSON response and create a new array of objects that contains the `geometry` and `properties` fields that Leaflet expects. 
+
+Add the following code to your `main.js` file, inside the second `.then()` method:
+
+```javascript
+    data.features.forEach(feature => {
+        feature.geometry = {
+            type: 'Point',
+            coordinates: [Number(feature.properties.longitude), Number(feature.properties.latitude)]
+        };
+    });
+```
+
+What we're doing is requesting *for each* feature, to return a new `geometry` object that contains the `type` (which is always `Point` for our purposes) and the `coordinates`, which we are converting to numbers from strings. This will allow Leaflet to understand the data and display it on the map.
+        
+
