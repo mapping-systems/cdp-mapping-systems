@@ -117,3 +117,29 @@ body {
 }
 ```
 
+## Adding data to the map
+Now that we have the basic structure of our web page and the map, we can add some data. In the next part of this tutorial, we will consider adding data from different source types, but for now we will add data from the New York City's Open Data portal API. We will load restaurant data and display it on the map as a point layer.
+
+Navigate to the [DOHMH Restaurant Inspection Results dataset](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/about_data) on the NYC Open Data portal. This dataset contains information about restaurant inspections in New York City, including the name of the restaurant, its address, and the inspection results.
+
+We can see on the open data portal's website that each dataset has an `Actions` dropdown, and within that there's an `API` option:
+
+![DOHMH Restaurants API page](image-3.png)
+
+The API endpoint given there is how we will programmatically access the data; instead of downloading and then serving the data from our website, we will simply make a request to this service and load from there. 
+
+However, we'll need to both filter the data to not exceed the maximum number of records returned (which is 1000) and to transform the data into a format that Leaflet can understand. We will use the `geojson` format, which is a common format for representing geographic data.
+
+To do this, we will use the `fetch` API in JavaScript to make a request to the API endpoint and then process the data. We will add this code to our `main.js` file.
+
+Add the following code to your `main.js` file, after the code that creates the map:
+
+```javascript
+// Fetch pizza restaurant data from the NYC Open Data API
+fetch('https://data.cityofnewyork.us/resource/43nn-pn8j.geojson?cuisine_description=Pizza&$limit=10000').then(response => response.json())
+    .then(data => {
+        // do something with the data
+    })
+    .catch(error => console.error('Error fetching data:', error));
+```
+
