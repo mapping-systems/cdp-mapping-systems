@@ -1,0 +1,119 @@
+# Making a web map (part 1)
+
+To this point, we have been working with data in Python and (mostly) visualizing it in our Jupyter notebooks. Now we will take the next step and create a series of files that together comprise a web map that we will then publish. This exercise will be done in two parts. In this first part, we will create the files that will be used to display the map and a basic dataset on a web page. In the second part, we will serve more complex data to our site and publish the map to a web server.
+
+Our map will consiste of three files, each of which performs a specific function:
+1. An HTML file (`index.html`) that will display the map and the data. This file will contain the *structure* of our web page, and will invoke the other two files.
+2. A JavaScript file (`main.js`) that will contain the code to create the map and add the data to it. This file will contain the *logic* of our web page.
+3. A CSS file (`style.css`) that will contain the styles for our web page. This file will contain the *style* of our web page.
+
+## 1. Create the HTML file
+We will start by creating the HTML file that will serve as the structure of our web page.
+Create a new file called `index.html` in your project directory and add the following code to it:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A super cool website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- we'll add content here later -->
+</body>
+```
+
+This code creates a basic HTML document with a title and the necessary meta tags for character encoding and responsive design. The `<body>` tag is currently empty, but we will add content to it later. We'll also add links to the JavaScript and CSS files that we will create in the next steps. The head is also where we can link to external libraries, which we will use to create our map.
+
+The two primary libraries we will use are:
+-`Leaflet`: Leaflet is a popular open-source JavaScript library for interactive maps. It provides an easy-to-use API for creating maps and adding layers, markers, and other features. We will use Leaflet to create our map and add data to it.
+- `Tailwind CSS`: Tailwind CSS is a utility-first CSS framework that allows us to create responsive and modern designs quickly. It provides a set of pre-defined classes that we can use to style our HTML elements.
+
+
+Per the [Leaflet documentation](https://leafletjs.com/download.html), we can include the library in our HTML file by adding the following lines to the `<head>` section:
+
+```html
+    <!-- previous head content... -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- add before the closing </head> tag -->
+``` 
+
+The first item, the `<script>` tag, includes the Leaflet JavaScript library, and the second item, the `<link>` tag, includes the Leaflet CSS file. This will allow us to use Leaflet to create our map. Together, these two lines will allow us to use Leaflet to create our map.
+
+Altogether, the `<head />` in your `index.html` file should look like this:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A super cool website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+```
+Note that you may need to adjust the version numbers in the URLs to match the latest version of Leaflet at the time you are working on this project. You can find the latest version on the [Leaflet download page](https://leafletjs.com/download.html).
+
+Now that we have the basic structure of our HTML file, we can move on to the next step, which is to create the JavaScript file that will contain the code to create the map and add data to it.
+
+## 2. Create the JavaScript file
+Next, we will create the JavaScript file that will contain the code to create the map and add data to it. Create a new file called `main.js` in your project directory and add the following code to it:
+```javascript
+// Create a map and set its view to a specific location and zoom level
+var map = L.map('map').setView([40.70491,-73.97144], 13);
+
+// Add a tile layer to the map (this is the base layer that provides the map imagery)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+```
+
+Let's break down what this code does:
+- The first line creates a map object using the `L.map` function from the Leaflet library, and sets the origin of the map (in the square brackets) to a specific latitude and longitude, as well as the zoom level (in this case, 13). The `map` identifier refers to the HTML element that will contain the map, which we will create in the next step.
+- The second line adds a tile layer to the map using the `L.tileLayer` function. This layer provides the base map imagery, which in this case is sourced from OpenStreetMap. We will return to this later to add more layers to our map. As you can see, we are instructing that this be added to our map (`addTo(map)`).
+
+Return to your `index.html` file and add a `<div>` element inside the `<body>` tag to serve as the container for the map. This is where the map will be displayed. We will also invoke the `main.js` file at the end of our `body` section. Add the following code inside the `<body>` tag:
+
+```html
+<body>
+    <div id="map" style="height: 100vh;"></div>
+    <script src="main.js"></script>
+</body>
+```
+
+For now, we are setting the height of the map to `100vh`, which translates to 100 view height units (i.e. take up the entire view height) but you can adjust this value as needed. The `id` attribute of the `<div>` element is set to `map`, which matches the identifier we used in the JavaScript code to create the map. Later we will pull this out into a separate CSS file to style it further.
+
+Ok, now let's take a look at what we have so far. To view your web map, make sure you have installed the [Live Server extension in VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and then right-click on the `index.html` file and select "Open with Live Server". This will start a local web server and open your web map in a new browser tab.
+
+
+You should see the following map displayed in your browser:
+![Basic web map](image-1.png)
+
+You should be able to pan and zoom the map. Although this is a very basic example, we are leveraging some important web technologies to create an interactive map, namely, we are requesting map tiles from a remote server (OpenStreetMap) and displaying them in our web browser using JavaScript (in <30 total lines of code no less!).
+
+## 3. Create the CSS file
+Finally, we will create a CSS file to style our web page. There is a whole wide world of styling available to us, but for now we'll just clean up a few minor items to get started. You may have noticed that there is a bit of white space around the map in the browser. This is because the default margin and padding for the `<body>` element is set to 8px in most browsers. We can remove this by adding some CSS to our page.
+
+![Default browser margin](image-2.png)
+
+It's a minor detail, but it can be distracting when working with maps. We can also set the font family for the page to something more modern and readable. We'll also refactor the `map` element to not have in-line styles, but rather to use the `id` identifier `#` to refer to it in our css file. Note that `body` doesn't need any identifier, as it is a global element that applies to the entire page. (CSS `classes` use the `.` identifier, for example, but we will not be using those yet).
+
+Create a new file called `style.css` in your project directory and add the following code to it:
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+```
+

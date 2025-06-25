@@ -32,6 +32,7 @@ project:
         - file: Tutorials/02_geoprocessing.ipynb
         - file: Tutorials/03_networks.ipynb
         - file: Tutorials/04_change.ipynb
+        - file: Tutorials/05_web_mapping.md
     
 site:
   template: book-theme 
