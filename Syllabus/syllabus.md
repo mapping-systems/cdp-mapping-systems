@@ -13,6 +13,7 @@ The course will focus on building proficiency in Python-based workflows focused 
 The course will require students to complete weekly exercises to gain proficiency in spatial analytic tools in service of being able to use said tools in their computational design practice. There will also be a final project in which students will apply the tools and methods learned in class, described in more detail below.
 
 ## Final Project
+
 to come!
 
 ## Learning Objectives
@@ -95,9 +96,52 @@ Geoprocessing / vector data analysis basics using `geopandas`, `pandas`, `matplo
 
 ### Week 03
 
+Web mapping, interactive visualization, and crowd-sourced information
+
+#### Class 05: Web mapping part 1
+
+- Introduction to web mapping
+- Web 2.0 and the rise of interactive mapping
+- Web map basic components
+
+  **Readings**
+
+  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+
+#### Class 06: Web mapping (Tutorial part 1)
+
+- Use `leafleft` to create interactive web maps
+- Loading data via API
+- Launching a basic web map
+  **Exercise:** [04_Web Mapping](/Assignments/04_Web_Mapping.md)
+
+### Week 04
+
+APIs and website deployment
+
+#### Class 07: Web mapping part 2
+
+- Data production and governance
+- Elements of an API
+- Case study: OpenStreetMap and the Humanitarian OpenStreetMap Team
+- **Desk Crits** + checking in
+
+  **Readings**
+
+  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
+  - Haklay, M., Weber, P., 2008. OpenStreetMap: User-generated street maps. IEEE Pervasive Computing 7, 12–18. [https://doi.org/10.1109/MPRV.2008.80](https://doi.org/10.1109/MPRV.2008.80)
+
+#### Class 08: Developing an API and site deployment (Tutorial)
+
+- Use `supabase` to create a simple API
+- Deploy a simple website using `github pages`, `cloudflare`, or `render`
+- **Desk crits**
+
+### Week 05
+
 Ways to think about and measure distance and spatial relatedness
 
-#### Class 05: Distance, Adjacency, Networks
+#### Class 09: Distance, Adjacency, Networks
 
 - Euclidean and network distance
 - Introduction to graph theory
@@ -106,54 +150,15 @@ Ways to think about and measure distance and spatial relatedness
 
   **Readings**:
 
-  - Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) 
+  - Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
 
-#### Class 06: Measuring Distance (Tutorial)
+#### Class 10: Measuring Distance (Tutorial)
 
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Fayerweather to local points of interest
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [03_Networks](/Assignments/03_Networks.md)
-
-### Week 04
-Web mapping, interactive visualization, and crowd-sourced information
-#### Class 07: Web mapping part 1
-- Introduction to web mapping
-- Web 2.0 and the rise of interactive mapping
-- Web map basic components 
-
-  **Readings**
-  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
-  
-
-#### Class 08: Web mapping (Tutorial part 1)
-- Use `leafleft` to create interactive web maps
-- Loading data via API 
-- Launching a basic web map
-**Exercise:** [04_Web Mapping](/Assignments/04_Web_Mapping.md)
-
-### Week 05
-
-APIs and website deployment
-
-#### Class 09: Web mapping part 2
-
-- Data production and governance
-- Elements of an API
-- Case study: OpenStreetMap and the Humanitarian OpenStreetMap Team
-- **Desk Crits** + checking in
-
-  **Readings**
-  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
-  - Haklay, M., Weber, P., 2008. OpenStreetMap: User-generated street maps. IEEE Pervasive Computing 7, 12–18. [https://doi.org/10.1109/MPRV.2008.80](https://doi.org/10.1109/MPRV.2008.80)
-  
-
-#### Class 10: Developing an API and site deployment (Tutorial)
-
-- Use `supabase` to create a simple API
-- Deploy a simple website using `github pages`, `cloudflare`, or `render`
-- **Desk crits**
 
 ### Week 06
 
