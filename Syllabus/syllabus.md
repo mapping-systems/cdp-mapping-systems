@@ -6,36 +6,36 @@ Instructor: Mario Giampieri (mag2382@columbia.edu)
 
 ## Introduction
 
-_Mapping Systems_ will introduce CDP students to programming concepts and methods for spatial analysis, as well as their role in the production and interpretation of spatial data.
+_Mapping Systems_ introduces CDP students to programming concepts and methods for spatial analysis, using urban planning challenges as a basis for learning. The course will also explore the social, political, and ethical implications of mapping technologies, as well as our role as practitioners in the production and interpretation of spatial data.
 
-The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, the course will also introduce students to some historical and conceptual context, as well as case studies.
+The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, we will maintain a critical perspective and also introduce students to some historical and conceptual context, as well as case studies.
 
-The course will require students to complete weekly exercises to gain proficiency in spatial analytic tools in service of being able to use said tools in their computational design practice. There will also be a final project in which students will apply the tools and methods learned in class, described in more detail below.
+The course will require students to complete weekly exercises to gain proficiency in spatial analytic methods in service of being able to use said methods in their computational design practice. Students will be asked to further develop one exercise into a final project, described in more detail below.
 
 ## Final Project
 
-to come!
+The final project will expand upon one of the exercises and further explore the methods and tools used. This may mean conducting a more in-depth analysis of a dataset, applying the methods to a different (and/or multiple) dataset, or extending the functionality of web-based visualizations. You will be asked to diagram your project, write a short description of your goals, and reflect on how you intend to further explore these methods through the following semesters.
 
 ## Learning Objectives
 
 At the most basic level, the goal of this class is to introduce students to mapping in Python and Javascript and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 
-- Load, explore, and visualize spatial data in Python
+- Load, explore, and visualize spatial data in Python and Javascript
 - Understand and apply basic geoprocessing techniques
 - Measure distance and spatial relatedness
-- Analyze change over time
+- Understand the role of web mapping and APIs in spatial data visualization
 
 Furthermore, students should develop a deeper understanding of how spatial data is used in decision-making, and challenges associated with using data to inform arguments (agency in mapping; objective vs subjective / abstract vs experiential).
 
 ## Course Organization / Communication
 
 Class meets on Tuesdays and Thursdays in 200 Fayerweather from 6-8pm. Weeks will generally be organized as follows:
-**Tuesday**: Lecture, reading discussion, review of technical concepts
-**Thursday**: Technical tutorials and desk crits
+- **Tuesday**: Lecture, reading discussion, review of technical concepts
+- **Thursday**: Technical tutorials and desk crits
 
-Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting can live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
+Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting should live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
-All slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems). All exercises will be saved and managed via Github (details below).
+All slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems) (i.e. this website). All exercises will be saved and managed via Github (details below).
 
 ## Office Hours
 
@@ -45,7 +45,7 @@ Office hours are by appointment on Fridays, or before class on Tuesday or Thursd
 
 ### Week 01
 
-Getting started- IDE, environment, loading and visualizing data
+Introductions + getting started: IDE and environment setup, loading and visualizing data
 
 #### Class 01: Introductions
 
@@ -63,6 +63,7 @@ Getting started- IDE, environment, loading and visualizing data
 
 #### Class 02: Loading, exploring, visualizing data (Tutorial)
 
+- [Tutorial](/Tutorials/01_vector_data_apis.ipynb) on loading, exploring, and visualizing data using `geopandas`, `pandas`, `matplotlib`, `lonboard`, and `folium`
 - Finding open data for New York City
 - Explore spatial and non-spatial attributes of tax lot dataset, `MapPLUTO`
 - Create static and interactive visualizations of the dataset
@@ -106,7 +107,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   **Readings**
 
-  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], n.d. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
 
 #### Class 06: Web mapping (Tutorial part 1)
 
@@ -167,3 +168,4 @@ Preparing for final colloquium presentations + presentations on August 6th
 #### Class 11: Desk crits / work session
 
 - Work session for final projects
+- Wrapping up and looking forward
