@@ -1,7 +1,8 @@
-# 00. A Note on syntax
-Throughout this site, you will see code snippets that are formatted in a specific way. This is done to make it easier to read and understand the code. Some examples include:
-- `# This is a comment`: This is a comment in Python. Comments are used to explain what the code does and are ignored by the Python interpreter. It is good practice to leave useful notes in the code to help others (and yourself) understand what the code does.
-- `[some-reference-here]`: Items in the code surrounded by brackets are cases where you should replace the contents, *including the brackets*, with another value. For example, if you see `[pick-a-name]`, you should replace it with a name of your choice, such as `gis` or `cdp`. The brackets are not part of the code and should not be included in your code.
+# 00. Getting Started
+> ### 00. A Note on syntax
+> Throughout this site, you will see code snippets that are formatted in a specific way. This is done to make it easier to read and understand the code. Some examples include:
+> - `# this is a comment in python`. Similarly, `// this is a comment in javascript`. Comments are used to explain what the code does and are ignored by the Python interpreter. It is good practice to leave useful notes in the code to help others (and yourself) understand what the code does.
+> - `[some-reference-here]`: Items in the code surrounded by brackets are cases where you should replace the contents, *including the brackets*, with another value. For example, if you see `[pick-a-name]`, you should replace it with a name of your choice, such as `gis` or `cdp`. The brackets are not part of the code and should not be included in your code.
 
 
 # 01. Setting up your environment

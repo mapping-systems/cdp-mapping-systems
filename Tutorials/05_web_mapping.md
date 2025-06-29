@@ -29,9 +29,8 @@ Create a new file called `index.html` in your project directory and add the foll
 
 This code creates a basic HTML document with a title and the necessary meta tags for character encoding and responsive design. The `<body>` tag is currently empty, but we will add content to it later. We'll also add links to the JavaScript and CSS files that we will create in the next steps. The head is also where we can link to external libraries, which we will use to create our map.
 
-The two primary libraries we will use are: -`Leaflet`: Leaflet is a popular open-source JavaScript library for interactive maps. It provides an easy-to-use API for creating maps and adding layers, markers, and other features. We will use Leaflet to create our map and add data to it.
-
-- `Tailwind CSS`: Tailwind CSS is a utility-first CSS framework that allows us to create responsive and modern designs quickly. It provides a set of pre-defined classes that we can use to style our HTML elements.
+The primary library we will use is: 
+-`Leaflet`: Leaflet is a popular open-source JavaScript library for interactive maps. It provides an easy-to-use API for creating maps and adding layers, markers, and other features. We will use Leaflet to create our map and add data to it.
 
 Per the [Leaflet documentation](https://leafletjs.com/download.html), we can include the library in our HTML file by adding the following lines to the `<head>` section:
 
@@ -115,7 +114,7 @@ For now, we are setting the height of the map to `100vh`, which translates to 10
 Ok, now let's take a look at what we have so far. To view your web map, make sure you have installed the [Live Server extension in VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and then right-click on the `index.html` file and select "Open with Live Server". This will start a local web server and open your web map in a new browser tab.
 
 You should see the following map displayed in your browser:
-![Basic web map](image-1.png)
+![Basic web map](images/web-mapping/image-1.png)
 
 You should be able to pan and zoom the map. Although this is a very basic example, we are leveraging some important web technologies to create an interactive map, namely, we are requesting map tiles from a remote server (OpenStreetMap) and displaying them in our web browser using JavaScript (in <30 total lines of code no less!).
 
@@ -123,7 +122,7 @@ You should be able to pan and zoom the map. Although this is a very basic exampl
 
 Finally, we will create a CSS file to style our web page. There is a whole wide world of styling available to us, but for now we'll just clean up a few minor items to get started. You may have noticed that there is a bit of white space around the map in the browser. This is because the default margin and padding for the `<body>` element is set to 8px in most browsers. We can remove this by adding some CSS to our page.
 
-![Default browser margin](image-2.png)
+![Default browser margin](images/web-mapping/image-2.png)
 
 It's a minor detail, but it can be distracting when working with maps. We can also set the font family for the page to something more modern and readable. We'll also refactor the `map` element to not have in-line styles, but rather to use the `id` identifier `#` to refer to it in our css file. Note that `body` doesn't need any identifier, as it is a global element that applies to the entire page. (CSS `classes` use the `.` identifier, for example, but we will not be using those yet).
 
@@ -150,7 +149,7 @@ Navigate to the [DOHMH Restaurant Inspection Results dataset](https://data.cityo
 
 We can see on the open data portal's website that each dataset has an `Actions` dropdown, and within that there's an `API` option:
 
-![DOHMH Restaurants API page](image-3.png)
+![DOHMH Restaurants API page](images/web-mapping/image-3.png)
 
 The API endpoint given there is how we will programmatically access the data; instead of downloading and then serving the data from our website, we will simply make a request to this service and load from there.
 
@@ -176,7 +175,7 @@ This code uses the `fetch` API to make a request to the NYC Open Data API endpoi
 
 Next we'll reshape the raw `JSON` that's returned into a format that Leaflet can understand. Copy and paste query above into your browser. You should see something like the following:
 
-![Pizza API head](image-4.png)
+![Pizza API head](images/web-mapping/image-4.png)
 
 There's a lot of information here, including a `latitude` and `longitude` for each restaurant, but mapping libraries expect a specially-formatted `geometry` field. We can use an iterator to loop through the `features` array in the JSON response and create a new array of objects that contains the `geometry` and `properties` fields that Leaflet expects.
 
@@ -202,7 +201,7 @@ Within the same second `then(...)` method, we need to add some additional code b
     L.geoJSON(data).addTo(map);
 ```
 
-![Default marker layer](image-5.png)
+![Default marker layer](images/web-mapping/image-5.png)
 
 ## 5. Styling the markers
 This is fine, but not super legible. We want to convert this marker layer to a point layer, which will allow us to customize the appearance of the markers. We can do this by using the `pointToLayer` option in the `L.geoJSON` function. Update the above code to include the following argument *after* the instantiation of the `L.geoJSON` function:
@@ -225,7 +224,7 @@ This is fine, but not super legible. We want to convert this marker layer to a p
 We are able to pass an *object* as an additional argument. Leaflet has an option called `pointToLayer` that allows us to customize the appearance of the markers. In this case, we are creating a `circleMarker` with a radius of 8 pixels, a fill color of orange (`#ff7800`), a black border (`#000`), and an opacity of 0.8. This will give us a more visually appealing representation of the pizza restaurants on the map. You can imagine the range of possibilities that we could use here, including custom icons, colors, and sizes, as well as styling based on the data itself (e.g. different colors for different inspection results).
 
 Our map should now look like this:
-![Orange points map](image-6.png)
+![Orange points map](images/web-mapping/image-6.png)
 
 ## 6. Add interactivity to the map
 
@@ -241,7 +240,7 @@ This tells our map that for each feature in the GeoJSON data, we want to bind a 
 
 You should now be able to click on a marker and see the name of the restaurant:
 
-![Pizza Click Map](image-7.png)
+![Pizza Click Map](images/web-mapping/image-7.png)
 
 
 This concludes the first part of our web mapping tutorial. We have created a basic web map using Leaflet, added a tile layer, and displayed data from the NYC Open Data API as a point layer on the map. We have also added some basic interactivity to the markers by binding popups to them. In the next part of the tutorial, we will explore how to serve more complex data to our site via an API that we create, and publish the map to a web server. 

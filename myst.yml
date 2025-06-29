@@ -19,19 +19,16 @@ project:
         - file: Syllabus/syllabus.md
     - title: Assignments
       children:
+        - file: Assignments/00_Getting_Started.md
         - file: Assignments/01_Loading_Visualizing.md
-        - file: Assignments/02_Geoprocessing.md
-        - file: Assignments/03_Networks.md
-        - file: Assignments/04_Web_Mapping.md    
+        - file: Assignments/02_Geoprocessing.md        
+        - file: Assignments/03_Web_Mapping.md  
+        - file: Assignments/04_Networks.md  
     - title: Tutorials
       children:
-        - file: Tutorials/00_Getting_Started.md
-        - file: Tutorials/00_Python_Basics.ipynb
-        - file: Tutorials/01_Clustering.ipynb
         - file: Tutorials/01_vector_data_apis.ipynb
         - file: Tutorials/02_geoprocessing.ipynb
         - file: Tutorials/03_networks.ipynb
-        - file: Tutorials/04_change.ipynb
         - file: Tutorials/05_web_mapping.md
     
 site:
