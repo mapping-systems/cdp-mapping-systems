@@ -37,7 +37,7 @@ Class meets on Tuesdays and Thursdays in 200 Fayerweather from 6-8pm. Weeks will
 
 Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting should live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
-All slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems) (i.e. this website). All exercises will be saved and managed via Github (details below).
+All reading materials and slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems) (i.e. this website). All exercises will be saved and managed via Github (details below).
 
 ## Office Hours
 
