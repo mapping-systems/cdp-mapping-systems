@@ -27,6 +27,8 @@ At the most basic level, the goal of this class is to introduce students to mapp
 
 Furthermore, students should develop a deeper understanding of how spatial data is used in decision-making, and challenges associated with using data to inform arguments (agency in mapping; objective vs subjective / abstract vs experiential).
 
+This is primarily a methods course, however students will be expected to complete weekly readings and come prepared to discuss them in class. There are several optional readings listed for each week; it is not expected that students will read all of these, but they are provided for those who wish to explore the topics in more depth.
+
 ## Course Organization / Communication
 
 Class meets on Tuesdays and Thursdays in 200 Fayerweather from 6-8pm. Weeks will generally be organized as follows:
@@ -55,7 +57,7 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 - Projections
 - Vector data types
 
-  **Exercise** [Getting Started](/Assignments/00_Getting_Started.md) (to be completed by next class)
+  **Exercise** [Getting Started](../Assignments/00_Getting_Started.md) (to be completed by next class)
 
   **Readings**
 
@@ -69,13 +71,13 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 - Create static and interactive visualizations of the dataset
 - Saving data
 
-  **Exercise:** [01_Loading and visualizing data](/Assignments/01_Loading_Visualizing.md)
+  **Exercise:** [01_Loading and visualizing data](../Assignments/01_Loading_Visualizing.md)
 
 ### Week 02
 
-Geoprocessing / vector data analysis basics using `geopandas`, `pandas`, `matplotlib`, and `lonboard`
+Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
-#### Class 03: Why we map
+#### Class 03: Mapping as a critical and creative process
 
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
@@ -93,7 +95,7 @@ Geoprocessing / vector data analysis basics using `geopandas`, `pandas`, `matplo
 
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
-  **Exercise:** [02_Geoprocessing](/Assignments/02_Geoprocessing.md)
+  **Exercise:** [02_Geoprocessing](../Assignments/02_Geoprocessing.md)
 
 ### Week 03
 
@@ -107,14 +109,14 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   **Readings**
 
-  - NEOGEOGRAPHY AND` THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+  - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
 
 #### Class 06: Web mapping (Tutorial part 1)
 
-- Use `leafleft` to create interactive web maps
-- Loading data via API
+- Use `leaflet` to create interactive web maps
+- Load data via API
 - Launching a basic web map
-  **Exercise:** [04_Web Mapping](/Assignments/04_Web_Mapping.md)
+  **Exercise:** [03_Web Mapping](../Assignments/03_Web_Mapping.md)
 
 ### Week 04
 
@@ -140,7 +142,7 @@ APIs and website deployment
 
 ### Week 05
 
-Ways to think about and measure distance and spatial relatedness
+Conceiving of and measuring distance and spatial relatedness
 
 #### Class 09: Distance, Adjacency, Networks
 
@@ -159,7 +161,7 @@ Ways to think about and measure distance and spatial relatedness
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Fayerweather to local points of interest
 - **Desk crits** on final colloquium projects
 
-  **Exercise:** [03_Networks](/Assignments/03_Networks.md)
+  **Exercise:** [04_Networks](../Assignments/04_Networks.md)
 
 ### Week 06
 
