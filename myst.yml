@@ -30,8 +30,8 @@ project:
       children:
         - file: Tutorials/01_vector_data_apis.ipynb
         - file: Tutorials/02_geoprocessing.ipynb
-        - file: Tutorials/03_networks.ipynb
         - file: Tutorials/05_web_mapping.md
+        - file: Tutorials/03_networks.ipynb        
     
 site:
   template: book-theme 
