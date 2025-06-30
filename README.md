@@ -5,8 +5,8 @@ Repository for CDP Mapping Systems summer 2025 course
 ## Important Links
 
 - [Syllabus](Syllabus/syllabus.md): this is the source of truth for the course. It contains the schedule, learning objectives, and other important information.
-- [Assignments](Assignments/readme.md): this folder contains the descriptions for all assignments in the course. You will submit your assignments here.
-- [Tutorial Notebooks](Tutorials): this folder contains the tutorial notebooks for the course. These are the notebooks that we will work through in class.
+- [Assignments](Assignments/Assignments.md): this folder contains the descriptions for all assignments in the course. You will submit your assignments here.
+- [Tutorial Notebooks](Tutorials/Tutorials.md): this folder contains the tutorial notebooks for the course. These are the notebooks that we will work through in class.
 
 ## Getting started
 

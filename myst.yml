@@ -18,6 +18,7 @@ project:
       children:
         - file: Syllabus/syllabus.md
     - title: Assignments
+    - file: Assignments/Assignments.md
       children:
         - file: Assignments/00_Getting_Started.md
         - file: Assignments/01_Loading_Visualizing.md
@@ -25,6 +26,7 @@ project:
         - file: Assignments/03_Web_Mapping.md  
         - file: Assignments/04_Networks.md  
     - title: Tutorials
+    - file: Tutorials/Tutorials.md
       children:
         - file: Tutorials/01_vector_data_apis.ipynb
         - file: Tutorials/02_geoprocessing.ipynb
