@@ -31,6 +31,9 @@ project:
         - file: Tutorials/01_vector_data_apis.ipynb
         - file: Tutorials/02_geoprocessing.ipynb
         - file: Tutorials/05_web_mapping.md
+          children:
+            - file: Tutorials/05_web_mapping_with_leaflet.md
+            - file: Tutorials/05_web_mapping_with_maplibre.md
         - file: Tutorials/03_networks.ipynb        
     
 site:
