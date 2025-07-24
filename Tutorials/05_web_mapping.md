@@ -1,2 +1,2 @@
-# 03: Making a web map
+# 03: Web Mapping (Part 1)
 [Web mapping with Leaflet](../Tutorials/05_web_mapping_with_leaflet.md) and [Web mapping with Maplibre](./05_web_mapping_with_maplibre.md) are two tutorials that introduce you to creating interactive maps on the web using popular JavaScript libraries. These tutorials guide you through the process of setting up a basic web map, adding layers, and customizing the map's appearance and functionality. Both result in very similar maps, but use different libraries to achieve the same goal.

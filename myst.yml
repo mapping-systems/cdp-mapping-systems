@@ -34,6 +34,7 @@ project:
           children:
             - file: Tutorials/05_web_mapping_with_leaflet.md
             - file: Tutorials/05_web_mapping_with_maplibre.md
+        - file: Tutorials/06_web_mapping_2.md
         - file: Tutorials/03_networks.ipynb        
     
 site:
