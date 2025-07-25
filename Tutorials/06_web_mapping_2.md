@@ -115,10 +115,10 @@ Now that we have data in our database, we need to make a connection to it in our
 We will be setting up a connection to a server, and need to create what's called a "client" in Supabase. We will import a helper function from the Supabase library to create a client. Add the following code to your JavaScript file:
 
 ```javascript
-const { createClient } = supabase;
+const { createClient } = window.supabase;
 const supabaseUrl = 'https://your-project-ref.supabase.co';
 const supabaseKey = 'your-anon-key';
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseClient = createClient(supabaseUrl, supabaseKey);
 ```
 
 In the above, we:
