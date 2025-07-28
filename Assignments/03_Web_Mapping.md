@@ -1,4 +1,4 @@
-# 03. Web Mapping
+# 03. Web Mapping (Part 1)
 
 We have been discussing the geography of the web and have begun exploring how to use APIs to access and visualize data. In this assignment, we will connect these concepts by creating a web map that visualizes data from a HAR file. A HAR file (HTTP Archive) is a JSON-formatted archive file that contains a log of a web browser's interaction with a site, including requests and responses. This will match the output we observed in the browser's `Network` tab and represents the list of requests made by the browser to load a web page. 
 
