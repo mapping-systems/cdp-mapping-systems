@@ -195,3 +195,5 @@ whiteboxgui==2.3.0
 widgetsnbextension==4.0.14
 xarray==2025.6.1
 xyzservices==2025.4.0
+osmnx
+h3

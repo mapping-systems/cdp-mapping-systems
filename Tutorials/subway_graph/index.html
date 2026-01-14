@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GEXF Graph with BFS using Sigma.js</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        height: 100%;
+        font-family: sans-serif;
+      }
+      #container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      #controls {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: white;
+        padding: 8px;
+        border-radius: 6px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <label for="bfsDepth">BFS Depth (n): </label>
+      <input type="number" id="bfsDepth" value="1" min="1" />
+    </div>
+    <div id="container"></div>
+
+    <!-- Graphology & Sigma.js CDN -->
+    <script src="https://unpkg.com/graphology@0.25.0/dist/graphology.min.js"></script>
+    <script src="https://unpkg.com/graphology-layout-forceatlas2/build/forceatlas2.min.js"></script>
+    <script src="https://unpkg.com/graphology-gexf/browser.js"></script>
+    <script src="https://unpkg.com/graphology-traversal/bfs.js"></script>
+    <script src="https://unpkg.com/sigma/build/sigma.min.js"></script>
+
+    <script>
+      // 🔗 Change this to point to your GEXF file
+      const GEXF_FILE_URL = "./subway_network.gexf";
+      // Reference the global graphology object from the CDN
+      const graphology = window.graphology;
+      const container = document.getElementById("container");
+      const bfsDepthInput = document.getElementById("bfsDepth");
+      // Create an empty graph instance
+      const graph = new graphology.Graph();
+
+      fetch(GEXF_FILE_URL)
+        .then((res) => res.text())
+        .then((gexfText) => {
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(gexfText, "application/xml");
+          console.log("Parsed GEXF XML:", gexfText);
+          // Load GEXF into graph
+          const loaded = graphology.Graph.fromGEXF(xml, {
+            attributes: true,
+            edges: true,
+            nodes: true,
+          });
+          graph.merge(loaded);
+
+          // Optional: run layout if no coords in GEXF
+          if (!graph.getNodeAttributes(graph.nodes()[0]).x) {
+            const forceAtlas2 = graphologyLayoutForceAtlas2;
+            forceAtlas2.assign(graph, { iterations: 100 });
+          }
+
+          // Default styles
+          graph.forEachNode((node, attrs) => {
+            graph.setNodeAttribute(node, "color", "#999");
+            graph.setNodeAttribute(node, "size", 5);
+          });
+
+          // Sigma instance
+          const renderer = new sigma.Sigma(graph, container);
+
+          // Handle node click
+          renderer.on("clickNode", ({ node }) => {
+            const depth = parseInt(bfsDepthInput.value, 10) || 1;
+
+            const bfs = graphologyTraversal.bfs;
+            const visited = new Set();
+
+            bfs(graph, node, (n, attr, depthVal) => {
+              if (depthVal <= depth) visited.add(n);
+            });
+
+            // Update node colors based on BFS result
+            graph.forEachNode((n) => {
+              graph.setNodeAttribute(
+                n,
+                "color",
+                visited.has(n) ? "#f00" : "#ccc"
+              );
+              graph.setNodeAttribute(n, "size", visited.has(n) ? 8 : 3);
+            });
+
+            renderer.refresh();
+          });
+        })
+        .catch((err) => {
+          console.error("Failed to load or parse GEXF file", err);
+        });
+    </script>
+  </body>
+</html>
