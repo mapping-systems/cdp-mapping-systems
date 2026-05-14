@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ---------- Notebook output blocks ---------- */
+
+.output-stream,
+.output-text,
+.output-error {
+  @apply my-4 rounded-lg overflow-x-auto;
+}
+
+.output-stream pre,
+.output-text pre {
+  @apply bg-gray-100 p-4 text-sm whitespace-pre-wrap break-words;
+}
+
+.output-error pre {
+  @apply bg-red-50 text-red-800 p-4 text-sm whitespace-pre-wrap break-words;
+}
+
+.output-html {
+  @apply my-4 overflow-x-auto;
+}
+
+/* DataFrame tables */
+.output-html table {
+  @apply border-collapse text-sm;
+}
+
+.output-html th,
+.output-html td {
+  @apply border border-gray-300 px-3 py-1 text-left;
+}
+
+.output-html th {
+  @apply bg-gray-100 font-medium;
+}
+
+.output-figure {
+  @apply my-6;
+}
+
+.output-figure img {
+  @apply max-w-full rounded-lg shadow-sm;
+}
+
+.output-svg svg {
+  @apply max-w-full h-auto;
+}
+
+/* ---------- Prose tweaks ---------- */
+
+.prose pre {
+  @apply rounded-lg;
+}
+
+.prose :not(pre) > code {
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 font-normal;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}

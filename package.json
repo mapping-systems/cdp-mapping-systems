@@ -1,6 +1,25 @@
 {
+  "name": "mapping-systems",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build:content": "python scripts/build-content.py",
+    "build:arena": "tsx scripts/fetch-arena.ts",
+    "build:zotero": "tsx scripts/fetch-zotero.ts",
+    "build": "npm run build:content && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "myst": "^0.0.1-alpha",
-    "mystmd": "^1.4.0"
+    "@astrojs/mdx": "^5.0.5",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.2",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0"
   }
 }

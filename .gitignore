@@ -13,3 +13,15 @@ _build
 /node_modules
 /.history
 /Tutorials/Data
+
+# All generated content
+src/content/lessons/
+src/content/resources/
+public/lesson-assets/
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+/content/Tutorials/cache
+/content/Tutorials/Data

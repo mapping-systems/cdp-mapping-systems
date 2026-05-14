@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/lessons', label: 'Lessons' },
+  { href: '/syllabus', label: 'Syllabus' },
+];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="border-b border-gray-200">
+  <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="font-semibold tracking-tight text-lg">
+      Mapping Systems
+    </a>
+    <ul class="flex gap-6 text-sm">
+      {links.map(({ href, label }) => {
+        const isActive = href === '/' ? path === '/' : path.startsWith(href);
+        return (
+          <li>
+            <a
+              href={href}
+              class={`hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600 font-medium' : 'text-gray-700'}`}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+</header>
