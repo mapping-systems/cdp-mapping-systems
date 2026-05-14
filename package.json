@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "build:content": "python scripts/build-content.py",
+    "build:content:execute": "python scripts/build-content.py --execute",
     "build:arena": "tsx scripts/fetch-arena.ts",
     "build:zotero": "tsx scripts/fetch-zotero.ts",
     "build": "npm run build:content && astro build",
+    "build:full": "npm run build:content:execute && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

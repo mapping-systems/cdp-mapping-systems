@@ -1,64 +1,201 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ---------- Notebook output blocks ---------- */
+/* ---------- Theme tokens ----------
+   Palette inspired by designpractices.org: warm off-white background,
+   serif display type, vivid red-orange links, purple accent.
+   Tokens use HSL channels so dark mode is a single variable swap later. */
 
-.output-stream,
-.output-text,
-.output-error {
-  @apply my-4 rounded-lg overflow-x-auto;
+@theme {
+  --color-bg: hsl(0 0% 98%);
+  --color-surface: hsl(0 0% 96%);
+  --color-surface-strong: hsl(0 0% 92%);
+  --color-text: hsl(203 11% 15%);
+  --color-muted: hsl(203 8% 40%);
+  --color-subtle: hsl(203 8% 55%);
+  --color-border: hsl(220 13% 88%);
+  --color-accent: hsl(275 50% 53%);
+  --color-accent-soft: hsl(275 50% 95%);
+  --color-link: hsl(10 85% 50%);
+  --color-link-hover: hsl(10 85% 40%);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.output-stream pre,
-.output-text pre {
-  @apply bg-gray-100 p-4 text-sm whitespace-pre-wrap break-words;
+/* ---------- Base ---------- */
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
-.output-error pre {
-  @apply bg-red-50 text-red-800 p-4 text-sm whitespace-pre-wrap break-words;
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11"; /* Inter stylistic tweaks: nicer 'a' and 'l' */
 }
 
-.output-html {
-  @apply my-4 overflow-x-auto;
+h1, h2, h3, h4, h5, h6 {
+  font-feature-settings: "lnum"; /* Lining numerals in headings */
+  letter-spacing: -0.015em;
 }
 
-/* DataFrame tables */
-.output-html table {
-  @apply border-collapse text-sm;
+/* Body links live inside .prose; that block applies the link color via the
+   typography plugin's --tw-prose-links token. Anchors outside .prose (nav,
+   sidebar, buttons) get their color from Tailwind utility classes — we don't
+   set a global anchor color here, to avoid fighting the cascade. */
+
+/* ---------- Prose tuning ---------- */
+
+.prose {
+  --tw-prose-body: var(--color-text);
+  --tw-prose-headings: var(--color-text);
+  --tw-prose-links: var(--color-link);
+  --tw-prose-bold: var(--color-text);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-subtle);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-text);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-code: var(--color-text);
+  --tw-prose-pre-code: var(--color-text);
+  --tw-prose-pre-bg: var(--color-surface);
+  --tw-prose-th-borders: var(--color-border);
+  --tw-prose-td-borders: var(--color-border);
+  font-family: var(--font-sans);
 }
 
-.output-html th,
-.output-html td {
-  @apply border border-gray-300 px-3 py-1 text-left;
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
-.output-html th {
-  @apply bg-gray-100 font-medium;
+.prose a {
+  font-weight: 500;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  /* Allow long URL-as-text links (eg. DOIs) to wrap inside the token rather
+     than overflow the column. */
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-.output-figure {
-  @apply my-6;
+/* ---------- Code blocks (Shiki) ---------- */
+
+.prose pre.astro-code,
+pre.astro-code {
+  background-color: var(--color-surface) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 1.25rem 0;
 }
 
-.output-figure img {
-  @apply max-w-full rounded-lg shadow-sm;
+.prose pre.astro-code code,
+pre.astro-code code {
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
 }
 
-.output-svg svg {
-  @apply max-w-full h-auto;
-}
-
-/* ---------- Prose tweaks ---------- */
-
-.prose pre {
-  @apply rounded-lg;
-}
-
+/* Inline code — allow long identifiers (eg. namespaced.method.calls) to
+   break inside the token rather than overflow the viewport on mobile. */
 .prose :not(pre) > code {
-  @apply bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 font-normal;
+  background-color: var(--color-surface-strong);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .prose :not(pre) > code::before,
 .prose :not(pre) > code::after {
   content: none;
+}
+
+/* ---------- Notebook output blocks ---------- */
+
+.output-stream,
+.output-text,
+.output-error {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.output-stream pre,
+.output-text pre {
+  background-color: var(--color-surface-strong);
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.output-error pre {
+  background-color: hsl(0 80% 97%);
+  color: hsl(0 70% 35%);
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0 70% 88%);
+}
+
+.output-html {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* DataFrame tables */
+.output-html table {
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  font-family: var(--font-sans);
+}
+
+.output-html th,
+.output-html td {
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.75rem;
+  text-align: left;
+}
+
+.output-html th {
+  background-color: var(--color-surface-strong);
+  font-weight: 500;
+}
+
+.output-figure {
+  margin: 1.5rem 0;
+}
+
+.output-figure img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+}
+
+.output-svg svg {
+  max-width: 100%;
+  height: auto;
 }

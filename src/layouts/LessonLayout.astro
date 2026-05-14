@@ -11,15 +11,15 @@ const { title, section, description } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
   <article class="prose prose-lg max-w-none">
-    <header class="mb-8 not-prose">
-      <p class="text-xs font-medium text-gray-500 uppercase tracking-wider">
-        {section}
+    <header class="mb-10 not-prose border-b border-border pb-6">
+      <p class="text-xs font-semibold text-accent uppercase tracking-[0.14em]">
+        {section.replace(/_/g, ' ')}
       </p>
-      <h1 class="mt-2 text-4xl font-semibold tracking-tight text-gray-900">
+      <h1 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-text leading-[1.1]">
         {title}
       </h1>
       {description && (
-        <p class="mt-3 text-lg text-gray-600">{description}</p>
+        <p class="mt-4 text-lg text-muted leading-relaxed">{description}</p>
       )}
     </header>
     <slot />

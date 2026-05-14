@@ -18,6 +18,7 @@ Usage:
     python scripts/build-content.py
 """
 
+import argparse
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from pathlib import Path
@@ -104,8 +105,42 @@ def namespaced_slug(section: str, file_slug: str) -> str:
 
     This prevents collisions between sections that have similarly-named files
     (e.g. an assignment and a tutorial both called 'web-mapping').
+
+    A "section index" file — one whose slug matches the section name (e.g.
+    Syllabus/syllabus.md, Tutorials/Tutorials.md) — gets a flat slug so its
+    URL collapses from /lessons/syllabus/syllabus to /lessons/syllabus.
     """
-    return f"{section_slug(section)}/{file_slug}"
+    sec = section_slug(section)
+    if file_slug == sec:
+        return sec
+    return f"{sec}/{file_slug}"
+
+
+def strip_leading_title(body: str, title: str) -> str:
+    """Drop the body's first H1 when it duplicates the lesson title.
+
+    Authors typically start each notebook/markdown with `# Some Title`. The
+    LessonLayout already renders the title in its header, so we strip the
+    duplicate to avoid two stacked H1s.
+    """
+    body = body.lstrip()
+    if not body.startswith("#"):
+        return body
+
+    first_line, _, rest = body.partition("\n")
+    match = re.match(r"^\s*#\s+(.+?)\s*$", first_line)
+    if not match:
+        return body
+
+    def normalize(s: str) -> str:
+        # Strip a leading numeric prefix like "02." or "00:" or "1 ", then
+        # lowercase and collapse to alphanumerics for a lenient match.
+        s = re.sub(r"^\s*\d+[\.\-:]?\s*", "", s)
+        return re.sub(r"[^a-z0-9]", "", s.lower())
+
+    if normalize(match.group(1)) == normalize(title):
+        return rest.lstrip()
+    return body
 
 
 def clean_title(filename: str) -> str:
@@ -220,6 +255,9 @@ def process_markdown_file(md_path: Path) -> str:
 
     # Rewrite relative image references and copy files into public/lesson-assets/
     body = rewrite_relative_images(body, md_path.parent, frontmatter["section"])
+
+    # Drop the leading H1 when it duplicates the title (the layout renders one)
+    body = strip_leading_title(body, frontmatter["title"])
 
     # Reassemble
     frontmatter_yaml = yaml.dump(
@@ -361,11 +399,23 @@ def cell_to_markdown(cell: dict, nb_stem: str, cell_idx: int) -> str:
     return ""
 
 
-def process_notebook(nb_path: Path) -> str:
-    """Process a notebook file, executing and converting to markdown."""
+def process_notebook(nb_path: Path, execute: bool = False) -> str:
+    """Process a notebook file, optionally executing it before conversion.
+
+    When ``execute`` is False (default), the notebook's cached cell outputs
+    are used as-is. This makes builds fast and CI-friendly: authors run the
+    notebook locally, save it with outputs, and commit. When ``execute`` is
+    True, the notebook is re-run from scratch — useful for full rebuilds and
+    for catching code that no longer runs against current data/dependencies.
+    """
     print(f"Processing {nb_path}...")
 
-    nb = execute_notebook(nb_path)
+    if execute:
+        nb = execute_notebook(nb_path)
+    else:
+        with open(nb_path) as f:
+            nb = nbformat.read(f, as_version=4)
+
     frontmatter = extract_notebook_frontmatter(nb, nb_path)
     slug = clean_slug(nb_path.stem)
 
@@ -390,6 +440,9 @@ def process_notebook(nb_path: Path) -> str:
     # Rewrite any relative image refs that came from markdown cells
     content = rewrite_relative_images(content, nb_path.parent, frontmatter["section"])
 
+    # Drop the leading H1 when it duplicates the title (the layout renders one)
+    content = strip_leading_title(content, frontmatter["title"])
+
     return f"---\n{frontmatter_yaml}---\n\n{content}"
 
 
@@ -398,10 +451,22 @@ def process_notebook(nb_path: Path) -> str:
 # ============================================================================
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+        help="Re-execute notebooks before conversion. Default uses cached outputs from each .ipynb.",
+    )
+    return parser.parse_args()
+
+
 def main():
     """Process all content files."""
+    args = parse_args()
+
     print("=" * 60)
-    print("Building content")
+    print("Building content" + (" (with execution)" if args.execute else " (using cached outputs)"))
     print("=" * 60)
 
     if not CONTENT_DIR.exists():
@@ -435,9 +500,10 @@ def main():
     # Process notebooks
     for nb_path in sorted(notebooks):
         try:
-            md_content = process_notebook(nb_path)
+            md_content = process_notebook(nb_path, execute=args.execute)
             section = get_section_from_path(nb_path)
-            output_path = OUTPUT_DIR / section_slug(section) / f"{clean_slug(nb_path.stem)}.md"
+            slug = namespaced_slug(section, clean_slug(nb_path.stem))
+            output_path = OUTPUT_DIR / f"{slug}.md"
             output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")
@@ -451,7 +517,8 @@ def main():
         try:
             md_content = process_markdown_file(md_path)
             section = get_section_from_path(md_path)
-            output_path = OUTPUT_DIR / section_slug(section) / f"{clean_slug(md_path.stem)}.md"
+            slug = namespaced_slug(section, clean_slug(md_path.stem))
+            output_path = OUTPUT_DIR / f"{slug}.md"
             output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")

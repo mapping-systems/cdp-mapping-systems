@@ -11,7 +11,11 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: {
-      theme: 'github-light',
+      // Dual themes: Shiki emits CSS vars for both, swap via prefers-color-scheme or .dark class
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
       wrap: true,
     },
   },

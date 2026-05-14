@@ -13,43 +13,46 @@ const assignments = lessons
   .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
 ---
 <BaseLayout title="Home">
-  <section class="mb-16">
-    <h1 class="text-5xl font-semibold tracking-tight text-gray-900">
+  <section class="mb-16 max-w-3xl">
+    <h1 class="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-text">
       Mapping Systems
     </h1>
-    <p class="mt-4 text-xl text-gray-600 max-w-2xl">
-      A summer course on geospatial data, cartography, and web mapping at Columbia GSAPP's Center for Spatial Research.
+    <p class="mt-6 text-xl leading-relaxed text-muted">
+      A summer course on geospatial data, cartography, and web mapping at
+      Columbia GSAPP's Center for Spatial Research.
     </p>
     <div class="mt-8 flex gap-3">
       <a
         href="/lessons"
-        class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors"
+        class="inline-flex items-center px-4 py-2 rounded-lg bg-text text-white text-sm font-medium no-underline hover:bg-accent hover:text-white transition-colors"
       >
         Browse lessons →
       </a>
       <a
-        href="/lessons/syllabus/syllabus"
-        class="inline-flex items-center px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-sm font-medium hover:border-gray-900 transition-colors"
+        href="/lessons/syllabus"
+        class="inline-flex items-center px-4 py-2 rounded-lg border border-border text-text text-sm font-medium no-underline hover:border-accent hover:text-accent transition-colors"
       >
         Syllabus
       </a>
     </div>
   </section>
 
-  <section class="grid md:grid-cols-2 gap-10">
+  <section class="grid md:grid-cols-2 gap-12">
     <div>
-      <h2 class="text-2xl font-semibold mb-4">Tutorials</h2>
-      <ul class="space-y-2">
+      <h2 class="text-2xl font-semibold mb-5 text-text">Tutorials</h2>
+      <ul class="divide-y divide-border border-y border-border">
         {tutorials.map((lesson) => (
           <li>
             <a
               href={`/lessons/${lesson.data.slug}`}
-              class="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
+              class="flex items-baseline gap-3 py-3 no-underline group"
             >
-              <span class="text-gray-400 mr-2 tabular-nums">
-                {String(lesson.data.order ?? '·').padStart(2, '0')}
+              <span class="text-sm text-subtle tabular-nums w-6 shrink-0">
+                {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
               </span>
-              {lesson.data.title}
+              <span class="text-text group-hover:text-accent transition-colors">
+                {lesson.data.title}
+              </span>
             </a>
           </li>
         ))}
@@ -57,18 +60,20 @@ const assignments = lessons
     </div>
 
     <div>
-      <h2 class="text-2xl font-semibold mb-4">Assignments</h2>
-      <ul class="space-y-2">
+      <h2 class="text-2xl font-semibold mb-5 text-text">Assignments</h2>
+      <ul class="divide-y divide-border border-y border-border">
         {assignments.map((lesson) => (
           <li>
             <a
               href={`/lessons/${lesson.data.slug}`}
-              class="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
+              class="flex items-baseline gap-3 py-3 no-underline group"
             >
-              <span class="text-gray-400 mr-2 tabular-nums">
-                {String(lesson.data.order ?? '·').padStart(2, '0')}
+              <span class="text-sm text-subtle tabular-nums w-6 shrink-0">
+                {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
               </span>
-              {lesson.data.title}
+              <span class="text-text group-hover:text-accent transition-colors">
+                {lesson.data.title}
+              </span>
             </a>
           </li>
         ))}

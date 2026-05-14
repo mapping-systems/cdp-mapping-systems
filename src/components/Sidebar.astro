@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+
+const lessons = await getCollection('lessons', ({ data }) => !data.draft);
+
+const sections: Record<string, typeof lessons> = {};
+for (const lesson of lessons) {
+  const section = lesson.data.section;
+  if (!sections[section]) sections[section] = [];
+  sections[section].push(lesson);
+}
+for (const section of Object.keys(sections)) {
+  sections[section].sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+}
+
+const preferredOrder = ['Tutorials', 'Assignments', 'Additional_Tutorials', 'Syllabus'];
+const orderedSectionNames = [
+  ...preferredOrder.filter((s) => sections[s]),
+  ...Object.keys(sections).filter((s) => !preferredOrder.includes(s)).sort(),
+];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function displayName(section: string) {
+  return section.replace(/_/g, ' ');
+}
+---
+<nav class="text-sm" aria-label="Course navigation">
+  {orderedSectionNames.map((sectionName) => (
+    <div class="mb-7">
+      <h3 class="text-[0.7rem] font-semibold text-subtle uppercase tracking-[0.12em] mb-2 px-2">
+        {displayName(sectionName)}
+      </h3>
+      <ul class="space-y-0.5">
+        {sections[sectionName].map((lesson) => {
+          const href = `/lessons/${lesson.data.slug}`;
+          const isActive = path === href;
+          return (
+            <li>
+              <a
+                href={href}
+                aria-current={isActive ? 'page' : undefined}
+                class:list={[
+                  'block px-2 py-1.5 rounded-md leading-snug transition-colors no-underline border-l-2',
+                  isActive
+                    ? 'bg-accent-soft text-accent font-medium border-accent'
+                    : 'text-muted hover:text-text hover:bg-surface border-transparent',
+                ]}
+              >
+                {lesson.data.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  ))}
+</nav>

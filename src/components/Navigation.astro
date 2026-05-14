@@ -1,25 +1,42 @@
 ---
+import Sidebar from './Sidebar.astro';
+
 const links = [
   { href: '/', label: 'Home' },
   { href: '/lessons', label: 'Lessons' },
-  { href: '/lessons/syllabus/syllabus', label: 'Syllabus' },
+  { href: '/lessons/syllabus', label: 'Syllabus' },
 ];
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+// Pick the link with the longest matching prefix so /lessons/syllabus
+// highlights "Syllabus" and not also "Lessons".
+const activeHref = links
+  .filter((l) => (l.href === '/' ? path === '/' : path === l.href || path.startsWith(l.href + '/')))
+  .sort((a, b) => b.href.length - a.href.length)[0]?.href;
 ---
-<header class="border-b border-gray-200">
-  <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="font-semibold tracking-tight text-lg">
+<header class="sticky top-0 z-50 border-b border-border bg-bg/85 backdrop-blur">
+  {/* Desktop nav */}
+  <nav class="hidden lg:flex max-w-7xl mx-auto px-4 sm:px-6 py-4 items-center justify-between">
+    <a
+      href="/"
+      class="text-lg font-semibold tracking-tight text-text no-underline"
+    >
       Mapping Systems
     </a>
-    <ul class="flex gap-6 text-sm">
+    <ul class="flex gap-7 text-sm">
       {links.map(({ href, label }) => {
-        const isActive = href === '/' ? path === '/' : path.startsWith(href);
+        const isActive = href === activeHref;
         return (
           <li>
             <a
               href={href}
-              class={`hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600 font-medium' : 'text-gray-700'}`}
+              class:list={[
+                'no-underline transition-colors',
+                isActive
+                  ? 'text-accent font-medium'
+                  : 'text-muted hover:text-text',
+              ]}
             >
               {label}
             </a>
@@ -28,4 +45,85 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
       })}
     </ul>
   </nav>
+
+  {/* Mobile nav: <details> gives us collapsible behavior with no JS, and
+      it auto-resets on navigation because BaseLayout re-renders the header. */}
+  <details class="lg:hidden group [&_summary::-webkit-details-marker]:hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between px-4 py-4">
+      <a
+        href="/"
+        class="text-lg font-semibold tracking-tight text-text no-underline"
+        onclick="event.stopPropagation()"
+      >
+        Mapping Systems
+      </a>
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-text">
+        {/* Hamburger icon, rotates/morphs into X when details is open */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="hidden group-open:block"
+          aria-hidden="true"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="block group-open:hidden"
+          aria-hidden="true"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+        <span class="sr-only">Toggle menu</span>
+      </span>
+    </summary>
+
+    {/* Drawer: top-level links + the full course sidebar so students can
+        navigate lessons on mobile too. */}
+    <div class="border-t border-border bg-bg max-h-[calc(100vh-4rem)] overflow-y-auto">
+      <div class="px-4 py-5 space-y-6">
+        <ul class="space-y-1 text-base">
+          {links.map(({ href, label }) => {
+            const isActive = href === activeHref;
+            return (
+              <li>
+                <a
+                  href={href}
+                  class:list={[
+                    'block px-2 py-2 rounded-md no-underline transition-colors',
+                    isActive
+                      ? 'text-accent font-medium bg-accent-soft'
+                      : 'text-text hover:bg-surface',
+                  ]}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <div class="border-t border-border pt-5">
+          <Sidebar />
+        </div>
+      </div>
+    </div>
+  </details>
 </header>

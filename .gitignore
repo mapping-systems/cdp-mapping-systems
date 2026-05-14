@@ -1,24 +1,21 @@
-# Local data + scratch
-Data/*
-content/**/cache/
-content/**/Data/
-.history/
-wip/
+# macOS
 .DS_Store
 **/.DS_Store
+.history/
 
-# Legacy MyST/Jupyter Book output (safe to remove once branch is merged)
-_build/
-_config.yml
-_toc.yml
-Book/
+# Local data + scratch (download data separately, not via git)
+content/**/Data/
+content/**/cache/
 
-# Astro / generated
+# prof-only drafts, not for students
+planning/
+
+# Astro build artifacts (generated from content/ on each build)
 src/content/lessons/
 src/content/resources/
 public/lesson-assets/
-dist/
 .astro/
+dist/
 
 # Dependencies
 node_modules/
