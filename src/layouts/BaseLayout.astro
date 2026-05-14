@@ -40,7 +40,14 @@ const {
         localStorage.theme === 'dark'   → forced dark
         localStorage.theme === null     → 'system' mode (follow OS preference)
     */}
-    <script is:inline>
+    {/*
+      data-astro-rerun makes ClientRouter re-execute this script after every
+      view transition. Without it, the script only runs on initial page load;
+      ClientRouter resets <html> attributes on each swap, so .dark and
+      data-theme-pref would be wiped (page flips to light, toggle icons
+      disappear) on the second navigation.
+    */}
+    <script is:inline data-astro-rerun>
       (function () {
         var pref;
         try { pref = localStorage.getItem('theme'); } catch (_) { pref = null; }
