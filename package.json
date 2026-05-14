@@ -10,10 +10,13 @@
     "build:zotero": "tsx scripts/fetch-zotero.ts",
     "build": "npm run build:content && astro build",
     "build:full": "npm run build:content:execute && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.5.1",
     "@astrojs/mdx": "^5.0.5",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",
@@ -24,7 +27,8 @@
     "@astrojs/check": "^0.9.9",
     "@types/node": "^20.11.0",
     "tsx": "^4.7.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.91.0"
   },
   "overrides": {
     "vite": "^7"
