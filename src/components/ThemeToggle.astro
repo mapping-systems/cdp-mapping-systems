@@ -1,0 +1,156 @@
+---
+/*
+  Three-state theme toggle: system → light → dark → system.
+
+  - "system" follows the OS preference and updates live when the OS changes.
+  - "light" / "dark" persist in localStorage and override the OS preference.
+
+  The current state is reflected in the data-theme-pref attribute on <html>
+  (set by the anti-FOUC inline script in BaseLayout.astro). CSS shows the
+  matching icon based on that attribute, so there's no JS-driven icon swap
+  flash.
+
+  Designed to survive Astro's ClientRouter view transitions: the click
+  listener is (re)attached on every astro:page-load; the system-preference
+  watcher is registered once at module load and persists.
+*/
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+<button
+  type="button"
+  data-theme-toggle
+  aria-label="Toggle theme (system / light / dark)"
+  title="Toggle theme"
+  class:list={[
+    'inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-text hover:bg-surface transition-colors',
+    className,
+  ]}
+>
+  <svg
+    data-theme-icon="system"
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="2" y="3" width="20" height="14" rx="2" />
+    <line x1="8" y1="21" x2="16" y2="21" />
+    <line x1="12" y1="17" x2="12" y2="21" />
+  </svg>
+  <svg
+    data-theme-icon="light"
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+  </svg>
+  <svg
+    data-theme-icon="dark"
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+</button>
+
+<script>
+  type Pref = 'system' | 'light' | 'dark';
+  const ORDER: Pref[] = ['system', 'light', 'dark'];
+
+  function readPref(): Pref {
+    try {
+      const v = localStorage.getItem('theme');
+      return v === 'light' || v === 'dark' ? v : 'system';
+    } catch {
+      return 'system';
+    }
+  }
+
+  function writePref(pref: Pref): void {
+    try {
+      if (pref === 'system') localStorage.removeItem('theme');
+      else localStorage.setItem('theme', pref);
+    } catch {
+      /* localStorage unavailable; toggle still works for the session via the
+         data-theme-pref attribute and class swap. */
+    }
+  }
+
+  function applyDarkClass(): void {
+    const pref = readPref();
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = pref === 'dark' || (pref === 'system' && systemDark);
+    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.setAttribute('data-theme-pref', pref);
+  }
+
+  function cycleTheme(): void {
+    const current = readPref();
+    const next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+    writePref(next);
+    applyDarkClass();
+  }
+
+  function attachToggleListeners(): void {
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+      // Replace listener defensively in case this runs more than once on a page.
+      btn.replaceWith(btn.cloneNode(true));
+    });
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+      btn.addEventListener('click', cycleTheme);
+    });
+  }
+
+  // (Re)attach on every navigation under ClientRouter. Also fires on initial load.
+  document.addEventListener('astro:page-load', attachToggleListeners);
+
+  // Live system-preference watcher: only act when user is in 'system' mode.
+  // Registered once at module load; persists across view transitions.
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const onSystemChange = () => {
+    if (readPref() === 'system') applyDarkClass();
+  };
+  if (mq.addEventListener) mq.addEventListener('change', onSystemChange);
+  else mq.addListener?.(onSystemChange); // Safari < 14
+</script>
+
+<style>
+  /* Show only the icon matching the current theme preference. The
+     data-theme-pref attribute is set on <html> by the anti-FOUC bootstrap. */
+  [data-theme-icon] {
+    display: none;
+  }
+  html[data-theme-pref='system'] [data-theme-icon='system'],
+  html[data-theme-pref='light'] [data-theme-icon='light'],
+  html[data-theme-pref='dark'] [data-theme-icon='dark'] {
+    display: block;
+  }
+</style>

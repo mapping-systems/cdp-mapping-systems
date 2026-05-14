@@ -1,10 +1,17 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ---------- Theme tokens ----------
+/* Class-based dark mode: html.dark (or any descendant) toggles the dark
+   variant. We set this via a small inline script in BaseLayout that runs
+   before paint, so there's no flash of light theme before the swap. */
+@variant dark (&:where(.dark, .dark *));
+
+/* ---------- Theme tokens (light) ----------
    Palette inspired by designpractices.org: warm off-white background,
-   serif display type, vivid red-orange links, purple accent.
-   Tokens use HSL channels so dark mode is a single variable swap later. */
+   vivid red-orange links, purple accent. The `:root`/`html.dark` blocks
+   below override these tokens; @theme registers them so Tailwind generates
+   utility classes (bg-bg, text-accent, etc.) that read whichever variable
+   value is in scope. */
 
 @theme {
   --color-bg: hsl(0 0% 98%);
@@ -22,6 +29,30 @@
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+/* ---------- Theme tokens (dark) ----------
+   Mirrors designpractices.org's dark theme: warm dark slate background
+   instead of pure gray, a mustard accent in place of the light-mode purple,
+   and a softer red link color that meets contrast against dark surfaces. */
+
+html.dark {
+  --color-bg: hsl(210 6% 12%);
+  --color-surface: hsl(210 6% 16%);
+  --color-surface-strong: hsl(210 6% 22%);
+  --color-text: hsl(0 0% 93%);
+  --color-muted: hsl(0 0% 70%);
+  --color-subtle: hsl(0 0% 55%);
+  --color-border: hsl(210 6% 26%);
+  --color-accent: hsl(42 76% 58%);
+  --color-accent-soft: hsl(42 35% 18%);
+  --color-link: hsl(10 70% 68%);
+  --color-link-hover: hsl(10 70% 78%);
+}
+
+/* Tell the browser which scheme we're in so native UI (scrollbars, form
+   controls) renders to match. */
+:root { color-scheme: light; }
+html.dark { color-scheme: dark; }
 
 /* ---------- Base ---------- */
 
@@ -201,4 +232,39 @@ pre.astro-code code {
 .output-svg svg {
   max-width: 100%;
   height: auto;
+}
+
+/* ---------- Dark-mode tweaks for code & output blocks ----------
+   Shiki's dual-theme config emits --shiki-dark and --shiki-dark-bg on every
+   code span; these rules swap to those values when html.dark is set. */
+
+html.dark .astro-code,
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+}
+
+html.dark pre.astro-code,
+html.dark .prose pre.astro-code {
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+/* Notebook output: red error block needs its own dark variant since the
+   light error palette (#fef2f2 on #991b1b) reads as glaring on a dark page. */
+html.dark .output-error pre {
+  background-color: hsl(0 30% 14%);
+  color: hsl(0 80% 80%);
+  border-color: hsl(0 35% 28%);
+}
+
+/* Notebook DataFrame tables: slightly lift the surface so rows separate
+   cleanly from the page bg in dark mode. */
+html.dark .output-html th {
+  background-color: hsl(210 6% 20%);
+}
+
+/* Image figures: subtle border instead of shadow in dark mode (shadows
+   disappear on dark backgrounds). */
+html.dark .output-figure img {
+  box-shadow: none;
+  border: 1px solid var(--color-border);
 }

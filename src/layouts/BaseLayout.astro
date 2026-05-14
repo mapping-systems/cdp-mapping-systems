@@ -30,6 +30,30 @@ const {
     />
     <title>{title} | Mapping Systems</title>
     <ClientRouter />
+    {/*
+      Anti-FOUC theme bootstrap. Runs synchronously before paint so the .dark
+      class is on <html> before any CSS applies, preventing a flash of light
+      theme on first load when the user prefers dark.
+
+      State model:
+        localStorage.theme === 'light'  → forced light
+        localStorage.theme === 'dark'   → forced dark
+        localStorage.theme === null     → 'system' mode (follow OS preference)
+    */}
+    <script is:inline>
+      (function () {
+        var pref;
+        try { pref = localStorage.getItem('theme'); } catch (_) { pref = null; }
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = pref === 'dark' || (pref !== 'light' && systemDark);
+        document.documentElement.classList.toggle('dark', isDark);
+        // data-theme-pref drives which toggle icon (sun/moon/monitor) shows via CSS.
+        document.documentElement.setAttribute(
+          'data-theme-pref',
+          pref === 'light' || pref === 'dark' ? pref : 'system'
+        );
+      })();
+    </script>
   </head>
   <body class="min-h-screen bg-bg text-text antialiased">
     <Navigation />

@@ -1,5 +1,6 @@
 ---
 import Sidebar from './Sidebar.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -24,26 +25,29 @@ const activeHref = links
     >
       Mapping Systems
     </a>
-    <ul class="flex gap-7 text-sm">
-      {links.map(({ href, label }) => {
-        const isActive = href === activeHref;
-        return (
-          <li>
-            <a
-              href={href}
-              class:list={[
-                'no-underline transition-colors',
-                isActive
-                  ? 'text-accent font-medium'
-                  : 'text-muted hover:text-text',
-              ]}
-            >
-              {label}
-            </a>
-          </li>
-        );
-      })}
-    </ul>
+    <div class="flex items-center gap-6">
+      <ul class="flex gap-7 text-sm">
+        {links.map(({ href, label }) => {
+          const isActive = href === activeHref;
+          return (
+            <li>
+              <a
+                href={href}
+                class:list={[
+                  'no-underline transition-colors',
+                  isActive
+                    ? 'text-accent font-medium'
+                    : 'text-muted hover:text-text',
+                ]}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <ThemeToggle />
+    </div>
   </nav>
 
   {/* Mobile nav: <details> gives us collapsible behavior with no JS, and
@@ -122,6 +126,10 @@ const activeHref = links
         </ul>
         <div class="border-t border-border pt-5">
           <Sidebar />
+        </div>
+        <div class="border-t border-border pt-5 flex items-center gap-3">
+          <ThemeToggle />
+          <span class="text-sm text-muted">Theme</span>
         </div>
       </div>
     </div>
