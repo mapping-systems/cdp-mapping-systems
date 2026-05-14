@@ -20,7 +20,6 @@ Usage:
 
 import argparse
 import nbformat
-from nbconvert.preprocessors import ExecutePreprocessor
 from pathlib import Path
 import base64
 import hashlib
@@ -28,6 +27,11 @@ import re
 import yaml
 import shutil
 import sys
+
+# nbconvert is imported lazily inside execute_notebook() so that no-execute
+# builds (the default, used on Cloudflare) don't pay for it. nbconvert pulls
+# in jupyter-client and a kernel layer that's only needed when actually
+# running notebooks locally.
 
 # ============================================================================
 # CONFIGURATION
@@ -273,6 +277,8 @@ def process_markdown_file(md_path: Path) -> str:
 
 def execute_notebook(nb_path: Path) -> nbformat.NotebookNode:
     """Execute a notebook and return the executed version."""
+    from nbconvert.preprocessors import ExecutePreprocessor
+
     print(f"  Executing {nb_path.name}...")
 
     with open(nb_path) as f:
