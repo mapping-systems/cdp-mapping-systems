@@ -1,15 +1,21 @@
-Data/*
-**/.DS_Store
+# macOS
 .DS_Store
-Tutorials/cache/
+**/.DS_Store
 .history/
-wip/
-Book/
-_config.yml
-_toc.yml
 
-# MyST build outputs
-_build
-/node_modules
-/.history
-/Tutorials/Data
+# Local data + scratch (download data separately, not via git)
+content/**/Data/
+content/**/cache/
+
+# prof-only drafts, not for students
+planning/
+
+# Astro build artifacts (generated from content/ on each build)
+src/content/lessons/
+src/content/resources/
+public/lesson-assets/
+.astro/
+dist/
+
+# Dependencies
+node_modules/

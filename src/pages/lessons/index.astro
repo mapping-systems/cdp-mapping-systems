@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lessons = await getCollection('lessons', ({ data }) => !data.draft);
+
+const sections: Record<string, typeof lessons> = {};
+for (const lesson of lessons) {
+  const section = lesson.data.section;
+  if (!sections[section]) sections[section] = [];
+  sections[section].push(lesson);
+}
+
+for (const section of Object.keys(sections)) {
+  sections[section].sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+}
+
+const preferredOrder = ['Tutorials', 'Assignments', 'Additional_Tutorials', 'Syllabus'];
+const orderedSectionNames = [
+  ...preferredOrder.filter((s) => sections[s]),
+  ...Object.keys(sections)
+    .filter((s) => !preferredOrder.includes(s))
+    .sort(),
+];
+
+function displayName(section: string) {
+  return section.replace(/_/g, ' ');
+}
+---
+<BaseLayout title="Lessons">
+  <h1 class="text-5xl font-semibold tracking-tight mb-12 text-text">
+    Lessons
+  </h1>
+
+  <div class="space-y-14">
+    {orderedSectionNames.map((sectionName) => (
+      <section>
+        <h2 class="text-xs font-semibold text-accent uppercase tracking-[0.14em] mb-5">
+          {displayName(sectionName)}
+        </h2>
+        <ul class="divide-y divide-border border-y border-border">
+          {sections[sectionName].map((lesson) => (
+            <li>
+              <a
+                href={`/lessons/${lesson.data.slug}`}
+                class="flex items-baseline gap-4 py-4 no-underline group"
+              >
+                <span class="text-sm text-subtle tabular-nums w-8 shrink-0">
+                  {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
+                </span>
+                <span class="text-lg text-text group-hover:text-accent transition-colors">
+                  {lesson.data.title}
+                </span>
+                {lesson.data.description && (
+                  <span class="text-sm text-muted ml-auto truncate max-w-xs">
+                    {lesson.data.description}
+                  </span>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

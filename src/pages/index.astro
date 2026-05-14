@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lessons = await getCollection('lessons', ({ data }) => !data.draft);
+
+const tutorials = lessons
+  .filter((l) => l.data.section === 'Tutorials')
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+
+const assignments = lessons
+  .filter((l) => l.data.section === 'Assignments')
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+<BaseLayout title="Home">
+  <section class="mb-16 max-w-3xl">
+    <h1 class="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-text">
+      Mapping Systems
+    </h1>
+    <p class="mt-6 text-xl leading-relaxed text-muted">
+      A summer course on geospatial data, cartography, and web mapping at
+      Columbia GSAPP's Computational Design Practices program.
+    </p>
+    <div class="mt-8 flex gap-3">
+      <a
+        href="/lessons"
+        class="inline-flex items-center px-4 py-2 rounded-lg bg-text text-white text-sm font-medium no-underline hover:bg-accent hover:text-white transition-colors"
+      >
+        Browse lessons →
+      </a>
+      <a
+        href="/lessons/syllabus"
+        class="inline-flex items-center px-4 py-2 rounded-lg border border-border text-text text-sm font-medium no-underline hover:border-accent hover:text-accent transition-colors"
+      >
+        Syllabus
+      </a>
+    </div>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-2xl font-semibold mb-5 text-text">Tutorials</h2>
+      <ul class="divide-y divide-border border-y border-border">
+        {tutorials.map((lesson) => (
+          <li>
+            <a
+              href={`/lessons/${lesson.data.slug}`}
+              class="flex items-baseline gap-3 py-3 no-underline group"
+            >
+              <span class="text-sm text-subtle tabular-nums w-6 shrink-0">
+                {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
+              </span>
+              <span class="text-text group-hover:text-accent transition-colors">
+                {lesson.data.title}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold mb-5 text-text">Assignments</h2>
+      <ul class="divide-y divide-border border-y border-border">
+        {assignments.map((lesson) => (
+          <li>
+            <a
+              href={`/lessons/${lesson.data.slug}`}
+              class="flex items-baseline gap-3 py-3 no-underline group"
+            >
+              <span class="text-sm text-subtle tabular-nums w-6 shrink-0">
+                {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
+              </span>
+              <span class="text-text group-hover:text-accent transition-colors">
+                {lesson.data.title}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

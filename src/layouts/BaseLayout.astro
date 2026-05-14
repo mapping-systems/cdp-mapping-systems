@@ -1,0 +1,54 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Navigation from '../components/Navigation.astro';
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'CDP Mapping Systems — a course on geospatial data, cartography, and web mapping.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <title>{title} | Mapping Systems</title>
+    <ClientRouter />
+  </head>
+  <body class="min-h-screen bg-bg text-text antialiased">
+    <Navigation />
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-12">
+        <aside class="hidden lg:block">
+          <div class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
+            <Sidebar />
+          </div>
+        </aside>
+        <div class="min-w-0">
+          <slot />
+        </div>
+      </div>
+    </main>
+    <footer class="border-t border-border mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-sm text-muted">
+        CDP Mapping Systems · Columbia GSAPP
+      </div>
+    </footer>
+  </body>
+</html>

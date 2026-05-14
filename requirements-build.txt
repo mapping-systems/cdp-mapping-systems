@@ -1,0 +1,14 @@
+# Minimal Python dependencies for Cloudflare Pages to build the Astro site.
+#
+# scripts/build-content.py only needs to:
+#   - read .ipynb files (nbformat)
+#   - convert cell outputs (no execution; nbconvert is imported lazily and not
+#     actually used unless --execute is passed)
+#   - parse / emit frontmatter (PyYAML)
+#
+# Notebook execution + the full geospatial stack live in requirements.txt and
+# are only needed locally when authors run notebooks before committing.
+
+nbformat>=5.10,<6
+nbconvert>=7.16,<8
+PyYAML>=6,<7
