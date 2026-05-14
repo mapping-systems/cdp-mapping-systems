@@ -28,6 +28,9 @@
 html {
   background-color: var(--color-bg);
   color: var(--color-text);
+  /* Always reserve space for the vertical scrollbar so layout doesn't shift
+     left/right between short pages (no scrollbar) and long pages (scrollbar). */
+  scrollbar-gutter: stable;
 }
 
 body {
