@@ -7,12 +7,11 @@ export default defineConfig({
   site: 'https://mapping-systems.pages.dev',
   integrations: [mdx()],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [/** @type {any} */ (tailwindcss())],
   },
   markdown: {
     shikiConfig: {
       theme: 'github-light',
-      langs: ['python', 'javascript', 'typescript', 'bash', 'json', 'yaml'],
       wrap: true,
     },
   },

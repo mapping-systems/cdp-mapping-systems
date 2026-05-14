@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lessons = await getCollection('lessons', ({ data }) => !data.draft);
+
+const tutorials = lessons
+  .filter((l) => l.data.section === 'Tutorials')
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+
+const assignments = lessons
+  .filter((l) => l.data.section === 'Assignments')
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+<BaseLayout title="Home">
+  <section class="mb-16">
+    <h1 class="text-5xl font-semibold tracking-tight text-gray-900">
+      Mapping Systems
+    </h1>
+    <p class="mt-4 text-xl text-gray-600 max-w-2xl">
+      A summer course on geospatial data, cartography, and web mapping at Columbia GSAPP's Center for Spatial Research.
+    </p>
+    <div class="mt-8 flex gap-3">
+      <a
+        href="/lessons"
+        class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors"
+      >
+        Browse lessons →
+      </a>
+      <a
+        href="/lessons/syllabus/syllabus"
+        class="inline-flex items-center px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-sm font-medium hover:border-gray-900 transition-colors"
+      >
+        Syllabus
+      </a>
+    </div>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Tutorials</h2>
+      <ul class="space-y-2">
+        {tutorials.map((lesson) => (
+          <li>
+            <a
+              href={`/lessons/${lesson.data.slug}`}
+              class="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <span class="text-gray-400 mr-2 tabular-nums">
+                {String(lesson.data.order ?? '·').padStart(2, '0')}
+              </span>
+              {lesson.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Assignments</h2>
+      <ul class="space-y-2">
+        {assignments.map((lesson) => (
+          <li>
+            <a
+              href={`/lessons/${lesson.data.slug}`}
+              class="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <span class="text-gray-400 mr-2 tabular-nums">
+                {String(lesson.data.order ?? '·').padStart(2, '0')}
+              </span>
+              {lesson.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

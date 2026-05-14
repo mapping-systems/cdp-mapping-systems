@@ -1,20 +1,19 @@
+# Local data + scratch
 Data/*
-**/.DS_Store
-.DS_Store
-Tutorials/cache/
+content/**/cache/
+content/**/Data/
 .history/
 wip/
-Book/
+.DS_Store
+**/.DS_Store
+
+# Legacy MyST/Jupyter Book output (safe to remove once branch is merged)
+_build/
 _config.yml
 _toc.yml
+Book/
 
-# MyST build outputs
-_build
-/node_modules
-/.history
-/Tutorials/Data
-
-# All generated content
+# Astro / generated
 src/content/lessons/
 src/content/resources/
 public/lesson-assets/
@@ -23,5 +22,3 @@ dist/
 
 # Dependencies
 node_modules/
-/content/Tutorials/cache
-/content/Tutorials/Data

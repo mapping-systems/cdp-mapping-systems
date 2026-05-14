@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lessons = await getCollection('lessons', ({ data }) => !data.draft);
+
+const sections: Record<string, typeof lessons> = {};
+for (const lesson of lessons) {
+  const section = lesson.data.section;
+  if (!sections[section]) sections[section] = [];
+  sections[section].push(lesson);
+}
+
+for (const section of Object.keys(sections)) {
+  sections[section].sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+}
+
+// Display order: Tutorials, Assignments, Additional_Tutorials, Syllabus, then anything else alphabetically.
+const preferredOrder = ['Tutorials', 'Assignments', 'Additional_Tutorials', 'Syllabus'];
+const orderedSectionNames = [
+  ...preferredOrder.filter((s) => sections[s]),
+  ...Object.keys(sections)
+    .filter((s) => !preferredOrder.includes(s))
+    .sort(),
+];
+
+function displayName(section: string) {
+  return section.replace(/_/g, ' ');
+}
+---
+<BaseLayout title="Lessons">
+  <h1 class="text-4xl font-semibold tracking-tight mb-10">Lessons</h1>
+
+  {orderedSectionNames.map((sectionName) => (
+    <section class="mb-12">
+      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+        {displayName(sectionName)}
+      </h2>
+      <ul class="divide-y divide-gray-200 border-y border-gray-200">
+        {sections[sectionName].map((lesson) => (
+          <li>
+            <a
+              href={`/lessons/${lesson.data.slug}`}
+              class="flex items-baseline gap-4 py-4 px-2 hover:bg-gray-50 transition-colors"
+            >
+              <span class="text-sm text-gray-400 tabular-nums w-8 shrink-0">
+                {lesson.data.order != null ? String(lesson.data.order).padStart(2, '0') : '—'}
+              </span>
+              <span class="font-medium text-gray-900">{lesson.data.title}</span>
+              {lesson.data.description && (
+                <span class="text-sm text-gray-500 ml-auto truncate max-w-xs">
+                  {lesson.data.description}
+                </span>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>

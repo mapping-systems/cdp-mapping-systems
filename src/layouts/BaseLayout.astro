@@ -1,0 +1,35 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'CDP Mapping Systems — a course on geospatial data, cartography, and web mapping.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <title>{title} | Mapping Systems</title>
+    <ClientRouter />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <Navigation />
+    <main class="max-w-5xl mx-auto px-4 py-10">
+      <slot />
+    </main>
+    <footer class="border-t border-gray-200 mt-16">
+      <div class="max-w-5xl mx-auto px-4 py-6 text-sm text-gray-500">
+        CDP Mapping Systems · Columbia GSAPP
+      </div>
+    </footer>
+  </body>
+</html>

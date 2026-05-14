@@ -94,6 +94,20 @@ def clean_slug(filename: str) -> str:
     return slug.lower()
 
 
+def section_slug(section: str) -> str:
+    """Slugify a section name for URL/filename use."""
+    return re.sub(r"[^a-z0-9-]", "-", section.lower()).strip("-") or "misc"
+
+
+def namespaced_slug(section: str, file_slug: str) -> str:
+    """Compose a unique slug like 'tutorials/web-mapping'.
+
+    This prevents collisions between sections that have similarly-named files
+    (e.g. an assignment and a tutorial both called 'web-mapping').
+    """
+    return f"{section_slug(section)}/{file_slug}"
+
+
 def clean_title(filename: str) -> str:
     """Convert filename to readable title."""
     # Remove extension
@@ -104,6 +118,58 @@ def clean_title(filename: str) -> str:
     name = re.sub(r"[-_]+", " ", name)
     # Title case
     return name.title()
+
+
+# ============================================================================
+# Image asset rewriting (shared by markdown + notebook processing)
+# ============================================================================
+
+
+# Matches markdown image syntax: ![alt](path "optional title")
+# Captures: 1=alt, 2=path, 3=optional title (with surrounding quotes preserved separately)
+_IMG_PATTERN = re.compile(r"!\[([^\]]*)\]\(([^)\s]+)(\s+\"[^\"]*\")?\)")
+
+
+def _is_external(url: str) -> bool:
+    return url.startswith(("http://", "https://", "//", "data:", "/"))
+
+
+def rewrite_relative_images(body: str, source_dir: Path, section: str) -> str:
+    """Find relative image refs, copy the files into ASSETS_DIR, and rewrite paths.
+
+    Files are namespaced under ASSETS_DIR/<section-slug>/ to avoid collisions
+    between sections that both have an `images/` directory.
+    """
+    section_slug = clean_slug(section) or "misc"
+
+    def replace(match: re.Match) -> str:
+        alt = match.group(1)
+        url = match.group(2)
+        title = match.group(3) or ""
+
+        if _is_external(url):
+            return match.group(0)
+
+        # Resolve against the source markdown's directory
+        resolved = (source_dir / url).resolve()
+
+        if not resolved.exists():
+            print(f"  ⚠️  Missing image: {url} (resolved to {resolved})")
+            return match.group(0)
+
+        # Build a stable destination path: assets/<section>/<original-relative-url>
+        # Use the URL as-is for the relative path so e.g. images/foo/bar.png is preserved.
+        dest_rel = Path(section_slug) / url.lstrip("./")
+        dest = ASSETS_DIR / dest_rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+
+        if not dest.exists():
+            shutil.copy2(resolved, dest)
+
+        new_url = "/lesson-assets/" + dest_rel.as_posix()
+        return f"![{alt}]({new_url}{title})"
+
+    return _IMG_PATTERN.sub(replace, body)
 
 
 # ============================================================================
@@ -137,10 +203,11 @@ def process_markdown_file(md_path: Path) -> str:
         body = content
 
     # Build frontmatter with defaults
+    section = get_section_from_path(md_path)
     frontmatter = {
         "title": clean_title(md_path.name),
-        "slug": clean_slug(md_path.stem),
-        "section": get_section_from_path(md_path),
+        "slug": namespaced_slug(section, clean_slug(md_path.stem)),
+        "section": section,
     }
 
     # Add order if detectable
@@ -150,6 +217,9 @@ def process_markdown_file(md_path: Path) -> str:
 
     # Existing frontmatter overrides defaults
     frontmatter.update(existing_fm)
+
+    # Rewrite relative image references and copy files into public/lesson-assets/
+    body = rewrite_relative_images(body, md_path.parent, frontmatter["section"])
 
     # Reassemble
     frontmatter_yaml = yaml.dump(
@@ -183,10 +253,11 @@ def execute_notebook(nb_path: Path) -> nbformat.NotebookNode:
 
 def extract_notebook_frontmatter(nb: nbformat.NotebookNode, nb_path: Path) -> dict:
     """Extract or generate frontmatter for a notebook."""
+    section = get_section_from_path(nb_path)
     frontmatter = {
         "title": clean_title(nb_path.name),
-        "slug": clean_slug(nb_path.stem),
-        "section": get_section_from_path(nb_path),
+        "slug": namespaced_slug(section, clean_slug(nb_path.stem)),
+        "section": section,
     }
 
     order = get_order_from_filename(nb_path)
@@ -316,6 +387,9 @@ def process_notebook(nb_path: Path) -> str:
     )
     content = "".join(md_parts)
 
+    # Rewrite any relative image refs that came from markdown cells
+    content = rewrite_relative_images(content, nb_path.parent, frontmatter["section"])
+
     return f"---\n{frontmatter_yaml}---\n\n{content}"
 
 
@@ -362,8 +436,9 @@ def main():
     for nb_path in sorted(notebooks):
         try:
             md_content = process_notebook(nb_path)
-            output_filename = f"{clean_slug(nb_path.stem)}.md"
-            output_path = OUTPUT_DIR / output_filename
+            section = get_section_from_path(nb_path)
+            output_path = OUTPUT_DIR / section_slug(section) / f"{clean_slug(nb_path.stem)}.md"
+            output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")
             success_count += 1
@@ -375,8 +450,9 @@ def main():
     for md_path in sorted(markdown_files):
         try:
             md_content = process_markdown_file(md_path)
-            output_filename = f"{clean_slug(md_path.stem)}.md"
-            output_path = OUTPUT_DIR / output_filename
+            section = get_section_from_path(md_path)
+            output_path = OUTPUT_DIR / section_slug(section) / f"{clean_slug(md_path.stem)}.md"
+            output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")
             success_count += 1
