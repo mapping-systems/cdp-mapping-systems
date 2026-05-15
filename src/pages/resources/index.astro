@@ -45,6 +45,13 @@ channels.sort((a, b) => a.data.title.localeCompare(b.data.title));
                   {channel.data.description}
                 </p>
               )}
+              {channel.data.tags && channel.data.tags.length > 0 && (
+                <ul class="mt-3 flex flex-wrap gap-1.5">
+                  {channel.data.tags.map((tag) => (
+                    <li class="px-2 py-0.5 rounded-full bg-surface-strong text-muted text-xs">{tag}</li>
+                  ))}
+                </ul>
+              )}
               <p class="mt-3 text-xs text-subtle uppercase tracking-wider">
                 {channel.data.blockCount ?? 0} {channel.data.blockCount === 1 ? 'item' : 'items'}
               </p>

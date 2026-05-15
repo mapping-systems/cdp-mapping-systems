@@ -3,9 +3,12 @@ title: "Maps"
 slug: "maps-yszif0goa1g"
 source: arena
 arenaId: 3438044
-blockCount: 62
-lastFetched: "2026-05-14T23:56:40.053Z"
+blockCount: 63
+lastFetched: "2026-05-15T12:44:50.638Z"
 description: "Course-related cartographic references and inspiration."
+tags:
+  - "cartography"
+  - "inspiration"
 ---
 
 [Alexa Hoyer](https://alexahoyer.com/)
@@ -275,3 +278,7 @@ Travel the longest route on the NYC Subway without visiting the same station twi
 [Orion Spatial Data Hub](https://orionterrametrics.com/#/)
 
 Africa’s Open Geospatial Infrastructure
+
+---
+
+[new-simulator-visualizes-connections-between-housing-policy-and-development-8966ce5f78c9](https://medium.com/@graphicacy/new-simulator-visualizes-connections-between-housing-policy-and-development-8966ce5f78c9)

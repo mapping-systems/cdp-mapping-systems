@@ -25,6 +25,7 @@ const resources = defineCollection({
     lastFetched: z.string().optional(),
     arenaId: z.number().optional(),
     blockCount: z.number().optional(),
+    tags: z.array(z.string()).default([]),
   }),
 });
 
@@ -57,6 +58,7 @@ const bibliography = defineCollection({
     doi: z.string().optional(),
     date: z.string().optional(),
     year: z.number().optional(),
+    tags: z.array(z.string()).default([]),
     csl: z.unknown(),
     bib: z.string(),
     bibtex: z.string(),

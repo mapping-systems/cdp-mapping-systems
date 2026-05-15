@@ -22,6 +22,7 @@ import { join } from 'path';
 import { ARENA_CHANNELS, type ArenaChannelConfig } from '../resources.config.js';
 
 const OUTPUT_DIR = 'src/content/resources';
+const JSON_OUTPUT_DIR = 'src/data/arena';
 
 // ---------------------------------------------------------------------------
 // API types — only the fields we use
@@ -161,6 +162,9 @@ function channelToMarkdown(channel: ArenaChannel, config: ArenaChannelConfig): s
   ];
   if (description) frontmatter.push(`description: ${escapeYaml(description)}`);
   if (hero) frontmatter.push(`heroImage: ${escapeYaml(hero)}`);
+  if (config.tags && config.tags.length > 0) {
+    frontmatter.push(`tags:\n${config.tags.map((t) => `  - ${escapeYaml(t)}`).join('\n')}`);
+  }
 
   const body = channel.contents
     .map(blockToMarkdown)
@@ -168,6 +172,55 @@ function channelToMarkdown(channel: ArenaChannel, config: ArenaChannelConfig): s
     .join('\n\n---\n\n');
 
   return `---\n${frontmatter.join('\n')}\n---\n\n${body}\n`;
+}
+
+/** Compact block representation that the channel detail page uses to render
+    a grid (instead of a vertical markdown flow). */
+interface GridBlock {
+  id: number;
+  /** Are.na block class — drives how the card is rendered. */
+  class: ArenaBlock['class'];
+  title: string | null;
+  description: string | null;
+  /** External URL the block points at — for Link/Media blocks. */
+  source_url: string | null;
+  /** Image URL (display size, ~1200px wide) — for Image/Attachment blocks
+      and as a fallback for Link blocks if the API has one. */
+  image_url: string | null;
+  /** Smaller thumb (~200px) for layout placeholders. */
+  thumb_url: string | null;
+  /** Plain text content — for Text blocks. */
+  content: string | null;
+  /** are.na permalink to the block (always works as a fallback). */
+  block_url: string;
+}
+
+function blockToGrid(block: ArenaBlock): GridBlock {
+  return {
+    id: block.id,
+    class: block.class,
+    title: block.title,
+    description: block.description,
+    source_url: block.source?.url ?? null,
+    image_url: block.image?.display.url ?? null,
+    thumb_url: block.image?.thumb.url ?? null,
+    content: block.content,
+    block_url: `https://www.are.na/block/${block.id}`,
+  };
+}
+
+function channelToJson(channel: ArenaChannel, config: ArenaChannelConfig) {
+  return {
+    slug: channel.slug,
+    title: config.title ?? channel.title,
+    description: config.description ?? channel.metadata?.description ?? '',
+    arenaId: channel.id,
+    arenaUrl: `https://www.are.na/channel/${channel.id}`,
+    blockCount: channel.length,
+    tags: config.tags ?? [],
+    fetchedAt: new Date().toISOString(),
+    blocks: channel.contents.map(blockToGrid),
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -182,22 +235,30 @@ async function main() {
     return;
   }
 
-  // Fresh run: clear arena outputs (manual `.md` files would also live here
-  // if we add support, but for now this dir is fully generated).
-  if (existsSync(OUTPUT_DIR)) {
-    rmSync(OUTPUT_DIR, { recursive: true, force: true });
-  }
+  // Fresh run: clear both arena outputs.
+  if (existsSync(OUTPUT_DIR)) rmSync(OUTPUT_DIR, { recursive: true, force: true });
+  if (existsSync(JSON_OUTPUT_DIR)) rmSync(JSON_OUTPUT_DIR, { recursive: true, force: true });
   mkdirSync(OUTPUT_DIR, { recursive: true });
+  mkdirSync(JSON_OUTPUT_DIR, { recursive: true });
 
   let ok = 0;
   let failed = 0;
   for (const config of ARENA_CHANNELS) {
     try {
       const channel = await fetchChannel(config.slug);
+
+      // Markdown for the resources index card frontmatter (and as a fallback
+      // SEO/readable view).
       const markdown = channelToMarkdown(channel, config);
-      const outputPath = join(OUTPUT_DIR, `${channel.slug}.md`);
-      writeFileSync(outputPath, markdown, 'utf-8');
-      console.log(`  ✓ ${outputPath} (${channel.length} blocks)`);
+      const mdPath = join(OUTPUT_DIR, `${channel.slug}.md`);
+      writeFileSync(mdPath, markdown, 'utf-8');
+
+      // JSON consumed by /resources/<slug> to render the grid layout.
+      const json = channelToJson(channel, config);
+      const jsonPath = join(JSON_OUTPUT_DIR, `${channel.slug}.json`);
+      writeFileSync(jsonPath, JSON.stringify(json, null, 2), 'utf-8');
+
+      console.log(`  ✓ ${channel.slug} (${channel.length} blocks) → ${mdPath}, ${jsonPath}`);
       ok++;
     } catch (err) {
       console.error(`  ✗ ${config.slug}: ${err instanceof Error ? err.message : err}`);

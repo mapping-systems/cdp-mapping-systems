@@ -28,6 +28,12 @@ interface ZoteroAPIItem {
   key: string;
   version: number;
   library: { type: string; id: number };
+  data?: {
+    itemType?: string;
+    title?: string;
+    tags?: { tag: string; type?: number }[];
+    [k: string]: unknown;
+  };
   csljson?: Record<string, unknown>;
   bib?: string; // pre-rendered HTML
   bibtex?: string;
@@ -41,6 +47,8 @@ interface BibliographyEntry {
   doi?: string;
   date?: string;
   year?: number;
+  /** Tags from Zotero (lowercased + sorted for stable ordering). */
+  tags: string[];
   csl: unknown;
   /** Pre-rendered HTML citation in the configured style. */
   bib: string;
@@ -61,16 +69,17 @@ async function fetchPage(start: number): Promise<{ items: ZoteroAPIItem[]; total
   const { userId, libraryType, collectionId, style, sort, direction } = ZOTERO;
 
   // Ask Zotero to return CSL-JSON, BibTeX, AND a pre-rendered citation in
-  // one round-trip. Format=json + include= adds the extra renderings.
-  // itemType filter excludes attachments and notes — they show up in the
-  // collection as standalone items if they're imported PDFs without a
-  // parent record, but they aren't citable on their own.
+  // one round-trip. `data` is also included so we can read the tags array
+  // (CSL JSON only carries tags when present in the `keyword` field, which
+  // Zotero doesn't always populate).
+  // itemType filter excludes attachments — they show up in the collection
+  // as standalone items if they're imported PDFs without a parent record,
+  // but they aren't citable on their own. (Combining multiple negations
+  // with `||` is accepted by the API but evaluates as a tautology, so we
+  // post-filter notes in normalize() instead.)
   const params = new URLSearchParams({
     format: 'json',
-    include: 'csljson,bib,bibtex',
-    // Single negation works; combining multiple negations with `||` is
-    // accepted but evaluates as a tautology, so we exclude attachments
-    // here (the noisy case for typical libraries) and post-filter notes.
+    include: 'csljson,bib,bibtex,data',
     itemType: '-attachment',
     style,
     sort,
@@ -126,6 +135,11 @@ function normalize(item: ZoteroAPIItem): BibliographyEntry | null {
   const issued = csl.issued as { 'date-parts'?: number[][] } | undefined;
   const year = issued?.['date-parts']?.[0]?.[0];
 
+  // Pull tags from Zotero `data.tags` (where users actually edit them in
+  // the Zotero app). Lowercase + dedupe + sort for a stable rendering.
+  const rawTags = item.data?.tags?.map((t) => t.tag).filter((s): s is string => typeof s === 'string') ?? [];
+  const tags = Array.from(new Set(rawTags.map((t) => t.trim()).filter(Boolean))).sort();
+
   return {
     key: item.key,
     type,
@@ -134,6 +148,7 @@ function normalize(item: ZoteroAPIItem): BibliographyEntry | null {
     doi: typeof csl.DOI === 'string' ? csl.DOI : undefined,
     date: year ? String(year) : undefined,
     year: typeof year === 'number' ? year : undefined,
+    tags,
     csl,
     bib: item.bib ?? '',
     bibtex: item.bibtex ?? '',
