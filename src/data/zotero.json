@@ -1,6 +1,6 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-15T00:13:34.625Z",
+  "fetchedAt": "2026-05-15T12:44:52.581Z",
   "collectionId": "847AR7X4",
   "count": 4,
   "entries": [
@@ -10,6 +10,7 @@
       "title": "Semiology of graphics: diagrams, networks, maps",
       "date": "2011",
       "year": 2011,
+      "tags": [],
       "csl": {
         "id": "747207/7IIFNURW",
         "type": "book",
@@ -56,6 +57,11 @@
       "doi": "10.1038/s41598-026-45927-x",
       "date": "2026",
       "year": 2026,
+      "tags": [
+        "Environmental sciences",
+        "Environmental social sciences",
+        "Mathematics and computing"
+      ],
       "csl": {
         "id": "747207/9KGZ5VSV",
         "type": "article-journal",
@@ -120,6 +126,7 @@
       "url": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/",
       "date": "2026",
       "year": 2026,
+      "tags": [],
       "csl": {
         "id": "747207/9GIUHJ6Q",
         "type": "post-weblog",
@@ -161,6 +168,7 @@
       "url": "https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/",
       "date": "2026",
       "year": 2026,
+      "tags": [],
       "csl": {
         "id": "747207/2G5EL4DS",
         "type": "webpage",

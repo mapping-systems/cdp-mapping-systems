@@ -23,6 +23,10 @@ export interface ArenaChannelConfig {
   title?: string;
   /** Optional one-liner shown on the resources index. */
   description?: string;
+  /** Manual tags shown on the channel card (and used for filtering once
+      multiple channels exist). Are.na doesn't tag channels itself, so
+      this is curator-supplied. */
+  tags?: string[];
 }
 
 export interface ZoteroConfig {
@@ -50,6 +54,7 @@ export const ARENA_CHANNELS: ArenaChannelConfig[] = [
     slug: 'maps-yszif0goa1g',
     title: 'Maps',
     description: 'Course-related cartographic references and inspiration.',
+    tags: ['cartography', 'inspiration'],
   },
 ];
 
