@@ -1,0 +1,193 @@
+{
+  "style": "chicago-author-date",
+  "fetchedAt": "2026-05-15T00:13:34.625Z",
+  "collectionId": "847AR7X4",
+  "count": 4,
+  "entries": [
+    {
+      "key": "7IIFNURW",
+      "type": "book",
+      "title": "Semiology of graphics: diagrams, networks, maps",
+      "date": "2011",
+      "year": 2011,
+      "csl": {
+        "id": "747207/7IIFNURW",
+        "type": "book",
+        "edition": "1. ed",
+        "ISBN": "978-1-58948-261-6",
+        "language": "eng",
+        "number-of-pages": "438",
+        "publisher": "ESRI Press",
+        "publisher-place": "Redlands, Calif",
+        "shortTitle": "Semiology of graphics",
+        "source": "K10plus ISBN",
+        "title": "Semiology of graphics: diagrams, networks, maps",
+        "title-short": "Semiology of graphics",
+        "author": [
+          {
+            "family": "Bertin",
+            "given": "Jacques"
+          },
+          {
+            "family": "Berg",
+            "given": "William J."
+          },
+          {
+            "family": "Bertin",
+            "given": "Jacques"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2011
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Bertin, Jacques, William J. Berg, and Jacques Bertin. 2011. <i>Semiology of Graphics: Diagrams, Networks, Maps</i>. 1. ed. ESRI Press.</div>\n</div>",
+      "bibtex": "\n@book{bertin_semiology_2011,\n\taddress = {Redlands, Calif},\n\tedition = {1. ed},\n\ttitle = {Semiology of graphics: diagrams, networks, maps},\n\tisbn = {978-1-58948-261-6},\n\tshorttitle = {Semiology of graphics},\n\tlanguage = {eng},\n\tpublisher = {ESRI Press},\n\tauthor = {Bertin, Jacques and Berg, William J. and Bertin, Jacques},\n\tyear = {2011},\n}\n"
+    },
+    {
+      "key": "9KGZ5VSV",
+      "type": "article-journal",
+      "title": "A unified deep learning framework integrating OpenStreetMap for multi-domain urban planning tasks",
+      "url": "https://www.nature.com/articles/s41598-026-45927-x",
+      "doi": "10.1038/s41598-026-45927-x",
+      "date": "2026",
+      "year": 2026,
+      "csl": {
+        "id": "747207/9KGZ5VSV",
+        "type": "article-journal",
+        "abstract": "Urban planning increasingly requires multi-source geospatial intelligence to address the complexity of modern cities. This study introduces a unified deep learning framework integrating OpenStreetMap (OSM) data with multispectral satellite imagery and demographic-environmental datasets. The framework employs task-specific architectures, including Convolutional Neural Networks (CNNs) for land-use classification, U-Net segmentation for building footprint extraction, Long Short-Term Memory (LSTM) networks for traffic flow prediction, and a hybrid CNN-RNN model for air-quality forecasting. The land-use model achieved 91.6% accuracy, the U-Net building footprint extractor reached 94.0% accuracy, the LSTM traffic model obtained an RMSE of 3.6 vehicles per hour, and the hybrid air-quality model achieved an RMSE of 2.3 µg/m³. These metrics reflect performance on OSM-aligned datasets specifically curated for Krasnodar. The novelty of this work lies in establishing a multi-task, multi-source analytical workflow that unifies OSM, satellite, and temporal environmental data within a coherent deep learning system. The resulting framework provides urban planners with a scalable and low-cost approach for generating high-resolution urban intelligence to support sustainable city management.",
+        "container-title": "Scientific Reports",
+        "DOI": "10.1038/s41598-026-45927-x",
+        "ISSN": "2045-2322",
+        "issue": "1",
+        "journalAbbreviation": "Sci Rep",
+        "language": "en",
+        "license": "2026 The Author(s)",
+        "page": "10870",
+        "publisher": "Nature Publishing Group",
+        "source": "www.nature.com",
+        "title": "A unified deep learning framework integrating OpenStreetMap for multi-domain urban planning tasks",
+        "URL": "https://www.nature.com/articles/s41598-026-45927-x",
+        "volume": "16",
+        "author": [
+          {
+            "family": "Chen",
+            "given": "YanHua"
+          },
+          {
+            "family": "Afandi",
+            "given": "Waleed Saeed"
+          },
+          {
+            "family": "Gura",
+            "given": "Dmitry"
+          },
+          {
+            "family": "Kosenok",
+            "given": "Yury"
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              27
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              27
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Chen, YanHua, Waleed Saeed Afandi, Dmitry Gura, and Yury Kosenok. 2026. &#x201C;A Unified Deep Learning Framework Integrating OpenStreetMap for Multi-Domain Urban Planning Tasks.&#x201D; <i>Scientific Reports</i> 16 (1): 10870. https://doi.org/10.1038/s41598-026-45927-x.</div>\n</div>",
+      "bibtex": "\n@article{chen_unified_2026,\n\ttitle = {A unified deep learning framework integrating {OpenStreetMap} for multi-domain urban planning tasks},\n\tvolume = {16},\n\tcopyright = {2026 The Author(s)},\n\tissn = {2045-2322},\n\turl = {https://www.nature.com/articles/s41598-026-45927-x},\n\tdoi = {10.1038/s41598-026-45927-x},\n\tabstract = {Urban planning increasingly requires multi-source geospatial intelligence to address the complexity of modern cities. This study introduces a unified deep learning framework integrating OpenStreetMap (OSM) data with multispectral satellite imagery and demographic-environmental datasets. The framework employs task-specific architectures, including Convolutional Neural Networks (CNNs) for land-use classification, U-Net segmentation for building footprint extraction, Long Short-Term Memory (LSTM) networks for traffic flow prediction, and a hybrid CNN-RNN model for air-quality forecasting. The land-use model achieved 91.6\\% accuracy, the U-Net building footprint extractor reached 94.0\\% accuracy, the LSTM traffic model obtained an RMSE of 3.6 vehicles per hour, and the hybrid air-quality model achieved an RMSE of 2.3 µg/m³. These metrics reflect performance on OSM-aligned datasets specifically curated for Krasnodar. The novelty of this work lies in establishing a multi-task, multi-source analytical workflow that unifies OSM, satellite, and temporal environmental data within a coherent deep learning system. The resulting framework provides urban planners with a scalable and low-cost approach for generating high-resolution urban intelligence to support sustainable city management.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-04-27},\n\tjournal = {Scientific Reports},\n\tpublisher = {Nature Publishing Group},\n\tauthor = {Chen, YanHua and Afandi, Waleed Saeed and Gura, Dmitry and Kosenok, Yury},\n\tmonth = mar,\n\tyear = {2026},\n\tkeywords = {Environmental sciences, Environmental social sciences, Mathematics and computing},\n\tpages = {10870},\n}\n"
+    },
+    {
+      "key": "9GIUHJ6Q",
+      "type": "post-weblog",
+      "title": "The Data Center That Didn’t Exist",
+      "url": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/",
+      "date": "2026",
+      "year": 2026,
+      "csl": {
+        "id": "747207/9GIUHJ6Q",
+        "type": "post-weblog",
+        "abstract": "Nondisclosure agreements kept a land deal secret for months. Internal emails show officials were preparing for a Microsoft data center.",
+        "title": "The Data Center That Didn’t Exist",
+        "URL": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/",
+        "author": [
+          {
+            "family": "Townes",
+            "given": "Diara J."
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              14
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              12
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Townes, Diara J. 2026. <i>The Data Center That Didn&#x2019;t Exist</i>. May 12. https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/.</div>\n</div>",
+      "bibtex": "\n@misc{townes_data_2026,\n\ttitle = {The {Data} {Center} {That} {Didn}’t {Exist}},\n\turl = {https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/},\n\tabstract = {Nondisclosure agreements kept a land deal secret for months. Internal emails show officials were preparing for a Microsoft data center.},\n\turldate = {2026-05-14},\n\tauthor = {Townes, Diara J.},\n\tmonth = may,\n\tyear = {2026},\n}\n"
+    },
+    {
+      "key": "2G5EL4DS",
+      "type": "webpage",
+      "title": "A geography of an American citizenship",
+      "url": "https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/",
+      "date": "2026",
+      "year": 2026,
+      "csl": {
+        "id": "747207/2G5EL4DS",
+        "type": "webpage",
+        "abstract": "Explore Richard Edes Harrison's impactful 1952 map, 'The U.S Commitment,' revealing America's post-war geopolitical landscape.",
+        "title": "A geography of an American citizenship",
+        "URL": "https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/",
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              3
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              1
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">&#x201C;A Geography of an American Citizenship.&#x201D; 2026. April 1. https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/.</div>\n</div>",
+      "bibtex": "\n@misc{noauthor_geography_2026,\n\ttitle = {A geography of an {American} citizenship},\n\turl = {https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/},\n\tabstract = {Explore Richard Edes Harrison's impactful 1952 map, 'The U.S Commitment,' revealing America's post-war geopolitical landscape.},\n\turldate = {2026-04-03},\n\tmonth = apr,\n\tyear = {2026},\n}\n"
+    }
+  ]
+}
