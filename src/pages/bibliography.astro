@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const entries = await getCollection('bibliography');
+
+// Group by year (descending), unknown year goes to "Undated"
+const byYear: Record<string, typeof entries> = {};
+for (const e of entries) {
+  const year = e.data.year ? String(e.data.year) : 'Undated';
+  if (!byYear[year]) byYear[year] = [];
+  byYear[year].push(e);
+}
+const years = Object.keys(byYear).sort((a, b) => {
+  if (a === 'Undated') return 1;
+  if (b === 'Undated') return -1;
+  return Number(b) - Number(a);
+});
+
+// Within each year, sort alphabetically by the first character of the
+// rendered citation (which leads with author surname in Chicago style).
+for (const year of years) {
+  byYear[year].sort((a, b) =>
+    (a.data.bib || a.data.title).localeCompare(b.data.bib || b.data.title)
+  );
+}
+---
+<BaseLayout title="Bibliography">
+  <h1 class="text-5xl font-semibold tracking-tight mb-3 text-text">Bibliography</h1>
+  <p class="text-lg text-muted mb-12 max-w-2xl">
+    Course readings and references, formatted in Chicago Author-Date style.
+    Synced from a
+    <a class="text-link hover:text-link-hover underline-offset-2" href="https://www.zotero.org" target="_blank" rel="noreferrer noopener">Zotero</a>
+    collection and refreshed periodically.
+  </p>
+
+  {entries.length === 0 ? (
+    <div class="text-muted italic space-y-2">
+      <p>No entries yet.</p>
+      <p>
+        Configure the Zotero collection in
+        <code class="not-italic text-text bg-surface-strong px-1.5 py-0.5 rounded">resources.config.ts</code>
+        and run
+        <code class="not-italic text-text bg-surface-strong px-1.5 py-0.5 rounded">npm run build:resources</code>.
+      </p>
+    </div>
+  ) : (
+    <div class="space-y-12">
+      {years.map((year) => (
+        <section>
+          <h2 class="text-xs font-semibold text-accent uppercase tracking-[0.14em] mb-5">
+            {year}
+          </h2>
+          <ul class="space-y-5">
+            {byYear[year].map((entry) => (
+              <li class="border-b border-border pb-5 last:border-b-0">
+                {/* The bib field is HTML rendered by Zotero (Chicago style),
+                    wrapped in its own div with .csl-entry. We dump it as-is
+                    and style the inner anchors via the CSS at the bottom. */}
+                <div class="bibliography-entry text-text leading-relaxed" set:html={entry.data.bib || `<em>${entry.data.title}</em>`} />
+                {(entry.data.url || entry.data.doi) && (
+                  <p class="mt-2 text-sm">
+                    {entry.data.doi && (
+                      <a
+                        href={`https://doi.org/${entry.data.doi}`}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="text-link hover:text-link-hover underline underline-offset-2 mr-4 break-all"
+                      >
+                        doi.org/{entry.data.doi}
+                      </a>
+                    )}
+                    {entry.data.url && !entry.data.doi && (
+                      <a
+                        href={entry.data.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="text-link hover:text-link-hover underline underline-offset-2 break-all"
+                      >
+                        {entry.data.url}
+                      </a>
+                    )}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  )}
+</BaseLayout>
+
+<style is:global>
+  /* Zotero's pre-rendered Chicago-style bibliography wraps each entry in
+     a .csl-entry div. Style it to match the rest of the prose. */
+  .bibliography-entry .csl-entry {
+    margin: 0;
+  }
+  .bibliography-entry i,
+  .bibliography-entry em {
+    font-style: italic;
+  }
+  /* Hanging indent that Chicago style traditionally uses. */
+  .bibliography-entry {
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
+  }
+</style>

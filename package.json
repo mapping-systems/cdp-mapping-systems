@@ -8,6 +8,7 @@
     "build:content:execute": "python scripts/build-content.py --execute",
     "build:arena": "tsx scripts/fetch-arena.ts",
     "build:zotero": "tsx scripts/fetch-zotero.ts",
+    "build:resources": "npm run build:arena && npm run build:zotero",
     "build": "npm run build:content && astro build",
     "build:full": "npm run build:content:execute && astro build",
     "preview": "npm run build && wrangler dev",
