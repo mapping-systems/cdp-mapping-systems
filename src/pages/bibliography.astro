@@ -109,14 +109,14 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
         >
           <nav
             aria-label="Jump to section"
-            class="max-w-full mx-auto px-4 sm:px-6 py-3 flex flex-wrap gap-1.5 text-sm"
+            class="section-jump-scroller max-w-full mx-auto px-4 sm:px-6 py-3 flex gap-1.5 text-sm overflow-x-auto"
             data-section-jump
           >
             {renderedSections.map((section) => (
               <a
                 href={`#section-${section.key}`}
                 data-jump-key={section.key}
-                class="inline-flex items-baseline gap-1.5 px-2.5 py-1 rounded-full border border-border text-text no-underline hover:border-accent hover:text-accent transition-colors"
+                class="jump-chip inline-flex items-baseline gap-1.5 px-2.5 py-1 rounded-full border border-border text-text no-underline hover:border-accent hover:text-accent transition-colors whitespace-nowrap shrink-0"
               >
                 <span>{section.name}</span>
                 <span class="text-xs text-subtle tabular-nums" data-jump-count>
@@ -155,21 +155,41 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
       </button>
 
       <div class="space-y-12" data-bibliography>
-        {renderedSections.map((section) => (
+        {renderedSections.map((section) => {
+          const isUncategorized = section.key === '__uncategorized__';
+          return (
           <section
             id={`section-${section.key}`}
             data-section
             data-section-key={section.key}
-            class="scroll-mt-24"
+            class="scroll-mt-40"
           >
-            <h2 class="text-xs font-semibold text-accent uppercase tracking-[0.14em] mb-5">
-              <span>{section.name}</span>
-              <span class="ml-2 text-subtle font-normal" data-section-count>
-                ({bySection[section.key].length})
-              </span>
-            </h2>
-            <ul class="space-y-5">
-              {bySection[section.key].map((entry) => (
+            <details open={!isUncategorized} data-section-details>
+              <summary class="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <h2 class="text-xs font-semibold text-accent uppercase tracking-[0.14em] mb-5 inline-flex items-baseline gap-2 group">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="details-caret text-subtle group-hover:text-accent transition-transform"
+                    aria-hidden="true"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                  <span>{section.name}</span>
+                  <span class="text-subtle font-normal" data-section-count>
+                    ({bySection[section.key].length})
+                  </span>
+                </h2>
+              </summary>
+              <ul class="space-y-5">
+                {bySection[section.key].map((entry) => (
                 <li
                   class="border-b border-border pb-5 last:border-b-0"
                   data-entry
@@ -223,9 +243,11 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
                   )}
                 </li>
               ))}
-            </ul>
+              </ul>
+            </details>
           </section>
-        ))}
+          );
+        })}
         <p data-empty-msg class="text-muted italic hidden">
           No entries match your filter.
         </p>
@@ -241,6 +263,37 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
   .bibliography-entry {
     text-indent: -1.5rem;
     padding-left: 1.5rem;
+  }
+
+  /* Hide the horizontal scrollbar on the sticky jump nav while keeping
+     overflow-x:auto scrolling. Edge fades give a "more here" affordance. */
+  .section-jump-scroller {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 1.5rem,
+      black calc(100% - 1.5rem),
+      transparent
+    );
+  }
+  .section-jump-scroller::-webkit-scrollbar { display: none; }
+
+  /* Active chip — the section currently in view. Set by the scrollspy. */
+  .jump-chip[aria-current="true"] {
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  .jump-chip[aria-current="true"] span:last-child {
+    color: var(--color-accent);
+    opacity: 0.8;
+  }
+
+  /* Rotate the details caret 90° when the section is open. */
+  details[open] > summary .details-caret {
+    transform: rotate(90deg);
   }
 </style>
 
@@ -336,6 +389,9 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
     // Hide sections that have no visible entries; update the count display.
     // Mirror the same hide/count change to the corresponding jump link so
     // the top-of-page nav reflects what's actually visible below.
+    // Force-open Uncategorized's <details> when a filter is active and has
+    // matches there — so users see results rather than a collapsed shell.
+    const filterActive = !!q || state.tags.size > 0;
     root.querySelectorAll<HTMLElement>('[data-section]').forEach((section) => {
       const visible = section.querySelectorAll<HTMLElement>('[data-entry]:not(.hidden)').length;
       const total = section.querySelectorAll<HTMLElement>('[data-entry]').length;
@@ -352,6 +408,14 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
           jump.classList.toggle('hidden', visible === 0);
           const jumpCount = jump.querySelector<HTMLElement>('[data-jump-count]');
           if (jumpCount) jumpCount.textContent = String(visible);
+        }
+
+        // Open the section's <details> when a filter is active and this
+        // section has matches. Don't force it closed when the filter clears
+        // — let the user's manual open/close state stand.
+        if (filterActive && visible > 0) {
+          const details = section.querySelector<HTMLDetailsElement>('[data-section-details]');
+          if (details && !details.open) details.open = true;
         }
       }
     });
@@ -410,6 +474,55 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
 
     applyFilter();
     attachBackToTop();
+    attachScrollSpy();
+  }
+
+  function attachScrollSpy() {
+    const sections = document.querySelectorAll<HTMLElement>('[data-section]');
+    if (sections.length === 0) return;
+
+    // Map sectionKey → jump chip. Built once.
+    const chips = new Map<string, HTMLElement>();
+    document.querySelectorAll<HTMLElement>('[data-jump-key]').forEach((chip) => {
+      const key = chip.dataset.jumpKey ?? '';
+      if (key) chips.set(key, chip);
+    });
+
+    function clearActive() {
+      chips.forEach((chip) => chip.removeAttribute('aria-current'));
+    }
+
+    function markActive(key: string) {
+      clearActive();
+      const chip = chips.get(key);
+      if (!chip) return;
+      chip.setAttribute('aria-current', 'true');
+      // Bring the active chip into view in the horizontal scroller.
+      chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+
+    // Track visible sections; pick the topmost on each update. rootMargin
+    // accounts for the sticky header (~4rem) + sticky jump nav (~3rem) so
+    // a section becomes "active" right when its heading slides under the
+    // sticky bars.
+    const visible = new Set<HTMLElement>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target as HTMLElement);
+          else visible.delete(entry.target as HTMLElement);
+        }
+        if (visible.size === 0) return;
+        // Topmost-in-viewport wins.
+        const topmost = [...visible].sort(
+          (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top,
+        )[0];
+        const key = topmost.dataset.sectionKey;
+        if (key) markActive(key);
+      },
+      { rootMargin: '-7rem 0px -60% 0px', threshold: 0 },
+    );
+    sections.forEach((s) => observer.observe(s));
   }
 
   function attachBackToTop() {
