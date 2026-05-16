@@ -1,6 +1,6 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-16T00:36:10.451Z",
+  "fetchedAt": "2026-05-16T00:47:36.043Z",
   "collectionId": "847AR7X4",
   "count": 163,
   "subcollections": [
@@ -10,11 +10,31 @@
     },
     {
       "key": "PGTZV2GX",
-      "name": "cartography + visualization"
+      "name": "cartography + visualization + visual references"
     },
     {
       "key": "T3AL7PGA",
       "name": "case studies"
+    },
+    {
+      "key": "IKQFRT6Z",
+      "name": "community"
+    },
+    {
+      "key": "UXN7JR59",
+      "name": "conflict"
+    },
+    {
+      "key": "G32ZL73Q",
+      "name": "critical cartography"
+    },
+    {
+      "key": "9DXPI4J7",
+      "name": "data formats + tools"
+    },
+    {
+      "key": "S3Z4ZXR8",
+      "name": "design"
     },
     {
       "key": "AGAC9I88",
@@ -29,8 +49,20 @@
       "name": "networks"
     },
     {
+      "key": "XNQNE959",
+      "name": "projections"
+    },
+    {
       "key": "DRE4ZF6F",
       "name": "theory"
+    },
+    {
+      "key": "ZZJNKMSU",
+      "name": "uncertainty"
+    },
+    {
+      "key": "E2HWAZRJ",
+      "name": "web mapping"
     }
   ],
   "entries": [
@@ -279,7 +311,9 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/7IIFNURW",
         "type": "book",
@@ -517,7 +551,9 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/VG5HM3A5",
         "type": "book",
@@ -891,7 +927,10 @@
         "Environmental social sciences",
         "Mathematics and computing"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "ERJ92FM8",
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/9KGZ5VSV",
         "type": "article-journal",
@@ -1392,7 +1431,10 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "E2HWAZRJ"
+      ],
       "csl": {
         "id": "747207/TWJ2KGRP",
         "type": "book",
@@ -1801,7 +1843,9 @@
         "Urban Areas",
         "internal-storyline-no"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/ERB65TU2",
         "type": "article-newspaper",
@@ -1914,7 +1958,9 @@
         "Methodology",
         "Social aspects"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/G47YSBSC",
         "type": "book",
@@ -2341,7 +2387,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/U3ZGQN99",
         "type": "book",
@@ -2422,7 +2470,10 @@
       "tags": [
         "uncertainty"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "ZZJNKMSU"
+      ],
       "csl": {
         "id": "747207/TNIAXGRH",
         "type": "article-journal",
@@ -2527,13 +2578,15 @@
       "tags": [
         "mapping-systems"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/JTEGM2U3",
         "type": "chapter",
         "abstract": "Open access peer-reviewed chapter",
         "DOI": "10.5772/46129",
-        "ISBN": "9789535106890",
+        "ISBN": "978-953-51-0689-0",
         "language": "en",
         "note": "DOI: 10.5772/46129",
         "publisher": "IntechOpen",
@@ -2604,7 +2657,7 @@
         }
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Garc&#xED;a, Ricardo, Juan Pablo de Castro, Elena Verd&#xFA;, et al. 2012. <i>Web Map Tile Services for Spatial Data Infrastructures: Management and Optimization</i>. IntechOpen. https://doi.org/10.5772/46129.</div>\n</div>",
-      "bibtex": "\n@incollection{garcia_web_2012,\n\ttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}: {Management} and {Optimization}},\n\tisbn = {9789535106890},\n\tshorttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}},\n\turl = {https://www.intechopen.com/chapters/38302},\n\tdoi = {10.5772/46129},\n\tabstract = {Open access peer-reviewed chapter},\n\tlanguage = {en},\n\turldate = {2026-02-04},\n\tpublisher = {IntechOpen},\n\tauthor = {García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María and García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María},\n\tmonth = aug,\n\tyear = {2012},\n\tdoi = {10.5772/46129},\n\tkeywords = {mapping-systems},\n}\n"
+      "bibtex": "\n@incollection{garcia_web_2012,\n\ttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}: {Management} and {Optimization}},\n\tisbn = {978-953-51-0689-0},\n\tshorttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}},\n\turl = {https://www.intechopen.com/chapters/38302},\n\tdoi = {10.5772/46129},\n\tabstract = {Open access peer-reviewed chapter},\n\tlanguage = {en},\n\turldate = {2026-02-04},\n\tpublisher = {IntechOpen},\n\tauthor = {García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María and García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María},\n\tmonth = aug,\n\tyear = {2012},\n\tdoi = {10.5772/46129},\n\tkeywords = {mapping-systems},\n}\n"
     },
     {
       "key": "WNEAX6KF",
@@ -2671,7 +2724,9 @@
         "Theory",
         "computer"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/AMYZ33ZV",
         "type": "article-journal",
@@ -2825,7 +2880,10 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/4SPT78AB",
         "type": "book",
@@ -3092,7 +3150,9 @@
         "Natural hazards",
         "Sustainability"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "E2HWAZRJ"
+      ],
       "csl": {
         "id": "747207/6VWVPVVM",
         "type": "article-journal",
@@ -3290,7 +3350,9 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "S3Z4ZXR8"
+      ],
       "csl": {
         "id": "747207/25FVMRF3",
         "type": "book",
@@ -3357,7 +3419,9 @@
       "date": "1978",
       "year": 1978,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/Z4WNISIG",
         "type": "article-journal",
@@ -3407,7 +3471,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/M77RDA79",
         "type": "article-journal",
@@ -3458,7 +3524,9 @@
       "tags": [
         "desire path"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/M4XAAABM",
         "type": "post-weblog",
@@ -3845,7 +3913,10 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/TT8D3XSS",
         "type": "article-journal",
@@ -4051,7 +4122,10 @@
         "Case studies",
         "Computer Science - Computer Vision and Pattern Recognition"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "9DXPI4J7",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/ZPIPTXYX",
         "type": "webpage",
@@ -4131,8 +4205,13 @@
       "doi": "10.1177/23998083251387477",
       "date": "2025",
       "year": 2025,
-      "tags": [],
-      "subcollections": [],
+      "tags": [
+        "Climate change adaptation",
+        "climate adaptation"
+      ],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/4E54L4ZH",
         "type": "article-journal",
@@ -4190,7 +4269,7 @@
         }
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Liu, Cuiling, Xinyue Ye, Yangyang Xu, Quan Sun, and Yong Xu. 2025. &#x201C;Exploring the Impact of Urban Morphology on Heat Stress: A High-Resolution Microclimate Simulation Study.&#x201D; <i>Environment and Planning B: Urban Analytics and City Science</i>, October 15, 23998083251387477. https://doi.org/10.1177/23998083251387477.</div>\n</div>",
-      "bibtex": "\n@article{liu_exploring_2025,\n\ttitle = {Exploring the impact of urban morphology on heat stress: {A} high-resolution microclimate simulation study},\n\tissn = {2399-8083, 2399-8091},\n\tshorttitle = {Exploring the impact of urban morphology on heat stress},\n\turl = {https://journals.sagepub.com/doi/10.1177/23998083251387477},\n\tdoi = {10.1177/23998083251387477},\n\tabstract = {Extreme heat poses significant environmental and health risks. These risks often disproportionately affect marginalized and disenfranchised communities. Neighborhood-scale planning is essential for addressing climate change through adaptation strategies. Currently, there is a lack of long-term weather data at the neighborhood level, limiting the ability to analyze localized weather trends and compare variations across areas. This gap persists due to the challenges of collecting fine-scale local data, including significant time demands, limited resources, and potential privacy concerns. To bridge this gap, this project employs the Urban Weather Generator model to generate neighborhood-scale temperature and relative humidity data for the city of Houston. The neighborhood size is defined using a 500-by-500-m grid. Based on the comprehensive analysis of heat stress variation across these neighborhoods, we identify areas with notably higher or lower heat stress duration. This dataset is intended to inform targeted interventions in microclimate design and personal-level heat adaptation.},\n\tlanguage = {en},\n\turldate = {2026-01-19},\n\tjournal = {Environment and Planning B: Urban Analytics and City Science},\n\tauthor = {Liu, Cuiling and Ye, Xinyue and Xu, Yangyang and Sun, Quan and Xu, Yong},\n\tmonth = oct,\n\tyear = {2025},\n\tpages = {23998083251387477},\n}\n"
+      "bibtex": "\n@article{liu_exploring_2025,\n\ttitle = {Exploring the impact of urban morphology on heat stress: {A} high-resolution microclimate simulation study},\n\tissn = {2399-8083, 2399-8091},\n\tshorttitle = {Exploring the impact of urban morphology on heat stress},\n\turl = {https://journals.sagepub.com/doi/10.1177/23998083251387477},\n\tdoi = {10.1177/23998083251387477},\n\tabstract = {Extreme heat poses significant environmental and health risks. These risks often disproportionately affect marginalized and disenfranchised communities. Neighborhood-scale planning is essential for addressing climate change through adaptation strategies. Currently, there is a lack of long-term weather data at the neighborhood level, limiting the ability to analyze localized weather trends and compare variations across areas. This gap persists due to the challenges of collecting fine-scale local data, including significant time demands, limited resources, and potential privacy concerns. To bridge this gap, this project employs the Urban Weather Generator model to generate neighborhood-scale temperature and relative humidity data for the city of Houston. The neighborhood size is defined using a 500-by-500-m grid. Based on the comprehensive analysis of heat stress variation across these neighborhoods, we identify areas with notably higher or lower heat stress duration. This dataset is intended to inform targeted interventions in microclimate design and personal-level heat adaptation.},\n\tlanguage = {en},\n\turldate = {2026-01-19},\n\tjournal = {Environment and Planning B: Urban Analytics and City Science},\n\tauthor = {Liu, Cuiling and Ye, Xinyue and Xu, Yangyang and Sun, Quan and Xu, Yong},\n\tmonth = oct,\n\tyear = {2025},\n\tkeywords = {Climate change adaptation, climate adaptation},\n\tpages = {23998083251387477},\n}\n"
     },
     {
       "key": "SYN8H39L",
@@ -4354,41 +4433,6 @@
       "bibtex": "\n@book{lynch_image_1960,\n\taddress = {Cambridge, Massachusetts ; London, England},\n\ttitle = {The image of the city},\n\tisbn = {978-0-262-12004-3 978-0-262-62001-7},\n\tpublisher = {The MIT Press, Massachusetts Institute of Technology},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n\tkeywords = {City planning, United States},\n}\n"
     },
     {
-      "key": "NBX5VLHA",
-      "type": "chapter",
-      "title": "Ch 9: Methods of Spatial Data Analysis",
-      "date": "2006",
-      "year": 2006,
-      "tags": [],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/NBX5VLHA",
-        "type": "chapter",
-        "container-title": "GIS for the Urban Environment",
-        "note": "required",
-        "title": "Ch 9: Methods of Spatial Data Analysis",
-        "author": [
-          {
-            "family": "Maantay",
-            "given": "Juliana"
-          },
-          {
-            "family": "Ziegler",
-            "given": "John"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              2006
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Ch 9: Methods of Spatial Data Analysis.&#x201D; In <i>GIS for the Urban Environment</i>.</div>\n</div>",
-      "bibtex": "\n@incollection{maantay_ch_2006,\n\ttitle = {Ch 9: {Methods} of {Spatial} {Data} {Analysis}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
-    },
-    {
       "key": "RGHPZ9QM",
       "type": "chapter",
       "title": "Thematic Mapping",
@@ -4460,6 +4504,43 @@
       "bibtex": "\n@incollection{maantay_spatial_2006,\n\ttitle = {Spatial {Data} and {Basic} {Mapping} {Concepts}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
     },
     {
+      "key": "NBX5VLHA",
+      "type": "chapter",
+      "title": "Ch 9: Methods of Spatial Data Analysis",
+      "date": "2006",
+      "year": 2006,
+      "tags": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
+      "csl": {
+        "id": "747207/NBX5VLHA",
+        "type": "chapter",
+        "container-title": "GIS for the Urban Environment",
+        "note": "required",
+        "title": "Ch 9: Methods of Spatial Data Analysis",
+        "author": [
+          {
+            "family": "Maantay",
+            "given": "Juliana"
+          },
+          {
+            "family": "Ziegler",
+            "given": "John"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Ch 9: Methods of Spatial Data Analysis.&#x201D; In <i>GIS for the Urban Environment</i>.</div>\n</div>",
+      "bibtex": "\n@incollection{maantay_ch_2006,\n\ttitle = {Ch 9: {Methods} of {Spatial} {Data} {Analysis}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
+    },
+    {
       "key": "TN7986PG",
       "type": "webpage",
       "title": "Graph layout",
@@ -4471,7 +4552,10 @@
         "Theory",
         "network analysis"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF",
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/TN7986PG",
         "type": "webpage",
@@ -4564,7 +4648,9 @@
       "title": "A New World Map on an Irregular Heptahedron",
       "date": "2006",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/Y2KRXDB9",
         "type": "thesis",
@@ -4686,7 +4772,10 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/YU35IK7K",
         "type": "post-weblog",
@@ -4876,7 +4965,10 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "E2HWAZRJ",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/YP6J6EAB",
         "type": "article-journal",
@@ -5129,7 +5221,10 @@
       "tags": [
         "Community development-Michigan-Detroit."
       ],
-      "subcollections": [],
+      "subcollections": [
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/5Y46HPVQ",
         "type": "book",
@@ -5613,7 +5708,10 @@
         "Sociocultural Anthropology",
         "Volunteered geographic information"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "E2HWAZRJ",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/RP4W4YBJ",
         "type": "article-journal",
@@ -5868,7 +5966,9 @@
         "Theory",
         "macroscope"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/RDQ7QWE2",
         "type": "article-journal",
@@ -5956,7 +6056,9 @@
         "Science / Earth Sciences / Geology",
         "Travel / Maps & Road Atlases"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/ID639BIQ",
         "type": "book",
@@ -5993,7 +6095,10 @@
       "title": "West Philadelphia Landscape Project",
       "url": "https://wplp.net/about/",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/I4MGDNUJ",
         "type": "webpage",
@@ -6134,7 +6239,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/S5NGFGAN",
         "type": "article-journal",
@@ -6277,7 +6384,10 @@
         "Restaurants",
         "Technology"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/KNPRXU2I",
         "type": "article-newspaper",
@@ -6345,7 +6455,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "AGAC9I88"
+      ],
       "csl": {
         "id": "747207/9GIUHJ6Q",
         "type": "post-weblog",
@@ -6689,7 +6801,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/DAJ9YFCW",
         "type": "article-journal",
@@ -6859,7 +6973,11 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF",
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/MU57N7TL",
         "type": "paper-conference",
@@ -7000,7 +7118,9 @@
       "date": "1993",
       "year": 1993,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q"
+      ],
       "csl": {
         "id": "747207/V998M9H4",
         "type": "article-journal",
@@ -7037,7 +7157,10 @@
         "Cartography",
         "Perception"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/36Y8EEPD",
         "type": "article-journal",
@@ -7142,88 +7265,6 @@
       "bibtex": "\n@article{xin_impact_2022,\n\ttitle = {Impact of the {COVID}-19 pandemic on urban human mobility - {A} multiscale geospatial network analysis using {New} {York} bike-sharing data},\n\tvolume = {126},\n\tissn = {02642751},\n\turl = {https://linkinghub.elsevier.com/retrieve/pii/S0264275122001160},\n\tdoi = {10.1016/j.cities.2022.103677},\n\tlanguage = {en},\n\turldate = {2024-06-03},\n\tjournal = {Cities},\n\tauthor = {Xin, Rui and Ai, Tinghua and Ding, Linfang and Zhu, Ruoxin and Meng, Liqiu},\n\tmonth = jul,\n\tyear = {2022},\n\tpages = {103677},\n}\n"
     },
     {
-      "key": "ZNQFDKKP",
-      "type": "article-journal",
-      "title": "Geodesign in the era of artificial intelligence",
-      "url": "https://doi.org/10.1007/s44243-025-00054-5",
-      "doi": "10.1007/s44243-025-00054-5",
-      "date": "2025",
-      "year": 2025,
-      "tags": [
-        "Artificial Intelligence",
-        "Ethics",
-        "Geodesign",
-        "Spatial planning"
-      ],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/ZNQFDKKP",
-        "type": "article-journal",
-        "abstract": "This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.",
-        "container-title": "Frontiers of Urban and Rural Planning",
-        "DOI": "10.1007/s44243-025-00054-5",
-        "ISSN": "2731-6661",
-        "issue": "1",
-        "journalAbbreviation": "Front. Urban Rural Plan.",
-        "language": "en",
-        "page": "4",
-        "source": "Springer Link",
-        "title": "Geodesign in the era of artificial intelligence",
-        "URL": "https://doi.org/10.1007/s44243-025-00054-5",
-        "volume": "3",
-        "author": [
-          {
-            "family": "Ye",
-            "given": "Xinyue"
-          },
-          {
-            "family": "Huang",
-            "given": "Tianchen"
-          },
-          {
-            "family": "Song",
-            "given": "Yang"
-          },
-          {
-            "family": "Li",
-            "given": "Xin"
-          },
-          {
-            "family": "Newman",
-            "given": "Galen"
-          },
-          {
-            "family": "Lin",
-            "given": "Zhongjie"
-          },
-          {
-            "family": "Wu",
-            "given": "Dayong Jason"
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2026,
-              1,
-              26
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2025,
-              3,
-              7
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Ye, Xinyue, Tianchen Huang, Yang Song, et al. 2025. &#x201C;Geodesign in the Era of Artificial Intelligence.&#x201D; <i>Frontiers of Urban and Rural Planning</i> 3 (1): 4. https://doi.org/10.1007/s44243-025-00054-5.</div>\n</div>",
-      "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-01-26},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
-    },
-    {
       "key": "IDVCI7LC",
       "type": "article-journal",
       "title": "Geodesign in the era of artificial intelligence",
@@ -7237,7 +7278,9 @@
         "Geodesign",
         "Spatial planning"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/IDVCI7LC",
         "type": "article-journal",
@@ -7306,6 +7349,91 @@
       "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-03-13},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
     },
     {
+      "key": "ZNQFDKKP",
+      "type": "article-journal",
+      "title": "Geodesign in the era of artificial intelligence",
+      "url": "https://doi.org/10.1007/s44243-025-00054-5",
+      "doi": "10.1007/s44243-025-00054-5",
+      "date": "2025",
+      "year": 2025,
+      "tags": [
+        "Artificial Intelligence",
+        "Ethics",
+        "Geodesign",
+        "Spatial planning"
+      ],
+      "subcollections": [
+        "S3Z4ZXR8",
+        "UP4V2S7X"
+      ],
+      "csl": {
+        "id": "747207/ZNQFDKKP",
+        "type": "article-journal",
+        "abstract": "This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.",
+        "container-title": "Frontiers of Urban and Rural Planning",
+        "DOI": "10.1007/s44243-025-00054-5",
+        "ISSN": "2731-6661",
+        "issue": "1",
+        "journalAbbreviation": "Front. Urban Rural Plan.",
+        "language": "en",
+        "page": "4",
+        "source": "Springer Link",
+        "title": "Geodesign in the era of artificial intelligence",
+        "URL": "https://doi.org/10.1007/s44243-025-00054-5",
+        "volume": "3",
+        "author": [
+          {
+            "family": "Ye",
+            "given": "Xinyue"
+          },
+          {
+            "family": "Huang",
+            "given": "Tianchen"
+          },
+          {
+            "family": "Song",
+            "given": "Yang"
+          },
+          {
+            "family": "Li",
+            "given": "Xin"
+          },
+          {
+            "family": "Newman",
+            "given": "Galen"
+          },
+          {
+            "family": "Lin",
+            "given": "Zhongjie"
+          },
+          {
+            "family": "Wu",
+            "given": "Dayong Jason"
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              26
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              7
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Ye, Xinyue, Tianchen Huang, Yang Song, et al. 2025. &#x201C;Geodesign in the Era of Artificial Intelligence.&#x201D; <i>Frontiers of Urban and Rural Planning</i> 3 (1): 4. https://doi.org/10.1007/s44243-025-00054-5.</div>\n</div>",
+      "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-01-26},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
+    },
+    {
       "key": "F4GFAPKB",
       "type": "chapter",
       "title": "Urban Planning and GIS",
@@ -7347,7 +7475,9 @@
         "Computer Science - Data Structures and Algorithms",
         "Data format"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/IE5M4HWQ",
         "type": "webpage",
@@ -7406,7 +7536,10 @@
         "Computer Science - Computer Vision and Pattern Recognition",
         "Computer Science - Computers and Society"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA",
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/J5NV6SH4",
         "type": "article",
@@ -7490,7 +7623,9 @@
       "tags": [
         "Dataset"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/E3CXIG4C",
         "type": "article-journal",
@@ -7559,7 +7694,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/2G5EL4DS",
         "type": "webpage",
@@ -7589,6 +7726,46 @@
       "bibtex": "\n@misc{noauthor_geography_2026,\n\ttitle = {A geography of an {American} citizenship},\n\turl = {https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/},\n\tabstract = {Explore Richard Edes Harrison's impactful 1952 map, 'The U.S Commitment,' revealing America's post-war geopolitical landscape.},\n\turldate = {2026-04-03},\n\tmonth = apr,\n\tyear = {2026},\n}\n"
     },
     {
+      "key": "NPZQ324A",
+      "type": "webpage",
+      "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
+      "url": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
+      "date": "2026",
+      "year": 2026,
+      "tags": [],
+      "subcollections": [
+        "T3AL7PGA",
+        "UXN7JR59"
+      ],
+      "csl": {
+        "id": "747207/NPZQ324A",
+        "type": "webpage",
+        "abstract": "Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.",
+        "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
+        "URL": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              1
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              11
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">&#x201C;Mapping Destruction&#x2014;A Conversation with Jamon Van Den Hoek of Conflict Ecology.&#x201D; 2026. February 11. https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/.</div>\n</div>",
+      "bibtex": "\n@misc{noauthor_mapping_2026,\n\ttitle = {Mapping {Destruction}—{A} {Conversation} with {Jamon} {Van} {Den} {Hoek} of {Conflict} {Ecology}},\n\turl = {https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/},\n\tabstract = {Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.},\n\turldate = {2026-03-01},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
+    },
+    {
       "key": "ERGXRL6C",
       "type": "webpage",
       "title": "How Lemontree improved map performance with a small refactor",
@@ -7596,7 +7773,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/ERGXRL6C",
         "type": "webpage",
@@ -7633,7 +7812,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/QJ3M53BD",
         "type": "post-weblog",
@@ -7662,43 +7843,6 @@
       "bibtex": "\n@misc{noauthor_urban_2023,\n\ttitle = {{URBAN} {AI} {GUIDE}},\n\turl = {https://urbanai.fr/our-works/urban-ai-guide/},\n\turldate = {2026-02-13},\n\tmonth = feb,\n\tyear = {2023},\n}\n"
     },
     {
-      "key": "NPZQ324A",
-      "type": "webpage",
-      "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
-      "url": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
-      "date": "2026",
-      "year": 2026,
-      "tags": [],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/NPZQ324A",
-        "type": "webpage",
-        "abstract": "Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.",
-        "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
-        "URL": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
-        "accessed": {
-          "date-parts": [
-            [
-              2026,
-              3,
-              1
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2026,
-              2,
-              11
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">&#x201C;Mapping Destruction&#x2014;A Conversation with Jamon Van Den Hoek of Conflict Ecology.&#x201D; 2026. February 11. https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/.</div>\n</div>",
-      "bibtex": "\n@misc{noauthor_mapping_2026,\n\ttitle = {Mapping {Destruction}—{A} {Conversation} with {Jamon} {Van} {Den} {Hoek} of {Conflict} {Ecology}},\n\turl = {https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/},\n\tabstract = {Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.},\n\turldate = {2026-03-01},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
-    },
-    {
       "key": "GJIDKZL5",
       "type": "document",
       "title": "Resisting Data Colonialism",
@@ -7710,7 +7854,10 @@
         "Data extractivism",
         "Theory"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/GJIDKZL5",
         "type": "document",
@@ -7735,7 +7882,9 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/BTHJG429",
         "type": "webpage",
@@ -7774,7 +7923,10 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "E2HWAZRJ"
+      ],
       "csl": {
         "id": "747207/S2RZF8FL",
         "type": "webpage",
@@ -7808,7 +7960,9 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/24U9NDJN",
         "type": "post-weblog",
