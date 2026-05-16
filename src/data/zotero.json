@@ -1,6 +1,6 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-16T00:47:36.043Z",
+  "fetchedAt": "2026-05-16T13:37:44.724Z",
   "collectionId": "847AR7X4",
   "count": 163,
   "subcollections": [
@@ -35,6 +35,10 @@
     {
       "key": "S3Z4ZXR8",
       "name": "design"
+    },
+    {
+      "key": "7QDS4XU2",
+      "name": "history"
     },
     {
       "key": "AGAC9I88",
@@ -229,38 +233,6 @@
       "bibtex": "\n@incollection{antrop_sensing_2017,\n\taddress = {Dordrecht},\n\ttitle = {Sensing and {Experiencing} the {Landscape}},\n\tisbn = {978-94-024-1183-6},\n\turl = {https://doi.org/10.1007/978-94-024-1183-6_6},\n\tdoi = {10.1007/978-94-024-1183-6_6},\n\tabstract = {The concept landscape implies the perception by a human observer. People sense and experience their environment holistically, using all senses simultaneously. Gestalt-principles apply here. Various disciplines study landscape perception and the mental information processing resulting in mindscapes and adapted behaviour. Several theories have been formulated to explain this process using biological, cultural and individual factors. Perception is often restricted to the visual landscape. Landscape experience refers to the whole arousal resulting from sensing the landscape. Landscape preference focuses upon the assessment we make of this experience. The properties and conditions of human vision help to understand how we analyse the landscape scenery and define basic concepts for all kinds of visualisations, as in painting, photography and computer modelling. Landscape experience research follows either an objectivist paradigm, aiming to identify physical landscape properties that can be related to preferences, or a subjectivist paradigm, focusing on the psychological and sociological response. The first one is a landscape centred approach, the second one focuses on the observer and his social and cultural background.},\n\tlanguage = {en},\n\turldate = {2024-05-16},\n\tbooktitle = {Landscape {Perspectives}: {The} {Holistic} {Nature} of {Landscape}},\n\tpublisher = {Springer Netherlands},\n\tauthor = {Antrop, Marc and Van Eetvelde, Veerle},\n\teditor = {Antrop, Marc and Van Eetvelde, Veerle},\n\tyear = {2017},\n\tkeywords = {Gestalt, Landscape preference, Perception, Visual landscape},\n\tpages = {103--139},\n}\n"
     },
     {
-      "key": "URKJDZ84",
-      "type": "chapter",
-      "title": "Graph Theory",
-      "date": "2016",
-      "year": 2016,
-      "tags": [],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/URKJDZ84",
-        "type": "chapter",
-        "container-title": "Network Science",
-        "publisher": "Cambridge University Press",
-        "publisher-place": "Cambridge, United Kingdom",
-        "title": "Graph Theory",
-        "author": [
-          {
-            "family": "Barabási",
-            "given": "Albert-László"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              2016
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Barab&#xE1;si, Albert-L&#xE1;szl&#xF3;. 2016. &#x201C;Graph Theory.&#x201D; In <i>Network Science</i>. Cambridge University Press.</div>\n</div>",
-      "bibtex": "\n@incollection{barabasi_graph_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Graph {Theory}},\n\tbooktitle = {Network {Science}},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tyear = {2016},\n}\n"
-    },
-    {
       "key": "XZ4EGKPF",
       "type": "book",
       "title": "Network science",
@@ -303,6 +275,40 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Barab&#xE1;si, Albert-L&#xE1;szl&#xF3;. 2016. <i>Network Science</i>. With M&#xE1;rton P&#xF3;sfai. Cambridge University Press.</div>\n</div>",
       "bibtex": "\n@book{barabasi_network_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Network science},\n\tisbn = {978-1-107-07626-6},\n\tabstract = {\"Networks are everywhere, from the Internet, to social networks, and the genetic networks that determine our biological existence. Illustrated throughout in full colour, this pioneering textbook, spanning a wide range of topics from physics to computer science, engineering, economics and the social sciences, introduces network science to an interdisciplinary audience. From the origins of the six degrees of separation to explaining why networks are robust to random failures, the author explores how viruses like Ebola and H1N1 spread, and why it is that our friends have more friends than we do. Using numerous real-world examples, this innovatively designed text includes clear delineation between undergraduate and graduate level material\"--Page [4] of cover.},\n\tlanguage = {eng},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tcollaborator = {Pósfai, Márton},\n\tyear = {2016},\n\tkeywords = {Computer networks, Information networks},\n}\n"
+    },
+    {
+      "key": "URKJDZ84",
+      "type": "chapter",
+      "title": "Graph Theory",
+      "date": "2016",
+      "year": 2016,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/URKJDZ84",
+        "type": "chapter",
+        "container-title": "Network Science",
+        "publisher": "Cambridge University Press",
+        "publisher-place": "Cambridge, United Kingdom",
+        "title": "Graph Theory",
+        "author": [
+          {
+            "family": "Barabási",
+            "given": "Albert-László"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2016
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Barab&#xE1;si, Albert-L&#xE1;szl&#xF3;. 2016. &#x201C;Graph Theory.&#x201D; In <i>Network Science</i>. Cambridge University Press.</div>\n</div>",
+      "bibtex": "\n@incollection{barabasi_graph_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Graph {Theory}},\n\tbooktitle = {Network {Science}},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tyear = {2016},\n}\n"
     },
     {
       "key": "7IIFNURW",
@@ -474,7 +480,10 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "AGAC9I88",
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/6ZU3JYPM",
         "type": "article-journal",
@@ -513,7 +522,9 @@
       "date": "1999",
       "year": 1999,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/4CQGLS4X",
         "type": "chapter",
@@ -595,7 +606,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/6NNGGHNH",
         "type": "webpage",
@@ -717,7 +730,10 @@
       "title": "Field Notes No. 1: The Detroit Geographical Expedition",
       "date": "1969",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/QHXQJALL",
         "type": "report",
@@ -748,7 +764,10 @@
       "date": "1972",
       "year": 1972,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/7MAJ2AI4",
         "type": "report",
@@ -783,7 +802,10 @@
       "date": "1971",
       "year": 1971,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/J3CARVV2",
         "type": "report",
@@ -822,7 +844,10 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/ZR82EC99",
         "type": "report",
@@ -1026,7 +1051,9 @@
       "title": "Modeling Travelers' Perceptions of Travel Time",
       "url": "https://onlinepubs.trb.org/Onlinepubs/trr/1982/890/890-002.pdf",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/J77LV6K7",
         "type": "article-journal",
@@ -1053,7 +1080,10 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "PGTZV2GX",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/9ANYQ3XC",
         "type": "webpage",
@@ -1096,7 +1126,9 @@
       "date": "1980",
       "year": 1980,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/GYX8EH9J",
         "type": "article-journal",
@@ -1151,7 +1183,9 @@
       "doi": "10.1002/psp.630",
       "date": "2012",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/N624WXWN",
         "type": "article-journal",
@@ -1263,7 +1297,9 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/NIC29W7V",
         "type": "chapter",
@@ -1538,7 +1574,9 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/GJS2SSDQ",
         "type": "chapter",
@@ -1649,7 +1687,9 @@
       "tags": [
         "Negroes"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "7QDS4XU2"
+      ],
       "csl": {
         "id": "747207/ZA7XRIJQ",
         "type": "article-newspaper",
@@ -1697,7 +1737,9 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/APEI3Q4C",
         "type": "chapter",
@@ -1741,7 +1783,9 @@
       "tags": [
         "Land Use Change"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/6VSYCHYT",
         "type": "dataset",
@@ -1900,7 +1944,9 @@
         "refugees",
         "transit migration"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/B9BHMNWK",
         "type": "article-journal",
@@ -2051,7 +2097,9 @@
         "synthesis",
         "understanding"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/K54S43LG",
         "type": "book",
@@ -2099,7 +2147,9 @@
       "date": "1991",
       "year": 1991,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/9QMQDWFD",
         "type": "chapter",
@@ -2147,68 +2197,6 @@
       "bibtex": "\n@incollection{entrikin_betweenness_1991,\n\taddress = {London},\n\ttitle = {The {Betweenness} of {Place}},\n\tisbn = {978-1-349-21086-2},\n\turl = {https://doi.org/10.1007/978-1-349-21086-2_2},\n\tdoi = {10.1007/978-1-349-21086-2_2},\n\tabstract = {The geographer’s concept of specific place draws attention to the relation between particularizing and universalizing discourses and between subjective and objective perspectives. Specific place refers to the conceptual fusion of space and experience that gives areas of the earth’s surface a “wholeness” or an “individuality.” I shall introduce this concept by first offering a general overview of the idea of place as context, a view that incorporates both the existential qualities of our experience of place and also our sense of place as a natural “object” in the world. This dualistic quality of place has been at the center of the conception of geography as a chorological science that addresses the relationship of people to their environment.},\n\tlanguage = {en},\n\turldate = {2024-05-19},\n\tbooktitle = {The {Betweenness} of {Place}: {Towards} a {Geography} of {Modernity}},\n\tpublisher = {Macmillan Education UK},\n\tauthor = {Entrikin, J. Nicholas},\n\teditor = {Entrikin, J. Nicholas},\n\tyear = {1991},\n\tpages = {6--26},\n}\n"
     },
     {
-      "key": "KIJKKVBT",
-      "type": "article-journal",
-      "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
-      "url": "https://doi.org/10.1007/s40823-016-0006-9",
-      "doi": "10.1007/s40823-016-0006-9",
-      "date": "2016",
-      "year": 2016,
-      "tags": [
-        "Connectivity",
-        "Cost-distance",
-        "Dispersal",
-        "Distance",
-        "GIS",
-        "Movement"
-      ],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/KIJKKVBT",
-        "type": "article-journal",
-        "abstract": "The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.",
-        "container-title": "Current Landscape Ecology Reports",
-        "DOI": "10.1007/s40823-016-0006-9",
-        "ISSN": "2364-494X",
-        "issue": "1",
-        "journalAbbreviation": "Curr Landscape Ecol Rep",
-        "language": "en",
-        "page": "40-53",
-        "shortTitle": "Least-Cost Modelling and Landscape Ecology",
-        "source": "Springer Link",
-        "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
-        "title-short": "Least-Cost Modelling and Landscape Ecology",
-        "URL": "https://doi.org/10.1007/s40823-016-0006-9",
-        "volume": "1",
-        "author": [
-          {
-            "family": "Etherington",
-            "given": "Thomas R."
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2024,
-              6,
-              29
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2016,
-              3,
-              1
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Etherington, Thomas R. 2016. &#x201C;Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities.&#x201D; <i>Current Landscape Ecology Reports</i> 1 (1): 40&#x2013;53. https://doi.org/10.1007/s40823-016-0006-9.</div>\n</div>",
-      "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-06-29},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
-    },
-    {
       "key": "HWKQEKBJ",
       "type": "article-journal",
       "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
@@ -2224,7 +2212,9 @@
         "GIS",
         "Movement"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/HWKQEKBJ",
         "type": "article-journal",
@@ -2269,6 +2259,71 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Etherington, Thomas R. 2016. &#x201C;Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities.&#x201D; <i>Current Landscape Ecology Reports</i> 1 (1): 40&#x2013;53. https://doi.org/10.1007/s40823-016-0006-9.</div>\n</div>",
       "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-08-27},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
+    },
+    {
+      "key": "KIJKKVBT",
+      "type": "article-journal",
+      "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
+      "url": "https://doi.org/10.1007/s40823-016-0006-9",
+      "doi": "10.1007/s40823-016-0006-9",
+      "date": "2016",
+      "year": 2016,
+      "tags": [
+        "Connectivity",
+        "Cost-distance",
+        "Dispersal",
+        "Distance",
+        "GIS",
+        "Movement"
+      ],
+      "subcollections": [
+        "6SPRPNXF",
+        "ERJ92FM8"
+      ],
+      "csl": {
+        "id": "747207/KIJKKVBT",
+        "type": "article-journal",
+        "abstract": "The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.",
+        "container-title": "Current Landscape Ecology Reports",
+        "DOI": "10.1007/s40823-016-0006-9",
+        "ISSN": "2364-494X",
+        "issue": "1",
+        "journalAbbreviation": "Curr Landscape Ecol Rep",
+        "language": "en",
+        "page": "40-53",
+        "shortTitle": "Least-Cost Modelling and Landscape Ecology",
+        "source": "Springer Link",
+        "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
+        "title-short": "Least-Cost Modelling and Landscape Ecology",
+        "URL": "https://doi.org/10.1007/s40823-016-0006-9",
+        "volume": "1",
+        "author": [
+          {
+            "family": "Etherington",
+            "given": "Thomas R."
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              29
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Etherington, Thomas R. 2016. &#x201C;Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities.&#x201D; <i>Current Landscape Ecology Reports</i> 1 (1): 40&#x2013;53. https://doi.org/10.1007/s40823-016-0006-9.</div>\n</div>",
+      "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-06-29},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
     },
     {
       "key": "KSH9Y8D9",
@@ -2330,7 +2385,9 @@
         "vehicle miles traveled (VMT)",
         "walking"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/HBAQSD3B",
         "type": "article-journal",
@@ -2668,7 +2725,11 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/WNEAX6KF",
         "type": "article-journal",
@@ -2935,7 +2996,9 @@
       "doi": "10.2307/3178066",
       "date": "1988",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q"
+      ],
       "csl": {
         "id": "747207/CTAGPST9",
         "type": "article-journal",
@@ -2985,7 +3048,9 @@
       "date": "1982",
       "year": 1982,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/JJA7GGQW",
         "type": "article-journal",
@@ -4069,7 +4134,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/FIK7EZU5",
         "type": "article-journal",
@@ -4363,38 +4430,6 @@
       "bibtex": "\n@misc{lucarelli_ascii-art_2014,\n\ttitle = {Ascii-{Art} {Mapping}: {SyMAP} (or {Early} {Computer} {Generated} {Cartography}) – {SOCKS}},\n\tshorttitle = {Ascii-{Art} {Mapping}},\n\turl = {https://socks-studio.com/2014/03/11/ascii-art-mapping-symap-or-early-computer-generated-cartography/, https://socks-studio.com/2014/03/11/ascii-art-mapping-symap-or-early-computer-generated-cartography/},\n\tabstract = {William Caraher, assistant professor at the University of North Dakota and writer of the site \"The Archaeology of the Mediterranean World\" discovered an interesting early use...},\n\tlanguage = {en-US},\n\turldate = {2024-05-13},\n\tauthor = {Lucarelli, Fosco},\n\tmonth = mar,\n\tyear = {2014},\n}\n"
     },
     {
-      "key": "HU2VCT28",
-      "type": "chapter",
-      "title": "The city and its elements",
-      "date": "1960",
-      "year": 1960,
-      "tags": [],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/HU2VCT28",
-        "type": "chapter",
-        "container-title": "The image of the city",
-        "publisher": "The MIT Press",
-        "publisher-place": "Cambridge MA",
-        "title": "The city and its elements",
-        "author": [
-          {
-            "family": "Lynch",
-            "given": "Kevin"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              1960
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Lynch, Kevin. 1960. &#x201C;The City and Its Elements.&#x201D; In <i>The Image of the City</i>. The MIT Press.</div>\n</div>",
-      "bibtex": "\n@incollection{lynch_city_1960,\n\taddress = {Cambridge MA},\n\ttitle = {The city and its elements},\n\tbooktitle = {The image of the city},\n\tpublisher = {The MIT Press},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n}\n"
-    },
-    {
       "key": "IBVUU8FQ",
       "type": "book",
       "title": "The image of the city",
@@ -4433,40 +4468,38 @@
       "bibtex": "\n@book{lynch_image_1960,\n\taddress = {Cambridge, Massachusetts ; London, England},\n\ttitle = {The image of the city},\n\tisbn = {978-0-262-12004-3 978-0-262-62001-7},\n\tpublisher = {The MIT Press, Massachusetts Institute of Technology},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n\tkeywords = {City planning, United States},\n}\n"
     },
     {
-      "key": "RGHPZ9QM",
+      "key": "HU2VCT28",
       "type": "chapter",
-      "title": "Thematic Mapping",
-      "date": "2006",
-      "year": 2006,
+      "title": "The city and its elements",
+      "date": "1960",
+      "year": 1960,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
-        "id": "747207/RGHPZ9QM",
+        "id": "747207/HU2VCT28",
         "type": "chapter",
-        "container-title": "GIS for the Urban Environment",
-        "ISBN": "978-1-58948-082-7",
-        "publisher": "ESRI Press",
-        "title": "Thematic Mapping",
+        "container-title": "The image of the city",
+        "publisher": "The MIT Press",
+        "publisher-place": "Cambridge MA",
+        "title": "The city and its elements",
         "author": [
           {
-            "family": "Maantay",
-            "given": "Juliana"
-          },
-          {
-            "family": "Ziegler",
-            "given": "John"
+            "family": "Lynch",
+            "given": "Kevin"
           }
         ],
         "issued": {
           "date-parts": [
             [
-              2006
+              1960
             ]
           ]
         }
       },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Thematic Mapping.&#x201D; In <i>GIS for the Urban Environment</i>. ESRI Press.</div>\n</div>",
-      "bibtex": "\n@incollection{maantay_thematic_2006,\n\ttitle = {Thematic {Mapping}},\n\tisbn = {978-1-58948-082-7},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tpublisher = {ESRI Press},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n}\n"
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Lynch, Kevin. 1960. &#x201C;The City and Its Elements.&#x201D; In <i>The Image of the City</i>. The MIT Press.</div>\n</div>",
+      "bibtex": "\n@incollection{lynch_city_1960,\n\taddress = {Cambridge MA},\n\ttitle = {The city and its elements},\n\tbooktitle = {The image of the city},\n\tpublisher = {The MIT Press},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n}\n"
     },
     {
       "key": "WTQAZHGX",
@@ -4539,6 +4572,44 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Ch 9: Methods of Spatial Data Analysis.&#x201D; In <i>GIS for the Urban Environment</i>.</div>\n</div>",
       "bibtex": "\n@incollection{maantay_ch_2006,\n\ttitle = {Ch 9: {Methods} of {Spatial} {Data} {Analysis}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
+    },
+    {
+      "key": "RGHPZ9QM",
+      "type": "chapter",
+      "title": "Thematic Mapping",
+      "date": "2006",
+      "year": 2006,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/RGHPZ9QM",
+        "type": "chapter",
+        "container-title": "GIS for the Urban Environment",
+        "ISBN": "978-1-58948-082-7",
+        "publisher": "ESRI Press",
+        "title": "Thematic Mapping",
+        "author": [
+          {
+            "family": "Maantay",
+            "given": "Juliana"
+          },
+          {
+            "family": "Ziegler",
+            "given": "John"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Thematic Mapping.&#x201D; In <i>GIS for the Urban Environment</i>. ESRI Press.</div>\n</div>",
+      "bibtex": "\n@incollection{maantay_thematic_2006,\n\ttitle = {Thematic {Mapping}},\n\tisbn = {978-1-58948-082-7},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tpublisher = {ESRI Press},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n}\n"
     },
     {
       "key": "TN7986PG",
@@ -4682,7 +4753,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/K8ZUNGZN",
         "type": "chapter",
@@ -4814,53 +4887,6 @@
       "bibtex": "\n@misc{migurski_weeknotes_2026,\n\ttitle = {Weeknotes, {2026W04}: {Boundary} {Issues}},\n\tshorttitle = {Weeknotes, {2026W04}},\n\turl = {https://medium.com/@michalmigurski/weeknotes-2026w04-boundary-issues-f037407a7f45},\n\tabstract = {I recently nerd-sniped myself into thinking about political points of view on maps, and wondering whether it’d be possible to create…},\n\turldate = {2026-02-03},\n\tjournal = {Medium},\n\tauthor = {Migurski, Michal},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
     },
     {
-      "key": "H8CV2K3U",
-      "type": "article-journal",
-      "title": "Tobler's First Law and Spatial Analysis",
-      "url": "https://www.jstor.org/stable/3693985",
-      "date": "2004",
-      "year": 2004,
-      "tags": [],
-      "subcollections": [],
-      "csl": {
-        "id": "747207/H8CV2K3U",
-        "type": "article-journal",
-        "container-title": "Annals of the Association of American Geographers",
-        "ISSN": "0004-5608",
-        "issue": "2",
-        "page": "284-289",
-        "publisher": "[Association of American Geographers, Taylor & Francis, Ltd.]",
-        "source": "JSTOR",
-        "title": "Tobler's First Law and Spatial Analysis",
-        "URL": "https://www.jstor.org/stable/3693985",
-        "volume": "94",
-        "author": [
-          {
-            "family": "Miller",
-            "given": "Harvey J."
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2022,
-              10,
-              6
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2004
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Miller, Harvey J. 2004. &#x201C;Tobler&#x2019;s First Law and Spatial Analysis.&#x201D; <i>Annals of the Association of American Geographers</i> 94 (2): 284&#x2013;89. https://www.jstor.org/stable/3693985.</div>\n</div>",
-      "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2022-10-06},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
-    },
-    {
       "key": "ALB2T4VH",
       "type": "article-journal",
       "title": "Tobler's First Law and Spatial Analysis",
@@ -4868,7 +4894,9 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/ALB2T4VH",
         "type": "article-journal",
@@ -4906,6 +4934,55 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Miller, Harvey J. 2004. &#x201C;Tobler&#x2019;s First Law and Spatial Analysis.&#x201D; <i>Annals of the Association of American Geographers</i> 94 (2): 284&#x2013;89. https://www.jstor.org/stable/3693985.</div>\n</div>",
       "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2024-05-21},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
+    },
+    {
+      "key": "H8CV2K3U",
+      "type": "article-journal",
+      "title": "Tobler's First Law and Spatial Analysis",
+      "url": "https://www.jstor.org/stable/3693985",
+      "date": "2004",
+      "year": 2004,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/H8CV2K3U",
+        "type": "article-journal",
+        "container-title": "Annals of the Association of American Geographers",
+        "ISSN": "0004-5608",
+        "issue": "2",
+        "page": "284-289",
+        "publisher": "[Association of American Geographers, Taylor & Francis, Ltd.]",
+        "source": "JSTOR",
+        "title": "Tobler's First Law and Spatial Analysis",
+        "URL": "https://www.jstor.org/stable/3693985",
+        "volume": "94",
+        "author": [
+          {
+            "family": "Miller",
+            "given": "Harvey J."
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              6
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2004
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Miller, Harvey J. 2004. &#x201C;Tobler&#x2019;s First Law and Spatial Analysis.&#x201D; <i>Annals of the Association of American Geographers</i> 94 (2): 284&#x2013;89. https://www.jstor.org/stable/3693985.</div>\n</div>",
+      "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2022-10-06},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
     },
     {
       "key": "PI9LS8K4",
@@ -5222,6 +5299,7 @@
         "Community development-Michigan-Detroit."
       ],
       "subcollections": [
+        "G32ZL73Q",
         "IKQFRT6Z",
         "T3AL7PGA"
       ],
@@ -5341,7 +5419,9 @@
       "tags": [
         "Computer Science - Human-Computer Interaction"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/CC5KEKSU",
         "type": "article",
@@ -5389,7 +5469,10 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/J7CDGCGL",
         "type": "post-weblog",
@@ -5496,7 +5579,9 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/W3MRBMBE",
         "type": "article-journal",
@@ -5591,7 +5676,9 @@
         "Travel mode choice",
         "Trip distance"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/LCBL3ESN",
         "type": "article-journal",
@@ -5777,7 +5864,9 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/VVT2R2US",
         "type": "post-weblog",
@@ -5864,7 +5953,10 @@
       "date": "1975",
       "year": 1975,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF",
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/SJXJXVXZ",
         "type": "chapter",
@@ -5916,7 +6008,9 @@
       "date": "1995",
       "year": 1995,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/GMDB9ZMD",
         "type": "article-journal",
@@ -5997,7 +6091,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/J7T93PLH",
         "type": "article-journal",
@@ -6130,7 +6226,9 @@
       "date": "2010",
       "year": 2010,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/AG4VQNBU",
         "type": "chapter",
@@ -6168,7 +6266,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "7QDS4XU2"
+      ],
       "csl": {
         "id": "747207/AALTUHFG",
         "type": "post-weblog",
@@ -6309,7 +6409,9 @@
       "type": "article-journal",
       "title": "Mapping What Isn’t Quite There",
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/MY9B7ABJ",
         "type": "article-journal",
@@ -6907,7 +7009,9 @@
         "Reference data error",
         "Stratified sampling"
       ],
-      "subcollections": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/YCZSB5RT",
         "type": "article-journal",
@@ -7440,7 +7544,9 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
-      "subcollections": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/F4GFAPKB",
         "type": "chapter",
