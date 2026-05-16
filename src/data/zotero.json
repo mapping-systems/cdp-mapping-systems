@@ -1,8 +1,74 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-15T23:18:39.358Z",
+  "fetchedAt": "2026-05-16T13:37:44.724Z",
   "collectionId": "847AR7X4",
   "count": 163,
+  "subcollections": [
+    {
+      "key": "UP4V2S7X",
+      "name": "AI"
+    },
+    {
+      "key": "PGTZV2GX",
+      "name": "cartography + visualization + visual references"
+    },
+    {
+      "key": "T3AL7PGA",
+      "name": "case studies"
+    },
+    {
+      "key": "IKQFRT6Z",
+      "name": "community"
+    },
+    {
+      "key": "UXN7JR59",
+      "name": "conflict"
+    },
+    {
+      "key": "G32ZL73Q",
+      "name": "critical cartography"
+    },
+    {
+      "key": "9DXPI4J7",
+      "name": "data formats + tools"
+    },
+    {
+      "key": "S3Z4ZXR8",
+      "name": "design"
+    },
+    {
+      "key": "7QDS4XU2",
+      "name": "history"
+    },
+    {
+      "key": "AGAC9I88",
+      "name": "infrastructure"
+    },
+    {
+      "key": "ERJ92FM8",
+      "name": "methods"
+    },
+    {
+      "key": "6SPRPNXF",
+      "name": "networks"
+    },
+    {
+      "key": "XNQNE959",
+      "name": "projections"
+    },
+    {
+      "key": "DRE4ZF6F",
+      "name": "theory"
+    },
+    {
+      "key": "ZZJNKMSU",
+      "name": "uncertainty"
+    },
+    {
+      "key": "E2HWAZRJ",
+      "name": "web mapping"
+    }
+  ],
   "entries": [
     {
       "key": "LXJCF8AB",
@@ -12,6 +78,7 @@
       "date": "1937",
       "year": 1937,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LXJCF8AB",
         "type": "map",
@@ -52,6 +119,7 @@
         "ingegrating human and natural sciences",
         "landscape/regional and urban planning"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/FKRNLQ5R",
         "type": "book",
@@ -109,6 +177,7 @@
         "Perception",
         "Visual landscape"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/AGI4ULN8",
         "type": "chapter",
@@ -164,37 +233,6 @@
       "bibtex": "\n@incollection{antrop_sensing_2017,\n\taddress = {Dordrecht},\n\ttitle = {Sensing and {Experiencing} the {Landscape}},\n\tisbn = {978-94-024-1183-6},\n\turl = {https://doi.org/10.1007/978-94-024-1183-6_6},\n\tdoi = {10.1007/978-94-024-1183-6_6},\n\tabstract = {The concept landscape implies the perception by a human observer. People sense and experience their environment holistically, using all senses simultaneously. Gestalt-principles apply here. Various disciplines study landscape perception and the mental information processing resulting in mindscapes and adapted behaviour. Several theories have been formulated to explain this process using biological, cultural and individual factors. Perception is often restricted to the visual landscape. Landscape experience refers to the whole arousal resulting from sensing the landscape. Landscape preference focuses upon the assessment we make of this experience. The properties and conditions of human vision help to understand how we analyse the landscape scenery and define basic concepts for all kinds of visualisations, as in painting, photography and computer modelling. Landscape experience research follows either an objectivist paradigm, aiming to identify physical landscape properties that can be related to preferences, or a subjectivist paradigm, focusing on the psychological and sociological response. The first one is a landscape centred approach, the second one focuses on the observer and his social and cultural background.},\n\tlanguage = {en},\n\turldate = {2024-05-16},\n\tbooktitle = {Landscape {Perspectives}: {The} {Holistic} {Nature} of {Landscape}},\n\tpublisher = {Springer Netherlands},\n\tauthor = {Antrop, Marc and Van Eetvelde, Veerle},\n\teditor = {Antrop, Marc and Van Eetvelde, Veerle},\n\tyear = {2017},\n\tkeywords = {Gestalt, Landscape preference, Perception, Visual landscape},\n\tpages = {103--139},\n}\n"
     },
     {
-      "key": "URKJDZ84",
-      "type": "chapter",
-      "title": "Graph Theory",
-      "date": "2016",
-      "year": 2016,
-      "tags": [],
-      "csl": {
-        "id": "747207/URKJDZ84",
-        "type": "chapter",
-        "container-title": "Network Science",
-        "publisher": "Cambridge University Press",
-        "publisher-place": "Cambridge, United Kingdom",
-        "title": "Graph Theory",
-        "author": [
-          {
-            "family": "Barabási",
-            "given": "Albert-László"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              2016
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Barab&#xE1;si, Albert-L&#xE1;szl&#xF3;. 2016. &#x201C;Graph Theory.&#x201D; In <i>Network Science</i>. Cambridge University Press.</div>\n</div>",
-      "bibtex": "\n@incollection{barabasi_graph_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Graph {Theory}},\n\tbooktitle = {Network {Science}},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tyear = {2016},\n}\n"
-    },
-    {
       "key": "XZ4EGKPF",
       "type": "book",
       "title": "Network science",
@@ -204,6 +242,7 @@
         "Computer networks",
         "Information networks"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/XZ4EGKPF",
         "type": "book",
@@ -238,12 +277,49 @@
       "bibtex": "\n@book{barabasi_network_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Network science},\n\tisbn = {978-1-107-07626-6},\n\tabstract = {\"Networks are everywhere, from the Internet, to social networks, and the genetic networks that determine our biological existence. Illustrated throughout in full colour, this pioneering textbook, spanning a wide range of topics from physics to computer science, engineering, economics and the social sciences, introduces network science to an interdisciplinary audience. From the origins of the six degrees of separation to explaining why networks are robust to random failures, the author explores how viruses like Ebola and H1N1 spread, and why it is that our friends have more friends than we do. Using numerous real-world examples, this innovatively designed text includes clear delineation between undergraduate and graduate level material\"--Page [4] of cover.},\n\tlanguage = {eng},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tcollaborator = {Pósfai, Márton},\n\tyear = {2016},\n\tkeywords = {Computer networks, Information networks},\n}\n"
     },
     {
+      "key": "URKJDZ84",
+      "type": "chapter",
+      "title": "Graph Theory",
+      "date": "2016",
+      "year": 2016,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/URKJDZ84",
+        "type": "chapter",
+        "container-title": "Network Science",
+        "publisher": "Cambridge University Press",
+        "publisher-place": "Cambridge, United Kingdom",
+        "title": "Graph Theory",
+        "author": [
+          {
+            "family": "Barabási",
+            "given": "Albert-László"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2016
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Barab&#xE1;si, Albert-L&#xE1;szl&#xF3;. 2016. &#x201C;Graph Theory.&#x201D; In <i>Network Science</i>. Cambridge University Press.</div>\n</div>",
+      "bibtex": "\n@incollection{barabasi_graph_2016,\n\taddress = {Cambridge, United Kingdom},\n\ttitle = {Graph {Theory}},\n\tbooktitle = {Network {Science}},\n\tpublisher = {Cambridge University Press},\n\tauthor = {Barabási, Albert-László},\n\tyear = {2016},\n}\n"
+    },
+    {
       "key": "7IIFNURW",
       "type": "book",
       "title": "Semiology of graphics: diagrams, networks, maps",
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/7IIFNURW",
         "type": "book",
@@ -291,6 +367,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JW4XBVGH",
         "type": "article-journal",
@@ -348,6 +425,7 @@
         "Economics",
         "Policy"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/TFS35BIB",
         "type": "article-journal",
@@ -402,6 +480,10 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [
+        "AGAC9I88",
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/6ZU3JYPM",
         "type": "article-journal",
@@ -440,6 +522,9 @@
       "date": "1999",
       "year": 1999,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/4CQGLS4X",
         "type": "chapter",
@@ -477,6 +562,9 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
+      "subcollections": [
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/VG5HM3A5",
         "type": "book",
@@ -518,6 +606,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/6NNGGHNH",
         "type": "webpage",
@@ -558,6 +649,7 @@
       "title": "I learned about something called a “relative elevation model” derived from #lidar point cloud data and now I’m obsessed with figuring out how to make one with my dataset. #arcgis https://t.co/bMpiNBGAYv",
       "url": "https://x.com/mrbrianolson/status/1052384614528872449/photo/1",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S7E24NFH",
         "type": "post",
@@ -593,6 +685,7 @@
       "date": "2018",
       "year": 2018,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/RWK3CBNQ",
         "type": "webpage",
@@ -637,6 +730,10 @@
       "title": "Field Notes No. 1: The Detroit Geographical Expedition",
       "date": "1969",
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/QHXQJALL",
         "type": "report",
@@ -667,6 +764,10 @@
       "date": "1972",
       "year": 1972,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/7MAJ2AI4",
         "type": "report",
@@ -701,6 +802,10 @@
       "date": "1971",
       "year": 1971,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/J3CARVV2",
         "type": "report",
@@ -739,6 +844,10 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/ZR82EC99",
         "type": "report",
@@ -776,6 +885,7 @@
       "title": "Mercator Projection of the World",
       "url": "http://alabamamaps.ua.edu/contemporarymaps/world/world/world2.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8RY9ASZ4",
         "type": "map",
@@ -802,6 +912,7 @@
       "tags": [
         "network analysis"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/4KCC7TCE",
         "type": "chapter",
@@ -840,6 +951,10 @@
         "Environmental sciences",
         "Environmental social sciences",
         "Mathematics and computing"
+      ],
+      "subcollections": [
+        "ERJ92FM8",
+        "UP4V2S7X"
       ],
       "csl": {
         "id": "747207/9KGZ5VSV",
@@ -905,6 +1020,7 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/KLUT2M8L",
         "type": "report",
@@ -935,6 +1051,9 @@
       "title": "Modeling Travelers' Perceptions of Travel Time",
       "url": "https://onlinepubs.trb.org/Onlinepubs/trr/1982/890/890-002.pdf",
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/J77LV6K7",
         "type": "article-journal",
@@ -961,6 +1080,10 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [
+        "PGTZV2GX",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/9ANYQ3XC",
         "type": "webpage",
@@ -1003,6 +1126,9 @@
       "date": "1980",
       "year": 1980,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/GYX8EH9J",
         "type": "article-journal",
@@ -1057,6 +1183,9 @@
       "doi": "10.1002/psp.630",
       "date": "2012",
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/N624WXWN",
         "type": "article-journal",
@@ -1114,6 +1243,7 @@
       "date": "1991",
       "year": 1991,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XC9UULBH",
         "type": "chapter",
@@ -1167,6 +1297,9 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/NIC29W7V",
         "type": "chapter",
@@ -1230,6 +1363,7 @@
       "type": "chapter",
       "title": "Carto-City",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/QET6RCP2",
         "type": "chapter",
@@ -1255,6 +1389,7 @@
       "date": "1992",
       "year": 1992,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JFZLEVU3",
         "type": "chapter",
@@ -1332,6 +1467,10 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "E2HWAZRJ"
+      ],
       "csl": {
         "id": "747207/TWJ2KGRP",
         "type": "book",
@@ -1387,6 +1526,7 @@
         "Cognitive bias",
         "Technology and analytics"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/9S22YJNU",
         "type": "article-magazine",
@@ -1434,6 +1574,9 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/GJS2SSDQ",
         "type": "chapter",
@@ -1497,6 +1640,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/2JHK76L7",
         "type": "post-weblog",
@@ -1542,6 +1686,9 @@
       "year": 1973,
       "tags": [
         "Negroes"
+      ],
+      "subcollections": [
+        "7QDS4XU2"
       ],
       "csl": {
         "id": "747207/ZA7XRIJQ",
@@ -1590,6 +1737,9 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/APEI3Q4C",
         "type": "chapter",
@@ -1632,6 +1782,9 @@
       "year": 2023,
       "tags": [
         "Land Use Change"
+      ],
+      "subcollections": [
+        "ERJ92FM8"
       ],
       "csl": {
         "id": "747207/6VSYCHYT",
@@ -1677,6 +1830,7 @@
       "date": "2024",
       "year": 2024,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/T58IBWHQ",
         "type": "article-journal",
@@ -1733,6 +1887,9 @@
         "Urban Areas",
         "internal-storyline-no"
       ],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/ERB65TU2",
         "type": "article-newspaper",
@@ -1786,6 +1943,9 @@
         "politics of research",
         "refugees",
         "transit migration"
+      ],
+      "subcollections": [
+        "6SPRPNXF"
       ],
       "csl": {
         "id": "747207/B9BHMNWK",
@@ -1844,6 +2004,9 @@
         "Methodology",
         "Social aspects"
       ],
+      "subcollections": [
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/G47YSBSC",
         "type": "book",
@@ -1889,6 +2052,7 @@
       "date": "2010",
       "year": 2010,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/MM3C56A5",
         "type": "chapter",
@@ -1932,6 +2096,9 @@
         "structure",
         "synthesis",
         "understanding"
+      ],
+      "subcollections": [
+        "DRE4ZF6F"
       ],
       "csl": {
         "id": "747207/K54S43LG",
@@ -1980,6 +2147,9 @@
       "date": "1991",
       "year": 1991,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/9QMQDWFD",
         "type": "chapter",
@@ -2027,67 +2197,6 @@
       "bibtex": "\n@incollection{entrikin_betweenness_1991,\n\taddress = {London},\n\ttitle = {The {Betweenness} of {Place}},\n\tisbn = {978-1-349-21086-2},\n\turl = {https://doi.org/10.1007/978-1-349-21086-2_2},\n\tdoi = {10.1007/978-1-349-21086-2_2},\n\tabstract = {The geographer’s concept of specific place draws attention to the relation between particularizing and universalizing discourses and between subjective and objective perspectives. Specific place refers to the conceptual fusion of space and experience that gives areas of the earth’s surface a “wholeness” or an “individuality.” I shall introduce this concept by first offering a general overview of the idea of place as context, a view that incorporates both the existential qualities of our experience of place and also our sense of place as a natural “object” in the world. This dualistic quality of place has been at the center of the conception of geography as a chorological science that addresses the relationship of people to their environment.},\n\tlanguage = {en},\n\turldate = {2024-05-19},\n\tbooktitle = {The {Betweenness} of {Place}: {Towards} a {Geography} of {Modernity}},\n\tpublisher = {Macmillan Education UK},\n\tauthor = {Entrikin, J. Nicholas},\n\teditor = {Entrikin, J. Nicholas},\n\tyear = {1991},\n\tpages = {6--26},\n}\n"
     },
     {
-      "key": "KIJKKVBT",
-      "type": "article-journal",
-      "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
-      "url": "https://doi.org/10.1007/s40823-016-0006-9",
-      "doi": "10.1007/s40823-016-0006-9",
-      "date": "2016",
-      "year": 2016,
-      "tags": [
-        "Connectivity",
-        "Cost-distance",
-        "Dispersal",
-        "Distance",
-        "GIS",
-        "Movement"
-      ],
-      "csl": {
-        "id": "747207/KIJKKVBT",
-        "type": "article-journal",
-        "abstract": "The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.",
-        "container-title": "Current Landscape Ecology Reports",
-        "DOI": "10.1007/s40823-016-0006-9",
-        "ISSN": "2364-494X",
-        "issue": "1",
-        "journalAbbreviation": "Curr Landscape Ecol Rep",
-        "language": "en",
-        "page": "40-53",
-        "shortTitle": "Least-Cost Modelling and Landscape Ecology",
-        "source": "Springer Link",
-        "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
-        "title-short": "Least-Cost Modelling and Landscape Ecology",
-        "URL": "https://doi.org/10.1007/s40823-016-0006-9",
-        "volume": "1",
-        "author": [
-          {
-            "family": "Etherington",
-            "given": "Thomas R."
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2024,
-              6,
-              29
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2016,
-              3,
-              1
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Etherington, Thomas R. 2016. &#x201C;Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities.&#x201D; <i>Current Landscape Ecology Reports</i> 1 (1): 40&#x2013;53. https://doi.org/10.1007/s40823-016-0006-9.</div>\n</div>",
-      "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-06-29},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
-    },
-    {
       "key": "HWKQEKBJ",
       "type": "article-journal",
       "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
@@ -2102,6 +2211,9 @@
         "Distance",
         "GIS",
         "Movement"
+      ],
+      "subcollections": [
+        "6SPRPNXF"
       ],
       "csl": {
         "id": "747207/HWKQEKBJ",
@@ -2149,6 +2261,71 @@
       "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-08-27},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
     },
     {
+      "key": "KIJKKVBT",
+      "type": "article-journal",
+      "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
+      "url": "https://doi.org/10.1007/s40823-016-0006-9",
+      "doi": "10.1007/s40823-016-0006-9",
+      "date": "2016",
+      "year": 2016,
+      "tags": [
+        "Connectivity",
+        "Cost-distance",
+        "Dispersal",
+        "Distance",
+        "GIS",
+        "Movement"
+      ],
+      "subcollections": [
+        "6SPRPNXF",
+        "ERJ92FM8"
+      ],
+      "csl": {
+        "id": "747207/KIJKKVBT",
+        "type": "article-journal",
+        "abstract": "The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.",
+        "container-title": "Current Landscape Ecology Reports",
+        "DOI": "10.1007/s40823-016-0006-9",
+        "ISSN": "2364-494X",
+        "issue": "1",
+        "journalAbbreviation": "Curr Landscape Ecol Rep",
+        "language": "en",
+        "page": "40-53",
+        "shortTitle": "Least-Cost Modelling and Landscape Ecology",
+        "source": "Springer Link",
+        "title": "Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities",
+        "title-short": "Least-Cost Modelling and Landscape Ecology",
+        "URL": "https://doi.org/10.1007/s40823-016-0006-9",
+        "volume": "1",
+        "author": [
+          {
+            "family": "Etherington",
+            "given": "Thomas R."
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              29
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Etherington, Thomas R. 2016. &#x201C;Least-Cost Modelling and Landscape Ecology: Concepts, Applications, and Opportunities.&#x201D; <i>Current Landscape Ecology Reports</i> 1 (1): 40&#x2013;53. https://doi.org/10.1007/s40823-016-0006-9.</div>\n</div>",
+      "bibtex": "\n@article{etherington_least-cost_2016,\n\ttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}: {Concepts}, {Applications}, and {Opportunities}},\n\tvolume = {1},\n\tissn = {2364-494X},\n\tshorttitle = {Least-{Cost} {Modelling} and {Landscape} {Ecology}},\n\turl = {https://doi.org/10.1007/s40823-016-0006-9},\n\tdoi = {10.1007/s40823-016-0006-9},\n\tabstract = {The concept of nearness and that nearer things are more connected is useful in quantifying a variety of geographical patterns and processes, including ecological connectivity between geographic locations. In some ecological systems connectivity does not follow nearness relations defined by Euclidean distances, so distance must be measured another way. Least-cost modelling is a technique that can incorporate traversal costs across a landscape to measure the least-cost distance between locations as a function of both the distance travelled and the costs traversed. There has been a significant increase in the interest and use of least-cost modelling by ecologists in the last decade. However, perhaps because early applications of least-cost modelling in ecology tended to cite the method with reference to geographic information system software rather than the geographical science literature, ecologists are not currently making full use of available least-cost modelling techniques that have continued to develop. This review aims to describe the concepts of least-cost modelling, demonstrate current applications of least-cost modelling in landscape ecology, and to suggest future opportunities by linking the ecological application of least-cost modelling with recent geographical science developments from which least-cost modelling originally developed.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2024-06-29},\n\tjournal = {Current Landscape Ecology Reports},\n\tauthor = {Etherington, Thomas R.},\n\tmonth = mar,\n\tyear = {2016},\n\tkeywords = {Connectivity, Cost-distance, Dispersal, Distance, GIS, Movement},\n\tpages = {40--53},\n}\n"
+    },
+    {
       "key": "KSH9Y8D9",
       "type": "webpage",
       "title": "New GOCE geoid",
@@ -2156,6 +2333,7 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/KSH9Y8D9",
         "type": "webpage",
@@ -2206,6 +2384,9 @@
         "transit",
         "vehicle miles traveled (VMT)",
         "walking"
+      ],
+      "subcollections": [
+        "6SPRPNXF"
       ],
       "csl": {
         "id": "747207/HBAQSD3B",
@@ -2263,6 +2444,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/U3ZGQN99",
         "type": "book",
@@ -2309,6 +2493,7 @@
       "type": "chapter",
       "title": "Spatial Data",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ACR8UYSJ",
         "type": "chapter",
@@ -2341,6 +2526,10 @@
       "date": "2017",
       "tags": [
         "uncertainty"
+      ],
+      "subcollections": [
+        "DRE4ZF6F",
+        "ZZJNKMSU"
       ],
       "csl": {
         "id": "747207/TNIAXGRH",
@@ -2411,6 +2600,7 @@
       "date": "1978",
       "year": 1978,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/RFBBB2TE",
         "type": "graphic",
@@ -2445,12 +2635,15 @@
       "tags": [
         "mapping-systems"
       ],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/JTEGM2U3",
         "type": "chapter",
         "abstract": "Open access peer-reviewed chapter",
         "DOI": "10.5772/46129",
-        "ISBN": "9789535106890",
+        "ISBN": "978-953-51-0689-0",
         "language": "en",
         "note": "DOI: 10.5772/46129",
         "publisher": "IntechOpen",
@@ -2521,7 +2714,7 @@
         }
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Garc&#xED;a, Ricardo, Juan Pablo de Castro, Elena Verd&#xFA;, et al. 2012. <i>Web Map Tile Services for Spatial Data Infrastructures: Management and Optimization</i>. IntechOpen. https://doi.org/10.5772/46129.</div>\n</div>",
-      "bibtex": "\n@incollection{garcia_web_2012,\n\ttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}: {Management} and {Optimization}},\n\tisbn = {9789535106890},\n\tshorttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}},\n\turl = {https://www.intechopen.com/chapters/38302},\n\tdoi = {10.5772/46129},\n\tabstract = {Open access peer-reviewed chapter},\n\tlanguage = {en},\n\turldate = {2026-02-04},\n\tpublisher = {IntechOpen},\n\tauthor = {García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María and García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María},\n\tmonth = aug,\n\tyear = {2012},\n\tdoi = {10.5772/46129},\n\tkeywords = {mapping-systems},\n}\n"
+      "bibtex": "\n@incollection{garcia_web_2012,\n\ttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}: {Management} and {Optimization}},\n\tisbn = {978-953-51-0689-0},\n\tshorttitle = {Web {Map} {Tile} {Services} for {Spatial} {Data} {Infrastructures}},\n\turl = {https://www.intechopen.com/chapters/38302},\n\tdoi = {10.5772/46129},\n\tabstract = {Open access peer-reviewed chapter},\n\tlanguage = {en},\n\turldate = {2026-02-04},\n\tpublisher = {IntechOpen},\n\tauthor = {García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María and García, Ricardo and Castro, Juan Pablo de and Verdú, Elena and Verdú, María Jesús and Regueras, Luisa María},\n\tmonth = aug,\n\tyear = {2012},\n\tdoi = {10.5772/46129},\n\tkeywords = {mapping-systems},\n}\n"
     },
     {
       "key": "WNEAX6KF",
@@ -2532,6 +2725,11 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/WNEAX6KF",
         "type": "article-journal",
@@ -2587,6 +2785,9 @@
         "Theory",
         "computer"
       ],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/AMYZ33ZV",
         "type": "article-journal",
@@ -2611,6 +2812,7 @@
       "doi": "10.1177/016001760002300201",
       "date": "2000",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/GAWPYN3I",
         "type": "article-journal",
@@ -2680,6 +2882,7 @@
         "Urbanization",
         "Vulnerability"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/34CG4EPW",
         "type": "article-journal",
@@ -2738,6 +2941,10 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "PGTZV2GX"
+      ],
       "csl": {
         "id": "747207/4SPT78AB",
         "type": "book",
@@ -2789,6 +2996,9 @@
       "doi": "10.2307/3178066",
       "date": "1988",
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q"
+      ],
       "csl": {
         "id": "747207/CTAGPST9",
         "type": "article-journal",
@@ -2838,6 +3048,9 @@
       "date": "1982",
       "year": 1982,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/JJA7GGQW",
         "type": "article-journal",
@@ -2885,6 +3098,7 @@
       "title": "Hassler_1816_Sketch.jpg (1276×1481)",
       "url": "https://geodesy.noaa.gov/web/about_ngs/history/Hassler_1816_Sketch.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LP74QRML",
         "type": "map",
@@ -2928,6 +3142,7 @@
         "meta-analysis",
         "systematic review"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/QGDFCM5T",
         "type": "article-journal",
@@ -2999,6 +3214,9 @@
         "Information technology",
         "Natural hazards",
         "Sustainability"
+      ],
+      "subcollections": [
+        "E2HWAZRJ"
       ],
       "csl": {
         "id": "747207/6VWVPVVM",
@@ -3076,6 +3294,7 @@
         "Remote sensing",
         "United States"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/FTVN9SRW",
         "type": "article-journal",
@@ -3166,6 +3385,7 @@
       "type": "article-journal",
       "title": "EDITORIAL ASSISTANTS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ESV5D4RL",
         "type": "article-journal",
@@ -3195,6 +3415,9 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
+      "subcollections": [
+        "S3Z4ZXR8"
+      ],
       "csl": {
         "id": "747207/25FVMRF3",
         "type": "book",
@@ -3261,6 +3484,9 @@
       "date": "1978",
       "year": 1978,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/Z4WNISIG",
         "type": "article-journal",
@@ -3310,6 +3536,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/M77RDA79",
         "type": "article-journal",
@@ -3359,6 +3588,9 @@
       "date": "2009",
       "tags": [
         "desire path"
+      ],
+      "subcollections": [
+        "T3AL7PGA"
       ],
       "csl": {
         "id": "747207/M4XAAABM",
@@ -3411,6 +3643,7 @@
         "pixel/object-based information integration",
         "temporal/spatial context"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/B44IGNVR",
         "type": "article-journal",
@@ -3505,6 +3738,7 @@
         "transport",
         "urban design"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/JHCY3BGZ",
         "type": "article-newspaper",
@@ -3547,6 +3781,7 @@
       "type": "chapter",
       "title": "Geography and GIS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/9U6THMW8",
         "type": "chapter",
@@ -3568,6 +3803,7 @@
       "title": "Azimuthal Equidistant Projection (Hemispheres): Compare Map Projections",
       "url": "https://map-projections.net/single-view/azimuthal-equidistant-hemi",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/R7J8DSND",
         "type": "webpage",
@@ -3598,6 +3834,7 @@
       "title": "Lambert Cylindrical: Compare Map Projections",
       "url": "https://map-projections.net/single-view/lambert",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Q5AN5M5T",
         "type": "webpage",
@@ -3628,6 +3865,7 @@
       "title": "Lambert conformal conic: Compare Map Projections",
       "url": "https://map-projections.net/single-view/lambert-conformal-conic",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SFEMIXHI",
         "type": "webpage",
@@ -3658,6 +3896,7 @@
       "title": "Comparing Map Projections",
       "url": "https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IRPBIPUW",
         "type": "webpage",
@@ -3691,6 +3930,7 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IF4VZ88X",
         "type": "post-weblog",
@@ -3738,6 +3978,10 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/TT8D3XSS",
         "type": "article-journal",
@@ -3848,6 +4092,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Q8QVLZ4I",
         "type": "webpage",
@@ -3889,6 +4134,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/FIK7EZU5",
         "type": "article-journal",
@@ -3941,6 +4189,10 @@
         "Case studies",
         "Computer Science - Computer Vision and Pattern Recognition"
       ],
+      "subcollections": [
+        "9DXPI4J7",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/ZPIPTXYX",
         "type": "webpage",
@@ -3974,6 +4226,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/36TQX2C5",
         "type": "post-weblog",
@@ -4019,7 +4272,13 @@
       "doi": "10.1177/23998083251387477",
       "date": "2025",
       "year": 2025,
-      "tags": [],
+      "tags": [
+        "Climate change adaptation",
+        "climate adaptation"
+      ],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/4E54L4ZH",
         "type": "article-journal",
@@ -4077,7 +4336,7 @@
         }
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Liu, Cuiling, Xinyue Ye, Yangyang Xu, Quan Sun, and Yong Xu. 2025. &#x201C;Exploring the Impact of Urban Morphology on Heat Stress: A High-Resolution Microclimate Simulation Study.&#x201D; <i>Environment and Planning B: Urban Analytics and City Science</i>, October 15, 23998083251387477. https://doi.org/10.1177/23998083251387477.</div>\n</div>",
-      "bibtex": "\n@article{liu_exploring_2025,\n\ttitle = {Exploring the impact of urban morphology on heat stress: {A} high-resolution microclimate simulation study},\n\tissn = {2399-8083, 2399-8091},\n\tshorttitle = {Exploring the impact of urban morphology on heat stress},\n\turl = {https://journals.sagepub.com/doi/10.1177/23998083251387477},\n\tdoi = {10.1177/23998083251387477},\n\tabstract = {Extreme heat poses significant environmental and health risks. These risks often disproportionately affect marginalized and disenfranchised communities. Neighborhood-scale planning is essential for addressing climate change through adaptation strategies. Currently, there is a lack of long-term weather data at the neighborhood level, limiting the ability to analyze localized weather trends and compare variations across areas. This gap persists due to the challenges of collecting fine-scale local data, including significant time demands, limited resources, and potential privacy concerns. To bridge this gap, this project employs the Urban Weather Generator model to generate neighborhood-scale temperature and relative humidity data for the city of Houston. The neighborhood size is defined using a 500-by-500-m grid. Based on the comprehensive analysis of heat stress variation across these neighborhoods, we identify areas with notably higher or lower heat stress duration. This dataset is intended to inform targeted interventions in microclimate design and personal-level heat adaptation.},\n\tlanguage = {en},\n\turldate = {2026-01-19},\n\tjournal = {Environment and Planning B: Urban Analytics and City Science},\n\tauthor = {Liu, Cuiling and Ye, Xinyue and Xu, Yangyang and Sun, Quan and Xu, Yong},\n\tmonth = oct,\n\tyear = {2025},\n\tpages = {23998083251387477},\n}\n"
+      "bibtex": "\n@article{liu_exploring_2025,\n\ttitle = {Exploring the impact of urban morphology on heat stress: {A} high-resolution microclimate simulation study},\n\tissn = {2399-8083, 2399-8091},\n\tshorttitle = {Exploring the impact of urban morphology on heat stress},\n\turl = {https://journals.sagepub.com/doi/10.1177/23998083251387477},\n\tdoi = {10.1177/23998083251387477},\n\tabstract = {Extreme heat poses significant environmental and health risks. These risks often disproportionately affect marginalized and disenfranchised communities. Neighborhood-scale planning is essential for addressing climate change through adaptation strategies. Currently, there is a lack of long-term weather data at the neighborhood level, limiting the ability to analyze localized weather trends and compare variations across areas. This gap persists due to the challenges of collecting fine-scale local data, including significant time demands, limited resources, and potential privacy concerns. To bridge this gap, this project employs the Urban Weather Generator model to generate neighborhood-scale temperature and relative humidity data for the city of Houston. The neighborhood size is defined using a 500-by-500-m grid. Based on the comprehensive analysis of heat stress variation across these neighborhoods, we identify areas with notably higher or lower heat stress duration. This dataset is intended to inform targeted interventions in microclimate design and personal-level heat adaptation.},\n\tlanguage = {en},\n\turldate = {2026-01-19},\n\tjournal = {Environment and Planning B: Urban Analytics and City Science},\n\tauthor = {Liu, Cuiling and Ye, Xinyue and Xu, Yangyang and Sun, Quan and Xu, Yong},\n\tmonth = oct,\n\tyear = {2025},\n\tkeywords = {Climate change adaptation, climate adaptation},\n\tpages = {23998083251387477},\n}\n"
     },
     {
       "key": "SYN8H39L",
@@ -4086,6 +4345,7 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SYN8H39L",
         "type": "chapter",
@@ -4131,6 +4391,7 @@
       "date": "2014",
       "year": 2014,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/K7JTL5QV",
         "type": "webpage",
@@ -4169,37 +4430,6 @@
       "bibtex": "\n@misc{lucarelli_ascii-art_2014,\n\ttitle = {Ascii-{Art} {Mapping}: {SyMAP} (or {Early} {Computer} {Generated} {Cartography}) – {SOCKS}},\n\tshorttitle = {Ascii-{Art} {Mapping}},\n\turl = {https://socks-studio.com/2014/03/11/ascii-art-mapping-symap-or-early-computer-generated-cartography/, https://socks-studio.com/2014/03/11/ascii-art-mapping-symap-or-early-computer-generated-cartography/},\n\tabstract = {William Caraher, assistant professor at the University of North Dakota and writer of the site \"The Archaeology of the Mediterranean World\" discovered an interesting early use...},\n\tlanguage = {en-US},\n\turldate = {2024-05-13},\n\tauthor = {Lucarelli, Fosco},\n\tmonth = mar,\n\tyear = {2014},\n}\n"
     },
     {
-      "key": "HU2VCT28",
-      "type": "chapter",
-      "title": "The city and its elements",
-      "date": "1960",
-      "year": 1960,
-      "tags": [],
-      "csl": {
-        "id": "747207/HU2VCT28",
-        "type": "chapter",
-        "container-title": "The image of the city",
-        "publisher": "The MIT Press",
-        "publisher-place": "Cambridge MA",
-        "title": "The city and its elements",
-        "author": [
-          {
-            "family": "Lynch",
-            "given": "Kevin"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              1960
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Lynch, Kevin. 1960. &#x201C;The City and Its Elements.&#x201D; In <i>The Image of the City</i>. The MIT Press.</div>\n</div>",
-      "bibtex": "\n@incollection{lynch_city_1960,\n\taddress = {Cambridge MA},\n\ttitle = {The city and its elements},\n\tbooktitle = {The image of the city},\n\tpublisher = {The MIT Press},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n}\n"
-    },
-    {
       "key": "IBVUU8FQ",
       "type": "book",
       "title": "The image of the city",
@@ -4209,6 +4439,7 @@
         "City planning",
         "United States"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/IBVUU8FQ",
         "type": "book",
@@ -4237,12 +4468,84 @@
       "bibtex": "\n@book{lynch_image_1960,\n\taddress = {Cambridge, Massachusetts ; London, England},\n\ttitle = {The image of the city},\n\tisbn = {978-0-262-12004-3 978-0-262-62001-7},\n\tpublisher = {The MIT Press, Massachusetts Institute of Technology},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n\tkeywords = {City planning, United States},\n}\n"
     },
     {
+      "key": "HU2VCT28",
+      "type": "chapter",
+      "title": "The city and its elements",
+      "date": "1960",
+      "year": 1960,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/HU2VCT28",
+        "type": "chapter",
+        "container-title": "The image of the city",
+        "publisher": "The MIT Press",
+        "publisher-place": "Cambridge MA",
+        "title": "The city and its elements",
+        "author": [
+          {
+            "family": "Lynch",
+            "given": "Kevin"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              1960
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Lynch, Kevin. 1960. &#x201C;The City and Its Elements.&#x201D; In <i>The Image of the City</i>. The MIT Press.</div>\n</div>",
+      "bibtex": "\n@incollection{lynch_city_1960,\n\taddress = {Cambridge MA},\n\ttitle = {The city and its elements},\n\tbooktitle = {The image of the city},\n\tpublisher = {The MIT Press},\n\tauthor = {Lynch, Kevin},\n\tyear = {1960},\n}\n"
+    },
+    {
+      "key": "WTQAZHGX",
+      "type": "chapter",
+      "title": "Spatial Data and Basic Mapping Concepts",
+      "date": "2006",
+      "year": 2006,
+      "tags": [],
+      "subcollections": [],
+      "csl": {
+        "id": "747207/WTQAZHGX",
+        "type": "chapter",
+        "container-title": "GIS for the Urban Environment",
+        "note": "required",
+        "title": "Spatial Data and Basic Mapping Concepts",
+        "author": [
+          {
+            "family": "Maantay",
+            "given": "Juliana"
+          },
+          {
+            "family": "Ziegler",
+            "given": "John"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Spatial Data and Basic Mapping Concepts.&#x201D; In <i>GIS for the Urban Environment</i>.</div>\n</div>",
+      "bibtex": "\n@incollection{maantay_spatial_2006,\n\ttitle = {Spatial {Data} and {Basic} {Mapping} {Concepts}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
+    },
+    {
       "key": "NBX5VLHA",
       "type": "chapter",
       "title": "Ch 9: Methods of Spatial Data Analysis",
       "date": "2006",
       "year": 2006,
       "tags": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/NBX5VLHA",
         "type": "chapter",
@@ -4277,6 +4580,9 @@
       "date": "2006",
       "year": 2006,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/RGHPZ9QM",
         "type": "chapter",
@@ -4306,40 +4612,6 @@
       "bibtex": "\n@incollection{maantay_thematic_2006,\n\ttitle = {Thematic {Mapping}},\n\tisbn = {978-1-58948-082-7},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tpublisher = {ESRI Press},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n}\n"
     },
     {
-      "key": "WTQAZHGX",
-      "type": "chapter",
-      "title": "Spatial Data and Basic Mapping Concepts",
-      "date": "2006",
-      "year": 2006,
-      "tags": [],
-      "csl": {
-        "id": "747207/WTQAZHGX",
-        "type": "chapter",
-        "container-title": "GIS for the Urban Environment",
-        "note": "required",
-        "title": "Spatial Data and Basic Mapping Concepts",
-        "author": [
-          {
-            "family": "Maantay",
-            "given": "Juliana"
-          },
-          {
-            "family": "Ziegler",
-            "given": "John"
-          }
-        ],
-        "issued": {
-          "date-parts": [
-            [
-              2006
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Maantay, Juliana, and John Ziegler. 2006. &#x201C;Spatial Data and Basic Mapping Concepts.&#x201D; In <i>GIS for the Urban Environment</i>.</div>\n</div>",
-      "bibtex": "\n@incollection{maantay_spatial_2006,\n\ttitle = {Spatial {Data} and {Basic} {Mapping} {Concepts}},\n\tbooktitle = {{GIS} for the {Urban} {Environment}},\n\tauthor = {Maantay, Juliana and Ziegler, John},\n\tyear = {2006},\n\tnote = {required},\n}\n"
-    },
-    {
       "key": "TN7986PG",
       "type": "webpage",
       "title": "Graph layout",
@@ -4350,6 +4622,10 @@
         "Cartography",
         "Theory",
         "network analysis"
+      ],
+      "subcollections": [
+        "6SPRPNXF",
+        "DRE4ZF6F"
       ],
       "csl": {
         "id": "747207/TN7986PG",
@@ -4394,6 +4670,7 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/TZEFL94X",
         "type": "article-journal",
@@ -4442,6 +4719,9 @@
       "title": "A New World Map on an Irregular Heptahedron",
       "date": "2006",
       "tags": [],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/Y2KRXDB9",
         "type": "thesis",
@@ -4473,6 +4753,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/K8ZUNGZN",
         "type": "chapter",
@@ -4505,6 +4788,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6723CRDU",
         "type": "chapter",
@@ -4535,6 +4819,7 @@
       "type": "article-journal",
       "title": "Not Yet #AfterRikers: Looking for #JusticeInDesign",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/FIZMBVCN",
         "type": "article-journal",
@@ -4560,6 +4845,10 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/YU35IK7K",
         "type": "post-weblog",
@@ -4598,52 +4887,6 @@
       "bibtex": "\n@misc{migurski_weeknotes_2026,\n\ttitle = {Weeknotes, {2026W04}: {Boundary} {Issues}},\n\tshorttitle = {Weeknotes, {2026W04}},\n\turl = {https://medium.com/@michalmigurski/weeknotes-2026w04-boundary-issues-f037407a7f45},\n\tabstract = {I recently nerd-sniped myself into thinking about political points of view on maps, and wondering whether it’d be possible to create…},\n\turldate = {2026-02-03},\n\tjournal = {Medium},\n\tauthor = {Migurski, Michal},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
     },
     {
-      "key": "H8CV2K3U",
-      "type": "article-journal",
-      "title": "Tobler's First Law and Spatial Analysis",
-      "url": "https://www.jstor.org/stable/3693985",
-      "date": "2004",
-      "year": 2004,
-      "tags": [],
-      "csl": {
-        "id": "747207/H8CV2K3U",
-        "type": "article-journal",
-        "container-title": "Annals of the Association of American Geographers",
-        "ISSN": "0004-5608",
-        "issue": "2",
-        "page": "284-289",
-        "publisher": "[Association of American Geographers, Taylor & Francis, Ltd.]",
-        "source": "JSTOR",
-        "title": "Tobler's First Law and Spatial Analysis",
-        "URL": "https://www.jstor.org/stable/3693985",
-        "volume": "94",
-        "author": [
-          {
-            "family": "Miller",
-            "given": "Harvey J."
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2022,
-              10,
-              6
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2004
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Miller, Harvey J. 2004. &#x201C;Tobler&#x2019;s First Law and Spatial Analysis.&#x201D; <i>Annals of the Association of American Geographers</i> 94 (2): 284&#x2013;89. https://www.jstor.org/stable/3693985.</div>\n</div>",
-      "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2022-10-06},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
-    },
-    {
       "key": "ALB2T4VH",
       "type": "article-journal",
       "title": "Tobler's First Law and Spatial Analysis",
@@ -4651,6 +4894,9 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/ALB2T4VH",
         "type": "article-journal",
@@ -4690,6 +4936,55 @@
       "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2024-05-21},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
     },
     {
+      "key": "H8CV2K3U",
+      "type": "article-journal",
+      "title": "Tobler's First Law and Spatial Analysis",
+      "url": "https://www.jstor.org/stable/3693985",
+      "date": "2004",
+      "year": 2004,
+      "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
+      "csl": {
+        "id": "747207/H8CV2K3U",
+        "type": "article-journal",
+        "container-title": "Annals of the Association of American Geographers",
+        "ISSN": "0004-5608",
+        "issue": "2",
+        "page": "284-289",
+        "publisher": "[Association of American Geographers, Taylor & Francis, Ltd.]",
+        "source": "JSTOR",
+        "title": "Tobler's First Law and Spatial Analysis",
+        "URL": "https://www.jstor.org/stable/3693985",
+        "volume": "94",
+        "author": [
+          {
+            "family": "Miller",
+            "given": "Harvey J."
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              6
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2004
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Miller, Harvey J. 2004. &#x201C;Tobler&#x2019;s First Law and Spatial Analysis.&#x201D; <i>Annals of the Association of American Geographers</i> 94 (2): 284&#x2013;89. https://www.jstor.org/stable/3693985.</div>\n</div>",
+      "bibtex": "\n@article{miller_toblers_2004,\n\ttitle = {Tobler's {First} {Law} and {Spatial} {Analysis}},\n\tvolume = {94},\n\tissn = {0004-5608},\n\turl = {https://www.jstor.org/stable/3693985},\n\tnumber = {2},\n\turldate = {2022-10-06},\n\tjournal = {Annals of the Association of American Geographers},\n\tpublisher = {[Association of American Geographers, Taylor \\& Francis, Ltd.]},\n\tauthor = {Miller, Harvey J.},\n\tyear = {2004},\n\tpages = {284--289},\n}\n"
+    },
+    {
       "key": "PI9LS8K4",
       "type": "article-journal",
       "title": "The Autonomy of Historical Understanding",
@@ -4698,6 +4993,7 @@
       "date": "1966",
       "year": 1966,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/PI9LS8K4",
         "type": "article-journal",
@@ -4746,6 +5042,10 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [
+        "E2HWAZRJ",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/YP6J6EAB",
         "type": "article-journal",
@@ -4802,6 +5102,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LFWGH3G5",
         "type": "report",
@@ -4842,6 +5143,7 @@
       "doi": "10.1007/s11135-015-0228-7",
       "date": "2016",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CFRMKKKG",
         "type": "article-journal",
@@ -4896,6 +5198,7 @@
       "type": "report",
       "title": "Basics of Mapping and GIS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8P95G6UT",
         "type": "report",
@@ -4919,6 +5222,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CBPZSBUL",
         "type": "webpage",
@@ -4962,6 +5266,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CWIW69GM",
         "type": "map",
@@ -4992,6 +5297,11 @@
       "year": 2020,
       "tags": [
         "Community development-Michigan-Detroit."
+      ],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z",
+        "T3AL7PGA"
       ],
       "csl": {
         "id": "747207/5Y46HPVQ",
@@ -5072,6 +5382,7 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IJVWIJDB",
         "type": "report",
@@ -5107,6 +5418,9 @@
       "year": 2020,
       "tags": [
         "Computer Science - Human-Computer Interaction"
+      ],
+      "subcollections": [
+        "DRE4ZF6F"
       ],
       "csl": {
         "id": "747207/CC5KEKSU",
@@ -5155,6 +5469,10 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
+      ],
       "csl": {
         "id": "747207/J7CDGCGL",
         "type": "post-weblog",
@@ -5202,6 +5520,7 @@
       "date": "2007",
       "year": 2007,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/2DFF9BQP",
         "type": "article-journal",
@@ -5260,6 +5579,9 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/W3MRBMBE",
         "type": "article-journal",
@@ -5315,6 +5637,7 @@
       "title": "Coordinate Reference Systems — QGIS Documentation documentation",
       "url": "https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8VIF7RL6",
         "type": "webpage",
@@ -5352,6 +5675,9 @@
         "Motorisation",
         "Travel mode choice",
         "Trip distance"
+      ],
+      "subcollections": [
+        "6SPRPNXF"
       ],
       "csl": {
         "id": "747207/LCBL3ESN",
@@ -5405,6 +5731,7 @@
       "doi": "10.1080/0269745032000168269",
       "date": "2003",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6XR9TG3K",
         "type": "article-journal",
@@ -5467,6 +5794,10 @@
         "Social and Cultural Geography",
         "Sociocultural Anthropology",
         "Volunteered geographic information"
+      ],
+      "subcollections": [
+        "E2HWAZRJ",
+        "IKQFRT6Z"
       ],
       "csl": {
         "id": "747207/RP4W4YBJ",
@@ -5533,6 +5864,9 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [
+        "ERJ92FM8"
+      ],
       "csl": {
         "id": "747207/VVT2R2US",
         "type": "post-weblog",
@@ -5576,6 +5910,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4XGV2K8V",
         "type": "book",
@@ -5618,6 +5953,10 @@
       "date": "1975",
       "year": 1975,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF",
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/SJXJXVXZ",
         "type": "chapter",
@@ -5669,6 +6008,9 @@
       "date": "1995",
       "year": 1995,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/GMDB9ZMD",
         "type": "article-journal",
@@ -5718,6 +6060,9 @@
         "Theory",
         "macroscope"
       ],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/RDQ7QWE2",
         "type": "article-journal",
@@ -5746,6 +6091,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/J7T93PLH",
         "type": "article-journal",
@@ -5804,6 +6152,9 @@
         "Science / Earth Sciences / Geology",
         "Travel / Maps & Road Atlases"
       ],
+      "subcollections": [
+        "XNQNE959"
+      ],
       "csl": {
         "id": "747207/ID639BIQ",
         "type": "book",
@@ -5840,6 +6191,10 @@
       "title": "West Philadelphia Landscape Project",
       "url": "https://wplp.net/about/",
       "tags": [],
+      "subcollections": [
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/I4MGDNUJ",
         "type": "webpage",
@@ -5871,6 +6226,9 @@
       "date": "2010",
       "year": 2010,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/AG4VQNBU",
         "type": "chapter",
@@ -5908,6 +6266,9 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [
+        "7QDS4XU2"
+      ],
       "csl": {
         "id": "747207/AALTUHFG",
         "type": "post-weblog",
@@ -5951,6 +6312,7 @@
       "title": "Quarte Partie du Monde",
       "url": "https://i.pinimg.com/736x/33/07/65/330765c1b82631b8e7847a4584590802.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S8MF5JFS",
         "type": "map",
@@ -5977,6 +6339,9 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/S5NGFGAN",
         "type": "article-journal",
@@ -6010,6 +6375,7 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XTQMFF9Y",
         "type": "article-journal",
@@ -6043,6 +6409,9 @@
       "type": "article-journal",
       "title": "Mapping What Isn’t Quite There",
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/MY9B7ABJ",
         "type": "article-journal",
@@ -6068,6 +6437,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/837NPBYS",
         "type": "post-weblog",
@@ -6115,6 +6485,10 @@
         "Google Maps",
         "Restaurants",
         "Technology"
+      ],
+      "subcollections": [
+        "G32ZL73Q",
+        "T3AL7PGA"
       ],
       "csl": {
         "id": "747207/KNPRXU2I",
@@ -6183,6 +6557,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [
+        "AGAC9I88"
+      ],
       "csl": {
         "id": "747207/9GIUHJ6Q",
         "type": "post-weblog",
@@ -6226,6 +6603,7 @@
       "date": "1975",
       "year": 1975,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ALLRJECU",
         "type": "article-journal",
@@ -6276,6 +6654,7 @@
       "date": "2024",
       "year": 2024,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LV5FQ6SY",
         "type": "map",
@@ -6311,6 +6690,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SE5ZQI7H",
         "type": "webpage",
@@ -6362,6 +6742,7 @@
       "date": "1300",
       "year": 1300,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JAIVT5BZ",
         "type": "map",
@@ -6393,6 +6774,7 @@
       "doi": "10.1016/j.jtrangeo.2003.10.001",
       "date": "2004",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/X83JTBX5",
         "type": "article-journal",
@@ -6452,6 +6834,7 @@
       "title": "Overview - History - National Geodetic Survey",
       "url": "https://geodesy.noaa.gov/web/about_ngs/history/",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/P93LET7K",
         "type": "webpage",
@@ -6486,6 +6869,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4F63UBV4",
         "type": "map",
@@ -6519,6 +6903,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/DAJ9YFCW",
         "type": "article-journal",
@@ -6585,6 +6972,7 @@
       "type": "article-journal",
       "title": "Generalising spatial data and dealing with multiple representations",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XL4BTTVI",
         "type": "article-journal",
@@ -6620,6 +7008,9 @@
         "NLCD 1992",
         "Reference data error",
         "Stratified sampling"
+      ],
+      "subcollections": [
+        "ERJ92FM8"
       ],
       "csl": {
         "id": "747207/YCZSB5RT",
@@ -6686,6 +7077,11 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF",
+        "IKQFRT6Z",
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/MU57N7TL",
         "type": "paper-conference",
@@ -6733,6 +7129,7 @@
       "date": "2018",
       "year": 2018,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/3HIZIH4C",
         "type": "chapter",
@@ -6775,6 +7172,7 @@
       "doi": "10.1177/1474474014539249",
       "date": "2015",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/E4Z8EEX5",
         "type": "article-journal",
@@ -6824,6 +7222,9 @@
       "date": "1993",
       "year": 1993,
       "tags": [],
+      "subcollections": [
+        "G32ZL73Q"
+      ],
       "csl": {
         "id": "747207/V998M9H4",
         "type": "article-journal",
@@ -6859,6 +7260,10 @@
       "tags": [
         "Cartography",
         "Perception"
+      ],
+      "subcollections": [
+        "DRE4ZF6F",
+        "PGTZV2GX"
       ],
       "csl": {
         "id": "747207/36Y8EEPD",
@@ -6907,6 +7312,7 @@
       "doi": "10.1016/j.cities.2022.103677",
       "date": "2022",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/D4KH4EL3",
         "type": "article-journal",
@@ -6963,87 +7369,6 @@
       "bibtex": "\n@article{xin_impact_2022,\n\ttitle = {Impact of the {COVID}-19 pandemic on urban human mobility - {A} multiscale geospatial network analysis using {New} {York} bike-sharing data},\n\tvolume = {126},\n\tissn = {02642751},\n\turl = {https://linkinghub.elsevier.com/retrieve/pii/S0264275122001160},\n\tdoi = {10.1016/j.cities.2022.103677},\n\tlanguage = {en},\n\turldate = {2024-06-03},\n\tjournal = {Cities},\n\tauthor = {Xin, Rui and Ai, Tinghua and Ding, Linfang and Zhu, Ruoxin and Meng, Liqiu},\n\tmonth = jul,\n\tyear = {2022},\n\tpages = {103677},\n}\n"
     },
     {
-      "key": "ZNQFDKKP",
-      "type": "article-journal",
-      "title": "Geodesign in the era of artificial intelligence",
-      "url": "https://doi.org/10.1007/s44243-025-00054-5",
-      "doi": "10.1007/s44243-025-00054-5",
-      "date": "2025",
-      "year": 2025,
-      "tags": [
-        "Artificial Intelligence",
-        "Ethics",
-        "Geodesign",
-        "Spatial planning"
-      ],
-      "csl": {
-        "id": "747207/ZNQFDKKP",
-        "type": "article-journal",
-        "abstract": "This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.",
-        "container-title": "Frontiers of Urban and Rural Planning",
-        "DOI": "10.1007/s44243-025-00054-5",
-        "ISSN": "2731-6661",
-        "issue": "1",
-        "journalAbbreviation": "Front. Urban Rural Plan.",
-        "language": "en",
-        "page": "4",
-        "source": "Springer Link",
-        "title": "Geodesign in the era of artificial intelligence",
-        "URL": "https://doi.org/10.1007/s44243-025-00054-5",
-        "volume": "3",
-        "author": [
-          {
-            "family": "Ye",
-            "given": "Xinyue"
-          },
-          {
-            "family": "Huang",
-            "given": "Tianchen"
-          },
-          {
-            "family": "Song",
-            "given": "Yang"
-          },
-          {
-            "family": "Li",
-            "given": "Xin"
-          },
-          {
-            "family": "Newman",
-            "given": "Galen"
-          },
-          {
-            "family": "Lin",
-            "given": "Zhongjie"
-          },
-          {
-            "family": "Wu",
-            "given": "Dayong Jason"
-          }
-        ],
-        "accessed": {
-          "date-parts": [
-            [
-              2026,
-              1,
-              26
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2025,
-              3,
-              7
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Ye, Xinyue, Tianchen Huang, Yang Song, et al. 2025. &#x201C;Geodesign in the Era of Artificial Intelligence.&#x201D; <i>Frontiers of Urban and Rural Planning</i> 3 (1): 4. https://doi.org/10.1007/s44243-025-00054-5.</div>\n</div>",
-      "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-01-26},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
-    },
-    {
       "key": "IDVCI7LC",
       "type": "article-journal",
       "title": "Geodesign in the era of artificial intelligence",
@@ -7056,6 +7381,9 @@
         "Ethics",
         "Geodesign",
         "Spatial planning"
+      ],
+      "subcollections": [
+        "UP4V2S7X"
       ],
       "csl": {
         "id": "747207/IDVCI7LC",
@@ -7125,12 +7453,100 @@
       "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-03-13},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
     },
     {
+      "key": "ZNQFDKKP",
+      "type": "article-journal",
+      "title": "Geodesign in the era of artificial intelligence",
+      "url": "https://doi.org/10.1007/s44243-025-00054-5",
+      "doi": "10.1007/s44243-025-00054-5",
+      "date": "2025",
+      "year": 2025,
+      "tags": [
+        "Artificial Intelligence",
+        "Ethics",
+        "Geodesign",
+        "Spatial planning"
+      ],
+      "subcollections": [
+        "S3Z4ZXR8",
+        "UP4V2S7X"
+      ],
+      "csl": {
+        "id": "747207/ZNQFDKKP",
+        "type": "article-journal",
+        "abstract": "This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.",
+        "container-title": "Frontiers of Urban and Rural Planning",
+        "DOI": "10.1007/s44243-025-00054-5",
+        "ISSN": "2731-6661",
+        "issue": "1",
+        "journalAbbreviation": "Front. Urban Rural Plan.",
+        "language": "en",
+        "page": "4",
+        "source": "Springer Link",
+        "title": "Geodesign in the era of artificial intelligence",
+        "URL": "https://doi.org/10.1007/s44243-025-00054-5",
+        "volume": "3",
+        "author": [
+          {
+            "family": "Ye",
+            "given": "Xinyue"
+          },
+          {
+            "family": "Huang",
+            "given": "Tianchen"
+          },
+          {
+            "family": "Song",
+            "given": "Yang"
+          },
+          {
+            "family": "Li",
+            "given": "Xin"
+          },
+          {
+            "family": "Newman",
+            "given": "Galen"
+          },
+          {
+            "family": "Lin",
+            "given": "Zhongjie"
+          },
+          {
+            "family": "Wu",
+            "given": "Dayong Jason"
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              26
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              7
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Ye, Xinyue, Tianchen Huang, Yang Song, et al. 2025. &#x201C;Geodesign in the Era of Artificial Intelligence.&#x201D; <i>Frontiers of Urban and Rural Planning</i> 3 (1): 4. https://doi.org/10.1007/s44243-025-00054-5.</div>\n</div>",
+      "bibtex": "\n@article{ye_geodesign_2025,\n\ttitle = {Geodesign in the era of artificial intelligence},\n\tvolume = {3},\n\tissn = {2731-6661},\n\turl = {https://doi.org/10.1007/s44243-025-00054-5},\n\tdoi = {10.1007/s44243-025-00054-5},\n\tabstract = {This paper explores the evolution of Geodesign in addressing spatial and environmental challenges from its early foundations to the recent integration of artificial intelligence (AI). AI enhances existing Geodesign methods by automating spatial data analysis, improving land use classification, refining heat island effect assessment, optimizing energy use, facilitating green infrastructure planning, and generating design scenarios. Despite the transformative potential of AI in Geodesign, challenges related to data quality, model interpretability, and ethical concerns such as privacy and bias persist. This paper highlights case studies that demonstrate the application of AI in Geodesign, offering insights into its role in understanding existing systems and designing future changes. The paper concludes by advocating for the responsible and transparent integration of AI to ensure equitable and effective Geodesign outcomes.},\n\tlanguage = {en},\n\tnumber = {1},\n\turldate = {2026-01-26},\n\tjournal = {Frontiers of Urban and Rural Planning},\n\tauthor = {Ye, Xinyue and Huang, Tianchen and Song, Yang and Li, Xin and Newman, Galen and Lin, Zhongjie and Wu, Dayong Jason},\n\tmonth = mar,\n\tyear = {2025},\n\tkeywords = {Artificial Intelligence, Ethics, Geodesign, Spatial planning},\n\tpages = {4},\n}\n"
+    },
+    {
       "key": "F4GFAPKB",
       "type": "chapter",
       "title": "Urban Planning and GIS",
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F"
+      ],
       "csl": {
         "id": "747207/F4GFAPKB",
         "type": "chapter",
@@ -7164,6 +7580,9 @@
       "tags": [
         "Computer Science - Data Structures and Algorithms",
         "Data format"
+      ],
+      "subcollections": [
+        "9DXPI4J7"
       ],
       "csl": {
         "id": "747207/IE5M4HWQ",
@@ -7222,6 +7641,10 @@
       "tags": [
         "Computer Science - Computer Vision and Pattern Recognition",
         "Computer Science - Computers and Society"
+      ],
+      "subcollections": [
+        "T3AL7PGA",
+        "UP4V2S7X"
       ],
       "csl": {
         "id": "747207/J5NV6SH4",
@@ -7306,6 +7729,9 @@
       "tags": [
         "Dataset"
       ],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/E3CXIG4C",
         "type": "article-journal",
@@ -7374,6 +7800,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/2G5EL4DS",
         "type": "webpage",
@@ -7403,6 +7832,46 @@
       "bibtex": "\n@misc{noauthor_geography_2026,\n\ttitle = {A geography of an {American} citizenship},\n\turl = {https://libraryoflostmaps.com/2026/04/01/a-geography-of-an-american-citizenship/},\n\tabstract = {Explore Richard Edes Harrison's impactful 1952 map, 'The U.S Commitment,' revealing America's post-war geopolitical landscape.},\n\turldate = {2026-04-03},\n\tmonth = apr,\n\tyear = {2026},\n}\n"
     },
     {
+      "key": "NPZQ324A",
+      "type": "webpage",
+      "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
+      "url": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
+      "date": "2026",
+      "year": 2026,
+      "tags": [],
+      "subcollections": [
+        "T3AL7PGA",
+        "UXN7JR59"
+      ],
+      "csl": {
+        "id": "747207/NPZQ324A",
+        "type": "webpage",
+        "abstract": "Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.",
+        "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
+        "URL": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              1
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              11
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">&#x201C;Mapping Destruction&#x2014;A Conversation with Jamon Van Den Hoek of Conflict Ecology.&#x201D; 2026. February 11. https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/.</div>\n</div>",
+      "bibtex": "\n@misc{noauthor_mapping_2026,\n\ttitle = {Mapping {Destruction}—{A} {Conversation} with {Jamon} {Van} {Den} {Hoek} of {Conflict} {Ecology}},\n\turl = {https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/},\n\tabstract = {Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.},\n\turldate = {2026-03-01},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
+    },
+    {
       "key": "ERGXRL6C",
       "type": "webpage",
       "title": "How Lemontree improved map performance with a small refactor",
@@ -7410,6 +7879,9 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [
+        "9DXPI4J7"
+      ],
       "csl": {
         "id": "747207/ERGXRL6C",
         "type": "webpage",
@@ -7446,6 +7918,9 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [
+        "UP4V2S7X"
+      ],
       "csl": {
         "id": "747207/QJ3M53BD",
         "type": "post-weblog",
@@ -7474,42 +7949,6 @@
       "bibtex": "\n@misc{noauthor_urban_2023,\n\ttitle = {{URBAN} {AI} {GUIDE}},\n\turl = {https://urbanai.fr/our-works/urban-ai-guide/},\n\turldate = {2026-02-13},\n\tmonth = feb,\n\tyear = {2023},\n}\n"
     },
     {
-      "key": "NPZQ324A",
-      "type": "webpage",
-      "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
-      "url": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
-      "date": "2026",
-      "year": 2026,
-      "tags": [],
-      "csl": {
-        "id": "747207/NPZQ324A",
-        "type": "webpage",
-        "abstract": "Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.",
-        "title": "Mapping Destruction—A Conversation with Jamon Van Den Hoek of Conflict Ecology",
-        "URL": "https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/",
-        "accessed": {
-          "date-parts": [
-            [
-              2026,
-              3,
-              1
-            ]
-          ]
-        },
-        "issued": {
-          "date-parts": [
-            [
-              2026,
-              2,
-              11
-            ]
-          ]
-        }
-      },
-      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">&#x201C;Mapping Destruction&#x2014;A Conversation with Jamon Van Den Hoek of Conflict Ecology.&#x201D; 2026. February 11. https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/.</div>\n</div>",
-      "bibtex": "\n@misc{noauthor_mapping_2026,\n\ttitle = {Mapping {Destruction}—{A} {Conversation} with {Jamon} {Van} {Den} {Hoek} of {Conflict} {Ecology}},\n\turl = {https://www.merip.org/2026/02/mapping-destruction-a-conversation-with-jamon-van-den-hoek-of-conflict-ecology/},\n\tabstract = {Changing scales of conflict and advances in satellite imagery are reshaping how damage is assessed.},\n\turldate = {2026-03-01},\n\tmonth = feb,\n\tyear = {2026},\n}\n"
-    },
-    {
       "key": "GJIDKZL5",
       "type": "document",
       "title": "Resisting Data Colonialism",
@@ -7520,6 +7959,10 @@
         "Critical cartography",
         "Data extractivism",
         "Theory"
+      ],
+      "subcollections": [
+        "G32ZL73Q",
+        "IKQFRT6Z"
       ],
       "csl": {
         "id": "747207/GJIDKZL5",
@@ -7545,6 +7988,9 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [
+        "T3AL7PGA"
+      ],
       "csl": {
         "id": "747207/BTHJG429",
         "type": "webpage",
@@ -7583,6 +8029,10 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [
+        "DRE4ZF6F",
+        "E2HWAZRJ"
+      ],
       "csl": {
         "id": "747207/S2RZF8FL",
         "type": "webpage",
@@ -7616,6 +8066,9 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [
+        "6SPRPNXF"
+      ],
       "csl": {
         "id": "747207/24U9NDJN",
         "type": "post-weblog",
