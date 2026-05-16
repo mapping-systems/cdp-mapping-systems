@@ -59,6 +59,9 @@ const bibliography = defineCollection({
     date: z.string().optional(),
     year: z.number().optional(),
     tags: z.array(z.string()).default([]),
+    /** Keys of Zotero sub-collections this entry belongs to (top-level
+        groupings on the bibliography page). */
+    subcollections: z.array(z.string()).default([]),
     csl: z.unknown(),
     bib: z.string(),
     bibtex: z.string(),

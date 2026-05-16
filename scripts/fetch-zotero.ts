@@ -32,11 +32,28 @@ interface ZoteroAPIItem {
     itemType?: string;
     title?: string;
     tags?: { tag: string; type?: number }[];
+    /** Keys of every collection this item belongs to (parent + sub). */
+    collections?: string[];
     [k: string]: unknown;
   };
   csljson?: Record<string, unknown>;
   bib?: string; // pre-rendered HTML
   bibtex?: string;
+}
+
+interface ZoteroAPICollection {
+  key: string;
+  data: {
+    name: string;
+    parentCollection?: string | false;
+  };
+}
+
+interface SubCollection {
+  key: string;
+  name: string;
+  /** Position from Zotero's manual ordering, if available — used as a sort key. */
+  position?: number;
 }
 
 interface BibliographyEntry {
@@ -47,8 +64,11 @@ interface BibliographyEntry {
   doi?: string;
   date?: string;
   year?: number;
-  /** Tags from Zotero (lowercased + sorted for stable ordering). */
+  /** Tags from Zotero (deduped + trimmed + sorted). */
   tags: string[];
+  /** Keys of sub-collections this item is in. Excludes the parent collection
+      itself so we can render "uncategorized" sections cleanly. */
+  subcollections: string[];
   csl: unknown;
   /** Pre-rendered HTML citation in the configured style. */
   bib: string;
@@ -61,6 +81,10 @@ interface BibliographyOutput {
   fetchedAt: string;
   collectionId: string;
   count: number;
+  /** Direct child collections of the configured root collection. The
+      bibliography page renders one section per sub-collection, plus an
+      "Uncategorized" section for items in the root only. */
+  subcollections: SubCollection[];
   entries: BibliographyEntry[];
 }
 
@@ -115,7 +139,28 @@ async function fetchAllItems(): Promise<ZoteroAPIItem[]> {
   return all;
 }
 
-function normalize(item: ZoteroAPIItem): BibliographyEntry | null {
+async function fetchSubcollections(): Promise<SubCollection[]> {
+  const apiKey = process.env.ZOTERO_KEY;
+  const { userId, libraryType, collectionId } = ZOTERO;
+  const url = `https://api.zotero.org/${libraryType}/${userId}/collections/${collectionId}/collections?limit=100`;
+  const headers: Record<string, string> = { 'Zotero-API-Version': '3' };
+  if (apiKey) headers['Zotero-API-Key'] = apiKey;
+
+  const res = await fetch(url, { headers });
+  if (!res.ok) {
+    throw new Error(`Zotero API error fetching sub-collections: ${res.status} ${res.statusText}`);
+  }
+  const collections: ZoteroAPICollection[] = await res.json();
+  // Direct children only — Zotero's collections endpoint returns the full
+  // descendant tree, but we keep one level (parent matches our root) since
+  // the user's mental model is one level of grouping.
+  return collections
+    .filter((c) => c.data.parentCollection === collectionId)
+    .map((c) => ({ key: c.key, name: c.data.name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function normalize(item: ZoteroAPIItem, subcollectionKeys: Set<string>): BibliographyEntry | null {
   // When the API request asks for `include=csljson,bib,bibtex`, the response
   // omits the standard `data` field — every metadata read here goes through
   // csljson, which uses CSL JSON capitalization (URL, DOI).
@@ -136,9 +181,15 @@ function normalize(item: ZoteroAPIItem): BibliographyEntry | null {
   const year = issued?.['date-parts']?.[0]?.[0];
 
   // Pull tags from Zotero `data.tags` (where users actually edit them in
-  // the Zotero app). Lowercase + dedupe + sort for a stable rendering.
+  // the Zotero app). Trim + dedupe + sort for a stable rendering.
   const rawTags = item.data?.tags?.map((t) => t.tag).filter((s): s is string => typeof s === 'string') ?? [];
   const tags = Array.from(new Set(rawTags.map((t) => t.trim()).filter(Boolean))).sort();
+
+  // Filter the item's collections to just the sub-collections we know about.
+  // (`data.collections` includes the parent collection itself + any others
+  // outside our scope; we want only the direct children of our root.)
+  const itemCollections = item.data?.collections ?? [];
+  const subcollections = itemCollections.filter((k) => subcollectionKeys.has(k)).sort();
 
   return {
     key: item.key,
@@ -149,6 +200,7 @@ function normalize(item: ZoteroAPIItem): BibliographyEntry | null {
     date: year ? String(year) : undefined,
     year: typeof year === 'number' ? year : undefined,
     tags,
+    subcollections,
     csl,
     bib: item.bib ?? '',
     bibtex: item.bibtex ?? '',
@@ -166,15 +218,17 @@ async function main() {
   console.log(`  ${ZOTERO.libraryType}/${ZOTERO.userId} · collection ${ZOTERO.collectionId} · style ${ZOTERO.style}`);
 
   let items: ZoteroAPIItem[];
+  let subcollections: SubCollection[];
   try {
-    items = await fetchAllItems();
+    [items, subcollections] = await Promise.all([fetchAllItems(), fetchSubcollections()]);
   } catch (err) {
     console.error(`  ✗ ${err instanceof Error ? err.message : err}`);
     process.exit(1);
   }
 
+  const subcollectionKeys = new Set(subcollections.map((s) => s.key));
   const entries = items
-    .map(normalize)
+    .map((it) => normalize(it, subcollectionKeys))
     .filter((e): e is BibliographyEntry => e !== null);
 
   const output: BibliographyOutput = {
@@ -182,12 +236,15 @@ async function main() {
     fetchedAt: new Date().toISOString(),
     collectionId: ZOTERO.collectionId,
     count: entries.length,
+    subcollections,
     entries,
   };
 
   mkdirSync(dirname(OUTPUT_PATH), { recursive: true });
   writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8');
-  console.log(`  ✓ ${OUTPUT_PATH} (${entries.length} entries, fetched ${items.length})`);
+  console.log(
+    `  ✓ ${OUTPUT_PATH} (${entries.length} entries, ${subcollections.length} sub-collections, fetched ${items.length})`,
+  );
 }
 
 main();

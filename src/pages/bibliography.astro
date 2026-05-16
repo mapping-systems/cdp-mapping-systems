@@ -1,38 +1,63 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import zoteroData from '../data/zotero.json';
 
 const entries = await getCollection('bibliography');
 
-// Group by year (descending), unknown year goes to "Undated"
-const byYear: Record<string, typeof entries> = {};
-for (const e of entries) {
-  const year = e.data.year ? String(e.data.year) : 'Undated';
-  if (!byYear[year]) byYear[year] = [];
-  byYear[year].push(e);
-}
-const years = Object.keys(byYear).sort((a, b) => {
-  if (a === 'Undated') return 1;
-  if (b === 'Undated') return -1;
-  return Number(b) - Number(a);
-});
-
-// Within each year, sort alphabetically by the rendered citation (which
-// leads with author surname in Chicago style).
-for (const year of years) {
-  byYear[year].sort((a, b) =>
-    (a.data.bib || a.data.title).localeCompare(b.data.bib || b.data.title)
-  );
+interface SubCollectionMeta {
+  key: string;
+  name: string;
 }
 
-// Collect unique tags across the whole bibliography for the filter row.
-const tagCounts = new Map<string, number>();
-for (const e of entries) {
-  for (const tag of e.data.tags ?? []) {
-    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+// Pull the sub-collection metadata directly from the JSON (the content
+// collection only models entries, not the parent metadata).
+const subcollections: SubCollectionMeta[] = zoteroData.subcollections ?? [];
+
+// Group entries by sub-collection key. Items in multiple sub-collections
+// appear in each. Items in none go into "Uncategorized".
+type SectionEntry = (typeof entries)[number];
+const bySection: Record<string, SectionEntry[]> = {};
+const UNCATEGORIZED = '__uncategorized__';
+
+for (const entry of entries) {
+  const subs = entry.data.subcollections ?? [];
+  if (subs.length === 0) {
+    (bySection[UNCATEGORIZED] ??= []).push(entry);
+  } else {
+    for (const key of subs) {
+      (bySection[key] ??= []).push(entry);
+    }
   }
 }
-const allTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+// Sort within each section: by year desc, then alphabetically by rendered citation.
+for (const key of Object.keys(bySection)) {
+  bySection[key].sort((a, b) => {
+    const ya = a.data.year ?? -Infinity;
+    const yb = b.data.year ?? -Infinity;
+    if (yb !== ya) return yb - ya;
+    return (a.data.bib || a.data.title).localeCompare(b.data.bib || b.data.title);
+  });
+}
+
+// Render order: only sections that have entries. Sub-collections in their
+// configured order (alphabetical from the script), then Uncategorized last.
+const renderedSections: { key: string; name: string }[] = [];
+for (const sub of subcollections) {
+  if (bySection[sub.key]?.length) {
+    renderedSections.push({ key: sub.key, name: sub.name });
+  }
+}
+if (bySection[UNCATEGORIZED]?.length) {
+  renderedSections.push({
+    key: UNCATEGORIZED,
+    name: subcollections.length > 0 ? 'Uncategorized' : 'All references',
+  });
+}
+
+// Total tag count for the placeholder text in the search input.
+const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
 ---
 <BaseLayout title="Bibliography">
   <h1 class="text-5xl font-semibold tracking-tight mb-3 text-text">Bibliography</h1>
@@ -55,54 +80,63 @@ const allTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])
     </div>
   ) : (
     <>
-      {allTags.length > 0 && (
-        <div
-          data-tag-filter
-          class="mb-12 -mx-1 flex flex-wrap items-center gap-1.5 text-sm"
-          aria-label="Filter by tag"
-        >
-          <span class="px-2 text-xs uppercase tracking-wider text-subtle">
-            Filter:
-          </span>
-          {allTags.map(([tag, count]) => (
-            <button
-              type="button"
-              data-tag={tag}
-              class="tag-chip inline-flex items-baseline gap-1.5 px-2.5 py-1 rounded-full border border-border text-text hover:border-accent hover:text-accent transition-colors"
-            >
-              <span>{tag}</span>
-              <span class="text-xs text-subtle tabular-nums">{count}</span>
-            </button>
-          ))}
+      {/* Search + filter row. The input filters entries by title/author/tag
+          (free-text). Active tag filters appear as removable chips below. */}
+      <div data-bib-filter class="mb-10 space-y-3">
+        <div class="flex items-center gap-3">
+          <label class="sr-only" for="bib-search">Search bibliography</label>
+          <input
+            id="bib-search"
+            type="search"
+            data-bib-search
+            placeholder={`Search title, author, or one of ${allTagCount} tags…`}
+            class="flex-1 px-4 py-2 rounded-lg border border-border bg-bg text-text placeholder:text-subtle focus:outline-none focus:border-accent transition-colors"
+          />
           <button
             type="button"
-            data-tag-clear
-            class="ml-2 px-2.5 py-1 text-xs text-subtle hover:text-text underline-offset-2 hover:underline hidden"
+            data-bib-clear
+            class="hidden px-3 py-2 text-sm text-subtle hover:text-text underline-offset-2 hover:underline"
           >
             Clear
           </button>
         </div>
-      )}
+        <div data-bib-active-tags class="flex flex-wrap gap-1.5 empty:hidden"></div>
+      </div>
 
       <div class="space-y-12" data-bibliography>
-        {years.map((year) => (
-          <section data-year-section data-year-tags={JSON.stringify(byYear[year].flatMap((e) => e.data.tags ?? []))}>
+        {renderedSections.map((section) => (
+          <section data-section data-section-key={section.key}>
             <h2 class="text-xs font-semibold text-accent uppercase tracking-[0.14em] mb-5">
-              {year}
+              <span>{section.name}</span>
+              <span class="ml-2 text-subtle font-normal" data-section-count>
+                ({bySection[section.key].length})
+              </span>
             </h2>
             <ul class="space-y-5">
-              {byYear[year].map((entry) => (
+              {bySection[section.key].map((entry) => (
                 <li
                   class="border-b border-border pb-5 last:border-b-0"
                   data-entry
                   data-entry-tags={JSON.stringify(entry.data.tags ?? [])}
+                  data-entry-text={[
+                    entry.data.title,
+                    entry.data.bib?.replace(/<[^>]+>/g, ' ') ?? '',
+                    (entry.data.tags ?? []).join(' '),
+                  ].join(' ').toLowerCase()}
                 >
                   <div class="bibliography-entry text-text leading-relaxed" set:html={entry.data.bib || `<em>${entry.data.title}</em>`} />
                   {entry.data.tags && entry.data.tags.length > 0 && (
                     <ul class="mt-2 flex flex-wrap gap-1.5 text-xs">
                       {entry.data.tags.map((tag) => (
-                        <li class="px-2 py-0.5 rounded-full bg-surface-strong text-muted">
-                          {tag}
+                        <li>
+                          <button
+                            type="button"
+                            data-tag-add={tag}
+                            class="px-2 py-0.5 rounded-full bg-surface-strong text-muted hover:bg-accent-soft hover:text-accent transition-colors cursor-pointer"
+                            title={`Filter by ${tag}`}
+                          >
+                            {tag}
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -137,7 +171,7 @@ const allTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])
           </section>
         ))}
         <p data-empty-msg class="text-muted italic hidden">
-          No entries match the selected tags.
+          No entries match your filter.
         </p>
       </div>
     </>
@@ -145,117 +179,162 @@ const allTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])
 </BaseLayout>
 
 <style is:global>
-  /* Zotero's pre-rendered Chicago-style bibliography wraps each entry in
-     a .csl-entry div. Style it to match the rest of the prose. */
   .bibliography-entry .csl-entry { margin: 0; }
   .bibliography-entry i,
   .bibliography-entry em { font-style: italic; }
-  /* Hanging indent that Chicago style traditionally uses. */
   .bibliography-entry {
     text-indent: -1.5rem;
     padding-left: 1.5rem;
-  }
-
-  /* Active filter chip — driven by the script below. */
-  .tag-chip[aria-pressed="true"] {
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    border-color: var(--color-accent);
-  }
-  .tag-chip[aria-pressed="true"] span:last-child {
-    color: var(--color-bg);
-    opacity: 0.8;
   }
 </style>
 
 <script>
   /*
-    Client-side tag filter. State lives in the URL hash so the filtered view
-    is shareable / bookmarkable, e.g. /bibliography#tags=cartography,zoning
+    Bibliography filter state lives in URL hash so views are shareable:
+        #q=climate                 — free-text search
+        #tags=Cartography,Networks — exact tag matches (AND-of-search,
+                                     OR-among-tags)
+        #q=climate&tags=Cartography
 
-    Filter logic is OR (an entry shows if it has ANY selected tag). Year
-    sections hide when none of their entries match.
+    Free-text filters by title + rendered citation (HTML stripped) + tag
+    names — substring match, case-insensitive. Tag filters require the
+    entry to carry every selected tag (AND), so adding more chips narrows
+    rather than widens.
 
-    Re-attaches on astro:page-load so it survives ClientRouter view transitions.
+    Re-attaches on astro:page-load to survive ClientRouter view transitions.
   */
 
-  type ParsedHash = { tags: Set<string> };
+  type State = { q: string; tags: Set<string> };
 
-  function parseHash(): ParsedHash {
-    const m = location.hash.match(/tags=([^&]+)/);
-    if (!m) return { tags: new Set() };
-    return {
-      tags: new Set(
-        decodeURIComponent(m[1])
-          .split(',')
-          .map((s) => s.trim())
-          .filter(Boolean),
-      ),
-    };
+  function parseHash(): State {
+    const out: State = { q: '', tags: new Set() };
+    const raw = location.hash.replace(/^#/, '');
+    if (!raw) return out;
+    for (const part of raw.split('&')) {
+      const [k, v = ''] = part.split('=');
+      const decoded = decodeURIComponent(v);
+      if (k === 'q') out.q = decoded;
+      else if (k === 'tags') {
+        decoded.split(',').map((s) => s.trim()).filter(Boolean).forEach((t) => out.tags.add(t));
+      }
+    }
+    return out;
   }
 
-  function writeHash(tags: Set<string>) {
-    if (tags.size === 0) {
-      // Strip the hash entirely instead of leaving '#'.
+  function writeHash(state: State) {
+    const parts: string[] = [];
+    if (state.q) parts.push(`q=${encodeURIComponent(state.q)}`);
+    if (state.tags.size > 0) parts.push(`tags=${encodeURIComponent([...state.tags].join(','))}`);
+    if (parts.length === 0) {
       history.replaceState(null, '', location.pathname + location.search);
     } else {
-      const v = encodeURIComponent([...tags].join(','));
-      history.replaceState(null, '', `${location.pathname}${location.search}#tags=${v}`);
+      history.replaceState(null, '', `${location.pathname}${location.search}#${parts.join('&')}`);
+    }
+  }
+
+  function renderActiveTagChips(tags: Set<string>) {
+    const container = document.querySelector<HTMLElement>('[data-bib-active-tags]');
+    if (!container) return;
+    container.innerHTML = '';
+    if (tags.size === 0) return;
+    for (const tag of tags) {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.dataset.tagRemove = tag;
+      chip.className =
+        'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent text-bg text-xs hover:bg-accent/85 transition-colors';
+      chip.innerHTML = `<span>${tag}</span><span aria-hidden="true">×</span>`;
+      chip.title = `Remove filter: ${tag}`;
+      container.appendChild(chip);
     }
   }
 
   function applyFilter() {
     const root = document.querySelector<HTMLElement>('[data-bibliography]');
-    const filter = document.querySelector<HTMLElement>('[data-tag-filter]');
-    const clearBtn = document.querySelector<HTMLButtonElement>('[data-tag-clear]');
+    const searchInput = document.querySelector<HTMLInputElement>('[data-bib-search]');
+    const clearBtn = document.querySelector<HTMLButtonElement>('[data-bib-clear]');
     const emptyMsg = document.querySelector<HTMLElement>('[data-empty-msg]');
-    if (!root || !filter) return;
+    if (!root) return;
 
-    const { tags } = parseHash();
+    const state = parseHash();
+    const q = state.q.toLowerCase().trim();
 
-    // Update chip pressed state.
-    filter.querySelectorAll<HTMLButtonElement>('.tag-chip').forEach((chip) => {
-      const tag = chip.dataset.tag ?? '';
-      chip.setAttribute('aria-pressed', String(tags.has(tag)));
-    });
+    if (searchInput && searchInput.value !== state.q) searchInput.value = state.q;
+    if (clearBtn) clearBtn.classList.toggle('hidden', !q && state.tags.size === 0);
+    renderActiveTagChips(state.tags);
 
-    if (clearBtn) clearBtn.classList.toggle('hidden', tags.size === 0);
-
-    // Filter entries (OR semantics).
     let matchedAny = false;
     root.querySelectorAll<HTMLElement>('[data-entry]').forEach((li) => {
       const entryTags = JSON.parse(li.dataset.entryTags || '[]') as string[];
-      const matches = tags.size === 0 || entryTags.some((t) => tags.has(t));
-      li.classList.toggle('hidden', !matches);
-      if (matches) matchedAny = true;
+      const text = li.dataset.entryText ?? '';
+
+      const matchesText = !q || text.includes(q);
+      const matchesTags =
+        state.tags.size === 0 || [...state.tags].every((t) => entryTags.includes(t));
+
+      const visible = matchesText && matchesTags;
+      li.classList.toggle('hidden', !visible);
+      if (visible) matchedAny = true;
     });
 
-    // Hide year sections that now have no visible entries.
-    root.querySelectorAll<HTMLElement>('[data-year-section]').forEach((section) => {
+    // Hide sections that have no visible entries; update the count display.
+    root.querySelectorAll<HTMLElement>('[data-section]').forEach((section) => {
       const visible = section.querySelectorAll<HTMLElement>('[data-entry]:not(.hidden)').length;
       section.classList.toggle('hidden', visible === 0);
+      const countEl = section.querySelector<HTMLElement>('[data-section-count]');
+      if (countEl) {
+        const total = section.querySelectorAll<HTMLElement>('[data-entry]').length;
+        countEl.textContent = visible === total ? `(${total})` : `(${visible} of ${total})`;
+      }
     });
 
-    if (emptyMsg) emptyMsg.classList.toggle('hidden', matchedAny || tags.size === 0);
+    if (emptyMsg) emptyMsg.classList.toggle('hidden', matchedAny || (!q && state.tags.size === 0));
   }
 
-  function attach() {
-    const filter = document.querySelector<HTMLElement>('[data-tag-filter]');
-    if (!filter) return;
+  let searchDebounce: number | undefined;
 
-    filter.querySelectorAll<HTMLButtonElement>('.tag-chip').forEach((chip) => {
-      chip.addEventListener('click', () => {
-        const { tags } = parseHash();
-        const tag = chip.dataset.tag ?? '';
-        if (tags.has(tag)) tags.delete(tag);
-        else tags.add(tag);
-        writeHash(tags);
+  function attach() {
+    const searchInput = document.querySelector<HTMLInputElement>('[data-bib-search]');
+    const clearBtn = document.querySelector<HTMLButtonElement>('[data-bib-clear]');
+    const activeTags = document.querySelector<HTMLElement>('[data-bib-active-tags]');
+
+    searchInput?.addEventListener('input', () => {
+      window.clearTimeout(searchDebounce);
+      searchDebounce = window.setTimeout(() => {
+        const state = parseHash();
+        state.q = searchInput.value;
+        writeHash(state);
         applyFilter();
+      }, 120);
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      writeHash({ q: '', tags: new Set() });
+      applyFilter();
+    });
+
+    // Click any tag chip on an entry → add it to the active tag filter.
+    document.querySelectorAll<HTMLButtonElement>('[data-tag-add]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tag = btn.dataset.tagAdd ?? '';
+        if (!tag) return;
+        const state = parseHash();
+        state.tags.add(tag);
+        writeHash(state);
+        applyFilter();
+        // Scroll to the top of the entry list so the user sees the result.
+        document.querySelector('[data-bibliography]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    filter.querySelector<HTMLButtonElement>('[data-tag-clear]')?.addEventListener('click', () => {
-      writeHash(new Set());
+    // Click a chip in the active filter row → remove that filter.
+    activeTags?.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-tag-remove]');
+      if (!target) return;
+      const tag = target.dataset.tagRemove ?? '';
+      const state = parseHash();
+      state.tags.delete(tag);
+      writeHash(state);
       applyFilter();
     });
 

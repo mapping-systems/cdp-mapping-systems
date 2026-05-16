@@ -1,8 +1,38 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-15T23:18:39.358Z",
+  "fetchedAt": "2026-05-16T00:36:10.451Z",
   "collectionId": "847AR7X4",
   "count": 163,
+  "subcollections": [
+    {
+      "key": "UP4V2S7X",
+      "name": "AI"
+    },
+    {
+      "key": "PGTZV2GX",
+      "name": "cartography + visualization"
+    },
+    {
+      "key": "T3AL7PGA",
+      "name": "case studies"
+    },
+    {
+      "key": "AGAC9I88",
+      "name": "infrastructure"
+    },
+    {
+      "key": "ERJ92FM8",
+      "name": "methods"
+    },
+    {
+      "key": "6SPRPNXF",
+      "name": "networks"
+    },
+    {
+      "key": "DRE4ZF6F",
+      "name": "theory"
+    }
+  ],
   "entries": [
     {
       "key": "LXJCF8AB",
@@ -12,6 +42,7 @@
       "date": "1937",
       "year": 1937,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LXJCF8AB",
         "type": "map",
@@ -52,6 +83,7 @@
         "ingegrating human and natural sciences",
         "landscape/regional and urban planning"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/FKRNLQ5R",
         "type": "book",
@@ -109,6 +141,7 @@
         "Perception",
         "Visual landscape"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/AGI4ULN8",
         "type": "chapter",
@@ -170,6 +203,7 @@
       "date": "2016",
       "year": 2016,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/URKJDZ84",
         "type": "chapter",
@@ -204,6 +238,7 @@
         "Computer networks",
         "Information networks"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/XZ4EGKPF",
         "type": "book",
@@ -244,6 +279,7 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/7IIFNURW",
         "type": "book",
@@ -291,6 +327,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JW4XBVGH",
         "type": "article-journal",
@@ -348,6 +385,7 @@
         "Economics",
         "Policy"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/TFS35BIB",
         "type": "article-journal",
@@ -402,6 +440,7 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6ZU3JYPM",
         "type": "article-journal",
@@ -440,6 +479,7 @@
       "date": "1999",
       "year": 1999,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4CQGLS4X",
         "type": "chapter",
@@ -477,6 +517,7 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/VG5HM3A5",
         "type": "book",
@@ -518,6 +559,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6NNGGHNH",
         "type": "webpage",
@@ -558,6 +600,7 @@
       "title": "I learned about something called a “relative elevation model” derived from #lidar point cloud data and now I’m obsessed with figuring out how to make one with my dataset. #arcgis https://t.co/bMpiNBGAYv",
       "url": "https://x.com/mrbrianolson/status/1052384614528872449/photo/1",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S7E24NFH",
         "type": "post",
@@ -593,6 +636,7 @@
       "date": "2018",
       "year": 2018,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/RWK3CBNQ",
         "type": "webpage",
@@ -637,6 +681,7 @@
       "title": "Field Notes No. 1: The Detroit Geographical Expedition",
       "date": "1969",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/QHXQJALL",
         "type": "report",
@@ -667,6 +712,7 @@
       "date": "1972",
       "year": 1972,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/7MAJ2AI4",
         "type": "report",
@@ -701,6 +747,7 @@
       "date": "1971",
       "year": 1971,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/J3CARVV2",
         "type": "report",
@@ -739,6 +786,7 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ZR82EC99",
         "type": "report",
@@ -776,6 +824,7 @@
       "title": "Mercator Projection of the World",
       "url": "http://alabamamaps.ua.edu/contemporarymaps/world/world/world2.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8RY9ASZ4",
         "type": "map",
@@ -802,6 +851,7 @@
       "tags": [
         "network analysis"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/4KCC7TCE",
         "type": "chapter",
@@ -841,6 +891,7 @@
         "Environmental social sciences",
         "Mathematics and computing"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/9KGZ5VSV",
         "type": "article-journal",
@@ -905,6 +956,7 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/KLUT2M8L",
         "type": "report",
@@ -935,6 +987,7 @@
       "title": "Modeling Travelers' Perceptions of Travel Time",
       "url": "https://onlinepubs.trb.org/Onlinepubs/trr/1982/890/890-002.pdf",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/J77LV6K7",
         "type": "article-journal",
@@ -961,6 +1014,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/9ANYQ3XC",
         "type": "webpage",
@@ -1003,6 +1057,7 @@
       "date": "1980",
       "year": 1980,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/GYX8EH9J",
         "type": "article-journal",
@@ -1057,6 +1112,7 @@
       "doi": "10.1002/psp.630",
       "date": "2012",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/N624WXWN",
         "type": "article-journal",
@@ -1114,6 +1170,7 @@
       "date": "1991",
       "year": 1991,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XC9UULBH",
         "type": "chapter",
@@ -1167,6 +1224,7 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/NIC29W7V",
         "type": "chapter",
@@ -1230,6 +1288,7 @@
       "type": "chapter",
       "title": "Carto-City",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/QET6RCP2",
         "type": "chapter",
@@ -1255,6 +1314,7 @@
       "date": "1992",
       "year": 1992,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JFZLEVU3",
         "type": "chapter",
@@ -1332,6 +1392,7 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/TWJ2KGRP",
         "type": "book",
@@ -1387,6 +1448,7 @@
         "Cognitive bias",
         "Technology and analytics"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/9S22YJNU",
         "type": "article-magazine",
@@ -1434,6 +1496,7 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/GJS2SSDQ",
         "type": "chapter",
@@ -1497,6 +1560,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/2JHK76L7",
         "type": "post-weblog",
@@ -1543,6 +1607,7 @@
       "tags": [
         "Negroes"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/ZA7XRIJQ",
         "type": "article-newspaper",
@@ -1590,6 +1655,7 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/APEI3Q4C",
         "type": "chapter",
@@ -1633,6 +1699,7 @@
       "tags": [
         "Land Use Change"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/6VSYCHYT",
         "type": "dataset",
@@ -1677,6 +1744,7 @@
       "date": "2024",
       "year": 2024,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/T58IBWHQ",
         "type": "article-journal",
@@ -1733,6 +1801,7 @@
         "Urban Areas",
         "internal-storyline-no"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/ERB65TU2",
         "type": "article-newspaper",
@@ -1787,6 +1856,7 @@
         "refugees",
         "transit migration"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/B9BHMNWK",
         "type": "article-journal",
@@ -1844,6 +1914,7 @@
         "Methodology",
         "Social aspects"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/G47YSBSC",
         "type": "book",
@@ -1889,6 +1960,7 @@
       "date": "2010",
       "year": 2010,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/MM3C56A5",
         "type": "chapter",
@@ -1933,6 +2005,7 @@
         "synthesis",
         "understanding"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/K54S43LG",
         "type": "book",
@@ -1980,6 +2053,7 @@
       "date": "1991",
       "year": 1991,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/9QMQDWFD",
         "type": "chapter",
@@ -2042,6 +2116,7 @@
         "GIS",
         "Movement"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/KIJKKVBT",
         "type": "article-journal",
@@ -2103,6 +2178,7 @@
         "GIS",
         "Movement"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/HWKQEKBJ",
         "type": "article-journal",
@@ -2156,6 +2232,7 @@
       "date": "2011",
       "year": 2011,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/KSH9Y8D9",
         "type": "webpage",
@@ -2207,6 +2284,7 @@
         "vehicle miles traveled (VMT)",
         "walking"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/HBAQSD3B",
         "type": "article-journal",
@@ -2263,6 +2341,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/U3ZGQN99",
         "type": "book",
@@ -2309,6 +2388,7 @@
       "type": "chapter",
       "title": "Spatial Data",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ACR8UYSJ",
         "type": "chapter",
@@ -2342,6 +2422,7 @@
       "tags": [
         "uncertainty"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/TNIAXGRH",
         "type": "article-journal",
@@ -2411,6 +2492,7 @@
       "date": "1978",
       "year": 1978,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/RFBBB2TE",
         "type": "graphic",
@@ -2445,6 +2527,7 @@
       "tags": [
         "mapping-systems"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/JTEGM2U3",
         "type": "chapter",
@@ -2532,6 +2615,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/WNEAX6KF",
         "type": "article-journal",
@@ -2587,6 +2671,7 @@
         "Theory",
         "computer"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/AMYZ33ZV",
         "type": "article-journal",
@@ -2611,6 +2696,7 @@
       "doi": "10.1177/016001760002300201",
       "date": "2000",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/GAWPYN3I",
         "type": "article-journal",
@@ -2680,6 +2766,7 @@
         "Urbanization",
         "Vulnerability"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/34CG4EPW",
         "type": "article-journal",
@@ -2738,6 +2825,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4SPT78AB",
         "type": "book",
@@ -2789,6 +2877,7 @@
       "doi": "10.2307/3178066",
       "date": "1988",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CTAGPST9",
         "type": "article-journal",
@@ -2838,6 +2927,7 @@
       "date": "1982",
       "year": 1982,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JJA7GGQW",
         "type": "article-journal",
@@ -2885,6 +2975,7 @@
       "title": "Hassler_1816_Sketch.jpg (1276×1481)",
       "url": "https://geodesy.noaa.gov/web/about_ngs/history/Hassler_1816_Sketch.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LP74QRML",
         "type": "map",
@@ -2928,6 +3019,7 @@
         "meta-analysis",
         "systematic review"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/QGDFCM5T",
         "type": "article-journal",
@@ -3000,6 +3092,7 @@
         "Natural hazards",
         "Sustainability"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/6VWVPVVM",
         "type": "article-journal",
@@ -3076,6 +3169,7 @@
         "Remote sensing",
         "United States"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/FTVN9SRW",
         "type": "article-journal",
@@ -3166,6 +3260,7 @@
       "type": "article-journal",
       "title": "EDITORIAL ASSISTANTS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ESV5D4RL",
         "type": "article-journal",
@@ -3195,6 +3290,7 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/25FVMRF3",
         "type": "book",
@@ -3261,6 +3357,7 @@
       "date": "1978",
       "year": 1978,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Z4WNISIG",
         "type": "article-journal",
@@ -3310,6 +3407,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/M77RDA79",
         "type": "article-journal",
@@ -3360,6 +3458,7 @@
       "tags": [
         "desire path"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/M4XAAABM",
         "type": "post-weblog",
@@ -3411,6 +3510,7 @@
         "pixel/object-based information integration",
         "temporal/spatial context"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/B44IGNVR",
         "type": "article-journal",
@@ -3505,6 +3605,7 @@
         "transport",
         "urban design"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/JHCY3BGZ",
         "type": "article-newspaper",
@@ -3547,6 +3648,7 @@
       "type": "chapter",
       "title": "Geography and GIS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/9U6THMW8",
         "type": "chapter",
@@ -3568,6 +3670,7 @@
       "title": "Azimuthal Equidistant Projection (Hemispheres): Compare Map Projections",
       "url": "https://map-projections.net/single-view/azimuthal-equidistant-hemi",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/R7J8DSND",
         "type": "webpage",
@@ -3598,6 +3701,7 @@
       "title": "Lambert Cylindrical: Compare Map Projections",
       "url": "https://map-projections.net/single-view/lambert",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Q5AN5M5T",
         "type": "webpage",
@@ -3628,6 +3732,7 @@
       "title": "Lambert conformal conic: Compare Map Projections",
       "url": "https://map-projections.net/single-view/lambert-conformal-conic",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SFEMIXHI",
         "type": "webpage",
@@ -3658,6 +3763,7 @@
       "title": "Comparing Map Projections",
       "url": "https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IRPBIPUW",
         "type": "webpage",
@@ -3691,6 +3797,7 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IF4VZ88X",
         "type": "post-weblog",
@@ -3738,6 +3845,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/TT8D3XSS",
         "type": "article-journal",
@@ -3848,6 +3956,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Q8QVLZ4I",
         "type": "webpage",
@@ -3889,6 +3998,7 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/FIK7EZU5",
         "type": "article-journal",
@@ -3941,6 +4051,7 @@
         "Case studies",
         "Computer Science - Computer Vision and Pattern Recognition"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/ZPIPTXYX",
         "type": "webpage",
@@ -3974,6 +4085,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/36TQX2C5",
         "type": "post-weblog",
@@ -4020,6 +4132,7 @@
       "date": "2025",
       "year": 2025,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4E54L4ZH",
         "type": "article-journal",
@@ -4086,6 +4199,7 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SYN8H39L",
         "type": "chapter",
@@ -4131,6 +4245,7 @@
       "date": "2014",
       "year": 2014,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/K7JTL5QV",
         "type": "webpage",
@@ -4175,6 +4290,7 @@
       "date": "1960",
       "year": 1960,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/HU2VCT28",
         "type": "chapter",
@@ -4209,6 +4325,7 @@
         "City planning",
         "United States"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/IBVUU8FQ",
         "type": "book",
@@ -4243,6 +4360,7 @@
       "date": "2006",
       "year": 2006,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/NBX5VLHA",
         "type": "chapter",
@@ -4277,6 +4395,7 @@
       "date": "2006",
       "year": 2006,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/RGHPZ9QM",
         "type": "chapter",
@@ -4312,6 +4431,7 @@
       "date": "2006",
       "year": 2006,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/WTQAZHGX",
         "type": "chapter",
@@ -4351,6 +4471,7 @@
         "Theory",
         "network analysis"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/TN7986PG",
         "type": "webpage",
@@ -4394,6 +4515,7 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/TZEFL94X",
         "type": "article-journal",
@@ -4442,6 +4564,7 @@
       "title": "A New World Map on an Irregular Heptahedron",
       "date": "2006",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/Y2KRXDB9",
         "type": "thesis",
@@ -4473,6 +4596,7 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/K8ZUNGZN",
         "type": "chapter",
@@ -4505,6 +4629,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6723CRDU",
         "type": "chapter",
@@ -4535,6 +4660,7 @@
       "type": "article-journal",
       "title": "Not Yet #AfterRikers: Looking for #JusticeInDesign",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/FIZMBVCN",
         "type": "article-journal",
@@ -4560,6 +4686,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/YU35IK7K",
         "type": "post-weblog",
@@ -4605,6 +4732,7 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/H8CV2K3U",
         "type": "article-journal",
@@ -4651,6 +4779,7 @@
       "date": "2004",
       "year": 2004,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ALB2T4VH",
         "type": "article-journal",
@@ -4698,6 +4827,7 @@
       "date": "1966",
       "year": 1966,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/PI9LS8K4",
         "type": "article-journal",
@@ -4746,6 +4876,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/YP6J6EAB",
         "type": "article-journal",
@@ -4802,6 +4933,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LFWGH3G5",
         "type": "report",
@@ -4842,6 +4974,7 @@
       "doi": "10.1007/s11135-015-0228-7",
       "date": "2016",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CFRMKKKG",
         "type": "article-journal",
@@ -4896,6 +5029,7 @@
       "type": "report",
       "title": "Basics of Mapping and GIS",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8P95G6UT",
         "type": "report",
@@ -4919,6 +5053,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CBPZSBUL",
         "type": "webpage",
@@ -4962,6 +5097,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/CWIW69GM",
         "type": "map",
@@ -4993,6 +5129,7 @@
       "tags": [
         "Community development-Michigan-Detroit."
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/5Y46HPVQ",
         "type": "book",
@@ -5072,6 +5209,7 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/IJVWIJDB",
         "type": "report",
@@ -5108,6 +5246,7 @@
       "tags": [
         "Computer Science - Human-Computer Interaction"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/CC5KEKSU",
         "type": "article",
@@ -5155,6 +5294,7 @@
       "date": "2017",
       "year": 2017,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/J7CDGCGL",
         "type": "post-weblog",
@@ -5202,6 +5342,7 @@
       "date": "2007",
       "year": 2007,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/2DFF9BQP",
         "type": "article-journal",
@@ -5260,6 +5401,7 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/W3MRBMBE",
         "type": "article-journal",
@@ -5315,6 +5457,7 @@
       "title": "Coordinate Reference Systems — QGIS Documentation documentation",
       "url": "https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/8VIF7RL6",
         "type": "webpage",
@@ -5353,6 +5496,7 @@
         "Travel mode choice",
         "Trip distance"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/LCBL3ESN",
         "type": "article-journal",
@@ -5405,6 +5549,7 @@
       "doi": "10.1080/0269745032000168269",
       "date": "2003",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/6XR9TG3K",
         "type": "article-journal",
@@ -5468,6 +5613,7 @@
         "Sociocultural Anthropology",
         "Volunteered geographic information"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/RP4W4YBJ",
         "type": "article-journal",
@@ -5533,6 +5679,7 @@
       "date": "2022",
       "year": 2022,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/VVT2R2US",
         "type": "post-weblog",
@@ -5576,6 +5723,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4XGV2K8V",
         "type": "book",
@@ -5618,6 +5766,7 @@
       "date": "1975",
       "year": 1975,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SJXJXVXZ",
         "type": "chapter",
@@ -5669,6 +5818,7 @@
       "date": "1995",
       "year": 1995,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/GMDB9ZMD",
         "type": "article-journal",
@@ -5718,6 +5868,7 @@
         "Theory",
         "macroscope"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/RDQ7QWE2",
         "type": "article-journal",
@@ -5746,6 +5897,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/J7T93PLH",
         "type": "article-journal",
@@ -5804,6 +5956,7 @@
         "Science / Earth Sciences / Geology",
         "Travel / Maps & Road Atlases"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/ID639BIQ",
         "type": "book",
@@ -5840,6 +5993,7 @@
       "title": "West Philadelphia Landscape Project",
       "url": "https://wplp.net/about/",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/I4MGDNUJ",
         "type": "webpage",
@@ -5871,6 +6025,7 @@
       "date": "2010",
       "year": 2010,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/AG4VQNBU",
         "type": "chapter",
@@ -5908,6 +6063,7 @@
       "date": "2019",
       "year": 2019,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/AALTUHFG",
         "type": "post-weblog",
@@ -5951,6 +6107,7 @@
       "title": "Quarte Partie du Monde",
       "url": "https://i.pinimg.com/736x/33/07/65/330765c1b82631b8e7847a4584590802.jpg",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S8MF5JFS",
         "type": "map",
@@ -5977,6 +6134,7 @@
       "date": "1970",
       "year": 1970,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S5NGFGAN",
         "type": "article-journal",
@@ -6010,6 +6168,7 @@
       "date": "2012",
       "year": 2012,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XTQMFF9Y",
         "type": "article-journal",
@@ -6043,6 +6202,7 @@
       "type": "article-journal",
       "title": "Mapping What Isn’t Quite There",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/MY9B7ABJ",
         "type": "article-journal",
@@ -6068,6 +6228,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/837NPBYS",
         "type": "post-weblog",
@@ -6116,6 +6277,7 @@
         "Restaurants",
         "Technology"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/KNPRXU2I",
         "type": "article-newspaper",
@@ -6183,6 +6345,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/9GIUHJ6Q",
         "type": "post-weblog",
@@ -6226,6 +6389,7 @@
       "date": "1975",
       "year": 1975,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ALLRJECU",
         "type": "article-journal",
@@ -6276,6 +6440,7 @@
       "date": "2024",
       "year": 2024,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/LV5FQ6SY",
         "type": "map",
@@ -6311,6 +6476,7 @@
       "date": "2020",
       "year": 2020,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/SE5ZQI7H",
         "type": "webpage",
@@ -6362,6 +6528,7 @@
       "date": "1300",
       "year": 1300,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/JAIVT5BZ",
         "type": "map",
@@ -6393,6 +6560,7 @@
       "doi": "10.1016/j.jtrangeo.2003.10.001",
       "date": "2004",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/X83JTBX5",
         "type": "article-journal",
@@ -6452,6 +6620,7 @@
       "title": "Overview - History - National Geodetic Survey",
       "url": "https://geodesy.noaa.gov/web/about_ngs/history/",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/P93LET7K",
         "type": "webpage",
@@ -6486,6 +6655,7 @@
       "date": "2021",
       "year": 2021,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/4F63UBV4",
         "type": "map",
@@ -6519,6 +6689,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/DAJ9YFCW",
         "type": "article-journal",
@@ -6585,6 +6756,7 @@
       "type": "article-journal",
       "title": "Generalising spatial data and dealing with multiple representations",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/XL4BTTVI",
         "type": "article-journal",
@@ -6621,6 +6793,7 @@
         "Reference data error",
         "Stratified sampling"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/YCZSB5RT",
         "type": "article-journal",
@@ -6686,6 +6859,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/MU57N7TL",
         "type": "paper-conference",
@@ -6733,6 +6907,7 @@
       "date": "2018",
       "year": 2018,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/3HIZIH4C",
         "type": "chapter",
@@ -6775,6 +6950,7 @@
       "doi": "10.1177/1474474014539249",
       "date": "2015",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/E4Z8EEX5",
         "type": "article-journal",
@@ -6824,6 +7000,7 @@
       "date": "1993",
       "year": 1993,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/V998M9H4",
         "type": "article-journal",
@@ -6860,6 +7037,7 @@
         "Cartography",
         "Perception"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/36Y8EEPD",
         "type": "article-journal",
@@ -6907,6 +7085,7 @@
       "doi": "10.1016/j.cities.2022.103677",
       "date": "2022",
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/D4KH4EL3",
         "type": "article-journal",
@@ -6976,6 +7155,7 @@
         "Geodesign",
         "Spatial planning"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/ZNQFDKKP",
         "type": "article-journal",
@@ -7057,6 +7237,7 @@
         "Geodesign",
         "Spatial planning"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/IDVCI7LC",
         "type": "article-journal",
@@ -7131,6 +7312,7 @@
       "date": "2005",
       "year": 2005,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/F4GFAPKB",
         "type": "chapter",
@@ -7165,6 +7347,7 @@
         "Computer Science - Data Structures and Algorithms",
         "Data format"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/IE5M4HWQ",
         "type": "webpage",
@@ -7223,6 +7406,7 @@
         "Computer Science - Computer Vision and Pattern Recognition",
         "Computer Science - Computers and Society"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/J5NV6SH4",
         "type": "article",
@@ -7306,6 +7490,7 @@
       "tags": [
         "Dataset"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/E3CXIG4C",
         "type": "article-journal",
@@ -7374,6 +7559,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/2G5EL4DS",
         "type": "webpage",
@@ -7410,6 +7596,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/ERGXRL6C",
         "type": "webpage",
@@ -7446,6 +7633,7 @@
       "date": "2023",
       "year": 2023,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/QJ3M53BD",
         "type": "post-weblog",
@@ -7481,6 +7669,7 @@
       "date": "2026",
       "year": 2026,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/NPZQ324A",
         "type": "webpage",
@@ -7521,6 +7710,7 @@
         "Data extractivism",
         "Theory"
       ],
+      "subcollections": [],
       "csl": {
         "id": "747207/GJIDKZL5",
         "type": "document",
@@ -7545,6 +7735,7 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/BTHJG429",
         "type": "webpage",
@@ -7583,6 +7774,7 @@
       "date": "2009",
       "year": 2009,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/S2RZF8FL",
         "type": "webpage",
@@ -7616,6 +7808,7 @@
       "date": "2015",
       "year": 2015,
       "tags": [],
+      "subcollections": [],
       "csl": {
         "id": "747207/24U9NDJN",
         "type": "post-weblog",
