@@ -323,6 +323,25 @@ def extract_notebook_frontmatter(nb: nbformat.NotebookNode, nb_path: Path) -> di
     return frontmatter
 
 
+# Markdown processors (Astro's MDX engine in our case) don't handle inline
+# <style> or <script> tags gracefully — the `{` characters inside CSS rules
+# trip up the parser and the rest of the block leaks out as plain text.
+# Strip these (and a couple of other pandas-specific leftovers) before
+# embedding cell HTML into a markdown body. Our own CSS in global.css under
+# `.output-html table` already styles these blocks consistently.
+_STYLE_BLOCK_RE = re.compile(r"<style\b[^>]*>.*?</style>", re.IGNORECASE | re.DOTALL)
+_SCRIPT_BLOCK_RE = re.compile(r"<script\b[^>]*>.*?</script>", re.IGNORECASE | re.DOTALL)
+_TABLE_BORDER_ATTR_RE = re.compile(r'(<table\b[^>]*?)\s+border="\d+"', re.IGNORECASE)
+
+
+def sanitize_html_output(html: str) -> str:
+    """Remove tags that fight our renderer or leak as text inside markdown."""
+    html = _STYLE_BLOCK_RE.sub("", html)
+    html = _SCRIPT_BLOCK_RE.sub("", html)
+    html = _TABLE_BORDER_ATTR_RE.sub(r"\1", html)
+    return html
+
+
 def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) -> str:
     """Convert a cell output to markdown."""
     output_type = output.get("output_type", "")
@@ -351,7 +370,7 @@ def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) 
             return f'<figure class="output-figure output-svg">\n\n{svg}\n\n</figure>\n'
 
         if "text/html" in data:
-            html = data["text/html"]
+            html = sanitize_html_output(data["text/html"])
             return f'<div class="output-html">\n\n{html}\n\n</div>\n'
 
         if "text/plain" in data:
