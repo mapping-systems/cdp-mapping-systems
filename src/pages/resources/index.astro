@@ -11,7 +11,9 @@ channels.sort((a, b) => a.data.title.localeCompare(b.data.title));
     Reference material, inspiration, and supporting links collected for the
     course. Pulled from
     <a class="text-link hover:text-link-hover underline-offset-2" href="https://www.are.na" target="_blank" rel="noreferrer noopener">are.na</a>
-    channels and refreshed periodically.
+    channels and
+    <a class="text-link hover:text-link-hover underline-offset-2" href="https://github.com" target="_blank" rel="noreferrer noopener">GitHub</a>
+    lists, refreshed periodically.
   </p>
 
   {channels.length === 0 ? (
@@ -26,16 +28,6 @@ channels.sort((a, b) => a.data.title.localeCompare(b.data.title));
             href={`/resources/${channel.data.slug}`}
             class="block group no-underline border border-border rounded-lg overflow-hidden hover:border-accent transition-colors"
           >
-            {channel.data.heroImage && (
-              <div class="aspect-[3/2] overflow-hidden bg-surface">
-                <img
-                  src={channel.data.heroImage}
-                  alt=""
-                  loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                />
-              </div>
-            )}
             <div class="p-4">
               <h2 class="text-lg font-medium text-text group-hover:text-accent transition-colors">
                 {channel.data.title}
