@@ -1,8 +1,8 @@
 {
   "style": "chicago-author-date",
-  "fetchedAt": "2026-05-16T13:37:44.724Z",
+  "fetchedAt": "2026-05-23T20:03:06.900Z",
   "collectionId": "847AR7X4",
-  "count": 163,
+  "count": 165,
   "subcollections": [
     {
       "key": "UP4V2S7X",
@@ -514,6 +514,56 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Bietz, Matthew J., Toni Ferro, and Charlotte P. Lee. 2012. <i>Sustaining the Development of Cyberinfrastructure: An Organization Adapting to Change</i>.</div>\n</div>",
       "bibtex": "\n@article{bietz_sustaining_2012,\n\ttitle = {Sustaining the development of cyberinfrastructure: an organization adapting to change},\n\tlanguage = {en},\n\tauthor = {Bietz, Matthew J and Ferro, Toni and Lee, Charlotte P},\n\tyear = {2012},\n}\n"
+    },
+    {
+      "key": "5RB8M6EB",
+      "type": "article-journal",
+      "title": "Modeling and Analyzing Urban Networks and Amenities With OSMnx",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/gean.70009",
+      "doi": "10.1111/gean.70009",
+      "date": "2025",
+      "tags": [],
+      "subcollections": [],
+      "csl": {
+        "id": "747207/5RB8M6EB",
+        "type": "article-journal",
+        "abstract": "ABSTRACT\n            OSMnx is a Python package for downloading, modeling, analyzing, and visualizing urban networks and any other geospatial features from OpenStreetMap data. A large and growing body of literature uses it to conduct scientific studies across the disciplines of geography, urban planning, transport engineering, computer science, and others. The OSMnx project has recently developed and implemented many new features, modeling capabilities, and analytical methods. The package now encompasses substantially more functionality than was previously documented in the literature. This article introduces OSMnx's modern capabilities, usage, and design—in addition to the scientific theory and logic underlying them. It shares lessons learned in geospatial software development and reflects on open science's implications for urban modeling and analysis.",
+        "container-title": "Geographical Analysis",
+        "DOI": "10.1111/gean.70009",
+        "ISSN": "0016-7363, 1538-4632",
+        "issue": "4",
+        "journalAbbreviation": "Geographical Analysis",
+        "language": "en",
+        "page": "567-577",
+        "source": "DOI.org (Crossref)",
+        "title": "Modeling and Analyzing Urban Networks and Amenities With OSMnx",
+        "URL": "https://onlinelibrary.wiley.com/doi/10.1111/gean.70009",
+        "volume": "57",
+        "author": [
+          {
+            "family": "Boeing",
+            "given": "Geoff"
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              17
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              "2025"
+            ]
+          ]
+        }
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Boeing, Geoff. 2025. &#x201C;Modeling and Analyzing Urban Networks and Amenities With OSMnx.&#x201D; <i>Geographical Analysis</i> 57 (4): 567&#x2013;77. https://doi.org/10.1111/gean.70009.</div>\n</div>",
+      "bibtex": "\n@article{boeing_modeling_2025,\n\ttitle = {Modeling and {Analyzing} {Urban} {Networks} and {Amenities} {With} {OSMnx}},\n\tvolume = {57},\n\tissn = {0016-7363, 1538-4632},\n\turl = {https://onlinelibrary.wiley.com/doi/10.1111/gean.70009},\n\tdoi = {10.1111/gean.70009},\n\tabstract = {ABSTRACT\n            OSMnx is a Python package for downloading, modeling, analyzing, and visualizing urban networks and any other geospatial features from OpenStreetMap data. A large and growing body of literature uses it to conduct scientific studies across the disciplines of geography, urban planning, transport engineering, computer science, and others. The OSMnx project has recently developed and implemented many new features, modeling capabilities, and analytical methods. The package now encompasses substantially more functionality than was previously documented in the literature. This article introduces OSMnx's modern capabilities, usage, and design—in addition to the scientific theory and logic underlying them. It shares lessons learned in geospatial software development and reflects on open science's implications for urban modeling and analysis.},\n\tlanguage = {en},\n\tnumber = {4},\n\turldate = {2026-05-17},\n\tjournal = {Geographical Analysis},\n\tauthor = {Boeing, Geoff},\n\tmonth = oct,\n\tyear = {2025},\n\tpages = {567--577},\n}\n"
     },
     {
       "key": "4CQGLS4X",
@@ -2516,6 +2566,33 @@
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Fotheringham, A., C. Brunson, and M. Charlton. n.d. &#x201C;Spatial Data.&#x201D; In <i>Quantitative Geography: Perspectives on Spatial Data Analysis</i>.</div>\n</div>",
       "bibtex": "\n@incollection{fotheringham_spatial_nodate,\n\ttitle = {Spatial {Data}},\n\tbooktitle = {Quantitative {Geography}: {Perspectives} on {Spatial} {Data} {Analysis}},\n\tauthor = {Fotheringham, A and Brunson, C and Charlton, M},\n}\n"
+    },
+    {
+      "key": "T4XYGCXL",
+      "type": "article-journal",
+      "title": "A Generalized Computational Framework for Accessibility: From the Pedestrian to the Metropolitan Scale",
+      "tags": [],
+      "subcollections": [],
+      "csl": {
+        "id": "747207/T4XYGCXL",
+        "type": "article-journal",
+        "abstract": "Travel models, including activity-based travel models developed in recent years, still generally use traﬃc analysis zones and ignore local streets in their network representation. In short, they ignore walking scale access and movements. This is a well-known and very problematic limitation in current travel models, and by extension, in integrated land use and transportation models, even if the land use models are at a parcel level.",
+        "language": "en",
+        "source": "Zotero",
+        "title": "A Generalized Computational Framework for Accessibility: From the Pedestrian to the Metropolitan Scale",
+        "author": [
+          {
+            "family": "Foti",
+            "given": "Fletcher"
+          },
+          {
+            "family": "Waddell",
+            "given": "Paul"
+          }
+        ]
+      },
+      "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Foti, Fletcher, and Paul Waddell. n.d. <i>A Generalized Computational Framework for Accessibility: From the Pedestrian to the Metropolitan Scale</i>.</div>\n</div>",
+      "bibtex": "\n@article{foti_generalized_nodate,\n\ttitle = {A {Generalized} {Computational} {Framework} for {Accessibility}: {From} the {Pedestrian} to the {Metropolitan} {Scale}},\n\tabstract = {Travel models, including activity-based travel models developed in recent years, still generally use traﬃc analysis zones and ignore local streets in their network representation. In short, they ignore walking scale access and movements. This is a well-known and very problematic limitation in current travel models, and by extension, in integrated land use and transportation models, even if the land use models are at a parcel level.},\n\tlanguage = {en},\n\tauthor = {Foti, Fletcher and Waddell, Paul},\n}\n"
     },
     {
       "key": "TNIAXGRH",
@@ -6436,7 +6513,10 @@
       "url": "https://medium.com/topos-ai/rethinking-distance-in-new-york-city-d17212d24919",
       "date": "2021",
       "year": 2021,
-      "tags": [],
+      "tags": [
+        "Computer Science - Machine Learning",
+        "artificial intelligence"
+      ],
       "subcollections": [],
       "csl": {
         "id": "747207/837NPBYS",
@@ -6472,7 +6552,7 @@
         }
       },
       "bib": "<div class=\"csl-bib-body\" style=\"line-height: 1.35; padding-left: 1em; text-indent:-1em;\">\n  <div class=\"csl-entry\">Topos. 2021. &#x201C;Rethinking &#x2018;Distance&#x2019; in New York City.&#x201D; <i>Topos.Ai</i>, September 17. https://medium.com/topos-ai/rethinking-distance-in-new-york-city-d17212d24919.</div>\n</div>",
-      "bibtex": "\n@misc{topos_rethinking_2021,\n\ttitle = {Rethinking ‘distance’ in {New} {York} {City}},\n\turl = {https://medium.com/topos-ai/rethinking-distance-in-new-york-city-d17212d24919},\n\tabstract = {At the heart of this article is a simple but profound question: what does distance mean in the 21st century?},\n\tlanguage = {en},\n\turldate = {2024-05-10},\n\tjournal = {topos.ai},\n\tauthor = {Topos},\n\tmonth = sep,\n\tyear = {2021},\n}\n"
+      "bibtex": "\n@misc{topos_rethinking_2021,\n\ttitle = {Rethinking ‘distance’ in {New} {York} {City}},\n\turl = {https://medium.com/topos-ai/rethinking-distance-in-new-york-city-d17212d24919},\n\tabstract = {At the heart of this article is a simple but profound question: what does distance mean in the 21st century?},\n\tlanguage = {en},\n\turldate = {2024-05-10},\n\tjournal = {topos.ai},\n\tauthor = {Topos},\n\tmonth = sep,\n\tyear = {2021},\n\tkeywords = {Computer Science - Machine Learning, artificial intelligence},\n}\n"
     },
     {
       "key": "KNPRXU2I",

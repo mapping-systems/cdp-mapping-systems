@@ -19,7 +19,7 @@ const resources = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
-    source: z.enum(['arena', 'zotero', 'manual']),
+    source: z.enum(['arena', 'github', 'zotero', 'manual']),
     description: z.string().optional(),
     heroImage: z.string().optional(),
     lastFetched: z.string().optional(),

@@ -1,15 +1,16 @@
 {
-  "slug": "maps-yszif0goa1g",
-  "title": "Maps",
-  "description": "Course-related cartographic references and inspiration.",
+  "slug": "precedents",
+  "arenaSlug": "maps-yszif0goa1g",
+  "title": "Precedents",
+  "description": "Cartographic references, projects, and visual inspiration.",
   "arenaId": 3438044,
   "arenaUrl": "https://www.are.na/channel/3438044",
-  "blockCount": 63,
+  "blockCount": 64,
   "tags": [
     "cartography",
     "inspiration"
   ],
-  "fetchedAt": "2026-05-16T13:37:28.225Z",
+  "fetchedAt": "2026-05-23T20:02:39.958Z",
   "blocks": [
     {
       "id": 33361790,
@@ -703,6 +704,17 @@
       "thumb_url": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjE2NTg1OC9vcmlnaW5hbF84MTg0OGJiMjdjOTcwNzY2N2VkNjIwYTJhZDM3YmVkZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=?bc=0",
       "content": "",
       "block_url": "https://www.are.na/block/46165858"
+    },
+    {
+      "id": 46406753,
+      "class": "Link",
+      "title": "dancoecarto.com",
+      "description": "You don’t have authorization to view this page.",
+      "source_url": "https://dancoecarto.com/",
+      "image_url": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQwNjc1My9vcmlnaW5hbF83ZTQ0ZWViMzVjODI3MjIyOTRhNzEyNjZjMGYzMzIwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==?bc=0",
+      "thumb_url": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQwNjc1My9vcmlnaW5hbF83ZTQ0ZWViMzVjODI3MjIyOTRhNzEyNjZjMGYzMzIwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=?bc=0",
+      "content": "",
+      "block_url": "https://www.are.na/block/46406753"
     }
   ]
 }
