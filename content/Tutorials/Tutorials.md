@@ -1,2 +1,0 @@
-This folder contains the tutorial notebooks for the course. These are the notebooks that we will work through in class.
-Visit the [01. Setting up your environment](Assignments/00_Getting_Started.md) tutorial notebook to set up your programming environment and get started with the course.
