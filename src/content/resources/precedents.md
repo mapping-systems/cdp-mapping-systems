@@ -1,11 +1,11 @@
 ---
-title: "Maps"
-slug: "maps-yszif0goa1g"
+title: "Precedents"
+slug: "precedents"
 source: arena
 arenaId: 3438044
-blockCount: 63
-lastFetched: "2026-05-16T13:37:28.223Z"
-description: "Course-related cartographic references and inspiration."
+blockCount: 64
+lastFetched: "2026-05-23T20:02:39.956Z"
+description: "Cartographic references, projects, and visual inspiration."
 tags:
   - "cartography"
   - "inspiration"
@@ -282,3 +282,9 @@ Africa’s Open Geospatial Infrastructure
 ---
 
 [new-simulator-visualizes-connections-between-housing-policy-and-development-8966ce5f78c9](https://medium.com/@graphicacy/new-simulator-visualizes-connections-between-housing-policy-and-development-8966ce5f78c9)
+
+---
+
+[dancoecarto.com](https://dancoecarto.com/)
+
+You don’t have authorization to view this page.

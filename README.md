@@ -24,26 +24,29 @@ npm run dev              # http://localhost:4321
 
 ### Maintaining course resources
 
-Two external sources are pulled into the site as part of the build:
+Three external sources feed the site:
 
-- **are.na channels** → rendered as `/resources/<slug>` pages
-- **Zotero collection** → rendered as the `/bibliography` page (Chicago Author-Date)
+- **are.na channels** → `/resources/<slug>` (masonry card grid)
+- **GitHub Star Lists** → `/resources/<slug>` (uniform repo card grid)
+- **Zotero collection** → `/bibliography` (Chicago Author-Date, with sub-collection sections and search)
 
-Configure both in [resources.config.ts](resources.config.ts). Auth is optional and only needed for private libraries — see [.env.example](.env.example).
+Configure all three in [resources.config.ts](resources.config.ts). Credentials live in `.env` (gitignored) — copy [.env.example](.env.example) to get started. Are.na and Zotero public sources work unauthenticated; GitHub Lists always need a token (`GITHUB_TOKEN=$(gh auth token)` is the quickest path).
 
-To refresh resources from the latest external state and commit the result:
+To refresh and commit:
 
 ```bash
-npm run build:resources   # fetch arena + zotero
-git add src/content/resources/ src/data/zotero.json
-git commit -m "refresh: arena + zotero"
+npm run build:resources   # fetch arena + github + zotero
+git add src/content/resources/ src/data/
+git commit -m "refresh: resources"
+git push
 ```
 
-Refresh whenever you add to the are.na channel or update the Zotero collection. Cloudflare doesn't fetch — it just serves what's been committed.
+Cloudflare doesn't fetch from any of these — it just serves what's committed. Refresh whenever you add to a channel, list, or Zotero collection.
 
-To refresh just one source:
+To refresh one source at a time:
 
 ```bash
 npm run build:arena
+npm run build:github
 npm run build:zotero
 ```

@@ -151,10 +151,13 @@ function channelToMarkdown(channel: ArenaChannel, config: ArenaChannelConfig): s
   const title = config.title ?? channel.title;
   const description = config.description ?? channel.metadata?.description ?? '';
   const hero = pickHeroImage(channel);
+  // urlSlug overrides the arena slug for the published URL; defaults to
+  // the arena slug if unset.
+  const urlSlug = config.urlSlug ?? channel.slug;
 
   const frontmatter: string[] = [
     `title: ${escapeYaml(title)}`,
-    `slug: ${escapeYaml(channel.slug)}`,
+    `slug: ${escapeYaml(urlSlug)}`,
     `source: arena`,
     `arenaId: ${channel.id}`,
     `blockCount: ${channel.length}`,
@@ -211,7 +214,8 @@ function blockToGrid(block: ArenaBlock): GridBlock {
 
 function channelToJson(channel: ArenaChannel, config: ArenaChannelConfig) {
   return {
-    slug: channel.slug,
+    slug: config.urlSlug ?? channel.slug,
+    arenaSlug: channel.slug,
     title: config.title ?? channel.title,
     description: config.description ?? channel.metadata?.description ?? '',
     arenaId: channel.id,
@@ -246,19 +250,20 @@ async function main() {
   for (const config of ARENA_CHANNELS) {
     try {
       const channel = await fetchChannel(config.slug);
+      const urlSlug = config.urlSlug ?? channel.slug;
 
       // Markdown for the resources index card frontmatter (and as a fallback
       // SEO/readable view).
       const markdown = channelToMarkdown(channel, config);
-      const mdPath = join(OUTPUT_DIR, `${channel.slug}.md`);
+      const mdPath = join(OUTPUT_DIR, `${urlSlug}.md`);
       writeFileSync(mdPath, markdown, 'utf-8');
 
       // JSON consumed by /resources/<slug> to render the grid layout.
       const json = channelToJson(channel, config);
-      const jsonPath = join(JSON_OUTPUT_DIR, `${channel.slug}.json`);
+      const jsonPath = join(JSON_OUTPUT_DIR, `${urlSlug}.json`);
       writeFileSync(jsonPath, JSON.stringify(json, null, 2), 'utf-8');
 
-      console.log(`  ✓ ${channel.slug} (${channel.length} blocks) → ${mdPath}, ${jsonPath}`);
+      console.log(`  ✓ ${urlSlug} (${channel.length} blocks) → ${mdPath}, ${jsonPath}`);
       ok++;
     } catch (err) {
       console.error(`  ✗ ${config.slug}: ${err instanceof Error ? err.message : err}`);

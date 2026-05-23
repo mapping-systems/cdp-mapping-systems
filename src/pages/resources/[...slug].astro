@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+// ----- Arena data types -----------------------------------------------------
+
 interface ArenaGridBlock {
   id: number;
   class: 'Image' | 'Text' | 'Link' | 'Media' | 'Attachment' | 'Channel';
@@ -16,6 +18,7 @@ interface ArenaGridBlock {
 
 interface ArenaChannelData {
   slug: string;
+  arenaSlug?: string;
   title: string;
   description: string;
   arenaId: number;
@@ -26,11 +29,47 @@ interface ArenaChannelData {
   blocks: ArenaGridBlock[];
 }
 
-// Eager-load every channel JSON at build time. Vite's import.meta.glob
-// resolves the literal pattern to a static map keyed by relative path,
-// which we look up by the requested slug.
-const channelData = import.meta.glob<{ default: ArenaChannelData }>(
+// ----- GitHub data types ----------------------------------------------------
+
+interface RepoCard {
+  nameWithOwner: string;
+  name: string;
+  owner: string;
+  ownerAvatarUrl: string;
+  url: string;
+  description: string | null;
+  homepageUrl: string | null;
+  stars: number;
+  forks: number;
+  isArchived: boolean;
+  language: string | null;
+  languageColor: string | null;
+  topics: string[];
+  updatedAt: string;
+}
+
+interface GithubListData {
+  slug: string;
+  username: string;
+  title: string;
+  description: string;
+  url: string;
+  itemCount: number;
+  tags: string[];
+  fetchedAt: string;
+  repos: RepoCard[];
+}
+
+// ----- Data lookups ---------------------------------------------------------
+
+// Eager-load every channel/list JSON at build time. Vite resolves the literal
+// glob to a static map keyed by relative path; we pick the entry by slug.
+const arenaData = import.meta.glob<{ default: ArenaChannelData }>(
   '../../data/arena/*.json',
+  { eager: true },
+);
+const githubData = import.meta.glob<{ default: GithubListData }>(
+  '../../data/github/*.json',
   { eager: true },
 );
 
@@ -43,10 +82,15 @@ export async function getStaticPaths() {
 }
 
 const { channel } = Astro.props;
-const dataKey = `../../data/arena/${channel.data.slug}.json`;
-const data = channelData[dataKey]?.default;
+const source = channel.data.source;
 
-// Pick a hostname for Link blocks so cards have a small "via foo.com" line.
+const arena =
+  source === 'arena' ? arenaData[`../../data/arena/${channel.data.slug}.json`]?.default : null;
+const github =
+  source === 'github' ? githubData[`../../data/github/${channel.data.slug}.json`]?.default : null;
+const data = arena ?? github;
+const itemCount = arena?.blocks.length ?? github?.repos.length ?? channel.data.blockCount ?? 0;
+
 function hostnameOf(url: string | null): string | null {
   if (!url) return null;
   try {
@@ -55,11 +99,15 @@ function hostnameOf(url: string | null): string | null {
     return null;
   }
 }
+
+const sourceLabel = source === 'arena' ? 'are.na' : source === 'github' ? 'GitHub' : 'Resources';
+const sourceUrl = arena?.arenaUrl ?? github?.url ?? null;
+const sourceLinkText = source === 'arena' ? 'View on are.na' : source === 'github' ? 'View on GitHub' : 'View source';
 ---
 <BaseLayout title={channel.data.title} description={channel.data.description}>
   <header class="mb-8 border-b border-border pb-6">
     <p class="text-xs font-semibold text-accent uppercase tracking-[0.14em]">
-      Resources
+      Resources · {sourceLabel}
     </p>
     <h1 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-text leading-[1.1]">
       {channel.data.title}
@@ -68,15 +116,15 @@ function hostnameOf(url: string | null): string | null {
       <p class="mt-4 text-lg text-muted leading-relaxed max-w-3xl">{channel.data.description}</p>
     )}
     <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-subtle">
-      <span>{channel.data.blockCount ?? data?.blocks.length ?? 0} items</span>
-      {data?.arenaUrl && (
+      <span>{itemCount} items</span>
+      {sourceUrl && (
         <a
-          href={data.arenaUrl}
+          href={sourceUrl}
           target="_blank"
           rel="noreferrer noopener"
           class="text-link hover:text-link-hover underline underline-offset-2"
         >
-          View on are.na ↗
+          {sourceLinkText} ↗
         </a>
       )}
       {channel.data.tags && channel.data.tags.length > 0 && (
@@ -91,11 +139,11 @@ function hostnameOf(url: string | null): string | null {
 
   {!data ? (
     <p class="text-muted italic">
-      Channel data missing. Run <code class="text-text bg-surface-strong px-1.5 py-0.5 rounded">npm run build:resources</code>.
+      Data missing for this resource. Run <code class="text-text bg-surface-strong px-1.5 py-0.5 rounded">npm run build:resources</code>.
     </p>
-  ) : (
+  ) : arena ? (
     <div class="arena-grid">
-      {data.blocks.map((block) => {
+      {arena.blocks.map((block) => {
         const host = hostnameOf(block.source_url);
         return (
           <article class="arena-card border border-border rounded-lg overflow-hidden bg-bg break-inside-avoid mb-4">
@@ -114,13 +162,11 @@ function hostnameOf(url: string | null): string | null {
                 />
               </a>
             )}
-
             {block.class === 'Text' && block.content && (
               <div class="p-4 text-sm text-text whitespace-pre-line wrap-break-word">
                 {block.content}
               </div>
             )}
-
             {(block.title || block.description || block.source_url) && (
               <div class="p-4 text-sm">
                 {block.title && (
@@ -140,13 +186,9 @@ function hostnameOf(url: string | null): string | null {
                 {block.description && (
                   <p class="mt-1.5 text-muted leading-snug line-clamp-3">{block.description}</p>
                 )}
-                {host && (
-                  <p class="mt-2 text-xs text-subtle">via {host}</p>
-                )}
+                {host && <p class="mt-2 text-xs text-subtle">via {host}</p>}
               </div>
             )}
-
-            {/* Channel reference / fallback for blocks with no other content. */}
             {!block.image_url && !block.content && !block.title && !block.description && (
               <a
                 href={block.block_url}
@@ -161,25 +203,119 @@ function hostnameOf(url: string | null): string | null {
         );
       })}
     </div>
-  )}
+  ) : github ? (
+    <div class="github-grid">
+      {github.repos.map((repo) => (
+        <article class="github-card border border-border rounded-lg p-4 bg-bg flex flex-col">
+          <div class="flex items-start gap-3">
+            <img
+              src={repo.ownerAvatarUrl}
+              alt=""
+              loading="lazy"
+              width="32"
+              height="32"
+              class="rounded shrink-0 mt-0.5"
+            />
+            <div class="min-w-0 flex-1">
+              <h3 class="text-text font-medium leading-snug truncate">
+                <a
+                  href={repo.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="hover:text-accent transition-colors no-underline"
+                  title={repo.nameWithOwner}
+                >
+                  {repo.name}
+                </a>
+              </h3>
+              <p class="text-xs text-subtle truncate">{repo.owner}</p>
+            </div>
+            {repo.isArchived && (
+              <span class="shrink-0 px-1.5 py-0.5 rounded text-[0.65rem] uppercase tracking-wider bg-surface-strong text-muted">
+                Archived
+              </span>
+            )}
+          </div>
+
+          {repo.description && (
+            <p class="mt-3 text-sm text-muted leading-snug line-clamp-3">{repo.description}</p>
+          )}
+
+          {repo.topics.length > 0 && (
+            <ul class="mt-3 flex flex-wrap gap-1">
+              {repo.topics.slice(0, 6).map((topic) => (
+                <li class="px-1.5 py-0.5 rounded-full bg-accent-soft text-accent text-[0.7rem] leading-tight">
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* Footer: language pill + stars. Pinned to the bottom of the
+              flex column so cards align vertically regardless of body length. */}
+          <div class="mt-auto pt-3 flex items-center gap-3 text-xs text-subtle">
+            {repo.language && (
+              <span class="flex items-center gap-1.5">
+                <span
+                  class="inline-block w-2.5 h-2.5 rounded-full"
+                  style={`background-color: ${repo.languageColor ?? '#94a3b8'}`}
+                  aria-hidden="true"
+                />
+                <span>{repo.language}</span>
+              </span>
+            )}
+            {repo.stars > 0 && (
+              <span class="flex items-center gap-1" title={`${repo.stars} stars`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <span class="tabular-nums">{repo.stars.toLocaleString()}</span>
+              </span>
+            )}
+            {repo.homepageUrl && (
+              <a
+                href={repo.homepageUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                class="ml-auto text-link hover:text-link-hover underline-offset-2 truncate max-w-[10rem]"
+                title={repo.homepageUrl}
+              >
+                {hostnameOf(repo.homepageUrl)}
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  ) : null}
 </BaseLayout>
 
 <style>
-  /* CSS columns give a natural masonry layout with no JS. Cards flow
-     top-to-bottom, then column-by-column, preserving variable heights. */
+  /* Arena: CSS columns give a natural masonry layout (variable card heights). */
   .arena-grid {
     column-count: 1;
     column-gap: 1rem;
   }
-  @media (min-width: 640px) {
-    .arena-grid { column-count: 2; }
-  }
-  @media (min-width: 900px) {
-    .arena-grid { column-count: 3; }
-  }
-  @media (min-width: 1280px) {
-    .arena-grid { column-count: 4; }
-  }
-  /* Avoid breaking a card across columns. */
+  @media (min-width: 640px)  { .arena-grid { column-count: 2; } }
+  @media (min-width: 900px)  { .arena-grid { column-count: 3; } }
+  @media (min-width: 1280px) { .arena-grid { column-count: 4; } }
   .arena-card { break-inside: avoid; page-break-inside: avoid; }
+
+  /* GitHub: uniform grid — same-height cards for at-a-glance scanning of
+     similar-shaped content (repo name + description + meta). */
+  .github-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px)  { .github-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px)  { .github-grid { grid-template-columns: repeat(3, 1fr); } }
+  .github-card { min-height: 11rem; }
 </style>
