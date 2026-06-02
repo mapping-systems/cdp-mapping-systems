@@ -23,6 +23,7 @@ import nbformat
 from pathlib import Path
 import base64
 import hashlib
+import html as html_module
 import re
 import yaml
 import shutil
@@ -438,6 +439,75 @@ def sanitize_html_output(html: str) -> str:
     return html
 
 
+# Self-contained HTML cell outputs (folium maps, ipyleaflet, similar) inline
+# their entire JS + GeoJSON payload into the lesson markdown. A single
+# `.explore()` cell can balloon a lesson page past Cloudflare Workers' 25 MiB
+# per-file asset limit. We externalize anything over a threshold to its own
+# standalone HTML file under `public/maps/<lesson>/embedded-<hash>.html` and
+# replace the inline content with a lazy-loaded iframe — same pattern as
+# lonboard.
+_EMBED_THRESHOLD = 200 * 1024  # 200 KB
+_FOLIUM_IFRAME_RE = re.compile(r'<iframe\s+srcdoc="([^"]*)"[^>]*>', re.DOTALL)
+
+
+def maybe_externalize_html(html_str: str, state: dict) -> str | None:
+    """If `html_str` is a large self-contained interactive viz, save it
+    to disk as a standalone HTML file and return iframe markup pointing
+    at it. Otherwise return None so the caller inlines it as before.
+
+    Filename is content-hashed so re-runs produce identical files
+    (clean git diffs even when build-content is invoked from no-execute).
+    """
+    if len(html_str) < _EMBED_THRESHOLD:
+        return None
+
+    # Folium pattern: `<iframe srcdoc="<entity-encoded full HTML doc>">`.
+    # We extract the inner doc and host THAT, not the wrapping iframe.
+    m = _FOLIUM_IFRAME_RE.search(html_str)
+    if m:
+        standalone = html_module.unescape(m.group(1))
+    elif re.search(r"<\s*(html|!doctype)\b", html_str[:500], re.IGNORECASE):
+        # Already a full HTML doc (some libs emit one directly).
+        standalone = html_str
+    else:
+        # Not recognizable as self-contained — fall back to inline so we
+        # don't ship a half-formed file the browser can't render.
+        return None
+
+    slug = state["lesson_slug"]
+    digest = hashlib.md5(standalone.encode("utf-8")).hexdigest()[:10]
+    filename = f"embedded-{digest}.html"
+    out_path = MAPS_DIR / slug / filename
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    if not out_path.exists():
+        out_path.write_text(standalone, encoding="utf-8")
+
+    # Surface oversize files: Cloudflare Workers refuses to deploy any asset
+    # over 25 MiB. The file is still written + iframed (so authors can preview
+    # locally with `astro preview`) but the build will refuse to ship until
+    # the source cell is fixed or the asset is moved off Workers static assets.
+    size_bytes = out_path.stat().st_size
+    if size_bytes > 24 * 1024 * 1024:  # leave 1 MiB of headroom
+        print(
+            f"  ⚠️  {filename} ({size_bytes / 1024 / 1024:.1f} MiB) exceeds "
+            "Cloudflare Workers' 25 MiB per-asset limit. Cell with this output "
+            f"in lesson '{slug}' needs to be made smaller "
+            "(sample/simplify data, or switch from folium .explore() to "
+            "lonboard.Map() which encodes geometries via Arrow ~5x more "
+            "compactly), or `public/maps/` needs to be hosted off Workers "
+            "static assets (e.g. R2)."
+        )
+
+    src = f"/maps/{slug}/{filename}"
+    return (
+        '<figure class="output-figure output-iframe">\n\n'
+        f'<iframe src="{src}" loading="lazy" title="Interactive map" '
+        'class="lonboard-frame" width="100%" height="500" '
+        'frameborder="0"></iframe>\n\n'
+        "</figure>\n"
+    )
+
+
 def is_lonboard_widget(output: dict) -> bool:
     """Heuristic: does this cell output represent a lonboard Map widget?
 
@@ -512,6 +582,12 @@ def output_to_markdown(
 
         if "text/html" in data:
             html = sanitize_html_output(data["text/html"])
+            # Big self-contained viz (folium, ipyleaflet, etc) — extract
+            # to a standalone file + iframe to keep the lesson HTML small
+            # enough for Cloudflare Workers' 25 MiB per-file asset limit.
+            external = maybe_externalize_html(html, state)
+            if external:
+                return external
             return f'<div class="output-html">\n\n{html}\n\n</div>\n'
 
         if "text/plain" in data:
