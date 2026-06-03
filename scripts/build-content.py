@@ -559,6 +559,16 @@ def output_to_markdown(
         if is_lonboard_widget(output):
             idx = state["lonboard_idx"]
             state["lonboard_idx"] += 1
+            # Only emit the iframe if the corresponding HTML file exists.
+            # A cached widget output in the .ipynb only means "the author
+            # ran this in Jupyter at some point" — the standalone HTML
+            # only exists if `npm run build:content:execute` has been run
+            # for this lesson. Without the file, the iframe would 404.
+            # The counter still incremented so indices stay aligned with
+            # future execute runs.
+            map_path = MAPS_DIR / state["lesson_slug"] / f"map-{idx:03d}.html"
+            if not map_path.exists():
+                return ""
             src = f"/maps/{state['lesson_slug']}/map-{idx:03d}.html"
             return (
                 '<figure class="output-figure output-iframe">\n\n'
