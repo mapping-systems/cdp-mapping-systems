@@ -29,3 +29,7 @@ node_modules/
 !.dev.vars.example
 .env*
 !.env.example
+
+# Python cache
+__pycache__/
+*.pyc

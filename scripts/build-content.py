@@ -23,6 +23,7 @@ import nbformat
 from pathlib import Path
 import base64
 import hashlib
+import html as html_module
 import re
 import yaml
 import shutil
@@ -44,6 +45,11 @@ CONTENT_DIR = Path("content")
 OUTPUT_DIR = Path("src/content/lessons")
 ASSETS_DIR = Path("public/lesson-assets")
 
+# Lonboard interactive map HTML output. Committed (not gitignored) so the
+# no-execute Cloudflare build can serve them without re-running Python.
+# Regenerated on every `--execute` build.
+MAPS_DIR = Path("public/maps")
+
 DEFAULT_SECTION = "tutorials"
 
 # ============================================================================
@@ -60,6 +66,19 @@ def setup_output_dirs():
     if OUTPUT_DIR.exists():
         shutil.rmtree(OUTPUT_DIR)
     OUTPUT_DIR.mkdir(parents=True)
+
+
+def setup_maps_dir_for(lesson_slug: str) -> Path:
+    """Clean and create the per-lesson map output directory.
+
+    Called only on `--execute` runs. On no-execute builds the existing
+    committed map HTMLs are served as-is.
+    """
+    lesson_maps_dir = MAPS_DIR / lesson_slug
+    if lesson_maps_dir.exists():
+        shutil.rmtree(lesson_maps_dir)
+    lesson_maps_dir.mkdir(parents=True)
+    return lesson_maps_dir
 
 
 # ============================================================================
@@ -275,14 +294,60 @@ def process_markdown_file(md_path: Path) -> str:
 # ============================================================================
 
 
-def execute_notebook(nb_path: Path) -> nbformat.NotebookNode:
-    """Execute a notebook and return the executed version."""
+def _lonboard_capture_preamble(maps_dir_abs: Path) -> str:
+    """Python source injected as the first cell of each notebook before
+    execution. Monkey-patches lonboard.Map._repr_mimebundle_ so every Map
+    that gets displayed also writes its standalone HTML to disk, indexed
+    in display order. The static-site converter reads that same index to
+    emit <iframe> embeds. Wrapped in try/except so notebooks that don't
+    use lonboard don't break."""
+    return (
+        "# Auto-injected by build-content.py — capture lonboard maps as HTML.\n"
+        "import os as _os\n"
+        f"_os.environ['_LONBOARD_HTML_DIR'] = {str(maps_dir_abs)!r}\n"
+        "try:\n"
+        "    from lonboard._map import Map as _LbMap\n"
+        "    _orig_repr = _LbMap._repr_mimebundle_\n"
+        "    _lb_counter = [0]\n"
+        "    def _wrapped_repr(self, *a, **kw):\n"
+        "        idx = _lb_counter[0]\n"
+        "        _lb_counter[0] += 1\n"
+        "        out_dir = _os.environ['_LONBOARD_HTML_DIR']\n"
+        "        _os.makedirs(out_dir, exist_ok=True)\n"
+        "        try:\n"
+        "            self.to_html(_os.path.join(out_dir, f'map-{idx:03d}.html'))\n"
+        "        except Exception as _e:\n"
+        "            print(f'[lonboard-capture] failed to save map {idx}: {_e}')\n"
+        "        return _orig_repr(self, *a, **kw)\n"
+        "    _LbMap._repr_mimebundle_ = _wrapped_repr\n"
+        "except ImportError:\n"
+        "    pass  # lonboard not in env; nothing to capture\n"
+    )
+
+
+def execute_notebook(nb_path: Path, lesson_slug: str) -> nbformat.NotebookNode:
+    """Execute a notebook and return the executed version.
+
+    `lesson_slug` is used to compute the per-lesson maps output dir
+    (`public/maps/<slug>/`) which the injected lonboard-capture preamble
+    writes to. The preamble cell is prepended before execution and removed
+    afterwards so it doesn't appear in the rendered lesson.
+    """
     from nbconvert.preprocessors import ExecutePreprocessor
 
     print(f"  Executing {nb_path.name}...")
 
     with open(nb_path) as f:
         nb = nbformat.read(f, as_version=4)
+
+    # Lonboard map capture: clean the maps dir for this lesson and prepend
+    # a setup cell that registers the to_html() side effect.
+    lesson_maps_dir = setup_maps_dir_for(lesson_slug)
+    preamble_cell = nbformat.v4.new_code_cell(
+        source=_lonboard_capture_preamble(lesson_maps_dir.resolve()),
+        metadata={"tags": ["build-injected"]},
+    )
+    nb.cells.insert(0, preamble_cell)
 
     ep = ExecutePreprocessor(timeout=600, kernel_name="python3", allow_errors=False)
 
@@ -291,8 +356,40 @@ def execute_notebook(nb_path: Path) -> nbformat.NotebookNode:
     except Exception as e:
         print(f"  ⚠️  Execution error in {nb_path.name}: {e}")
         raise
+    finally:
+        # Drop the injected preamble so the conversion step doesn't see it.
+        if nb.cells and nb.cells[0].metadata.get("tags") == ["build-injected"]:
+            nb.cells.pop(0)
+
+    # Persist the executed notebook back to disk so the cached widget outputs
+    # are committed. Without this, the no-execute build (which Cloudflare
+    # runs) wouldn't see the lonboard widget MIME types and would skip the
+    # iframe emission — even though the HTML files exist in public/maps/.
+    # Memory addresses in text/plain reprs are normalized to keep diffs sane.
+    _normalize_text_plain_addresses(nb)
+    with open(nb_path, "w", encoding="utf-8") as f:
+        nbformat.write(nb, f)
 
     return nb
+
+
+_MEM_ADDR_RE = re.compile(r"at 0x[0-9a-fA-F]+")
+
+
+def _normalize_text_plain_addresses(nb: nbformat.NotebookNode) -> None:
+    """Replace `<X at 0xDEADBEEF>` with `<X at 0xMEM>` in text/plain outputs
+    so re-execution doesn't churn the .ipynb diff."""
+    for cell in nb.cells:
+        if cell.get("cell_type") != "code":
+            continue
+        for out in cell.get("outputs", []):
+            data = out.get("data", {})
+            if "text/plain" in data:
+                tp = data["text/plain"]
+                if isinstance(tp, list):
+                    data["text/plain"] = [_MEM_ADDR_RE.sub("at 0xMEM", s) for s in tp]
+                else:
+                    data["text/plain"] = _MEM_ADDR_RE.sub("at 0xMEM", tp)
 
 
 def extract_notebook_frontmatter(nb: nbformat.NotebookNode, nb_path: Path) -> dict:
@@ -342,8 +439,107 @@ def sanitize_html_output(html: str) -> str:
     return html
 
 
-def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) -> str:
-    """Convert a cell output to markdown."""
+# Self-contained HTML cell outputs (folium maps, ipyleaflet, similar) inline
+# their entire JS + GeoJSON payload into the lesson markdown. A single
+# `.explore()` cell can balloon a lesson page past Cloudflare Workers' 25 MiB
+# per-file asset limit. We externalize anything over a threshold to its own
+# standalone HTML file under `public/maps/<lesson>/embedded-<hash>.html` and
+# replace the inline content with a lazy-loaded iframe — same pattern as
+# lonboard.
+_EMBED_THRESHOLD = 200 * 1024  # 200 KB
+_FOLIUM_IFRAME_RE = re.compile(r'<iframe\s+srcdoc="([^"]*)"[^>]*>', re.DOTALL)
+
+
+def maybe_externalize_html(html_str: str, state: dict) -> str | None:
+    """If `html_str` is a large self-contained interactive viz, save it
+    to disk as a standalone HTML file and return iframe markup pointing
+    at it. Otherwise return None so the caller inlines it as before.
+
+    Filename is content-hashed so re-runs produce identical files
+    (clean git diffs even when build-content is invoked from no-execute).
+    """
+    if len(html_str) < _EMBED_THRESHOLD:
+        return None
+
+    # Folium pattern: `<iframe srcdoc="<entity-encoded full HTML doc>">`.
+    # We extract the inner doc and host THAT, not the wrapping iframe.
+    m = _FOLIUM_IFRAME_RE.search(html_str)
+    if m:
+        standalone = html_module.unescape(m.group(1))
+    elif re.search(r"<\s*(html|!doctype)\b", html_str[:500], re.IGNORECASE):
+        # Already a full HTML doc (some libs emit one directly).
+        standalone = html_str
+    else:
+        # Not recognizable as self-contained — fall back to inline so we
+        # don't ship a half-formed file the browser can't render.
+        return None
+
+    slug = state["lesson_slug"]
+    digest = hashlib.md5(standalone.encode("utf-8")).hexdigest()[:10]
+    filename = f"embedded-{digest}.html"
+    out_path = MAPS_DIR / slug / filename
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    if not out_path.exists():
+        out_path.write_text(standalone, encoding="utf-8")
+
+    # Surface oversize files: Cloudflare Workers refuses to deploy any asset
+    # over 25 MiB. The file is still written + iframed (so authors can preview
+    # locally with `astro preview`) but the build will refuse to ship until
+    # the source cell is fixed or the asset is moved off Workers static assets.
+    size_bytes = out_path.stat().st_size
+    if size_bytes > 24 * 1024 * 1024:  # leave 1 MiB of headroom
+        print(
+            f"  ⚠️  {filename} ({size_bytes / 1024 / 1024:.1f} MiB) exceeds "
+            "Cloudflare Workers' 25 MiB per-asset limit. Cell with this output "
+            f"in lesson '{slug}' needs to be made smaller "
+            "(sample/simplify data, or switch from folium .explore() to "
+            "lonboard.Map() which encodes geometries via Arrow ~5x more "
+            "compactly), or `public/maps/` needs to be hosted off Workers "
+            "static assets (e.g. R2)."
+        )
+
+    src = f"/maps/{slug}/{filename}"
+    return (
+        '<figure class="output-figure output-iframe">\n\n'
+        f'<iframe src="{src}" loading="lazy" title="Interactive map" '
+        'class="lonboard-frame" width="100%" height="500" '
+        'frameborder="0"></iframe>\n\n'
+        "</figure>\n"
+    )
+
+
+def is_lonboard_widget(output: dict) -> bool:
+    """Heuristic: does this cell output represent a lonboard Map widget?
+
+    The widget MIME (vnd.jupyter.widget-view+json) is shared with many
+    anywidget-based libraries, so we additionally check the text/plain
+    repr that Jupyter always includes alongside it.
+    """
+    if output.get("output_type") not in ("execute_result", "display_data"):
+        return False
+    data = output.get("data", {})
+    if "application/vnd.jupyter.widget-view+json" not in data:
+        return False
+    text = data.get("text/plain", "")
+    if isinstance(text, list):
+        text = "".join(text)
+    return "lonboard" in text
+
+
+def output_to_markdown(
+    output: dict,
+    nb_stem: str,
+    cell_idx: int,
+    out_idx: int,
+    state: dict,
+) -> str:
+    """Convert a cell output to markdown.
+
+    `state` is a mutable dict keyed by 'lonboard_idx' (an in-order counter
+    of lonboard map outputs seen in this notebook) and 'lesson_slug' (used
+    to compute the iframe src). The counter must match the index the
+    in-kernel preamble used when saving HTML files.
+    """
     output_type = output.get("output_type", "")
 
     if output_type == "stream":
@@ -356,6 +552,31 @@ def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) 
 
     if output_type in ("execute_result", "display_data"):
         data = output.get("data", {})
+
+        # Lonboard interactive map: emit iframe pointing at the standalone
+        # HTML the in-kernel preamble dumped during execution. Detect
+        # before other handlers so we don't drop into text/html branch.
+        if is_lonboard_widget(output):
+            idx = state["lonboard_idx"]
+            state["lonboard_idx"] += 1
+            # Only emit the iframe if the corresponding HTML file exists.
+            # A cached widget output in the .ipynb only means "the author
+            # ran this in Jupyter at some point" — the standalone HTML
+            # only exists if `npm run build:content:execute` has been run
+            # for this lesson. Without the file, the iframe would 404.
+            # The counter still incremented so indices stay aligned with
+            # future execute runs.
+            map_path = MAPS_DIR / state["lesson_slug"] / f"map-{idx:03d}.html"
+            if not map_path.exists():
+                return ""
+            src = f"/maps/{state['lesson_slug']}/map-{idx:03d}.html"
+            return (
+                '<figure class="output-figure output-iframe">\n\n'
+                f'<iframe src="{src}" loading="lazy" title="Interactive map" '
+                'class="lonboard-frame" width="100%" height="500" '
+                'frameborder="0"></iframe>\n\n'
+                "</figure>\n"
+            )
 
         if "image/png" in data:
             img_data = data["image/png"]
@@ -371,6 +592,12 @@ def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) 
 
         if "text/html" in data:
             html = sanitize_html_output(data["text/html"])
+            # Big self-contained viz (folium, ipyleaflet, etc) — extract
+            # to a standalone file + iframe to keep the lesson HTML small
+            # enough for Cloudflare Workers' 25 MiB per-file asset limit.
+            external = maybe_externalize_html(html, state)
+            if external:
+                return external
             return f'<div class="output-html">\n\n{html}\n\n</div>\n'
 
         if "text/plain" in data:
@@ -388,7 +615,7 @@ def output_to_markdown(output: dict, nb_stem: str, cell_idx: int, out_idx: int) 
     return ""
 
 
-def cell_to_markdown(cell: dict, nb_stem: str, cell_idx: int) -> str:
+def cell_to_markdown(cell: dict, nb_stem: str, cell_idx: int, state: dict) -> str:
     """Convert a notebook cell to markdown."""
     cell_type = cell.get("cell_type", "")
     source = cell.get("source", "")
@@ -415,7 +642,7 @@ def cell_to_markdown(cell: dict, nb_stem: str, cell_idx: int) -> str:
         if not hide_output:
             outputs = cell.get("outputs", [])
             for out_idx, output in enumerate(outputs):
-                md = output_to_markdown(output, nb_stem, cell_idx, out_idx)
+                md = output_to_markdown(output, nb_stem, cell_idx, out_idx, state)
                 if md:
                     parts.append(md)
 
@@ -435,14 +662,20 @@ def process_notebook(nb_path: Path, execute: bool = False) -> str:
     """
     print(f"Processing {nb_path}...")
 
+    slug = clean_slug(nb_path.stem)
+
     if execute:
-        nb = execute_notebook(nb_path)
+        nb = execute_notebook(nb_path, slug)
     else:
         with open(nb_path) as f:
             nb = nbformat.read(f, as_version=4)
 
     frontmatter = extract_notebook_frontmatter(nb, nb_path)
-    slug = clean_slug(nb_path.stem)
+
+    # State shared with cell_to_markdown / output_to_markdown. The
+    # lonboard_idx counter must increment in the same order the in-kernel
+    # preamble produced map-NNN.html files during execution.
+    state = {"lonboard_idx": 0, "lesson_slug": slug}
 
     md_parts = []
     start_idx = 0
@@ -453,7 +686,7 @@ def process_notebook(nb_path: Path, execute: bool = False) -> str:
             start_idx = 1
 
     for idx, cell in enumerate(nb.cells[start_idx:], start=start_idx):
-        md = cell_to_markdown(cell, slug, idx)
+        md = cell_to_markdown(cell, slug, idx, state)
         if md:
             md_parts.append(md)
 
