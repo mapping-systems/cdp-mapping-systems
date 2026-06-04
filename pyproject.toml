@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdptools"
+version = "0.1.0"
+description = "Shared helper functions for the CDP mapping course"
+requires-python = ">=3.11,<=3.14.4"
+dependencies = [
+    "geopandas",
+    "shapely",
+    "pyproj",
+    "rasterio",
+    "fiona",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "jupyterlab",
+    "requests",
+    "contextily",
+    "folium",
+]
+
+[tool.setuptools]
+packages = ["cdptools"]
