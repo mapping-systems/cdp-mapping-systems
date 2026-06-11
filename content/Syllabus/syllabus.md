@@ -1,6 +1,6 @@
 # Mapping Systems Summer 2025
 
-Tuesday and Thursdays, 6-8pm @ 209 Fayerweather
+Wednesdays and Fridays, 11am-1pm @ 209 Fayerweather
 
 Instructor: Mario Giampieri (mag2382@columbia.edu)
 
@@ -31,9 +31,9 @@ This is primarily a methods course, however students will be expected to complet
 
 ## Course Organization / Communication
 
-Class meets on Tuesdays and Thursdays in 200 Fayerweather from 6-8pm. Weeks will generally be organized as follows:
-- **Tuesday**: Lecture, reading discussion, review of technical concepts
-- **Thursday**: Technical tutorials and desk crits
+Class meets on Wednesdays and Fridays in 209 Fayerweather from 11am-1pm. Weeks will generally be organized as follows:
+- **Wednesday**: Lecture, reading discussion, review of technical concepts
+- **Friday**: Technical tutorials and desk crits
 
 Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting should live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
@@ -41,7 +41,7 @@ All reading materials and slides will be posted to Canvas, and tutorials will be
 
 ## Office Hours
 
-Office hours are by appointment on Fridays, or before class on Tuesday or Thursday. Email me to schedule a time to chat.
+Office hours are by appointment. Email me to schedule a time to chat.
 
 ## Schedule
 
