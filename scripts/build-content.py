@@ -19,6 +19,7 @@ Usage:
 """
 
 import argparse
+import json
 import nbformat
 from pathlib import Path
 import base64
@@ -137,6 +138,154 @@ def namespaced_slug(section: str, file_slug: str) -> str:
     if file_slug == sec:
         return sec
     return f"{sec}/{file_slug}"
+
+
+# ---------------------------------------------------------------------------
+# Inline citations
+# ---------------------------------------------------------------------------
+# Pandoc-style `[@citationKey]` tokens in markdown are rewritten into
+# `<a href="/bibliography#bib-<key>">(Surname Year)</a>` anchor links. The
+# bibliography data is loaded once from `src/data/zotero.json` and cached at
+# module scope; rewriter calls are cheap thereafter.
+#
+# Tokens inside fenced code blocks (``` … ``` or ~~~ … ~~~) and inline code
+# spans (`…`) are left verbatim — authors quoting the syntax in docs.
+
+BIBLIOGRAPHY_DATA_PATH = Path("src/data/zotero.json")
+
+_citation_lookup_cache: dict[str, dict[str, str]] | None = None
+
+
+def _load_citation_lookup() -> dict[str, dict[str, str]]:
+    """Build a `citationKey → {surname, year, zoteroKey}` map from
+    `src/data/zotero.json`. Cached on first call. Returns an empty dict
+    if the bibliography file is missing or unreadable (build-content
+    tolerates this — citations simply don't resolve)."""
+    global _citation_lookup_cache
+    if _citation_lookup_cache is not None:
+        return _citation_lookup_cache
+
+    lookup: dict[str, dict[str, str]] = {}
+    if not BIBLIOGRAPHY_DATA_PATH.exists():
+        _citation_lookup_cache = lookup
+        return lookup
+
+    try:
+        data = json.loads(BIBLIOGRAPHY_DATA_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        _citation_lookup_cache = lookup
+        return lookup
+
+    for entry in data.get("entries", []):
+        ck = entry.get("citationKey")
+        if not ck:
+            continue
+        csl = entry.get("csl") or {}
+        authors = csl.get("author") or []
+        if authors:
+            first = authors[0] or {}
+            surname = first.get("family") or first.get("literal") or ck
+        else:
+            surname = ck
+        issued = csl.get("issued") or {}
+        date_parts = issued.get("date-parts") or [[None]]
+        year_raw = (
+            date_parts[0][0]
+            if isinstance(date_parts, list) and date_parts and date_parts[0]
+            else None
+        )
+        year = str(year_raw) if year_raw is not None else ""
+        lookup[ck] = {
+            "surname": str(surname),
+            "year": year,
+            "zoteroKey": str(entry.get("key", "")),
+        }
+
+    _citation_lookup_cache = lookup
+    return lookup
+
+
+# Pandoc-style inline citation: [@citationKey] where the key uses the
+# alphanumeric + hyphen, underscore, colon, dot set typical of BibTeX/Zotero
+# citation keys.
+_CITATION_TOKEN_RE = re.compile(r"\[@([A-Za-z0-9_:.\-]+)\]")
+
+# Fenced code block. Matches triple-backtick or triple-tilde fences with an
+# optional language tag, capturing the whole block including the fences.
+_FENCE_RE = re.compile(
+    r"(?:^|\n)([`~]{3,})[^\n]*\n.*?\n\1(?=\n|$)",
+    re.DOTALL,
+)
+
+# Inline code span: a single backtick run, no newline between.
+_INLINE_CODE_RE = re.compile(r"`[^`\n]*`")
+
+
+def _substitute_citations(text: str, lookup: dict, lesson: str) -> str:
+    """Apply citation rewrites to a stretch of body text known to be
+    outside any code context."""
+
+    def repl(m: "re.Match[str]") -> str:
+        key = m.group(1)
+        entry = lookup.get(key)
+        if entry is None:
+            print(
+                f'  ⚠️  citation [@{key}] in lesson "{lesson}" — key not in bibliography'
+            )
+            return f"[?@{key}]"
+        surname = entry["surname"]
+        year = entry["year"]
+        label = f"({surname} {year})" if year else f"({surname})"
+        return f'<a href="/bibliography#bib-{key}">{label}</a>'
+
+    return _CITATION_TOKEN_RE.sub(repl, text)
+
+
+def rewrite_citations(body: str, state: dict) -> str:
+    """Rewrite `[@citationKey]` tokens into anchor links pointing at the
+    matching `/bibliography#bib-<key>` entry. Tokens inside fenced code
+    blocks or inline code spans are left verbatim. Unknown keys render as
+    `[?@key]` and emit a build-time warning naming the lesson."""
+    lookup = _load_citation_lookup()
+    if not lookup:
+        # No bibliography data — leave the body untouched. Unknown-key
+        # warnings would be noise in this state.
+        return body
+
+    lesson = state.get("lesson_slug", "?")
+
+    # Walk the body, splitting around fenced code blocks. Within non-fenced
+    # segments, further split around inline code spans. Citations are only
+    # rewritten in the surviving plain-prose stretches.
+    parts: list[str] = []
+    cursor = 0
+    for fence in _FENCE_RE.finditer(body):
+        non_code = body[cursor : fence.start()]
+        # Within this non-code chunk, peel off inline code spans.
+        inner_cursor = 0
+        for span in _INLINE_CODE_RE.finditer(non_code):
+            parts.append(
+                _substitute_citations(non_code[inner_cursor : span.start()], lookup, lesson)
+            )
+            parts.append(span.group(0))
+            inner_cursor = span.end()
+        parts.append(
+            _substitute_citations(non_code[inner_cursor:], lookup, lesson)
+        )
+        # Fence block — verbatim.
+        parts.append(fence.group(0))
+        cursor = fence.end()
+
+    # Tail after the last fence.
+    tail = body[cursor:]
+    inner_cursor = 0
+    for span in _INLINE_CODE_RE.finditer(tail):
+        parts.append(_substitute_citations(tail[inner_cursor : span.start()], lookup, lesson))
+        parts.append(span.group(0))
+        inner_cursor = span.end()
+    parts.append(_substitute_citations(tail[inner_cursor:], lookup, lesson))
+
+    return "".join(parts)
 
 
 def strip_leading_title(body: str, title: str) -> str:
@@ -278,6 +427,9 @@ def process_markdown_file(md_path: Path) -> str:
 
     # Rewrite relative image references and copy files into public/lesson-assets/
     body = rewrite_relative_images(body, md_path.parent, frontmatter["section"])
+
+    # Rewrite pandoc-style [@citationKey] tokens into bibliography anchor links.
+    body = rewrite_citations(body, {"lesson_slug": frontmatter["slug"]})
 
     # Drop the leading H1 when it duplicates the title (the layout renders one)
     body = strip_leading_title(body, frontmatter["title"])
@@ -697,6 +849,10 @@ def process_notebook(nb_path: Path, execute: bool = False) -> str:
 
     # Rewrite any relative image refs that came from markdown cells
     content = rewrite_relative_images(content, nb_path.parent, frontmatter["section"])
+
+    # Rewrite pandoc-style [@citationKey] tokens that may have been authored
+    # in notebook markdown cells.
+    content = rewrite_citations(content, {"lesson_slug": frontmatter["slug"]})
 
     # Drop the leading H1 when it duplicates the title (the layout renders one)
     content = strip_leading_title(content, frontmatter["title"])
