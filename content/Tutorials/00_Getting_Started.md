@@ -19,7 +19,7 @@
 
 4. In VSCode, install `Ruff`. Ruff is a linter that will help us catch errors in our code and enforce coding standards. It is a fast and efficient linter that works well with Python. You can install it by searching for "Ruff" in the VSCode extensions marketplace.
 5. In VSCode, install `Black Formatter`. Using a consistent formatter will help us keep our code clean and readable and reduce minor changes in our commits. We will use `Black` as our default formatter. You can install it by searching for "Black Formatter" in the VSCode extensions marketplace.
-6. Make sure that your vscode settings are set to use `Black` as the default formatter. You can do this by adding the following lines to your `settings.json` file:
+6. Make sure that your vscode settings are set to use `Black` as the default formatter. You can do this by adding the following lines to your `settings.json` file in the root of the repository (you can access this file by going to `Code > Preferences > Settings` and then clicking on the `{}` icon in the top right corner to open the `settings.json` file):
    ```json
    "[python]": {
         "editor.formatOnType": true,
