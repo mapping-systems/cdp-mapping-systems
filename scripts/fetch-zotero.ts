@@ -58,6 +58,11 @@ interface SubCollection {
 
 interface BibliographyEntry {
   key: string;
+  /** BibTeX citation key from Zotero (e.g. `bertinSemiologyGraphicsDiagrams2011`).
+      Authors type this in markdown citations: `[@bertinSemiologyGraphicsDiagrams2011]`.
+      Optional — entries without one in Zotero still render normally; they just
+      can't be cited inline. */
+  citationKey?: string;
   type: string;
   title: string;
   url?: string;
@@ -191,8 +196,14 @@ function normalize(item: ZoteroAPIItem, subcollectionKeys: Set<string>): Bibliog
   const itemCollections = item.data?.collections ?? [];
   const subcollections = itemCollections.filter((k) => subcollectionKeys.has(k)).sort();
 
+  const citationKey =
+    typeof item.data?.citationKey === 'string' && item.data.citationKey.length > 0
+      ? item.data.citationKey
+      : undefined;
+
   return {
     key: item.key,
+    citationKey,
     type,
     title,
     url: typeof csl.URL === 'string' ? csl.URL : undefined,
@@ -230,6 +241,24 @@ async function main() {
   const entries = items
     .map((it) => normalize(it, subcollectionKeys))
     .filter((e): e is BibliographyEntry => e !== null);
+
+  // Warn about duplicate citation keys — Zotero permits two items to share
+  // a citation key, but the in-page lookup map silently picks the last
+  // write. The fix is in Zotero; surface it here so the author notices.
+  const seen = new Map<string, string[]>();
+  for (const e of entries) {
+    if (!e.citationKey) continue;
+    const titles = seen.get(e.citationKey) ?? [];
+    titles.push(e.title);
+    seen.set(e.citationKey, titles);
+  }
+  for (const [key, titles] of seen) {
+    if (titles.length > 1) {
+      console.warn(
+        `  ⚠️  duplicate citationKey "${key}" on ${titles.length} entries: ${titles.map((t) => JSON.stringify(t)).join(', ')}`,
+      );
+    }
+  }
 
   const output: BibliographyOutput = {
     style: ZOTERO.style,
