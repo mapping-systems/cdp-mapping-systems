@@ -8,7 +8,7 @@ Instructor: Mario Giampieri (mag2382@columbia.edu)
 
 _Mapping Systems_ introduces CDP students to programming concepts and methods for spatial analysis, using urban planning challenges as a basis for learning. The course will also explore the social, political, and ethical implications of mapping technologies, as well as our role as practitioners in the production and interpretation of spatial data.
 
-The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, we will maintain a critical perspective and also introduce students to some historical and conceptual context, as well as case studies.
+The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, we will maintain a critical perspective grounded in foundational readings, historical and conceptual context, as well as case studies.
 
 The course will require students to complete weekly exercises to gain proficiency in spatial analytic methods in service of being able to use said methods in their computational design practice. Students will be asked to further develop one exercise into a final project, described in more detail below.
 
@@ -153,7 +153,7 @@ Conceiving of and measuring distance and spatial relatedness
 
   **Readings**:
 
-  - Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
+  - [update for boeing]() Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
 
 #### Class 10: Measuring Distance (Tutorial)

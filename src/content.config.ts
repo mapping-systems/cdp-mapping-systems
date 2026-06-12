@@ -52,6 +52,10 @@ const bibliography = defineCollection({
   }),
   schema: z.object({
     key: z.string(),
+    /** BibTeX citation key from Zotero (e.g. `bertinSemiologyGraphicsDiagrams2011`).
+        Used as the canonical key for inline citations across the site
+        (`[@citationKey]` in markdown → `/bibliography#bib-<citationKey>`). */
+    citationKey: z.string().optional(),
     type: z.string(),
     title: z.string(),
     url: z.string().optional(),

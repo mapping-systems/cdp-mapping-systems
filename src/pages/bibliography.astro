@@ -41,6 +41,11 @@ for (const key of Object.keys(bySection)) {
   });
 }
 
+// Tracks which entry anchor ids have already been emitted, so an entry in
+// multiple sub-collections only gets `id="bib-<key>"` on its first rendered
+// occurrence (HTML id uniqueness — duplicate ids would break the anchor).
+const seenAnchorKeys = new Set<string>();
+
 // Render order: only sections that have entries. Sub-collections in their
 // configured order (alphabetical from the script), then Uncategorized last.
 const renderedSections: { key: string; name: string }[] = [];
@@ -189,10 +194,16 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
                 </h2>
               </summary>
               <ul class="space-y-5">
-                {bySection[section.key].map((entry) => (
+                {bySection[section.key].map((entry) => {
+                  const anchorKey = entry.data.citationKey ?? entry.data.key;
+                  const isFirstOccurrence = !seenAnchorKeys.has(anchorKey);
+                  if (isFirstOccurrence) seenAnchorKeys.add(anchorKey);
+                  return (
                 <li
-                  class="border-b border-border pb-5 last:border-b-0"
+                  id={isFirstOccurrence ? `bib-${anchorKey}` : undefined}
+                  class="border-b border-border pb-5 last:border-b-0 scroll-mt-40"
                   data-entry
+                  data-entry-key={anchorKey}
                   data-entry-tags={JSON.stringify(entry.data.tags ?? [])}
                   data-entry-text={[
                     entry.data.title,
@@ -242,7 +253,8 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
                     </p>
                   )}
                 </li>
-              ))}
+                  );
+                })}
               </ul>
             </details>
           </section>
@@ -263,6 +275,17 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
   .bibliography-entry {
     text-indent: -1.5rem;
     padding-left: 1.5rem;
+  }
+
+  /* Brief highlight on the targeted entry — fires when arriving via
+     /bibliography#bib-<key> from an inline citation. ~1.6s fade then idle. */
+  [data-entry]:target {
+    animation: bib-target-flash 1.6s ease-out;
+    border-radius: 0.5rem;
+  }
+  @keyframes bib-target-flash {
+    0%   { background-color: var(--color-accent-soft); }
+    100% { background-color: transparent; }
   }
 
   /* Hide the horizontal scrollbar on the sticky jump nav while keeping
@@ -470,11 +493,46 @@ const allTagCount = new Set(entries.flatMap((e) => e.data.tags ?? [])).size;
       applyFilter();
     });
 
-    window.addEventListener('hashchange', applyFilter);
+    window.addEventListener('hashchange', () => {
+      applyFilter();
+      handleBibTarget();
+    });
 
     applyFilter();
+    handleBibTarget();
     attachBackToTop();
     attachScrollSpy();
+  }
+
+  /*
+    Arrival via inline citation: `/bibliography#bib-<key>`.
+
+    `parseHash()` only recognizes `q=…&tags=…`, so a `#bib-<key>` hash
+    yields an empty filter state — applyFilter() above has already
+    re-rendered every entry as visible. Two remaining concerns:
+      1. The target entry may be inside the Uncategorized section, which
+         is collapsed by default; open it so the entry is on-screen.
+      2. ClientRouter view transitions don't always trigger the browser's
+         native anchor scroll, so we scroll explicitly. The `:target`
+         pseudo-class then fires the brief highlight animation.
+  */
+  function handleBibTarget() {
+    const m = location.hash.match(/^#bib-(.+)$/);
+    if (!m) return;
+    const key = m[1];
+    const target = document.querySelector<HTMLElement>(
+      `[data-entry-key="${CSS.escape(key)}"]`,
+    );
+    if (!target) return;
+
+    // Open the containing <details> if collapsed (e.g. Uncategorized).
+    const details = target.closest<HTMLDetailsElement>('details[data-section-details]');
+    if (details && !details.open) details.open = true;
+
+    // Defer one frame so any details-toggling layout settles before scroll.
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   }
 
   function attachScrollSpy() {
