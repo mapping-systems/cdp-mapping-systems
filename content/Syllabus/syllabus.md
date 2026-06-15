@@ -63,7 +63,7 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 
   - (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
-#### Class 02: Loading, exploring, visualizing data (Tutorial) - no class due to July 4th holiday
+#### ~~Class 02: Loading, exploring, visualizing data (Tutorial)~~ - no class due to July 4th holiday
 
 - [Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
 - Interpret and visualize spatial data
@@ -83,7 +83,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 - Case study: Environmental Justice in New York City and New York State
 
   **Readings**:
-  - [@wilsonCartographyWEBDubois2018] Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
+  - [Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.]([@wilsonCartographyWEBDubois2018]) 
   - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation.
   - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
@@ -111,7 +111,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 
 #### Class 06: Web mapping (Tutorial part 1)
 
-- Use `leaflet` to create interactive web maps
+- Use `maplibre` to create interactive web maps
 - Load data via API
 - Launching a basic web map
   **Exercise:** [03_Web Mapping](../Assignments/03-web-mapping.md)
@@ -151,8 +151,9 @@ Conceiving of and measuring distance and spatial relatedness
 
   **Readings**:
 
-  - [update for boeing]() Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
+  - [@boeingModelingAnalyzingUrban2025] 
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
+  - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
 
 #### Class 10: Measuring Distance (Tutorial)
 
