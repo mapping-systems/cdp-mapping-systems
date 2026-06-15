@@ -49,7 +49,7 @@ Office hours are by appointment. Email me to schedule a time to chat.
 
 Introductions + getting started: IDE and environment setup, loading and visualizing data
 
-#### Class 01: Introductions
+#### Class 01: Introductions (7/3/2026)
 
 - Introductions, review of syllabus
 - Orientation to course Github
@@ -63,15 +63,15 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 
   - (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
-#### Class 02: Loading, exploring, visualizing data (Tutorial)
+#### Class 02: Loading, exploring, visualizing data (Tutorial) - no class due to July 4th holiday
 
-- [Tutorial](/Tutorials/01_vector_data_apis.ipynb) on loading, exploring, and visualizing data using `geopandas`, `pandas`, `matplotlib`, `lonboard`, and `folium`
-- Finding open data for New York City
-- Explore spatial and non-spatial attributes of tax lot dataset, `MapPLUTO`
+- [Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
+- Interpret and visualize spatial data
+- Explore spatial and non-spatial attributes of Census data
 - Create static and interactive visualizations of the dataset
 - Saving data
 
-  **Exercise:** [01_Loading and visualizing data](../Assignments/01_Loading_Visualizing.md)
+  **Exercise:** [01_Loading and visualizing data](../Assignments/01-loading-and-visualizing-data.md)
 
 ### Week 02
 
@@ -83,11 +83,9 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 - Case study: Environmental Justice in New York City and New York State
 
   **Readings**:
-
-  - Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation.
-  - Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
+  - [@wilsonCartographyWEBDubois2018] Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.
+  - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation.
   - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
-  - (optional) Entrikin, J.N., 1991. The Betweenness of Place, in: Entrikin, J.N. (Ed.), The Betweenness of Place: Towards a Geography of Modernity. Macmillan Education UK, London, pp. 6–26. [https://doi.org/10.1007/978-1-349-21086-2_2](https://doi.org/10.1007/978-1-349-21086-2_2)
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
 
@@ -95,7 +93,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
-  **Exercise:** [02_Geoprocessing](../Assignments/02_Geoprocessing.md)
+  **Exercise:** [02_Geoprocessing](../Assignments/02-geoprocessing.md)
 
 ### Week 03
 
@@ -116,7 +114,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 - Use `leaflet` to create interactive web maps
 - Load data via API
 - Launching a basic web map
-  **Exercise:** [03_Web Mapping](../Assignments/03_Web_Mapping.md)
+  **Exercise:** [03_Web Mapping](../Assignments/03-web-mapping.md)
 
 ### Week 04
 
@@ -161,7 +159,7 @@ Conceiving of and measuring distance and spatial relatedness
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Fayerweather to local points of interest
 - **Desk crits** on final colloquium projects
 
-  **Exercise:** [04_Networks](../Assignments/04_Networks.md)
+  **Exercise:** [04_Networks](../Assignments/03-networks.md)
 
 ### Week 06
 
