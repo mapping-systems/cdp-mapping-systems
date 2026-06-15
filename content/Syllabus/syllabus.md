@@ -77,19 +77,19 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 
 Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
-#### Class 03: Mapping as a critical and creative process
+#### Class 02: Mapping as a critical and creative process (7/7/2026)
 
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
 
   **Readings**:
-  - [Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press.]([@wilsonCartographyWEBDubois2018]) 
-  - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation.
-  - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289.
-  - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment.
-  - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12)
+  - Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press. ([@wilsonCartographyWEBDubois2018])
+  - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation. ([@iconoclasistasManualCollectiveMapping2016])
+  - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289. ([millerToblersFirstLaw2004a])
+  - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. ([@maantaySpatialDataBasic2006])
+  - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) ([@cornerAgencyMappingSpeculation2011])
 
-#### Class 04: Geoprocessing (Tutorial)
+#### Class 03: Geoprocessing (Tutorial) (7/10/2026) - meeting 3-5pm in Ware
 
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
@@ -99,7 +99,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 Web mapping, interactive visualization, and crowd-sourced information
 
-#### Class 05: Web mapping part 1
+#### Class 04: Web mapping part 1
 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
@@ -107,9 +107,9 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   **Readings**
 
-  - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. URL https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/full/10.1111/j.1467-9663.2009.00563.x (accessed 6.15.25).
+  - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. ([@NEOGEOGRAPHYPALIMPSESTSPLACE2009])
 
-#### Class 06: Web mapping (Tutorial part 1)
+#### Class 05: Web mapping (Tutorial part 1)
 
 - Use `maplibre` to create interactive web maps
 - Load data via API
@@ -120,7 +120,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 
 APIs and website deployment
 
-#### Class 07: Web mapping part 2
+#### Class 06: Web mapping part 2
 
 - Data production and governance
 - Elements of an API
@@ -129,10 +129,9 @@ APIs and website deployment
 
   **Readings**
 
-  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7
-  - (optional) Haklay, M., Weber, P., 2008. OpenStreetMap: User-generated street maps. IEEE Pervasive Computing 7, 12–18. [https://doi.org/10.1109/MPRV.2008.80](https://doi.org/10.1109/MPRV.2008.80)
+  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7 ([@schroder-bergenColonizingOpenStreetMapLocal2022])
 
-#### Class 08: Developing an API and site deployment (Tutorial)
+#### Class 07: Developing an API and site deployment (Tutorial)
 
 - Use `supabase` to create a simple API
 - Deploy a simple website using `github pages`, `cloudflare`, or `render`
@@ -142,12 +141,12 @@ APIs and website deployment
 
 Conceiving of and measuring distance and spatial relatedness
 
-#### Class 09: Distance, Adjacency, Networks
+#### Class 08: Distance, Adjacency, Networks
 
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
-- Case study: CitiBike usage before and during the COVID-19 pandemic
+- ~~Case study: CitiBike usage before and during the COVID-19 pandemic~~
 
   **Readings**:
 
@@ -155,7 +154,7 @@ Conceiving of and measuring distance and spatial relatedness
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
   - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
 
-#### Class 10: Measuring Distance (Tutorial)
+#### Class 09: Measuring Distance (Tutorial)
 
 - Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Fayerweather to local points of interest
 - **Desk crits** on final colloquium projects
@@ -164,9 +163,9 @@ Conceiving of and measuring distance and spatial relatedness
 
 ### Week 06
 
-Preparing for final colloquium presentations + presentations on August 6th
+Preparing for final colloquium presentations + presentations on August XXth
 
-#### Class 11: Desk crits / work session
+#### Class 10: Desk crits / work session
 
 - Work session for final projects
 - Wrapping up and looking forward
