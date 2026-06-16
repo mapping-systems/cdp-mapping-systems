@@ -49,7 +49,7 @@ Office hours are by appointment. Email me to schedule a time to chat.
 
 Introductions + getting started: IDE and environment setup, loading and visualizing data
 
-#### Class 01: Introductions (7/3/2026)
+#### Class 01: Introductions (Wednesday 7/1/2026)
 
 - Introductions, review of syllabus
 - Orientation to course Github
@@ -57,15 +57,21 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 - Projections
 - Vector data types
 
-  **Exercise** [Getting Started](../Assignments/00_Getting_Started.md) (to be completed by next class)
+  **Exercise** [Getting Started](../Assignments/00_Getting_Started.md) (to be completed by class on 7/7/2026)
 
   **Readings**
 
   - (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
-#### ~~Class 02: Loading, exploring, visualizing data (Tutorial)~~ - no class due to July 4th holiday
+#### No class due to July 4th holiday (Friday7/3/2026)
 
-- [Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
+### Week 02
+
+Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
+
+#### Class 02: Loading, exploring, visualizing data (Wednesday 7/8/2026)
+
+- [In-class Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
 - Interpret and visualize spatial data
 - Explore spatial and non-spatial attributes of Census data
 - Create static and interactive visualizations of the dataset
@@ -73,12 +79,8 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 
   **Exercise:** [01_Loading and visualizing data](../Assignments/01-loading-and-visualizing-data.md)
 
-### Week 02
-
-Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
-
-#### Class 02: Mapping as a critical and creative process (7/7/2026)
-
+---
+#### Class 03: Mapping as a critical and creative process (Friday 7/10/2026 - meeting 3-5pm in Ware)
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
 
@@ -89,7 +91,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. ([@maantaySpatialDataBasic2006])
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) ([@cornerAgencyMappingSpeculation2011])
 
-#### Class 03: Geoprocessing (Tutorial) (7/10/2026) - meeting 3-5pm in Ware
+#### Class 04: Geoprocessing (Tutorial) (Wednesday 7/15/2026) 
 
 - Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
@@ -99,7 +101,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 Web mapping, interactive visualization, and crowd-sourced information
 
-#### Class 04: Web mapping part 1
+#### Class 04: Web mapping part 1 (Friday 7/17/2026)
 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
@@ -109,7 +111,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. ([@NEOGEOGRAPHYPALIMPSESTSPLACE2009])
 
-#### Class 05: Web mapping (Tutorial part 1)
+#### Class 05: Web mapping (Tutorial part 1) (Wednesday 7/22/2026)
 
 - Use `maplibre` to create interactive web maps
 - Load data via API
@@ -118,30 +120,9 @@ Web mapping, interactive visualization, and crowd-sourced information
 
 ### Week 04
 
-APIs and website deployment
-
-#### Class 06: Web mapping part 2
-
-- Data production and governance
-- Elements of an API
-- Case study: OpenStreetMap and the Humanitarian OpenStreetMap Team
-- **Desk Crits** + checking in
-
-  **Readings**
-
-  - Schröder-Bergen, S., Glasze, G., Michel, B., Dammann, F., 2022. De/colonizing OpenStreetMap? Local mappers, humanitarian and commercial actors and the changing modes of collaborative mapping. GeoJournal 87, 5051–5066. https://doi.org/10.1007/s10708-021-10547-7 ([@schroder-bergenColonizingOpenStreetMapLocal2022])
-
-#### Class 07: Developing an API and site deployment (Tutorial)
-
-- Use `supabase` to create a simple API
-- Deploy a simple website using `github pages`, `cloudflare`, or `render`
-- **Desk crits**
-
-### Week 05
-
 Conceiving of and measuring distance and spatial relatedness
 
-#### Class 08: Distance, Adjacency, Networks
+#### Class 06: Distance, Adjacency, Networks (Friday 7/24/2026)
 
 - Euclidean and network distance
 - Introduction to graph theory
@@ -154,18 +135,16 @@ Conceiving of and measuring distance and spatial relatedness
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
   - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
 
-#### Class 09: Measuring Distance (Tutorial)
+#### Class 07: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
 
-- Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate distance from Fayerweather to local points of interest
+- Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [04_Networks](../Assignments/03-networks.md)
 
-### Week 06
+### Week 05
 
-Preparing for final colloquium presentations + presentations on August XXth
-
-#### Class 10: Desk crits / work session
-
+Preparing for final colloquium presentations + presentations on August 5th
+#### Class 08: Wrapping up and looking forward (Friday 7/31/2026)
 - Work session for final projects
 - Wrapping up and looking forward
