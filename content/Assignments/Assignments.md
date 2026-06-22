@@ -1,1 +1,0 @@
-This folder contains assignments for the course. Each assignment is designed to help you practice and apply the concepts learned in the tutorials.
