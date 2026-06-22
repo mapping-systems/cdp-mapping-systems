@@ -111,7 +111,7 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. ([@NEOGEOGRAPHYPALIMPSESTSPLACE2009])
 
-#### Class 05: Web mapping (Tutorial part 1) (Wednesday 7/22/2026)
+#### Class 05: Web mapping (Wednesday 7/22/2026)
 
 - Use `maplibre` to create interactive web maps
 - Load data via API
@@ -127,13 +127,13 @@ Conceiving of and measuring distance and spatial relatedness
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
-- ~~Case study: CitiBike usage before and during the COVID-19 pandemic~~
+- Case study: CitiBike usage before and during the COVID-19 pandemic
 
   **Readings**:
 
-  - [@boeingModelingAnalyzingUrban2025] 
-  - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677)
-  - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2)
+  - Boeing, G., 2025. Modeling and Analyzing Urban Networks and Amenities With OSMnx. Geographical Analysis 57, 567–577. https://doi.org/10.1111/gean.70009 ([@boeingModelingAnalyzingUrban2025])
+  - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677) ([@xinImpactCOVID19Pandemic2022])
+  - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) ([@barabasiNetworkScience2016])
 
 #### Class 07: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
 
