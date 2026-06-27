@@ -285,3 +285,13 @@ html.dark .output-figure img {
   box-shadow: none;
   border: 1px solid var(--color-border);
 }
+
+li {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+}
+
+li > p {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+}

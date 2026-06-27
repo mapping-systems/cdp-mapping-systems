@@ -18,7 +18,7 @@ The final project will expand upon one of the exercises and further explore the 
 
 ## Learning Objectives
 
-At the most basic level, the goal of this class is to introduce students to mapping in Python and Javascript and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
+The goal of this class is to introduce students to mapping in Python and Javascript and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 
 - Load, explore, and visualize spatial data in Python and Javascript
 - Understand and apply basic geoprocessing techniques
@@ -31,7 +31,7 @@ This is primarily a methods course, however students will be expected to complet
 
 ## Course Organization / Communication
 
-Class meets on Wednesdays and Fridays in 209 Fayerweather from 11am-1pm. Weeks will generally be organized as follows:
+Class meets on Wednesdays and Fridays in Ware Lounge from 11am-1pm. Weeks will generally be organized as follows:
 - **Wednesday**: Lecture, reading discussion, review of technical concepts
 - **Friday**: Technical tutorials and desk crits
 
@@ -41,7 +41,7 @@ All reading materials and slides will be posted to Canvas, and tutorials will be
 
 ## Office Hours
 
-Office hours are by appointment. Email me to schedule a time to chat.
+Office hours are by appointment, scheduled via email.
 
 ## Schedule
 
@@ -79,7 +79,6 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
   **Exercise:** [01_Loading and visualizing data](../Assignments/01-loading-and-visualizing-data.md)
 
----
 #### Class 03: Mapping as a critical and creative process (Friday 7/10/2026 - meeting 3-5pm in Ware)
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
@@ -91,17 +90,18 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. [@maantaySpatialDataBasic2006]
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) [@cornerAgencyMappingSpeculation2011]
 
+
+### Week 03
+
+Web mapping, interactive visualization, and crowd-sourced information
+
 #### Class 04: Geoprocessing (Wednesday 7/15/2026) 
 
 - [In-class tutorial](../Tutorials/02_flood_vulnerability_proportional_split.ipynb) on manipulating, reshaping, and combining datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
   **Exercise:** [02_Geoprocessing](../Assignments/02-geoprocessing.md)
 
-### Week 03
-
-Web mapping, interactive visualization, and crowd-sourced information
-
-#### Class 04: Web mapping and collaborative data generation (Friday 7/17/2026)
+#### Class 05: Web mapping and collaborative data generation (Friday 7/17/2026)
 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
@@ -111,18 +111,18 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. [@NEOGEOGRAPHYPALIMPSESTSPLACE2009]
 
-#### Class 05: Web mapping (Wednesday 7/22/2026)
+### Week 04
+
+Understanding and measuring distance and spatial relatedness
+
+#### Class 06: Web mapping (Wednesday 7/22/2026)
 
 - [In-class tutorial](../Tutorials/03_web_mapping_with_maplibre.md) using `maplibre` to create interactive an interacative web map
 - Load data via API
 - Launching a basic web map
   **Exercise:** [03_Web Mapping](../Assignments/04-web-mapping.md)
 
-### Week 04
-
-Understanding and measuring distance and spatial relatedness
-
-#### Class 06: Distance, Adjacency, Networks (Friday 7/24/2026)
+#### Class 07: Distance, Adjacency, Networks (Friday 7/24/2026)
 
 - Euclidean and network distance
 - Introduction to graph theory
@@ -135,16 +135,17 @@ Understanding and measuring distance and spatial relatedness
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677) [@xinImpactCOVID19Pandemic2022]
   - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
 
-#### Class 07: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
+### Week 05
+
+Final project presentations and course wrap-up
+
+#### Class 08: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
 
 - [In-class tutorial](../Tutorials/04_networks.ipynb) introducing `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [04_Networks](../Assignments/03-networks.md)
 
-### Week 05
-
-Preparing for final colloquium presentations + presentations on August 5th
-#### Class 08: Wrapping up and looking forward (Friday 7/31/2026)
+#### Class 09: Wrapping up and looking forward (Friday 7/31/2026)
 - Work session for final projects
 - Wrapping up and looking forward
