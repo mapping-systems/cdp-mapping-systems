@@ -86,7 +86,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
   **Readings**:
   - Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press. [@wilsonCartographyWEBDubois2018]
   - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation. [@iconoclasistasManualCollectiveMapping2016]
-  - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289. [millerToblersFirstLaw2004a]
+  - (optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289. [millerToblersFirstLaw2004a]
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. [@maantaySpatialDataBasic2006]
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) [@cornerAgencyMappingSpeculation2011]
 
@@ -133,7 +133,7 @@ Understanding and measuring distance and spatial relatedness
 
   - Boeing, G., 2025. Modeling and Analyzing Urban Networks and Amenities With OSMnx. Geographical Analysis 57, 567–577. https://doi.org/10.1111/gean.70009 [@boeingModelingAnalyzingUrban2025]
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677) [@xinImpactCOVID19Pandemic2022]
-  - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
+  - (optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
 
 ### Week 05
 
