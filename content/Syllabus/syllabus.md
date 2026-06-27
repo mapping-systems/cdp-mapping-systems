@@ -1,6 +1,6 @@
 # Mapping Systems Summer 2025
 
-Wednesdays and Fridays, 11am-1pm @ 209 Fayerweather
+Wednesdays and Fridays, 11am-1pm @ Ware Lounge
 
 Instructor: Mario Giampieri (mag2382@columbia.edu)
 
