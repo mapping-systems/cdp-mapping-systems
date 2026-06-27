@@ -101,7 +101,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 Web mapping, interactive visualization, and crowd-sourced information
 
-#### Class 04: Web mapping part 1 (Friday 7/17/2026)
+#### Class 04: Web mapping and collaborative data generation (Friday 7/17/2026)
 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
