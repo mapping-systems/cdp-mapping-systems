@@ -57,7 +57,7 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 - Projections
 - Vector data types
 
-  **Exercise** [Getting Started](../Assignments/00_Getting_Started.md) (to be completed by class on 7/7/2026)
+  **Exercise** [Getting Started](../Tutorials/00_Getting_Started.md) (to be completed by class on 7/7/2026)
 
   **Readings**
 
@@ -71,7 +71,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 #### Class 02: Loading, exploring, visualizing data (Wednesday 7/8/2026)
 
-- [In-class Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
+- [In-class Tutorial](../Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
 - Interpret and visualize spatial data
 - Explore spatial and non-spatial attributes of Census data
 - Create static and interactive visualizations of the dataset
@@ -91,9 +91,9 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. [@maantaySpatialDataBasic2006]
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) [@cornerAgencyMappingSpeculation2011]
 
-#### Class 04: Geoprocessing (Tutorial) (Wednesday 7/15/2026) 
+#### Class 04: Geoprocessing (Wednesday 7/15/2026) 
 
-- Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
+- [In-class tutorial](../Tutorials/02_flood_vulnerability_proportional_split.ipynb) on manipulating, reshaping, and combining datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
   **Exercise:** [02_Geoprocessing](../Assignments/02-geoprocessing.md)
 
@@ -113,14 +113,14 @@ Web mapping, interactive visualization, and crowd-sourced information
 
 #### Class 05: Web mapping (Wednesday 7/22/2026)
 
-- Use `maplibre` to create interactive web maps
+- [In-class tutorial](../Tutorials/03_web_mapping_with_maplibre.md) using `maplibre` to create interactive an interacative web map
 - Load data via API
 - Launching a basic web map
-  **Exercise:** [03_Web Mapping](../Assignments/03-web-mapping.md)
+  **Exercise:** [03_Web Mapping](../Assignments/04-web-mapping.md)
 
 ### Week 04
 
-Conceiving of and measuring distance and spatial relatedness
+Understanding and measuring distance and spatial relatedness
 
 #### Class 06: Distance, Adjacency, Networks (Friday 7/24/2026)
 
@@ -137,7 +137,7 @@ Conceiving of and measuring distance and spatial relatedness
 
 #### Class 07: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
 
-- Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
+- [In-class tutorial](../Tutorials/04_networks.ipynb) introducing `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [04_Networks](../Assignments/03-networks.md)
