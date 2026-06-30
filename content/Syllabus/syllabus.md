@@ -1,6 +1,6 @@
 # Mapping Systems Summer 2025
 
-Wednesdays and Fridays, 11am-1pm @ 209 Fayerweather
+Wednesdays and Fridays, 11am-1pm @ Ware Lounge
 
 Instructor: Mario Giampieri (mag2382@columbia.edu)
 
@@ -18,7 +18,7 @@ The final project will expand upon one of the exercises and further explore the 
 
 ## Learning Objectives
 
-At the most basic level, the goal of this class is to introduce students to mapping in Python and Javascript and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
+The goal of this class is to introduce students to mapping in Python and Javascript and demonstrate how to explore, analyze, and visualize spatial data. By the end of the course, students should be able to:
 
 - Load, explore, and visualize spatial data in Python and Javascript
 - Understand and apply basic geoprocessing techniques
@@ -31,7 +31,7 @@ This is primarily a methods course, however students will be expected to complet
 
 ## Course Organization / Communication
 
-Class meets on Wednesdays and Fridays in 209 Fayerweather from 11am-1pm. Weeks will generally be organized as follows:
+Class meets on Wednesdays and Fridays in Ware Lounge from 11am-1pm. Weeks will generally be organized as follows:
 - **Wednesday**: Lecture, reading discussion, review of technical concepts
 - **Friday**: Technical tutorials and desk crits
 
@@ -41,7 +41,7 @@ All reading materials and slides will be posted to Canvas, and tutorials will be
 
 ## Office Hours
 
-Office hours are by appointment. Email me to schedule a time to chat.
+Office hours are by appointment, scheduled via email.
 
 ## Schedule
 
@@ -57,21 +57,21 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 - Projections
 - Vector data types
 
-  **Exercise** [Getting Started](../Assignments/00_Getting_Started.md) (to be completed by class on 7/7/2026)
+  **Exercise** [Getting Started](../Tutorials/00_Getting_Started.md) (to be completed by class on 7/7/2026)
 
   **Readings**
 
   - (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
-#### No class due to July 4th holiday (Friday7/3/2026)
+#### No class due to July 4th holiday (Friday 7/3/2026)
 
 ### Week 02
 
 Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
-#### Class 02: Loading, exploring, visualizing data (Wednesday 7/8/2026)
+#### Class 02: Loading, exploring, visualizing data (Tuesday 7/6/2026)
 
-- [In-class Tutorial](/Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
+- [In-class Tutorial](../Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
 - Interpret and visualize spatial data
 - Explore spatial and non-spatial attributes of Census data
 - Create static and interactive visualizations of the dataset
@@ -79,21 +79,20 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
   **Exercise:** [01_Loading and visualizing data](../Assignments/01-loading-and-visualizing-data.md)
 
----
-#### Class 03: Mapping as a critical and creative process (Friday 7/10/2026 - meeting 3-5pm in Ware)
+#### Class 03: Mapping as a critical and creative process (Wednesday 7/8/2026 - meeting 6:30-8:30pm in Ware)
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
 
   **Readings**:
   - Wilson, M.O., 2018. The Cartography of W.E.B. Dubois’ Color Line, in: Batlle-Baptiste, W., Rusert, B. (Eds.), WEB Du Bois’s Data Portraits: Visualizing Black America. Princeton Architectural Press. [@wilsonCartographyWEBDubois2018]
   - (optional) Iconoclasistas, 2016. Manual of Collective Mapping: Critical cartographic resources for territorial processes of collaborative creation. [@iconoclasistasManualCollectiveMapping2016]
-  - (Optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289. [millerToblersFirstLaw2004a]
+  - (optional) Miller, H.J., 2004. Tobler’s First Law and Spatial Analysis. Annals of the Association of American Geographers 94, 284–289. [millerToblersFirstLaw2004a]
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. [@maantaySpatialDataBasic2006]
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) [@cornerAgencyMappingSpeculation2011]
 
-#### Class 04: Geoprocessing (Tutorial) (Wednesday 7/15/2026) 
+#### Class 04: Geoprocessing (Friday 7/10/2026 - meeting 3-5pm in Ware)
 
-- Manipulate, reshape, and combine datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
+- [In-class tutorial](../Tutorials/02_flood_vulnerability_proportional_split.ipynb) on manipulating, reshaping, and combining datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
   **Exercise:** [02_Geoprocessing](../Assignments/02-geoprocessing.md)
 
@@ -101,8 +100,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
 Web mapping, interactive visualization, and crowd-sourced information
 
-#### Class 04: Web mapping part 1 (Friday 7/17/2026)
-
+#### Class 05: Web mapping and collaborative data generation (Wednesday 7/15/2026) 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
 - Web map basic components
@@ -111,19 +109,19 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. [@NEOGEOGRAPHYPALIMPSESTSPLACE2009]
 
-#### Class 05: Web mapping (Wednesday 7/22/2026)
 
-- Use `maplibre` to create interactive web maps
+#### Class 06: Web mapping (Friday 7/17/2026)
+
+- [In-class tutorial](../Tutorials/03_web_mapping_with_maplibre.md) using `maplibre` to create interactive an interacative web map
 - Load data via API
 - Launching a basic web map
-  **Exercise:** [03_Web Mapping](../Assignments/03-web-mapping.md)
+  **Exercise:** [03_Web Mapping](../Assignments/04-web-mapping.md)
 
 ### Week 04
 
-Conceiving of and measuring distance and spatial relatedness
+Understanding and measuring distance and spatial relatedness
 
-#### Class 06: Distance, Adjacency, Networks (Friday 7/24/2026)
-
+#### Class 06: Distance, Adjacency, Networks (Wednesday 7/22/2026)
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
@@ -133,18 +131,33 @@ Conceiving of and measuring distance and spatial relatedness
 
   - Boeing, G., 2025. Modeling and Analyzing Urban Networks and Amenities With OSMnx. Geographical Analysis 57, 567–577. https://doi.org/10.1111/gean.70009 [@boeingModelingAnalyzingUrban2025]
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677) [@xinImpactCOVID19Pandemic2022]
-  - (Optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
+  - (optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
 
-#### Class 07: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
 
-- Introduce `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
+#### Class 07:  Measuring Distance (Tutorial) (Friday 7/24/2026)
+- [In-class tutorial](../Tutorials/04_networks.ipynb) introducing `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [04_Networks](../Assignments/03-networks.md)
 
+
 ### Week 05
 
-Preparing for final colloquium presentations + presentations on August 5th
-#### Class 08: Wrapping up and looking forward (Friday 7/31/2026)
-- Work session for final projects
+Final project presentations and course wrap-up
+
+#### Class 08: Measuring Change (Wednesday 7/29/2026)
+
+- Introduction to raster data
+- Historical context for measuring change over time
+- Case study: National Land Cover Dataset
+- Introduction to GeoAI and machine learning for spatial analysis
+- **Desk Crits** + checking in
+
+  **Readings**
+
+  - Couclelis, H., 1992. People manipulate objects (but cultivate fields): Beyond the raster-vector debate in GIS, in: Frank, A.U., Campari, I., Formentini, U. (Eds.), Theories and Methods of Spatio-Temporal Reasoning in Geographic Space, Lecture Notes in Computer Science. Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 65–77. [https://doi.org/10.1007/3-540-55966-3_3](https://doi.org/10.1007/3-540-55966-3_3)
+  - Homer, C., Dewitz, J., Jin, S., Xian, G., Costello, C., Danielson, P., Gass, L., Funk, M., Wickham, J., Stehman, S., Auch, R., Riitters, K., 2020. Conterminous United States land cover change patterns 2001–2016 from the 2016 National Land Cover Database. ISPRS Journal of Photogrammetry and Remote Sensing 162, 184–199. [https://doi.org/10.1016/j.isprsjprs.2020.02.019](https://doi.org/10.1016/j.isprsjprs.2020.02.019)
+
+#### Class 09: Wrapping up and looking forward (Friday 7/31/2026)
+- Final Project Presentations
 - Wrapping up and looking forward

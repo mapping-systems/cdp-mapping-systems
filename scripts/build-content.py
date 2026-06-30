@@ -140,6 +140,31 @@ def namespaced_slug(section: str, file_slug: str) -> str:
     return f"{sec}/{file_slug}"
 
 
+def output_slug(file_path: Path) -> str:
+    """Canonical published slug for a source content file.
+
+    This is the single source of truth for "where does this file live on the
+    site": both the generated output filename and the inline-link rewriter
+    derive a target's URL from this, so a link can never point somewhere the
+    build didn't actually publish.
+    """
+    section = get_section_from_path(file_path)
+    return namespaced_slug(section, clean_slug(file_path.stem))
+
+
+def build_slug_registry(paths: list[Path]) -> dict[Path, str]:
+    """Map each source content file (resolved absolute path) → published slug.
+
+    Used by rewrite_relative_links so an author can link to a sibling file by
+    its real relative path (e.g. ``../Tutorials/01_comparing-census-variables.ipynb``)
+    and have it rewritten to the canonical ``/lessons/tutorials/comparing-census-variables``.
+    """
+    registry: dict[Path, str] = {}
+    for p in paths:
+        registry[p.resolve()] = output_slug(p)
+    return registry
+
+
 # ---------------------------------------------------------------------------
 # Inline citations
 # ---------------------------------------------------------------------------
@@ -380,11 +405,77 @@ def rewrite_relative_images(body: str, source_dir: Path, section: str) -> str:
 
 
 # ============================================================================
+# Inter-content link rewriting
+# ============================================================================
+#
+# Authors link to other lessons by their real relative source path — e.g.
+# `[tutorial](../Tutorials/01_comparing-census-variables.ipynb)`. That same
+# link resolves in GitHub's file view, VS Code, and Jupyter previews because
+# the file actually lives there. But the build slugs filenames (drops the
+# `01_` prefix and `.ipynb`, lowercases the section), so the *published* URL
+# is `/lessons/tutorials/comparing-census-variables`. This pass rewrites each
+# relative link to the published URL using the same slug registry the output
+# filenames come from, so the two can never drift.
+
+# Markdown link [text](url "optional title") — but NOT an image (![...]).
+# The negative lookbehind for `!` keeps image syntax for rewrite_relative_images.
+_LINK_PATTERN = re.compile(r"(?<!!)\[([^\]]*)\]\(([^)\s]+)(\s+\"[^\"]*\")?\)")
+
+
+def rewrite_relative_links(
+    body: str, source_dir: Path, registry: dict[Path, str], lesson: str
+) -> str:
+    """Rewrite relative links that point at other content files into their
+    published ``/lessons/<slug>`` URLs.
+
+    External, root-absolute (``/…``), and pure-anchor (``#…``) links are left
+    alone. A relative link whose target isn't a known lesson is also left
+    untouched — but if it *looks* like a lesson (ends in ``.md``/``.ipynb``) a
+    warning is emitted naming the lesson, which catches typo'd or dangling
+    cross-links at build time.
+    """
+
+    def replace(match: "re.Match[str]") -> str:
+        text = match.group(1)
+        url = match.group(2)
+        title = match.group(3) or ""
+
+        if url.startswith(
+            ("http://", "https://", "//", "/", "#", "mailto:", "data:")
+        ):
+            return match.group(0)
+
+        # Peel off a trailing #fragment (preserved) and ?query (dropped —
+        # static lesson pages don't use query strings) to resolve the file.
+        path_part, hsep, frag = url.partition("#")
+        path_part = path_part.partition("?")[0]
+        if not path_part:
+            return match.group(0)
+
+        resolved = (source_dir / path_part).resolve()
+        slug = registry.get(resolved)
+        if slug is not None:
+            new_url = f"/lessons/{slug}"
+            if hsep:
+                new_url += hsep + frag
+            return f"[{text}]({new_url}{title})"
+
+        if path_part.endswith((".md", ".ipynb")):
+            print(
+                f'  ⚠️  link "{url}" in lesson "{lesson}" — '
+                "target not found among built content (broken cross-link?)"
+            )
+        return match.group(0)
+
+    return _LINK_PATTERN.sub(replace, body)
+
+
+# ============================================================================
 # Markdown File Processing
 # ============================================================================
 
 
-def process_markdown_file(md_path: Path) -> str:
+def process_markdown_file(md_path: Path, registry: dict[Path, str]) -> str:
     """Process a plain markdown file, ensuring valid frontmatter."""
     print(f"Processing {md_path}...")
 
@@ -427,6 +518,11 @@ def process_markdown_file(md_path: Path) -> str:
 
     # Rewrite relative image references and copy files into public/lesson-assets/
     body = rewrite_relative_images(body, md_path.parent, frontmatter["section"])
+
+    # Rewrite relative links to other lessons into their published /lessons/ URLs.
+    body = rewrite_relative_links(
+        body, md_path.parent, registry, frontmatter["slug"]
+    )
 
     # Rewrite pandoc-style [@citationKey] tokens into bibliography anchor links.
     body = rewrite_citations(body, {"lesson_slug": frontmatter["slug"]})
@@ -803,7 +899,9 @@ def cell_to_markdown(cell: dict, nb_stem: str, cell_idx: int, state: dict) -> st
     return ""
 
 
-def process_notebook(nb_path: Path, execute: bool = False) -> str:
+def process_notebook(
+    nb_path: Path, registry: dict[Path, str], execute: bool = False
+) -> str:
     """Process a notebook file, optionally executing it before conversion.
 
     When ``execute`` is False (default), the notebook's cached cell outputs
@@ -849,6 +947,11 @@ def process_notebook(nb_path: Path, execute: bool = False) -> str:
 
     # Rewrite any relative image refs that came from markdown cells
     content = rewrite_relative_images(content, nb_path.parent, frontmatter["section"])
+
+    # Rewrite relative links to other lessons into their published /lessons/ URLs.
+    content = rewrite_relative_links(
+        content, nb_path.parent, registry, frontmatter["slug"]
+    )
 
     # Rewrite pandoc-style [@citationKey] tokens that may have been authored
     # in notebook markdown cells.
@@ -908,16 +1011,18 @@ def main():
 
     print(f"Found {len(notebooks)} notebooks, {len(markdown_files)} markdown files\n")
 
+    # Slug registry maps every source file → its published slug, so inline
+    # cross-links can be rewritten to the exact URL each file is published at.
+    registry = build_slug_registry(notebooks + markdown_files)
+
     success_count = 0
     error_count = 0
 
     # Process notebooks
     for nb_path in sorted(notebooks):
         try:
-            md_content = process_notebook(nb_path, execute=args.execute)
-            section = get_section_from_path(nb_path)
-            slug = namespaced_slug(section, clean_slug(nb_path.stem))
-            output_path = OUTPUT_DIR / f"{slug}.md"
+            md_content = process_notebook(nb_path, registry, execute=args.execute)
+            output_path = OUTPUT_DIR / f"{output_slug(nb_path)}.md"
             output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")
@@ -929,10 +1034,8 @@ def main():
     # Process markdown files
     for md_path in sorted(markdown_files):
         try:
-            md_content = process_markdown_file(md_path)
-            section = get_section_from_path(md_path)
-            slug = namespaced_slug(section, clean_slug(md_path.stem))
-            output_path = OUTPUT_DIR / f"{slug}.md"
+            md_content = process_markdown_file(md_path, registry)
+            output_path = OUTPUT_DIR / f"{output_slug(md_path)}.md"
             output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_text(md_content, encoding="utf-8")
             print(f"  ✓ {output_path}\n")
