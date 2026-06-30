@@ -4,7 +4,7 @@
 2. Create a new Python environment. I *strongly* recommend using [Conda or Miniconda](https://www.anaconda.com/download/success?reg=skipped)  for this, but you can also use virtualenv. This will protect our system Python installation from any changes we make.
    - If you're using Conda, you can create a new environment with the following command (with no brackets around the name). You could choose a name like `gis` or `cdp` for example:
       ```
-      conda create -n [pick-a-name] python=3.14
+      conda create -n [pick-a-name] python=3.14 pip
       ```
     Be sure to replace `[pick-a-name]` with a name of your choice for the environment. You can activate the environment (with no brackets around the name) with:
       ```
