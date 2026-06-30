@@ -63,13 +63,13 @@ Introductions + getting started: IDE and environment setup, loading and visualiz
 
   - (optional) Edwards, P.N., 2010. Introduction, in: A Vast Machine: Computer Models, Climate Data, and the Politics of Global Warming. The MIT Press.
 
-#### No class due to July 4th holiday (Friday7/3/2026)
+#### No class due to July 4th holiday (Friday 7/3/2026)
 
 ### Week 02
 
 Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
-#### Class 02: Loading, exploring, visualizing data (Wednesday 7/8/2026)
+#### Class 02: Loading, exploring, visualizing data (Tuesday 7/6/2026)
 
 - [In-class Tutorial](../Tutorials/01_comparing-census-variables.ipynb) on loading, exploring, and visualizing Census data using `geopandas`, `matplotlib`, and `lonboard`
 - Interpret and visualize spatial data
@@ -79,7 +79,7 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
 
   **Exercise:** [01_Loading and visualizing data](../Assignments/01-loading-and-visualizing-data.md)
 
-#### Class 03: Mapping as a critical and creative process (Friday 7/10/2026 - meeting 3-5pm in Ware)
+#### Class 03: Mapping as a critical and creative process (Wednesday 7/8/2026 - meeting 6:30-8:30pm in Ware)
 - Mapping as creative process, critical practice, and counter-narrative
 - Case study: Environmental Justice in New York City and New York State
 
@@ -90,19 +90,17 @@ Geoprocessing / vector data analysis basics using `geopandas` and `shapely`
   - (optional) Maantay, J., Ziegler, J., 2006. Spatial Data and Basic Mapping Concepts, in: GIS for the Urban Environment. [@maantaySpatialDataBasic2006]
   - (optional) Corner, J., 2011. The Agency of Mapping: Speculation, Critique and Invention, in: Dodge, M., Kitchin, R., Perkins, C. (Eds.), The Map Reader. Wiley, pp. 89–101. [https://doi.org/10.1002/9780470979587.ch12](https://doi.org/10.1002/9780470979587.ch12) [@cornerAgencyMappingSpeculation2011]
 
-
-### Week 03
-
-Web mapping, interactive visualization, and crowd-sourced information
-
-#### Class 04: Geoprocessing (Wednesday 7/15/2026) 
+#### Class 04: Geoprocessing (Friday 7/10/2026 - meeting 3-5pm in Ware)
 
 - [In-class tutorial](../Tutorials/02_flood_vulnerability_proportional_split.ipynb) on manipulating, reshaping, and combining datasets together using spatial and non-spatial characteristics using `geopandas` and `shapely`
 
   **Exercise:** [02_Geoprocessing](../Assignments/02-geoprocessing.md)
 
-#### Class 05: Web mapping and collaborative data generation (Friday 7/17/2026)
+### Week 03
 
+Web mapping, interactive visualization, and crowd-sourced information
+
+#### Class 05: Web mapping and collaborative data generation (Wednesday 7/15/2026) 
 - Introduction to web mapping
 - Web 2.0 and the rise of interactive mapping
 - Web map basic components
@@ -111,19 +109,19 @@ Web mapping, interactive visualization, and crowd-sourced information
 
   - NEOGEOGRAPHY AND THE PALIMPSESTS OF PLACE: WEB 2.0 AND THE CONSTRUCTION OF A VIRTUAL EARTH - GRAHAM - 2010 - Tijdschrift voor Economische en Sociale Geografie - Wiley Online Library [WWW Document], 2010. [@NEOGEOGRAPHYPALIMPSESTSPLACE2009]
 
-### Week 04
 
-Understanding and measuring distance and spatial relatedness
-
-#### Class 06: Web mapping (Wednesday 7/22/2026)
+#### Class 06: Web mapping (Friday 7/17/2026)
 
 - [In-class tutorial](../Tutorials/03_web_mapping_with_maplibre.md) using `maplibre` to create interactive an interacative web map
 - Load data via API
 - Launching a basic web map
   **Exercise:** [03_Web Mapping](../Assignments/04-web-mapping.md)
 
-#### Class 07: Distance, Adjacency, Networks (Friday 7/24/2026)
+### Week 04
 
+Understanding and measuring distance and spatial relatedness
+
+#### Class 06: Distance, Adjacency, Networks (Wednesday 7/22/2026)
 - Euclidean and network distance
 - Introduction to graph theory
 - Different kinds of adjacency
@@ -135,17 +133,31 @@ Understanding and measuring distance and spatial relatedness
   - Xin, R., Ai, T., Ding, L., Zhu, R., Meng, L., 2022. Impact of the COVID-19 pandemic on urban human mobility - A multiscale geospatial network analysis using New York bike-sharing data. Cities 126, 103677. [https://doi.org/10.1016/j.cities.2022.103677](https://doi.org/10.1016/j.cities.2022.103677) [@xinImpactCOVID19Pandemic2022]
   - (optional) Barabási, A.-L., 2016. Graph Theory, in: Network Science. Cambridge University Press, Cambridge, United Kingdom. Available online [here](https://networksciencebook.com/chapter/2) [@barabasiNetworkScience2016]
 
-### Week 05
 
-Final project presentations and course wrap-up
-
-#### Class 08: Measuring Distance (Tutorial) (Wednesday 7/29/2026)
-
+#### Class 07:  Measuring Distance (Tutorial) (Friday 7/24/2026)
 - [In-class tutorial](../Tutorials/04_networks.ipynb) introducing `osmnx`, `networkx`, `libpysal`, `h3` to calculate transit deserts
 - **Desk crits** on final colloquium projects
 
   **Exercise:** [04_Networks](../Assignments/03-networks.md)
 
+
+### Week 05
+
+Final project presentations and course wrap-up
+
+#### Class 08: Measuring Change (Wednesday 7/29/2026)
+
+- Introduction to raster data
+- Historical context for measuring change over time
+- Case study: National Land Cover Dataset
+- Introduction to GeoAI and machine learning for spatial analysis
+- **Desk Crits** + checking in
+
+  **Readings**
+
+  - Couclelis, H., 1992. People manipulate objects (but cultivate fields): Beyond the raster-vector debate in GIS, in: Frank, A.U., Campari, I., Formentini, U. (Eds.), Theories and Methods of Spatio-Temporal Reasoning in Geographic Space, Lecture Notes in Computer Science. Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 65–77. [https://doi.org/10.1007/3-540-55966-3_3](https://doi.org/10.1007/3-540-55966-3_3)
+  - Homer, C., Dewitz, J., Jin, S., Xian, G., Costello, C., Danielson, P., Gass, L., Funk, M., Wickham, J., Stehman, S., Auch, R., Riitters, K., 2020. Conterminous United States land cover change patterns 2001–2016 from the 2016 National Land Cover Database. ISPRS Journal of Photogrammetry and Remote Sensing 162, 184–199. [https://doi.org/10.1016/j.isprsjprs.2020.02.019](https://doi.org/10.1016/j.isprsjprs.2020.02.019)
+
 #### Class 09: Wrapping up and looking forward (Friday 7/31/2026)
-- Work session for final projects
+- Final Project Presentations
 - Wrapping up and looking forward
