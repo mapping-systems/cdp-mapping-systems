@@ -1,0 +1,223 @@
+{
+  "type": "FeatureCollection",
+  "name": "Places I Enjoy in New York City",
+  "description": "A personal mental map of public places that shape my experience of New York City.",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "place_id": 1,
+        "name": "Battery Park",
+        "category": "Park",
+        "favorite_score": 2,
+        "activity": "Walking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.015712,
+          40.703101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "place_id": 2,
+        "name": "Brooklyn Bridge",
+        "category": "Bridge",
+        "favorite_score": 2,
+        "activity": "Viewing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.992864,
+          40.703171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "place_id": 3,
+        "name": "SoHo",
+        "category": "Neighborhood",
+        "favorite_score": 5,
+        "activity": "Shopping, Dining"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.998786,
+          40.722846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "place_id": 4,
+        "name": "West Village",
+        "category": "Neighborhood",
+        "favorite_score": 3,
+        "activity": "Dining, Photography"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.005623,
+          40.734185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "place_id": 5,
+        "name": "Vessel",
+        "category": "Architectural Landmark",
+        "favorite_score": 5,
+        "activity": "Viewing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.002168,
+          40.753813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "place_id": 6,
+        "name": "Koreatown",
+        "category": "Neighborhood",
+        "favorite_score": 4,
+        "activity": "Shopping, Dining"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.986856,
+          40.747664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "place_id": 7,
+        "name": "Central Park",
+        "category": "Park",
+        "favorite_score": 4,
+        "activity": "Walking, Photography"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.965767,
+          40.782168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "place_id": 8,
+        "name": "Madison Square Park",
+        "category": "Park",
+        "favorite_score": 3,
+        "activity": "Walking, Photography"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.993508,
+          40.750478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "place_id": 9,
+        "name": "Little Island",
+        "category": "Park",
+        "favorite_score": 5,
+        "activity": "Walking, Photography"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.010657,
+          40.741974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "place_id": 10,
+        "name": "Oculus",
+        "category": "Architectural Landmark",
+        "favorite_score": 5,
+        "activity": "Photography"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.011427,
+          40.711548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "place_id": 11,
+        "name": "MoMA",
+        "category": "Museum",
+        "favorite_score": 5,
+        "activity": "Viewing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977769,
+          40.761537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "place_id": 12,
+        "name": "The Met",
+        "category": "Museum",
+        "favorite_score": 3,
+        "activity": "Viewing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96343,
+          40.779249
+        ]
+      }
+    }
+  ]
+}
