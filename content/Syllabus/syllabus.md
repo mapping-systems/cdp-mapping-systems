@@ -8,7 +8,7 @@ Instructor: Mario Giampieri (mag2382@columbia.edu)
 
 _Mapping Systems_ introduces CDP students to programming concepts and methods for spatial analysis, using urban planning challenges as a basis for learning. The course will also explore the social, political, and ethical implications of mapping technologies, as well as our role as practitioners in the production and interpretation of spatial data.
 
-The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, we will maintain a critical perspective grounded in foundational readings, historical and conceptual context, as well as case studies.
+The course will focus on building proficiency in Python-based workflows focused on finding, describing, and visualizing spatial data; manipulating and drawing meaning from data layers; understanding distance and spatial relatedness; and measuring change over time. The course will also introduce web-based methods for visualizing and interacting with data. While a primary goal of this course is to introduce students to practical tools and workflows and build fluency in their use, we will maintain a critical perspective grounded in foundational readings, historical and conceptual context, and case studies.
 
 The course will require students to complete weekly exercises to gain proficiency in spatial analytic methods in service of being able to use said methods in their computational design practice. Students will be asked to further develop one exercise into a final project, described in more detail below.
 
@@ -37,7 +37,9 @@ Class meets on Wednesdays and Fridays in Ware Lounge from 11am-1pm. Weeks will g
 
 Conversation topics that pertain to the entire class, such as meeting time/location or technical difficulties / troubleshooting should live in the course Discord channel. All other questions can be sent to me directly via email at mag2382@columbia.edu.
 
-All reading materials and slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems) (i.e. this website). All exercises will be saved and managed via Github (details below).
+All reading materials and slides will be posted to Canvas, and tutorials will be posted to the course's [Github repository](https://github.com/mapping-systems/cdp-mapping-systems) (i.e. this website). All exercises will be saved and managed via Github.
+
+Students are expected to join the course repository's team by sending me their GitHub handle. Students will fork the repository and submit their exercises via pull requests. Students are expected to submit their exercises within one week of the assignment being posted.
 
 ## Office Hours
 
