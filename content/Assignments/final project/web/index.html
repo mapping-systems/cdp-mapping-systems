@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beyond the Buffer — Upper Manhattan Food Access</title>
+    <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <aside class="panel">
+      <p class="eyebrow">MAPPING SYSTEMS FINAL PROJECT · YIZHANG MU</p>
+      <h1>Beyond the Buffer</h1>
+      <p class="subtitle">
+        Door-to-door food retail accessibility, residential demand, and network resilience in Upper Manhattan.
+      </p>
+
+      <label for="metric-select">Map metric</label>
+      <select id="metric-select">
+        <option value="network_m">Nearest door-to-door distance</option>
+        <option value="detour_index">Detour index</option>
+        <option value="network_store_count_10min">Stores within 10 minutes</option>
+        <option value="buffer_overcount">Euclidean buffer overcount</option>
+        <option value="allocation_difference_pct">Allocation-method disagreement</option>
+        <option value="known_capacity_pressure">Known-capacity pressure</option>
+        <option value="priority_balanced">Balanced priority</option>
+        <option value="priority_demand_focused">Demand-focused priority</option>
+        <option value="priority_access_focused">Access-focused priority</option>
+        <option value="priority_index" selected>Robust priority mean</option>
+        <option value="priority_rank_spread">Priority rank sensitivity</option>
+        <option value="closure_increase_min">Maximum closure impact</option>
+      </select>
+
+      <div class="toggle-row">
+        <label><input id="stores-toggle" type="checkbox" checked /> Stores</label>
+        <label><input id="closure-toggle" type="checkbox" checked /> Closure scenarios</label>
+        <label><input id="routes-toggle" type="checkbox" /> Example routes</label>
+      </div>
+
+      <div id="legend">
+        <div id="legend-title">Robust priority mean</div>
+        <div class="legend-bar"></div>
+        <div class="legend-values"><span id="legend-min">Low</span><span id="legend-max">High</span></div>
+      </div>
+
+      <div class="summary-grid">
+        <div><span>Demand cells</span><strong id="summary-cells">—</strong></div>
+        <div><span>Residential units</span><strong id="summary-units">—</strong></div>
+        <div><span>Weighted nearest distance</span><strong id="summary-distance">—</strong></div>
+        <div><span>Weighted buffer overcount</span><strong id="summary-overcount">—</strong></div>
+      </div>
+
+      <p class="note">
+        Click a hexagon or store for details. Domains use the 2nd–98th percentiles of the loaded result, reducing distortion from extreme values.
+      </p>
+    </aside>
+
+    <div id="status">Loading corrected project data…</div>
+    <script src="main.js"></script>
+  </body>
+</html>

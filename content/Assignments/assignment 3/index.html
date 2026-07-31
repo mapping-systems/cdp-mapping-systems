@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive map of server locations extracted from a browser HAR file." />
+  <title>Where the Web Request Travels</title>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <aside class="sidebar" aria-label="Map information">
+      <p class="eyebrow">HAR GEOLOCATION STUDY</p>
+      <h1>Where the Web Request Travels</h1>
+      <p class="intro">
+        This map visualizes the geographic locations of servers contacted while browsing a website.
+        Locations were extracted from a HAR file and geolocated using IP addresses.
+      </p>
+
+      <section class="stats" aria-label="Dataset summary">
+        <div class="stat">
+          <span id="request-count" class="stat-value">—</span>
+          <span class="stat-label">requests mapped</span>
+        </div>
+        <div class="stat">
+          <span id="location-count" class="stat-value">—</span>
+          <span class="stat-label">unique locations</span>
+        </div>
+      </section>
+
+      <section class="legend" aria-label="Legend">
+        <h2>Legend</h2>
+        <div class="legend-row"><span class="dot dot-single"></span><span>Individual request location</span></div>
+        <div class="legend-row"><span class="dot dot-cluster"></span><span>Cluster of nearby requests</span></div>
+      </section>
+
+      <section class="instructions">
+        <h2>Explore</h2>
+        <p>Click a cluster to zoom in. Click a point to see its IP address and requested URL.</p>
+      </section>
+
+      <button id="reset-view" type="button">Reset map view</button>
+      <p class="method-note">Static GeoJSON generated from <code>www.google.com.har</code>.</p>
+    </aside>
+
+    <section class="map-panel" aria-label="Interactive request location map">
+      <div id="map"></div>
+      <div id="status" class="status" role="status" aria-live="polite">Loading GeoJSON…</div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

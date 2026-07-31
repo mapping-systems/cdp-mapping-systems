@@ -1,0 +1,14 @@
+{
+  "folders": [{"path": "."}],
+  "settings": {
+    "jupyter.notebookFileRoot": "${fileDirname}",
+    "notebook.lineNumbers": "on"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "ritwickdey.liveserver"
+    ]
+  }
+}

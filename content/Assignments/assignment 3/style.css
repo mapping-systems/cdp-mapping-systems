@@ -1,0 +1,194 @@
+:root {
+  --ink: #17202a;
+  --muted: #69737d;
+  --paper: #f5f2ec;
+  --panel: rgba(255, 255, 255, 0.94);
+  --line: rgba(23, 32, 42, 0.14);
+  --accent: #ef5b3f;
+  --accent-dark: #9f2f20;
+  --cluster: #183c55;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+body { overflow: hidden; }
+
+.page-shell {
+  display: grid;
+  grid-template-columns: minmax(290px, 360px) 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 34px 30px 26px;
+  overflow-y: auto;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: -4px 0 0;
+  max-width: 11ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.intro, .instructions p, .method-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stat {
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.legend, .instructions {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.dot-single {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+}
+
+.dot-cluster {
+  width: 20px;
+  height: 20px;
+  background: var(--cluster);
+  border: 2px solid rgba(255,255,255,.85);
+}
+
+button {
+  width: 100%;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+
+button:hover { transform: translateY(-1px); background: var(--accent-dark); }
+button:focus-visible { outline: 3px solid rgba(239,91,63,.35); outline-offset: 3px; }
+
+.method-note { margin-top: auto; font-size: 0.75rem; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.map-panel { position: relative; min-width: 0; }
+#map { width: 100%; height: 100%; }
+
+.status {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 4;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255,255,255,.92);
+  font-size: 0.78rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+}
+.status.is-hidden { display: none; }
+.status.is-error { color: #8a1c11; background: #fff1ee; }
+
+.maplibregl-popup-content {
+  max-width: 320px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-family: inherit;
+  box-shadow: 0 12px 34px rgba(0,0,0,.18);
+}
+.popup-ip { margin: 0 0 7px; font-weight: 800; }
+.popup-url { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.4; overflow-wrap: anywhere; }
+.maplibregl-ctrl-group { border-radius: 10px; overflow: hidden; }
+
+@media (max-width: 760px) {
+  body { overflow: auto; }
+  .page-shell { grid-template-columns: 1fr; grid-template-rows: auto 70vh; height: auto; min-height: 100vh; }
+  .sidebar { padding: 24px 20px; border-right: 0; border-bottom: 1px solid var(--line); overflow: visible; }
+  h1 { max-width: none; }
+  .method-note { margin-top: 0; }
+}

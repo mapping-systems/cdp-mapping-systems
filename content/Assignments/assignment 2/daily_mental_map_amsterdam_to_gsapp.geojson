@@ -1,0 +1,1275 @@
+{
+  "type": "FeatureCollection",
+  "name": "yizhang_mu_1440_amsterdam_daily_life_rich_dataset",
+  "metadata": {
+    "title": "From 1440 Amsterdam to GSAPP: A Daily Mental Map",
+    "author": "Yizhang Mu",
+    "description": "A mixed-geometry narrative dataset connecting home, the Amsterdam Avenue commute, Columbia GSAPP, coffee, Riverside Park, and the return home.",
+    "coordinate_note": "Coordinates are approximate public-building and street locations. No apartment or unit information is included.",
+    "geometry_types": [
+      "Point",
+      "LineString",
+      "Polygon"
+    ],
+    "feature_count": 34,
+    "possible_external_relations": [
+      "subway entrances and routes",
+      "bus routes and stops",
+      "NYC pedestrian network",
+      "traffic collisions",
+      "311 noise complaints",
+      "parks and open spaces",
+      "street trees",
+      "building footprints and land use",
+      "food and coffee businesses",
+      "topography or elevation"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "complete_daily_route",
+        "route_id": "HOME_GSAPP_01",
+        "name": "1440 Amsterdam Avenue → GSAPP → Riverside Park → Home",
+        "home_anchor": "1440 Amsterdam Avenue",
+        "route_theme": "A daily negotiation between domestic safety, neighborhood transition, academic intensity, and restorative open space",
+        "total_stops": 15,
+        "total_duration_at_stops_min": 816,
+        "total_spending_usd": 35.75,
+        "total_social_interactions": 36,
+        "total_phone_use_min": 118
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9542939,
+            40.8167142
+          ],
+          [
+            -73.95455,
+            40.81575
+          ],
+          [
+            -73.95545,
+            40.81445
+          ],
+          [
+            -73.95655,
+            40.8131
+          ],
+          [
+            -73.958,
+            40.8109
+          ],
+          [
+            -73.9592,
+            40.8092
+          ],
+          [
+            -73.96074,
+            40.80778
+          ],
+          [
+            -73.96018,
+            40.80746
+          ],
+          [
+            -73.96011,
+            40.80758
+          ],
+          [
+            -73.96105,
+            40.80808
+          ],
+          [
+            -73.96028,
+            40.80763
+          ],
+          [
+            -73.9634,
+            40.80557
+          ],
+          [
+            -73.96805,
+            40.80632
+          ],
+          [
+            -73.96012,
+            40.80757
+          ],
+          [
+            -73.9542939,
+            40.8167142
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S01",
+        "sequence": 1,
+        "name": "Home — 1440 Amsterdam Avenue",
+        "arrival_time": "08:10",
+        "departure_time": "08:28",
+        "duration_min": 18,
+        "place_type": "home",
+        "activity": "prepare, check weather, and leave",
+        "emotion_primary": "calm",
+        "emotion_valence_neg4_pos4": 2,
+        "stress_1_5": 2,
+        "energy_1_5": 4,
+        "comfort_1_5": 5,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 1,
+        "noise_1_5": 2,
+        "light_1_5": 3,
+        "greenery_1_5": 2,
+        "safety_1_5": 5,
+        "social_context": "alone",
+        "social_interactions": 0,
+        "spending_usd": 0.0,
+        "phone_use_min": 10,
+        "memory_type": "private routine",
+        "privacy_level": "private-origin",
+        "narrative_role": "The domestic anchor of the daily mental map."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9542939,
+          40.8167142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S02",
+        "sequence": 2,
+        "name": "Amsterdam Avenue Residential Edge",
+        "arrival_time": "08:30",
+        "departure_time": "08:34",
+        "duration_min": 4,
+        "place_type": "neighborhood_street",
+        "activity": "begin walking south",
+        "emotion_primary": "alert",
+        "emotion_valence_neg4_pos4": 1,
+        "stress_1_5": 2,
+        "energy_1_5": 4,
+        "comfort_1_5": 4,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 2,
+        "noise_1_5": 3,
+        "light_1_5": 4,
+        "greenery_1_5": 2,
+        "safety_1_5": 4,
+        "social_context": "neighbors and delivery workers",
+        "social_interactions": 1,
+        "spending_usd": 0.0,
+        "phone_use_min": 1,
+        "memory_type": "neighborhood transition",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95455,
+          40.81575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S03",
+        "sequence": 3,
+        "name": "West 125th Street Crossing",
+        "arrival_time": "08:37",
+        "departure_time": "08:41",
+        "duration_min": 4,
+        "place_type": "major_crossing",
+        "activity": "wait for signal and cross",
+        "emotion_primary": "rushed",
+        "emotion_valence_neg4_pos4": -1,
+        "stress_1_5": 4,
+        "energy_1_5": 3,
+        "comfort_1_5": 2,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 5,
+        "noise_1_5": 5,
+        "light_1_5": 4,
+        "greenery_1_5": 1,
+        "safety_1_5": 3,
+        "social_context": "commuters and traffic",
+        "social_interactions": 0,
+        "spending_usd": 0.0,
+        "phone_use_min": 0,
+        "memory_type": "mobility friction",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95545,
+          40.81445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S04",
+        "sequence": 4,
+        "name": "Manhattanville Campus Edge",
+        "arrival_time": "08:45",
+        "departure_time": "08:50",
+        "duration_min": 5,
+        "place_type": "campus_edge",
+        "activity": "pass newer Columbia buildings",
+        "emotion_primary": "curious",
+        "emotion_valence_neg4_pos4": 2,
+        "stress_1_5": 2,
+        "energy_1_5": 4,
+        "comfort_1_5": 4,
+        "familiarity_1_5": 3,
+        "crowd_1_5": 2,
+        "noise_1_5": 3,
+        "light_1_5": 4,
+        "greenery_1_5": 2,
+        "safety_1_5": 5,
+        "social_context": "students and workers",
+        "social_interactions": 1,
+        "spending_usd": 0.0,
+        "phone_use_min": 1,
+        "memory_type": "institutional contrast",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95655,
+          40.8131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S05",
+        "sequence": 5,
+        "name": "West 120th Street / Amsterdam",
+        "arrival_time": "08:56",
+        "departure_time": "09:00",
+        "duration_min": 4,
+        "place_type": "street_segment",
+        "activity": "continue uphill toward Morningside campus",
+        "emotion_primary": "effortful",
+        "emotion_valence_neg4_pos4": -1,
+        "stress_1_5": 3,
+        "energy_1_5": 3,
+        "comfort_1_5": 2,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 3,
+        "noise_1_5": 4,
+        "light_1_5": 4,
+        "greenery_1_5": 2,
+        "safety_1_5": 4,
+        "social_context": "pedestrians",
+        "social_interactions": 0,
+        "spending_usd": 0.0,
+        "phone_use_min": 0,
+        "memory_type": "topographic awareness",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.958,
+          40.8109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S06",
+        "sequence": 6,
+        "name": "Columbia Amsterdam Gate",
+        "arrival_time": "09:04",
+        "departure_time": "09:07",
+        "duration_min": 3,
+        "place_type": "threshold",
+        "activity": "enter main campus",
+        "emotion_primary": "focused",
+        "emotion_valence_neg4_pos4": 1,
+        "stress_1_5": 3,
+        "energy_1_5": 4,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 4,
+        "noise_1_5": 3,
+        "light_1_5": 4,
+        "greenery_1_5": 3,
+        "safety_1_5": 5,
+        "social_context": "students and staff",
+        "social_interactions": 2,
+        "spending_usd": 0.0,
+        "phone_use_min": 0,
+        "memory_type": "academic threshold",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9592,
+          40.8092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S07",
+        "sequence": 7,
+        "name": "Low Plaza",
+        "arrival_time": "09:10",
+        "departure_time": "09:15",
+        "duration_min": 5,
+        "place_type": "public_space",
+        "activity": "cross campus and observe activity",
+        "emotion_primary": "observant",
+        "emotion_valence_neg4_pos4": 1,
+        "stress_1_5": 2,
+        "energy_1_5": 3,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 3,
+        "noise_1_5": 3,
+        "light_1_5": 5,
+        "greenery_1_5": 2,
+        "safety_1_5": 5,
+        "social_context": "public but socially distant",
+        "social_interactions": 0,
+        "spending_usd": 0.0,
+        "phone_use_min": 1,
+        "memory_type": "campus image",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96074,
+          40.80778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S08",
+        "sequence": 8,
+        "name": "Avery Hall Lobby",
+        "arrival_time": "09:16",
+        "departure_time": "09:22",
+        "duration_min": 6,
+        "place_type": "building_entry",
+        "activity": "enter, greet classmates, check messages",
+        "emotion_primary": "transitioning",
+        "emotion_valence_neg4_pos4": 0,
+        "stress_1_5": 3,
+        "energy_1_5": 3,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 3,
+        "noise_1_5": 3,
+        "light_1_5": 2,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "brief greetings",
+        "social_interactions": 3,
+        "spending_usd": 0.0,
+        "phone_use_min": 4,
+        "memory_type": "social checkpoint",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96018,
+          40.80746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S09",
+        "sequence": 9,
+        "name": "GSAPP Studio Desk — Morning",
+        "arrival_time": "09:25",
+        "departure_time": "12:30",
+        "duration_min": 185,
+        "place_type": "work",
+        "activity": "mapping, coding, and project preparation",
+        "emotion_primary": "focused",
+        "emotion_valence_neg4_pos4": 1,
+        "stress_1_5": 4,
+        "energy_1_5": 4,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 4,
+        "noise_1_5": 4,
+        "light_1_5": 3,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "working beside classmates",
+        "social_interactions": 7,
+        "spending_usd": 0.0,
+        "phone_use_min": 20,
+        "memory_type": "productive concentration",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96011,
+          40.80758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S10",
+        "sequence": 10,
+        "name": "Campus Lunch Stop",
+        "arrival_time": "12:36",
+        "departure_time": "13:05",
+        "duration_min": 29,
+        "place_type": "food",
+        "activity": "buy and eat lunch",
+        "emotion_primary": "restless",
+        "emotion_valence_neg4_pos4": 0,
+        "stress_1_5": 3,
+        "energy_1_5": 2,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 4,
+        "noise_1_5": 4,
+        "light_1_5": 3,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "lunch with classmates",
+        "social_interactions": 5,
+        "spending_usd": 15.25,
+        "phone_use_min": 8,
+        "memory_type": "necessary pause",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96105,
+          40.80808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S11",
+        "sequence": 11,
+        "name": "GSAPP Critique Space",
+        "arrival_time": "13:10",
+        "departure_time": "15:00",
+        "duration_min": 110,
+        "place_type": "learning",
+        "activity": "class discussion and critique",
+        "emotion_primary": "exposed",
+        "emotion_valence_neg4_pos4": -1,
+        "stress_1_5": 5,
+        "energy_1_5": 3,
+        "comfort_1_5": 2,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 4,
+        "noise_1_5": 3,
+        "light_1_5": 3,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "formal academic interaction",
+        "social_interactions": 9,
+        "spending_usd": 0.0,
+        "phone_use_min": 2,
+        "memory_type": "evaluation pressure",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96028,
+          40.80763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S12",
+        "sequence": 12,
+        "name": "Hungarian Pastry Shop",
+        "arrival_time": "15:15",
+        "departure_time": "15:45",
+        "duration_min": 30,
+        "place_type": "coffee",
+        "activity": "coffee break and informal conversation",
+        "emotion_primary": "relieved",
+        "emotion_valence_neg4_pos4": 3,
+        "stress_1_5": 2,
+        "energy_1_5": 3,
+        "comfort_1_5": 4,
+        "familiarity_1_5": 4,
+        "crowd_1_5": 4,
+        "noise_1_5": 3,
+        "light_1_5": 3,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "informal conversation",
+        "social_interactions": 4,
+        "spending_usd": 8.5,
+        "phone_use_min": 5,
+        "memory_type": "social recovery",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9634,
+          40.80557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S13",
+        "sequence": 13,
+        "name": "Riverside Park Overlook",
+        "arrival_time": "15:57",
+        "departure_time": "16:22",
+        "duration_min": 25,
+        "place_type": "open_space",
+        "activity": "walk, sit, and look toward the river",
+        "emotion_primary": "calm",
+        "emotion_valence_neg4_pos4": 4,
+        "stress_1_5": 1,
+        "energy_1_5": 3,
+        "comfort_1_5": 5,
+        "familiarity_1_5": 3,
+        "crowd_1_5": 2,
+        "noise_1_5": 1,
+        "light_1_5": 5,
+        "greenery_1_5": 5,
+        "safety_1_5": 4,
+        "social_context": "mostly alone",
+        "social_interactions": 0,
+        "spending_usd": 0.0,
+        "phone_use_min": 3,
+        "memory_type": "restorative distance",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96805,
+          40.80632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S14",
+        "sequence": 14,
+        "name": "GSAPP Studio Desk — Evening",
+        "arrival_time": "16:40",
+        "departure_time": "20:00",
+        "duration_min": 200,
+        "place_type": "work",
+        "activity": "revise project and export files",
+        "emotion_primary": "determined",
+        "emotion_valence_neg4_pos4": 0,
+        "stress_1_5": 4,
+        "energy_1_5": 2,
+        "comfort_1_5": 3,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 2,
+        "noise_1_5": 2,
+        "light_1_5": 2,
+        "greenery_1_5": 1,
+        "safety_1_5": 5,
+        "social_context": "quiet shared work",
+        "social_interactions": 3,
+        "spending_usd": 0.0,
+        "phone_use_min": 18,
+        "memory_type": "fatigued productivity",
+        "privacy_level": "public-observation",
+        "narrative_role": "A spatial episode linking home life, commuting, study, and emotional recovery."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96012,
+          40.80757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "stop",
+        "stop_id": "S15",
+        "sequence": 15,
+        "name": "Home Return — 1440 Amsterdam Avenue",
+        "arrival_time": "20:22",
+        "departure_time": "23:30",
+        "duration_min": 188,
+        "place_type": "home",
+        "activity": "eat, decompress, and review tomorrow's tasks",
+        "emotion_primary": "safe",
+        "emotion_valence_neg4_pos4": 3,
+        "stress_1_5": 1,
+        "energy_1_5": 1,
+        "comfort_1_5": 5,
+        "familiarity_1_5": 5,
+        "crowd_1_5": 1,
+        "noise_1_5": 2,
+        "light_1_5": 3,
+        "greenery_1_5": 2,
+        "safety_1_5": 5,
+        "social_context": "alone or with neighbors nearby",
+        "social_interactions": 1,
+        "spending_usd": 12.0,
+        "phone_use_min": 45,
+        "memory_type": "domestic recovery",
+        "privacy_level": "private-origin",
+        "narrative_role": "The domestic anchor of the daily mental map."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9542939,
+          40.8167142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R01",
+        "sequence": 1,
+        "from_stop": "S01",
+        "to_stop": "S02",
+        "mode": "walking",
+        "distance_m_est": 108.7,
+        "travel_time_min_est": 1,
+        "experience": "leaving the controlled interior of home",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9542939,
+            40.8167142
+          ],
+          [
+            -73.95455,
+            40.81575
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R02",
+        "sequence": 2,
+        "from_stop": "S02",
+        "to_stop": "S03",
+        "mode": "walking",
+        "distance_m_est": 162.5,
+        "travel_time_min_est": 2,
+        "experience": "residential street becoming a traffic corridor",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95455,
+            40.81575
+          ],
+          [
+            -73.95545,
+            40.81445
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R03",
+        "sequence": 3,
+        "from_stop": "S03",
+        "to_stop": "S04",
+        "mode": "walking",
+        "distance_m_est": 175.7,
+        "travel_time_min_est": 2,
+        "experience": "crossing 125th Street as a moment of friction",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95545,
+            40.81445
+          ],
+          [
+            -73.95655,
+            40.8131
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R04",
+        "sequence": 4,
+        "from_stop": "S04",
+        "to_stop": "S05",
+        "mode": "walking",
+        "distance_m_est": 272.1,
+        "travel_time_min_est": 4,
+        "experience": "moving through Manhattanville's newer institutional landscape",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95655,
+            40.8131
+          ],
+          [
+            -73.958,
+            40.8109
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R05",
+        "sequence": 5,
+        "from_stop": "S05",
+        "to_stop": "S06",
+        "mode": "walking",
+        "distance_m_est": 213.4,
+        "travel_time_min_est": 3,
+        "experience": "feeling the uphill topography toward campus",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.958,
+            40.8109
+          ],
+          [
+            -73.9592,
+            40.8092
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R06",
+        "sequence": 6,
+        "from_stop": "S06",
+        "to_stop": "S07",
+        "mode": "walking",
+        "distance_m_est": 203.7,
+        "travel_time_min_est": 3,
+        "experience": "entering the academic boundary",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9592,
+            40.8092
+          ],
+          [
+            -73.96074,
+            40.80778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R07",
+        "sequence": 7,
+        "from_stop": "S07",
+        "to_stop": "S08",
+        "mode": "walking",
+        "distance_m_est": 59.0,
+        "travel_time_min_est": 1,
+        "experience": "crossing the symbolic center of campus",
+        "is_commute_segment": false,
+        "is_restorative_segment": false,
+        "is_academic_segment": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96074,
+            40.80778
+          ],
+          [
+            -73.96018,
+            40.80746
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R08",
+        "sequence": 8,
+        "from_stop": "S08",
+        "to_stop": "S09",
+        "mode": "walking",
+        "distance_m_est": 14.5,
+        "travel_time_min_est": 1,
+        "experience": "moving into the interior work environment",
+        "is_commute_segment": false,
+        "is_restorative_segment": false,
+        "is_academic_segment": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96018,
+            40.80746
+          ],
+          [
+            -73.96011,
+            40.80758
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R09",
+        "sequence": 9,
+        "from_stop": "S09",
+        "to_stop": "S10",
+        "mode": "walking",
+        "distance_m_est": 96.6,
+        "travel_time_min_est": 1,
+        "experience": "leaving concentrated work for food",
+        "is_commute_segment": false,
+        "is_restorative_segment": false,
+        "is_academic_segment": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96011,
+            40.80758
+          ],
+          [
+            -73.96105,
+            40.80808
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R10",
+        "sequence": 10,
+        "from_stop": "S10",
+        "to_stop": "S11",
+        "mode": "walking",
+        "distance_m_est": 81.8,
+        "travel_time_min_est": 1,
+        "experience": "returning to evaluation and critique",
+        "is_commute_segment": false,
+        "is_restorative_segment": false,
+        "is_academic_segment": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96105,
+            40.80808
+          ],
+          [
+            -73.96028,
+            40.80763
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R11",
+        "sequence": 11,
+        "from_stop": "S11",
+        "to_stop": "S12",
+        "mode": "walking",
+        "distance_m_est": 347.8,
+        "travel_time_min_est": 5,
+        "experience": "walking off campus for social relief",
+        "is_commute_segment": false,
+        "is_restorative_segment": true,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96028,
+            40.80763
+          ],
+          [
+            -73.9634,
+            40.80557
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R12",
+        "sequence": 12,
+        "from_stop": "S12",
+        "to_stop": "S13",
+        "mode": "walking",
+        "distance_m_est": 400.5,
+        "travel_time_min_est": 5,
+        "experience": "moving west toward quiet and greenery",
+        "is_commute_segment": false,
+        "is_restorative_segment": true,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9634,
+            40.80557
+          ],
+          [
+            -73.96805,
+            40.80632
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R13",
+        "sequence": 13,
+        "from_stop": "S13",
+        "to_stop": "S14",
+        "mode": "walking",
+        "distance_m_est": 682.3,
+        "travel_time_min_est": 9,
+        "experience": "returning from recovery to production",
+        "is_commute_segment": false,
+        "is_restorative_segment": false,
+        "is_academic_segment": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96805,
+            40.80632
+          ],
+          [
+            -73.96012,
+            40.80757
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "route_segment",
+        "segment_id": "R14",
+        "sequence": 14,
+        "from_stop": "S14",
+        "to_stop": "S15",
+        "mode": "walking",
+        "distance_m_est": 1123.7,
+        "travel_time_min_est": 15,
+        "experience": "long northward walk back to domestic space",
+        "is_commute_segment": true,
+        "is_restorative_segment": false,
+        "is_academic_segment": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96012,
+            40.80757
+          ],
+          [
+            -73.9542939,
+            40.8167142
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "mental_zone",
+        "zone_id": "Z01",
+        "name": "Domestic Anchor Zone",
+        "dominant_feeling": "security, privacy, and recovery",
+        "stress_1_5": 1,
+        "comfort_1_5": 5,
+        "boundary_type": "subjective, not administrative",
+        "analytical_use": "Compare personal perception with land use, noise, open space, transit, or pedestrian data."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.95505,
+              40.81605
+            ],
+            [
+              -73.95355,
+              40.81605
+            ],
+            [
+              -73.95355,
+              40.81735
+            ],
+            [
+              -73.95505,
+              40.81735
+            ],
+            [
+              -73.95505,
+              40.81605
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "mental_zone",
+        "zone_id": "Z02",
+        "name": "Amsterdam Commuting Corridor",
+        "dominant_feeling": "movement, traffic, and gradual academic anticipation",
+        "stress_1_5": 3,
+        "comfort_1_5": 3,
+        "boundary_type": "subjective, not administrative",
+        "analytical_use": "Compare personal perception with land use, noise, open space, transit, or pedestrian data."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.95955,
+              40.80855
+            ],
+            [
+              -73.95375,
+              40.80855
+            ],
+            [
+              -73.95375,
+              40.8171
+            ],
+            [
+              -73.95955,
+              40.8171
+            ],
+            [
+              -73.95955,
+              40.80855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "mental_zone",
+        "zone_id": "Z03",
+        "name": "Academic Intensity Zone",
+        "dominant_feeling": "pressure, concentration, and evaluation",
+        "stress_1_5": 5,
+        "comfort_1_5": 2,
+        "boundary_type": "subjective, not administrative",
+        "analytical_use": "Compare personal perception with land use, noise, open space, transit, or pedestrian data."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.9612,
+              40.80695
+            ],
+            [
+              -73.9595,
+              40.80695
+            ],
+            [
+              -73.9595,
+              40.8083
+            ],
+            [
+              -73.9612,
+              40.8083
+            ],
+            [
+              -73.9612,
+              40.80695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_class": "mental_zone",
+        "zone_id": "Z04",
+        "name": "Restorative Westward Zone",
+        "dominant_feeling": "relief, greenery, and psychological distance",
+        "stress_1_5": 1,
+        "comfort_1_5": 5,
+        "boundary_type": "subjective, not administrative",
+        "analytical_use": "Compare personal perception with land use, noise, open space, transit, or pedestrian data."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.96915,
+              40.80525
+            ],
+            [
+              -73.96285,
+              40.80525
+            ],
+            [
+              -73.96285,
+              40.8072
+            ],
+            [
+              -73.96915,
+              40.8072
+            ],
+            [
+              -73.96915,
+              40.80525
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+field,geometry_scope,data_type,description
+feature_class,all,string,Distinguishes stops route segments full route and mental zones
+stop_id,point,string,Unique identifier for each daily stop
+sequence,point_or_line,integer,Order of movement through the day
+arrival_time,point,time,Approximate arrival time
+departure_time,point,time,Approximate departure time
+duration_min,point,integer,Approximate time spent at the stop
+place_type,point,string,Functional type of location
+activity,point,string,Primary activity at the location
+emotion_primary,point,string,Dominant emotional description
+emotion_valence_neg4_pos4,point,integer,Subjective emotional valence from negative four to positive four
+stress_1_5,point_or_polygon,integer,Subjective stress score
+energy_1_5,point,integer,Subjective energy score
+comfort_1_5,point_or_polygon,integer,Subjective comfort score
+familiarity_1_5,point,integer,Subjective familiarity score
+crowd_1_5,point,integer,Subjective crowding score
+noise_1_5,point,integer,Subjective noise score
+light_1_5,point,integer,Subjective brightness score
+greenery_1_5,point,integer,Subjective greenery score
+safety_1_5,point,integer,Subjective safety score
+social_interactions,point,integer,Approximate number of direct social interactions
+spending_usd,point,float,Approximate spending at the stop
+phone_use_min,point,integer,Approximate phone use
+distance_m_est,line,float,Estimated straight line segment length
+travel_time_min_est,line,integer,Estimated walking time
+experience,line,string,Short narrative of each route segment
+dominant_feeling,polygon,string,Dominant emotional quality of the mental zone
