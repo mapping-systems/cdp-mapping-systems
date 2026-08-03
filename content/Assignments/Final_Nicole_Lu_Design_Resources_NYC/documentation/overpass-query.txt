@@ -1,0 +1,16 @@
+[out:json][timeout:180];
+area(3600175905)->.searchArea;
+(
+  nwr["tourism"="museum"](area.searchArea);
+  nwr["tourism"="gallery"](area.searchArea);
+  nwr["amenity"="arts_centre"](area.searchArea);
+  nwr["amenity"="college"](area.searchArea);
+  nwr["amenity"="university"](area.searchArea);
+  nwr["amenity"="library"](area.searchArea);
+  nwr["craft"](area.searchArea);
+  nwr["community_centre"](area.searchArea);
+  nwr["club"="art"](area.searchArea);
+  nwr["office"="association"](area.searchArea);
+  nwr["makerspace"="yes"](area.searchArea);
+);
+out center tags;

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive map of design-related resources across New York City."
+    />
+    <title>Design Resources NYC</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css?v=20260729-3" />
+  </head>
+  <body>
+    <main class="map-shell">
+      <header class="app-bar">
+        <div class="app-mark" aria-hidden="true">DR</div>
+        <h1>Design Resources NYC</h1>
+        <p>Mapping Systems · Final Project</p>
+      </header>
+
+      <aside class="map-panel" aria-label="Map information and controls">
+        <section class="panel-intro">
+          <p>
+            An exploratory inventory of where people can learn, experience,
+            make, and connect with design in New York City.
+          </p>
+        </section>
+
+        <section class="mode-section">
+          <p class="panel-label">Map mode</p>
+          <div class="mode-switch" role="group" aria-label="Map mode">
+            <button type="button" data-mode="resources" aria-pressed="true">
+              Resources
+            </button>
+            <button type="button" data-mode="neighborhoods" aria-pressed="false">
+              Neighborhoods
+            </button>
+          </div>
+        </section>
+
+        <section class="total-block">
+          <p class="panel-label">Mapped resources</p>
+          <strong id="resource-total">128</strong>
+          <span>preliminary locations across NYC</span>
+        </section>
+
+        <section data-resource-panel>
+          <p class="panel-label">Resource layers</p>
+        <div class="layer-list">
+            <button type="button" data-category="learn">
+              <span class="layer-swatch"></span>
+              <span class="layer-name">Learn</span>
+              <span class="layer-count" data-count="learn">18</span>
+            </button>
+            <button type="button" data-category="experience">
+              <span class="layer-swatch"></span>
+              <span class="layer-name">Experience</span>
+              <span class="layer-count" data-count="experience">51</span>
+            </button>
+            <button type="button" data-category="make">
+              <span class="layer-swatch"></span>
+              <span class="layer-name">Make</span>
+              <span class="layer-count" data-count="make">38</span>
+            </button>
+            <button type="button" data-category="connect">
+              <span class="layer-swatch"></span>
+              <span class="layer-name">Connect</span>
+              <span class="layer-count" data-count="connect">21</span>
+            </button>
+        </div>
+        </section>
+
+        <section class="distribution" data-resource-panel>
+          <p class="panel-label">Category distribution</p>
+          <div class="distribution-bar" aria-label="Distribution by category">
+            <span data-bar="learn"></span>
+            <span data-bar="experience"></span>
+            <span data-bar="make"></span>
+            <span data-bar="connect"></span>
+          </div>
+        </section>
+
+        <section class="neighborhood-analysis" data-neighborhood-panel hidden>
+          <p class="panel-label">Resource concentration</p>
+          <div class="choropleth-legend">
+            <div><span data-level="0"></span><em>0</em></div>
+            <div><span data-level="1"></span><em>1–2</em></div>
+            <div><span data-level="2"></span><em>3–5</em></div>
+            <div><span data-level="3"></span><em>6–10</em></div>
+            <div><span data-level="4"></span><em>11+</em></div>
+          </div>
+          <dl class="analysis-stats">
+            <div>
+              <dt>Neighborhoods with resources</dt>
+              <dd id="neighborhoods-with-resources">—</dd>
+            </div>
+            <div>
+              <dt>NYC neighborhood average</dt>
+              <dd id="neighborhood-average">—</dd>
+            </div>
+          </dl>
+          <p class="method-note">
+            Counts show documented locations, not affordability, eligibility,
+            quality, or whether a resource is publicly accessible.
+          </p>
+        </section>
+
+        <button class="reset-map" id="reset-map" type="button">
+          Show all NYC resources
+        </button>
+        <p class="status" id="map-status">Preparing the map interface.</p>
+
+        <footer class="panel-footer">
+          NYC Open Data · DCLA · OpenStreetMap contributors
+        </footer>
+      </aside>
+
+      <div id="map" aria-label="Interactive map of New York City"></div>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+    <script src="js/map.js?v=20260729-5"></script>
+  </body>
+</html>

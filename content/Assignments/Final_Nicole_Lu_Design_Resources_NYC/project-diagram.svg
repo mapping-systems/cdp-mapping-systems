@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Design Resources NYC project workflow</title>
+  <desc id="desc">A workflow from source datasets through Python processing and spatial analysis to two interactive web-map views and future cross-city comparison.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#9daf48"/>
+    </marker>
+    <style>
+      .bg { fill: #10161a; }
+      .panel { fill: #182126; stroke: #3c484e; stroke-width: 2; }
+      .accent { fill: #c7da61; }
+      .title { fill: #f2f3ef; font: 700 42px Arial, Helvetica, sans-serif; }
+      .kicker { fill: #c7da61; font: 700 17px Arial, Helvetica, sans-serif; letter-spacing: 3px; }
+      .heading { fill: #f2f3ef; font: 700 24px Arial, Helvetica, sans-serif; }
+      .body { fill: #b7c0c3; font: 18px Arial, Helvetica, sans-serif; }
+      .small { fill: #8f9a9e; font: 15px Arial, Helvetica, sans-serif; }
+      .arrow { fill: none; stroke: #9daf48; stroke-width: 4; marker-end: url(#arrow); }
+      .future { fill: #141b1f; stroke: #8e65cc; stroke-width: 2; stroke-dasharray: 10 8; }
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <rect class="accent" x="70" y="69" width="8" height="96"/>
+  <text class="kicker" x="105" y="91">MAPPING SYSTEMS · FINAL PROJECT</text>
+  <text class="title" x="105" y="145">Design Resources NYC — Project Workflow</text>
+  <text class="body" x="105" y="181">From public spatial records to an exploratory map of resource concentration.</text>
+
+  <rect class="panel" x="70" y="255" rx="12" width="300" height="330"/>
+  <text class="kicker" x="100" y="295">01 · SOURCE DATA</text>
+  <text class="heading" x="100" y="342">Resource locations</text>
+  <text class="body" x="100" y="378">NYC Open Data</text>
+  <text class="body" x="100" y="410">Cultural Affairs</text>
+  <text class="body" x="100" y="442">OpenStreetMap</text>
+  <line x1="100" y1="470" x2="340" y2="470" stroke="#3c484e"/>
+  <text class="heading" x="100" y="510">Boundaries</text>
+  <text class="body" x="100" y="546">NYC Neighborhood</text>
+  <text class="body" x="100" y="574">Tabulation Areas</text>
+
+  <path class="arrow" d="M370 420 H435"/>
+
+  <rect class="panel" x="450" y="255" rx="12" width="300" height="330"/>
+  <text class="kicker" x="480" y="295">02 · PYTHON</text>
+  <text class="heading" x="480" y="342">Prepare records</text>
+  <text class="body" x="480" y="380">Normalize names</text>
+  <text class="body" x="480" y="412">Review inclusion</text>
+  <text class="body" x="480" y="444">Remove duplicates</text>
+  <text class="heading" x="480" y="500">Categorize</text>
+  <text class="body" x="480" y="538">Learn · Experience</text>
+  <text class="body" x="480" y="570">Make · Connect</text>
+
+  <path class="arrow" d="M750 420 H815"/>
+
+  <rect class="panel" x="830" y="255" rx="12" width="300" height="330"/>
+  <text class="kicker" x="860" y="295">03 · GEOPROCESS</text>
+  <text class="heading" x="860" y="342">Spatial join</text>
+  <text class="body" x="860" y="380">Assign each point</text>
+  <text class="body" x="860" y="412">to an NTA polygon</text>
+  <text class="heading" x="860" y="476">Aggregate</text>
+  <text class="body" x="860" y="514">Total resources</text>
+  <text class="body" x="860" y="546">Counts by category</text>
+  <text class="small" x="860" y="574">Export map-ready GeoJSON</text>
+
+  <path class="arrow" d="M1130 420 H1195"/>
+
+  <rect class="panel" x="1210" y="255" rx="12" width="320" height="330"/>
+  <text class="kicker" x="1240" y="295">04 · WEB MAP</text>
+  <text class="heading" x="1240" y="342">Resources view</text>
+  <text class="body" x="1240" y="380">Filter categories</text>
+  <text class="body" x="1240" y="412">Inspect locations</text>
+  <text class="heading" x="1240" y="476">Neighborhood view</text>
+  <text class="body" x="1240" y="514">Compare concentration</text>
+  <text class="body" x="1240" y="546">Read counts and shares</text>
+
+  <path class="arrow" d="M1370 585 V650"/>
+  <rect class="future" x="830" y="670" rx="12" width="700" height="150"/>
+  <text class="kicker" x="860" y="710" fill="#b995ee">FUTURE EXTENSION</text>
+  <text class="heading" x="860" y="752">Compare access across cities and regions</text>
+  <text class="body" x="860" y="790">Taipei + another city · consistent categories · travel time · cost · eligibility</text>
+
+  <text class="small" x="70" y="850">Primary course connection: Web Map Visualization · Supporting methods: Loading and Visualizing Data + Geoprocessing</text>
+</svg>
