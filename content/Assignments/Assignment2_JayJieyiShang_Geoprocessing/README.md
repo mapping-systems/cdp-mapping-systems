@@ -1,0 +1,7 @@
+## Narrative & Project Statement
+My urban narrative focuses on exploring the spatial rhythms and everyday life experiences in Manhattan. This project maps my personal weekend urbanity, capturing key touchpoints of my routine—such as the **art museums** I visit for inspiration, **dining spots** for social relaxation, and various **shopping hubs** where I engage with the city's retail culture. By digitalizing these nodes and connecting them with my primary transit spine (the subway A line), this project translates subjective urban memory into a structured spatial dataset. 
+
+To expand this personal narrative into a broader urban context, this project integrates the official NYC Museum dataset. Through this integration, the project establishes a geoprocessing workflow that moves from individual perception to macro-scale spatial analysis:
+1. **Personal Footprint**: Capturing how personal mobility—from gallery-hopping and dining to retail exploration—anchors to specific urban corridors (e.g., the transit commute along the A line).
+2. **Contextual Infrastructure**: Utilizing official datasets to examine the density and distribution of cultural and commercial resources relative to my weekend activity spheres.
+3. **Spatial Analytics**: Proposing a buffer and intersection workflow to evaluate the accessibility and overlap between my weekend routines and municipal cultural amenities.
