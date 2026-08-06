@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b49662232ff53f84fe15301fc595199f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b49662232ff53f84fe15301fc595199f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b49662232ff53f84fe15301fc595199f = L.map(
+                "map_b49662232ff53f84fe15301fc595199f",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3947a0a0868d67ca1ca955831f77c950 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3947a0a0868d67ca1ca955831f77c950.addTo(map_b49662232ff53f84fe15301fc595199f);
+        
+    
+            var marker_cluster_29c02f358b7a4fb9e67d2a2ca94fd32b = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_380070e2331f3b4741b3f2af19bcebf0 = L.marker(
+                [39.0062, -77.4286],
+                {
+}
+            ).addTo(marker_cluster_29c02f358b7a4fb9e67d2a2ca94fd32b);
+        
+    
+            var icon_35c1440627572a2dac4e5ddd900b2d01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cbbdf810173832e61740fdc49287489 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_828ca665bbfbca3e1f109fe1e77071f8 = $(`<div id="html_828ca665bbfbca3e1f109fe1e77071f8" style="width: 100.0%; height: 100.0%;">IP: 208.80.154.224<br>URL: https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@2x.png</div>`)[0];
+                popup_3cbbdf810173832e61740fdc49287489.setContent(html_828ca665bbfbca3e1f109fe1e77071f8);
+            
+        
+
+        marker_380070e2331f3b4741b3f2af19bcebf0.bindPopup(popup_3cbbdf810173832e61740fdc49287489)
+        ;
+
+        
+    
+    
+                marker_380070e2331f3b4741b3f2af19bcebf0.setIcon(icon_35c1440627572a2dac4e5ddd900b2d01);
+            
+    
+            marker_cluster_29c02f358b7a4fb9e67d2a2ca94fd32b.addTo(map_b49662232ff53f84fe15301fc595199f);
+        
+</script>
+</html>
