@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Plaza image placeholder</title>
+  <desc id="desc">A geometric placeholder that will be replaced by a street-level plaza image.</desc>
+  <rect width="800" height="450" fill="#e8e3d9"/>
+  <path d="M0 330L230 245L390 292L585 185L800 260V450H0Z" fill="#c8c0b2"/>
+  <path d="M0 365L240 285L405 330L585 225L800 300" fill="none" stroke="#20242a" stroke-width="6"/>
+  <circle cx="610" cy="100" r="42" fill="#d5a53c" stroke="#20242a" stroke-width="4"/>
+  <text x="42" y="72" fill="#20242a" font-family="Arial, sans-serif" font-size="28" font-weight="700">STREET VIEW IMAGE</text>
+  <text x="42" y="108" fill="#626a73" font-family="Arial, sans-serif" font-size="20">To be added before the final presentation</text>
+</svg>

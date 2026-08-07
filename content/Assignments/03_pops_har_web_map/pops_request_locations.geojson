@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Server locations observed while loading Public by Requirement",
+    "capture_target": "https://krishna-397.github.io/Krishna-s-MAPPING-SYSTEMS-COPY/",
+    "capture_date": "2026-08-07",
+    "method_note": "Locations are approximate IP registrations or CDN edges, not POPS or users."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "2606:50c0:8001::153",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      },
+      "properties": {
+        "ip": "2606:50c0:8001::153",
+        "service": "GitHub Pages",
+        "hostnames": [
+          "krishna-397.github.io"
+        ],
+        "request_count": 5,
+        "response_bytes": 779370,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS54113 Fastly, Inc.",
+        "geolocation_source": "ipinfo.io lookup on 2026-08-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2606:4700::6812:116",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      },
+      "properties": {
+        "ip": "2606:4700::6812:116",
+        "service": "MapLibre library",
+        "hostnames": [
+          "unpkg.com"
+        ],
+        "request_count": 2,
+        "response_bytes": 1083304,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS13335 Cloudflare, Inc.",
+        "geolocation_source": "ipinfo.io lookup on 2026-08-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "151.101.46.132",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7143
+        ]
+      },
+      "properties": {
+        "ip": "151.101.46.132",
+        "service": "CARTO basemap",
+        "hostnames": [
+          "basemaps.cartocdn.com",
+          "tiles-a.basemaps.cartocdn.com",
+          "tiles-b.basemaps.cartocdn.com",
+          "tiles-c.basemaps.cartocdn.com",
+          "tiles-d.basemaps.cartocdn.com"
+        ],
+        "request_count": 7,
+        "response_bytes": 610850,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "organization": "AS54113 Fastly, Inc.",
+        "geolocation_source": "ipinfo.io lookup on 2026-08-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "199.232.90.132",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1724,
+          40.7357
+        ]
+      },
+      "properties": {
+        "ip": "199.232.90.132",
+        "service": "CARTO basemap",
+        "hostnames": [
+          "tiles.basemaps.cartocdn.com"
+        ],
+        "request_count": 5,
+        "response_bytes": 204270,
+        "city": "Newark",
+        "region": "New Jersey",
+        "country": "US",
+        "organization": "AS54113 Fastly, Inc.",
+        "geolocation_source": "ipinfo.io lookup on 2026-08-07"
+      }
+    }
+  ]
+}

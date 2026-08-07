@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sixth Avenue study area",
+        "note": "Analytical envelope around the 15 selected developments; not an official administrative boundary."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.98619602032188,
+              40.754154
+            ],
+            [
+              -73.98287028288425,
+              40.754154
+            ],
+            [
+              -73.97602816378169,
+              40.763875
+            ],
+            [
+              -73.97935390121933,
+              40.763875
+            ],
+            [
+              -73.98619602032188,
+              40.754154
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

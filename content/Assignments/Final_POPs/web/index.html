@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A presentation examining legally documented amenities in outdoor privately owned public spaces along Sixth Avenue in Midtown Manhattan."
+    />
+    <title>Public by Requirement</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2238%22 fill=%22%23d5a53c%22 stroke=%22%2320242a%22 stroke-width=%226%22/></svg>"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="style.css?v=editorial-20260807" />
+    <script src="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.js"></script>
+  </head>
+  <body>
+    <div class="presentation-shell">
+      <main class="presentation-stage" id="presentation-stage">
+        <section class="slide slide-title active" data-title="Introduction">
+          <div class="title-copy">
+            <p class="eyebrow">Mapping Systems · Final Project</p>
+            <h1>Public by<br />Requirement</h1>
+            <p class="title-dek">
+              A data-driven examination of legally required public amenities in
+              fifteen outdoor plaza developments along Sixth Avenue.
+            </p>
+            <button class="text-button" id="begin-button" type="button">
+              Begin the project →
+            </button>
+          </div>
+          <div class="title-figure" aria-label="Project summary">
+            <span class="avenue-line"></span>
+            <div class="title-stat stat-one"><strong>15</strong><span>plaza developments</span></div>
+            <div class="title-stat stat-two"><strong>240k</strong><span>documented plaza sq. ft.</span></div>
+            <div class="title-stat stat-three"><strong>3</strong><span>with no required amenities</span></div>
+          </div>
+          <p class="slide-source">Krishna Goyal · Columbia GSAPP · 2026</p>
+        </section>
+
+        <section class="slide slide-question" id="question" data-title="Research question">
+          <div class="slide-heading">
+            <p class="eyebrow">01 · Premise</p>
+            <h2>Public access is promised uniformly. Public benefit is not.</h2>
+          </div>
+          <div class="question-grid">
+            <p class="large-copy">
+              Privately owned public spaces—or POPS—are provided and maintained
+              by private property owners in exchange for zoning benefits.
+            </p>
+            <blockquote>
+              If these outdoor plazas share an obligation to provide public
+              access, how consistent is the breadth of amenities they are
+              required to provide?
+            </blockquote>
+          </div>
+          <p class="slide-source">Source: NYC Department of City Planning, Privately Owned Public Spaces</p>
+        </section>
+
+        <section class="slide slide-scope" id="scope" data-title="Study area">
+          <div class="scope-copy">
+            <p class="eyebrow">02 · Study area</p>
+            <h2>One corridor makes unequal requirements easier to see.</h2>
+            <p class="large-copy">
+              The study follows Sixth Avenue from approximately West 42nd to West
+              57th Street. Holding the corridor relatively constant focuses the
+              comparison on documented requirements rather than broad neighborhood
+              differences.
+            </p>
+          </div>
+          <div class="scope-stats">
+            <article><strong>15</strong><span>developments containing an outdoor plaza</span></article>
+            <article><strong>1964–1984</strong><span>building completion years</span></article>
+            <article><strong>24 hours</strong><span>access included at every development</span></article>
+          </div>
+          <div class="corridor-mark" aria-hidden="true"><span></span></div>
+        </section>
+
+        <section class="slide slide-method" id="method" data-title="Method">
+          <div class="slide-heading compact-heading">
+            <p class="eyebrow">03 · Method</p>
+            <h2>A reproducible path from city data to an interactive argument.</h2>
+          </div>
+          <div class="process" aria-label="Project process diagram">
+            <article><span>1</span><strong>Acquire</strong><p>Download NYC POPS records through the Open Data API.</p></article>
+            <i>→</i>
+            <article><span>2</span><strong>Filter</strong><p>Select Sixth Avenue developments with an outdoor plaza component.</p></article>
+            <i>→</i>
+            <article><span>3</span><strong>Parse</strong><p>Extract plaza area, access hours, and required amenities.</p></article>
+            <i>→</i>
+            <article><span>4</span><strong>Score</strong><p>Compare seven equally weighted amenity groups.</p></article>
+            <i>→</i>
+            <article><span>5</span><strong>Map</strong><p>Export GeoJSON and visualize the corridor with MapLibre.</p></article>
+          </div>
+          <div class="score-formula">
+            <strong>Documented Provision Score</strong>
+            <p>Seating · Tables · Landscape · Lighting · Public signage · Litter receptacles · Water</p>
+            <span>Each group contributes equally to a transparent 0–100 score.</span>
+          </div>
+        </section>
+
+        <section class="slide slide-findings" id="findings" data-title="Findings">
+          <div class="findings-title">
+            <p class="eyebrow">04 · Findings</p>
+            <h2>The right to enter does not guarantee support for staying.</h2>
+          </div>
+          <div class="finding-grid">
+            <article><strong>15/15</strong><p>include a 24-hour public-access requirement.</p></article>
+            <article class="contrast"><strong>3/15</strong><p>list no required amenities in the official record.</p></article>
+            <article><strong>11/15</strong><p>require seating—the most direct support for occupying a plaza.</p></article>
+          </div>
+          <div class="coverage-layout">
+            <div>
+              <p class="eyebrow">Amenity coverage</p>
+              <h3>Basic occupation and maintenance are common, but not universal.</h3>
+            </div>
+            <div id="coverage-chart" class="coverage-chart" aria-label="Required amenity coverage chart"></div>
+          </div>
+        </section>
+
+        <section class="slide slide-map" id="map-section" data-title="Interactive map">
+          <div class="map-slide-heading">
+            <div>
+              <p class="eyebrow">05 · Interactive map</p>
+              <h2>Provision changes block by block.</h2>
+            </div>
+            <p>
+              Gray dots show all other Manhattan POPS. The outlined boundary marks
+              the study corridor; within it, color and size describe the selected 15.
+            </p>
+          </div>
+          <div class="map-layout" data-interactive>
+            <section class="map-panel" aria-label="Interactive map of outdoor POPS">
+              <div id="map"></div>
+              <div class="legend" aria-label="Map legend">
+                <p>Documented Provision Score</p>
+                <div><span class="dot limited"></span>Limited (0–42)</div>
+                <div><span class="dot moderate"></span>Moderate (43–70)</div>
+                <div><span class="dot extensive"></span>Extensive (71–100)</div>
+                <div><span class="dot context"></span>Other Manhattan POPS</div>
+                <div><span class="boundary-key"></span>Sixth Avenue study area</div>
+                <small>Circle size represents documented plaza area.</small>
+              </div>
+            </section>
+
+            <aside class="sidebar">
+              <section>
+                <p class="section-label">Corridor summary</p>
+                <div class="metrics">
+                  <article><strong id="site-count">—</strong><span>developments</span></article>
+                  <article><strong id="area-count">—</strong><span>plaza sq. ft.</span></article>
+                  <article><strong id="zero-count">—</strong><span>list no required amenities</span></article>
+                </div>
+              </section>
+
+              <section>
+                <p class="section-label">Filter the corridor</p>
+                <div class="filters" role="group" aria-label="Provision score filter">
+                  <button class="active" data-filter="All">All</button>
+                  <button data-filter="Limited">Limited</button>
+                  <button data-filter="Moderate">Moderate</button>
+                  <button data-filter="Extensive">Extensive</button>
+                </div>
+              </section>
+
+              <section id="selected-plaza" class="selected-plaza" aria-live="polite">
+                <div class="selected-placeholder">
+                  <p class="section-label">Selected plaza</p>
+                  <strong>Choose a point on the map</strong>
+                  <span>Its image, score, and official requirements will appear here.</span>
+                </div>
+              </section>
+
+              <section class="map-finding">
+                <p class="section-label">The central contrast</p>
+                <p id="finding-text">Loading documented results…</p>
+              </section>
+
+              <section>
+                <p class="section-label">Plazas by score</p>
+                <ol id="plaza-list" class="plaza-list"></ol>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide slide-cases" id="cases" data-title="Three contrasts">
+          <div class="slide-heading compact-heading">
+            <p class="eyebrow">06 · Contrasts</p>
+            <h2>Comparable access requirements can produce very different records.</h2>
+          </div>
+          <div id="case-studies" class="case-studies" data-interactive></div>
+        </section>
+
+        <section class="slide slide-reflection" id="reflection" data-title="Reflection">
+          <div class="reflection-grid">
+            <div>
+              <p class="eyebrow">07 · Limits</p>
+              <h2>The database maps obligation, not experience.</h2>
+              <p>
+                The official record does not confirm whether amenities are currently
+                present, maintained, welcoming, or equally accessible. Mixed
+                developments may aggregate several public-space components.
+              </p>
+            </div>
+            <div>
+              <p class="eyebrow">Looking forward</p>
+              <h2>The next step is verification.</h2>
+              <p>
+                A future version would compare legal records against current imagery,
+                accessibility audits, and field observations—shifting the question
+                from what is promised to what the public can actually use.
+              </p>
+            </div>
+          </div>
+          <div class="sources">
+            <strong>Sources</strong>
+            <span>NYC Department of City Planning, Privately Owned Public Spaces</span>
+            <span>NYC Open Data dataset rvih-nhyn</span>
+            <span>Analysis and visualization: Krishna Goyal, 2026</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="presentation-ui" aria-live="polite">
+      <span class="project-label">Public by Requirement</span>
+      <span id="slide-title">Introduction</span>
+      <span id="slide-counter">1 / 8</span>
+    </div>
+
+    <button class="edge-control edge-control-left" id="previous-slide" type="button" aria-label="Previous slide">←</button>
+    <button class="edge-control edge-control-right" id="next-slide" type="button" aria-label="Next slide">→</button>
+    <p class="navigation-hint">Click left / right · Arrow keys also work</p>
+
+    <script src="data/pops-data.js?v=20260807"></script>
+    <script src="main.js?v=editorial-20260807"></script>
+  </body>
+</html>

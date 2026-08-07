@@ -1,0 +1,291 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "origin_bryant_park",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98455,
+          40.75436
+        ]
+      },
+      "properties": {
+        "name": "42 St\u2013Bryant Park station entrance",
+        "role": "origin",
+        "source": "approximate mapped entrance at Sixth Avenue and West 42nd Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050060",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985006,
+          40.754754
+        ]
+      },
+      "properties": {
+        "name": "1095 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050060",
+        "provision_score": 100,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050057",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982848,
+          40.754825
+        ]
+      },
+      "properties": {
+        "name": "1114 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050057",
+        "provision_score": 100,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050055",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.983866,
+          40.756057
+        ]
+      },
+      "properties": {
+        "name": "1133 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050055",
+        "provision_score": 57,
+        "score_band": "Moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050054",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98336,
+          40.756672
+        ]
+      },
+      "properties": {
+        "name": "1155 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050054",
+        "provision_score": 86,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050052",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981851,
+          40.75682
+        ]
+      },
+      "properties": {
+        "name": "1166 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050052",
+        "provision_score": 100,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050048",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982519,
+          40.757899
+        ]
+      },
+      "properties": {
+        "name": "1185 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050048",
+        "provision_score": 71,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050047",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982399,
+          40.758664
+        ]
+      },
+      "properties": {
+        "name": "1211 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050047",
+        "provision_score": 14,
+        "score_band": "Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050043",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982067,
+          40.759381
+        ]
+      },
+      "properties": {
+        "name": "1221 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050043",
+        "provision_score": 86,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981612,
+          40.759971
+        ]
+      },
+      "properties": {
+        "name": "1251 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050042",
+        "provision_score": 0,
+        "score_band": "Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980533,
+          40.761165
+        ]
+      },
+      "properties": {
+        "name": "1285 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050037",
+        "provision_score": 100,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980027,
+          40.761768
+        ]
+      },
+      "properties": {
+        "name": "1301 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050030",
+        "provision_score": 0,
+        "score_band": "Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050026",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.978478,
+          40.761966
+        ]
+      },
+      "properties": {
+        "name": "1330 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050026",
+        "provision_score": 86,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977778,
+          40.762575
+        ]
+      },
+      "properties": {
+        "name": "1350 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050022",
+        "provision_score": 0,
+        "score_band": "Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.979254,
+          40.763064
+        ]
+      },
+      "properties": {
+        "name": "1345 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050021",
+        "provision_score": 100,
+        "score_band": "Extensive"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977471,
+          40.763275
+        ]
+      },
+      "properties": {
+        "name": "1370 SIXTH AVENUE",
+        "role": "destination POPS",
+        "pops_number": "M050019",
+        "provision_score": 57,
+        "score_band": "Moderate"
+      }
+    }
+  ]
+}

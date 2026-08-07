@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A HAR-based map of the web infrastructure observed while loading the Public by Requirement POPS project." />
+    <title>Behind the POPS Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header>
+        <p class="eyebrow">Assignment 03 · HAR Web Mapping</p>
+        <h1>Behind the POPS Map</h1>
+        <p class="dek">
+          A single public-space map depends on a distributed web infrastructure.
+          This view maps the approximate server locations observed while loading
+          <em>Public by Requirement</em>.
+        </p>
+      </header>
+
+      <section class="metrics" aria-label="Capture summary">
+        <article><strong id="request-count">—</strong><span>mapped requests</span></article>
+        <article><strong id="server-count">—</strong><span>server IPs</span></article>
+        <article><strong id="host-count">—</strong><span>hostnames</span></article>
+      </section>
+
+      <section class="map-layout">
+        <div id="map" aria-label="Interactive map of approximate server locations"></div>
+        <aside>
+          <div>
+            <p class="section-label">Observed services</p>
+            <div class="legend">
+              <span><i class="github"></i>GitHub Pages</span>
+              <span><i class="library"></i>MapLibre library</span>
+              <span><i class="basemap"></i>CARTO basemap</span>
+            </div>
+          </div>
+          <div>
+            <p class="section-label">Servers</p>
+            <ol id="server-list"></ol>
+          </div>
+          <div class="caveat">
+            <p class="section-label">Read carefully</p>
+            <p>
+              These points approximate IP registrations or CDN edges. They do
+              not locate POPS, website users, or necessarily the origin of the content.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        <span>Capture: 7 August 2026</span>
+        <span>IP geolocation: ipinfo.io</span>
+        <span>Map: MapLibre GL JS</span>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
