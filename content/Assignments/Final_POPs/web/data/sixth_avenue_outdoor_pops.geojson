@@ -1,0 +1,619 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Outdoor POPS along Sixth Avenue",
+    "study_area": "Sixth Avenue corridor, approximately West 42nd to West 57th Streets",
+    "selection_rule": "Manhattan developments on Sixth Avenue containing an outdoor plaza type; covered, enclosed, and interior-only types excluded.",
+    "source": "NYC Department of City Planning, Privately Owned Public Spaces (POPS), dataset rvih-nhyn, downloaded 2026-08-06.",
+    "source_url": "https://data.cityofnewyork.us/resource/rvih-nhyn",
+    "method_note": "Counts describe legally documented required amenities at each development, not present-day condition or user experience.",
+    "summary": {
+      "development_count": 15,
+      "total_documented_plaza_area_sf": 240489,
+      "zero_required_amenities": 3,
+      "seating_required": 11,
+      "tables_required": 8,
+      "landscape_required": 11,
+      "lighting_required": 11,
+      "signage_required": 10,
+      "water_required": 7,
+      "twenty_four_hour_access": 15,
+      "median_required_amenities": 9.0,
+      "median_provision_score": 86,
+      "largest_plaza": "1345 SIXTH AVENUE",
+      "largest_plaza_area_sf": 30171,
+      "limited_count": 4,
+      "moderate_count": 2,
+      "extensive_count": 9,
+      "year_min": 1964,
+      "year_max": 1984
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "M050060",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985006,
+          40.754754
+        ]
+      },
+      "properties": {
+        "pops_number": "M050060",
+        "corridor_order": 1,
+        "address": "1095 SIXTH AVENUE",
+        "building_name": "Bell Atlantic",
+        "year": 1971,
+        "era": "1970s",
+        "public_space_type": "Special Permit Plaza; Subway Concourse",
+        "plaza_area_sf": 17034.18,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 13,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 100,
+        "score_band": "Extensive",
+        "image_path": "images/M050060.jpg",
+        "amenities_required": "Artwork; Bicycle Parking; Drinking Fountain; Lighting; Litter Receptacles; Planting; Plaque/Sign; Programs; Seating; Subway; Tables; Trees on Street; Trees within Space",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050057",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982848,
+          40.754825
+        ]
+      },
+      "properties": {
+        "pops_number": "M050057",
+        "corridor_order": 2,
+        "address": "1114 SIXTH AVENUE",
+        "building_name": "Grace",
+        "year": 1971,
+        "era": "1970s",
+        "public_space_type": "Arcade; Plaza",
+        "plaza_area_sf": 19659.59,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 10,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 100,
+        "score_band": "Extensive",
+        "image_path": "images/M050057.jpg",
+        "amenities_required": "Bicycle Parking; Drinking Fountain; Lighting; Litter Receptacles; None; Planting; Plaque/Sign; Retail Frontage; Seating; Tables; Trees within Space",
+        "other_required": "",
+        "permitted_amenities": "Open Air Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050055",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.983866,
+          40.756057
+        ]
+      },
+      "properties": {
+        "pops_number": "M050055",
+        "corridor_order": 3,
+        "address": "1133 SIXTH AVENUE",
+        "building_name": "",
+        "year": 1969,
+        "era": "1960s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 5177.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 4,
+        "amenity_level": "Moderate",
+        "has_seating": true,
+        "has_tables": false,
+        "has_landscape": true,
+        "has_lighting": false,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": false,
+        "provision_score": 57,
+        "score_band": "Moderate",
+        "image_path": "images/M050055.jpg",
+        "amenities_required": "Litter Receptacles; Planting; Plaque/Sign; Seating",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050054",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98336,
+          40.756672
+        ]
+      },
+      "properties": {
+        "pops_number": "M050054",
+        "corridor_order": 4,
+        "address": "1155 SIXTH AVENUE",
+        "building_name": "",
+        "year": 1983,
+        "era": "1980s",
+        "public_space_type": "Arcade; Sidewalk Widening; Urban Plaza",
+        "plaza_area_sf": 4258.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 10,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": false,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 86,
+        "score_band": "Extensive",
+        "image_path": "images/M050054.jpg",
+        "amenities_required": "Bicycle Parking; Drinking Fountain; Lighting; Litter Receptacles; None; Planting; Plaque/Sign; Retail Frontage; Seating; Trees on Street; Trees within Space",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050052",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981851,
+          40.75682
+        ]
+      },
+      "properties": {
+        "pops_number": "M050052",
+        "corridor_order": 5,
+        "address": "1166 SIXTH AVENUE",
+        "building_name": "",
+        "year": 1972,
+        "era": "1970s",
+        "public_space_type": "Arcade; Plaza; Through Block Plaza",
+        "plaza_area_sf": 22794.5,
+        "hour_of_access_required": "24 Hours; Restricted Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 12,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 100,
+        "score_band": "Extensive",
+        "image_path": "images/M050052.jpg",
+        "amenities_required": "Artwork; Bicycle Parking; Drinking Fountain; Lighting; Litter Receptacles; Other Required; Planting; Plaque/Sign; Seating; Tables; Trees on Street; Trees within Space; Water Feature",
+        "other_required": "florist or food concession adjacent to the Through Block Plaza",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050048",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982519,
+          40.757899
+        ]
+      },
+      "properties": {
+        "pops_number": "M050048",
+        "corridor_order": 6,
+        "address": "1185 SIXTH AVENUE",
+        "building_name": "Stevens Tower",
+        "year": 1970,
+        "era": "1970s",
+        "public_space_type": "Basement Concourse; Landscaped Pedestrian Plaza; Special Permit Plaza",
+        "plaza_area_sf": 16129.37,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "None documented",
+        "amenity_count": 9,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": false,
+        "has_litter": false,
+        "has_water": true,
+        "provision_score": 71,
+        "score_band": "Extensive",
+        "image_path": "images/M050048.jpg",
+        "amenities_required": "Escalator; Food Service; Lighting; Other Required; Planting; Seating; Subway; Tables; Trees within Space; Water Feature",
+        "other_required": "legitimate theater of 300 to 450 seats below grade and accessed from the Landscaped Pedestrian Plaza",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050047",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982399,
+          40.758664
+        ]
+      },
+      "properties": {
+        "pops_number": "M050047",
+        "corridor_order": 7,
+        "address": "1211 SIXTH AVENUE",
+        "building_name": "1211 Avenue of the Americas",
+        "year": 1973,
+        "era": "1970s",
+        "public_space_type": "Plaza; Subway Concourse; Through Block Arcade",
+        "plaza_area_sf": 21872.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 4,
+        "amenity_level": "Moderate",
+        "has_seating": false,
+        "has_tables": false,
+        "has_landscape": false,
+        "has_lighting": true,
+        "has_signage": false,
+        "has_litter": false,
+        "has_water": false,
+        "provision_score": 14,
+        "score_band": "Limited",
+        "image_path": "images/M050047.jpg",
+        "amenities_required": "Escalator; Lighting; None; Retail Frontage; Subway",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050043",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982067,
+          40.759381
+        ]
+      },
+      "properties": {
+        "pops_number": "M050043",
+        "corridor_order": 8,
+        "address": "1221 SIXTH AVENUE",
+        "building_name": "McGraw-Hill",
+        "year": 1971,
+        "era": "1970s",
+        "public_space_type": "Plaza; Sunken Plaza",
+        "plaza_area_sf": 28613.17,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 10,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": false,
+        "provision_score": 86,
+        "score_band": "Extensive",
+        "image_path": "images/M050043.jpg",
+        "amenities_required": "Bicycle Parking; Lighting; Litter Receptacles; Planting; Plaque/Sign; Retail Frontage; Seating; Subway; Tables; Trees within Space",
+        "other_required": "",
+        "permitted_amenities": "Open Air Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981612,
+          40.759971
+        ]
+      },
+      "properties": {
+        "pops_number": "M050042",
+        "corridor_order": 9,
+        "address": "1251 SIXTH AVENUE",
+        "building_name": "1251 Avenue of the Americas",
+        "year": 1970,
+        "era": "1970s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 29819.9,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 0,
+        "amenity_level": "Limited",
+        "has_seating": false,
+        "has_tables": false,
+        "has_landscape": false,
+        "has_lighting": false,
+        "has_signage": false,
+        "has_litter": false,
+        "has_water": false,
+        "provision_score": 0,
+        "score_band": "Limited",
+        "image_path": "images/M050042.jpg",
+        "amenities_required": "None",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980533,
+          40.761165
+        ]
+      },
+      "properties": {
+        "pops_number": "M050037",
+        "corridor_order": 10,
+        "address": "1285 SIXTH AVENUE",
+        "building_name": "PaineWebber",
+        "year": 1984,
+        "era": "1980s",
+        "public_space_type": "Pedestrian Circulation Space; Sidewalk Widening; Through Block Galleria; Urban Plaza",
+        "plaza_area_sf": 9944.1,
+        "hour_of_access_required": "24 Hours; Restricted Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 13,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 100,
+        "score_band": "Extensive",
+        "image_path": "images/M050037.jpg",
+        "amenities_required": "Artwork; Drinking Fountain; Escalator; Lighting; Litter Receptacles; None; Planting; Plaque/Sign; Retail Frontage; Seating; Tables; Trees on Street; Trees within Space; Water Feature",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980027,
+          40.761768
+        ]
+      },
+      "properties": {
+        "pops_number": "M050030",
+        "corridor_order": 11,
+        "address": "1301 SIXTH AVENUE",
+        "building_name": "",
+        "year": 1964,
+        "era": "1960s",
+        "public_space_type": "Arcade; Plaza",
+        "plaza_area_sf": 18376.07,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 0,
+        "amenity_level": "Limited",
+        "has_seating": false,
+        "has_tables": false,
+        "has_landscape": false,
+        "has_lighting": false,
+        "has_signage": false,
+        "has_litter": false,
+        "has_water": false,
+        "provision_score": 0,
+        "score_band": "Limited",
+        "image_path": "images/M050030.jpg",
+        "amenities_required": "None",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050026",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.978478,
+          40.761966
+        ]
+      },
+      "properties": {
+        "pops_number": "M050026",
+        "corridor_order": 12,
+        "address": "1330 SIXTH AVENUE",
+        "building_name": "",
+        "year": 1965,
+        "era": "1960s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 6312.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 8,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": false,
+        "provision_score": 86,
+        "score_band": "Extensive",
+        "image_path": "images/M050026.jpg",
+        "amenities_required": "Artwork; Lighting; Litter Receptacles; Planting; Plaque/Sign; Retail Frontage; Seating; Tables",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977778,
+          40.762575
+        ]
+      },
+      "properties": {
+        "pops_number": "M050022",
+        "corridor_order": 13,
+        "address": "1350 SIXTH AVENUE",
+        "building_name": "Men's Apparel",
+        "year": 1966,
+        "era": "1960s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 5879.5,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 0,
+        "amenity_level": "Limited",
+        "has_seating": false,
+        "has_tables": false,
+        "has_landscape": false,
+        "has_lighting": false,
+        "has_signage": false,
+        "has_litter": false,
+        "has_water": false,
+        "provision_score": 0,
+        "score_band": "Limited",
+        "image_path": "images/M050022.jpg",
+        "amenities_required": "None",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.979254,
+          40.763064
+        ]
+      },
+      "properties": {
+        "pops_number": "M050021",
+        "corridor_order": 14,
+        "address": "1345 SIXTH AVENUE",
+        "building_name": "Alliance Capital",
+        "year": 1968,
+        "era": "1960s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 30171.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 11,
+        "amenity_level": "Extensive",
+        "has_seating": true,
+        "has_tables": true,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": true,
+        "has_water": true,
+        "provision_score": 100,
+        "score_band": "Extensive",
+        "image_path": "images/M050021.jpg",
+        "amenities_required": "Artwork; Bicycle Parking; Drinking Fountain; Lighting; Litter Receptacles; Planting; Plaque/Sign; Seating; Tables; Trees within Space; Water Feature",
+        "other_required": "",
+        "permitted_amenities": "Open Air Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977471,
+          40.763275
+        ]
+      },
+      "properties": {
+        "pops_number": "M050019",
+        "corridor_order": 15,
+        "address": "1370 SIXTH AVENUE",
+        "building_name": "1370 Avenue of the Americas",
+        "year": 1971,
+        "era": "1970s",
+        "public_space_type": "Plaza",
+        "plaza_area_sf": 4449.0,
+        "hour_of_access_required": "24 Hours",
+        "has_24h_access": true,
+        "accessibility": "Full or partial",
+        "amenity_count": 4,
+        "amenity_level": "Moderate",
+        "has_seating": true,
+        "has_tables": false,
+        "has_landscape": true,
+        "has_lighting": true,
+        "has_signage": true,
+        "has_litter": false,
+        "has_water": false,
+        "provision_score": 57,
+        "score_band": "Moderate",
+        "image_path": "images/M050019.jpg",
+        "amenities_required": "Lighting; Planting; Plaque/Sign; Seating",
+        "other_required": "",
+        "permitted_amenities": ""
+      }
+    }
+  ]
+}

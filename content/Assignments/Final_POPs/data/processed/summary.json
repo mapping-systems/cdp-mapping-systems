@@ -1,0 +1,21 @@
+{
+  "development_count": 15,
+  "total_documented_plaza_area_sf": 240489,
+  "zero_required_amenities": 3,
+  "seating_required": 11,
+  "tables_required": 8,
+  "landscape_required": 11,
+  "lighting_required": 11,
+  "signage_required": 10,
+  "water_required": 7,
+  "twenty_four_hour_access": 15,
+  "median_required_amenities": 9.0,
+  "median_provision_score": 86,
+  "largest_plaza": "1345 SIXTH AVENUE",
+  "largest_plaza_area_sf": 30171,
+  "limited_count": 4,
+  "moderate_count": 2,
+  "extensive_count": 9,
+  "year_min": 1964,
+  "year_max": 1984
+}
