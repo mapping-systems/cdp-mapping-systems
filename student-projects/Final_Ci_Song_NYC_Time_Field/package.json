@@ -1,0 +1,62 @@
+{
+  "name": "nyc-time-field",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev -H 127.0.0.1",
+    "prebuild": "npm run worker:build",
+    "build": "npm run build:app && node scripts/export_pages.mjs",
+    "build:app": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "build:pages": "npm run build",
+    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/model-contract.test.mjs",
+    "test:e2e": "npm run build && playwright test",
+    "data:build": "python scripts/build_all.py",
+    "data:validate": "python scripts/06_validate_assets.py",
+    "worker:build": "esbuild app/workers/commute.worker.ts --bundle --format=esm --target=es2022 --outfile=public/commute.worker.js",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/vendor --ignore-pattern playwright-report --ignore-pattern test-results",
+    "typecheck": "tsc --noEmit --incremental false",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.2.0",
+    "d3": "^7.9.0",
+    "drizzle-orm": "0.45.2",
+    "h3-js": "^4.3.0",
+    "maplibre-gl": "^5.6.2",
+    "next": "^16.2.12",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "@playwright/test": "^1.62.0",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "esbuild": "^0.28.1",
+    "eslint": "9.39.4",
+    "eslint-config-next": "^16.2.12",
+    "lighthouse": "^13.4.1",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.23",
+    "sharp": "^0.35.3"
+  },
+  "type": "module"
+}

@@ -1,0 +1,206 @@
+{
+  "model_version": "2026.07.29-v5",
+  "generated_at": "2026-07-30T03:06:49.162104+00:00",
+  "title": "NYC TIME FIELD",
+  "cell_count": 6166,
+  "residential_cell_count": 5543,
+  "station_count": 496,
+  "neighborhood_count": 197,
+  "housing_units": 3662005,
+  "h3_resolution": 9,
+  "matrix_unit_minutes": 0.1,
+  "unreachable_value": 65535,
+  "rent": {
+    "source": "U.S. Census Bureau 2020\u20132024 ACS five-year detailed tables",
+    "measure": "H3-level housing-unit-weighted allocation of official median monthly gross rent (B25064_001E). MapPLUTO residential lots use their containing ACS block-group estimate; missing block-group values fall back to the official tract, borough, then city value. Gross rent includes tenant-paid utilities. Values remain ACS survey estimates, not asking rents or individual leases.",
+    "geography": "2024 Census block groups allocated by MapPLUTO residential units to H3 resolution 9",
+    "acs_period": "2020\u20132024",
+    "source_hierarchy": [
+      "block_group",
+      "tract",
+      "borough",
+      "city"
+    ],
+    "block_groups_with_direct_estimate": 5213,
+    "block_groups_with_estimate": 6807,
+    "source_unit_shares": {
+      "block_group": 0.8226,
+      "borough": 0.0582,
+      "tract": 0.1192
+    },
+    "unmatched_pluto_lots_using_borough": 8,
+    "residential_cells_with_estimate": 5543,
+    "residential_cells_missing_estimate": 0,
+    "unique_cell_estimates": 4308,
+    "unique_bar_heights": 4308,
+    "rent_table_rows": 5543,
+    "rent_table_asset": "rent-by-cell.csv",
+    "residential_unit_coverage": 1.0,
+    "city_reference_gross_rent": 1948,
+    "median_margin_of_error": 270,
+    "min_gross_rent": 341,
+    "max_gross_rent": 3472,
+    "height_scale_low": 965,
+    "height_scale_high": 2901,
+    "bar_height_method": "Monotonic dense-rank scale: every distinct rent value receives a distinct height from 50 to 2,650 display meters.",
+    "bar_height_min_m": 50,
+    "bar_height_max_m": 2650
+  },
+  "scenarios": [
+    {
+      "scenario": "weekday_am",
+      "label": "Weekday AM peak",
+      "service_id": "Weekday",
+      "service_ids": [
+        "Weekday"
+      ],
+      "window_seconds": [
+        25200,
+        36000
+      ],
+      "active_trip_count": 1893,
+      "state_count": 1686,
+      "ride_edge_count": 1663,
+      "transfer_edge_count": 8392,
+      "explicit_transfer_rule_count": 613,
+      "reference_speed_kmh": 24.56
+    },
+    {
+      "scenario": "weekday_midday",
+      "label": "Weekday midday",
+      "service_id": "Weekday",
+      "service_ids": [
+        "Weekday"
+      ],
+      "window_seconds": [
+        39600,
+        50400
+      ],
+      "active_trip_count": 1632,
+      "state_count": 1517,
+      "ride_edge_count": 1467,
+      "transfer_edge_count": 6826,
+      "explicit_transfer_rule_count": 613,
+      "reference_speed_kmh": 24.68
+    },
+    {
+      "scenario": "weekend",
+      "label": "Weekend",
+      "service_id": "Saturday + Sunday",
+      "service_ids": [
+        "Saturday",
+        "Sunday"
+      ],
+      "window_seconds": [
+        36000,
+        46800
+      ],
+      "active_trip_count": 2347,
+      "state_count": 1299,
+      "ride_edge_count": 1254,
+      "transfer_edge_count": 4496,
+      "explicit_transfer_rule_count": 613,
+      "reference_speed_kmh": 25.57
+    }
+  ],
+  "assumptions": {
+    "walk_speed_kmh": 4.8,
+    "walking_model": "osmnx_shortest_path_v1",
+    "max_station_walk_minutes": 20.0,
+    "station_candidates_per_cell": 4,
+    "entry_overhead_minutes": 2.0,
+    "exit_overhead_minutes": 1.0,
+    "default_transfer_minutes_when_gtfs_missing": 3.0,
+    "explicit_gtfs_transfer_records": 613,
+    "walking_snapshot": "Published station access and direct-walk links use OSMnx pedestrian shortest paths with small point-to-node connectors.",
+    "osm_source_graph_nodes": 357977,
+    "osm_source_graph_edges": 550125,
+    "driving_model": "osmnx_free_flow_drive_v1",
+    "driving_snapshot": "OSM road travel times use posted maxspeed values and OSMnx fallback free-flow speeds; no traffic, parking, or toll delay.",
+    "osm_drive_source_graph_nodes": 57240,
+    "osm_drive_source_graph_edges": 144367,
+    "rent_measure": "H3-level housing-unit-weighted allocation of official median monthly gross rent (B25064_001E). MapPLUTO residential lots use their containing ACS block-group estimate; missing block-group values fall back to the official tract, borough, then city value. Gross rent includes tenant-paid utilities. Values remain ACS survey estimates, not asking rents or individual leases.",
+    "excluded_modes": [
+      "bus",
+      "ferry",
+      "bike"
+    ],
+    "not_modeled": [
+      "real-time delay",
+      "crowding",
+      "stairs and elevator conditions",
+      "temporary service changes",
+      "live road traffic",
+      "parking search and parking time"
+    ]
+  },
+  "gtfs": {
+    "feed_start_date": 20260526,
+    "feed_end_date": 20260907,
+    "feed_version": "20260526"
+  },
+  "sources": {
+    "nta": {
+      "path": "data/raw/nta2020.geojson",
+      "sha256": "7ca32767575ba658bae4ccf74dd6545ecc0758cbda8242292e27a0bf1f109b6a",
+      "bytes": 2763766,
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/NTA2020_with_LATFOR/FeatureServer/11/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson"
+    },
+    "gtfs": {
+      "path": "data/raw/google_transit.zip",
+      "sha256": "c9c3366cdd16a27b3be8f4fcf3de5433bc65ca744c9c91f7c9cb4ec3267a5f40",
+      "bytes": 5614607,
+      "url": "https://web.mta.info/developers/data/nyct/subway/google_transit.zip"
+    },
+    "entrances": {
+      "path": "data/raw/subway_entrances.csv",
+      "sha256": "298b606dcb1c10573519f918c086e785f7bd0a06eee81b750d8c35d41552da50",
+      "bytes": 343785,
+      "url": "https://data.ny.gov/resource/i9wp-a4ja.csv?$limit=50000"
+    },
+    "pluto": {
+      "path": "data/raw/pluto_residential.csv",
+      "sha256": "101aeb01fb2286f88f7db58e5c295ccb90cea0422bd1403eea534dc8d581354d",
+      "bytes": 19996893,
+      "url": "https://data.cityofnewyork.us/resource/64uk-42ks.csv"
+    },
+    "acs_block_group_rent": {
+      "path": "data/raw/acsdt5y2024-b25064.dat",
+      "sha256": "b36e6dc1fcef36b8b307d31b37517b64c80d8b9c70d48c9b1894242860f42eb0",
+      "bytes": 17272062,
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25064.dat"
+    },
+    "acs_block_group_tenure": {
+      "path": "data/raw/acsdt5y2024-b25003.dat",
+      "sha256": "68e963e1ed60fcf6b0658579cefc6498b7a9eb780b9f3e87fd1b9775c4d4ac6c",
+      "bytes": 26901770,
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25003.dat"
+    },
+    "tiger_block_groups": {
+      "path": "data/raw/tl_2024_36_bg.zip",
+      "sha256": "08af4b7453a5ef175b03b0f8fbe6b45d3f12c371e641813f582635cb84ad40c8",
+      "bytes": 17757594,
+      "url": "https://www2.census.gov/geo/tiger/TIGER2024/BG/tl_2024_36_bg.zip"
+    },
+    "osm_walk": {
+      "path": "data/cache/nyc-walk.graphml",
+      "sha256": "a4630988f0054528dece8e2cbff3c247c1454c3898bee5a6fb0f1133cf49391a",
+      "bytes": 323083464,
+      "retrieved_at": "2026-07-27T07:13:34.718334+00:00",
+      "node_count": 357977,
+      "edge_count": 550125,
+      "network_type": "walk",
+      "boundary_buffer_m": 650.0
+    },
+    "osm_drive": {
+      "path": "data/cache/nyc-drive.graphml",
+      "sha256": "52b6f64e9f9fb8eb9338cd29155048c8827b37f87577cd096b7cbeaf7a532220",
+      "bytes": 90835585,
+      "retrieved_at": "2026-07-28T04:35:55.455387+00:00",
+      "node_count": 57240,
+      "edge_count": 144367,
+      "network_type": "drive",
+      "boundary_buffer_m": 650.0
+    }
+  }
+}

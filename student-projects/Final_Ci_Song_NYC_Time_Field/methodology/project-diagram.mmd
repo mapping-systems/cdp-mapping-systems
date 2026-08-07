@@ -1,0 +1,20 @@
+flowchart LR
+  A["MTA Static GTFS"] -->|"trips, stops, schedules"| D["Scenario transit graphs"]
+  A -->|"explicit transfer rules"| D
+  B["MTA entrances and exits"] -->|"directional entry and exit points"| E["H3 access table"]
+  C["NYC NTA + MapPLUTO"] -->|"neighborhood and housing weights"| F["Residential H3 grid"]
+  R["2020–2024 ACS block-group rent"] -->|"MapPLUTO unit-weighted H3 allocation + uncertainty"| F
+  O["OpenStreetMap pedestrian graph"] -->|"OSMnx shortest paths"| E
+  O -->|"direct-walk connectors"| H["H3 walking graph"]
+  Q["OpenStreetMap road graph"] -->|"directed free-flow times"| V["H3 driving graph"]
+  F --> E
+  F --> H
+  D -->|"three matrices + reconstructable state graphs"| G["Browser Web Worker"]
+  E -->|"first and last mile"| G
+  H -->|"direct-walk Dijkstra"| G
+  V -->|"reverse driving Dijkstra"| G
+  G -->|"time vector, path and components"| I["MapLibre time field"]
+  I --> J["Neighborhood reach ranking"]
+  I --> K["Subway, driving, and walking views"]
+  I --> M["Independent time or rent bar height"]
+  I --> L["Route inspector: Walk / Wait / Ride / Transfer / Walk"]
