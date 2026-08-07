@@ -1,0 +1,197 @@
+/* =============================================================
+   The Hidden Geography of a Web Page — thereformation.com
+   Panels in Reformation's editorial aesthetic: white ground,
+   black text, Times-style serif headlines, uppercase
+   letter-spaced labels, hairline rules, square cards.
+   ============================================================= */
+:root {
+  --paper: #ffffff;
+  --ink: #111111;
+  --muted: #6e6e6e;
+  --line: #111111;
+  --hair: #e4e4e4;
+  --serif: 'Times New Roman', Times, Georgia, serif;
+  --sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* =============================================================
+   Left column: title + panel
+   ============================================================= */
+#left-stack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#map-title {
+  margin: 0 0 12px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+
+/* =============================================================
+   Shared card look — panel + legend
+   ============================================================= */
+#panel,
+#legend {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  color: var(--ink);
+}
+
+#panel {
+  padding: 18px;
+}
+
+#lede {
+  margin: 0 0 16px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+#lede strong { color: var(--ink); font-weight: 700; }
+
+/* stat readout */
+.stat-row {
+  display: flex;
+  gap: 0;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.stat {
+  flex: 1;
+  padding: 12px 8px;
+  text-align: center;
+}
+.stat + .stat { border-left: 1px solid var(--hair); }
+.stat span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink);
+}
+.stat label {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+#hint {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* =============================================================
+   Legend — bottom-left
+   ============================================================= */
+#legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  padding: 16px 18px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+#legend h4 {
+  margin: 0 0 12px 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+  color: var(--muted);
+}
+.legend-row.size-key { gap: 2px; }
+.swatch {
+  display: inline-block;
+  margin-right: 11px;
+  flex: none;
+}
+.swatch.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1.5px solid;
+}
+.swatch.dot.sz-s { width: 9px; height: 9px; margin-right: 4px; }
+.swatch.dot.sz-l { width: 17px; height: 17px; }
+
+/* =============================================================
+   Popup — carry the same white / black look into MapLibre
+   ============================================================= */
+.maplibregl-popup-content {
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  padding: 13px 15px;
+}
+.maplibregl-popup-content strong { display: block; font-size: 12px; font-weight: 700; }
+.popup-count {
+  display: inline-block;
+  margin: 6px 0 8px 0;
+  padding: 3px 9px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--ink);
+  border-radius: 0;
+}
+.popup-hosts {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11px;
+  line-height: 1.55;
+  max-height: 160px;
+  overflow-y: auto;
+}
+.popup-hosts li { margin-bottom: 2px; }
+.maplibregl-popup-close-button { font-size: 16px; color: var(--ink); }
+.maplibregl-popup-tip {
+  border-top-color: var(--ink);
+  border-bottom-color: var(--ink);
+}

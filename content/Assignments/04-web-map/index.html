@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Hidden Geography of a Web Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="left-stack">
+      <div id="panel">
+        <div id="map-title">The Hidden Geography of a Web Page</div>
+
+        <p id="lede">Every server <strong>thereformation.com</strong> contacted
+          while loading its homepage, placed on the map.</p>
+
+        <div class="stat-row">
+          <div class="stat"><span id="stat-requests">—</span><label>Servers</label></div>
+          <div class="stat"><span id="stat-places">—</span><label>Places</label></div>
+        </div>
+
+        <p id="hint">Click a dot to see which hosts live there.</p>
+      </div>
+    </div>
+
+    <div id="legend">
+      <h4>Legend</h4>
+      <div class="legend-row">
+        <span class="swatch dot" style="background:#7FD4D6; border-color:#111111;"></span>
+        Busiest location (most servers)
+      </div>
+      <div class="legend-row">
+        <span class="swatch dot" style="background:#ffffff; border-color:#111111;"></span>
+        Server location
+      </div>
+      <div class="legend-row size-key">
+        <span class="swatch dot sz-s" style="background:#ffffff; border-color:#111111;"></span>
+        <span class="swatch dot sz-l" style="background:#ffffff; border-color:#111111;"></span>
+        Bigger dot = more servers
+      </div>
+    </div>
+
+    <div id="map"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

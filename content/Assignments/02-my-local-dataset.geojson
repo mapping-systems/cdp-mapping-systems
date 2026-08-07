@@ -1,0 +1,490 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Megan's Front Door",
+                "id": "entrance",
+                "marker-color": "rgba(255, 217, 0, 1)",
+                "marker-size": "large",
+                "marker-symbol": "diamond",
+                "type": "home",
+                "description": "starting-point"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.994124,
+                    40.735593
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "14th Street F M Stop",
+                "id": "supway-stop",
+                "marker-color": "rgba(73, 99, 203, 1)",
+                "marker-size": "large",
+                "marker-symbol": "rail",
+                "type": "transport"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.993783,
+                    40.736012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "14th Street 1 2 3 Stop",
+                "id": "subway-stop",
+                "marker-color": "#4963cb",
+                "marker-size": "large",
+                "marker-symbol": "rail",
+                "type": "transport"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.996865,
+                    40.737211
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Birch Coffee",
+                "id": "cafe",
+                "type": "coffee",
+                "fill": "rgba(196, 73, 178, 1)",
+                "stroke": "#c449b2",
+                "description": "my-favourite-americano"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -73.997298,
+                            40.737031
+                        ],
+                        [
+                            -73.997486,
+                            40.737107
+                        ],
+                        [
+                            -73.997521,
+                            40.737058
+                        ],
+                        [
+                            -73.997327,
+                            40.736983
+                        ],
+                        [
+                            -73.997298,
+                            40.737031
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Walker's",
+                "id": "cafe",
+                "type": "coffee",
+                "description": "my-favourite-latte",
+                "fill": "#c449b2",
+                "stroke": "#C449b2"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -73.997309,
+                            40.736424
+                        ],
+                        [
+                            -73.996998,
+                            40.736288
+                        ],
+                        [
+                            -73.996971,
+                            40.736334
+                        ],
+                        [
+                            -73.997268,
+                            40.736468
+                        ],
+                        [
+                            -73.997309,
+                            40.736424
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mikado",
+                "id": "restaurant",
+                "type": "food",
+                "description": "my-favourite-takeout",
+                "fill": "rgba(122, 47, 130, 1)",
+                "stroke": "#7a2f82"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -73.993891,
+                            40.736479
+                        ],
+                        [
+                            -73.99395,
+                            40.736504
+                        ],
+                        [
+                            -73.994069,
+                            40.736347
+                        ],
+                        [
+                            -73.994001,
+                            40.736317
+                        ],
+                        [
+                            -73.993891,
+                            40.736479
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jackson Square",
+                "id": "park",
+                "type": "plaza",
+                "description": "my-local-park",
+                "fill": "rgba(47, 130, 63, 1)",
+                "stroke": "#2f823f"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -74.001566,
+                            40.737533
+                        ],
+                        [
+                            -74.001122,
+                            40.736787
+                        ],
+                        [
+                            -74.000825,
+                            40.737219
+                        ],
+                        [
+                            -74.001566,
+                            40.737533
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "High Line",
+                "id": "park",
+                "type": "park-entrance",
+                "description": "my-favourite-walk",
+                "marker-color": "#2f823f",
+                "marker-size": "large"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.008198,
+                    40.739448
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Afternoon Walk",
+                "id": "walking-route",
+                "type": "path",
+                "description": "a-way-to-spend-the-afternoon",
+                "stroke": "rgba(254, 0, 0, 1)"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.994121,
+                        40.735596
+                    ],
+                    [
+                        -73.994044,
+                        40.735556
+                    ],
+                    [
+                        -73.993637,
+                        40.736102
+                    ],
+                    [
+                        -73.994087,
+                        40.736296
+                    ],
+                    [
+                        -73.994048,
+                        40.736336
+                    ],
+                    [
+                        -73.994087,
+                        40.736296
+                    ],
+                    [
+                        -73.996889,
+                        40.737474
+                    ],
+                    [
+                        -73.997216,
+                        40.736989
+                    ],
+                    [
+                        -73.997305,
+                        40.737025
+                    ],
+                    [
+                        -73.997211,
+                        40.736989
+                    ],
+                    [
+                        -73.997448,
+                        40.736661
+                    ],
+                    [
+                        -73.997907,
+                        40.736025
+                    ],
+                    [
+                        -74.000745,
+                        40.737226
+                    ],
+                    [
+                        -74.000842,
+                        40.73722
+                    ],
+                    [
+                        -74.000967,
+                        40.737211
+                    ],
+                    [
+                        -74.00111,
+                        40.737287
+                    ],
+                    [
+                        -74.001215,
+                        40.737296
+                    ],
+                    [
+                        -74.001262,
+                        40.737284
+                    ],
+                    [
+                        -74.001347,
+                        40.737343
+                    ],
+                    [
+                        -74.001445,
+                        40.737317
+                    ],
+                    [
+                        -74.001492,
+                        40.7373
+                    ],
+                    [
+                        -74.001662,
+                        40.737595
+                    ],
+                    [
+                        -74.001844,
+                        40.737646
+                    ],
+                    [
+                        -74.00246,
+                        40.738718
+                    ],
+                    [
+                        -74.008185,
+                        40.738759
+                    ],
+                    [
+                        -74.008141,
+                        40.739403
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Morning Coffee",
+                "id": "walking-route",
+                "type": "path",
+                "description": "morning-coffee-walk-through-parks",
+                "stroke": "rgba(254, 0, 0, 1)"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.994127,
+                        40.735594
+                    ],
+                    [
+                        -73.994046,
+                        40.735551
+                    ],
+                    [
+                        -73.99417,
+                        40.735372
+                    ],
+                    [
+                        -73.997155,
+                        40.736641
+                    ],
+                    [
+                        -73.997233,
+                        40.736554
+                    ],
+                    [
+                        -73.997303,
+                        40.736464
+                    ],
+                    [
+                        -73.997285,
+                        40.736453
+                    ],
+                    [
+                        -73.997304,
+                        40.736465
+                    ],
+                    [
+                        -73.997373,
+                        40.736496
+                    ],
+                    [
+                        -73.99817,
+                        40.735379
+                    ],
+                    [
+                        -74.001016,
+                        40.736609
+                    ],
+                    [
+                        -74.001132,
+                        40.736799
+                    ],
+                    [
+                        -74.001138,
+                        40.73701
+                    ],
+                    [
+                        -74.001194,
+                        40.737038
+                    ],
+                    [
+                        -74.001303,
+                        40.737201
+                    ],
+                    [
+                        -74.001268,
+                        40.737283
+                    ],
+                    [
+                        -74.001358,
+                        40.737349
+                    ],
+                    [
+                        -74.001498,
+                        40.737297
+                    ],
+                    [
+                        -74.001669,
+                        40.7376
+                    ],
+                    [
+                        -74.001858,
+                        40.737647
+                    ],
+                    [
+                        -74.002471,
+                        40.738728
+                    ],
+                    [
+                        -74.00818,
+                        40.738762
+                    ],
+                    [
+                        -74.008147,
+                        40.739407
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Roadworks",
+                "id": "road",
+                "type": "roadworks",
+                "description": "ongoing-roadworks-for-the-last-6-weeks",
+                "fill": "rgba(209, 127, 39, 1)",
+                "stroke": "#d17f27"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -73.994286,
+                            40.735313
+                        ],
+                        [
+                            -73.994252,
+                            40.735357
+                        ],
+                        [
+                            -73.994543,
+                            40.735476
+                        ],
+                        [
+                            -73.994572,
+                            40.735436
+                        ],
+                        [
+                            -73.994286,
+                            40.735313
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
