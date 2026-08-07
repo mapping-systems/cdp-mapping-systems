@@ -1,0 +1,143 @@
+{
+  "type": "FeatureCollection",
+  "name": "morningside_heights_daily_geography",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Apartment (Home Base)",
+        "category": "home",
+        "description": "Fifth-floor walk-up near Amsterdam & 122nd St. Where the day starts and ends.",
+        "frequency_per_week": 7,
+        "typical_time": "8:00 AM / 11:00 PM",
+        "mood": "grounding"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9599, 40.8120]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Amsterdam Ave Coffee Cart",
+        "category": "coffee",
+        "description": "First stop every morning. The cart owner knows my order before I ask.",
+        "frequency_per_week": 5,
+        "typical_time": "8:15 AM",
+        "mood": "energizing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9630, 40.8074]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Hungarian Pastry Shop",
+        "category": "food",
+        "description": "Where studio crits get debriefed over cheap coffee refills and a slice of dobos torta.",
+        "frequency_per_week": 3,
+        "typical_time": "6:30 PM",
+        "mood": "cozy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9646, 40.8036]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Avery Hall Studio (GSAPP)",
+        "category": "study",
+        "description": "Desk in the fourth-floor studio, where most waking hours actually happen.",
+        "frequency_per_week": 6,
+        "typical_time": "9:00 AM - 9:00 PM",
+        "mood": "focused"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9625, 40.8088]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Low Library Steps",
+        "category": "recreation",
+        "description": "Ten-minute decompression spot between studio and the library.",
+        "frequency_per_week": 4,
+        "typical_time": "1:00 PM",
+        "mood": "calm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9626, 40.8075]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "116 St - Columbia University Subway Entrance",
+        "category": "subway",
+        "description": "1 train entrance at Broadway & 116th, used for trips outside the neighborhood (not the daily studio commute).",
+        "frequency_per_week": 4,
+        "typical_time": "varies",
+        "mood": "transitional"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9660, 40.8075]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "Riverside Park Overlook",
+        "category": "recreation",
+        "description": "Bench at the 116th St entrance to Riverside Park, the one non-negotiable weekly walk.",
+        "frequency_per_week": 2,
+        "typical_time": "6:00 PM",
+        "mood": "restorative"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9722, 40.8092]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Morning Walk to Studio",
+        "category": "route",
+        "mode": "walking",
+        "description": "The daily path from the apartment, through a coffee stop, and into the GSAPP studio via the College Walk gate.",
+        "distance_miles": 0.9,
+        "avg_duration_min": 18,
+        "frequency_per_week": 5
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9599, 40.8120],
+          [-73.9612, 40.8101],
+          [-73.9630, 40.8074],
+          [-73.9628, 40.8060],
+          [-73.9646, 40.8036],
+          [-73.9636, 40.8045],
+          [-73.9625, 40.8088]
+        ]
+      }
+    }
+  ]
+}

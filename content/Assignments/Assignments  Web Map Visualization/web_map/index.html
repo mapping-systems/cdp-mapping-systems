@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Restaurants — Seating &amp; Distance | Web Map Visualization</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <button id="panel-toggle" aria-label="Toggle info panel">☰</button>
+
+    <aside id="panel">
+      <p class="eyebrow">Mapping Systems · Web Map Visualization</p>
+      <h1>Open Restaurants — Seating &amp; Distance</h1>
+      <p class="subtitle">
+        Click anywhere on the map to query the Open Restaurants Inspections dataset for
+        nearby seating setups, live from Supabase/PostGIS.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="value" id="stat-count">–</span>
+          <span class="label">Results</span>
+        </div>
+        <div class="stat">
+          <span class="value" id="stat-closest">–</span>
+          <span class="label">Closest</span>
+        </div>
+        <div class="stat">
+          <span class="value" id="stat-flagged">–</span>
+          <span class="label">Flagged</span>
+        </div>
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-label">
+          <span>Search radius</span>
+          <span id="radius-value">500 m</span>
+        </div>
+        <input type="range" id="radius-slider" />
+      </div>
+
+      <hr class="divider" />
+
+      <p class="section-label">Seating type</p>
+      <div class="legend-item"><span class="swatch sidewalk"></span>Sidewalk</div>
+      <div class="legend-item"><span class="swatch roadway"></span>Roadway</div>
+      <div class="legend-item"><span class="swatch both"></span>Both</div>
+      <div class="legend-item"><span class="swatch unknown"></span>Unspecified</div>
+
+      <p class="section-label" style="margin-top: 12px">Distance from click</p>
+      <div class="size-legend">
+        <div class="size-item">
+          <div class="dot near"></div>
+          <span class="size-caption">Near</span>
+        </div>
+        <div class="size-item">
+          <div class="dot mid"></div>
+          <span class="size-caption">Mid</span>
+        </div>
+        <div class="size-item">
+          <div class="dot far"></div>
+          <span class="size-caption">Far</span>
+        </div>
+      </div>
+
+      <div class="flag-legend">
+        <span class="flag-ring"></span>
+        Flagged for review (sidewalk or roadway)
+      </div>
+
+      <p class="footnote" id="status-line"></p>
+    </aside>
+
+    <script src="map.js"></script>
+  </body>
+</html>
