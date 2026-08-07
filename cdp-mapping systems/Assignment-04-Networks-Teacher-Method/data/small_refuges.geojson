@@ -1,0 +1,712 @@
+{
+  "type": "FeatureCollection",
+  "name": "personal_atlas_of_small_refuges",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "place_name": "Avery Architectural & Fine Arts Library",
+        "place_type": "university_library",
+        "neighborhood": "Morningside Heights",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 5,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Columbia affiliation or registered access",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 90,
+        "daily_life_relation": "Study refuge before or after GSAPP work",
+        "narrative_note": "Very quiet and dependable, but access depends on institutional affiliation."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96256,
+          40.80753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "place_name": "Butler Library",
+        "place_type": "university_library",
+        "neighborhood": "Morningside Heights",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 4,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Columbia affiliation or registered access",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 120,
+        "daily_life_relation": "Long study sessions and late-evening recovery",
+        "narrative_note": "Reliable seating and long opening hours, but not universally public."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96324,
+          40.80657
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "place_name": "Morningside Heights Library",
+        "place_type": "public_library",
+        "neighborhood": "Morningside Heights",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public access during library hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 60,
+        "daily_life_relation": "Free indoor pause near school",
+        "narrative_note": "A public alternative to campus libraries with no purchase requirement."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96479,
+          40.80587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "place_name": "Sakura Park",
+        "place_type": "park",
+        "neighborhood": "Morningside Heights",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 25,
+        "daily_life_relation": "Short break between school and Riverside Drive",
+        "narrative_note": "Calmer than Broadway and useful for a brief outdoor reset."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96203,
+          40.8125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "place_name": "Riverside Park Overlook at 116th Street",
+        "place_type": "park",
+        "neighborhood": "Morningside Heights",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 30,
+        "daily_life_relation": "Walking break and distance from traffic",
+        "narrative_note": "The river edge creates psychological distance from school and commercial streets."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97014,
+          40.8097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "place_name": "West Harlem Piers Park",
+        "place_type": "waterfront_park",
+        "neighborhood": "West Harlem",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 3,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space; weather dependent",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 35,
+        "daily_life_relation": "Longer waterfront decompression walk",
+        "narrative_note": "Open and free, but wind, events, and nearby infrastructure affect comfort."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96077,
+          40.81825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "place_name": "Morningside Park",
+        "place_type": "park",
+        "neighborhood": "Harlem",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 3,
+        "welcome_score": 3,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space; experience varies by time and entrance",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 25,
+        "daily_life_relation": "Alternative walking route east of campus",
+        "narrative_note": "Provides greenery and separation, but the experience changes substantially by location and time."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95523,
+          40.80692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "place_name": "David Rubenstein Atrium",
+        "place_type": "performance_public_space",
+        "neighborhood": "Lincoln Square",
+        "refuge_status": "refuge",
+        "quiet_score": 3,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public access; activity level varies with programming",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 40,
+        "daily_life_relation": "Wait, read, or recover before performances",
+        "narrative_note": "A valuable free interior with seating, although performances can transform its sound level."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98214,
+          40.77179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "place_name": "New York Public Library for the Performing Arts",
+        "place_type": "public_library",
+        "neighborhood": "Lincoln Square",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public access during library hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 75,
+        "daily_life_relation": "Reading and research around theater visits",
+        "narrative_note": "Combines cultural interest with a quiet, noncommercial place to remain indoors."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98341,
+          40.77373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "place_name": "American Folk Art Museum",
+        "place_type": "museum",
+        "neighborhood": "Lincoln Square",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public museum access during opening hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 45,
+        "daily_life_relation": "Small exhibition visit and quiet cultural pause",
+        "narrative_note": "The intimate scale makes it easier to slow down than in larger museums."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98197,
+          40.77336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "place_name": "Lincoln Center Plaza",
+        "place_type": "cultural_plaza",
+        "neighborhood": "Lincoln Square",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 3,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space; event and weather dependent",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 30,
+        "daily_life_relation": "Meet, wait, or sit before a performance",
+        "narrative_note": "Welcoming and culturally familiar, but crowds and programming reduce quietness."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98349,
+          40.77252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "place_name": "Museum of Modern Art",
+        "place_type": "museum",
+        "neighborhood": "Midtown",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 3,
+        "welcome_score": 4,
+        "purchase_required": "conditional",
+        "access_condition": "Admission or eligible institutional access; security screening",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 90,
+        "daily_life_relation": "Exhibition visit and interior break in Midtown",
+        "narrative_note": "Provides cultural immersion and seating, but crowds and entry procedures make refuge conditional."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97762,
+          40.76143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "place_name": "The Metropolitan Museum of Art",
+        "place_type": "museum",
+        "neighborhood": "Upper East Side",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 3,
+        "welcome_score": 4,
+        "purchase_required": "conditional",
+        "access_condition": "Admission policy and security screening",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 120,
+        "daily_life_relation": "Long museum visit and recovery inside galleries",
+        "narrative_note": "Large enough to find quiet galleries, but entrance crowds and institutional rules shape access."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96324,
+          40.77944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "place_name": "The Met Cloisters",
+        "place_type": "museum",
+        "neighborhood": "Fort Tryon Park",
+        "refuge_status": "refuge",
+        "quiet_score": 5,
+        "welcome_score": 4,
+        "purchase_required": "conditional",
+        "access_condition": "Museum admission; distant from everyday routes",
+        "indoor_outdoor": "indoor_outdoor",
+        "typical_duration_min": 120,
+        "daily_life_relation": "Destination for extended quiet and separation from the city",
+        "narrative_note": "One of the strongest cultural refuges, though distance makes it less available spontaneously."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9319,
+          40.86486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "place_name": "Cooper Hewitt Garden",
+        "place_type": "museum_garden",
+        "neighborhood": "Carnegie Hill",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public garden access; seasonal and weather dependent",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 35,
+        "daily_life_relation": "Outdoor pause during museum visits on Museum Mile",
+        "narrative_note": "A cultural setting that allows rest without requiring a full museum visit."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95788,
+          40.78438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "place_name": "Museum of the City of New York",
+        "place_type": "museum",
+        "neighborhood": "East Harlem",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 4,
+        "welcome_score": 4,
+        "purchase_required": "conditional",
+        "access_condition": "Admission policy and museum hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 75,
+        "daily_life_relation": "Exhibition visit combined with an indoor rest",
+        "narrative_note": "Generally calm and manageable, but still governed by ticketing and museum schedules."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9519,
+          40.79249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "place_name": "Stavros Niarchos Foundation Library",
+        "place_type": "public_library",
+        "neighborhood": "Midtown",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public access during library hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 90,
+        "daily_life_relation": "Free work and recovery space in Midtown",
+        "narrative_note": "A strong noncommercial interior alternative to cafes near Bryant Park."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98004,
+          40.75318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "place_name": "Stephen A. Schwarzman Building",
+        "place_type": "public_library",
+        "neighborhood": "Midtown",
+        "refuge_status": "refuge",
+        "quiet_score": 5,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public access with security and behavioral rules",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 75,
+        "daily_life_relation": "Reading, waiting, and quiet withdrawal in Midtown",
+        "narrative_note": "Highly quiet and free, although formal rules and security make the atmosphere more institutional."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98225,
+          40.75318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "place_name": "Bryant Park",
+        "place_type": "park",
+        "neighborhood": "Midtown",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 2,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public outdoor space; crowd and event dependent",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 25,
+        "daily_life_relation": "Convenient pause between library, museum, and transit trips",
+        "narrative_note": "Easy to enter and sit, but rarely offers acoustic withdrawal."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98323,
+          40.7536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "place_name": "Ford Foundation Center for Social Justice Atrium",
+        "place_type": "institutional_atrium",
+        "neighborhood": "Turtle Bay",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 5,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public-facing institutional space with entry procedures",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 35,
+        "daily_life_relation": "Quiet interior stop on the East Side",
+        "narrative_note": "Acoustically calm and visually restorative, but security and institutional formality shape the sense of permission."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97107,
+          40.74952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "place_name": "590 Madison Avenue Atrium",
+        "place_type": "privately_owned_public_space",
+        "neighborhood": "Midtown East",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 4,
+        "welcome_score": 3,
+        "purchase_required": "no",
+        "access_condition": "Publicly accessible interior within a corporate setting",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 25,
+        "daily_life_relation": "Weather-protected pause in Midtown East",
+        "narrative_note": "Useful seating and shelter, but the corporate atmosphere can make long stays feel conditional."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97223,
+          40.76239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 22,
+        "place_name": "The Shed Lobby",
+        "place_type": "theater_lobby",
+        "neighborhood": "Hudson Yards",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 2,
+        "welcome_score": 4,
+        "purchase_required": "no",
+        "access_condition": "Public-facing lobby; availability changes with events",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 25,
+        "daily_life_relation": "Wait or recover before cultural events",
+        "narrative_note": "Provides indoor seating, but event crowds and programming make quietness unreliable."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00242,
+          40.75355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "place_name": "Queens Museum",
+        "place_type": "museum",
+        "neighborhood": "Flushing Meadows–Corona Park",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "conditional",
+        "access_condition": "Museum admission policy and opening hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 90,
+        "daily_life_relation": "Destination museum with room to slow down",
+        "narrative_note": "Spacious and less compressed than many Manhattan museums, supporting a longer cultural pause."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84665,
+          40.74588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 24,
+        "place_name": "Brooklyn Museum",
+        "place_type": "museum",
+        "neighborhood": "Prospect Heights",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 4,
+        "welcome_score": 4,
+        "purchase_required": "conditional",
+        "access_condition": "Admission policy, security, and exhibition schedule",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 105,
+        "daily_life_relation": "Museum destination and interior recovery",
+        "narrative_note": "Large galleries can support quiet time, but entry and programming conditions remain important."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96363,
+          40.67121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "place_name": "The Bronx Museum of the Arts",
+        "place_type": "museum",
+        "neighborhood": "Concourse",
+        "refuge_status": "refuge",
+        "quiet_score": 4,
+        "welcome_score": 5,
+        "purchase_required": "no",
+        "access_condition": "Public museum access during opening hours",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 70,
+        "daily_life_relation": "Free cultural destination and indoor pause",
+        "narrative_note": "A museum setting with a relatively low financial threshold and a welcoming scale."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91979,
+          40.83117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "place_name": "Brooklyn Academy of Music Lobby",
+        "place_type": "theater_lobby",
+        "neighborhood": "Fort Greene",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 2,
+        "welcome_score": 3,
+        "purchase_required": "no",
+        "access_condition": "Lobby access and seating vary with performances",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 20,
+        "daily_life_relation": "Wait before performances or meet friends",
+        "narrative_note": "Culturally familiar but oriented toward scheduled events rather than unstructured rest."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97773,
+          40.68624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "place_name": "The Public Theater Lobby",
+        "place_type": "theater_lobby",
+        "neighborhood": "NoHo",
+        "refuge_status": "conditional_refuge",
+        "quiet_score": 2,
+        "welcome_score": 3,
+        "purchase_required": "optional",
+        "access_condition": "Lobby access depends on performances, hours, and venue activity",
+        "indoor_outdoor": "indoor",
+        "typical_duration_min": 20,
+        "daily_life_relation": "Short pause before theater or downtown travel",
+        "narrative_note": "A useful cultural threshold, but not consistently available as a neutral resting place."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99157,
+          40.72916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 28,
+        "place_name": "Times Square",
+        "place_type": "public_plaza",
+        "neighborhood": "Theater District",
+        "refuge_status": "failed_refuge",
+        "quiet_score": 1,
+        "welcome_score": 2,
+        "purchase_required": "no",
+        "access_condition": "Public space with intense crowding, light, sound, and surveillance",
+        "indoor_outdoor": "outdoor",
+        "typical_duration_min": 5,
+        "daily_life_relation": "Contrast point within theater-going routes",
+        "narrative_note": "Public and accessible, but sensory intensity prevents it from functioning as a restorative pause."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9855,
+          40.758
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "source_har": "www.metmuseum.org.har",
+  "source_site": "The Metropolitan Museum of Art",
+  "total_request_count": 600,
+  "unique_domain_count": 52,
+  "unique_public_ip_count": 49,
+  "attempted_ip_count": 49,
+  "located_ip_count": 49,
+  "failed_ip_count": 0,
+  "top_domains": [
+    {
+      "domain": "www.metmuseum.org",
+      "request_count": 183
+    },
+    {
+      "domain": "collectionapi.metmuseum.org",
+      "request_count": 118
+    },
+    {
+      "domain": "ingest.quantummetric.com",
+      "request_count": 60
+    },
+    {
+      "domain": "www.facebook.com",
+      "request_count": 26
+    },
+    {
+      "domain": "analytics.tiktok.com",
+      "request_count": 19
+    },
+    {
+      "domain": "cdn.sanity.io",
+      "request_count": 16
+    },
+    {
+      "domain": "ad.doubleclick.net",
+      "request_count": 14
+    },
+    {
+      "domain": "insight.adsrvr.org",
+      "request_count": 13
+    },
+    {
+      "domain": "mpc-prod-28-1053047382554.us-central1.run.app",
+      "request_count": 13
+    },
+    {
+      "domain": "js.adsrvr.org",
+      "request_count": 11
+    },
+    {
+      "domain": "ib.adnxs.com",
+      "request_count": 10
+    },
+    {
+      "domain": "px.ads.linkedin.com",
+      "request_count": 10
+    },
+    {
+      "domain": "o1376681.ingest.sentry.io",
+      "request_count": 9
+    },
+    {
+      "domain": "955372.fls.doubleclick.net",
+      "request_count": 8
+    },
+    {
+      "domain": "www.google.com",
+      "request_count": 7
+    }
+  ],
+  "failures": []
+}

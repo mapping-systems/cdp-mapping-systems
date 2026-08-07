@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>The Museum Is Not One Place</title>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+  <link
+    href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <aside class="panel" aria-label="Project information">
+      <div class="eyebrow">03 · WEB MAPPING</div>
+
+      <h1>The Museum Is Not One Place</h1>
+
+      <p class="intro">
+        A map of the distributed server infrastructure encountered
+        during one visit to The Metropolitan Museum of Art website.
+      </p>
+
+      <section class="stats" aria-label="Dataset statistics">
+        <div class="stat">
+          <span class="stat-value" id="request-count">600</span>
+          <span class="stat-label">HAR requests</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-value" id="ip-count">49</span>
+          <span class="stat-label">server IPs</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-value" id="domain-count">52</span>
+          <span class="stat-label">domains</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>How to read the map</h2>
+        <p>
+          Circle size represents the number of requests associated
+          with each server IP. Colors distinguish first-party services,
+          analytics, advertising, social tracking, and other
+          infrastructure.
+        </p>
+      </section>
+
+      <section class="legend" aria-label="Map legend">
+        <div><span class="dot first-party"></span>The Met</div>
+        <div><span class="dot analytics"></span>Analytics</div>
+        <div><span class="dot advertising"></span>Advertising</div>
+        <div><span class="dot social"></span>Social / tracking</div>
+        <div><span class="dot infrastructure"></span>Infrastructure / other</div>
+        <div><span class="museum-symbol"></span>Physical museum</div>
+      </section>
+
+      <label class="toggle-row">
+        <input id="connection-toggle" type="checkbox" checked />
+        <span>Show conceptual connections to The Met</span>
+      </label>
+
+      <section class="method-note">
+        <h2>Method note</h2>
+        <p>
+          Locations are approximate IP-geolocation results. Connection
+          lines indicate participation in the same browsing session;
+          they do not represent actual network routes.
+        </p>
+      </section>
+    </aside>
+
+    <section class="map-area">
+      <div id="map" aria-label="Interactive map"></div>
+
+      <div class="map-caption">
+        One website · 600 requests · 49 geolocated server IPs
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
