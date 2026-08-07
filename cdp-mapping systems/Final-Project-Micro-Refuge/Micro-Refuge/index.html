@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An interactive Bryant Park micro-refuge finder that compares short-term public seating with visual buffering conditions." />
+  <title>Micro-Refuge | Bryant Park</title>
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <div id="map" aria-label="Interactive map of short-term pause locations and visual conditions around Bryant Park"></div>
+
+    <aside class="panel" aria-label="Map controls">
+      <div class="panel-scroll">
+        <header class="project-header">
+          <p class="eyebrow">BRYANT PARK · SHORT-TERM RETREAT</p>
+          <h1>Micro-Refuge</h1>
+          <p class="question">If I only have a few minutes around Bryant Park, where can I pause somewhere that feels a little more visually buffered from the surrounding street?</p>
+        </header>
+
+        <section class="control-section">
+          <div class="section-heading"><span>01</span><h2>STARTING POINT</h2></div>
+          <div class="button-row">
+            <button id="origin-bryant" class="control-button active" type="button">Bryant Park</button>
+            <button id="origin-location" class="control-button" type="button">Use My Location</button>
+          </div>
+          <button id="origin-map" class="control-button full" type="button">Choose a Point on the Map</button>
+          <p id="origin-label" class="micro-copy">Origin: Bryant Park</p>
+        </section>
+
+        <section class="control-section">
+          <div class="section-heading"><span>02</span><h2>TIME BUDGET</h2></div>
+          <div id="time-control" class="segmented" role="group" aria-label="Approximate walking time">
+            <button type="button" data-minutes="5">5 MIN</button>
+            <button type="button" data-minutes="10">10 MIN</button>
+            <button class="active" type="button" data-minutes="15">15 MIN</button>
+          </div>
+          <p class="micro-copy">The full visual-condition field is clipped to the selected range.</p>
+        </section>
+
+        <section class="control-section">
+          <div class="section-heading"><span>03</span><h2>PAUSE TYPE</h2></div>
+          <label class="check-row"><input id="filter-bench" type="checkbox" checked /><span>Bench</span><b id="bench-count">—</b></label>
+          <label class="check-row"><input id="filter-leaning" type="checkbox" checked /><span>Leaning Bar</span><b id="leaning-count">—</b></label>
+        </section>
+
+        <section class="control-section">
+          <div class="section-heading"><span>04</span><h2>VISUAL PREFERENCE</h2></div>
+          <div id="preference-control" class="segmented two" role="group" aria-label="Visual preference">
+            <button class="active" type="button" data-preference="all">ALL</button>
+            <button type="button" data-preference="screened">MORE SCREENED</button>
+          </div>
+        </section>
+
+        <section class="summary-section" aria-live="polite">
+          <div class="summary-main"><strong id="reachable-count">—</strong><span>pause locations in range</span></div>
+          <div class="summary-grid">
+            <div><span>SCREENED OPTIONS</span><b id="screened-count">—</b></div>
+            <div><span>FIELD STATUS</span><b id="field-status-short">LOADING</b></div>
+          </div>
+        </section>
+
+        <section class="compare-section">
+          <div class="section-heading"><span>05</span><h2>NEAREST VS. MORE SCREENED</h2></div>
+          <div id="compare-cards" class="compare-cards">
+            <article class="compare-card empty"><small>NEAREST</small><strong>Waiting for data…</strong></article>
+            <article class="compare-card empty"><small>MORE SCREENED</small><strong>Waiting for data…</strong></article>
+          </div>
+        </section>
+
+        <section class="legend-section">
+          <div class="section-heading"><span>06</span><h2>VISUAL CONDITIONS</h2></div>
+          <div class="legend-grid">
+            <div><i class="swatch exposed"></i><span>Exposed Edge</span></div>
+            <div><i class="swatch screened"></i><span>Screened Edge</span></div>
+            <div><i class="swatch vegetated"></i><span>Vegetated Buffer</span></div>
+            <div><i class="swatch open"></i><span>Open Field</span></div>
+          </div>
+        </section>
+
+        <section class="method-section">
+          <div class="section-heading"><span>07</span><h2>HOW THE FIELD IS BUILT</h2></div>
+          <p>Street conditions are sampled approximately every 10 meters across the full 15-minute study area. Each sample measures distance to the nearest street tree and building edge. The two relationships are combined into four visual-condition types.</p>
+          <p id="field-status" class="field-status">Preparing the full visual-condition field…</p>
+        </section>
+
+        <p class="prototype-note">5 / 10 / 15 minutes currently use an approximate radial walking budget of 80 m/min. The visual model describes potential visual buffering—not actual privacy, quietness, safety, or human visibility.</p>
+      </div>
+    </aside>
+
+    <section id="detail-panel" class="detail-panel hidden" aria-live="polite">
+      <button id="detail-close" class="detail-close" type="button" aria-label="Close">×</button>
+      <p class="detail-kicker">PAUSE LOCATION</p>
+      <h2 id="detail-name">—</h2>
+      <div class="detail-metrics">
+        <div><span>Type</span><strong id="detail-type">—</strong></div>
+        <div><span>Approx. Walk</span><strong id="detail-walk">—</strong></div>
+        <div><span>Visual Condition</span><strong id="detail-condition">—</strong></div>
+        <div><span>Nearest Tree</span><strong id="detail-tree">—</strong></div>
+        <div><span>Building Edge</span><strong id="detail-building">—</strong></div>
+      </div>
+      <p id="detail-explain" class="detail-explain">—</p>
+    </section>
+
+    <div class="map-hint" id="map-hint">Click a pause location to see why it was classified this way.</div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

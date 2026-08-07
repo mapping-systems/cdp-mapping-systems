@@ -1,0 +1,8 @@
+{
+  "version": "v6-English-FullField",
+  "pause_candidate_count": 47,
+  "pause_source": "NYC DOT Seating Locations — Bench + Leaning Bar",
+  "visual_field": "Generated live across the full 15-minute Bryant Park study area",
+  "sampling_interval_m": 10,
+  "range_method": "Approximate radial walking budget at 80 m/min"
+}

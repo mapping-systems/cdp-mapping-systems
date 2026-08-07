@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive MapLibre map of NYC Open Restaurant inspection observations queried from Supabase."
+    />
+
+    <title>NYC Open Restaurant Seating Explorer</title>
+
+    <script src="https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main id="app">
+      <div id="map" aria-label="Interactive map of NYC restaurant inspections"></div>
+
+      <section class="map-panel" aria-label="Map explanation and legend">
+        <p class="eyebrow">WEB MAPPING · PART 2</p>
+        <h1>Open Restaurant Seating</h1>
+        <p class="intro">
+          Click anywhere in New York City to find restaurant inspection
+          observations within a 1,000-meter radius.
+        </p>
+
+        <div class="status-row">
+          <span id="status-dot" class="status-dot" aria-hidden="true"></span>
+          <span id="status-text">Loading restaurant observations…</span>
+        </div>
+
+        <div class="result-summary" aria-live="polite">
+          <strong id="result-count">—</strong>
+          <span id="result-label">inspection observations</span>
+        </div>
+
+        <div class="legend-block">
+          <h2>Seating choice</h2>
+          <div class="legend-item">
+            <span class="legend-swatch sidewalk"></span>
+            <span>Sidewalk</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch roadway"></span>
+            <span>Roadway</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch both"></span>
+            <span>Both</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch unknown"></span>
+            <span>Other / unknown</span>
+          </div>
+        </div>
+
+        <div class="legend-block distance-legend">
+          <h2>Distance from selected point</h2>
+          <div class="distance-scale" aria-hidden="true">
+            <span class="distance-circle near"></span>
+            <span class="distance-line"></span>
+            <span class="distance-circle far"></span>
+          </div>
+          <div class="distance-labels">
+            <span>Closer · larger</span>
+            <span>Farther · smaller</span>
+          </div>
+        </div>
+
+        <p class="note">
+          Each point represents an inspection observation. Restaurants with
+          multiple observations may overlap at the same location.
+        </p>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1701 @@
+{
+  "type": "FeatureCollection",
+  "name": "the_met_har_server_locations",
+  "metadata": {
+    "source_har": "www.metmuseum.org.har",
+    "source_site": "The Metropolitan Museum of Art",
+    "total_request_count": 600,
+    "unique_domain_count": 52,
+    "unique_public_ip_count": 49,
+    "attempted_ip_count": 49,
+    "located_ip_count": 49,
+    "failed_ip_count": 0,
+    "top_domains": [
+      {
+        "domain": "www.metmuseum.org",
+        "request_count": 183
+      },
+      {
+        "domain": "collectionapi.metmuseum.org",
+        "request_count": 118
+      },
+      {
+        "domain": "ingest.quantummetric.com",
+        "request_count": 60
+      },
+      {
+        "domain": "www.facebook.com",
+        "request_count": 26
+      },
+      {
+        "domain": "analytics.tiktok.com",
+        "request_count": 19
+      },
+      {
+        "domain": "cdn.sanity.io",
+        "request_count": 16
+      },
+      {
+        "domain": "ad.doubleclick.net",
+        "request_count": 14
+      },
+      {
+        "domain": "insight.adsrvr.org",
+        "request_count": 13
+      },
+      {
+        "domain": "mpc-prod-28-1053047382554.us-central1.run.app",
+        "request_count": 13
+      },
+      {
+        "domain": "js.adsrvr.org",
+        "request_count": 11
+      },
+      {
+        "domain": "ib.adnxs.com",
+        "request_count": 10
+      },
+      {
+        "domain": "px.ads.linkedin.com",
+        "request_count": 10
+      },
+      {
+        "domain": "o1376681.ingest.sentry.io",
+        "request_count": 9
+      },
+      {
+        "domain": "955372.fls.doubleclick.net",
+        "request_count": 8
+      },
+      {
+        "domain": "www.google.com",
+        "request_count": 7
+      }
+    ],
+    "failures": []
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "76.76.21.21",
+        "representative_url": "https://www.metmuseum.org/",
+        "domains": [
+          "www.metmuseum.org"
+        ],
+        "domain_count": 1,
+        "request_count": 183,
+        "city": "Los Angeles",
+        "region": "California",
+        "country": "US",
+        "postal": "90012",
+        "organization": "Vercel, INC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "www.metmuseum.org",
+        "category": "first_party",
+        "category_label": "The Met",
+        "location_label": "Los Angeles, California, US",
+        "display_url": "https://www.metmuseum.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2427659,
+          34.0536909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "45.60.77.20",
+        "representative_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/316715/2105464/main-image",
+        "domains": [
+          "collectionapi.metmuseum.org"
+        ],
+        "domain_count": 1,
+        "request_count": 118,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Incapsula INC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "collectionapi.metmuseum.org",
+        "category": "first_party",
+        "category_label": "The Met",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/316715/2105464/main-image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4075201,
+          37.7879363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.8.9.231",
+        "representative_url": "https://ingest.quantummetric.com/horizon/d",
+        "domains": [
+          "ingest.quantummetric.com"
+        ],
+        "domain_count": 1,
+        "request_count": 60,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "ingest.quantummetric.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://ingest.quantummetric.com/horizon/d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "157.240.241.35",
+        "representative_url": "https://www.facebook.com/tr/?id=2370348349843373&ev=PageView&dl=https%3A%2F%2Fwww.metmuseum.org%2F&rl=&if=false&ts=1785275651303&iw=false&sw=1680&sh=1050&v=2.9.363&r=stable&ec=0&o=12318&aems=0%3B0&fbp=fb.1.1785275410564.440741987750720&ler=empty&cdl=API_unavailable&pmd[title]=The%20Metropolitan%20Museum%20of%20Art&pmd[locale]=en&pmd[description]=The%20Met%20presents%20over%205%2C000%20years%20of%20art%20from%20around%20the%20world%20for%20everyone%20to%20experience%20and%20enjoy.&plt=223.69999992847443&iss=1&ss=%7B%22page_title%22%3A%5B%7B%22rid%22%3A%221286496429993713%22%2C%22v%22%3A%5B%22Welcome%20to%20The%C2%A0Met%22%5D%7D%5D%2C%22entity_name%22%3A%5B%7B%22rid%22%3A%223550055198476411%22%2C%22v%22%3A%5B%22Welcome%20to%20The%C2%A0Met%22%5D%7D%5D%2C%22page_url%22%3A%5B%7B%22rid%22%3A%221332936135663198%22%2C%22v%22%3A%5B%22Select%20languageEnglish%22%5D%7D%5D%2C%22page_type%22%3A%5B%7B%22rid%22%3A%221328158266152611%22%2C%22v%22%3A%5B%22Select%20languageEnglish%22%5D%7D%2C%7B%22rid%22%3A%22880335548471893%22%2C%22v%22%3A%5B%22Welcome%20to%20The%C2%A0Met%22%5D%7D%5D%2C%22currencies_accepted%22%3A%5B%7B%22rid%22%3A%221231218395755512%22%2C%22v%22%3A%5B%22English%22%5D%7D%5D%2C%22event_location%22%3A%5B%7B%22rid%22%3A%221033659769381239%22%2C%22v%22%3A%5B%22The%20Met%20Fifth%20Avenue%22%2C%22The%20Met%20Cloisters%22%5D%7D%5D%7D&imft=1&tz=-240&it=1785275651126&coo=false&expv2[0]=pl1&expv2[1]=el3&expv2[2]=bc1&expv2[3]=ra2&expv2[4]=rp2&expv2[5]=ct2&expv2[6]=hf1&expv2[7]=sx1&rqm=GET",
+        "domains": [
+          "www.facebook.com"
+        ],
+        "domain_count": 1,
+        "request_count": 26,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Facebook, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "www.facebook.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://www.facebook.com/tr/?id=2370348349843373&ev=PageView&dl=https%3A%2F%2Fwww.metmuseum.org%2F&rl=&if=false&ts=1785275651303&iw=false&sw=1680&sh=1…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060935,
+          40.7128388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "23.47.144.16",
+        "representative_url": "https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=CA79G7RC77U7LMFB4PB0&lib=ttq",
+        "domains": [
+          "analytics.tiktok.com"
+        ],
+        "domain_count": 1,
+        "request_count": 17,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Akamai Technologies, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "analytics.tiktok.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=CA79G7RC77U7LMFB4PB0&lib=ttq"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.36.58.112",
+        "representative_url": "https://cdn.sanity.io/images/cctd4ker/production/c47d68fbeb2ac1df1c97065fc4c9576314114ac2-2100x1150.jpg?rect=539,36,1011,1074&w=1080&q=75&fit=clip&auto=format",
+        "domains": [
+          "cdn.sanity.io"
+        ],
+        "domain_count": 1,
+        "request_count": 16,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "cdn.sanity.io",
+        "category": "infrastructure",
+        "category_label": "Infrastructure / other",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://cdn.sanity.io/images/cctd4ker/production/c47d68fbeb2ac1df1c97065fc4c9576314114ac2-2100x1150.jpg?rect=539,36,1011,1074&w=1080&q=75&fit=clip&aut…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "142.250.188.6",
+        "representative_url": "https://ad.doubleclick.net/activity;src=9553725;type=pagel0;cat=homep0;rcb=14;ord=1;num=5867431190368;npa=0;auiddc=2142256558.1785275410;uaa=arm;uab=64;uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.184%7CGoogle%2520Chrome%3B150.0.7871.184;uamb=0;uam=;uap=macOS;uapv=15.6.1;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe67r2v9188131092z8899739654za20gzb899739654zd899739654xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=115616985~115938466~115938468~118131809~118897920~118897930~119896803;epver=2;dc_random=1785275651_RiSPfBzrTy3TDUmh-4q-2ZGEYcGRnFx67w;~oref=https%3A%2F%2Fwww.metmuseum.org%2F?",
+        "domains": [
+          "ad.doubleclick.net"
+        ],
+        "domain_count": 1,
+        "request_count": 14,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "ad.doubleclick.net",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://ad.doubleclick.net/activity;src=9553725;type=pagel0;cat=homep0;rcb=14;ord=1;num=5867431190368;npa=0;auiddc=2142256558.1785275410;uaa=arm;uab=6…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "3.33.220.150",
+        "representative_url": "https://insight.adsrvr.org/track/cei?advertiser_id=78gi7po&cookie_sync=1&upv=3.0.0&upid=7ybmb7s&ref=https%3A%2F%2Fwww.metmuseum.org%2F",
+        "domains": [
+          "insight.adsrvr.org"
+        ],
+        "domain_count": 1,
+        "request_count": 13,
+        "city": "Seattle",
+        "region": "Washington",
+        "country": "US",
+        "postal": "98104",
+        "organization": "Amazon Technologies Inc.",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "insight.adsrvr.org",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Seattle, Washington, US",
+        "display_url": "https://insight.adsrvr.org/track/cei?advertiser_id=78gi7po&cookie_sync=1&upv=3.0.0&upid=7ybmb7s&ref=https%3A%2F%2Fwww.metmuseum.org%2F"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3298447,
+          47.6043089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.143.73.2",
+        "representative_url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events?cee=no",
+        "domains": [
+          "mpc-prod-28-1053047382554.us-central1.run.app"
+        ],
+        "domain_count": 1,
+        "request_count": 13,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "mpc-prod-28-1053047382554.us-central1.run.app",
+        "category": "infrastructure",
+        "category_label": "Infrastructure / other",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://mpc-prod-28-1053047382554.us-central1.run.app/events?cee=no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "142.251.211.134",
+        "representative_url": "https://9553725.fls.doubleclick.net/activityi;src=9553725;type=pagel0;cat=homep0;rcb=14;ord=1;num=5867431190368;npa=0;auiddc=2142256558.1785275410;uaa=arm;uab=64;uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.184%7CGoogle%2520Chrome%3B150.0.7871.184;uamb=0;uam=;uap=macOS;uapv=15.6.1;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe67r2v9188131092z8899739654za20gzb899739654zd899739654xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938468~118131809~118897920~118897930~119896803;epver=2;dc_random=1785275651_RiSPfBzrTy3TDUmh-4q-2ZGEYcGRnFx67w;_dc_test=1;~oref=https%3A%2F%2Fwww.metmuseum.org%2F?",
+        "domains": [
+          "955372.fls.doubleclick.net",
+          "9553725.fls.doubleclick.net"
+        ],
+        "domain_count": 2,
+        "request_count": 10,
+        "city": "Chicago",
+        "region": "Illinois",
+        "country": "US",
+        "postal": "60605",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "955372.fls.doubleclick.net",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Chicago, Illinois, US",
+        "display_url": "https://9553725.fls.doubleclick.net/activityi;src=9553725;type=pagel0;cat=homep0;rcb=14;ord=1;num=5867431190368;npa=0;auiddc=2142256558.1785275410;uaa…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6244212,
+          41.8755616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "68.67.179.87",
+        "representative_url": "https://ib.adnxs.com/px?consent=1&id=1881702&t=1",
+        "domains": [
+          "ib.adnxs.com"
+        ],
+        "domain_count": 1,
+        "request_count": 10,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Xandr Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "ib.adnxs.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://ib.adnxs.com/px?consent=1&id=1881702&t=1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "172.64.146.215",
+        "representative_url": "https://px.ads.linkedin.com/attribution_trigger?pid=7188444&time=1785275651349&url=https%3A%2F%2Fwww.metmuseum.org%2F",
+        "domains": [
+          "px.ads.linkedin.com"
+        ],
+        "domain_count": 1,
+        "request_count": 10,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Cloudflare, Inc.",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "px.ads.linkedin.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://px.ads.linkedin.com/attribution_trigger?pid=7188444&time=1785275651349&url=https%3A%2F%2Fwww.metmuseum.org%2F"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.160.81.0",
+        "representative_url": "https://o1376681.ingest.sentry.io/api/6686064/envelope/?sentry_version=7&sentry_key=fc26ffe1f7754e9aaa45cbb8fb82b860&sentry_client=sentry.javascript.nextjs%2F10.62.0",
+        "domains": [
+          "o1376681.ingest.sentry.io"
+        ],
+        "domain_count": 1,
+        "request_count": 9,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "o1376681.ingest.sentry.io",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://o1376681.ingest.sentry.io/api/6686064/envelope/?sentry_version=7&sentry_key=fc26ffe1f7754e9aaa45cbb8fb82b860&sentry_client=sentry.javascript.n…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "13.32.241.38",
+        "representative_url": "https://js.adsrvr.org/up_loader.1.1.0.js",
+        "domains": [
+          "js.adsrvr.org"
+        ],
+        "domain_count": 1,
+        "request_count": 7,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Amazon.com, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "js.adsrvr.org",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://js.adsrvr.org/up_loader.1.1.0.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "142.251.156.119",
+        "representative_url": "https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=2142256558.1785275410&dt=The%20Metropolitan%20Museum%20of%20Art&en=page_view&dl=https%3A%2F%2Fwww.metmuseum.org%2F&scrsrc=www.googletagmanager.com&rnd=1901944718.1785275651&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He67r2v899739654za200zd899739654xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118131809~118395333~118897920~118897930~119896802&apvc=1&tft=1785275651000&tfd=524&fmt=8",
+        "domains": [
+          "www.google.com"
+        ],
+        "domain_count": 1,
+        "request_count": 7,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "www.google.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=2142256558.1785275410&dt=The%20Metropolitan%20Museum%20of%20Art&en=page_view&dl=https%3A%2F%…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "35.186.224.24",
+        "representative_url": "https://pixels.spotify.com/v1/config/a6c80369de374e939489c5815ce2a579",
+        "domains": [
+          "pixels.spotify.com"
+        ],
+        "domain_count": 1,
+        "request_count": 7,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "pixels.spotify.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://pixels.spotify.com/v1/config/a6c80369de374e939489c5815ce2a579"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "142.250.217.2",
+        "representative_url": "https://pubads.g.doubleclick.net/activity;xsp=537131;ord=1930007191520.996?",
+        "domains": [
+          "adservice.google.com",
+          "pubads.g.doubleclick.net"
+        ],
+        "domain_count": 2,
+        "request_count": 6,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "adservice.google.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://pubads.g.doubleclick.net/activity;xsp=537131;ord=1930007191520.996?"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.36.11.88",
+        "representative_url": "https://beacon.sojern.com/pixel/p/203602?f_v=v6_js&p_v=2&sha256_eml=&sha1_eml=&md5_eml=&ccid=&vid=tou&cid=",
+        "domains": [
+          "beacon.sojern.com"
+        ],
+        "domain_count": 1,
+        "request_count": 5,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "beacon.sojern.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://beacon.sojern.com/pixel/p/203602?f_v=v6_js&p_v=2&sha256_eml=&sha1_eml=&md5_eml=&ccid=&vid=tou&cid="
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "3.168.102.53",
+        "representative_url": "https://try.abtasty.com/89432229ddb5730c43cb42b5f3f7d28a.js",
+        "domains": [
+          "try.abtasty.com"
+        ],
+        "domain_count": 1,
+        "request_count": 5,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Amazon Technologies Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "try.abtasty.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://try.abtasty.com/89432229ddb5730c43cb42b5f3f7d28a.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "142.250.217.8",
+        "representative_url": "https://www.googletagmanager.com/gtm.js?id=GTM-KBJJBHH",
+        "domains": [
+          "www.googletagmanager.com"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "www.googletagmanager.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://www.googletagmanager.com/gtm.js?id=GTM-KBJJBHH"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "157.240.241.1",
+        "representative_url": "https://connect.facebook.net/en_US/fbevents.js",
+        "domains": [
+          "connect.facebook.net"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Facebook, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "connect.facebook.net",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://connect.facebook.net/en_US/fbevents.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060935,
+          40.7128388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.107.173.171",
+        "representative_url": "https://consentag.eu/public/5.0.0/consenTag.js",
+        "domains": [
+          "consentag.eu"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "consentag.eu",
+        "category": "infrastructure",
+        "category_label": "Infrastructure / other",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://consentag.eu/public/5.0.0/consenTag.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "13.32.241.106",
+        "representative_url": "https://js.adsrvr.org/universal_pixel.js",
+        "domains": [
+          "js.adsrvr.org"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Amazon.com, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "js.adsrvr.org",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://js.adsrvr.org/universal_pixel.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.8.30.44",
+        "representative_url": "https://ariane.abtasty.com/",
+        "domains": [
+          "ariane.abtasty.com"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "ariane.abtasty.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://ariane.abtasty.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "52.24.94.17",
+        "representative_url": "https://api2.amplitude.com/2/httpapi",
+        "domains": [
+          "api2.amplitude.com"
+        ],
+        "domain_count": 1,
+        "request_count": 4,
+        "city": "Boardman",
+        "region": "Oregon",
+        "country": "US",
+        "postal": "97818",
+        "organization": "Amazon Technologies Inc.",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "api2.amplitude.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Boardman, Oregon, US",
+        "display_url": "https://api2.amplitude.com/2/httpapi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.7013847,
+          45.8398775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "199.232.37.140",
+        "representative_url": "https://www.redditstatic.com/ads/pixel.js",
+        "domains": [
+          "alb.reddit.com",
+          "pixel-config.reddit.com",
+          "www.redditstatic.com"
+        ],
+        "domain_count": 3,
+        "request_count": 3,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Fastly, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "alb.reddit.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://www.redditstatic.com/ads/pixel.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060935,
+          40.7128388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "205.180.85.204",
+        "representative_url": "https://login-ds.dotomi.com/profile/visit/final/js?dtm_user_agent=Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F150.0.0.0%20Safari%2F537.36&dtm_country_code=US&init_wl_code=1&ops_test_camp=false&dtm_form_uid=400308730457912591&dtm_token=AQAKGvm4LxRxrQEBAQEAAQBIaAABAQCNw1D1AQEBAJ6rtelZ&dtm_dma_code=501&dtm_cmagic=c3ec0d&cachebuster=1775120027&tcflag=true&init_ts=1785275651054&dtmc_loc=https%3A%2F%2Fwww.metmuseum.org%2F&dtm_token_assignment_type=1&dtm_cid=84329&dtm_fid=8014&dtm_client_optout=false&wl_domains_key=.*---&dtm_zip_code=10964&dtm_promo_id=1&dtm_cookies_enabled=true&dtm_user_dc=iad&dtm_id_assgn_type=3&dtm_state=NY&data_object_type_code=0&canonical_url=https%3A%2F%2Fwww.metmuseum.org%2F&dtmc_ref=&dtm_token_dc=AQAKGvm4LxRxrQEBAQEAAQBIaAABAQCNw1D1AQEBAJ6rtelZ&dtm_token_ls=AQAKGvm4LxRxrQEBAQEAAQBIaAABAQCNw1D1AQEBAJ6rtelZ&dtm_token_ss=AQAKGvm4LxRxrQEBAQEAAQBIaAABAQCNw1D1AQEBAJ6rtelZ&dtm_sync=0%2420662%2420662%2441440-0%239253738-0%239252325-0%2352136-0%239252257-0%2374572-0%2367215-0%2312783-0%2398193-0%2314000-0%2326832-0%2326481-0%235010-0%239254457-0%2315900-0%231982-0%23&dtm_consent_ls=UNSPECIFIED&dtm_consent_ss=UNSPECIFIED&dtm_consent_dc=UNSPECIFIED&dtm_consent=UNSPECIFIED&cli_promo_id=1&cmps_queried=true&dtm_paapi=1",
+        "domains": [
+          "exchange-match.mediaplex.com",
+          "login-ds.dotomi.com"
+        ],
+        "domain_count": 2,
+        "request_count": 3,
+        "city": "Thousand Oaks",
+        "region": "California",
+        "country": "US",
+        "postal": "91361",
+        "organization": "FastClick",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "exchange-match.mediaplex.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Thousand Oaks, California, US",
+        "display_url": "https://login-ds.dotomi.com/profile/visit/final/js?dtm_user_agent=Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7)%20AppleWebKit%2F537.…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.8375937,
+          34.1705609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "192.184.67.84",
+        "representative_url": "https://pixel.quantserve.com/cs?a=p-Ud6J9WY3Ryurh&gdpr=0&sf2=1",
+        "domains": [
+          "pixel.quantserve.com"
+        ],
+        "domain_count": 1,
+        "request_count": 3,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Quantcast Corporation",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "pixel.quantserve.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://pixel.quantserve.com/cs?a=p-Ud6J9WY3Ryurh&gdpr=0&sf2=1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "104.26.4.11",
+        "representative_url": "https://surveys-static-prd.survicate-cdn.com/fonts/fonts.css",
+        "domains": [
+          "surveys-static-prd.survicate-cdn.com"
+        ],
+        "domain_count": 1,
+        "request_count": 3,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Cloudflare, Inc.",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "surveys-static-prd.survicate-cdn.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://surveys-static-prd.survicate-cdn.com/fonts/fonts.css"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "108.138.128.98",
+        "representative_url": "https://sr-client-cfg.amplitude.com/config/946c173b37f3101f9c531ee945a31fc8?config_group=browser",
+        "domains": [
+          "sr-client-cfg.amplitude.com"
+        ],
+        "domain_count": 1,
+        "request_count": 3,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon.com, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "sr-client-cfg.amplitude.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://sr-client-cfg.amplitude.com/config/946c173b37f3101f9c531ee945a31fc8?config_group=browser"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "108.139.29.40",
+        "representative_url": "https://cdn.amplitude.com/libs/analytics-browser-gtm-wrapper-2.42.5.min.js.br",
+        "domains": [
+          "cdn.amplitude.com"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon.com, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "cdn.amplitude.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://cdn.amplitude.com/libs/analytics-browser-gtm-wrapper-2.42.5.min.js.br"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "23.219.36.106",
+        "representative_url": "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+        "domains": [
+          "snap.licdn.com"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "Secaucus",
+        "region": "New Jersey",
+        "country": "US",
+        "postal": "07094",
+        "organization": "Akamai Technologies, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "snap.licdn.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "Secaucus, New Jersey, US",
+        "display_url": "https://snap.licdn.com/li.lms-analytics/insight.min.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0555552,
+          40.7967439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "100.57.191.109",
+        "representative_url": "https://ps.eyeota.net/match?bid=r8d1b20&uid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent=",
+        "domains": [
+          "ps.eyeota.net"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon Data Services Northern Virginia",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "ps.eyeota.net",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://ps.eyeota.net/match?bid=r8d1b20&uid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent="
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "23.40.18.21",
+        "representative_url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTA0NTFjNWQ4MQ.js",
+        "domains": [
+          "analytics.tiktok.com"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "Edison",
+        "region": "New Jersey",
+        "country": "US",
+        "postal": "08817",
+        "organization": "Akamai Technologies, Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "analytics.tiktok.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "Edison, New Jersey, US",
+        "display_url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTA0NTFjNWQ4MQ.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.384526,
+          40.5395256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "54.163.146.91",
+        "representative_url": "https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10206432&he={INSERT_MACRO_HERE}&hph={INSERT_MACRO_HERE}",
+        "domains": [
+          "sp.analytics.yahoo.com"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon Technologies Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "sp.analytics.yahoo.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10206432&he={INSERT_MACRO_HERE}&hph={INSERT_MACRO_HERE}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "216.239.36.181",
+        "representative_url": "https://analytics.google.com/g/collect?v=2&tid=G-Y0W8DGNBTB&gtm=45je67r2v889312667za20gzb899739654zd899739654&_p=1785275650943&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&are=1&cid=1966940672.1785275435&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=8&sr=1680x1050&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.184%7CGoogle%2520Chrome%3B150.0.7871.184&uam=&uamb=0&uap=macOS&uapv=15.6.1&uaw=0&ul=zh-cn&tag_exp=115938466~115938468~118897920~118897930~119896802&dl=https%3A%2F%2Fwww.metmuseum.org%2Fexhibitions%2Fmusical-bodies&dr=https%3A%2F%2Fwww.metmuseum.org%2F&sid=1785275435&sct=1&seg=1&dt=Musical%20Bodies%20-%20The%20Metropolitan%20Museum%20of%20Art&_s=1&tfd=11972",
+        "domains": [
+          "analytics.google.com"
+        ],
+        "domain_count": 1,
+        "request_count": 2,
+        "city": "San Jose",
+        "region": "California",
+        "country": "US",
+        "postal": "95113",
+        "organization": "Google LLC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "analytics.google.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Jose, California, US",
+        "display_url": "https://analytics.google.com/g/collect?v=2&tid=G-Y0W8DGNBTB&gtm=45je67r2v889312667za20gzb899739654zd899739654&_p=1785275650943&gcd=13l3l3l3l1l1&npa=0&…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8905913,
+          37.3361663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "192.0.66.2",
+        "representative_url": "https://cdn.parsely.com/keys/metmuseum.org/p.js",
+        "domains": [
+          "cdn.parsely.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Automattic, INC",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "cdn.parsely.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://cdn.parsely.com/keys/metmuseum.org/p.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "192.184.67.143",
+        "representative_url": "https://secure.quantserve.com/quant.js",
+        "domains": [
+          "secure.quantserve.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Quantcast Corporation",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "secure.quantserve.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://secure.quantserve.com/quant.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "107.150.176.1",
+        "representative_url": "https://survey.survicate.com/workspaces/5c82727293475c10de9d0ffa0ace00b3/web_surveys.js",
+        "domains": [
+          "survey.survicate.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Bunnyway, Informacijske Storitve D.O.O.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "survey.survicate.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://survey.survicate.com/workspaces/5c82727293475c10de9d0ffa0ace00b3/web_surveys.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060935,
+          40.7128388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "159.127.43.140",
+        "representative_url": "https://login.dotomi.com/profile/visit/js/1_0?dtm_cid=84329&dtm_cmagic=c3ec0d&dtm_fid=8014&dtm_promo_id=1&dtmc_loc=https%3A%2F%2Fwww.metmuseum.org%2F&cachebuster=1775120027",
+        "domains": [
+          "login.dotomi.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Washington",
+        "region": "District of Columbia",
+        "country": "US",
+        "postal": "20230",
+        "organization": "Conversant, LLC",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "login.dotomi.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Washington, District of Columbia, US",
+        "display_url": "https://login.dotomi.com/profile/visit/js/1_0?dtm_cid=84329&dtm_cmagic=c3ec0d&dtm_fid=8014&dtm_promo_id=1&dtmc_loc=https%3A%2F%2Fwww.metmuseum.org%2F&…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0363058,
+          38.8951741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "34.117.162.98",
+        "representative_url": "https://pixel.byspotify.com/ping.min.js",
+        "domains": [
+          "pixel.byspotify.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "pixel.byspotify.com",
+        "category": "social_tracking",
+        "category_label": "Social / tracking",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://pixel.byspotify.com/ping.min.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "104.20.36.39",
+        "representative_url": "https://cdn.quantummetric.com/qscripts/quantum-metmuseum.js",
+        "domains": [
+          "cdn.quantummetric.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "postal": "94102",
+        "organization": "Cloudflare, Inc.",
+        "timezone": "America/Los_Angeles",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "cdn.quantummetric.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "San Francisco, California, US",
+        "display_url": "https://cdn.quantummetric.com/qscripts/quantum-metmuseum.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185412,
+          37.7749113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "54.144.144.142",
+        "representative_url": "https://p1.parsely.com/plogger/?rand=1785275651052&plid=0e71129b-187d-44f2-a6ee-792f9324ebfe&idsite=metmuseum.org&url=https%3A%2F%2Fwww.metmuseum.org%2F&urlref=&screen=1680x1050%7C1680x968%7C30&data=%7B%22parsely%3Ametadata-detection%22%3A%7B%22version%22%3A0%7D%7D&sid=1&surl=https%3A%2F%2Fwww.metmuseum.org%2Fzh&sref=https%3A%2F%2Fwww.google.com%2F&sts=1785275410484&slts=0&title=The+Metropolitan+Museum+of+Art&date=Tue+Jul+28+2026+17%3A54%3A11+GMT-0400+(%E5%8C%97%E7%BE%8E%E4%B8%9C%E9%83%A8%E5%A4%8F%E4%BB%A4%E6%97%B6%E9%97%B4)&action=pageview&pvid=bf0832ef-5b5c-45b5-a93f-88b16d3f9c56&u=pid%3Dc26c67e9-ed78-4a00-ac07-1d7d34fcdbe5",
+        "domains": [
+          "p1.parsely.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon Data Services Northern Virginia",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "p1.parsely.com",
+        "category": "analytics",
+        "category_label": "Analytics",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://p1.parsely.com/plogger/?rand=1785275651052&plid=0e71129b-187d-44f2-a6ee-792f9324ebfe&idsite=metmuseum.org&url=https%3A%2F%2Fwww.metmuseum.org%…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "74.214.194.131",
+        "representative_url": "https://bh.contextweb.com/bh/rtset?do=add&pid=530912&ev=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent=",
+        "domains": [
+          "bh.contextweb.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Newark",
+        "region": "New Jersey",
+        "country": "US",
+        "postal": "07102",
+        "organization": "Pulsepoint INC",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "bh.contextweb.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Newark, New Jersey, US",
+        "display_url": "https://bh.contextweb.com/bh/rtset?do=add&pid=530912&ev=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent="
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1723656,
+          40.7357442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "54.145.188.72",
+        "representative_url": "https://crb.kargo.com/api/v1/dsync/Conversant?exid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent=&gdpr=false",
+        "domains": [
+          "crb.kargo.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Washington",
+        "region": "Virginia",
+        "country": "US",
+        "postal": "22747",
+        "organization": "Amazon Data Services Northern Virginia",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "crb.kargo.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Washington, Virginia, US",
+        "display_url": "https://crb.kargo.com/api/v1/dsync/Conversant?exid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent=&gdpr=false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1593468,
+          38.7129721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "192.173.29.103",
+        "representative_url": "https://idsync.live.streamtheworld.com/pixel.gif?partner=eps&uid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent=",
+        "domains": [
+          "idsync.live.streamtheworld.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Montreal",
+        "region": "Quebec",
+        "country": "CA",
+        "postal": "H3A 2B7",
+        "organization": "Triton Digital",
+        "timezone": "America/Toronto",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "idsync.live.streamtheworld.com",
+        "category": "infrastructure",
+        "category_label": "Infrastructure / other",
+        "location_label": "Montreal, Quebec, CA",
+        "display_url": "https://idsync.live.streamtheworld.com/pixel.gif?partner=eps&uid=AQAKGvm4LxRxrQEBAQEAAQBIaAEBAQEBAQEBAQEBAJ6ruZUn&gdpr_consent="
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5878115,
+          45.5088359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "3.168.102.80",
+        "representative_url": "https://rules.quantcount.com/rules-p-Ud6J9WY3Ryurh.js",
+        "domains": [
+          "rules.quantcount.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "postal": "10007",
+        "organization": "Amazon Technologies Inc.",
+        "timezone": "America/New_York",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "rules.quantcount.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "New York City, New York, US",
+        "display_url": "https://rules.quantcount.com/rules-p-Ud6J9WY3Ryurh.js"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0060152,
+          40.7127281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "35.186.193.173",
+        "representative_url": "https://i.ctnsnet.com/int/integration?pixel=89013490&nid=66354764&cont=s&loc=https%3A%2F%2Fwww.metmuseum.org%2F&ref=&cst=&gdpr_consent=&caid=04d61cdbb00547a29202ca12bf999d46",
+        "domains": [
+          "i.ctnsnet.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "US",
+        "postal": "64106",
+        "organization": "Google LLC",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "i.ctnsnet.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Kansas City, Missouri, US",
+        "display_url": "https://i.ctnsnet.com/int/integration?pixel=89013490&nid=66354764&cont=s&loc=https%3A%2F%2Fwww.metmuseum.org%2F&ref=&cst=&gdpr_consent=&caid=04d61cdbb…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5785681,
+          39.0997285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "109.61.92.54",
+        "representative_url": "https://cdn.ctnsnet.com/ase/fetch/scraper/89506646/d41d8cd98f00b204e9800998ecf8427e.js?caid=04d61cdbb00547a29202ca12bf999d46&cst=&gdpr_consent=&caid=04d61cdbb00547a29202ca12bf999d46",
+        "domains": [
+          "cdn.ctnsnet.com"
+        ],
+        "domain_count": 1,
+        "request_count": 1,
+        "city": "Dallas",
+        "region": "Texas",
+        "country": "US",
+        "postal": "75202",
+        "organization": "Cdn77 DAL",
+        "timezone": "America/Chicago",
+        "geolocation_service": "ipwho.is",
+        "source_har": "www.metmuseum.org.har",
+        "source_site": "The Metropolitan Museum of Art",
+        "primary_domain": "cdn.ctnsnet.com",
+        "category": "advertising",
+        "category_label": "Advertising",
+        "location_label": "Dallas, Texas, US",
+        "display_url": "https://cdn.ctnsnet.com/ase/fetch/scraper/89506646/d41d8cd98f00b204e9800998ecf8427e.js?caid=04d61cdbb00547a29202ca12bf999d46&cst=&gdpr_consent=&caid=0…"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8022405,
+          32.7796895
+        ]
+      }
+    }
+  ]
+}
