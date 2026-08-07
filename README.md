@@ -1,5 +1,13 @@
 # CDP Mapping Systems
 
+## Ci Song — Final Project: NYC TIME FIELD
+
+- **View the live project:** [NYC TIME FIELD on this repository's GitHub Pages](https://cisanotheraccount.github.io/cdp-mapping-systems_Ci/)
+- **Read the project README and browse the source:** [student-projects/Final_Ci_Song_NYC_Time_Field/](student-projects/Final_Ci_Song_NYC_Time_Field/)
+- **Review the upstream submission:** [mapping-systems/cdp-mapping-systems#68](https://github.com/mapping-systems/cdp-mapping-systems/pull/68)
+
+The submitted project is on branch [`ci/nyc-time-field`](https://github.com/Cisanotheraccount/cdp-mapping-systems_Ci/tree/ci/nyc-time-field). The project README explains both ways to view it: open the published site immediately, or download the source and run it locally.
+
 Course materials for **CDP Mapping Systems** at Columbia GSAPP's Computational Design Practices program.
 
 All course content lives in [content/](content/) and is available at the [course website](https://mappings-systems.org):
