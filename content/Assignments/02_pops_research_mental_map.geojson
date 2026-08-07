@@ -1,0 +1,371 @@
+{
+  "type": "FeatureCollection",
+  "name": "daily_remote_pops_research_mental_map",
+  "metadata": {
+    "student": "Krishna Goyal",
+    "narrative": "A daily-life anchor at 1211 Sixth Avenue, where the student frequently visits a friend and sometimes waits outside, related to fourteen corridor comparison sites.",
+    "created": "2026-08-07"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "M050060",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985006,
+          40.754754
+        ]
+      },
+      "properties": {
+        "pops_number": "M050060",
+        "sequence": 1,
+        "address": "1095 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050057",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982848,
+          40.754825
+        ]
+      },
+      "properties": {
+        "pops_number": "M050057",
+        "sequence": 2,
+        "address": "1114 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050055",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.983866,
+          40.756057
+        ]
+      },
+      "properties": {
+        "pops_number": "M050055",
+        "sequence": 3,
+        "address": "1133 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050054",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98336,
+          40.756672
+        ]
+      },
+      "properties": {
+        "pops_number": "M050054",
+        "sequence": 4,
+        "address": "1155 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050052",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981851,
+          40.75682
+        ]
+      },
+      "properties": {
+        "pops_number": "M050052",
+        "sequence": 5,
+        "address": "1166 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050048",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982519,
+          40.757899
+        ]
+      },
+      "properties": {
+        "pops_number": "M050048",
+        "sequence": 6,
+        "address": "1185 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050047",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982399,
+          40.758664
+        ]
+      },
+      "properties": {
+        "pops_number": "M050047",
+        "sequence": 7,
+        "address": "1211 SIXTH AVENUE",
+        "mental_map_role": "frequent waiting place while visiting a friend",
+        "encounter_mode": "frequent physical visits; NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": true,
+        "personal_activity": "sometimes wait outside before my friend gets in",
+        "analytical_relevance": "waiting makes seating and weather protection meaningful",
+        "physically_experienced_in_daily_life": true,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050043",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982067,
+          40.759381
+        ]
+      },
+      "properties": {
+        "pops_number": "M050043",
+        "sequence": 8,
+        "address": "1221 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981612,
+          40.759971
+        ]
+      },
+      "properties": {
+        "pops_number": "M050042",
+        "sequence": 9,
+        "address": "1251 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980533,
+          40.761165
+        ]
+      },
+      "properties": {
+        "pops_number": "M050037",
+        "sequence": 10,
+        "address": "1285 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980027,
+          40.761768
+        ]
+      },
+      "properties": {
+        "pops_number": "M050030",
+        "sequence": 11,
+        "address": "1301 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050026",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.978478,
+          40.761966
+        ]
+      },
+      "properties": {
+        "pops_number": "M050026",
+        "sequence": 12,
+        "address": "1330 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050022",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977778,
+          40.762575
+        ]
+      },
+      "properties": {
+        "pops_number": "M050022",
+        "sequence": 13,
+        "address": "1350 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.979254,
+          40.763064
+        ]
+      },
+      "properties": {
+        "pops_number": "M050021",
+        "sequence": 14,
+        "address": "1345 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "M050019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977471,
+          40.763275
+        ]
+      },
+      "properties": {
+        "pops_number": "M050019",
+        "sequence": 15,
+        "address": "1370 SIXTH AVENUE",
+        "mental_map_role": "comparison site encountered through Mapping Systems coursework",
+        "encounter_mode": "NYC Open Data record; Google Street View image; course web map",
+        "daily_life_anchor": false,
+        "personal_activity": null,
+        "analytical_relevance": "corridor comparison",
+        "physically_experienced_in_daily_life": false,
+        "field_observation_completed": false,
+        "confirmed_by_student": true
+      }
+    }
+  ]
+}
