@@ -1,0 +1,14 @@
+{
+  "name": "mapping-system-weekly-assignments",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Five Columbia Mapping Systems assignments about New York City asking-rent change.",
+  "scripts": {
+    "capture:a04": "node 04_web_mapping/scripts/capture_and_sanitize.mjs",
+    "test:web": "node qa/test_web_interactions.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.0"
+  }
+}

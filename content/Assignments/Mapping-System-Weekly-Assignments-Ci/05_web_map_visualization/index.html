@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A data-driven MapLibre study of Manhattan asking-rent growth and distance from a user-selected location."
+    />
+    <title>Rent Growth Within Reach | Mapping Systems 05</title>
+    <link rel="stylesheet" href="vendor/maplibre-gl.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Map controls and results">
+        <div class="eyebrow">Mapping Systems · Weekly Assignment 05</div>
+        <h1>Rent Growth<br />Within Reach</h1>
+        <p class="intro">
+          Click anywhere in Manhattan. The map finds rent-reporting areas within
+          the selected radius and compares distance with the change in median
+          asking rent from July 2016 to June 2026.
+        </p>
+
+        <section class="control-card" aria-labelledby="radius-title">
+          <div class="control-heading">
+            <h2 id="radius-title">Search radius</h2>
+            <output id="radius-output" for="radius">3.0 km</output>
+          </div>
+          <input id="radius" type="range" min="1" max="8" step="0.5" value="3" />
+          <div class="range-labels"><span>1 km</span><span>8 km</span></div>
+        </section>
+
+        <section class="status-row" aria-live="polite">
+          <span id="mode-badge" class="mode-badge">Preparing data…</span>
+          <span id="result-count">0 areas</span>
+        </section>
+
+        <section class="legend" aria-labelledby="legend-title">
+          <h2 id="legend-title">Visual variables</h2>
+          <div class="legend-row">
+            <span class="legend-label">Color</span>
+            <div class="gradient" aria-hidden="true"></div>
+            <span>2016–26 growth</span>
+          </div>
+          <div class="legend-scale"><span>20%</span><span>70%+</span></div>
+          <div class="legend-row radius-key">
+            <span class="legend-label">Size</span>
+            <span class="dot dot-small"></span>
+            <span class="dot dot-large"></span>
+            <span>June 2026 rent</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-label">Line</span>
+            <span class="line-key"></span>
+            <span>Distance from selected point</span>
+          </div>
+        </section>
+
+        <section class="results-section" aria-labelledby="results-title">
+          <div class="results-heading">
+            <h2 id="results-title">Nearest rent areas</h2>
+            <span id="selected-coordinates">Select a point</span>
+          </div>
+          <ol id="results-list" class="results-list"></ol>
+        </section>
+
+        <footer>
+          <p>
+            StreetEasy asking-rent/listing data, frozen July 2016–June 2026.
+            Asking rent is not paid rent, and the map does not establish that
+            accessibility causes price change. Points are representative
+            locations for reporting areas, not area boundaries.
+          </p>
+        </footer>
+      </aside>
+
+      <section class="map-panel" aria-label="Interactive Manhattan rent map">
+        <div id="map"></div>
+        <div class="map-instruction">Click map to set the comparison point</div>
+      </section>
+    </main>
+
+    <script src="vendor/maplibre-gl.js"></script>
+    <script src="config.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "input": "02_geoprocessing/inputs/personal_places.geojson",
+  "output": "02_geoprocessing/outputs/personal_places_enriched.geojson",
+  "input_features": 6,
+  "output_features": 6,
+  "input_crs": "EPSG:4326",
+  "analysis_crs": "EPSG:2263",
+  "output_crs": "EPSG:4326",
+  "unique_place_ids": true,
+  "missing_nta": 0,
+  "missing_rent_area": 0,
+  "missing_subway": 0,
+  "min_subway_distance_m": 45.4,
+  "max_subway_distance_m": 316.1,
+  "privacy_check": "No forbidden address fields; accepted precision labels only"
+}

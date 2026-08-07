@@ -1,0 +1,80 @@
+:root {
+  --ink: #10231f;
+  --paper: #f0eee7;
+  --panel: #15362e;
+  --muted: #9eb4ad;
+  --mint: #71e0bd;
+  --orange: #ff8d5b;
+  --line: rgba(240, 238, 231, 0.18);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.layout { min-height: 100vh; display: grid; grid-template-columns: minmax(370px, 35vw) 1fr; }
+.story { padding: clamp(28px, 4vw, 64px); background: var(--panel); overflow: auto; }
+.eyebrow {
+  margin: 0 0 25px;
+  color: var(--mint);
+  font: 700 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+h1 { margin: 0; font-size: clamp(54px, 6vw, 94px); line-height: .86; letter-spacing: -.065em; }
+.dek { margin: 30px 0; max-width: 44ch; color: #dbe4e0; font-size: 16px; line-height: 1.55; }
+
+.view-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 12px; }
+.view-switch button {
+  border: 0; border-radius: 8px; padding: 12px 8px; background: transparent; color: var(--muted);
+  font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .04em; cursor: pointer;
+}
+.view-switch button.active { background: var(--paper); color: var(--ink); }
+
+.finding { display: grid; grid-template-columns: auto 1fr; gap: 18px; margin: 28px 0; padding: 22px 0; border-block: 1px solid var(--line); }
+.finding-number { color: var(--orange); font-size: 56px; font-weight: 750; line-height: .9; }
+h2 { margin: 0 0 5px; font-size: 13px; line-height: 1.3; }
+.finding p, .caveat { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+
+.trace-key { list-style: none; display: grid; gap: 10px; padding: 0; margin: 0 0 30px; color: #c8d5d1; font-size: 12px; }
+.trace-key li { display: grid; grid-template-columns: 16px auto 1fr; align-items: center; gap: 8px; }
+.trace-key strong { color: var(--paper); }
+.swatch { width: 10px; height: 10px; border-radius: 50%; }
+.swatch.origin { background: var(--paper); border: 3px solid var(--orange); }
+.swatch.server { background: var(--mint); }
+.swatch.path { height: 0; width: 14px; border-top: 1px dashed var(--mint); border-radius: 0; }
+
+.borough-panel { margin: 0 0 26px; }
+.borough-panel > h2 { margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-size: 10px; }
+.borough-list { display: grid; gap: 6px; }
+.borough-row { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 9px 11px; background: rgba(6, 18, 15, .2); border-radius: 8px; font-size: 12px; }
+.borough-row span:last-child { color: var(--orange); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.caveat { padding-top: 20px; border-top: 1px solid var(--line); }
+
+.map-shell { position: relative; min-height: 100vh; background: #dce5df; }
+#map { position: absolute; inset: 0; }
+.map-note, .scale-legend {
+  position: absolute; z-index: 2; border: 1px solid rgba(16,35,31,.13); border-radius: 9px;
+  background: rgba(240,238,231,.88); box-shadow: 0 10px 30px rgba(16,35,31,.08); color: var(--ink);
+  backdrop-filter: blur(10px); font: 700 10px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.map-note { top: 18px; left: 18px; padding: 11px 13px; letter-spacing: .06em; }
+.scale-legend { left: 18px; bottom: 22px; width: 200px; padding: 12px; }
+.gradient { margin-top: 8px; height: 7px; border-radius: 10px; background: linear-gradient(90deg, #f8d6a5, #ff8d5b, #bb3f31); }
+.ticks { display: flex; justify-content: space-between; margin-top: 5px; color: #53645f; font-size: 9px; }
+.maplibregl-popup-content { border-radius: 10px; color: var(--ink); font: 12px/1.45 ui-sans-serif, system-ui, sans-serif; }
+.popup-title { font-weight: 800; font-size: 13px; }
+.popup-note { color: #65756f; margin-top: 3px; }
+
+@media (max-width: 760px) {
+  .layout { display: block; }
+  .story { padding: 26px 20px 34px; }
+  h1 { font-size: 58px; }
+  .map-shell { min-height: 72vh; }
+  .map-note { top: 12px; left: 12px; }
+  .scale-legend { left: 12px; bottom: 16px; }
+}

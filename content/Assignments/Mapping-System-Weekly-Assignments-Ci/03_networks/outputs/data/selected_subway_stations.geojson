@@ -1,0 +1,585 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 382,
+        "stop_id": "L06",
+        "name": "1 Av",
+        "routes": "L",
+        "graph_node": 9882223240,
+        "station_snap_m": 10.297148998576308,
+        "neighborhoods_served": 2,
+        "mean_network_distance_m": 728.7580023688904
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981628,
+          40.730953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 136,
+        "stop_id": "623",
+        "name": "110 St",
+        "routes": "4 6 6X",
+        "graph_node": 7811793770,
+        "station_snap_m": 19.513062292962154,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 332.10678042360155
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94425,
+          40.79502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 14,
+        "stop_id": "117",
+        "name": "116 St-Columbia University",
+        "routes": "1",
+        "graph_node": 3271250939,
+        "station_snap_m": 20.49943558109649,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 182.8581860914372
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96411,
+          40.807722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 59,
+        "stop_id": "225",
+        "name": "125 St",
+        "routes": "2 3",
+        "graph_node": 42453246,
+        "station_snap_m": 6.9794382308282135,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 727.556667447253
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.945495,
+          40.807754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 12,
+        "stop_id": "115",
+        "name": "137 St-City College",
+        "routes": "1",
+        "graph_node": 561035354,
+        "station_snap_m": 6.796120587697542,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 185.57231285910905
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.953676,
+          40.822008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 11,
+        "stop_id": "114",
+        "name": "145 St",
+        "routes": "1",
+        "graph_node": 561035361,
+        "station_snap_m": 16.412413769777885,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 122.31208920527564
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95036,
+          40.826551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 182,
+        "stop_id": "A07",
+        "name": "175 St",
+        "routes": "A",
+        "graph_node": 9566938954,
+        "station_snap_m": 13.648791663608591,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 740.550098374926
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.939704,
+          40.847391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 4,
+        "stop_id": "107",
+        "name": "215 St",
+        "routes": "1",
+        "graph_node": 11587266255,
+        "station_snap_m": 11.708795765108528,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 1277.843342186217
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.915279,
+          40.869444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 200,
+        "stop_id": "A30",
+        "name": "23 St",
+        "routes": "A C E",
+        "graph_node": 8356688617,
+        "station_snap_m": 0.6080096605302945,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 328.9050739060081
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.998041,
+          40.745906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 447,
+        "stop_id": "R19",
+        "name": "23 St",
+        "routes": "N Q R W",
+        "graph_node": 3884612884,
+        "station_snap_m": 7.784076455908376,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 140.55752456581607
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.989344,
+          40.741303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 147,
+        "stop_id": "634",
+        "name": "23 St-Baruch College",
+        "routes": "4 6 6X",
+        "graph_node": 13650263108,
+        "station_snap_m": 32.07872729362579,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 393.41454118489946
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.986599,
+          40.739864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 145,
+        "stop_id": "632",
+        "name": "33 St",
+        "routes": "4 6 6X",
+        "graph_node": 8119507319,
+        "station_snap_m": 33.03033903011449,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 705.9308896126477
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.982076,
+          40.746081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 260,
+        "stop_id": "D16",
+        "name": "42 St-Bryant Pk",
+        "routes": "B D F FX M",
+        "graph_node": 10169532639,
+        "station_snap_m": 12.138515564462082,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 119.72634831318669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.984569,
+          40.754222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 197,
+        "stop_id": "A25",
+        "name": "50 St",
+        "routes": "A C E",
+        "graph_node": 10168088515,
+        "station_snap_m": 18.361959007962536,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 809.7337007350766
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985984,
+          40.762456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 143,
+        "stop_id": "630",
+        "name": "51 St",
+        "routes": "4 6 6X",
+        "graph_node": 10173080158,
+        "station_snap_m": 10.893256926214336,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 659.3173768447738
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97192,
+          40.757107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 22,
+        "stop_id": "125",
+        "name": "59 St-Columbus Circle",
+        "routes": "1 2",
+        "graph_node": 10183983963,
+        "station_snap_m": 9.843502829187484,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 265.9456159585946
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981929,
+          40.768247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 140,
+        "stop_id": "627",
+        "name": "77 St",
+        "routes": "4 6 6X",
+        "graph_node": 10172784999,
+        "station_snap_m": 10.380720587060738,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 591.1656812816622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.959874,
+          40.77362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 18,
+        "stop_id": "121",
+        "name": "86 St",
+        "routes": "1 2",
+        "graph_node": 11655743701,
+        "station_snap_m": 34.87736767722004,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 295.0467148912517
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.976218,
+          40.788644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 416,
+        "stop_id": "M20",
+        "name": "Canal St",
+        "routes": "J Z",
+        "graph_node": 8307641559,
+        "station_snap_m": 8.038629853400508,
+        "neighborhoods_served": 2,
+        "mean_network_distance_m": 410.83170118868463
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.999892,
+          40.718092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 34,
+        "stop_id": "137",
+        "name": "Chambers St",
+        "routes": "1 2 3",
+        "graph_node": 11517225777,
+        "station_snap_m": 10.027352327096343,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 121.76795144666151
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.009266,
+          40.715478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 30,
+        "stop_id": "133",
+        "name": "Christopher St-Stonewall",
+        "routes": "1 2",
+        "graph_node": 4320028825,
+        "station_snap_m": 10.833511869703251,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 515.6444702217493
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.002906,
+          40.733422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 414,
+        "stop_id": "M18",
+        "name": "Delancey St-Essex St",
+        "routes": "J M Z",
+        "graph_node": 7465370988,
+        "station_snap_m": 19.668031534040445,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 349.6917291522806
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.987437,
+          40.718315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 178,
+        "stop_id": "A02",
+        "name": "Inwood-207 St",
+        "routes": "A",
+        "graph_node": 9561229751,
+        "station_snap_m": 3.2472711940616446,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 174.04945192140346
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.919899,
+          40.868072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 231,
+        "stop_id": "B06",
+        "name": "Roosevelt Island",
+        "routes": "F M",
+        "graph_node": 8265114427,
+        "station_snap_m": 24.143055172360615,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 438.26060292942833
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95326,
+          40.759145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 151,
+        "stop_id": "638",
+        "name": "Spring St",
+        "routes": "4 6 6X",
+        "graph_node": 5152337883,
+        "station_snap_m": 4.493917366453121,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 260.24064002810314
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.997141,
+          40.722301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 203,
+        "stop_id": "A33",
+        "name": "Spring St",
+        "routes": "A C E",
+        "graph_node": 8307641857,
+        "station_snap_m": 11.949482626148141,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 402.09805388280927
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.003739,
+          40.726227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 202,
+        "stop_id": "A32",
+        "name": "W 4 St-Wash Sq",
+        "routes": "A C E",
+        "graph_node": 8309478818,
+        "station_snap_m": 11.898829441770511,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 404.901411160592
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.000495,
+          40.732338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 35,
+        "stop_id": "138",
+        "name": "WTC Cortlandt",
+        "routes": "1",
+        "graph_node": 10288458872,
+        "station_snap_m": 16.96646310677173,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 532.3173097694525
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.012188,
+          40.711835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_index": 64,
+        "stop_id": "230",
+        "name": "Wall St",
+        "routes": "2 3",
+        "graph_node": 8276468642,
+        "station_snap_m": 12.649762326354132,
+        "neighborhoods_served": 1,
+        "mean_network_distance_m": 166.05364337891172
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0091,
+          40.706821
+        ]
+      }
+    }
+  ]
+}

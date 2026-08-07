@@ -1,0 +1,554 @@
+{
+  "status": "PASS",
+  "checks": 66,
+  "passed": 66,
+  "failed": 0,
+  "pending_user_gates": [],
+  "results": [
+    {
+      "name": "Shared table has 600 rows",
+      "pass": true,
+      "detail": 600
+    },
+    {
+      "name": "Shared table has 5 boroughs",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "name": "Shared table has 120 months",
+      "pass": true,
+      "detail": 120
+    },
+    {
+      "name": "Shared borough-month key is unique",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Shared table required values are complete",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Shared monthly series are continuous",
+      "pass": true,
+      "detail": "2016-07 through 2026-06 for each borough"
+    },
+    {
+      "name": "Manhattan series are 31 \u00d7 120 and complete",
+      "pass": true,
+      "detail": {
+        "areas": 31,
+        "months": 120
+      }
+    },
+    {
+      "name": "01_loading_and_visualizing_data/assignment01_nyc_rent_analysis.ipynb code-cell count",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "name": "01_loading_and_visualizing_data/assignment01_nyc_rent_analysis.ipynb executed top-to-bottom",
+      "pass": true,
+      "detail": {
+        "unexecuted_cells": []
+      }
+    },
+    {
+      "name": "01_loading_and_visualizing_data/assignment01_nyc_rent_analysis.ipynb has no saved error outputs",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "01_loading_and_visualizing_data/assignment01_nyc_rent_analysis.ipynb stores direct plotted image/png results",
+      "pass": true,
+      "detail": {
+        "observed": 6,
+        "minimum": 6,
+        "inserted_image_patterns": []
+      }
+    },
+    {
+      "name": "01_loading_and_visualizing_data/assignment01_nyc_rent_analysis.ipynb is bounded for GitHub preview",
+      "pass": true,
+      "detail": {
+        "bytes": 1258506,
+        "maximum": 5000000
+      }
+    },
+    {
+      "name": "02_geoprocessing/02_geoprocessing.ipynb code-cell count",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "name": "02_geoprocessing/02_geoprocessing.ipynb executed top-to-bottom",
+      "pass": true,
+      "detail": {
+        "unexecuted_cells": []
+      }
+    },
+    {
+      "name": "02_geoprocessing/02_geoprocessing.ipynb has no saved error outputs",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "02_geoprocessing/02_geoprocessing.ipynb stores direct plotted image/png results",
+      "pass": true,
+      "detail": {
+        "observed": 2,
+        "minimum": 2,
+        "inserted_image_patterns": []
+      }
+    },
+    {
+      "name": "02_geoprocessing/02_geoprocessing.ipynb is bounded for GitHub preview",
+      "pass": true,
+      "detail": {
+        "bytes": 257278,
+        "maximum": 2000000
+      }
+    },
+    {
+      "name": "03_networks/03_networks.ipynb code-cell count",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "name": "03_networks/03_networks.ipynb executed top-to-bottom",
+      "pass": true,
+      "detail": {
+        "unexecuted_cells": []
+      }
+    },
+    {
+      "name": "03_networks/03_networks.ipynb has no saved error outputs",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "03_networks/03_networks.ipynb stores direct plotted image/png results",
+      "pass": true,
+      "detail": {
+        "observed": 3,
+        "minimum": 3,
+        "inserted_image_patterns": []
+      }
+    },
+    {
+      "name": "03_networks/03_networks.ipynb is bounded for GitHub preview",
+      "pass": true,
+      "detail": {
+        "bytes": 440182,
+        "maximum": 2000000
+      }
+    },
+    {
+      "name": "A02 synthetic end-to-end pipeline",
+      "pass": true,
+      "detail": {
+        "returncode": 0,
+        "audit": {
+          "status": "complete",
+          "input_features": 6,
+          "output_features": 6,
+          "input_crs": "EPSG:4326",
+          "analysis_crs": "EPSG:2263",
+          "output_crs": "EPSG:4326",
+          "unique_place_ids": true,
+          "missing_nta": 0,
+          "missing_rent_area": 0,
+          "missing_subway": 0,
+          "min_subway_distance_m": 212.2,
+          "max_subway_distance_m": 411.1,
+          "privacy_check": "No forbidden address fields; accepted precision labels only"
+        },
+        "stderr": ""
+      }
+    },
+    {
+      "name": "A02 formal coursework mental-map output",
+      "pass": true,
+      "detail": {
+        "input_features": 6,
+        "output_features": 6,
+        "unique_outputs": true
+      }
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_centers_results.geojson feature count",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_centers_results.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_centers_results.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_to_subway_routes.geojson feature count",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_to_subway_routes.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "03_networks/outputs/data/neighborhood_to_subway_routes.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "Networks analysis checks pass",
+      "pass": true,
+      "detail": {
+        "expected_neighborhood_count": 31,
+        "result_neighborhood_count": 31,
+        "reachable_count": 31,
+        "unreachable_count": 0,
+        "unreachable_neighborhoods": [],
+        "route_feature_count": 31,
+        "duplicate_neighborhood_ids": 0,
+        "network_shorter_than_euclidean_violations": 0,
+        "distance_tolerance_m": 5.0,
+        "max_route_reconstruction_error_m": 2.2737367544323206e-13,
+        "minimum_detour_ratio": 1.0446272164944523,
+        "maximum_detour_ratio": 1.881910826141588,
+        "median_detour_ratio": 1.495404590833225,
+        "median_network_distance_m": 393.41454118489946,
+        "mean_network_distance_m": 436.217664996396,
+        "station_choice_changed_count": 7,
+        "pearson_network_distance_vs_growth": 0.5382157575208556,
+        "spearman_network_distance_vs_growth": 0.3734247422949601,
+        "graph_nodes": 59213,
+        "graph_edges": 90814,
+        "graph_crs": "epsg:4326",
+        "input_checks": {
+          "rent_neighborhoods": 31,
+          "rent_months_per_neighborhood": 120,
+          "rent_start": "2016-07",
+          "rent_end": "2026-06",
+          "rent_missing_values": 0,
+          "subway_stations_all_nyc": 496,
+          "subway_stations_in_manhattan": 152,
+          "manhattan_nta_features": 38,
+          "analysis_crs": "EPSG:4326 for interchange; EPSG:2263 for planar distance"
+        },
+        "all_checks_pass": true
+      }
+    },
+    {
+      "name": "Network distance is never below same-target Euclidean distance",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "04_web_mapping/data/server_locations.geojson feature count",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "name": "04_web_mapping/data/server_locations.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "04_web_mapping/data/server_locations.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "04_web_mapping/data/borough_rent_growth.geojson feature count",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "name": "04_web_mapping/data/borough_rent_growth.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "04_web_mapping/data/borough_rent_growth.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_rent_growth_points.geojson feature count",
+      "pass": true,
+      "detail": 31
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_rent_growth_points.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_rent_growth_points.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_nta.geojson feature count",
+      "pass": true,
+      "detail": 38
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_nta.geojson uses EPSG:4326",
+      "pass": true,
+      "detail": 4326
+    },
+    {
+      "name": "05_web_map_visualization/data/manhattan_nta.geojson geometries are valid/nonempty",
+      "pass": true,
+      "detail": "valid"
+    },
+    {
+      "name": "04_web_mapping/data/streeteasy-dashboard.sanitized.har strips headers/cookies/bodies",
+      "pass": true,
+      "detail": 26
+    },
+    {
+      "name": "04_web_mapping/data/streeteasy-dashboard.sanitized.har redacts all query values",
+      "pass": true,
+      "detail": {
+        "query_values_checked": 70
+      }
+    },
+    {
+      "name": "04_web_mapping/data/mapping-systems-course.sanitized.har strips headers/cookies/bodies",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "name": "04_web_mapping/data/mapping-systems-course.sanitized.har redacts all query values",
+      "pass": true,
+      "detail": {
+        "query_values_checked": 4
+      }
+    },
+    {
+      "name": "A04 raw HARs are absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "A04 upstream course script hash",
+      "pass": true,
+      "detail": "d7cc52fc3d2b82772f08e8fa568f26904988dd0fa6cecff3d47f775ea6917df3"
+    },
+    {
+      "name": "A05 browser bundle excludes service_role",
+      "pass": true,
+      "detail": "browser files only"
+    },
+    {
+      "name": "A05 committed config uses only browser-safe Supabase values",
+      "pass": true,
+      "detail": "publishable key + project URL"
+    },
+    {
+      "name": "A05 RPC removes default PUBLIC execute privilege",
+      "pass": true,
+      "detail": "least-privilege RPC grant"
+    },
+    {
+      "name": "A05 seed SQL covers all 31 areas",
+      "pass": true,
+      "detail": {
+        "csv_rows": 31,
+        "sql_rows": 31
+      }
+    },
+    {
+      "name": "A04/A05 interaction test suite",
+      "pass": true,
+      "detail": {
+        "tested_at_utc": "2026-08-07T04:42:45.627Z",
+        "base_url": "http://127.0.0.1:8005",
+        "checks": [
+          {
+            "name": "A04 server GeoJSON loaded",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A04 NYC view toggle",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A04 browser errors",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 live Supabase mode",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 live RPC result count",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 live RPC distance order",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 desktop results do not overlap footer",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 live browser errors",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 default local mode",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 map selection",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 radius control",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 browser errors",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 failed API falls back",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 fallback warning visible in diagnostics",
+            "pass": true,
+            "detail": "Verified"
+          },
+          {
+            "name": "A05 API failure has no uncaught errors",
+            "pass": true,
+            "detail": "Verified"
+          }
+        ],
+        "passed": 15,
+        "failed": 0,
+        "fatal": null
+      }
+    },
+    {
+      "name": "README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 20,
+        "missing": []
+      }
+    },
+    {
+      "name": "01_loading_and_visualizing_data/README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 6,
+        "missing": []
+      }
+    },
+    {
+      "name": "02_geoprocessing/README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 6,
+        "missing": []
+      }
+    },
+    {
+      "name": "03_networks/README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 7,
+        "missing": []
+      }
+    },
+    {
+      "name": "04_web_mapping/README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 21,
+        "missing": []
+      }
+    },
+    {
+      "name": "05_web_map_visualization/README.md links code/results without embedded images",
+      "pass": true,
+      "detail": {
+        "embedded_images": [],
+        "local_targets": 36,
+        "missing": []
+      }
+    },
+    {
+      "name": "Web-map source contains no screenshot image elements",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Only the two teacher-required web-map screenshots are retained",
+      "pass": true,
+      "detail": {
+        "observed": [
+          "04_web_mapping/outputs/web-map-desktop.png",
+          "05_web_map_visualization/outputs/web-map-supabase-desktop.png"
+        ],
+        "expected": [
+          "04_web_mapping/outputs/web-map-desktop.png",
+          "05_web_map_visualization/outputs/web-map-supabase-desktop.png"
+        ]
+      }
+    },
+    {
+      "name": "A01 notebook omits oversized widget state from GitHub handoff",
+      "pass": true,
+      "detail": [
+        "kernelspec",
+        "language_info"
+      ]
+    },
+    {
+      "name": "A01 local rerun displays the Lonboard map",
+      "pass": true,
+      "detail": "display(interactive_map)"
+    },
+    {
+      "name": "Required local artifacts exist",
+      "pass": true,
+      "detail": {
+        "missing": [],
+        "checked": 17
+      }
+    }
+  ]
+}

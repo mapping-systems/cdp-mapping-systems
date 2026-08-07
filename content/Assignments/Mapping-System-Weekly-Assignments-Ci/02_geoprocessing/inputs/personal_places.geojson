@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "name": "personal_places_coursework_mental_map",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "metadata": {
+    "status": "COMPLETE",
+    "scope": "Six public Manhattan anchors already used in the author's Columbia coursework; no residence or private routine is represented.",
+    "source_note": "Columbia GSAPP origin from NYC TIME FIELD; five observation points from street-view-challenge/locations.csv."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "columbia_gsapp",
+        "label": "Columbia GSAPP",
+        "category": "school",
+        "period": "Summer 2026",
+        "narrative_note": "A public study anchor repeatedly used as the origin of the author's Columbia mapping work.",
+        "privacy_level": "public_site"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.9626, 40.8076] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "koreatown_32nd_st",
+        "label": "Koreatown 32nd Street",
+        "category": "fieldwork",
+        "period": "2026 coursework",
+        "narrative_note": "A course observation point selected to study restaurant frontage and a fine-grained commercial corridor.",
+        "privacy_level": "intersection"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.9867, 40.74793] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "bryant_park",
+        "label": "Bryant Park",
+        "category": "open_space",
+        "period": "2026 coursework",
+        "narrative_note": "A public-space reference used to compare an open block with the surrounding Midtown office fabric.",
+        "privacy_level": "public_site"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.98323, 40.7536] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "grand_central_terminal",
+        "label": "Grand Central Terminal",
+        "category": "transit",
+        "period": "2026 coursework",
+        "narrative_note": "A recurring transit reference in the author's street-view and commute-network analyses.",
+        "privacy_level": "public_site"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.97723, 40.75273] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "union_square",
+        "label": "Union Square",
+        "category": "public_space",
+        "period": "2026 coursework",
+        "narrative_note": "A transit-rich public square selected for observing mixed civic, commercial, and neighborhood activity.",
+        "privacy_level": "public_site"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.99108, 40.73586] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "washington_square_park",
+        "label": "Washington Square Park",
+        "category": "public_space",
+        "period": "2026 coursework",
+        "narrative_note": "A downtown public-space anchor used to extend the coursework mental map beyond Midtown and Morningside Heights.",
+        "privacy_level": "public_site"
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.99733, 40.73082] }
+    }
+  ]
+}

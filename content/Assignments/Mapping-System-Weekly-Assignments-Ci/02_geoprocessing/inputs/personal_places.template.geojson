@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "name": "personal_places_template",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "metadata": {
+    "status": "INPUT_REQUIRED",
+    "instructions": "Replace each null geometry with a Manhattan longitude/latitude at street or intersection precision. Replace all bracketed text. Do not add a street address or apartment number. Save as personal_places.geojson."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_01", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_02", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_03", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_04", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_05", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": { "place_id": "place_06", "label": "[public-facing label]", "category": "[home|school|work|errand|social|other]", "period": "[YYYY or YYYY–YYYY]", "narrative_note": "[one sentence about why this place matters]", "privacy_level": "intersection" },
+      "geometry": null
+    }
+  ]
+}
