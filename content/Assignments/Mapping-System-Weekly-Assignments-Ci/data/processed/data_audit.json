@@ -1,0 +1,28 @@
+{
+  "snapshot_period": {
+    "start": "2016-07",
+    "end": "2026-06"
+  },
+  "monthly_rent": {
+    "rows": 600,
+    "boroughs": 5,
+    "months": 120,
+    "duplicate_borough_months": 0,
+    "null_cells": 0
+  },
+  "borough_summary_rows": 5,
+  "borough_geometry_rows": 5,
+  "manhattan_rent_points": {
+    "rows": 31,
+    "unique_ids": 31,
+    "months_per_area": [
+      120
+    ],
+    "null_cells": 0
+  },
+  "source_sha256": {
+    "nyc_rent_monthly.csv": "d2fe917d97f4998fdf45f30a0ff0feec40e55ad5f6a3e9fe49987271f96a6759",
+    "nyc_vacancy_rates.csv": "8c04ddac5127baec72f826c9c431266640c8c29204ccf7dc60991c198ad1d2a4",
+    "manhattan_rent_series.json": "24c42c60dfbf18fa480c52ea128e4aa38b84756af04ada5c7ca8e619f6ea3ed6"
+  }
+}

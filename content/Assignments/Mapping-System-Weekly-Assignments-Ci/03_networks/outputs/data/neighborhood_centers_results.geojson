@@ -1,0 +1,1214 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "battery_park_city",
+        "neighborhood": "Battery Park City",
+        "longitude": -74.0163,
+        "latitude": 40.7113,
+        "baseline_rent_usd": 4750.0,
+        "latest_rent_usd": 5758.0,
+        "growth_pct": 21.2,
+        "origin_graph_node": 11424681238,
+        "origin_snap_m": 15.930038351443553,
+        "euclidean_nearest_stop_id": "138",
+        "euclidean_nearest_station": "WTC Cortlandt",
+        "euclidean_nearest_distance_m": 352.5093893713121,
+        "status": "reachable",
+        "target_stop_id": "138",
+        "target_station": "WTC Cortlandt",
+        "target_routes": "1",
+        "station_graph_node": 10288458872,
+        "station_snap_m": 16.96646310677173,
+        "path_edge_distance_m": 499.4208083112373,
+        "reconstructed_distance_m": 532.3173097694525,
+        "network_distance_m": 532.3173097694525,
+        "euclidean_distance_m": 352.5093893713121,
+        "extra_distance_m": 179.80792039814042,
+        "detour_ratio": 1.510079804452362,
+        "estimated_walk_minutes": 6.653966372118157,
+        "path_node_count": 19,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0163,
+          40.7113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "central_harlem",
+        "neighborhood": "Central Harlem",
+        "longitude": -73.9442,
+        "latitude": 40.8116,
+        "baseline_rent_usd": 2500.0,
+        "latest_rent_usd": 3600.0,
+        "growth_pct": 44.0,
+        "origin_graph_node": 5481924126,
+        "origin_snap_m": 87.76517916660787,
+        "euclidean_nearest_stop_id": "224",
+        "euclidean_nearest_station": "135 St",
+        "euclidean_nearest_distance_m": 411.078025565481,
+        "status": "reachable",
+        "target_stop_id": "225",
+        "target_station": "125 St",
+        "target_routes": "2 3",
+        "station_graph_node": 42453246,
+        "station_snap_m": 6.9794382308282135,
+        "path_edge_distance_m": 632.8120500498169,
+        "reconstructed_distance_m": 727.556667447253,
+        "network_distance_m": 727.556667447253,
+        "euclidean_distance_m": 440.8529213741538,
+        "extra_distance_m": 286.7037460730991,
+        "detour_ratio": 1.6503387687200384,
+        "estimated_walk_minutes": 9.094458343090661,
+        "path_node_count": 21,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9442,
+          40.8116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "central_park_south",
+        "neighborhood": "Central Park South",
+        "longitude": -73.9797,
+        "latitude": 40.7669,
+        "baseline_rent_usd": 7400.0,
+        "latest_rent_usd": 12500.0,
+        "growth_pct": 68.9,
+        "origin_graph_node": 14053118743,
+        "origin_snap_m": 15.04982695613095,
+        "euclidean_nearest_stop_id": "A24",
+        "euclidean_nearest_station": "59 St-Columbus Circle",
+        "euclidean_nearest_distance_m": 231.4773247195104,
+        "status": "reachable",
+        "target_stop_id": "125",
+        "target_station": "59 St-Columbus Circle",
+        "target_routes": "1 2",
+        "station_graph_node": 10183983963,
+        "station_snap_m": 9.843502829187484,
+        "path_edge_distance_m": 241.05228617327617,
+        "reconstructed_distance_m": 265.9456159585946,
+        "network_distance_m": 265.9456159585946,
+        "euclidean_distance_m": 240.39960312267073,
+        "extra_distance_m": 25.546012835923875,
+        "detour_ratio": 1.1062647878952125,
+        "estimated_walk_minutes": 3.3243201994824325,
+        "path_node_count": 7,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9797,
+          40.7669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "chelsea",
+        "neighborhood": "Chelsea",
+        "longitude": -74.0014,
+        "latitude": 40.7465,
+        "baseline_rent_usd": 4200.0,
+        "latest_rent_usd": 6131.0,
+        "growth_pct": 46.0,
+        "origin_graph_node": 42437909,
+        "origin_snap_m": 4.848950951065992,
+        "euclidean_nearest_stop_id": "A30",
+        "euclidean_nearest_station": "23 St",
+        "euclidean_nearest_distance_m": 291.25817868303716,
+        "status": "reachable",
+        "target_stop_id": "A30",
+        "target_station": "23 St",
+        "target_routes": "A C E",
+        "station_graph_node": 8356688617,
+        "station_snap_m": 0.6080096605302945,
+        "path_edge_distance_m": 323.44811329441177,
+        "reconstructed_distance_m": 328.90507390600806,
+        "network_distance_m": 328.9050739060081,
+        "euclidean_distance_m": 291.25817868303716,
+        "extra_distance_m": 37.646895222970954,
+        "detour_ratio": 1.1292560964062759,
+        "estimated_walk_minutes": 4.111313423825101,
+        "path_node_count": 7,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0014,
+          40.7465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "chinatown",
+        "neighborhood": "Chinatown",
+        "longitude": -73.9968,
+        "latitude": 40.7158,
+        "baseline_rent_usd": 2800.0,
+        "latest_rent_usd": 4380.0,
+        "growth_pct": 56.4,
+        "origin_graph_node": 8105679235,
+        "origin_snap_m": 19.774757456647894,
+        "euclidean_nearest_stop_id": "M20",
+        "euclidean_nearest_station": "Canal St",
+        "euclidean_nearest_distance_m": 364.7408366726558,
+        "status": "reachable",
+        "target_stop_id": "M20",
+        "target_station": "Canal St",
+        "target_routes": "J Z",
+        "station_graph_node": 8307641559,
+        "station_snap_m": 8.038629853400508,
+        "path_edge_distance_m": 448.3630946820799,
+        "reconstructed_distance_m": 476.1764819921283,
+        "network_distance_m": 476.1764819921284,
+        "euclidean_distance_m": 364.7408366726558,
+        "extra_distance_m": 111.4356453194726,
+        "detour_ratio": 1.3055200682655745,
+        "estimated_walk_minutes": 5.952206024901605,
+        "path_node_count": 15,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9968,
+          40.7158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "east_harlem",
+        "neighborhood": "East Harlem",
+        "longitude": -73.9419,
+        "latitude": 40.7957,
+        "baseline_rent_usd": 2450.0,
+        "latest_rent_usd": 3250.0,
+        "growth_pct": 32.7,
+        "origin_graph_node": 8809269773,
+        "origin_snap_m": 19.336254542649396,
+        "euclidean_nearest_stop_id": "623",
+        "euclidean_nearest_station": "110 St",
+        "euclidean_nearest_distance_m": 212.21666419152825,
+        "status": "reachable",
+        "target_stop_id": "623",
+        "target_station": "110 St",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 7811793770,
+        "station_snap_m": 19.513062292962154,
+        "path_edge_distance_m": 293.25746358799,
+        "reconstructed_distance_m": 332.10678042360155,
+        "network_distance_m": 332.10678042360155,
+        "euclidean_distance_m": 212.21666419152825,
+        "extra_distance_m": 119.8901162320733,
+        "detour_ratio": 1.5649420449087397,
+        "estimated_walk_minutes": 4.15133475529502,
+        "path_node_count": 11,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9419,
+          40.7957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "east_village",
+        "neighborhood": "East Village",
+        "longitude": -73.984,
+        "latitude": 40.7265,
+        "baseline_rent_usd": 3300.0,
+        "latest_rent_usd": 5250.0,
+        "growth_pct": 59.1,
+        "origin_graph_node": 4216045812,
+        "origin_snap_m": 50.69956589878645,
+        "euclidean_nearest_stop_id": "L06",
+        "euclidean_nearest_station": "1 Av",
+        "euclidean_nearest_distance_m": 533.5563176252599,
+        "status": "reachable",
+        "target_stop_id": "L06",
+        "target_station": "1 Av",
+        "target_routes": "L",
+        "station_graph_node": 9882223240,
+        "station_snap_m": 10.297148998576308,
+        "path_edge_distance_m": 671.234004544939,
+        "reconstructed_distance_m": 732.2307194423017,
+        "network_distance_m": 732.2307194423018,
+        "euclidean_distance_m": 533.5563176252599,
+        "extra_distance_m": 198.67440181704194,
+        "detour_ratio": 1.3723588218415206,
+        "estimated_walk_minutes": 9.152883993028773,
+        "path_node_count": 19,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.984,
+          40.7265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "financial_district",
+        "neighborhood": "Financial District",
+        "longitude": -74.01,
+        "latitude": 40.7075,
+        "baseline_rent_usd": 3695.0,
+        "latest_rent_usd": 4925.0,
+        "growth_pct": 33.3,
+        "origin_graph_node": 8276468650,
+        "origin_snap_m": 22.05435608072752,
+        "euclidean_nearest_stop_id": "230",
+        "euclidean_nearest_station": "Wall St",
+        "euclidean_nearest_distance_m": 107.09746206331492,
+        "status": "reachable",
+        "target_stop_id": "230",
+        "target_station": "Wall St",
+        "target_routes": "2 3",
+        "station_graph_node": 8276468642,
+        "station_snap_m": 12.649762326354132,
+        "path_edge_distance_m": 131.34952497183005,
+        "reconstructed_distance_m": 166.05364337891172,
+        "network_distance_m": 166.05364337891172,
+        "euclidean_distance_m": 107.09746206331492,
+        "extra_distance_m": 58.956181315596794,
+        "detour_ratio": 1.5504909283540491,
+        "estimated_walk_minutes": 2.0756705422363964,
+        "path_node_count": 3,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01,
+          40.7075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "flatiron",
+        "neighborhood": "Flatiron",
+        "longitude": -73.9903,
+        "latitude": 40.7411,
+        "baseline_rent_usd": 5000.0,
+        "latest_rent_usd": 6593.0,
+        "growth_pct": 31.9,
+        "origin_graph_node": 8265964365,
+        "origin_snap_m": 17.037576229759523,
+        "euclidean_nearest_stop_id": "R19",
+        "euclidean_nearest_station": "23 St",
+        "euclidean_nearest_distance_m": 83.83447284224037,
+        "status": "reachable",
+        "target_stop_id": "R19",
+        "target_station": "23 St",
+        "target_routes": "N Q R W",
+        "station_graph_node": 3884612884,
+        "station_snap_m": 7.784076455908376,
+        "path_edge_distance_m": 115.73587188014815,
+        "reconstructed_distance_m": 140.55752456581607,
+        "network_distance_m": 140.55752456581607,
+        "euclidean_distance_m": 83.83447284224037,
+        "extra_distance_m": 56.72305172357569,
+        "detour_ratio": 1.6766077223425389,
+        "estimated_walk_minutes": 1.7569690570727008,
+        "path_node_count": 5,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9903,
+          40.7411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "gramercy_park",
+        "neighborhood": "Gramercy Park",
+        "longitude": -73.9851,
+        "latitude": 40.7379,
+        "baseline_rent_usd": 3600.0,
+        "latest_rent_usd": 5350.0,
+        "growth_pct": 48.6,
+        "origin_graph_node": 12468200147,
+        "origin_snap_m": 1.1103804072656533,
+        "euclidean_nearest_stop_id": "634",
+        "euclidean_nearest_station": "23 St-Baruch College",
+        "euclidean_nearest_distance_m": 252.18754553945053,
+        "status": "reachable",
+        "target_stop_id": "634",
+        "target_station": "23 St-Baruch College",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 13650263108,
+        "station_snap_m": 32.07872729362579,
+        "path_edge_distance_m": 360.22543348400797,
+        "reconstructed_distance_m": 393.4145411848994,
+        "network_distance_m": 393.41454118489946,
+        "euclidean_distance_m": 252.18754553945053,
+        "extra_distance_m": 141.22699564544894,
+        "detour_ratio": 1.5600078122151213,
+        "estimated_walk_minutes": 4.917681764811244,
+        "path_node_count": 9,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9851,
+          40.7379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "greenwich_village",
+        "neighborhood": "Greenwich Village",
+        "longitude": -73.9973,
+        "latitude": 40.7336,
+        "baseline_rent_usd": 3900.0,
+        "latest_rent_usd": 5850.0,
+        "growth_pct": 50.0,
+        "origin_graph_node": 8309478829,
+        "origin_snap_m": 86.0102124425719,
+        "euclidean_nearest_stop_id": "A32",
+        "euclidean_nearest_station": "W 4 St-Wash Sq",
+        "euclidean_nearest_distance_m": 304.1091090989852,
+        "status": "reachable",
+        "target_stop_id": "A32",
+        "target_station": "W 4 St-Wash Sq",
+        "target_routes": "A C E",
+        "station_graph_node": 8309478818,
+        "station_snap_m": 11.898829441770511,
+        "path_edge_distance_m": 306.9923692762496,
+        "reconstructed_distance_m": 404.901411160592,
+        "network_distance_m": 404.901411160592,
+        "euclidean_distance_m": 304.1091090989852,
+        "extra_distance_m": 100.79230206160679,
+        "detour_ratio": 1.3314346694850225,
+        "estimated_walk_minutes": 5.0612676395074,
+        "path_node_count": 7,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9973,
+          40.7336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "hamilton_heights",
+        "neighborhood": "Hamilton Heights",
+        "longitude": -73.9496,
+        "latitude": 40.8262,
+        "baseline_rent_usd": 2300.0,
+        "latest_rent_usd": 3250.0,
+        "growth_pct": 41.3,
+        "origin_graph_node": 11842618674,
+        "origin_snap_m": 56.06987103156679,
+        "euclidean_nearest_stop_id": "114",
+        "euclidean_nearest_station": "145 St",
+        "euclidean_nearest_distance_m": 75.02938731085736,
+        "status": "reachable",
+        "target_stop_id": "114",
+        "target_station": "145 St",
+        "target_routes": "1",
+        "station_graph_node": 561035361,
+        "station_snap_m": 16.412413769777885,
+        "path_edge_distance_m": 49.829804403930964,
+        "reconstructed_distance_m": 122.31208920527564,
+        "network_distance_m": 122.31208920527564,
+        "euclidean_distance_m": 75.02938731085736,
+        "extra_distance_m": 47.28270189441828,
+        "detour_ratio": 1.6301890977533824,
+        "estimated_walk_minutes": 1.5289011150659455,
+        "path_node_count": 4,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9496,
+          40.8262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "inwood",
+        "neighborhood": "Inwood",
+        "longitude": -73.9217,
+        "latitude": 40.8677,
+        "baseline_rent_usd": 1875.0,
+        "latest_rent_usd": 2795.0,
+        "growth_pct": 49.1,
+        "origin_graph_node": 8952453931,
+        "origin_snap_m": 27.94800039805084,
+        "euclidean_nearest_stop_id": "A02",
+        "euclidean_nearest_station": "Inwood-207 St",
+        "euclidean_nearest_distance_m": 157.3486345910619,
+        "status": "reachable",
+        "target_stop_id": "A02",
+        "target_station": "Inwood-207 St",
+        "target_routes": "A",
+        "station_graph_node": 9561229751,
+        "station_snap_m": 3.2472711940616446,
+        "path_edge_distance_m": 142.85418032929095,
+        "reconstructed_distance_m": 174.04945192140346,
+        "network_distance_m": 174.04945192140346,
+        "euclidean_distance_m": 157.3486345910619,
+        "extra_distance_m": 16.70081733034155,
+        "detour_ratio": 1.106138940282169,
+        "estimated_walk_minutes": 2.1756181490175432,
+        "path_node_count": 5,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9217,
+          40.8677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "little_italy",
+        "neighborhood": "Little Italy",
+        "longitude": -73.9975,
+        "latitude": 40.7191,
+        "baseline_rent_usd": 3500.0,
+        "latest_rent_usd": 5250.0,
+        "growth_pct": 50.0,
+        "origin_graph_node": 8307641586,
+        "origin_snap_m": 21.766023048290286,
+        "euclidean_nearest_stop_id": "639",
+        "euclidean_nearest_station": "Canal St",
+        "euclidean_nearest_distance_m": 229.9130816541486,
+        "status": "reachable",
+        "target_stop_id": "M20",
+        "target_station": "Canal St",
+        "target_routes": "J Z",
+        "station_graph_node": 8307641559,
+        "station_snap_m": 8.038629853400508,
+        "path_edge_distance_m": 315.68226748355005,
+        "reconstructed_distance_m": 345.4869203852408,
+        "network_distance_m": 345.4869203852408,
+        "euclidean_distance_m": 231.03240588069804,
+        "extra_distance_m": 114.45451450454277,
+        "detour_ratio": 1.495404590833225,
+        "estimated_walk_minutes": 4.31858650481551,
+        "path_node_count": 10,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9975,
+          40.7191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "lower_east_side",
+        "neighborhood": "Lower East Side",
+        "longitude": -73.9897,
+        "latitude": 40.7184,
+        "baseline_rent_usd": 3391.0,
+        "latest_rent_usd": 5100.0,
+        "growth_pct": 50.4,
+        "origin_graph_node": 13031223582,
+        "origin_snap_m": 46.42921608108614,
+        "euclidean_nearest_stop_id": "F15",
+        "euclidean_nearest_station": "Delancey St-Essex St",
+        "euclidean_nearest_distance_m": 136.03725687192645,
+        "status": "reachable",
+        "target_stop_id": "M18",
+        "target_station": "Delancey St-Essex St",
+        "target_routes": "J M Z",
+        "station_graph_node": 7465370988,
+        "station_snap_m": 19.668031534040445,
+        "path_edge_distance_m": 283.594481537154,
+        "reconstructed_distance_m": 349.6917291522806,
+        "network_distance_m": 349.6917291522806,
+        "euclidean_distance_m": 191.43845167108927,
+        "extra_distance_m": 158.2532774811913,
+        "detour_ratio": 1.8266535594065842,
+        "estimated_walk_minutes": 4.371146614403507,
+        "path_node_count": 7,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9897,
+          40.7184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "marble_hill",
+        "neighborhood": "Marble Hill",
+        "longitude": -73.9106,
+        "latitude": 40.8763,
+        "baseline_rent_usd": 1660.0,
+        "latest_rent_usd": 3275.0,
+        "growth_pct": 97.3,
+        "origin_graph_node": 10868090698,
+        "origin_snap_m": 78.26420030903975,
+        "euclidean_nearest_stop_id": "107",
+        "euclidean_nearest_station": "215 St",
+        "euclidean_nearest_distance_m": 857.4644278600459,
+        "status": "reachable",
+        "target_stop_id": "107",
+        "target_station": "215 St",
+        "target_routes": "1",
+        "station_graph_node": 11587266255,
+        "station_snap_m": 11.708795765108528,
+        "path_edge_distance_m": 1187.8703461120688,
+        "reconstructed_distance_m": 1277.8433421862171,
+        "network_distance_m": 1277.843342186217,
+        "euclidean_distance_m": 857.4644278600459,
+        "extra_distance_m": 420.37891432617096,
+        "detour_ratio": 1.4902581386090858,
+        "estimated_walk_minutes": 15.973041777327712,
+        "path_node_count": 23,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9106,
+          40.8763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "midtown",
+        "neighborhood": "Midtown",
+        "longitude": -73.9845,
+        "latitude": 40.7549,
+        "baseline_rent_usd": 4200.0,
+        "latest_rent_usd": 5765.0,
+        "growth_pct": 37.3,
+        "origin_graph_node": 13342733051,
+        "origin_snap_m": 17.189679517067198,
+        "euclidean_nearest_stop_id": "D16",
+        "euclidean_nearest_station": "42 St-Bryant Pk",
+        "euclidean_nearest_distance_m": 75.51618675292005,
+        "status": "reachable",
+        "target_stop_id": "D16",
+        "target_station": "42 St-Bryant Pk",
+        "target_routes": "B D F FX M",
+        "station_graph_node": 10169532639,
+        "station_snap_m": 12.138515564462082,
+        "path_edge_distance_m": 90.3981532316574,
+        "reconstructed_distance_m": 119.72634831318668,
+        "network_distance_m": 119.72634831318669,
+        "euclidean_distance_m": 75.51618675292005,
+        "extra_distance_m": 44.21016156026664,
+        "detour_ratio": 1.585439539007935,
+        "estimated_walk_minutes": 1.4965793539148335,
+        "path_node_count": 3,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9845,
+          40.7549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "midtown_east",
+        "neighborhood": "Midtown East",
+        "longitude": -73.9712,
+        "latitude": 40.754,
+        "baseline_rent_usd": 3400.0,
+        "latest_rent_usd": 5095.0,
+        "growth_pct": 49.9,
+        "origin_graph_node": 3830786443,
+        "origin_snap_m": 60.186165981073,
+        "euclidean_nearest_stop_id": "630",
+        "euclidean_nearest_station": "51 St",
+        "euclidean_nearest_distance_m": 350.3446431606686,
+        "status": "reachable",
+        "target_stop_id": "630",
+        "target_station": "51 St",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 10173080158,
+        "station_snap_m": 10.893256926214336,
+        "path_edge_distance_m": 588.2379539374864,
+        "reconstructed_distance_m": 659.3173768447738,
+        "network_distance_m": 659.3173768447738,
+        "euclidean_distance_m": 350.3446431606686,
+        "extra_distance_m": 308.97273368410515,
+        "detour_ratio": 1.881910826141588,
+        "estimated_walk_minutes": 8.241467210559673,
+        "path_node_count": 12,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9712,
+          40.754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "midtown_south",
+        "neighborhood": "Midtown South",
+        "longitude": -73.985,
+        "latitude": 40.749,
+        "baseline_rent_usd": 3930.0,
+        "latest_rent_usd": 5450.0,
+        "growth_pct": 38.7,
+        "origin_graph_node": 6350462399,
+        "origin_snap_m": 51.0257553268128,
+        "euclidean_nearest_stop_id": "D17",
+        "euclidean_nearest_station": "34 St-Herald Sq",
+        "euclidean_nearest_distance_m": 251.42494214785995,
+        "status": "reachable",
+        "target_stop_id": "632",
+        "target_station": "33 St",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 8119507319,
+        "station_snap_m": 33.03033903011449,
+        "path_edge_distance_m": 621.8747952557204,
+        "reconstructed_distance_m": 705.9308896126478,
+        "network_distance_m": 705.9308896126477,
+        "euclidean_distance_m": 407.50035216718476,
+        "extra_distance_m": 298.4305374454629,
+        "detour_ratio": 1.7323442442646677,
+        "estimated_walk_minutes": 8.824136120158096,
+        "path_node_count": 14,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985,
+          40.749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "midtown_west",
+        "neighborhood": "Midtown West",
+        "longitude": -73.9922,
+        "latitude": 40.761,
+        "baseline_rent_usd": 3433.0,
+        "latest_rent_usd": 4930.0,
+        "growth_pct": 43.6,
+        "origin_graph_node": 10168047573,
+        "origin_snap_m": 95.14651234462156,
+        "euclidean_nearest_stop_id": "A27",
+        "euclidean_nearest_station": "42 St-Port Authority Bus Terminal",
+        "euclidean_nearest_distance_m": 459.8023752428836,
+        "status": "reachable",
+        "target_stop_id": "A25",
+        "target_station": "50 St",
+        "target_routes": "A C E",
+        "station_graph_node": 10168088515,
+        "station_snap_m": 18.361959007962536,
+        "path_edge_distance_m": 696.2252293824926,
+        "reconstructed_distance_m": 809.7337007350767,
+        "network_distance_m": 809.7337007350766,
+        "euclidean_distance_m": 549.2011440592836,
+        "extra_distance_m": 260.532556675793,
+        "detour_ratio": 1.4743845847627546,
+        "estimated_walk_minutes": 10.121671259188457,
+        "path_node_count": 14,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9922,
+          40.761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "morningside_heights",
+        "neighborhood": "Morningside Heights",
+        "longitude": -73.9626,
+        "latitude": 40.8075,
+        "baseline_rent_usd": 3400.0,
+        "latest_rent_usd": 4800.0,
+        "growth_pct": 41.2,
+        "origin_graph_node": 6831699331,
+        "origin_snap_m": 14.175646476807467,
+        "euclidean_nearest_stop_id": "117",
+        "euclidean_nearest_station": "116 St-Columbia University",
+        "euclidean_nearest_distance_m": 129.77535185166755,
+        "status": "reachable",
+        "target_stop_id": "117",
+        "target_station": "116 St-Columbia University",
+        "target_routes": "1",
+        "station_graph_node": 3271250939,
+        "station_snap_m": 20.49943558109649,
+        "path_edge_distance_m": 148.18310403353323,
+        "reconstructed_distance_m": 182.85818609143718,
+        "network_distance_m": 182.8581860914372,
+        "euclidean_distance_m": 129.77535185166755,
+        "extra_distance_m": 53.08283423976965,
+        "detour_ratio": 1.4090363345764072,
+        "estimated_walk_minutes": 2.285727326142965,
+        "path_node_count": 7,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9626,
+          40.8075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "nolita",
+        "neighborhood": "Nolita",
+        "longitude": -73.9952,
+        "latitude": 40.7223,
+        "baseline_rent_usd": 3695.0,
+        "latest_rent_usd": 5495.0,
+        "growth_pct": 48.7,
+        "origin_graph_node": 9215097950,
+        "origin_snap_m": 6.281520959771559,
+        "euclidean_nearest_stop_id": "638",
+        "euclidean_nearest_station": "Spring St",
+        "euclidean_nearest_distance_m": 163.98948849961954,
+        "status": "reachable",
+        "target_stop_id": "638",
+        "target_station": "Spring St",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 5152337883,
+        "station_snap_m": 4.493917366453121,
+        "path_edge_distance_m": 249.46520170187847,
+        "reconstructed_distance_m": 260.24064002810314,
+        "network_distance_m": 260.24064002810314,
+        "euclidean_distance_m": 163.98948849961954,
+        "extra_distance_m": 96.2511515284836,
+        "detour_ratio": 1.5869348847240712,
+        "estimated_walk_minutes": 3.253008000351289,
+        "path_node_count": 9,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9952,
+          40.7223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "roosevelt_island",
+        "neighborhood": "Roosevelt Island",
+        "longitude": -73.9496,
+        "latitude": 40.7617,
+        "baseline_rent_usd": 3390.0,
+        "latest_rent_usd": 4550.0,
+        "growth_pct": 34.2,
+        "origin_graph_node": 8265114608,
+        "origin_snap_m": 22.980183381411347,
+        "euclidean_nearest_stop_id": "B06",
+        "euclidean_nearest_station": "Roosevelt Island",
+        "euclidean_nearest_distance_m": 419.53779875670676,
+        "status": "reachable",
+        "target_stop_id": "B06",
+        "target_station": "Roosevelt Island",
+        "target_routes": "F M",
+        "station_graph_node": 8265114427,
+        "station_snap_m": 24.143055172360615,
+        "path_edge_distance_m": 391.13736437565643,
+        "reconstructed_distance_m": 438.2606029294284,
+        "network_distance_m": 438.26060292942833,
+        "euclidean_distance_m": 419.53779875670676,
+        "extra_distance_m": 18.722804172721567,
+        "detour_ratio": 1.0446272164944523,
+        "estimated_walk_minutes": 5.478257536617854,
+        "path_node_count": 10,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9496,
+          40.7617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "soho",
+        "neighborhood": "Soho",
+        "longitude": -74.0016,
+        "latitude": 40.724,
+        "baseline_rent_usd": 5000.0,
+        "latest_rent_usd": 6250.0,
+        "growth_pct": 25.0,
+        "origin_graph_node": 7465090845,
+        "origin_snap_m": 35.892037575632116,
+        "euclidean_nearest_stop_id": "A33",
+        "euclidean_nearest_station": "Spring St",
+        "euclidean_nearest_distance_m": 306.2935566318734,
+        "status": "reachable",
+        "target_stop_id": "A33",
+        "target_station": "Spring St",
+        "target_routes": "A C E",
+        "station_graph_node": 8307641857,
+        "station_snap_m": 11.949482626148141,
+        "path_edge_distance_m": 354.256533681029,
+        "reconstructed_distance_m": 402.09805388280927,
+        "network_distance_m": 402.09805388280927,
+        "euclidean_distance_m": 306.2935566318734,
+        "extra_distance_m": 95.80449725093587,
+        "detour_ratio": 1.3127865251376505,
+        "estimated_walk_minutes": 5.026225673535116,
+        "path_node_count": 11,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0016,
+          40.724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "stuyvesant_town_pcv",
+        "neighborhood": "Stuyvesant Town/PCV",
+        "longitude": -73.9766,
+        "latitude": 40.7317,
+        "baseline_rent_usd": 4480.0,
+        "latest_rent_usd": 6799.0,
+        "growth_pct": 51.8,
+        "origin_graph_node": 7144880222,
+        "origin_snap_m": 5.363739359996022,
+        "euclidean_nearest_stop_id": "L06",
+        "euclidean_nearest_station": "1 Av",
+        "euclidean_nearest_distance_m": 432.7682212210645,
+        "status": "reachable",
+        "target_stop_id": "L06",
+        "target_station": "1 Av",
+        "target_routes": "L",
+        "station_graph_node": 9882223240,
+        "station_snap_m": 10.297148998576308,
+        "path_edge_distance_m": 709.6243969369068,
+        "reconstructed_distance_m": 725.2852852954791,
+        "network_distance_m": 725.2852852954791,
+        "euclidean_distance_m": 432.7682212210645,
+        "extra_distance_m": 292.5170640744146,
+        "detour_ratio": 1.6759208503089058,
+        "estimated_walk_minutes": 9.066066066193489,
+        "path_node_count": 34,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9766,
+          40.7317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "tribeca",
+        "neighborhood": "Tribeca",
+        "longitude": -74.0086,
+        "latitude": 40.7163,
+        "baseline_rent_usd": 8700.0,
+        "latest_rent_usd": 8750.0,
+        "growth_pct": 0.6,
+        "origin_graph_node": 7410938065,
+        "origin_snap_m": 30.855562201341783,
+        "euclidean_nearest_stop_id": "137",
+        "euclidean_nearest_station": "Chambers St",
+        "euclidean_nearest_distance_m": 107.23371872617265,
+        "status": "reachable",
+        "target_stop_id": "137",
+        "target_station": "Chambers St",
+        "target_routes": "1 2 3",
+        "station_graph_node": 11517225777,
+        "station_snap_m": 10.027352327096343,
+        "path_edge_distance_m": 80.88503691822338,
+        "reconstructed_distance_m": 121.7679514466615,
+        "network_distance_m": 121.76795144666151,
+        "euclidean_distance_m": 107.23371872617265,
+        "extra_distance_m": 14.534232720488859,
+        "detour_ratio": 1.1355378969706613,
+        "estimated_walk_minutes": 1.522099393083269,
+        "path_node_count": 8,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0086,
+          40.7163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "upper_east_side",
+        "neighborhood": "Upper East Side",
+        "longitude": -73.956,
+        "latitude": 40.7736,
+        "baseline_rent_usd": 2995.0,
+        "latest_rent_usd": 4425.0,
+        "growth_pct": 47.7,
+        "origin_graph_node": 8258925523,
+        "origin_snap_m": 71.09937359257921,
+        "euclidean_nearest_stop_id": "627",
+        "euclidean_nearest_station": "77 St",
+        "euclidean_nearest_distance_m": 327.0585579371738,
+        "status": "reachable",
+        "target_stop_id": "627",
+        "target_station": "77 St",
+        "target_routes": "4 6 6X",
+        "station_graph_node": 10172784999,
+        "station_snap_m": 10.380720587060738,
+        "path_edge_distance_m": 509.6855871020222,
+        "reconstructed_distance_m": 591.1656812816622,
+        "network_distance_m": 591.1656812816622,
+        "euclidean_distance_m": 327.0585579371738,
+        "extra_distance_m": 264.10712334448834,
+        "detour_ratio": 1.8075224357688935,
+        "estimated_walk_minutes": 7.389571016020777,
+        "path_node_count": 8,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.956,
+          40.7736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "upper_west_side",
+        "neighborhood": "Upper West Side",
+        "longitude": -73.9762,
+        "latitude": 40.787,
+        "baseline_rent_usd": 3500.0,
+        "latest_rent_usd": 4800.0,
+        "growth_pct": 37.1,
+        "origin_graph_node": 10039938744,
+        "origin_snap_m": 44.25386452501731,
+        "euclidean_nearest_stop_id": "121",
+        "euclidean_nearest_station": "86 St",
+        "euclidean_nearest_distance_m": 182.57138360507474,
+        "status": "reachable",
+        "target_stop_id": "121",
+        "target_station": "86 St",
+        "target_routes": "1 2",
+        "station_graph_node": 11655743701,
+        "station_snap_m": 34.87736767722004,
+        "path_edge_distance_m": 215.91548268901437,
+        "reconstructed_distance_m": 295.0467148912517,
+        "network_distance_m": 295.0467148912517,
+        "euclidean_distance_m": 182.57138360507474,
+        "extra_distance_m": 112.47533128617698,
+        "detour_ratio": 1.6160622166805478,
+        "estimated_walk_minutes": 3.6880839361406466,
+        "path_node_count": 5,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9762,
+          40.787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "washington_heights",
+        "neighborhood": "Washington Heights",
+        "longitude": -73.9389,
+        "latitude": 40.842,
+        "baseline_rent_usd": 2195.0,
+        "latest_rent_usd": 3000.0,
+        "growth_pct": 36.7,
+        "origin_graph_node": 12027274599,
+        "origin_snap_m": 18.030696406720043,
+        "euclidean_nearest_stop_id": "A09",
+        "euclidean_nearest_station": "168 St",
+        "euclidean_nearest_distance_m": 152.78821785398472,
+        "status": "reachable",
+        "target_stop_id": "A07",
+        "target_station": "175 St",
+        "target_routes": "A",
+        "station_graph_node": 9566938954,
+        "station_snap_m": 13.648791663608591,
+        "path_edge_distance_m": 708.8706103045973,
+        "reconstructed_distance_m": 740.5500983749259,
+        "network_distance_m": 740.550098374926,
+        "euclidean_distance_m": 602.4996767501533,
+        "extra_distance_m": 138.05042162477275,
+        "detour_ratio": 1.2291294534287691,
+        "estimated_walk_minutes": 9.256876229686576,
+        "path_node_count": 24,
+        "target_differs_from_euclidean_nearest": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9389,
+          40.842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "west_harlem",
+        "neighborhood": "West Harlem",
+        "longitude": -73.952,
+        "latitude": 40.8216,
+        "baseline_rent_usd": 2800.0,
+        "latest_rent_usd": 3800.0,
+        "growth_pct": 35.7,
+        "origin_graph_node": 13564503820,
+        "origin_snap_m": 33.87765726738456,
+        "euclidean_nearest_stop_id": "115",
+        "euclidean_nearest_station": "137 St-City College",
+        "euclidean_nearest_distance_m": 148.4711572627924,
+        "status": "reachable",
+        "target_stop_id": "115",
+        "target_station": "137 St-City College",
+        "target_routes": "1",
+        "station_graph_node": 561035354,
+        "station_snap_m": 6.796120587697542,
+        "path_edge_distance_m": 144.89853500402694,
+        "reconstructed_distance_m": 185.57231285910905,
+        "network_distance_m": 185.57231285910905,
+        "euclidean_distance_m": 148.4711572627924,
+        "extra_distance_m": 37.10115559631666,
+        "detour_ratio": 1.2498879666617537,
+        "estimated_walk_minutes": 2.319653910738863,
+        "path_node_count": 8,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.952,
+          40.8216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "neighborhood_id": "west_village",
+        "neighborhood": "West Village",
+        "longitude": -74.0059,
+        "latitude": 40.7358,
+        "baseline_rent_usd": 3995.0,
+        "latest_rent_usd": 6300.0,
+        "growth_pct": 57.7,
+        "origin_graph_node": 8307463840,
+        "origin_snap_m": 4.265446238171835,
+        "euclidean_nearest_stop_id": "133",
+        "euclidean_nearest_station": "Christopher St-Stonewall",
+        "euclidean_nearest_distance_m": 365.6458975455678,
+        "status": "reachable",
+        "target_stop_id": "133",
+        "target_station": "Christopher St-Stonewall",
+        "target_routes": "1 2",
+        "station_graph_node": 4320028825,
+        "station_snap_m": 10.833511869703251,
+        "path_edge_distance_m": 500.5455121138742,
+        "reconstructed_distance_m": 515.6444702217493,
+        "network_distance_m": 515.6444702217493,
+        "euclidean_distance_m": 365.6458975455678,
+        "extra_distance_m": 149.99857267618154,
+        "detour_ratio": 1.41022905954384,
+        "estimated_walk_minutes": 6.4455558777718664,
+        "path_node_count": 15,
+        "target_differs_from_euclidean_nearest": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0059,
+          40.7358
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "captured_at_utc": "2026-08-07T04:39:58.828Z",
+  "requested_url": "https://mapping-systems.org/",
+  "final_url": "https://mapping-systems.org/",
+  "title": "Home | Mapping Systems",
+  "source_slug": "mapping-systems-course",
+  "sanitized_har": "data/mapping-systems-course.sanitized.har",
+  "entries": 7,
+  "unique_hosts": 4,
+  "entries_with_server_ip": 7,
+  "blocked_or_challenged": false,
+  "capture_error": null,
+  "console_error_count": 0,
+  "failed_request_count": 0,
+  "failed_requests": [],
+  "raw_har_retained": false,
+  "privacy": "New isolated browser context; no user profile or login state. Request/response headers, cookies, bodies, credentials, and all query values removed."
+}

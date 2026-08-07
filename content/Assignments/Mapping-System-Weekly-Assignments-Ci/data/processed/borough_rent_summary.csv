@@ -1,0 +1,6 @@
+borough,baseline_date,latest_date,baseline_rent_usd,latest_rent_usd,rent_change_usd,rent_growth_pct,baseline_inventory,latest_inventory,inventory_change_pct
+Bronx,2016-07,2026-06,1700,2995,1295,76.2,708,1007,42.2
+Brooklyn,2016-07,2026-06,2699,3900,1201,44.5,12829,13491,5.2
+Manhattan,2016-07,2026-06,3400,4965,1565,46.0,24171,16538,-31.6
+Queens,2016-07,2026-06,2305,3350,1045,45.3,4049,4668,15.3
+Staten Island,2016-07,2026-06,2050,3300,1250,61.0,75,57,-24.0

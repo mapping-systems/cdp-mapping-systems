@@ -1,0 +1,25 @@
+{
+  "artifact": "data/network_snapshot/manhattan_walk.graphml.gz",
+  "artifact_sha256": "9a7881de3aad4bdefa65d02495eafb89aa38fc9ce98e9bdf5411fb7cab2ba75d",
+  "created_at": "2026-08-06T07:39:41.143143+00:00",
+  "node_count": 59213,
+  "edge_count": 90814,
+  "crs": "epsg:4326",
+  "network_type": "walk",
+  "boundary": "Manhattan 2020 NTA union plus 1,500-meter buffer",
+  "fallback_reason": null,
+  "source": {
+    "mode": "verified_workspace_cache",
+    "source_path": "nyc-time-field/data/cache/nyc-walk.graphml",
+    "source_sha256": "a4630988f0054528dece8e2cbff3c247c1454c3898bee5a6fb0f1133cf49391a",
+    "source_retrieved_at": "2026-07-27T07:13:34.718334+00:00",
+    "source_node_count": 357977,
+    "source_edge_count": 550125,
+    "network_type": "walk",
+    "source_created_with": "OSMnx 2.1.0"
+  },
+  "software": {
+    "osmnx": "2.1.0",
+    "networkx": "3.6.1"
+  }
+}

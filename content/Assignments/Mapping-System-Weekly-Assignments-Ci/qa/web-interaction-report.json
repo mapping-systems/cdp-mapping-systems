@@ -1,0 +1,84 @@
+{
+  "tested_at_utc": "2026-08-07T04:42:45.627Z",
+  "base_url": "http://127.0.0.1:8005",
+  "checks": [
+    {
+      "name": "A04 server GeoJSON loaded",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A04 NYC view toggle",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A04 browser errors",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 live Supabase mode",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 live RPC result count",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 live RPC distance order",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 desktop results do not overlap footer",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 live browser errors",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 default local mode",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 map selection",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 radius control",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 browser errors",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 failed API falls back",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 fallback warning visible in diagnostics",
+      "pass": true,
+      "detail": "Verified"
+    },
+    {
+      "name": "A05 API failure has no uncaught errors",
+      "pass": true,
+      "detail": "Verified"
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "fatal": null
+}

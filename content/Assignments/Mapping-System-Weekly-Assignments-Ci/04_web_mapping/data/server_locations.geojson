@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "name": "Approximate request server locations",
+  "metadata": {
+    "input_har": "mapping-systems-course.sanitized.har",
+    "har_entry_count": 7,
+    "entries_with_server_ip": 7,
+    "request_host_count": 4,
+    "unique_public_ip_count": 4,
+    "feature_count": 4,
+    "method": "serverIPAddress from sanitized HAR, geolocated with ipinfo.io",
+    "limitations": "IP locations are approximate network-registration or edge locations, not proof of physical server location or data storage."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "server_id": "4d8d1fc79d93",
+        "request_hosts": [
+          "static.cloudflareinsights.com"
+        ],
+        "request_host_count": 1,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS13335 Cloudflare, Inc.",
+        "timezone": "America/Los_Angeles",
+        "location_precision": "Approximate IP geolocation; not a physical server address",
+        "geolocation_provider": "ipinfo.io unauthenticated endpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "server_id": "4e4c8b26fba4",
+        "request_hosts": [
+          "mapping-systems.org"
+        ],
+        "request_host_count": 1,
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS13335 Cloudflare, Inc.",
+        "timezone": "America/Los_Angeles",
+        "location_precision": "Approximate IP geolocation; not a physical server address",
+        "geolocation_provider": "ipinfo.io unauthenticated endpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "server_id": "47e564595b45",
+        "request_hosts": [
+          "fonts.gstatic.com"
+        ],
+        "request_host_count": 1,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "organization": "AS15169 Google LLC",
+        "timezone": "America/New_York",
+        "location_precision": "Approximate IP geolocation; not a physical server address",
+        "geolocation_provider": "ipinfo.io unauthenticated endpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "server_id": "6dc6568be44f",
+        "request_hosts": [
+          "fonts.googleapis.com"
+        ],
+        "request_host_count": 1,
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "organization": "AS15169 Google LLC",
+        "timezone": "America/New_York",
+        "location_precision": "Approximate IP geolocation; not a physical server address",
+        "geolocation_provider": "ipinfo.io unauthenticated endpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7143
+        ]
+      }
+    }
+  ]
+}

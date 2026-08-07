@@ -1,0 +1,18 @@
+{
+  "captured_at_utc": "2026-08-06T07:48:23.746Z",
+  "requested_url": "https://streeteasy.com/blog/data-dashboard/",
+  "final_url": "https://streeteasy.com/blog/data-dashboard/",
+  "title": "Access to this page has been denied",
+  "source_slug": "streeteasy-dashboard",
+  "sanitized_har": "data/streeteasy-dashboard.sanitized.har",
+  "entries": 26,
+  "unique_hosts": 12,
+  "entries_with_server_ip": 19,
+  "blocked_or_challenged": true,
+  "capture_error": null,
+  "console_error_count": 1,
+  "failed_request_count": 0,
+  "failed_requests": [],
+  "raw_har_retained": false,
+  "privacy": "New isolated browser context; no user profile or login state. Request/response headers, cookies, bodies, credentials, and all query values removed."
+}

@@ -1,0 +1,36 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+node_modules/
+.env
+.env.*
+!.env.example
+.venv/
+.pytest_cache/
+04_web_mapping/data/raw-*.har
+04_web_mapping/data/*-unsanitized.har
+qa/local-server*.log
+
+# Notebook charts are rendered from code inside the notebooks. Keep optional
+# file exports out of the submission so they cannot be mistaken for the maps.
+01_loading_and_visualizing_data/outputs/*.png
+02_geoprocessing/outputs/*.png
+02_geoprocessing/workflow*.png
+02_geoprocessing/workflow*.svg
+03_networks/outputs/figures/
+03_networks/outputs/screenshots/
+qa/*.png
+
+# The assignment brief explicitly asks for one screenshot with each web map.
+04_web_mapping/outputs/*.png
+!04_web_mapping/outputs/web-map-desktop.png
+05_web_map_visualization/outputs/*.png
+!05_web_map_visualization/outputs/web-map-supabase-desktop.png
+
+# The parent course repository ignores folders named `Data`. On the default
+# case-insensitive macOS filesystem that also catches this project's lowercase
+# `data` directories. These files are frozen, privacy-reviewed assignment
+# inputs and outputs, so explicitly keep them in the submission.
+!**/data/
+!**/data/**

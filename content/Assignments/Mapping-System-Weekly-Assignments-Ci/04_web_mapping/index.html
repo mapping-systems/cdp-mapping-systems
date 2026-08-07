@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Behind the Rent Map | Mapping Systems 03</title>
+    <link rel="stylesheet" href="vendor/maplibre/maplibre-gl.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="story" aria-labelledby="page-title">
+        <p class="eyebrow">Mapping Systems · Weekly Assignment 03</p>
+        <h1 id="page-title">Behind the<br />Rent Map</h1>
+        <p class="dek">
+          A browser request begins in New York, but the location attached to its
+          server IP can appear thousands of kilometers away. This map places that
+          network trace beside the city’s 2016–26 asking-rent growth.
+        </p>
+
+        <div class="view-switch" role="group" aria-label="Map view">
+          <button class="active" data-view="network">Network trace</button>
+          <button data-view="nyc">NYC rent context</button>
+        </div>
+
+        <section class="finding" aria-labelledby="trace-heading">
+          <div class="finding-number" id="server-count">—</div>
+          <div>
+            <h2 id="trace-heading">approximate server location</h2>
+            <p id="trace-summary">Loading the sanitized HAR output…</p>
+          </div>
+        </section>
+
+        <ol class="trace-key" aria-label="Map legend">
+          <li><span class="swatch origin"></span><strong>Origin</strong> New York City</li>
+          <li><span class="swatch path"></span><strong>Request path</strong> conceptual request line</li>
+          <li><span class="swatch server"></span><strong>IP result</strong> approximate edge / registration location</li>
+        </ol>
+
+        <section class="borough-panel" aria-labelledby="borough-heading">
+          <h2 id="borough-heading">Asking-rent change, Jul 2016–Jun 2026</h2>
+          <div id="borough-list" class="borough-list"></div>
+        </section>
+
+        <p class="caveat">
+          IP geolocation is not a physical server address and does not establish
+          where data is stored. StreetEasy blocked the isolated capture, so the
+          formal dataset uses the public Mapping Systems course site.
+          Rent is nominal median asking rent, not paid rent.
+        </p>
+      </section>
+
+      <section class="map-shell" aria-label="Interactive map">
+        <div id="map"></div>
+        <div class="map-note" id="map-note">NETWORK VIEW · CLICK A MARKER FOR DETAILS</div>
+        <div class="scale-legend" aria-label="Rent growth color scale">
+          <span>NYC RENT GROWTH</span>
+          <div class="gradient"></div>
+          <div class="ticks"><span>44%</span><span>60%</span><span>76%</span></div>
+        </div>
+      </section>
+    </main>
+    <script src="vendor/maplibre/maplibre-gl.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
