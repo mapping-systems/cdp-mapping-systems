@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Open Streets 2026 Accessibility Map</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="map" aria-label="Interactive map of current NYC Open Streets"></div>
+
+  <section class="map-title" aria-label="Map title">
+    <h1>Ten-Minute Open Street Access</h1>
+    <p>Live 2026 NYC DOT schedules · search by date/time, ZIP Code, or both.</p>
+    <div id="source-status" class="source-status">Loading current NYC DOT data…</div>
+  </section>
+
+  <section class="filter-panel" aria-label="Open Street filters">
+    <h2>Filter Open Streets</h2>
+    <label for="datetime-filter">Date and time</label>
+    <input id="datetime-filter" type="datetime-local" />
+    <label for="zip-filter">ZIP Code</label>
+    <input id="zip-filter" type="text" inputmode="numeric" maxlength="5"
+      placeholder="Example: 10027" list="zip-options" />
+    <datalist id="zip-options"></datalist>
+    <div class="filter-buttons">
+      <button id="search-button" type="button">Search</button>
+      <button id="clear-button" type="button">Clear</button>
+    </div>
+    <div id="result-count" aria-live="polite">Loading Open Streets…</div>
+  </section>
+
+  <aside class="method-note">
+    Approximate access is represented by an 800-meter straight-line buffer around
+    each Open Street. It is not a pedestrian-network isochrone. ZIP search uses ZCTAs.
+  </aside>
+
+  <aside class="map-legend" aria-label="Map legend">
+    <div class="legend-title">Total approved hours across each site's full listed period</div>
+    <div class="legend-gradient"></div>
+    <div id="legend-values" class="legend-values"></div>
+    <div class="legend-direction"><span>Fewer approved hours</span><span>More approved hours</span></div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7.2.0/turf.min.js"></script>
+  <script src="./map.js"></script>
+</body>
+</html>

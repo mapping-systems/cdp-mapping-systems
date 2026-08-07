@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When and Where Are NYC Open Streets Accessible?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">NYC OPEN STREETS · LIVE 2026 DATA</div>
+    <h1>When and Where Are NYC Open Streets Accessible?</h1>
+    <p class="deck">An analysis of approved schedules, spatial distribution, and approximate ten-minute walking access.</p>
+    <div class="note">The interactive map requests current 2026 records from NYC DOT when the page loads. Approved schedules are not the same as confirmed on-site operation.</div>
+  </header>
+  <main>
+    <section class="metrics" aria-label="Key information">
+      <article>
+        <strong id="metric-sites">Loading…</strong>
+        <span>current 2026 Open Street sites returned by NYC DOT</span>
+      </article>
+    
+      <article>
+        <strong id="metric-hours">Loading…</strong>
+        <span>median approved time across each site's full listed period</span>
+      </article>
+    
+      <article>
+        <strong>32.4</strong>
+        <span>Open Street sites per 10 sq mi in Manhattan, the highest borough density</span>
+      </article>
+    </section>
+    <section class="map-section">
+      <div class="section-heading"><div><div class="eyebrow">INTERACTIVE WEB MAP</div><h2>Explore time, location, and approximate access</h2></div>
+      <p>Filter by date and time, ZIP Code, or both. Darker access areas correspond to Open Streets with more calculated approved hours across their listed 2026 periods.</p></div>
+      <div class="map-frame"><iframe src="./webmap/index.html" title="Interactive NYC Open Streets accessibility map" loading="lazy"></iframe></div>
+    </section>
+    <section class="questions">
+      <article><div class="number">01</div><h3>When?</h3><p>Choose a date and time to display only sites whose approved schedule includes that moment.</p></article>
+      <article><div class="number">02</div><h3>Where?</h3><p>Search a ZIP Code to focus on Open Streets whose line geometry intersects that ZCTA.</p></article>
+      <article><div class="number">03</div><h3>How much access?</h3><p>Each 800-meter area is colored by the cumulative approved hours calculated across the site's listed period.</p></article>
+    </section>
+    <section class="method"><div><div class="eyebrow">METHOD</div><h2>What “ten-minute access” means here</h2></div><div class="method-copy">
+      <p>The map uses an 800-meter buffer around the complete Open Street line, based on an explicit assumption of 80 meters per minute for ten minutes.</p>
+      <p>This is a straight-line approximation, not a pedestrian-network route. It may cross barriers such as highways, rail infrastructure, water, or inaccessible blocks.</p>
+    </div></section>
+    <section class="limits"><h2>Read the map carefully</h2><p>The analysis measures listed locations and approved schedules. It does not establish actual opening, staffing, visitor counts, safety, comfort, program quality, or accessibility for different mobility needs. NYC DOT notes that hours may change and include setup or breakdown time.</p></section>
+  </main>
+  <footer><span>NYC Open Streets · 2026 · Temporal Availability · Approximate Walking Access</span></footer>
+  <script>
+    window.addEventListener("message", (event) => {
+      const data = event.data || {};
+      if (data.type !== "open-streets-live-summary") return;
+      document.getElementById("metric-sites").textContent = Number(data.siteCount).toLocaleString();
+      document.getElementById("metric-hours").textContent = Number.isFinite(Number(data.medianHours))
+        ? `${Math.round(Number(data.medianHours)).toLocaleString()} h` : "N/A";
+    });
+  </script>
+</body>
+</html>
