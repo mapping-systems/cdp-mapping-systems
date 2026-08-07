@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.raw.har
+.DS_Store
+
+# These two data directories are required, reproducible submission inputs.
+# The repository root ignores content/**/Data/; on case-insensitive macOS that
+# also matches lowercase data/, so explicitly include Jennifer's project data.
+!01_loading_and_visualizing_data/data/
+!01_loading_and_visualizing_data/data/**
+!Final_Project_Vanishing_Network/data/
+!Final_Project_Vanishing_Network/data/**

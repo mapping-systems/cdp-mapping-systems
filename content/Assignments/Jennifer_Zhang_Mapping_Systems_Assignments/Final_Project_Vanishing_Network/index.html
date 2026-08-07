@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Vanishing Network is a real-terrain spatial study of population loss and service centralization in Hailun, Heilongjiang."
+    />
+    <title>Vanishing Network - Hailun</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="vendor/maplibre-gl.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#map-interface">Skip to the landscape</a>
+
+    <main class="site-shell">
+      <div id="terrain-map" aria-label="Interactive three-dimensional map of Hailun"></div>
+      <div class="map-shade" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div id="migration-overlay" class="migration-overlay" aria-hidden="true">
+        <div class="migration-particles" id="migration-particles"></div>
+        <div class="migration-caption">
+          <p id="migration-kicker">Hailun destinations / not publicly reported</p>
+          <strong id="migration-total">53.15M</strong>
+          <span id="migration-label">rural → urban residents across provincial borders / 2010</span>
+          <div class="migration-legend" aria-label="Outflow legend">
+            <i aria-hidden="true"></i>
+            <b>moving arrow ≈ 500,000 residents</b>
+            <em>only routes ≥ 500,000 shown</em>
+          </div>
+          <small id="migration-note">Province anchors locate the OD pair; they do not claim a specific destination city.</small>
+        </div>
+      </div>
+
+      <section id="loading" class="loading-screen" aria-live="polite">
+        <p>Loading the real landscape</p>
+        <strong id="loading-number">00</strong>
+      </section>
+
+      <section id="intro" class="intro" aria-label="Opening sequence">
+        <div class="intro-progress" aria-hidden="true">
+          <span class="intro-progress__active" id="intro-progress"></span>
+        </div>
+
+        <article class="intro-stage is-active" data-stage="0">
+          <p class="intro-year">2025</p>
+          <h1>
+            What if a village could remain
+            <span class="peach">visible</span>
+            and still
+            <span class="outline vanish-word">vanish?</span>
+          </h1>
+          <button class="outline-button" id="start-intro" type="button">Next</button>
+        </article>
+
+        <article class="intro-stage intro-stage--map" data-stage="1">
+          <p class="intro-overline">Hailun / Heilongjiang / 4,642 km2</p>
+          <h2>Nothing disappears all at once.</h2>
+        </article>
+
+        <article class="intro-stage intro-stage--map" data-stage="2">
+          <p class="intro-overline">A village can outlive its functions</p>
+          <h2>
+            First the service moves.
+            <span class="peach">Then the distance grows.</span>
+          </h2>
+        </article>
+
+        <article class="intro-stage intro-stage--map" data-stage="3">
+          <p class="intro-overline">2000 census: 720,008 / 2020 census: 480,216</p>
+          <h2>
+            The settlement remains on the map.
+            <span class="outline">Its network does not.</span>
+          </h2>
+        </article>
+
+        <article class="intro-stage intro-stage--map" data-stage="4">
+          <p class="intro-overline">A real terrain model / documented evidence only</p>
+          <h2>Trace what remains.</h2>
+          <button class="outline-button" id="enter-map" type="button">Enter Hailun</button>
+        </article>
+
+        <button class="skip-intro" id="skip-intro" type="button">Skip intro</button>
+      </section>
+
+      <section id="map-interface" class="map-interface" aria-hidden="true">
+        <header class="map-header">
+          <button class="wordmark" id="home-view" type="button" aria-label="Return to full Hailun view">
+            <span class="wordmark__mark">VN</span>
+            <span>
+              <strong>Vanishing Network</strong>
+              <small>Hailun / 47.42 N, 126.99 E</small>
+            </span>
+          </button>
+
+          <div class="header-actions">
+            <span class="terrain-badge" id="terrain-badge">DEM terrain 2.2x</span>
+            <button
+              class="icon-button is-active"
+              id="orbit-view"
+              type="button"
+              aria-label="Disable orbit drag"
+              aria-pressed="true"
+              title="Orbit map view"
+            >
+              <span class="orbit-icon" aria-hidden="true">↻</span>
+            </button>
+            <button class="icon-button" id="open-method" type="button" aria-label="Open data method">i</button>
+          </div>
+        </header>
+
+        <aside class="chapter-index" aria-label="Network chapters">
+          <p>Evidence</p>
+          <button class="chapter-link is-active" type="button" data-layer="all">
+            <span>00</span><strong>Population</strong>
+          </button>
+          <button class="chapter-link" type="button" data-layer="school">
+            <span>01</span><strong>School</strong>
+          </button>
+          <button class="chapter-link" type="button" data-layer="migration">
+            <span>02</span><strong>Outflow</strong>
+          </button>
+          <button class="chapter-link" type="button" data-layer="road">
+            <span>03</span><strong>Road Grid</strong>
+          </button>
+        </aside>
+
+        <section class="chapter-story" aria-live="polite">
+          <p class="chapter-story__number" id="chapter-number">00 / POPULATION</p>
+          <h2 id="chapter-title">289,221 people disappear</h2>
+          <p id="chapter-copy">
+            Hailun sits where the Lesser Khingan foothills meet the Songnen Plain.
+            Drag the model to read the real topography, roads, rail and settlements.
+          </p>
+          <div class="chapter-status">
+            <span id="chapter-status-dot"></span>
+            <p id="chapter-status">Current mapped geometry</p>
+          </div>
+        </section>
+
+        <section class="evidence-readout" aria-live="polite">
+          <div class="population-view-switch" id="population-view-switch" aria-label="Population map view">
+            <button class="is-active" type="button" data-population-view="terrain" aria-pressed="true">
+              3D terrain
+            </button>
+            <button type="button" data-population-view="report" aria-pressed="false">
+              2D census
+            </button>
+          </div>
+          <div class="evidence-lenses" id="population-lenses" aria-label="Population evidence view">
+            <button class="is-active" type="button" data-population-lens="total" aria-pressed="true">
+              Total
+            </button>
+            <button type="button" data-population-lens="age" aria-pressed="false">
+              Age
+            </button>
+            <button type="button" data-population-lens="household" aria-pressed="false">
+              Household
+            </button>
+          </div>
+          <div class="evidence-readout__heading">
+            <p class="evidence-readout__period" id="period-label">2020 CENSUS</p>
+            <span class="evidence-quality" id="evidence-quality">DOCUMENTED</span>
+          </div>
+          <strong class="evidence-readout__primary" id="primary-value">480,216</strong>
+          <span class="evidence-readout__primary-label" id="primary-label">permanent residents</span>
+          <div class="evidence-readout__metrics" id="metric-list"></div>
+          <div class="evidence-chart" id="evidence-chart" aria-label="Interactive historical evidence chart">
+            <div class="evidence-chart__grid" aria-hidden="true"></div>
+            <svg id="chart-lines" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <div id="chart-points"></div>
+            <div class="chart-tooltip" id="chart-tooltip" aria-hidden="true"></div>
+          </div>
+          <div class="change-readout">
+            <strong id="change-value">-37.59%</strong>
+            <span id="change-label">from 2010 peak to 2020</span>
+          </div>
+        </section>
+
+        <section id="population-report-viz" class="population-report-viz" aria-hidden="true">
+          <div class="report-year-switch" aria-label="Select Hailun census year">
+            <button type="button" data-report-year="2000" aria-pressed="false">2000</button>
+            <button type="button" data-report-year="2010" aria-pressed="false">2010</button>
+            <button class="is-active" type="button" data-report-year="2020" aria-pressed="true">2020</button>
+          </div>
+          <p class="report-reading-key">
+            <strong>Key</strong>
+            Counts above each bar are people. Numbers inside bars are percentages of
+            Hailun's population in the selected census year.
+          </p>
+          <div class="population-report-viz__heading">
+            <div>
+              <p id="report-census-label">Seventh national census / 2020</p>
+              <strong id="report-total">480,216</strong>
+              <span>permanent residents</span>
+            </div>
+            <div class="population-report-viz__change">
+              <strong id="report-change">-37.59%</strong>
+              <span id="report-change-label">since 2010</span>
+            </div>
+          </div>
+
+          <div class="report-viz-group">
+            <div class="report-viz-label">
+              <span>Residence</span>
+              <small id="report-residence-detail">164,766 urban / 315,450 rural</small>
+            </div>
+            <div class="report-viz-bar" id="report-residence-bar" aria-label="Urban 34.31 percent; rural 65.69 percent">
+              <span id="report-urban" class="report-segment report-segment--urban" style="--segment: 34.31%">34.31%</span>
+              <span id="report-rural" class="report-segment report-segment--rural" style="--segment: 65.69%">65.69%</span>
+            </div>
+          </div>
+
+          <div class="report-viz-group" id="report-age-group">
+            <div class="report-viz-label">
+              <span>Age</span>
+              <small id="report-age-detail">51,691 / 311,550 / 116,975 residents</small>
+            </div>
+            <div class="report-viz-bar" id="report-age-bar" aria-label="Age 0 to 14: 10.76 percent; age 15 to 59: 64.88 percent; age 60 and above: 24.36 percent">
+              <span id="report-youth" class="report-segment report-segment--youth" style="--segment: 10.76%">10.76%</span>
+              <span id="report-working" class="report-segment report-segment--working" style="--segment: 64.88%">64.88%</span>
+              <span id="report-older" class="report-segment report-segment--older" style="--segment: 24.36%">24.36%</span>
+            </div>
+            <div class="report-viz-unavailable" id="report-age-unavailable" hidden>
+              Comparable local age groups are not available in the sourced 2000 census table.
+            </div>
+          </div>
+
+          <div class="report-viz-group">
+            <div class="report-viz-label">
+              <span>Sex</span>
+              <small id="report-sex-detail">242,211 male / 238,005 female</small>
+            </div>
+            <div class="report-viz-bar" id="report-sex-bar" aria-label="Male 50.44 percent; female 49.56 percent">
+              <span id="report-male" class="report-segment report-segment--male" style="--segment: 50.44%">50.44%</span>
+              <span id="report-female" class="report-segment report-segment--female" style="--segment: 49.56%">49.56%</span>
+            </div>
+          </div>
+
+          <div class="population-report-viz__households">
+            <div><strong id="report-family-households">204,513</strong><span>family households</span></div>
+            <div><strong id="report-household-size">2.26</strong><span>people per family household</span></div>
+            <div><strong id="report-family-population">461,685</strong><span>family-household residents</span></div>
+          </div>
+          <p class="population-report-viz__note" id="report-note">
+            Countywide census values. The colored 3 km grid uses the matching WorldPop year,
+            normalized to the official census total; it is a spatial estimate, not township census data.
+          </p>
+        </section>
+
+        <div class="map-key">
+          <span><i class="key-settlement"></i>Mapped settlement</span>
+          <span class="signal-key" id="signal-key">
+            Aggregate county signal / not historical locations
+          </span>
+        </div>
+
+        <div class="population-grid-key" id="population-grid-key" aria-hidden="true">
+          <div class="population-grid-key__heading">
+            <strong>3 km grid / estimated residents per cell</strong>
+            <span>Selected census year</span>
+          </div>
+          <div class="population-grid-key__scale" aria-label="Population color scale stops">
+            <span><i class="grid-stop grid-stop--0"></i><b>0</b></span>
+            <span><i class="grid-stop grid-stop--200"></i><b>200</b></span>
+            <span><i class="grid-stop grid-stop--1000"></i><b>1k</b></span>
+            <span><i class="grid-stop grid-stop--5000"></i><b>5k</b></span>
+            <span><i class="grid-stop grid-stop--15000"></i><b>15k+</b></span>
+          </div>
+          <p>Color shows the WorldPop estimate inside one cell. Click a cell for its exact value.</p>
+        </div>
+
+        <aside class="school-map-key" id="school-map-key" aria-hidden="true">
+          <div class="school-map-key__heading">
+            <strong id="school-map-key-title">School count timeline / map key</strong>
+            <span>North-up 2D</span>
+          </div>
+          <span><i class="school-key-dot"></i><em id="school-map-key-points">2 verified current school coordinates</em></span>
+          <span><i class="school-key-count"></i><em id="school-map-key-count">County totals are not plotted points</em></span>
+          <p id="school-map-key-note">
+            Historical dots reproduce the documented count as a schematic field.
+            Their approximate positions are not archived school addresses.
+          </p>
+        </aside>
+
+        <div class="school-location-gap" id="school-location-gap" aria-hidden="true">
+          <span id="school-gap-year">2000 / SCHEMATIC SCHOOL NETWORK</span>
+          <strong><b id="school-gap-count">390</b> schools were counted.</strong>
+          <p>Count is documented. Dot positions are approximate comparison markers.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__heading">
+            <div class="timeline__title">
+              <button class="play-button" id="play-timeline" type="button" aria-label="Play observed change">
+                <span aria-hidden="true"></span>
+              </button>
+              <span>Observed evidence</span>
+            </div>
+            <div class="timeline__active">
+              <span id="timeline-state">DRAG TO SCRUB</span>
+              <strong id="active-year">2020</strong>
+            </div>
+          </div>
+          <input
+            id="year-slider"
+            type="range"
+            min="0"
+            max="2"
+            value="2"
+            step="0.01"
+            aria-label="Drag through observed evidence years"
+          />
+          <div class="timeline__ticks" id="timeline-ticks" aria-hidden="true">
+            <span>2000</span>
+            <span>2010</span>
+            <span>2020</span>
+          </div>
+        </div>
+
+        <p class="interaction-hint" id="interaction-hint">Orbit mode / drag to rotate and tilt</p>
+        <p class="attribution-note">
+          Terrain: Mapterhorn DEM. Base imagery: Esri. Boundary, roads, rail and mapped points:
+          OpenStreetMap contributors.
+        </p>
+      </section>
+
+      <aside id="method-drawer" class="method-drawer" aria-hidden="true">
+        <div class="method-drawer__header">
+          <div>
+            <p class="drawer-overline">Method / sources</p>
+            <h2>Real ground. Bounded claims.</h2>
+          </div>
+          <button class="icon-button" id="close-method" type="button" aria-label="Close data method">x</button>
+        </div>
+
+        <div class="method-drawer__body">
+          <section>
+            <h3>What is spatially real</h3>
+            <p>
+              The land surface streams a digital elevation model. The county boundary,
+              385 settlement points, arterial roads, rail geometry, four station points
+              and two school points are current public-map records clipped to Hailun.
+            </p>
+          </section>
+
+          <section>
+            <h3>How the 3D bars are built</h3>
+            <p>
+              Each column aggregates a 3 by 3 group of WorldPop 1 km population
+              cells. Boundary cells are fractionally clipped to Hailun, and each
+              2010 and 2020 grid is normalized so all bars sum to that year's
+              official census population. Height is linear: one resident equals
+              0.18 map meters. In 2020, the pale lower volume is the remaining
+              population; the coral volume between the 2020 and 2010 heights is
+              gross cell-level population loss. Small cell-level gains are excluded
+              from that loss volume and reported separately from the net decline.
+            </p>
+          </section>
+
+          <section>
+            <h3>What is measured through time</h3>
+            <p>
+              Population values are census benchmarks for 2000, 2010 and 2020.
+              The Population evidence control also compares countywide age structure
+              and average family-household size in 2010 and 2020. Only documented
+              census years appear. The 2010 age shares and household size are derived
+              from the seventh-census bulletin's published percentage-point changes.
+              These countywide values appear as 3D chart columns anchored near Hailun:
+              they are map-based diagrams, not estimates for the ground beneath them.
+              The school chapter compares the compiled ordinary-primary-school counts
+              for 2000 (390), 2010 (218) and 2014 (32). The 2022 value of 34 is derived
+              from the official report's 26 compliant primary schools at a 76.5% rate,
+              so the interface marks 2022 as a definition break rather than pretending
+              the series is perfectly identical. The official unique compulsory-school
+              total is 54. The 2D map removes the blue road network and ordinary
+              settlement dots. Historical years render each documented county count as
+              a schematic field distributed across mapped settlements; those comparison
+              dots are not archived school addresses. In 2022 the schematic field
+              disappears and exactly two current school sites with open coordinates
+              appear. The outflow
+              chapter moves to a national province-to-province view and compares
+              census-defined rural-to-urban flows in 2010 and 2020; it does not infer
+              Hailun destinations from the county's population decline. The road-grid
+              chapter measures boundary-clipped OpenStreetMap road length
+              in 2014, 2015, 2020 and 2025 using the ohsome history API.
+            </p>
+          </section>
+
+          <section>
+            <h3>How the 2D census view works</h3>
+            <p>
+              The Population chapter can lock the map to a north-up, zero-pitch view
+              and display Hailun's 2000, 2010 and 2020 census records as countywide
+              charts. Use the year buttons, timeline or play control to compare them.
+              The 2000 view omits age structure because no comparable local age table
+              was available; the 2010 age shares are reconstructed from changes published
+              in the seventh-census bulletin. The colored 3 km cells use the matching
+              WorldPop year normalized to each official census total. They provide
+              spatial context but are not township-level census observations.
+            </p>
+          </section>
+
+          <section>
+            <h3>How interaction works</h3>
+            <p>
+              The evidence timeline is a continuous drag control that snaps to
+              documented observations on release. Chart dots identify evidence
+              positions but are not navigation buttons. Orbit mode makes a normal
+              map drag rotate and tilt the terrain; switch it off to pan instead.
+            </p>
+          </section>
+
+          <section>
+            <h3>Road development observation</h3>
+            <p>
+              Four OpenStreetMap history snapshots show Hailun's mapped drivable-road
+              network rising fastest between 2015 and 2020, then continuing to expand
+              at a slower pace through 2025. The road lines become brighter and wider
+              as the recorded network length increases.
+            </p>
+          </section>
+
+          <section>
+            <h3>What the migration graphic means</h3>
+            <p>
+              The arrow field borrows the frequency principle of The New York Times
+              county movement map: more moving marks mean more people. The China view
+              is reconstructed from the sixth- and seventh-census long-form tables.
+              A rural origin is a hukou registration place recorded as a township or
+              a town village committee; an urban destination is a current residence
+              recorded as a city or town. The published 10% long-form counts are
+              scaled by ten, following the census research convention.
+            </p>
+            <p>
+              Public data still do not report a Hailun-to-destination-city matrix. The
+              national view therefore changes scale instead of inventing local routes.
+              Every drawn direction is a real province-to-province OD pair, but the line
+              ends at a province display anchor because the census table does not name a
+              city. Only routes of at least 500,000 people are drawn: 23 routes in 2010
+              and 31 in 2020. The headline totals include all 930 possible cross-province
+              pairs, including the smaller routes that are not drawn.
+            </p>
+          </section>
+
+          <section>
+            <h3>What is intentionally absent</h3>
+            <p>
+              No village-level closure dates are fabricated. The School chapter's
+              historical dots are explicitly labeled as a schematic comparison field
+              based on mapped settlements, not real former school addresses. Only the
+              two 2022 points claim current open-map coordinates. Age and household
+              evidence is countywide, so
+              those views replace the spatial population columns with explicitly labeled
+              countywide chart columns rather than inventing a village distribution.
+            </p>
+          </section>
+
+          <section class="source-list">
+            <h3>Source trail</h3>
+            <a href="https://mapping-systems.org/syllabus" target="_blank" rel="noreferrer">
+              Mapping Systems syllabus
+            </a>
+            <a href="https://maplibre.org/maplibre-gl-js/docs/examples/3d-terrain/" target="_blank" rel="noreferrer">
+              MapLibre 3D terrain method
+            </a>
+            <a href="https://www.openstreetmap.org/relation/2755368" target="_blank" rel="noreferrer">
+              OpenStreetMap: Hailun boundary and mapped network
+            </a>
+            <a href="https://docs.ohsome.org/ohsome-api/stable/endpoints.html" target="_blank" rel="noreferrer">
+              ohsome API: OpenStreetMap history measurements
+            </a>
+            <a href="https://tjgb.hongheiku.com/18585.html" target="_blank" rel="noreferrer">
+              Hailun seventh census bulletin mirror
+            </a>
+            <a href="https://www.hailun.gov.cn/hl/c39/202003/c12_140046.shtml" target="_blank" rel="noreferrer">
+              Hailun 2020 economic indicators: total registered population
+            </a>
+            <a href="https://www.citypopulation.de/en/china/heilongjiang/admin/" target="_blank" rel="noreferrer">
+              Census comparison: 2000 / 2010 / 2020
+            </a>
+            <a href="https://www.hongheiku.com/xianjirank/hljxjqyrk/42057.html" target="_blank" rel="noreferrer">
+              Hailun census table: residence, sex and households
+            </a>
+            <a href="https://hub.worldpop.org/Global1_2000-2020" target="_blank" rel="noreferrer">
+              WorldPop Global 2000-2020 population grids
+            </a>
+            <a href="https://www.nytimes.com/interactive/2016/11/01/upshot/many-ways-to-map-election-results.html?eafs_enabled=false" target="_blank" rel="noreferrer">
+              Arrow-frequency visual reference: The New York Times
+            </a>
+            <a href="https://www.stats.gov.cn/sj/pcsj/rkpc/6rp/html/B0701.htm" target="_blank" rel="noreferrer">
+              2010 census long-form Table 7-1: residence × hukou-registration type
+            </a>
+            <a href="https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/zk/html/B0701a.xls" target="_blank" rel="noreferrer">
+              2020 census long-form Table 7-1a: city destinations
+            </a>
+            <a href="https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/zk/html/B0701b.xls" target="_blank" rel="noreferrer">
+              2020 census long-form Table 7-1b: town destinations
+            </a>
+            <a href="https://www.geoboundaries.org/api.html" target="_blank" rel="noreferrer">
+              geoBoundaries: China ADM1 outlines
+            </a>
+            <a href="https://oweidata.com/projectDetail/county/231283/county_gdp/xssews" target="_blank" rel="noreferrer">
+              Compiled Hailun ordinary-primary-school series: 2000 / 2010 / 2014
+            </a>
+            <a href="https://www.hailun.gov.cn/hl/c21/202308/c12_136895.shtml" target="_blank" rel="noreferrer">
+              Official 2022 compulsory-education inventory
+            </a>
+          </section>
+        </div>
+      </aside>
+
+      <div id="feature-popup" class="feature-popup" aria-hidden="true">
+        <span id="feature-kind">Mapped settlement</span>
+        <strong id="feature-name">Hailun</strong>
+      </div>
+    </main>
+
+    <script src="vendor/maplibre-gl.js"></script>
+    <script src="data/geodata.js"></script>
+    <script src="data/population-bars.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

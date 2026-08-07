@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "node_snap_connectors",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "place_id": "place-01", "name": "116 St–Columbia University subway entrance", "connector_m": 20.138522042386665 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96419, 40.80767 ], [ -73.9640046, 40.8075558 ] ] } },
+{ "type": "Feature", "properties": { "place_id": "place-02", "name": "Fayerweather Hall", "connector_m": 14.409984589194165 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96073, 40.80876 ], [ -73.9607072, 40.8088886 ] ] } },
+{ "type": "Feature", "properties": { "place_id": "place-03", "name": "Butler Library", "connector_m": 12.742051926651998 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96317, 40.80664 ], [ -73.9630476, 40.8065728 ] ] } },
+{ "type": "Feature", "properties": { "place_id": "place-04", "name": "Morningside Park west entrance", "connector_m": 19.865940174159419 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.95704, 40.80528 ], [ -73.9568492, 40.8051752 ] ] } }
+]
+}

@@ -1,0 +1,81 @@
+{
+  "site": "Hailun, Heilongjiang, China",
+  "geography": "county-level city",
+  "source": {
+    "title": "Hailun Seventh National Population Census Bulletin",
+    "publisher": "Hailun Statistics Bureau",
+    "mirror": "https://tjgb.hongheiku.com/18585.html"
+  },
+  "comparison_source": {
+    "title": "Hailun fifth, sixth and seventh census comparison table",
+    "publisher": "Honghei population database; census-source compilation",
+    "url": "https://www.hongheiku.com/xianjirank/hljxjqyrk/42057.html"
+  },
+  "records": {
+    "2000": {
+      "permanent_residents": 720008,
+      "urban_population": 144242,
+      "urban_percent": 20.03,
+      "rural_population": 575766,
+      "rural_percent": 79.97,
+      "male_population": 368751,
+      "female_population": 351257,
+      "sex_ratio_female_100": 104.98,
+      "family_households": 194880,
+      "family_household_population": 715560,
+      "average_family_household_size": 3.67,
+      "age_status": "not shown; no comparable local age table in the sourced record",
+      "status": "documented census table"
+    },
+    "2010": {
+      "permanent_residents": 769437,
+      "urban_population": 188461,
+      "urban_percent": 24.49,
+      "rural_population": 580976,
+      "rural_percent": 75.51,
+      "male_population": 389853,
+      "female_population": 379584,
+      "sex_ratio_female_100": 102.71,
+      "age_0_14_percent": 13.18,
+      "age_15_59_percent": 74.65,
+      "age_60_plus_percent": 12.16,
+      "age_65_plus_percent": 7.15,
+      "family_households": 235334,
+      "family_household_population": 765095,
+      "average_family_household_size": 3.25,
+      "status": "census table; age shares and household size derived from published 2010-2020 changes"
+    },
+    "2020": {
+      "permanent_residents": 480216,
+      "urban_population": 164766,
+      "urban_percent": 34.31,
+      "rural_population": 315450,
+      "rural_percent": 65.69,
+      "male_population": 242211,
+      "female_population": 238005,
+      "sex_ratio_female_100": 101.77,
+      "age_0_14_count": 51691,
+      "age_0_14_percent": 10.76,
+      "age_15_59_count": 311550,
+      "age_15_59_percent": 64.88,
+      "age_60_plus_count": 116975,
+      "age_60_plus_percent": 24.36,
+      "age_65_plus_count": 78222,
+      "age_65_plus_percent": 16.29,
+      "family_households": 204513,
+      "family_household_population": 461685,
+      "collective_households": 5533,
+      "collective_household_population": 18531,
+      "average_family_household_size": 2.26,
+      "status": "documented"
+    }
+  },
+  "derivation": {
+    "age_0_14_2010": "10.76 + 2.42 percentage points",
+    "age_15_59_2010": "64.88 + 9.77 percentage points",
+    "age_60_plus_2010": "24.36 - 12.20 percentage points",
+    "age_65_plus_2010": "16.29 - 9.14 percentage points",
+    "average_family_household_size_2010": "2.26 + 0.99 people"
+  },
+  "spatial_limit": "No village-level age or household distribution is claimed."
+}

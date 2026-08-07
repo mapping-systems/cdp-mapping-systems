@@ -1,0 +1,28 @@
+{
+  "artifact": "inputs/morningside_walk.graphml.gz",
+  "artifact_sha256": "79a0d3b2da417b40011061f0a882b055bf9aa321e4bef1a610bd51d309737af1",
+  "created_at": "2026-08-07T22:31:04.818367+00:00",
+  "node_count": 2431,
+  "edge_count": 3856,
+  "connected_components": 1,
+  "crs": "epsg:4326",
+  "network_type": "walk",
+  "clip_bbox_wgs84": {
+    "west": -73.9755,
+    "south": 40.7965,
+    "east": -73.95,
+    "north": 40.8185
+  },
+  "source": {
+    "provider": "OpenStreetMap contributors",
+    "url": "https://www.openstreetmap.org/copyright",
+    "source_sha256": "9a7881de3aad4bdefa65d02495eafb89aa38fc9ce98e9bdf5411fb7cab2ba75d",
+    "source_created_with": "OSMnx 2.1.0",
+    "source_created_date": "2026-07-27 03:09:47",
+    "source_retrieved_at": "2026-07-27T07:13:34.718334+00:00"
+  },
+  "notes": [
+    "The notebook reads this frozen bounded snapshot and makes no live API call.",
+    "The largest connected component was retained after coordinate clipping."
+  ]
+}

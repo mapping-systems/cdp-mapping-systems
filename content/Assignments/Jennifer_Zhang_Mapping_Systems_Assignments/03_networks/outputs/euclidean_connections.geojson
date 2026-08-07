@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "euclidean_connections",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "pair_id": "P1", "pair_label": "116 St subway ↔ Fayerweather Hall", "euclidean_m": 316.0468464461058 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96419, 40.80767 ], [ -73.96073, 40.80876 ] ] } },
+{ "type": "Feature", "properties": { "pair_id": "P2", "pair_label": "116 St subway ↔ Butler Library", "euclidean_m": 143.14535388304523 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96419, 40.80767 ], [ -73.96317, 40.80664 ] ] } },
+{ "type": "Feature", "properties": { "pair_id": "P3", "pair_label": "116 St subway ↔ Morningside Park", "euclidean_m": 659.11794253974995 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96419, 40.80767 ], [ -73.95704, 40.80528 ] ] } },
+{ "type": "Feature", "properties": { "pair_id": "P4", "pair_label": "Fayerweather Hall ↔ Butler Library", "euclidean_m": 312.7513777381044 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96073, 40.80876 ], [ -73.96317, 40.80664 ] ] } },
+{ "type": "Feature", "properties": { "pair_id": "P5", "pair_label": "Fayerweather Hall ↔ Morningside Park", "euclidean_m": 496.27759803560923 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96073, 40.80876 ], [ -73.95704, 40.80528 ] ] } },
+{ "type": "Feature", "properties": { "pair_id": "P6", "pair_label": "Butler Library ↔ Morningside Park", "euclidean_m": 538.85325062151787 }, "geometry": { "type": "LineString", "coordinates": [ [ -73.96317, 40.80664 ], [ -73.95704, 40.80528 ] ] } }
+]
+}
