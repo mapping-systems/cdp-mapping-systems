@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments + Project File Viewer</title>
+  <style>
+    :root {
+      --bg: #f3f5ef;
+      --panel: #ffffff;
+      --ink: #1a261f;
+      --muted: #5a6a5f;
+      --accent: #12735f;
+      --accent-soft: #d9f0e8;
+      --edge: #d6ddd8;
+      --danger: #7f1d1d;
+      --shadow: 0 10px 35px rgba(25, 45, 35, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 10%, #f9fff8 0%, var(--bg) 55%);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      padding: 18px;
+      gap: 14px;
+    }
+
+    .header {
+      background: linear-gradient(120deg, #ecf8f1 0%, #fdfcf6 100%);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chip {
+      border: 1px solid var(--edge);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--accent-soft);
+      border-color: #99d7c3;
+      color: #0d5547;
+      font-weight: 700;
+    }
+
+    .search {
+      border: 1px solid var(--edge);
+      border-radius: 10px;
+      padding: 10px 12px;
+      min-width: 260px;
+      flex: 1;
+      font-size: 0.92rem;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: minmax(320px, 36%) 1fr;
+      gap: 14px;
+      min-height: 0;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--edge);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .list-meta {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--edge);
+      color: var(--muted);
+      font-size: 0.84rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-height: calc(100vh - 245px);
+      overflow: auto;
+    }
+
+    .file {
+      border-bottom: 1px solid #edf1ee;
+    }
+
+    .file:last-child {
+      border-bottom: none;
+    }
+
+    .file button {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      padding: 10px 12px;
+      cursor: pointer;
+      display: grid;
+      gap: 2px;
+    }
+
+    .file button:hover,
+    .file button:focus-visible {
+      background: #f4f9f6;
+      outline: none;
+    }
+
+    .file button.active {
+      background: #e7f8f2;
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .name {
+      font-size: 0.93rem;
+      line-height: 1.3;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    .path {
+      font-size: 0.78rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .preview-head {
+      border-bottom: 1px solid var(--edge);
+      padding: 12px 14px;
+      display: grid;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .preview-path {
+      font-size: 0.82rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .actions a {
+      text-decoration: none;
+      font-size: 0.84rem;
+      border: 1px solid #9dc6b7;
+      color: #0d5a4a;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #effcf7;
+    }
+
+    .viewer {
+      height: calc(100vh - 295px);
+      min-height: 360px;
+      width: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    .empty {
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .warn {
+      color: var(--danger);
+    }
+
+    @media (max-width: 980px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .list {
+        max-height: 42vh;
+      }
+
+      .viewer {
+        height: 52vh;
+      }
+
+      .search {
+        min-width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div>
+        <h1>Assignments + Project File Viewer</h1>
+        <div class="sub">Browse files from <strong>assignments</strong> and <strong>project</strong>, filter by name, then preview in-page.</div>
+      </div>
+      <div class="toolbar">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="assignments">Assignments</button>
+        <button class="chip" data-filter="project">Project</button>
+        <input id="search" class="search" type="search" placeholder="Search files (name or path)...">
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="list-meta">
+          <span id="count">0 files</span>
+          <span id="hint">Click a file to preview</span>
+        </div>
+        <ul id="fileList" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <div class="preview-head">
+          <div id="selected" class="preview-path">No file selected</div>
+          <div class="actions">
+            <a id="openTab" href="#" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+            <a href="assignments/" target="_blank" rel="noopener noreferrer">Open assignments folder</a>
+            <a href="project/" target="_blank" rel="noopener noreferrer">Open project folder</a>
+          </div>
+        </div>
+        <iframe id="viewer" class="viewer" title="File preview"></iframe>
+        <div class="empty" id="emptyMsg">
+          Select a file from the list. Some binary formats may download or not render directly in your browser.
+          <div class="warn">If previews are blocked with file:// URLs, run a local server from this folder and open this page over http://localhost.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const files = [
+      "assignments/.DS_Store",
+      "assignments/geo/commute_network copy.ipynb",
+      "assignments/geo/commute_network.geojson",
+      "assignments/geo/commute_network.ipynb",
+      "assignments/loading:visualizing/mapping_systems_aleppo_damage.ipynb",
+      "assignments/net/aleppo_citadel_mosque_network.ipynb",
+      "assignments/net/cache/73f2a56f9a50ea5b631884c92f93cf4f15724f09.json",
+      "assignments/net/destroyed_buildings.geojson",
+      "assignments/net/landmark_nodes.geojson",
+      "assignments/net/network_edges.geojson",
+      "assignments/net/network_nodes.geojson",
+      "assignments/web/geolocate-har-file/.git/HEAD",
+      "assignments/web/geolocate-har-file/.git/config",
+      "assignments/web/geolocate-har-file/.git/description",
+      "assignments/web/geolocate-har-file/.git/hooks/applypatch-msg.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/commit-msg.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/fsmonitor-watchman.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/post-update.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-applypatch.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-commit.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-merge-commit.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-push.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-rebase.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/pre-receive.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/prepare-commit-msg.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/push-to-checkout.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/sendemail-validate.sample",
+      "assignments/web/geolocate-har-file/.git/hooks/update.sample",
+      "assignments/web/geolocate-har-file/.git/index",
+      "assignments/web/geolocate-har-file/.git/info/exclude",
+      "assignments/web/geolocate-har-file/.git/logs/HEAD",
+      "assignments/web/geolocate-har-file/.git/logs/refs/heads/main",
+      "assignments/web/geolocate-har-file/.git/logs/refs/remotes/origin/HEAD",
+      "assignments/web/geolocate-har-file/.git/objects/pack/pack-efeaa603ecabe086a4c7878d7cb7527db7ee7ad2.idx",
+      "assignments/web/geolocate-har-file/.git/objects/pack/pack-efeaa603ecabe086a4c7878d7cb7527db7ee7ad2.pack",
+      "assignments/web/geolocate-har-file/.git/objects/pack/pack-efeaa603ecabe086a4c7878d7cb7527db7ee7ad2.rev",
+      "assignments/web/geolocate-har-file/.git/packed-refs",
+      "assignments/web/geolocate-har-file/.git/refs/heads/main",
+      "assignments/web/geolocate-har-file/.git/refs/remotes/origin/HEAD",
+      "assignments/web/geolocate-har-file/.gitattributes",
+      "assignments/web/geolocate-har-file/.gitignore",
+      "assignments/web/geolocate-har-file/inputs/.gitignore",
+      "assignments/web/geolocate-har-file/inputs/columbia_gsapp.har",
+      "assignments/web/geolocate-har-file/ip_locations.geojson",
+      "assignments/web/geolocate-har-file/outputs/.gitignore",
+      "assignments/web/geolocate-har-file/outputs/ip_locations.geojson",
+      "assignments/web/geolocate-har-file/outputs/ip_map.html",
+      "assignments/web/geolocate-har-file/readme.md",
+      "assignments/web/geolocate-har-file/scrape_har_locations.py",
+      "assignments/web/webmap/index.html",
+      "assignments/web/webmap/ip_locations.geojson",
+      "assignments/web/webmap/main.js",
+      "assignments/web/webmap/screenshot.png",
+      "assignments/web/webmap/style.css",
+      "assignments/web/webmap/style.json",
+      "project/.DS_Store",
+      "project/damage/.DS_Store",
+      "project/damage/06_aleppo_building_damage_temporal_analysis.ipynb",
+      "project/damage/aleppo_network_distance.ipynb",
+      "project/damage/cache/83c132afa021919b65a4c17bb5640f0c779d69d3.json",
+      "project/damage/damage data/.DS_Store",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/.DS_Store",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Neighborhoods.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/1_Settlements.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/2_Damascus.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Aleppo_20140523.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/3_Cloud_Cover_Idlib_20140502.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Damascus_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Daraa_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Deir_ez_Zor_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Hama_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Homs_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Idlib_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/4_Damage_Sites_Raqqa_CDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Aleppo.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Damascus.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Daraa.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Deir_ez_Zor.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Hama.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Homs.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Idlib.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/5_No_Analysis_Areas_Raqqa.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/6_Damage_Sites_Aleppo_SDA.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/7_Aleppo_PercentageDamage_Neighborhood.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.CPG",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.dbf",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.prj",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.sbn",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.sbx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.shp",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.shp.xml",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/8_Aleppo_ResidentialPercentageDamage.shx",
+      "project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/readme_shp.txt",
+      "project/damage/damage data/aleppo_damage_points.geojson",
+      "project/damage/damage data/aleppo_damage_sites.csv",
+      "project/damage/damage data/aleppo_neighborhood_damage_pct.csv",
+      "project/damage/damage data/damage sites aleppo/.DS_Store",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.CPG",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.dbf",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.prj",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.sbn",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.sbx",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.shp",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.shp.xml",
+      "project/damage/damage data/damage sites aleppo/6_Damage_Sites_Aleppo_SDA.shx",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.CPG",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.dbf",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.prj",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.sbn",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.sbx",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.shp",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.shp.xml",
+      "project/damage/damage data/damage sites aleppo/7_Aleppo_PercentageDamage_Neighborhood.shx",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.CPG",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.dbf",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.prj",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.sbn",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.sbx",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.shp",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.shp.xml",
+      "project/damage/damage data/damage sites aleppo/8_Aleppo_ResidentialPercentageDamage.shx",
+      "project/damage/images/.DS_Store",
+      "project/damage/images/aleppo_damage_choropleth.png",
+      "project/damage/images/aleppo_damage_histogram.png",
+      "project/damage/images/aleppo_new_damage_by_date.png",
+      "project/damage/images/aleppo_top15_neighborhoods.png",
+      "project/damage/images/aleppo_zone_boxplot.png",
+      "project/damage/images/web-mapping-1.png",
+      "project/damage/images/workflow_diagram.svg",
+      "project/damage/mapbox-upload/aleppo_damage_sites.geojson",
+      "project/damage/mapbox-upload/aleppo_neighborhood_damage.geojson",
+      "project/landcover/09_calculating_landcover_change copy.ipynb",
+      "project/landcover/09_calculating_landcover_change.ipynb",
+    ];
+
+    const fileListEl = document.getElementById("fileList");
+    const countEl = document.getElementById("count");
+    const selectedEl = document.getElementById("selected");
+    const viewerEl = document.getElementById("viewer");
+    const emptyMsgEl = document.getElementById("emptyMsg");
+    const searchEl = document.getElementById("search");
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const openTabEl = document.getElementById("openTab");
+
+    let activeFilter = "all";
+    let selectedPath = "";
+
+    function extOf(path) {
+      const dot = path.lastIndexOf(".");
+      return dot === -1 ? "" : path.slice(dot + 1).toLowerCase();
+    }
+
+    function encodePath(path) {
+      return encodeURI(path).replace(/#/g, "%23");
+    }
+
+    function filteredFiles() {
+      const q = searchEl.value.trim().toLowerCase();
+      return files.filter((path) => {
+        const inBucket = activeFilter === "all" || path.startsWith(activeFilter + "/");
+        if (!inBucket) return false;
+        if (!q) return true;
+        return path.toLowerCase().includes(q) || extOf(path).includes(q);
+      });
+    }
+
+    function selectFile(path, button) {
+      selectedPath = path;
+      const url = encodePath(path);
+      selectedEl.textContent = path;
+      viewerEl.src = url;
+      openTabEl.href = url;
+      emptyMsgEl.style.display = "none";
+
+      document.querySelectorAll(".file button").forEach((el) => {
+        el.classList.remove("active");
+      });
+      if (button) button.classList.add("active");
+    }
+
+    function renderList() {
+      const filtered = filteredFiles();
+      countEl.textContent = filtered.length + " file" + (filtered.length === 1 ? "" : "s");
+      fileListEl.innerHTML = "";
+
+      if (!filtered.length) {
+        const li = document.createElement("li");
+        li.className = "empty";
+        li.textContent = "No files match your filter.";
+        fileListEl.appendChild(li);
+        return;
+      }
+
+      for (const path of filtered) {
+        const li = document.createElement("li");
+        li.className = "file";
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+
+        const name = document.createElement("div");
+        name.className = "name";
+        name.textContent = path.split("/").pop();
+
+        const sub = document.createElement("div");
+        sub.className = "path";
+        sub.textContent = path;
+
+        btn.appendChild(name);
+        btn.appendChild(sub);
+        btn.addEventListener("click", () => selectFile(path, btn));
+
+        if (path === selectedPath) {
+          btn.classList.add("active");
+        }
+
+        li.appendChild(btn);
+        fileListEl.appendChild(li);
+      }
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        chips.forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeFilter = chip.dataset.filter;
+        renderList();
+      });
+    });
+
+    searchEl.addEventListener("input", renderList);
+
+    renderList();
+  </script>
+</body>
+</html>

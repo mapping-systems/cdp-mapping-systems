@@ -1,0 +1,343 @@
+{
+  "type": "FeatureCollection",
+  "name": "khaled_commute_network",
+  "description": "A network dataset expressing the daily commute of a GSAPP graduate student between home in Hamilton Heights/Manhattanville and Columbia's Morningside campus, including the everyday service stops that structure the walk, and the longer subway-based connections that extend the network to a second campus affiliation and a partner's residence in Bushwick, Brooklyn.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "home",
+        "name": "Home",
+        "category": "residence",
+        "note": "131st St & Amsterdam Ave \u2014 origin node of the daily network."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9540369,
+          40.8163555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "plowshares_coffee",
+        "name": "Plowshares Coffee Roasters",
+        "category": "coffee",
+        "note": "Regular coffee stop on Amsterdam Ave, on the walk south from home."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9556886,
+          40.8137198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nelson_cleaners",
+        "name": "Nelson Cleaners",
+        "category": "service",
+        "note": "Laundry / tailoring, W 125th St."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9559676,
+          40.8133193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "subway_125_st",
+        "name": "125 St Station (A/B/C/D)",
+        "category": "transit",
+        "note": "Typical subway entrance at St. Nicholas Ave & 125th St; used for the A train."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95234,
+          40.81111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "malvin_barbers",
+        "name": "Malvin Barber Shop",
+        "category": "service",
+        "note": "Barber, Amsterdam Ave."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9582542,
+          40.8112286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "babas_marketplace",
+        "name": "Baba's Marketplace",
+        "category": "food_retail",
+        "note": "24-hour deli / grocery, Amsterdam Ave."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95836,
+          40.8108715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "trader_joes_125",
+        "name": "Trader Joe's (125th St)",
+        "category": "food_retail",
+        "note": "Weekly grocery run, W 125th St."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9469074,
+          40.8085527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "schermerhorn_hall",
+        "name": "Schermerhorn Hall",
+        "category": "education_columbia",
+        "note": "Typical entrance point onto Columbia's Morningside campus."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9605576,
+          40.8086363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "avery_hall",
+        "name": "Avery Hall",
+        "category": "education_columbia",
+        "note": "MS. CDP (Computational Design Practices) studio."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9609694,
+          40.8082793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fayerweather_hall",
+        "name": "Fayerweather Hall",
+        "category": "education_columbia",
+        "note": "MS. HP (Historic Preservation) studio."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9603477,
+          40.8082408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "parsons_school",
+        "name": "Parsons School of Design",
+        "category": "education_affiliation",
+        "note": "Undergraduate alma mater; occasional alumni visits, reached by subway."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9944837,
+          40.7351297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "partner_bushwick",
+        "name": "Partner's residence (Broadway & Granite St)",
+        "category": "personal",
+        "note": "Bushwick, Brooklyn; reached via the A train plus transfer."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9085358,
+          40.6818118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "daily_walk_corridor",
+        "name": "Daily walk: Home \u2192 Campus (Amsterdam / St. Nicholas corridor)",
+        "category": "route_walk",
+        "mode": "walking",
+        "frequency": "daily",
+        "note": "Typical walking route threading the errand stops between home and the Schermerhorn Hall entrance to campus."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9540369,
+            40.8163555
+          ],
+          [
+            -73.9556886,
+            40.8137198
+          ],
+          [
+            -73.9559676,
+            40.8133193
+          ],
+          [
+            -73.95234,
+            40.81111
+          ],
+          [
+            -73.9582542,
+            40.8112286
+          ],
+          [
+            -73.95836,
+            40.8108715
+          ],
+          [
+            -73.9605576,
+            40.8086363
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "campus_studio_loop",
+        "name": "Campus studio loop",
+        "category": "route_walk",
+        "mode": "walking",
+        "frequency": "daily",
+        "note": "Movement between the two degree studios and the campus entrance."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9605576,
+            40.8086363
+          ],
+          [
+            -73.9609694,
+            40.8082793
+          ],
+          [
+            -73.9603477,
+            40.8082408
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "grocery_spur",
+        "name": "Grocery spur: 125 St Station \u2192 Trader Joe's",
+        "category": "route_walk",
+        "mode": "walking",
+        "frequency": "weekly",
+        "note": "Eastward spur along 125th St for the weekly grocery run."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95234,
+            40.81111
+          ],
+          [
+            -73.9469074,
+            40.8085527
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "subway_to_parsons",
+        "name": "Subway desire line: 125 St \u2192 Parsons",
+        "category": "route_subway",
+        "mode": "subway (A train)",
+        "frequency": "occasional",
+        "note": "Straight desire line standing in for the actual A-train route to alumni visits at Parsons; not a literal track alignment."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95234,
+            40.81111
+          ],
+          [
+            -73.9944837,
+            40.7351297
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "subway_to_partner",
+        "name": "Subway desire line: 125 St \u2192 Bushwick",
+        "category": "route_subway",
+        "mode": "subway (A train + transfer)",
+        "frequency": "weekly",
+        "note": "Straight desire line standing in for the A train plus a transfer (e.g. at Broadway Junction) to reach Bushwick; not a literal track alignment."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.95234,
+            40.81111
+          ],
+          [
+            -73.9085358,
+            40.6818118
+          ]
+        ]
+      }
+    }
+  ]
+}

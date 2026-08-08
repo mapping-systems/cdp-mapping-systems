@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1032 640">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #444;
+        font-family: Helvetica, Helvetica;
+        font-size: 12px;
+      }
+
+      .st1, .st2, .st3, .st4 {
+        isolation: isolate;
+      }
+
+      .st2 {
+        font-size: 22px;
+      }
+
+      .st2, .st3, .st4 {
+        fill: #1a1a1a;
+        font-family: Helvetica-Bold, Helvetica;
+        font-weight: 700;
+      }
+
+      .st3 {
+        font-size: 15px;
+      }
+
+      .st4 {
+        font-size: 14px;
+      }
+    </style>
+  </defs>
+  <text class="st2" transform="translate(21.74 42)"><tspan x="0" y="0">Proposed Workflow: Relating the Personal Commute Network to the MTA Subway Line Dataset</tspan></text>
+  <text class="st3" transform="translate(156 118)"><tspan x="0" y="0">A. Personal Network</tspan></text>
+  <text class="st1" transform="translate(156 142)"><tspan x="0" y="0">commute_network.geojson</tspan></text>
+  <text class="st1" transform="translate(156 168)"><tspan x="0" y="0">• 12 point nodes (home, stops,</tspan></text>
+  <text class="st1" transform="translate(156 184)"><tspan x="0" y="0">studios, subway entrance)</tspan></text>
+  <text class="st1" transform="translate(156 204)"><tspan x="0" y="0">• 5 line edges (walks + subway</tspan></text>
+  <text class="st1" transform="translate(156 220)"><tspan x="0" y="0">desire lines)</tspan></text>
+  <text class="st3" transform="translate(696 118)"><tspan x="0" y="0">B. MTA Subway Dataset</tspan></text>
+  <text class="st1" transform="translate(696 142)"><tspan x="0" y="0">Open Data NY (data.ny.gov)</tspan></text>
+  <text class="st1" transform="translate(696 168)"><tspan x="0" y="0">• Subway Service Lines</tspan></text>
+  <text class="st1" transform="translate(696 184)"><tspan x="0" y="0">(track geometry, LineString)</tspan></text>
+  <text class="st1" transform="translate(696 204)"><tspan x="0" y="0">• Subway Stations</tspan></text>
+  <text class="st1" transform="translate(696 220)"><tspan x="0" y="0">(GTFS stop IDs, Point)</tspan></text>
+  <text class="st4" transform="translate(348.74 328)"><tspan x="0" y="0">1. Spatial join: snap 125 St node to nearest station</tspan></text>
+  <text class="st1" transform="translate(347.34 350)"><tspan x="0" y="0">Match &quot;subway_125_st&quot; point to its GTFS Stop ID / Complex ID</tspan></text>
+  <text class="st1" transform="translate(364.86 366)"><tspan x="0" y="0">in the MTA Stations table (nearest-neighbor within ~50m)</tspan></text>
+  <text class="st4" transform="translate(351.84 438)"><tspan x="0" y="0">2. Route the desire lines onto real track geometry</tspan></text>
+  <text class="st1" transform="translate(352.58 460)"><tspan x="0" y="0">Build a graph from Subway Service Lines; shortest-path route</tspan></text>
+  <text class="st1" transform="translate(338.59 476)"><tspan x="0" y="0">(e.g. networkx / QGIS) from 125 St to Parsons and Bushwick stops</tspan></text>
+  <text class="st4" transform="translate(418.78 548)"><tspan x="0" y="0">3. Output: annotated network</tspan></text>
+  <text class="st1" transform="translate(340.48 570)"><tspan x="0" y="0">Personal nodes + walking edges, kept as-is; subway &quot;desire lines&quot;</tspan></text>
+  <text class="st1" transform="translate(328.02 586)"><tspan x="0" y="0">replaced with real transit geometry, tagged with stop-to-stop travel time</tspan></text>
+  <path class="st0" d=""/>
+  <path class="st0" d=""/>
+  <path class="st0" d=""/>
+  <path class="st0" d=""/>
+</svg>
