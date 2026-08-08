@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plan a real cultural visit across New York City using route time, price, opening hours, accessibility, and personal interests."
+    />
+    <title>After Six NYC</title>
+    <link rel="icon" href="data:," />
+    <link
+      href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="style.css?v=20260801-8" />
+    <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <button class="brand" id="brand-home" type="button" aria-label="After Six home">
+          <span class="brand-name">AFTER/SIX</span>
+          <span class="brand-city">NEW YORK CITY</span>
+        </button>
+
+        <div class="trip-context" aria-live="polite">
+          <span class="context-origin" id="scenario-origin">Columbia / Avery Hall</span>
+          <i data-lucide="arrow-right"></i>
+          <span id="scenario-when">Leave tonight at 6:30 PM</span>
+        </div>
+
+        <nav class="top-actions" aria-label="Project actions">
+          <button class="top-button" id="share-button" type="button">
+            <i data-lucide="share-2"></i><span>Share</span>
+          </button>
+          <button class="top-button" id="open-method" type="button">
+            <i data-lucide="circle-help"></i><span>Method</span>
+          </button>
+        </nav>
+      </header>
+
+      <section class="workspace">
+        <aside class="control-panel" aria-label="Culture planner">
+          <nav class="view-nav" role="tablist" aria-label="Planner sections">
+            <button class="view-button active" data-view="explore" type="button" role="tab" aria-selected="true">
+              <i data-lucide="map"></i><span>Explore</span>
+            </button>
+            <button class="view-button" data-view="programs" type="button" role="tab" aria-selected="false">
+              <i data-lucide="sparkles"></i><span>On now</span>
+            </button>
+            <button class="view-button" data-view="saved" type="button" role="tab" aria-selected="false">
+              <i data-lucide="bookmark"></i><span>Saved</span><b id="saved-count">0</b>
+            </button>
+            <button class="view-button" data-view="profile" type="button" role="tab" aria-selected="false">
+              <i data-lucide="user-round"></i><span>Profile</span>
+            </button>
+          </nav>
+
+          <section class="app-view active" id="explore-view" data-view-panel="explore">
+            <header class="view-header explore-header">
+              <p class="eyebrow">Make the evening count</p>
+              <h1>Find somewhere<br />worth going.</h1>
+              <p class="view-intro">Every place includes a route. Rankings adapt to when you leave, what you can spend, and what you like.</p>
+            </header>
+
+            <section class="trip-planner" aria-label="Trip settings">
+              <div class="trip-fields">
+                <label class="field">
+                  <span>Date</span>
+                  <input id="date-filter" type="date" />
+                </label>
+                <label class="field">
+                  <span>Leave at</span>
+                  <input id="time-filter" type="time" step="300" />
+                </label>
+                <button class="now-button" id="now-button" type="button">
+                  <i data-lucide="clock-3"></i><span>Now</span>
+                </button>
+              </div>
+
+              <div class="origin-row">
+                <div class="origin-copy">
+                  <span>Starting from</span>
+                  <strong id="origin-name">Columbia / Avery Hall</strong>
+                  <small id="origin-station">1 · 116 St-Columbia University</small>
+                </div>
+                <div class="origin-actions">
+                  <button class="icon-button" id="locate-button" type="button" title="Use my location" aria-label="Use my location">
+                    <i data-lucide="locate-fixed"></i>
+                  </button>
+                  <button class="icon-button" id="pick-button" type="button" title="Choose on map" aria-label="Choose a starting point on the map">
+                    <i data-lucide="crosshair"></i>
+                  </button>
+                  <button class="icon-button" id="reset-origin" type="button" title="Reset start" aria-label="Reset to Columbia">
+                    <i data-lucide="rotate-ccw"></i>
+                  </button>
+                </div>
+              </div>
+
+              <form class="origin-search" id="origin-search-form" role="search">
+                <label class="origin-search-field">
+                  <i data-lucide="map-pin"></i>
+                  <span class="sr-only">Enter a New York City starting address</span>
+                  <input id="origin-search" type="search" placeholder="Enter a NYC address or place" autocomplete="off" />
+                  <button type="submit" title="Use this address" aria-label="Use this starting address">
+                    <i data-lucide="arrow-right"></i>
+                  </button>
+                </label>
+                <div class="origin-suggestions" id="origin-suggestions" role="listbox" hidden></div>
+                <span class="sr-only" id="origin-search-status" aria-live="polite"></span>
+              </form>
+
+              <button class="profile-summary" id="open-profile" type="button">
+                <span class="profile-avatar" id="profile-avatar">M</span>
+                <span>
+                  <small>Your culture profile</small>
+                  <strong id="profile-summary-text">Art, film · $15 max</strong>
+                </span>
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </section>
+
+            <section class="metrics" aria-live="polite">
+              <div><strong id="place-count">161</strong><span>places with routes</span></div>
+              <div><strong id="within-journey-count">0</strong><span>within your trip limit</span></div>
+              <div><strong id="median-journey">0 min</strong><span>median journey</span></div>
+            </section>
+
+            <section class="discovery-tools" aria-label="Find cultural places">
+              <label class="search-field">
+                <i data-lucide="search"></i>
+                <span class="sr-only">Search cultural places</span>
+                <input id="place-search" type="search" placeholder="Venue, neighborhood, or type" autocomplete="off" />
+              </label>
+              <div class="filter-row">
+                <label class="select-field">
+                  <span class="sr-only">Filter by category</span>
+                  <select id="category-filter">
+                    <option value="all">All culture</option>
+                    <option value="Art & Exhibitions">Art & exhibitions</option>
+                    <option value="Museums & Heritage">Museums & heritage</option>
+                    <option value="Performance & Music">Performance & music</option>
+                    <option value="Film & Media">Film & media</option>
+                    <option value="Cultural Centers">Cultural centers</option>
+                    <option value="Design, Books & Architecture">Design, books & architecture</option>
+                    <option value="Community Arts">Community arts</option>
+                  </select>
+                </label>
+                <label class="select-field borough-field">
+                  <span class="sr-only">Filter by borough</span>
+                  <select id="borough-filter">
+                    <option value="all">All boroughs</option>
+                    <option value="Manhattan">Manhattan</option>
+                    <option value="Brooklyn">Brooklyn</option>
+                    <option value="Queens">Queens</option>
+                    <option value="Bronx">The Bronx</option>
+                    <option value="Staten Island">Staten Island</option>
+                  </select>
+                </label>
+                <label class="select-field sort-field">
+                  <span class="sr-only">Sort places</span>
+                  <select id="sort-filter">
+                    <option value="recommended">For you</option>
+                    <option value="time">Shortest trip</option>
+                    <option value="distance">Nearest</option>
+                    <option value="cost">Lowest price</option>
+                  </select>
+                </label>
+              </div>
+              <button class="availability-filter" id="open-filter" type="button" aria-pressed="false">
+                <span><i data-lucide="door-open"></i>Open when I arrive</span>
+                <strong id="open-filter-count">0</strong>
+              </button>
+            </section>
+
+            <section class="list-section">
+              <div class="list-heading">
+                <h2 id="results-title">Recommended for you</h2>
+                <span id="result-count">161 places</span>
+              </div>
+              <div id="results-list" class="results-list"></div>
+            </section>
+          </section>
+
+          <section class="app-view" id="programs-view" data-view-panel="programs" hidden>
+            <header class="view-header programs-header">
+              <p class="eyebrow">Current programs</p>
+              <h1>On now,<br />near you.</h1>
+              <p class="view-intro">Date-checked exhibitions and programs, ranked by your route and interests. Official links stay attached to every listing.</p>
+            </header>
+            <div class="program-controls">
+              <div class="program-status"><span class="live-dot"></span><span id="program-check-label">Checked Aug 1, 2026</span></div>
+              <label class="select-field">
+                <span class="sr-only">Filter current programs</span>
+                <select id="program-category-filter">
+                  <option value="all">All program types</option>
+                  <option value="Exhibition">Exhibitions</option>
+                  <option value="Music series">Music</option>
+                  <option value="Performance">Performance</option>
+                  <option value="Workshop">Workshops</option>
+                </select>
+              </label>
+            </div>
+            <div id="programs-list" class="programs-list"></div>
+            <p class="source-note">Programs are editorially checked, not a live ticket feed. Always confirm time and availability on the official page.</p>
+          </section>
+
+          <section class="app-view" id="saved-view" data-view-panel="saved" hidden>
+            <header class="view-header compact-header">
+              <p class="eyebrow">Your shortlist</p>
+              <h1>Saved<br />for later.</h1>
+              <p class="view-intro">Saved places stay on this device. No account required.</p>
+            </header>
+            <div id="saved-list" class="results-list"></div>
+            <div class="empty-state" id="saved-empty" hidden>
+              <i data-lucide="bookmark-plus"></i>
+              <h2>Nothing saved yet</h2>
+              <p>Bookmark a place or current program to keep it here.</p>
+              <button class="text-link" data-go-view="explore" type="button">Explore places <i data-lucide="arrow-right"></i></button>
+            </div>
+          </section>
+
+          <section class="app-view" id="profile-view" data-view-panel="profile" hidden>
+            <header class="view-header compact-header">
+              <p class="eyebrow">Personalize the map</p>
+              <h1>My culture<br />profile.</h1>
+              <p class="view-intro">Your preferences are stored only in this browser. An account is not needed for this prototype.</p>
+            </header>
+
+            <form id="profile-form" class="profile-form">
+              <label class="profile-name-field">
+                <span>What should we call you?</span>
+                <input id="profile-name" type="text" maxlength="30" placeholder="Your name" autocomplete="name" />
+              </label>
+
+              <fieldset class="interest-fieldset">
+                <legend>What do you want more of?</legend>
+                <div id="interest-options" class="interest-grid"></div>
+              </fieldset>
+
+              <section class="profile-cluster" aria-labelledby="visit-limits-heading">
+                <h2 id="visit-limits-heading">Visit limits</h2>
+                <label class="range-field">
+                  <span><strong>Maximum journey</strong><output id="journey-limit-output">60 min</output></span>
+                  <input id="journey-limit" type="range" min="20" max="100" step="5" value="60" />
+                </label>
+
+                <label class="range-field">
+                  <span><strong>Usual ticket budget</strong><output id="profile-budget-output">$15</output></span>
+                  <input id="profile-budget" type="range" min="0" max="60" step="5" value="15" />
+                </label>
+
+                <fieldset class="profile-flags">
+                  <legend>Discounts</legend>
+                  <label><input id="student-filter" type="checkbox" /><span>Student</span></label>
+                  <label><input id="resident-filter" type="checkbox" /><span>NY resident</span></label>
+                  <label><input id="under25-filter" type="checkbox" /><span>25 or under</span></label>
+                </fieldset>
+              </section>
+
+              <section class="profile-cluster" aria-labelledby="priorities-heading">
+                <h2 id="priorities-heading">Priorities</h2>
+                <label class="toggle-row">
+                  <span><strong>Prioritize smaller spaces</strong><small>Boost artist-run, nonprofit, and community venues.</small></span>
+                  <input id="independent-filter" type="checkbox" role="switch" />
+                </label>
+
+                <label class="toggle-row compact-toggle">
+                  <span><strong>Step-free priority</strong></span>
+                  <input id="accessible-filter" type="checkbox" role="switch" />
+                </label>
+              </section>
+
+              <button class="save-profile-button" type="submit"><i data-lucide="check"></i>Save profile</button>
+            </form>
+          </section>
+        </aside>
+
+        <section class="map-stage" aria-label="Interactive cultural access map">
+          <div id="map"></div>
+
+          <div class="map-toolbar" aria-label="Map layers">
+            <button class="layer-button active" id="places-layer-button" type="button" aria-pressed="true">
+              <span class="layer-dot places"></span><span id="map-place-count">161 places</span>
+            </button>
+            <button class="layer-button" id="subway-layer-button" type="button" aria-pressed="false">
+              <span class="layer-dot subway"></span>Subway
+            </button>
+          </div>
+
+          <div class="map-message" id="map-message">
+            <span class="route-key"><i class="route-key-line subway"></i>Subway</span>
+            <span class="route-key"><i class="route-key-line walk"></i><span id="walk-route-status">Street walk</span></span>
+          </div>
+
+          <div class="pick-notice" id="pick-notice" role="status">
+            <i data-lucide="crosshair"></i><span>Click the map to set your start</span>
+          </div>
+
+          <article class="venue-detail" id="venue-detail" aria-live="polite" aria-label="Venue details">
+            <div class="detail-accent" id="detail-accent"></div>
+            <header class="detail-header">
+              <div>
+                <p class="detail-category" id="detail-category"></p>
+                <h2 id="detail-name"></h2>
+                <p class="detail-location" id="detail-location"></p>
+              </div>
+              <div class="detail-window-actions">
+                <button class="icon-button" id="minimize-detail" type="button" aria-label="Minimize venue details" title="Minimize">
+                  <i data-lucide="minus"></i>
+                </button>
+                <button class="icon-button" id="close-detail" type="button" aria-label="Close venue details" title="Close">
+                  <i data-lucide="x"></i>
+                </button>
+              </div>
+            </header>
+
+            <p class="detail-description" id="detail-description"></p>
+
+            <div class="detail-topline">
+              <div class="match-score"><strong id="detail-score">0</strong><span>% match</span></div>
+              <div class="detail-status"><strong id="detail-status"></strong><span id="detail-status-note"></span></div>
+              <button class="save-detail-button" id="detail-save" type="button" aria-label="Save venue" title="Save"><i data-lucide="bookmark"></i></button>
+            </div>
+
+            <section class="route-card" aria-label="Modeled route">
+              <div class="route-summary">
+              <span id="detail-route-icon"><i data-lucide="train-front"></i></span>
+                <div class="route-duration"><small>Travel time</small><strong id="detail-route-time"></strong><span id="detail-route-label"></span></div>
+                <div class="arrival-badge"><small>Estimated arrival</small><strong id="detail-arrival"></strong></div>
+              </div>
+              <div class="route-steps" id="detail-route-steps"></div>
+            </section>
+
+            <dl class="detail-facts">
+              <div><dt>Admission</dt><dd id="detail-price"></dd></div>
+              <div><dt>Hours at arrival</dt><dd id="detail-hours"></dd></div>
+            </dl>
+
+            <section class="venue-programs" id="detail-programs-section" hidden>
+              <div class="section-label">On now</div>
+              <div id="detail-programs"></div>
+            </section>
+
+            <div class="detail-actions">
+              <a class="primary-button" id="directions-link" href="#" target="_blank" rel="noreferrer"><i data-lucide="navigation"></i>Directions</a>
+              <a class="secondary-button" id="detail-events-link" href="#" target="_blank" rel="noreferrer"><i data-lucide="calendar-days"></i><span id="detail-events-label">Current programs</span></a>
+              <a class="icon-button external-button" id="detail-link" href="#" target="_blank" rel="noreferrer" title="Official website" aria-label="Official website"><i data-lucide="external-link"></i></a>
+            </div>
+          </article>
+
+        </section>
+      </section>
+      <button class="mobile-list-toggle" id="mobile-list-toggle" type="button"><i data-lucide="map"></i><span>Full map</span></button>
+    </main>
+
+    <dialog id="share-dialog" aria-labelledby="share-dialog-title">
+      <header class="dialog-header share-dialog-header">
+        <div><p class="eyebrow">Send After Six</p><h2 id="share-dialog-title">What would you like to share?</h2></div>
+        <button class="icon-button" id="close-share" type="button" aria-label="Close sharing options"><i data-lucide="x"></i></button>
+      </header>
+      <div class="share-options">
+        <button class="share-option" id="share-site-option" type="button">
+          <span class="share-option-icon"><i data-lucide="link"></i></span>
+          <span><strong>Share the website</strong><small>A clean public link without your location, filters, or profile.</small></span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="share-option" id="share-trip-option" type="button">
+          <span class="share-option-icon trip"><i data-lucide="route"></i></span>
+          <span><strong>Share this trip</strong><small>Includes the current date, time, filters, place, and starting location.</small></span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+      <p class="share-privacy"><i data-lucide="shield-check"></i>Your interests, budget, and saved places stay private.</p>
+    </dialog>
+
+    <dialog id="method-dialog">
+      <header class="dialog-header">
+        <div><p class="eyebrow">Mapping Systems final</p><h2>Near is not the same as accessible.</h2></div>
+        <button class="icon-button" id="close-method" type="button" aria-label="Close methodology"><i data-lucide="x"></i></button>
+      </header>
+      <div class="method-lede">After Six compares geographic proximity with a modeled cultural journey shaped by departure time, subway travel, walking, price, opening hours, step-free proximity, and personal interests.</div>
+      <div class="method-stats">
+        <div><strong id="method-place-count">161</strong><span>screened public places</span></div>
+        <div><strong id="method-route-count">161</strong><span>modeled routes</span></div>
+        <div><strong>1,002</strong><span>station-line nodes</span></div>
+        <div><strong>4,337</strong><span>weighted edges</span></div>
+      </div>
+      <section class="method-section">
+        <h3>How a route is made</h3>
+        <div class="method-flow">
+          <span>selected start</span><i data-lucide="arrow-right"></i><span>nearest station</span><i data-lucide="arrow-right"></i><span>GTFS station-line graph</span><i data-lucide="arrow-right"></i><span>best of 8 destination stations</span>
+        </div>
+        <p>Dijkstra's algorithm finds the lowest-time path through station-line states. Edges represent scheduled travel or transfers. Blue lines show subway movement; gray dotted lines request pedestrian street geometry from the OpenStreetMap routing service when a venue is selected.</p>
+      </section>
+      <section class="method-section two-column-method">
+        <div><h3>What is verified</h3><p>Every mapped point has a screened public address, description, official website, current-program page, route, and source-backed visit information. Fixed weekly hours, recorded closure periods, and date-specific cinema showtimes are evaluated at the modeled arrival time.</p></div>
+        <div><h3>What remains uncertain</h3><p>The model does not include buses, live delays, elevator outages, every one-off event, last-minute sellouts, exact pedestrian geometry, station-specific transfer paths, or whether a cultural space feels welcoming to a particular visitor.</p></div>
+      </section>
+      <section class="method-links">
+        <a href="https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page" target="_blank" rel="noreferrer">NYC DCLA admission guide</a>
+        <a href="https://data.ny.gov/Transportation/MTA-General-Transit-Feed-Specification-GTFS-Static/fgm6-ccue" target="_blank" rel="noreferrer">MTA static GTFS</a>
+        <a href="https://geosearch.planninglabs.nyc/" target="_blank" rel="noreferrer">NYC Planning GeoSearch</a>
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>
+      </section>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+  <script src="main.js?v=20260801-8"></script>
+  </body>
+</html>

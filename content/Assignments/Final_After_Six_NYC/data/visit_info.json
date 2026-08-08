@@ -1,0 +1,4119 @@
+{
+  "culture-911-museum": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        9,
+        19
+      ],
+      "tue": null,
+      "wed": [
+        9,
+        19
+      ],
+      "thu": [
+        9,
+        19
+      ],
+      "fri": [
+        9,
+        19
+      ],
+      "sat": [
+        9,
+        19
+      ],
+      "sun": [
+        9,
+        19
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 36,
+    "student_price": 24,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$24-$36",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-asia-society": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$15 adult / $10 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-china-institute": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        20
+      ],
+      "fri": [
+        10,
+        20
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$15 adult / $10 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-cooper-hewitt": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": [
+        10,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 22,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$22 adult / $10 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-frick": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10.5,
+        17.5
+      ],
+      "tue": null,
+      "wed": [
+        10.5,
+        17.5
+      ],
+      "thu": [
+        10.5,
+        17.5
+      ],
+      "fri": [
+        10.5,
+        17.5
+      ],
+      "sat": [
+        10.5,
+        17.5
+      ],
+      "sun": [
+        10.5,
+        17.5
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$30 adult / $17 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-guggenheim": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10.5,
+        17.5
+      ],
+      "tue": [
+        10.5,
+        17.5
+      ],
+      "wed": [
+        10.5,
+        17.5
+      ],
+      "thu": [
+        10.5,
+        17.5
+      ],
+      "fri": [
+        10.5,
+        17.5
+      ],
+      "sat": [
+        10.5,
+        17.5
+      ],
+      "sun": [
+        10.5,
+        17.5
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 30,
+    "student_price": 19,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$30 adult / $19 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-icp": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10.5,
+        18.5
+      ],
+      "tue": [
+        10.5,
+        18.5
+      ],
+      "wed": [
+        10.5,
+        18.5
+      ],
+      "thu": [
+        10.5,
+        20
+      ],
+      "fri": [
+        10.5,
+        18.5
+      ],
+      "sat": [
+        10.5,
+        18.5
+      ],
+      "sun": [
+        10.5,
+        18.5
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 18,
+    "student_price": 12,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$18 adult / $12 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-japan-society": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        17
+      ],
+      "wed": [
+        11,
+        17
+      ],
+      "thu": [
+        11,
+        17
+      ],
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 12,
+    "student_price": 8,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$12 adult / $8 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-jewish-museum": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        11,
+        18
+      ],
+      "tue": null,
+      "wed": null,
+      "thu": [
+        11,
+        20
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 24,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$24 adult / $10 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-morgan": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10.5,
+        17
+      ],
+      "wed": [
+        10.5,
+        17
+      ],
+      "thu": [
+        10.5,
+        17
+      ],
+      "fri": [
+        10.5,
+        20
+      ],
+      "sat": [
+        10.5,
+        17
+      ],
+      "sun": [
+        10.5,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 25,
+    "student_price": 13,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$25 adult / $13 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-museum-jewish-heritage": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        20
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": null,
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 18,
+    "student_price": 12,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$18 adult / $12 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-moma": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10.5,
+        17.5
+      ],
+      "tue": [
+        10.5,
+        17.5
+      ],
+      "wed": [
+        10.5,
+        17.5
+      ],
+      "thu": [
+        10.5,
+        17.5
+      ],
+      "fri": [
+        10.5,
+        20.5
+      ],
+      "sat": [
+        10.5,
+        17.5
+      ],
+      "sun": [
+        10.5,
+        17.5
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$30 adult / $17 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-neue-galerie": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": null,
+      "sun": null
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 28,
+    "student_price": 15,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$28 adult / $15 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-ny-history": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        17
+      ],
+      "wed": [
+        11,
+        17
+      ],
+      "thu": [
+        11,
+        17
+      ],
+      "fri": [
+        11,
+        20
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 24,
+    "student_price": 13,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$24 adult / $13 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-poster-house": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        20
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": [
+        10,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$15 adult / $10 student",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-studio-museum": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        21
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 16,
+    "student_price": 9,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "Pay what you can; $16 adult / $9 student suggested",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-whitney": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10.5,
+        18
+      ],
+      "tue": [
+        10.5,
+        18
+      ],
+      "wed": [
+        10.5,
+        18
+      ],
+      "thu": [
+        10.5,
+        18
+      ],
+      "fri": [
+        10.5,
+        22
+      ],
+      "sat": [
+        10.5,
+        18
+      ],
+      "sun": [
+        10.5,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 30,
+    "student_price": 25,
+    "ny_resident_price": null,
+    "under_25_price": 0.0,
+    "admission_label": "$30 adult; free for visitors 25 and under",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-met": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": null,
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        21
+      ],
+      "sat": [
+        10,
+        21
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": 1.0,
+    "under_25_price": null,
+    "admission_label": "$30 adult / $17 student; pay what you wish for NY residents and tri-state students",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-folk-art": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11.5,
+        18
+      ],
+      "thu": [
+        11.5,
+        18
+      ],
+      "fri": [
+        11.5,
+        18
+      ],
+      "sat": [
+        11.5,
+        18
+      ],
+      "sun": [
+        11.5,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0.0,
+    "under_25_price": 0.0,
+    "admission_label": "Always free",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-fit": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        20
+      ],
+      "thu": [
+        12,
+        20
+      ],
+      "fri": [
+        12,
+        20
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0.0,
+    "under_25_price": 0.0,
+    "admission_label": "Always free",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-leslie-lohman": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        17
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 10,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "admission_label": "$10 suggested donation",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-drawing-center": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0.0,
+    "under_25_price": 0.0,
+    "admission_label": "Always free",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-el-museo": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        11,
+        17
+      ],
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 9,
+    "student_price": 5,
+    "ny_resident_price": 1.0,
+    "under_25_price": null,
+    "admission_label": "Pay what you can; $9 adult / $5 student suggested",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-mcny": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        21
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": [
+        10,
+        18
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 23,
+    "student_price": 14,
+    "ny_resident_price": 1.0,
+    "under_25_price": null,
+    "admission_label": "$23 adult / $14 student; pay what you can for NYC residents",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "culture-nmai": {
+    "schedule_type": "regular",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "hours_label": "Weekly museum hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0.0,
+    "under_25_price": 0.0,
+    "admission_label": "Always free",
+    "visit_source": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "visit_checked": "2026-08-01"
+  },
+  "apexart": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://apexart.org/about-us.php",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "artists-space": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://artistsspace.org/about",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "cue-art-foundation": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://cueartfoundation.org/information",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "white-columns": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://whitecolumns.org/about/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "swiss-institute": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.swissinstitute.net/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        14,
+        20
+      ],
+      "thu": [
+        14,
+        20
+      ],
+      "fri": [
+        14,
+        20
+      ],
+      "sat": [
+        12,
+        20
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "cara": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.cara-nyc.org/pages/visit?section=Hours",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "print-center-new-york": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.printcenternewyork.org/visit",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "center-for-book-arts": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free; suggested donation welcomed",
+    "visit_source": "https://centerforbookarts.org/about",
+    "hours": {
+      "mon": [
+        11,
+        18
+      ],
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "storefront-art-architecture": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://storefront.nyc/about/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "center-for-architecture": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free galleries; lectures and tours are priced separately",
+    "visit_source": "https://www.centerforarchitecture.org/visit/",
+    "hours": {
+      "mon": [
+        9,
+        20
+      ],
+      "tue": [
+        9,
+        20
+      ],
+      "wed": [
+        9,
+        20
+      ],
+      "thu": [
+        9,
+        20
+      ],
+      "fri": [
+        9,
+        20
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": null
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "national-arts-club": {
+    "schedule_type": "regular",
+    "hours_label": "Public gallery hours; availability can change for Club functions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free public exhibitions",
+    "visit_source": "https://www.nationalartsclub.org/files/Membership%20Application.pdf",
+    "hours": {
+      "mon": [
+        9,
+        15
+      ],
+      "tue": [
+        9,
+        15
+      ],
+      "wed": [
+        9,
+        15
+      ],
+      "thu": [
+        9,
+        15
+      ],
+      "fri": [
+        9,
+        15
+      ],
+      "sat": [
+        10,
+        16
+      ],
+      "sun": [
+        10,
+        16
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "salmagundi-club": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free public galleries; some lectures have a small fee",
+    "visit_source": "https://salmagundi.org/about/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        13,
+        18
+      ],
+      "wed": [
+        13,
+        18
+      ],
+      "thu": [
+        13,
+        18
+      ],
+      "fri": [
+        13,
+        18
+      ],
+      "sat": [
+        13,
+        17
+      ],
+      "sun": [
+        13,
+        17
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "wallach-art-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Sunday, noon-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://wallach.columbia.edu/content/plan-your-visit",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "james-gallery": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.gc.cuny.edu/james-gallery",
+    "hours": {
+      "mon": null,
+      "tue": [
+        12,
+        18
+      ],
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "isaw": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://isaw.nyu.edu/exhibitions/wgre/location-and-hours",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        20
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "grolier-club": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Saturday, 10 AM-5 PM; closed for August 2026",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free exhibitions",
+    "visit_source": "https://www.grolierclub.org/",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": null
+    },
+    "closures": [
+      {
+        "start": "2026-08-01",
+        "end": "2026-09-07",
+        "label": "Closed for the August recess; reopens September 8"
+      }
+    ],
+    "visit_checked": "2026-08-01"
+  },
+  "the-kitchen": {
+    "schedule_type": "event",
+    "hours_label": "Open for the times listed with each program",
+    "admission_label": "No fixed admission; public programs include free and $5-$25 sliding-scale events",
+    "visit_source": "https://thekitchen.org/on-view/the-woodshed-black-backstage/",
+    "visit_checked": "2026-08-01"
+  },
+  "abrons-arts-center": {
+    "schedule_type": "event",
+    "hours_label": "Building open daily 10 AM-10 PM; box office opens one hour before shows",
+    "admission_label": "Free galleries and community programs; performance tickets are priced per event",
+    "visit_source": "https://abronsartscenter.org/about/contact",
+    "visit_checked": "2026-08-01"
+  },
+  "the-clemente": {
+    "schedule_type": "program",
+    "hours_label": "Open for the times listed with each public event",
+    "admission_label": "No fixed admission; the calendar identifies free and ticketed events",
+    "visit_source": "https://www.theclementecenter.org/calendar",
+    "visit_checked": "2026-08-01"
+  },
+  "city-lore": {
+    "schedule_type": "regular",
+    "hours_label": "Saturday-Sunday, noon-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://citylore.org/about-the-gallery/current-exhibition/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "africa-center": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free admission; selected exhibitions and events may be ticketed",
+    "visit_source": "https://theafricacenter.org/about-us",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        17
+      ],
+      "thu": [
+        11,
+        17
+      ],
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "americas-society": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free gallery admission",
+    "visit_source": "https://www.as-coa.org/art",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": null
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "austrian-cultural-forum": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday, 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://acfny.org/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "scandinavia-house": {
+    "schedule_type": "program",
+    "hours_label": "Gallery and cinema hours follow the current exhibition and screening schedule",
+    "admission_label": "Gallery and screening admission are priced separately by program",
+    "visit_source": "https://www.scandinaviahouse.org/events/",
+    "visit_checked": "2026-08-01"
+  },
+  "irish-arts-center": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances, classes, and public events",
+    "admission_label": "No fixed admission; each performance lists its own ticket price",
+    "visit_source": "https://irishartscenter.org/whats-on",
+    "visit_checked": "2026-08-01"
+  },
+  "schomburg-center": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Saturday, 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free exhibitions and public spaces",
+    "visit_source": "https://www.nypl.org/locations/schomburg/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "moca": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$15 adult / $10 student; pay what you wish for NYC residents",
+    "visit_source": "https://www.mocanyc.org/visit/plan-your-visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        16
+      ]
+    },
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": 1,
+    "visit_checked": "2026-08-01"
+  },
+  "museum-at-eldridge-street": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$15 adult / $10 student; pay what you wish Mon and Fri",
+    "visit_source": "https://www.eldridgestreet.org/visit",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": null,
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "adult_price": 15,
+    "student_price": 10,
+    "visit_checked": "2026-08-01"
+  },
+  "ukrainian-museum": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$15 adult / $10 student; free last Thursday 6-9 PM",
+    "visit_source": "https://www.theukrainianmuseum.org/Visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "adult_price": 15,
+    "student_price": 10,
+    "visit_checked": "2026-08-01"
+  },
+  "tibet-house": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$5 suggested gallery donation; programs may be separately ticketed",
+    "visit_source": "https://thus.org/featured/TIBET-HOUSE-US-PRESS-KIT.pdf",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        16
+      ],
+      "thu": [
+        11,
+        16
+      ],
+      "fri": [
+        11,
+        16
+      ],
+      "sat": [
+        11,
+        16
+      ],
+      "sun": null
+    },
+    "adult_price": 5,
+    "student_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "the-shed": {
+    "schedule_type": "event",
+    "hours_label": "Hours and entry times are listed with each exhibition or performance",
+    "admission_label": "Dynamic event pricing; Open Call is free and CUNY students receive free gallery admission",
+    "visit_source": "https://www.theshed.org/visit/faq",
+    "visit_checked": "2026-08-01"
+  },
+  "performance-space-new-york": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and public programs",
+    "admission_label": "No fixed admission; programs range from free conversations to ticketed performances",
+    "visit_source": "https://performancespacenewyork.org/shows/",
+    "visit_checked": "2026-08-01"
+  },
+  "la-mama": {
+    "schedule_type": "event",
+    "hours_label": "Box office opens one hour before each performance",
+    "admission_label": "Most shows $30 adult / $25 student or senior; first ten tickets often $10",
+    "visit_source": "https://lamama.org/memory-generation/",
+    "adult_price": 30,
+    "student_price": 25,
+    "visit_checked": "2026-08-01"
+  },
+  "anthology-film-archives": {
+    "schedule_type": "screening",
+    "hours_label": "Open for scheduled screenings; box office opens 30 minutes before the first show",
+    "admission_label": "$14 general / $10 student, senior, or child / $8 member",
+    "visit_source": "https://www.anthologyfilmarchives.org/contact/box_office-tickets",
+    "adult_price": 14,
+    "student_price": 10,
+    "visit_checked": "2026-08-01"
+  },
+  "film-forum": {
+    "schedule_type": "screening",
+    "hours_label": "Open daily for scheduled screenings",
+    "admission_label": "$17 general / $11 member; special events may differ",
+    "visit_source": "https://filmforum.org/",
+    "screening_times": {
+      "2026-08-01": [
+        "12:20",
+        "12:30",
+        "12:45",
+        "12:50",
+        "14:40",
+        "15:00",
+        "15:20",
+        "16:30",
+        "16:50",
+        "17:45",
+        "18:15",
+        "18:40",
+        "19:00",
+        "19:50",
+        "20:30",
+        "21:10"
+      ]
+    },
+    "screening_source": "https://filmforum.org/",
+    "adult_price": 17,
+    "student_price": 17,
+    "visit_checked": "2026-08-01"
+  },
+  "metrograph": {
+    "schedule_type": "screening",
+    "hours_label": "Open daily for scheduled screenings; in-person sales begin before the first show",
+    "admission_label": "$18 general / $12 senior or guest with disability / $11 member",
+    "visit_source": "https://metrograph.com/tickets/",
+    "screening_times": {
+      "2026-08-01": [
+        "20:45",
+        "21:00",
+        "23:00"
+      ]
+    },
+    "screening_source": "https://metrograph.com/nyc/?date=2026-08-01",
+    "adult_price": 18,
+    "student_price": 18,
+    "visit_checked": "2026-08-01"
+  },
+  "bric-house": {
+    "schedule_type": "regular",
+    "hours_label": "BRIC House Gallery Tuesday-Saturday, 11 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free gallery admission",
+    "visit_source": "https://bricartsmedia.org/events/exhibitions/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        11,
+        18
+      ],
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "amant": {
+    "schedule_type": "regular",
+    "hours_label": "Thursday noon-6 PM, Friday noon-9 PM, weekends noon-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free exhibitions and programs",
+    "visit_source": "https://www.amant.org/visit/plan-your-visit",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        21
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "pioneer-works": {
+    "schedule_type": "program",
+    "hours_label": "Open for scheduled exhibitions and events",
+    "admission_label": "No fixed admission; many exhibitions are free and ticketed events list a price",
+    "visit_source": "https://pioneerworks.org/programs",
+    "visit_checked": "2026-08-01"
+  },
+  "air-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Sunday, noon-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.airgallery.org/visit",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "smack-mellon": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Sunday, noon-6 PM while exhibitions are on view",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.smackmellon.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "five-myles": {
+    "schedule_type": "regular",
+    "hours_label": "Thursday-Sunday, 1-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://fivemyles.org/about-1",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        13,
+        18
+      ],
+      "fri": [
+        13,
+        18
+      ],
+      "sat": [
+        13,
+        18
+      ],
+      "sun": [
+        13,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "kentler": {
+    "schedule_type": "regular",
+    "hours_label": "Thursday-Sunday, noon-5 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.kentlergallery.org/Listing/upcoming_exhibitions",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        12,
+        17
+      ],
+      "fri": [
+        12,
+        17
+      ],
+      "sat": [
+        12,
+        17
+      ],
+      "sun": [
+        12,
+        17
+      ]
+    },
+    "closures": [
+      {
+        "start": "2026-07-27",
+        "end": "2026-09-18",
+        "label": "Between exhibitions; next exhibition opens September 19"
+      }
+    ],
+    "visit_checked": "2026-08-01"
+  },
+  "urbanglass": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Saturday 11 AM-7 PM; Sunday 11 AM-5 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free gallery admission",
+    "visit_source": "https://urbanglass.org/visit/overview",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        19
+      ],
+      "thu": [
+        11,
+        19
+      ],
+      "fri": [
+        11,
+        19
+      ],
+      "sat": [
+        11,
+        19
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "weeksville": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission; guided tours may cost extra",
+    "visit_source": "https://www.weeksvillesociety.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "brooklyn-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Pay what you can at the desk; suggested $20 adult / $14 student",
+    "visit_source": "https://www.brooklynmuseum.org/visit/tickets",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "adult_price": 20,
+    "student_price": 14,
+    "ny_resident_price": 1,
+    "visit_checked": "2026-08-01"
+  },
+  "center-brooklyn-history": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday 10 AM-6 PM; Saturday 10 AM-4 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.bklynlibrary.org/locations/center-for-brooklyn-history",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": [
+        10,
+        16
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "bam": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled films and performances",
+    "admission_label": "Cinema $17 general / $11 student Mon-Thu; live performance prices vary",
+    "visit_source": "https://www.bam.org/cinema-faq",
+    "adult_price": 17,
+    "student_price": 11,
+    "visit_checked": "2026-08-01"
+  },
+  "roulette": {
+    "schedule_type": "event",
+    "hours_label": "Box office opens one hour before performances",
+    "admission_label": "Typical shows $25 advance / $30 door / $20 student or senior",
+    "visit_source": "https://roulette.org/event/jessica-cook-night-2/",
+    "adult_price": 25,
+    "student_price": 20,
+    "visit_checked": "2026-08-01"
+  },
+  "issue-project-room": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and public programs",
+    "admission_label": "No fixed admission; general concerts are commonly priced at $15-$25",
+    "visit_source": "https://issueprojectroom.org/support/patron",
+    "visit_checked": "2026-08-01"
+  },
+  "light-industry": {
+    "schedule_type": "screening",
+    "hours_label": "Open for scheduled screenings",
+    "admission_label": "Most screenings $10; members receive complimentary admission",
+    "visit_source": "https://www.lightindustry.org/membersnight",
+    "adult_price": 10,
+    "student_price": 10,
+    "visit_checked": "2026-08-01"
+  },
+  "spectacle-theater": {
+    "schedule_type": "screening",
+    "hours_label": "Open for scheduled screenings",
+    "admission_label": "$5 for most screenings unless marked otherwise",
+    "visit_source": "https://www.spectacletheater.com/",
+    "adult_price": 5,
+    "student_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "city-reliquary": {
+    "schedule_type": "regular",
+    "hours_label": "Open Thu-Sun during posted museum hours",
+    "admission_label": "$10 adult / $5 student / $8 NYC resident",
+    "visit_source": "https://www.cityreliquary.org/admission/",
+    "adult_price": 10,
+    "student_price": 5,
+    "ny_resident_price": 8,
+    "visit_checked": "2026-08-01"
+  },
+  "moma-ps1": {
+    "schedule_type": "regular",
+    "hours_label": "Open Thu-Mon; daytime museum hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.moma.org/visit/",
+    "visit_checked": "2026-08-01"
+  },
+  "sculpturecenter": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.sculpture-center.org/visit/93/admission-and-accessibility",
+    "hours": {
+      "mon": [
+        12,
+        18
+      ],
+      "tue": null,
+      "wed": null,
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": [
+        12,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "noguchi-museum": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$16 adult / $6 student; free first Friday",
+    "visit_source": "https://www.noguchi.org/museum/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "adult_price": 16,
+    "student_price": 6,
+    "visit_checked": "2026-08-01"
+  },
+  "queens-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Open Wed-Sun; closes 5 PM",
+    "admission_label": "Pay what you wish; $8 adult / $6 student suggested",
+    "visit_source": "https://queensmuseum.org/visit/",
+    "adult_price": 8,
+    "student_price": 6,
+    "visit_checked": "2026-08-01"
+  },
+  "moving-image": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$20 adult / $12 student; free Thursday 2-6 PM",
+    "visit_source": "https://movingimage.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        14,
+        18
+      ],
+      "fri": [
+        14,
+        20
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "adult_price": 20,
+    "student_price": 12,
+    "visit_checked": "2026-08-01"
+  },
+  "culture-lab-lic": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Free gallery and most public events; donations welcome",
+    "visit_source": "https://www.culturelablic.org/recent-exhibitions",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        17,
+        21
+      ],
+      "fri": [
+        17,
+        21
+      ],
+      "sat": [
+        14,
+        21
+      ],
+      "sun": [
+        14,
+        21
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "socrates-sculpture-park": {
+    "schedule_type": "daylight",
+    "hours_label": "Public daytime hours; seasonal closing time varies",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://socratessculpturepark.org/",
+    "visit_checked": "2026-08-01"
+  },
+  "flushing-town-hall": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled exhibitions and performances",
+    "admission_label": "Free exhibitions; recent performances range from $15 to $50",
+    "visit_source": "https://www.flushingtownhall.org/show-details/spirits-from-both-sides-arturo-ofarrill-x-vincent-hsu",
+    "visit_checked": "2026-08-01"
+  },
+  "jcal": {
+    "schedule_type": "program",
+    "hours_label": "Open for scheduled exhibitions, classes, and performances",
+    "admission_label": "Free exhibitions and community programs; performances are priced per event",
+    "visit_source": "https://jcal.org/events/",
+    "visit_checked": "2026-08-01"
+  },
+  "flux-factory": {
+    "schedule_type": "event",
+    "hours_label": "Public access is limited to the dates and times of listed exhibitions and events",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Public programs are generally free",
+    "visit_source": "https://www.fluxfactory.org/fluxfactory/",
+    "visit_checked": "2026-08-01"
+  },
+  "louis-armstrong-house": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$10 exhibits / $20 house tour; student $8 / $14",
+    "visit_source": "https://www.louisarmstronghouse.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        11,
+        16
+      ],
+      "fri": [
+        11,
+        16
+      ],
+      "sat": [
+        11,
+        16
+      ],
+      "sun": null
+    },
+    "adult_price": 10,
+    "student_price": 8,
+    "visit_checked": "2026-08-01"
+  },
+  "bronx-museum": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://bronxmuseum.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        18
+      ],
+      "thu": [
+        11,
+        18
+      ],
+      "fri": [
+        11,
+        18
+      ],
+      "sat": [
+        11,
+        18
+      ],
+      "sun": [
+        11,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "bronx-art-space": {
+    "schedule_type": "regular",
+    "hours_label": "Thursday-Friday 2-6 PM; Saturday noon-5 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.bronxartspace.com/2026",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        14,
+        18
+      ],
+      "fri": [
+        14,
+        18
+      ],
+      "sat": [
+        12,
+        17
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "lehman-art-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Saturday, 10 AM-4 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.lehman.edu/departments/Art-Gallery/Art-Gallery.php",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10,
+        16
+      ],
+      "wed": [
+        10,
+        16
+      ],
+      "thu": [
+        10,
+        16
+      ],
+      "fri": [
+        10,
+        16
+      ],
+      "sat": [
+        10,
+        16
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "longwood-art-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Friday, noon-6 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.hostos.cuny.edu/culturearts/rentus/artgallery.shtml",
+    "hours": {
+      "mon": null,
+      "tue": [
+        12,
+        18
+      ],
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "wave-hill": {
+    "schedule_type": "daylight",
+    "hours_label": "Public daytime hours; seasonal closing time varies",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.wavehill.org/",
+    "visit_checked": "2026-08-01"
+  },
+  "pregones-prtt": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and public programs",
+    "admission_label": "No fixed admission; each performance lists its own ticket price",
+    "visit_source": "https://pregonesprtt.org/events/",
+    "visit_checked": "2026-08-01"
+  },
+  "alice-austen-house": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "$5 suggested admission",
+    "visit_source": "https://aliceausten.org/planyourvisit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        17
+      ],
+      "thu": [
+        12,
+        17
+      ],
+      "fri": [
+        12,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": null
+    },
+    "adult_price": 5,
+    "student_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "snug-harbor": {
+    "schedule_type": "daylight",
+    "hours_label": "Public daytime hours; seasonal closing time varies",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://snug-harbor.org/",
+    "visit_checked": "2026-08-01"
+  },
+  "staten-island-museum": {
+    "schedule_type": "program",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Pay what you wish; $8 adult / $5 student suggested",
+    "visit_source": "https://www.statenislandmuseum.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        11,
+        17
+      ],
+      "thu": [
+        11,
+        17
+      ],
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "adult_price": 8,
+    "student_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "noble-maritime": {
+    "schedule_type": "regular",
+    "hours_label": "Open during scheduled public programs",
+    "admission_label": "Pay what you wish; members, children under 10, and care partners are free",
+    "visit_source": "https://noblemaritime.org/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        17
+      ],
+      "thu": [
+        12,
+        17
+      ],
+      "fri": [
+        12,
+        17
+      ],
+      "sat": [
+        12,
+        17
+      ],
+      "sun": [
+        12,
+        17
+      ]
+    },
+    "adult_price": 1,
+    "student_price": 1,
+    "visit_checked": "2026-08-01"
+  },
+  "art-lab-si": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Thursday 10 AM-7 PM; Friday-Sunday 10 AM-4 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free gallery admission",
+    "visit_source": "https://artlabsi.com/contact-us/",
+    "hours": {
+      "mon": [
+        10,
+        19
+      ],
+      "tue": [
+        10,
+        19
+      ],
+      "wed": [
+        10,
+        19
+      ],
+      "thu": [
+        10,
+        19
+      ],
+      "fri": [
+        10,
+        16
+      ],
+      "sat": [
+        10,
+        16
+      ],
+      "sun": [
+        10,
+        16
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "david-zwirner-chelsea": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Saturday, 10 AM-6 PM when exhibitions are on view",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.davidzwirner.com/galleries/new-york",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": null
+    },
+    "closures": [
+      {
+        "start": "2026-08-01",
+        "end": "2026-09-09",
+        "label": "Chelsea galleries are between exhibitions"
+      }
+    ],
+    "visit_checked": "2026-08-01"
+  },
+  "pace-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Thursday 10 AM-6 PM; Friday 10 AM-4 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.pacegallery.com/galleries/new-york/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        16
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "hauser-wirth-chelsea": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday, 10 AM-6 PM when exhibitions are on view",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.hauserwirth.com/locations/10073-hauser-wirth-new-york-22nd-street/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "closures": [
+      {
+        "start": "2026-08-01",
+        "end": "2026-09-09",
+        "label": "Summer exhibitions ended July 31; next exhibition opens September 10"
+      }
+    ],
+    "visit_checked": "2026-08-01"
+  },
+  "petzel-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Saturday, 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.petzel.com/about",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "jack-shainman-chelsea": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday, 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://jackshainman.com/about",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "lisson-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday, 10 AM-6 PM when exhibitions are on view",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.lissongallery.com/contact",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "closures": [
+      {
+        "start": "2026-07-25",
+        "end": "2026-09-14",
+        "label": "Between New York exhibitions; next exhibition opens September 15"
+      }
+    ],
+    "visit_checked": "2026-08-01"
+  },
+  "iscp": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday, 10:30 AM-5:30 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://iscp-nyc.org/visit",
+    "hours": {
+      "mon": [
+        10.5,
+        17.5
+      ],
+      "tue": [
+        10.5,
+        17.5
+      ],
+      "wed": [
+        10.5,
+        17.5
+      ],
+      "thu": [
+        10.5,
+        17.5
+      ],
+      "fri": [
+        10.5,
+        17.5
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "tiger-strikes-asteroid": {
+    "schedule_type": "regular",
+    "hours_label": "Saturday-Sunday, 1-6 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.tigerstrikesasteroid.com/contact",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": [
+        13,
+        18
+      ],
+      "sun": [
+        13,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "transmitter-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Saturday-Sunday, 1-6 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.transmitter.nyc/contact",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": [
+        13,
+        18
+      ],
+      "sun": [
+        13,
+        18
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "interference-archive": {
+    "schedule_type": "regular",
+    "hours_label": "Monday 6-9 PM; Friday 1-6 PM; weekends noon-5 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission; donations welcome",
+    "visit_source": "https://interferencearchive.org/who-we-are/visit/",
+    "hours": {
+      "mon": [
+        18,
+        21
+      ],
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": [
+        13,
+        18
+      ],
+      "sat": [
+        12,
+        17
+      ],
+      "sun": [
+        12,
+        17
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "bronx-documentary-center": {
+    "schedule_type": "regular",
+    "hours_label": "Thursday-Friday 3-7 PM; Saturday 1-5 PM during exhibitions",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.bronxdoc.org/bronx-documentary-center/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        15,
+        19
+      ],
+      "fri": [
+        15,
+        19
+      ],
+      "sat": [
+        13,
+        17
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "national-sawdust": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled concerts and public programs",
+    "admission_label": "No fixed admission; each concert lists its own ticket price",
+    "visit_source": "https://www.nationalsawdust.org/events",
+    "visit_checked": "2026-08-01"
+  },
+  "new-york-live-arts": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances, exhibitions, and talks",
+    "admission_label": "No fixed admission; each performance lists its own price and discounts",
+    "visit_source": "https://newyorklivearts.org/events/",
+    "visit_checked": "2026-08-01"
+  },
+  "danspace-project": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and public programs",
+    "admission_label": "No fixed admission; each performance lists its own ticket price",
+    "visit_source": "https://danspaceproject.org/calendar/",
+    "visit_checked": "2026-08-01"
+  },
+  "film-at-lincoln-center": {
+    "schedule_type": "screening",
+    "hours_label": "Open daily for scheduled screenings",
+    "admission_label": "$18-$19 general / $15-$16 student, senior, or guest with disability",
+    "visit_source": "https://www.filmlinc.org/visit-us/",
+    "screening_times": {
+      "2026-08-01": [
+        "12:00",
+        "15:00",
+        "18:30"
+      ]
+    },
+    "screening_source": "https://www.filmlinc.org/now-playing/?tab=schedule",
+    "adult_price": 19,
+    "student_price": 16,
+    "visit_checked": "2026-08-01"
+  },
+  "maysles-documentary-center": {
+    "schedule_type": "screening",
+    "hours_label": "Open for scheduled screenings and community events",
+    "admission_label": "Many screenings $15 general / $7 reduced; some community events are free",
+    "visit_source": "https://www.maysles.org/calendar/feminist-elsewheres",
+    "adult_price": 15,
+    "student_price": 7,
+    "visit_checked": "2026-08-01"
+  },
+  "ifc-center": {
+    "schedule_type": "screening",
+    "hours_label": "Open daily; box office opens 15 minutes before the first screening",
+    "admission_label": "$18 standard; $15 senior or child before online fees",
+    "visit_source": "https://www.ifccenter.com/faq/",
+    "adult_price": 18,
+    "student_price": 18,
+    "screening_times": {
+      "2026-08-01": [
+        "10:35",
+        "10:40",
+        "11:00",
+        "11:05",
+        "12:35",
+        "12:45",
+        "13:15",
+        "13:30",
+        "14:40",
+        "14:50",
+        "15:30",
+        "15:55",
+        "16:00",
+        "16:35",
+        "17:50",
+        "18:05",
+        "18:30",
+        "18:45",
+        "18:50",
+        "19:35",
+        "20:45",
+        "21:00",
+        "21:20",
+        "21:40",
+        "21:50",
+        "23:05",
+        "23:20",
+        "23:55",
+        "23:59"
+      ]
+    },
+    "screening_source": "https://www.ifccenter.com/",
+    "visit_checked": "2026-08-01"
+  },
+  "angelika-film-center": {
+    "schedule_type": "screening",
+    "hours_label": "Open for daily screenings; first and last showtimes vary",
+    "admission_label": "Price shown by screening; member tickets are 50% off Tuesdays",
+    "visit_source": "https://angelikafilmcenter.com/nyc/showtimes-and-tickets/",
+    "visit_checked": "2026-08-01"
+  },
+  "nitehawk-williamsburg": {
+    "schedule_type": "screening",
+    "hours_label": "Open 30 minutes before the first screening; films run daily",
+    "admission_label": "$18 standard; repertory and special events vary",
+    "visit_source": "https://nitehawkcinema.com/williamsburg/policies/",
+    "adult_price": 18,
+    "student_price": 18,
+    "screening_times": {
+      "2026-08-01": [
+        "11:00",
+        "11:15",
+        "11:30",
+        "13:15",
+        "13:30",
+        "14:45",
+        "16:00",
+        "17:00",
+        "18:00",
+        "18:30",
+        "20:45",
+        "21:00"
+      ]
+    },
+    "screening_source": "https://nitehawkcinema.com/williamsburg/williamsburg/2026-08/",
+    "visit_checked": "2026-08-01"
+  },
+  "nitehawk-prospect-park": {
+    "schedule_type": "screening",
+    "hours_label": "Weekdays from 30 minutes before the first screening; weekends from 11 AM",
+    "admission_label": "$18 standard; repertory and special events vary",
+    "visit_source": "https://nitehawkcinema.com/prospectpark/directions-2/",
+    "adult_price": 18,
+    "student_price": 18,
+    "screening_times": {
+      "2026-08-01": [
+        "11:00",
+        "11:15",
+        "11:30",
+        "12:00",
+        "12:30",
+        "12:45",
+        "13:40",
+        "13:55",
+        "14:10",
+        "14:25",
+        "14:55",
+        "15:25",
+        "16:00",
+        "16:15",
+        "16:30",
+        "17:50",
+        "18:05",
+        "18:20",
+        "18:35",
+        "18:50",
+        "19:05",
+        "20:00",
+        "20:40",
+        "21:15",
+        "21:35",
+        "21:50",
+        "22:05",
+        "22:20"
+      ]
+    },
+    "screening_source": "https://nitehawkcinema.com/prospectpark/2026-08-01/0/",
+    "visit_checked": "2026-08-01"
+  },
+  "st-anns-warehouse": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; the box office opens around performance times",
+    "admission_label": "Tickets are priced by production; recent mainstage tickets have started around $55",
+    "visit_source": "https://stannswarehouse.org/about-st-anns-warehouse/contact-us/",
+    "visit_checked": "2026-08-01"
+  },
+  "tfana-polonsky": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; will call begins one hour before curtain",
+    "admission_label": "Full-price productions are commonly $95; $20 New Deal tickets for full-time students and visitors 30 or under",
+    "visit_source": "https://tfana.org/current-season/20-new-deal-tickets",
+    "adult_price": 95,
+    "student_price": 20,
+    "under_25_price": 20,
+    "visit_checked": "2026-08-01"
+  },
+  "brick-theater": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled events; doors generally open 30 minutes before curtain",
+    "admission_label": "Sliding-scale and event-specific tickets; current productions commonly list $25-$50 ranges",
+    "visit_source": "https://www.bricktheater.com/visit/",
+    "visit_checked": "2026-08-01"
+  },
+  "jack-arts": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and community programs",
+    "admission_label": "Program-specific admission; recent events include free programs and $15-$20 suggested donations",
+    "visit_source": "https://www.jackny.org/visit-us-1",
+    "visit_checked": "2026-08-01"
+  },
+  "powerhouse-arts": {
+    "schedule_type": "regular",
+    "hours_label": "Public lobby weekdays 9 AM-7:30 PM and weekends 10 AM-6 PM; exhibition hours may differ",
+    "admission_label": "Public lobby access is free; exhibitions and events list any separate admission",
+    "visit_source": "https://powerhousearts.org/visit-us",
+    "hours": {
+      "mon": [
+        9,
+        19.5
+      ],
+      "tue": [
+        9,
+        19.5
+      ],
+      "wed": [
+        9,
+        19.5
+      ],
+      "thu": [
+        9,
+        19.5
+      ],
+      "fri": [
+        9,
+        19.5
+      ],
+      "sat": [
+        10,
+        18
+      ],
+      "sun": [
+        10,
+        18
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "center-for-fiction": {
+    "schedule_type": "regular",
+    "hours_label": "Public bookstore and cafe open daily 9 AM-8 PM; event times vary",
+    "admission_label": "Public bookstore and cafe entry is free; talks and workshops list separate prices",
+    "visit_source": "https://centerforfiction.org/visit/",
+    "hours": {
+      "mon": [
+        9,
+        20
+      ],
+      "tue": [
+        9,
+        20
+      ],
+      "wed": [
+        9,
+        20
+      ],
+      "thu": [
+        9,
+        20
+      ],
+      "fri": [
+        9,
+        20
+      ],
+      "sat": [
+        9,
+        20
+      ],
+      "sun": [
+        9,
+        20
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "transit-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Sunday 10 AM-4 PM; timed reservations are encouraged",
+    "admission_label": "$10 adult / $5 senior, child, or visitor with a disability",
+    "visit_source": "https://www.nytransitmuseum.org/know-before-you-visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        10,
+        16
+      ],
+      "thu": [
+        10,
+        16
+      ],
+      "fri": [
+        10,
+        16
+      ],
+      "sat": [
+        10,
+        16
+      ],
+      "sun": [
+        10,
+        16
+      ]
+    },
+    "adult_price": 10,
+    "student_price": 10,
+    "visit_checked": "2026-08-01"
+  },
+  "waterfront-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Usually Thursday 4-8 PM and Saturday 1-5 PM when the barge is docked",
+    "admission_label": "Free public tours; donations support the museum",
+    "visit_source": "https://waterfrontmuseum.org/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [
+        16,
+        20
+      ],
+      "fri": null,
+      "sat": [
+        13,
+        17
+      ],
+      "sun": null
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "coney-island-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Seasonal museum hours Friday-Monday 12-5 PM after July 30; special-event closures are possible",
+    "admission_label": "$5 adult / $3 senior, child under 12, or resident of ZIP code 11224",
+    "visit_source": "https://www.coneyisland.com/visitor-information",
+    "hours": {
+      "mon": [
+        12,
+        17
+      ],
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": [
+        12,
+        17
+      ],
+      "sat": [
+        12,
+        17
+      ],
+      "sun": [
+        12,
+        17
+      ]
+    },
+    "adult_price": 5,
+    "student_price": 5,
+    "ny_resident_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "wyckoff-house": {
+    "schedule_type": "regular",
+    "hours_label": "Drop-in house tours Saturday 11 AM-2 PM from mid-February through mid-December; grounds have broader seasonal hours",
+    "admission_label": "Public house tours are free with donations welcomed",
+    "visit_source": "https://wyckoffmuseum.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": [
+        11,
+        14
+      ],
+      "sun": null
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "kings-theatre": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; event pages list door and show times",
+    "admission_label": "Ticket prices vary by performer, event, and seating section",
+    "visit_source": "https://www.kingstheatre.com/box-office/contact-us/",
+    "visit_checked": "2026-08-01"
+  },
+  "bargemusic-boathouse": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled concerts, currently concentrated on weekend afternoons",
+    "admission_label": "All announced 2026 Boathouse concerts are free",
+    "visit_source": "https://www.bargemusic.org/",
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "queens-botanical-garden": {
+    "schedule_type": "regular",
+    "hours_label": "April-October Tuesday-Sunday 8 AM-6 PM; winter closing is 4:30 PM",
+    "admission_label": "$6 adult / $4 student or senior / $2 child from April 1-December 15; free in winter",
+    "visit_source": "https://queensbotanical.org/what-to-do-see/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        8,
+        18
+      ],
+      "wed": [
+        8,
+        18
+      ],
+      "thu": [
+        8,
+        18
+      ],
+      "fri": [
+        8,
+        18
+      ],
+      "sat": [
+        8,
+        18
+      ],
+      "sun": [
+        8,
+        18
+      ]
+    },
+    "adult_price": 6,
+    "student_price": 4,
+    "visit_checked": "2026-08-01"
+  },
+  "nysci": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Sunday 10 AM-5 PM, last entry 4 PM; some experiences close earlier",
+    "admission_label": "$22 adult / $19 child, student, or senior; free community hours Friday 2-5 PM with same-day reservation",
+    "visit_source": "https://nysci.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "adult_price": 22,
+    "student_price": 19,
+    "visit_checked": "2026-08-01"
+  },
+  "queens-theatre": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; box office Tuesday-Friday 12-6 PM and two hours before most events",
+    "admission_label": "Tickets are priced by production; family, community, and free programs appear alongside paid performances",
+    "visit_source": "https://www.queenstheatre.org/our-mission-1mrc",
+    "visit_checked": "2026-08-01"
+  },
+  "chocolate-factory-theater": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and public programs",
+    "admission_label": "Tickets are priced by performance; the venue also presents artist talks and public programs",
+    "visit_source": "https://chocolatefactorytheater.org/home",
+    "visit_checked": "2026-08-01"
+  },
+  "thalia-spanish-theatre": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; each production lists its curtain time",
+    "admission_label": "Ticket prices vary by production and performance date",
+    "visit_source": "https://thaliatheatre.org/buy-tickets/",
+    "visit_checked": "2026-08-01"
+  },
+  "kupferberg-center": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and exhibitions across Queens College venues",
+    "admission_label": "Prices vary by event; the calendar also includes free campus and community programs",
+    "visit_source": "https://kupferbergcenter.org/",
+    "visit_checked": "2026-08-01"
+  },
+  "king-manor-museum": {
+    "schedule_type": "regular",
+    "hours_label": "Tuesday-Saturday 12-4 PM with tours on the hour",
+    "admission_label": "Suggested admission $5 general / $3 student or senior",
+    "visit_source": "https://www.kingmanor.org/",
+    "hours": {
+      "mon": null,
+      "tue": [
+        12,
+        16
+      ],
+      "wed": [
+        12,
+        16
+      ],
+      "thu": [
+        12,
+        16
+      ],
+      "fri": [
+        12,
+        16
+      ],
+      "sat": [
+        12,
+        16
+      ],
+      "sun": null
+    },
+    "adult_price": 5,
+    "student_price": 3,
+    "visit_checked": "2026-08-01"
+  },
+  "lewis-latimer-house": {
+    "schedule_type": "regular",
+    "hours_label": "Friday-Sunday 11 AM-5 PM",
+    "admission_label": "Self-guided visits are free; guided tours $15 adult / $8 student, senior, veteran, or visitor with a disability",
+    "visit_source": "https://www.lewislatimerhouse.org/visit/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": [
+        11,
+        17
+      ],
+      "sat": [
+        11,
+        17
+      ],
+      "sun": [
+        11,
+        17
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "voelker-orth-museum": {
+    "schedule_type": "regular",
+    "hours_label": "House tours Wednesday and Sunday 1-4 PM; garden weekdays 10 AM-4 PM and Sunday 12-4 PM",
+    "admission_label": "$5 suggested donation for house tours; garden entry is free",
+    "visit_source": "https://www.vomuseum.org/hours",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        13,
+        16
+      ],
+      "thu": null,
+      "fri": null,
+      "sat": null,
+      "sun": [
+        13,
+        16
+      ]
+    },
+    "adult_price": 5,
+    "student_price": 5,
+    "visit_checked": "2026-08-01"
+  },
+  "queens-farm": {
+    "schedule_type": "regular",
+    "hours_label": "Grounds open daily 10 AM-5 PM except listed holidays and ticketed-event changes",
+    "admission_label": "Free general admission on most days; special event days may require tickets",
+    "visit_source": "https://www.queensfarm.org/visit/",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": [
+        10,
+        17
+      ],
+      "sun": [
+        10,
+        17
+      ]
+    },
+    "adult_price": 0,
+    "student_price": 0,
+    "visit_checked": "2026-08-01"
+  },
+  "knockdown-center": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled events; each listing provides door and performance times",
+    "admission_label": "Ticket prices vary by event and ticket tier",
+    "visit_source": "https://knockdown.center/",
+    "visit_checked": "2026-08-01"
+  },
+  "qed-astoria": {
+    "schedule_type": "regular",
+    "hours_label": "Opens 5 PM Monday-Thursday, 4 PM Friday, and noon weekends; closes after the final scheduled event",
+    "admission_label": "Tickets are priced by event; many small shows and open mics are low-cost",
+    "visit_source": "https://qedastoria.com/pages/faqs",
+    "hours": {
+      "mon": [
+        17,
+        23.5
+      ],
+      "tue": [
+        17,
+        23.5
+      ],
+      "wed": [
+        17,
+        23.5
+      ],
+      "thu": [
+        17,
+        23.5
+      ],
+      "fri": [
+        16,
+        23.5
+      ],
+      "sat": [
+        12,
+        23.5
+      ],
+      "sun": [
+        12,
+        23.5
+      ]
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "secret-theatre-lic": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances, classes, exhibitions, and workshops",
+    "admission_label": "Tickets are priced by production; recent festival tickets have been around $25",
+    "visit_source": "https://www.secrettheatre.com/",
+    "visit_checked": "2026-08-01"
+  },
+  "black-spectrum-theatre": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances; box office Monday-Friday 11 AM-6 PM",
+    "admission_label": "Tickets are priced by production; recent mainstage plays have been about $35",
+    "visit_source": "https://www.blackspectrum.com/",
+    "visit_checked": "2026-08-01"
+  },
+  "gagosian-west-24": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://gagosian.com/locations/541-west-24th-street-new-york/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "gladstone-west-21": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.gladstonegallery.com/about/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "greene-naftali": {
+    "schedule_type": "exhibition",
+    "hours_label": "Open during current public exhibition hours",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://greenenaftaligallery.com/about",
+    "visit_checked": "2026-08-01"
+  },
+  "kasmin-west-27": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Thursday 10 AM-5 PM; Friday 10 AM-4 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.kasmingallery.com/about-index/visit-us/",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        16
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "luhring-augustine-chelsea": {
+    "schedule_type": "appointment",
+    "hours_label": "Open by appointment; confirm before visiting",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission by appointment",
+    "visit_source": "https://www.luhringaugustine.com/contact",
+    "visit_checked": "2026-08-01"
+  },
+  "sean-kelly-new-york": {
+    "schedule_type": "regular",
+    "hours_label": "Summer hours Monday-Friday 10 AM-5 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.skny.com/news-events",
+    "hours": {
+      "mon": [
+        10,
+        17
+      ],
+      "tue": [
+        10,
+        17
+      ],
+      "wed": [
+        10,
+        17
+      ],
+      "thu": [
+        10,
+        17
+      ],
+      "fri": [
+        10,
+        17
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "lehmann-maupin-chelsea": {
+    "schedule_type": "regular",
+    "hours_label": "Summer hours Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.lehmannmaupin.com/about/contact",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "marianne-boesky-chelsea": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://marianneboeskygallery.com/about/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "perrotin-new-york": {
+    "schedule_type": "regular",
+    "hours_label": "Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.perrotin.com/en/locations/new-york",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "uffner-liu": {
+    "schedule_type": "regular",
+    "hours_label": "Summer hours Monday-Friday 10 AM-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://uffnerliu.com/contact/",
+    "hours": {
+      "mon": [
+        10,
+        18
+      ],
+      "tue": [
+        10,
+        18
+      ],
+      "wed": [
+        10,
+        18
+      ],
+      "thu": [
+        10,
+        18
+      ],
+      "fri": [
+        10,
+        18
+      ],
+      "sat": null,
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "cuchifritos-gallery": {
+    "schedule_type": "regular",
+    "hours_label": "Wednesday-Saturday noon-6 PM",
+    "adult_price": 0,
+    "student_price": 0,
+    "admission_label": "Free admission",
+    "visit_source": "https://www.artistsallianceinc.org/exhibitions/",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [
+        12,
+        18
+      ],
+      "thu": [
+        12,
+        18
+      ],
+      "fri": [
+        12,
+        18
+      ],
+      "sat": [
+        12,
+        18
+      ],
+      "sun": null
+    },
+    "visit_checked": "2026-08-01"
+  },
+  "metropolitan-opera": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and events",
+    "admission_label": "Ticket price varies by event",
+    "visit_source": "https://www.metopera.org/calendar/",
+    "visit_checked": "2026-08-01"
+  },
+  "carnegie-hall": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and events",
+    "admission_label": "Ticket price varies by event",
+    "visit_source": "https://www.carnegiehall.org/Calendar",
+    "visit_checked": "2026-08-01"
+  },
+  "david-geffen-hall": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and events",
+    "admission_label": "Ticket price varies by event",
+    "visit_source": "https://www.lincolncenter.org/venue/david-geffen-hall/v/calendar",
+    "visit_checked": "2026-08-01"
+  },
+  "new-york-city-center": {
+    "schedule_type": "event",
+    "hours_label": "Open for scheduled performances and events",
+    "admission_label": "Ticket price varies by event",
+    "visit_source": "https://www.nycitycenter.org/events-tickets/",
+    "visit_checked": "2026-08-01"
+  }
+}

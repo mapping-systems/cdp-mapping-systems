@@ -1,0 +1,512 @@
+{
+  "291 Church Street, New York, NY 10013": {
+    "latitude": 40.7190294,
+    "longitude": -74.0044289,
+    "display_name": "291, Church Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10013, United States"
+  },
+  "11 Cortlandt Alley, New York, NY 10013": {
+    "latitude": 40.7173293,
+    "longitude": -74.0028789,
+    "display_name": "11, Cortlandt Alley, Civic Center, Lower Manhattan, Manhattan, New York County, New York, 10013, United States"
+  },
+  "137 West 25th Street, New York, NY 10001": {
+    "latitude": 40.7447136,
+    "longitude": -73.9928982,
+    "display_name": "137, West 25th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "91 Horatio Street, New York, NY 10014": {
+    "latitude": 40.7388498,
+    "longitude": -74.0083132,
+    "display_name": "91, Horatio Street, Meatpacking District, Manhattan, New York County, New York, 10014, United States"
+  },
+  "38 St Marks Place, New York, NY 10003": {
+    "latitude": 40.7284048,
+    "longitude": -73.9875749,
+    "display_name": "Swiss Institute, 38, Saint Marks Place, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States"
+  },
+  "225 West 13th Street, New York, NY 10011": {
+    "latitude": 40.7386133,
+    "longitude": -74.0012378,
+    "display_name": "225, West 13th Street, Union Square, Manhattan, New York County, New York, 10011, United States"
+  },
+  "535 West 24th Street, New York, NY 10011": {
+    "latitude": 40.749162,
+    "longitude": -74.0052774,
+    "display_name": "Print Center New York, 535, West 24th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "28 West 27th Street, New York, NY 10001": {
+    "latitude": 40.7447454,
+    "longitude": -73.9899267,
+    "display_name": "28, West 27th Street, NoMad, Manhattan Community Board 5, Manhattan, New York County, New York, 10001, United States"
+  },
+  "97 Kenmare Street, New York, NY 10012": {
+    "latitude": 40.7214798,
+    "longitude": -73.9971028,
+    "display_name": "Storefront for Art and Architecture, 97, Kenmare Street, Little Italy, Lower Manhattan, Manhattan, New York County, New York, 10012, United States"
+  },
+  "536 LaGuardia Place, New York, NY 10012": {
+    "latitude": 40.7285992,
+    "longitude": -73.998642,
+    "display_name": "536, LaGuardia Place, University Village, Manhattan, New York County, New York, 10012, United States"
+  },
+  "15 Gramercy Park South, New York, NY 10003": {
+    "latitude": 40.7377541,
+    "longitude": -73.9866814,
+    "display_name": "National Arts Club, 15, Gramercy Park South, Gramercy, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States"
+  },
+  "47 Fifth Avenue, New York, NY 10003": {
+    "latitude": 40.9121134,
+    "longitude": -73.8095019,
+    "display_name": "47, 5th Avenue, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States"
+  },
+  "615 West 129th Street, New York, NY 10027": {
+    "latitude": 40.8165306,
+    "longitude": -73.958116,
+    "display_name": "615, West 129th Street, Manhattan Community Board 9, Manhattan, New York County, New York, 10027, United States"
+  },
+  "365 Fifth Avenue, New York, NY 10016": {
+    "latitude": 40.9163902,
+    "longitude": -73.807268,
+    "display_name": "365, 5th Avenue, North Pelham, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States"
+  },
+  "15 East 84th Street, New York, NY 10028": {
+    "latitude": 40.7799984,
+    "longitude": -73.9605946,
+    "display_name": "15, East 84th Street, Upper East Side, Manhattan Community Board 8, Manhattan, New York County, New York, 10028, United States"
+  },
+  "47 East 60th Street, New York, NY 10022": {
+    "latitude": 40.7640226,
+    "longitude": -73.9698352,
+    "display_name": "Grolier Club, 47, East 60th Street, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States"
+  },
+  "163B Bank Street, New York, NY 10014": {
+    "latitude": 40.7361022,
+    "longitude": -74.0090714,
+    "display_name": "Bank Street, West Village, Manhattan, New York County, New York, 10014, United States"
+  },
+  "466 Grand Street, New York, NY 10002": {
+    "latitude": 40.7152783,
+    "longitude": -73.9838931,
+    "display_name": "Henry Street Playhouse, 466, Grand Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States"
+  },
+  "107 Suffolk Street, New York, NY 10002": {
+    "latitude": 40.719061,
+    "longitude": -73.9862353,
+    "display_name": "Teatro LATEA, 107, Suffolk Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States"
+  },
+  "56 East 1st Street, New York, NY 10003": {
+    "latitude": 40.7237682,
+    "longitude": -73.989394,
+    "display_name": "56, East 1st Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States"
+  },
+  "1280 Fifth Avenue, New York, NY 10029": {
+    "latitude": 40.8021613,
+    "longitude": -73.9453686,
+    "display_name": "5th Avenue, Manhattan Community Board 11, Manhattan, New York County, New York, 10026, United States"
+  },
+  "680 Park Avenue, New York, NY 10065": {
+    "latitude": 40.7687784,
+    "longitude": -73.965845,
+    "display_name": "680, Park Avenue, Upper East Side, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States"
+  },
+  "11 East 52nd Street, New York, NY 10022": {
+    "latitude": 40.7595749,
+    "longitude": -73.9752552,
+    "display_name": "Austrian Cultural Forum, 11, East 52nd Street, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10022, United States"
+  },
+  "58 Park Avenue, New York, NY 10016": {
+    "latitude": 40.7494722,
+    "longitude": -73.9800545,
+    "display_name": "Scandinavia House, 58, Park Avenue, Murray Hill, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States"
+  },
+  "726 11th Avenue, New York, NY 10019": {
+    "latitude": 40.7666108,
+    "longitude": -73.9936385,
+    "display_name": "726, 11th Avenue, Clinton, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States"
+  },
+  "515 Malcolm X Boulevard, New York, NY 10037": {
+    "latitude": 40.814706,
+    "longitude": -73.940542,
+    "display_name": "515, Malcolm X Boulevard, Harlem, Manhattan Community Board 10, Manhattan, New York County, New York, 10037, United States"
+  },
+  "215 Centre Street, New York, NY 10013": {
+    "latitude": 40.7194406,
+    "longitude": -73.9990778,
+    "display_name": "Museum of Chinese in America, 215, Centre Street, Little Italy, Lower Manhattan, Manhattan, New York County, New York, 10013, United States"
+  },
+  "12 Eldridge Street, New York, NY 10002": {
+    "latitude": 40.7147291,
+    "longitude": -73.993461,
+    "display_name": "Museum at Eldridge Street, 12, Eldridge Street, Two Bridges, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States"
+  },
+  "222 East 6th Street, New York, NY 10003": {
+    "latitude": 40.7276502,
+    "longitude": -73.9897737,
+    "display_name": "The Ukrainian Museum, 222, East 6th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States"
+  },
+  "22 West 15th Street, New York, NY 10011": {
+    "latitude": 40.737044,
+    "longitude": -73.9946119,
+    "display_name": "22, West 15th Street, Union Square, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States"
+  },
+  "545 West 30th Street, New York, NY 10001": {
+    "latitude": 40.7532813,
+    "longitude": -74.0026711,
+    "display_name": "The Shed, 545, West 30th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "150 First Avenue, New York, NY 10009": {
+    "latitude": 40.9148188,
+    "longitude": -73.8115271,
+    "display_name": "150, 1st Avenue, North Pelham, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States"
+  },
+  "66 East 4th Street, New York, NY 10003": {
+    "latitude": 40.726327,
+    "longitude": -73.9901978,
+    "display_name": "La MaMa, 66, East 4th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States"
+  },
+  "32 Second Avenue, New York, NY 10003": {
+    "latitude": 40.9123122,
+    "longitude": -73.8118432,
+    "display_name": "32, 2nd Avenue, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States"
+  },
+  "209 West Houston Street, New York, NY 10014": {
+    "latitude": 40.7283888,
+    "longitude": -74.0043864,
+    "display_name": "Film Forum, 209, West Houston Street, Hudson Square, Manhattan, New York County, New York, 10014, United States"
+  },
+  "7 Ludlow Street, New York, NY 10002": {
+    "latitude": 40.7151052,
+    "longitude": -73.9911717,
+    "display_name": "7, Ludlow Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States"
+  },
+  "647 Fulton Street, Brooklyn, NY 11217": {
+    "latitude": 40.6867981,
+    "longitude": -73.9758629,
+    "display_name": "647, Fulton Street, Fort Greene, Brooklyn, Kings County, New York, 11217, United States"
+  },
+  "315 Maujer Street, Brooklyn, NY 11206": {
+    "latitude": 40.7122822,
+    "longitude": -73.9370106,
+    "display_name": "315, Maujer Street, Brooklyn, Kings County, New York, 11206, United States"
+  },
+  "159 Pioneer Street, Brooklyn, NY 11231": {
+    "latitude": 40.679378,
+    "longitude": -74.011894,
+    "display_name": "159, Pioneer Street, Red Hook, Brooklyn, Kings County, New York, 11231, United States"
+  },
+  "155 Plymouth Street, Brooklyn, NY 11201": {
+    "latitude": 40.7038548,
+    "longitude": -73.9870406,
+    "display_name": "155, Plymouth Street, Dumbo, Brooklyn, Kings County, New York, 11201, United States"
+  },
+  "92 Plymouth Street, Brooklyn, NY 11201": {
+    "latitude": 40.7039288,
+    "longitude": -73.9891523,
+    "display_name": "92, Plymouth Street, Dumbo, Brooklyn, Kings County, New York, 11201, United States"
+  },
+  "558 St Johns Place, Brooklyn, NY 11238": {
+    "latitude": 40.6726551,
+    "longitude": -73.9595921,
+    "display_name": "Five Myles, 558, Saint Johns Place, Brooklyn, Kings County, New York, 11238, United States"
+  },
+  "353 Van Brunt Street, Brooklyn, NY 11231": {
+    "latitude": 40.6769408,
+    "longitude": -74.0129919,
+    "display_name": "353, Van Brunt Street, Red Hook, Brooklyn, Kings County, New York, 11231, United States"
+  },
+  "158 Buffalo Avenue, Brooklyn, NY 11213": {
+    "latitude": 40.6742273,
+    "longitude": -73.9252335,
+    "display_name": "Weeksville Heritage Center, 158, Buffalo Avenue, Brooklyn, Kings County, New York, 11233, United States"
+  },
+  "200 Eastern Parkway, Brooklyn, NY 11238": {
+    "latitude": 40.6709546,
+    "longitude": -73.9632948,
+    "display_name": "Brooklyn Museum, 200, Eastern Parkway, Brooklyn, Kings County, New York, 11238, United States"
+  },
+  "128 Pierrepont Street, Brooklyn, NY 11201": {
+    "latitude": 40.6947569,
+    "longitude": -73.9924297,
+    "display_name": "Center for Brooklyn History, 128, Pierrepont Street, Brooklyn Heights, Brooklyn, Kings County, New York, 11201, United States"
+  },
+  "30 Lafayette Avenue, Brooklyn, NY 11217": {
+    "latitude": 40.6864218,
+    "longitude": -73.9778486,
+    "display_name": "BAM Peter Jay Sharp Building, 30, Lafayette Avenue, Fort Greene, Brooklyn, Kings County, New York, 11217, United States"
+  },
+  "509 Atlantic Avenue, Brooklyn, NY 11217": {
+    "latitude": 40.6855576,
+    "longitude": -73.9807166,
+    "display_name": "Roulette, 509, Atlantic Avenue, Boerum Hill, Brooklyn, Kings County, New York, 11217, United States"
+  },
+  "22 Boerum Place, Brooklyn, NY 11201": {
+    "latitude": 40.6907684,
+    "longitude": -73.9897754,
+    "display_name": "22, Boerum Place, Downtown Brooklyn, Brooklyn, Kings County, New York, 11201, United States"
+  },
+  "361 Stagg Street, Brooklyn, NY 11206": {
+    "latitude": 40.7105737,
+    "longitude": -73.9343427,
+    "display_name": "361, Stagg Street, Brooklyn, Kings County, New York, 11206, United States"
+  },
+  "124 South 3rd Street, Brooklyn, NY 11249": {
+    "latitude": 40.7124693,
+    "longitude": -73.9628461,
+    "display_name": "124, South 3rd Street, Williamsburg, Brooklyn, Kings County, New York, 11249, United States"
+  },
+  "370 Metropolitan Avenue, Brooklyn, NY 11211": {
+    "latitude": 40.7138981,
+    "longitude": -73.9557211,
+    "display_name": "370, Metropolitan Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States"
+  },
+  "22-25 Jackson Avenue, Long Island City, NY 11101": {
+    "latitude": 40.7485965,
+    "longitude": -73.9382795,
+    "display_name": "Jackson Avenue, Court Square, Long Island City, Queens, Queens County, New York, 11101, United States"
+  },
+  "44-19 Purves Street, Long Island City, NY 11101": {
+    "latitude": 40.7469077,
+    "longitude": -73.9408643,
+    "display_name": "Sculpture Center, 44-19, Purves Street, Court Square, Long Island City, Queens, Queens County, New York, 11101, United States"
+  },
+  "9-01 33rd Road, Long Island City, NY 11106": {
+    "latitude": 40.7669901,
+    "longitude": -73.9376072,
+    "display_name": "The Noguchi Museum, 9-01, 33rd Road, Queens, Queens County, New York, 11106, United States"
+  },
+  "5-25 46th Avenue, Long Island City, NY 11101": {
+    "latitude": 40.7475943,
+    "longitude": -73.9543779,
+    "display_name": "Culture Lab LIC, 5-25, 46th Avenue, Court Square, Long Island City, Queens, Queens County, New York, 11101, United States"
+  },
+  "32-01 Vernon Boulevard, Long Island City, NY 11106": {
+    "latitude": 40.7546104,
+    "longitude": -73.9490235,
+    "display_name": "Vernon Boulevard, Queensbridge, Long Island City, Queens, Queens County, New York, 10044, United States"
+  },
+  "137-35 Northern Boulevard, Flushing, NY 11354": {
+    "latitude": 40.763914,
+    "longitude": -73.830071,
+    "display_name": "Flushing Town Hall, 137-35, Northern Boulevard, Flushing Chinatown, Queens, Queens County, New York, 11354, United States"
+  },
+  "161-04 Jamaica Avenue, Jamaica, NY 11432": {
+    "latitude": 40.7039215,
+    "longitude": -73.7981728,
+    "display_name": "Jamaica Center for Arts & Learning, 161-04, Jamaica Avenue, Queens, Queens County, New York, 11432, United States"
+  },
+  "39-31 29th Street, Long Island City, NY 11101": {
+    "latitude": 40.7527012,
+    "longitude": -73.9350775,
+    "display_name": "Flux Factory, 39-31, 29th Street, Court Square, Long Island City, Queens, Queens County, New York, 11106, United States"
+  },
+  "34-56 107th Street, Corona, NY 11368": {
+    "latitude": 40.7545676,
+    "longitude": -73.8615434,
+    "display_name": "Louis Armstrong House Museum, 34-56, 107th Street, Queens, Queens County, New York, 11368, United States"
+  },
+  "1040 Grand Concourse, Bronx, NY 10456": {
+    "latitude": 40.8310911,
+    "longitude": -73.9199471,
+    "display_name": "Bronx Museum of the Arts, 1040, Grand Concourse, South Bronx, The Bronx, Bronx County, New York, 10456, United States"
+  },
+  "700 Manida Street, Bronx, NY 10474": {
+    "latitude": 40.814364,
+    "longitude": -73.888256,
+    "display_name": "700, Manida Street, Hunts Point, The Bronx, Bronx County, New York, 10474, United States"
+  },
+  "250 Bedford Park Boulevard West, Bronx, NY 10468": {
+    "latitude": 40.8722825,
+    "longitude": -73.8948917,
+    "display_name": "Lehman College, 250, Bedford Park Boulevard West, Bedford Park, The Bronx, Bronx County, New York, 10468, United States"
+  },
+  "450 Grand Concourse, Bronx, NY 10451": {
+    "latitude": 40.8175297,
+    "longitude": -73.9274623,
+    "display_name": "Hostos Center for the Arts and Culture, 450, Grand Concourse, The Bronx, Bronx County, New York, 10451, United States"
+  },
+  "649 West 249th Street, Bronx, NY 10471": {
+    "latitude": 40.8973458,
+    "longitude": -73.9106769,
+    "display_name": "649, West 249th Street, Riverdale, The Bronx, Bronx County, New York, 10471, United States"
+  },
+  "575 Walton Avenue, Bronx, NY 10451": {
+    "latitude": 40.8195756,
+    "longitude": -73.9283566,
+    "display_name": "Pregones Theater, 575, Walton Avenue, The Bronx, Bronx County, New York, 10451, United States"
+  },
+  "2 Hylan Boulevard, Staten Island, NY 10305": {
+    "latitude": 40.6151206,
+    "longitude": -74.063036,
+    "display_name": "Alice Austen House, 2, Hylan Boulevard, Rosebank, Staten Island, Richmond County, New York, 10305, United States"
+  },
+  "1000 Richmond Terrace, Staten Island, NY 10301": {
+    "latitude": 40.6418756,
+    "longitude": -74.1019417,
+    "display_name": "Tuscan Villa, 1000, Richmond Terrace, New Brighton, Staten Island, Richmond County, New York, 10301, United States"
+  },
+  "2700 East Tremont Avenue, Bronx, NY 10461": {
+    "latitude": 40.842574,
+    "longitude": -73.8459019,
+    "display_name": "2700, East Tremont Avenue, Westchester Square, The Bronx, Bronx County, New York, 10461, United States"
+  },
+  "525 West 19th Street, New York, NY 10011": {
+    "latitude": 40.745807,
+    "longitude": -74.0070327,
+    "display_name": "David Zwirner, 525, West 19th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "540 West 25th Street, New York, NY 10001": {
+    "latitude": 40.7495759,
+    "longitude": -74.0049685,
+    "display_name": "Pace Gallery, 540, West 25th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "542 West 22nd Street, New York, NY 10011": {
+    "latitude": 40.7477523,
+    "longitude": -74.0066657,
+    "display_name": "Hauser & Wirth, 542, West 22nd Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "520 West 25th Street, New York, NY 10001": {
+    "latitude": 40.7492373,
+    "longitude": -74.0042332,
+    "display_name": "Petzel Gallery, 520, West 25th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "513 West 20th Street, New York, NY 10011": {
+    "latitude": 40.7462478,
+    "longitude": -74.0062412,
+    "display_name": "Jack Shainman Gallery, 513, West 20th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "504 West 24th Street, New York, NY 10011": {
+    "latitude": 40.7485172,
+    "longitude": -74.0043407,
+    "display_name": "Lisson Gallery, 504, West 24th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "1040 Metropolitan Avenue, Brooklyn, NY 11211": {
+    "latitude": 40.714248,
+    "longitude": -73.9347032,
+    "display_name": "International Studio & Curatorial Program, 1040, Metropolitan Avenue, Brooklyn, Kings County, New York, 11206, United States"
+  },
+  "1329 Willoughby Avenue, Brooklyn, NY 11237": {
+    "latitude": 40.7063004,
+    "longitude": -73.9211101,
+    "display_name": "1329, Willoughby Avenue, Bushwick, Brooklyn, Kings County, New York, 11237, United States"
+  },
+  "314 7th Street, Brooklyn, NY 11215": {
+    "latitude": 40.6704879,
+    "longitude": -73.9857817,
+    "display_name": "Interference Archive, 314, 7th Street, Park Slope, Brooklyn, Kings County, New York, 11215, United States"
+  },
+  "614 Courtlandt Avenue, Bronx, NY 10451": {
+    "latitude": 40.8180322,
+    "longitude": -73.9186583,
+    "display_name": "Bronx Documentary Center, 614, Courtlandt Avenue, The Bronx, Bronx County, New York, 10451, United States"
+  },
+  "80 North 6th Street, Brooklyn, NY 11249": {
+    "latitude": 40.7189664,
+    "longitude": -73.9612431,
+    "display_name": "National Sawdust, 80, North 6th Street, Williamsburg, Brooklyn, Kings County, New York, 11249, United States"
+  },
+  "219 West 19th Street, New York, NY 10011": {
+    "latitude": 40.7421473,
+    "longitude": -73.998316,
+    "display_name": "New York Live Arts, 219, West 19th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "131 East 10th Street, New York, NY 10003": {
+    "latitude": 40.7303406,
+    "longitude": -73.9871159,
+    "display_name": "Saint Mark's in-the-Bowery, 131, East 10th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States"
+  },
+  "165 West 65th Street, New York, NY 10023": {
+    "latitude": 40.7740942,
+    "longitude": -73.9843127,
+    "display_name": "Walter Reade Theater, 165, West 65th Street, Lincoln Square, Manhattan Community Board 7, Manhattan, New York County, New York, 10023, United States"
+  },
+  "343 Malcolm X Boulevard, New York, NY 10027": {
+    "latitude": 40.8094222,
+    "longitude": -73.9447708,
+    "display_name": "343, Malcolm X Boulevard, Harlem, Manhattan Community Board 10, Manhattan, New York County, New York, 10027, United States"
+  },
+  "541 West 24th Street, New York, NY 10011": {
+    "latitude": 40.7492448,
+    "longitude": -74.0054902,
+    "display_name": "Gagosian, 541, West 24th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "530 West 21st Street, New York, NY 10011": {
+    "latitude": 40.7469471,
+    "longitude": -74.0066777,
+    "display_name": "Gladstone Gallery, 530, West 21st Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "508 West 26th Street, New York, NY 10001": {
+    "latitude": 40.7497696,
+    "longitude": -74.0035852,
+    "display_name": "Greene Naftali Gallery, 508, West 26th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "509 West 27th Street, New York, NY 10001": {
+    "latitude": 40.750597,
+    "longitude": -74.0029311,
+    "display_name": "Kasmin Gallery, 509, West 27th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10001, United States"
+  },
+  "531 West 24th Street, New York, NY 10011": {
+    "latitude": 40.7491116,
+    "longitude": -74.0050793,
+    "display_name": "Luhring Augustine Gallery, 531, West 24th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States"
+  },
+  "475 Tenth Avenue, New York, NY 10018": {
+    "latitude": 40.756251,
+    "longitude": -73.998506,
+    "display_name": "475 TENTH AVENUE, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "501 West 24th Street, New York, NY 10011": {
+    "latitude": 40.748618,
+    "longitude": -74.00385,
+    "display_name": "501 WEST 24 STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "507 West 24th Street, New York, NY 10011": {
+    "latitude": 40.748771,
+    "longitude": -74.004085,
+    "display_name": "507 WEST 24 STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "130 Orchard Street, New York, NY 10002": {
+    "latitude": 40.719585,
+    "longitude": -73.989314,
+    "display_name": "130 ORCHARD STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "170 Suffolk Street, New York, NY 10002": {
+    "latitude": 40.720865,
+    "longitude": -73.984836,
+    "display_name": "170 SUFFOLK STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "88 Essex Street, New York, NY 10002": {
+    "latitude": 40.717928,
+    "longitude": -73.988044,
+    "display_name": "88 ESSEX STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "30 Lincoln Center Plaza, New York, NY 10023": {
+    "latitude": 40.772859,
+    "longitude": -73.984775,
+    "display_name": "30 LINCOLN CENTER PLAZA, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "881 Seventh Avenue, New York, NY 10019": {
+    "latitude": 40.765007,
+    "longitude": -73.979914,
+    "display_name": "881 SEVENTH AVENUE, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "10 Lincoln Center Plaza, New York, NY 10023": {
+    "latitude": 40.772826,
+    "longitude": -73.983019,
+    "display_name": "10 LINCOLN CTR PLAZA, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  },
+  "131 West 55th Street, New York, NY 10019": {
+    "latitude": 40.763893,
+    "longitude": -73.979407,
+    "display_name": "131 WEST 55 STREET, New York, NY, USA",
+    "source": "NYC Planning Labs Geosearch"
+  }
+}
