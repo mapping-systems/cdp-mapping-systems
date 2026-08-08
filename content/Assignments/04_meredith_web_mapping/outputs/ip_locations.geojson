@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "2606:4700:3033::ac43:8c88",
+        "hosts": "mapping-systems.org",
+        "request_count": 18,
+        "sample_url": "https://mapping-systems.org/",
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS13335 Cloudflare, Inc."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "2606:4700::6810:5049",
+        "hosts": "static.cloudflareinsights.com",
+        "request_count": 3,
+        "sample_url": "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+        "city": "San Francisco",
+        "region": "California",
+        "country": "US",
+        "organization": "AS13335 Cloudflare, Inc."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3971,
+          37.7621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "2607:f8b0:4006:816::2003",
+        "hosts": "fonts.gstatic.com",
+        "request_count": 3,
+        "sample_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "organization": "AS15169 Google LLC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ip": "2607:f8b0:4006:81f::200a",
+        "hosts": "fonts.googleapis.com",
+        "request_count": 3,
+        "sample_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "organization": "AS15169 Google LLC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7143
+        ]
+      }
+    }
+  ]
+}

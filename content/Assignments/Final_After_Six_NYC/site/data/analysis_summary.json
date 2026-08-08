@@ -1,0 +1,43 @@
+{
+  "project": "Culture After Six NYC",
+  "data_checked": "2026-07-28",
+  "venue_policy_checked": "2026-07-24",
+  "verified_venue_count": 25,
+  "dcla_row_count": 2535,
+  "dcla_geocoded_count": 2268,
+  "dcla_geocoded_percent": 89.5,
+  "dcla_borough_counts": {
+    "Bronx": 107,
+    "Brooklyn": 533,
+    "Manhattan": 1339,
+    "Queens": 230,
+    "Staten Island": 59
+  },
+  "station_count": 496,
+  "manhattan_station_count": 153,
+  "subway_network_station_count": 496,
+  "subway_network_node_count": 1002,
+  "subway_network_edge_count": 4337,
+  "temporarily_closed_count": 1,
+  "median_station_walk_m": 393.5,
+  "median_ada_station_walk_m": 604.3,
+  "median_network_detour_ratio": 1.148,
+  "median_columbia_transit_min": 41.3,
+  "origin": {
+    "name": "Columbia GSAPP / Avery Hall",
+    "latitude": 40.80766,
+    "longitude": -73.96255,
+    "gtfs_stop_id": "116"
+  },
+  "sources": {
+    "dcla_admission": "https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page",
+    "mta_stations": "https://data.ny.gov/resource/39hk-dx4f.json?$limit=1000",
+    "mta_gtfs": "http://web.mta.info/developers/data/nyct/subway/google_transit.zip",
+    "venue_hours": "Individual venue websites listed in curated_venues.json",
+    "walking_network": "OpenStreetMap via OSMnx"
+  },
+  "model_notes": {
+    "transit": "Schedule-weighted model with a generic four-minute transfer penalty; not real-time and does not include service changes, elevator outages, or station-specific transfer paths.",
+    "curated_places": "Public-facing cultural places were screened individually and linked to official venue and current-program pages."
+  }
+}

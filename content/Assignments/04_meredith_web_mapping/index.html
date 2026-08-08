@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Where the Course Website Travels</title>
+    <link rel="icon" href="data:," />
+    <link
+      href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="story-panel">
+        <p class="eyebrow">Mapping Systems / Web Mapping</p>
+        <h1>Where the course website travels.</h1>
+        <p class="lede">
+          A browser request feels instant, but it reaches servers and content
+          delivery infrastructure in physical locations. This map geolocates
+          the public server IPs recorded while visiting three course pages.
+        </p>
+
+        <div class="metrics" aria-label="Capture summary">
+          <div><strong id="server-count">-</strong><span>server IPs</span></div>
+          <div><strong id="request-count">-</strong><span>requests</span></div>
+          <div><strong id="city-count">-</strong><span>mapped cities</span></div>
+        </div>
+
+        <section class="reading">
+          <h2>How to read it</h2>
+          <p>
+            Circle size represents captured request count. Select a point to
+            inspect its IP, hosts, network organization, and approximate city.
+          </p>
+        </section>
+
+        <section class="reading caution">
+          <h2>What this cannot show</h2>
+          <p>
+            IP geolocation is approximate. A point may identify a CDN edge or
+            cloud provider rather than the author, company headquarters, data
+            center, or social origin of the page content.
+          </p>
+        </section>
+      </section>
+
+      <section class="map-panel" aria-label="Map of server locations">
+        <div id="map"></div>
+        <div class="legend">
+          <span class="legend-dot"></span>
+          More requests produce a larger circle
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

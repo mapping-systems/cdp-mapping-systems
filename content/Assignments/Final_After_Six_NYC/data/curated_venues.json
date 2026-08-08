@@ -1,0 +1,830 @@
+[
+  {
+    "id": "911-museum",
+    "name": "9/11 Memorial & Museum",
+    "dcla_match": "National September 11 Memorial and Museum at the World Trade Center",
+    "category": "History",
+    "address": "180 Greenwich Street, New York, NY 10007",
+    "website": "https://www.911memorial.org/visit/visit-museum-1",
+    "adult_price": 36,
+    "student_price": 24,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$24-$36",
+    "hours": {
+      "mon": [9, 19],
+      "tue": null,
+      "wed": [9, 19],
+      "thu": [9, 19],
+      "fri": [9, 19],
+      "sat": [9, 19],
+      "sun": [9, 19]
+    },
+    "access_programs": [
+      {
+        "days": ["mon"],
+        "start": 17.5,
+        "end": 19,
+        "price": 0,
+        "label": "Free Admission Mondays, 5:30-7 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Last admission is 60 minutes before closing."
+  },
+  {
+    "id": "asia-society",
+    "name": "Asia Society Museum",
+    "dcla_match": "Asia Society",
+    "category": "Art & Culture",
+    "address": "725 Park Avenue, New York, NY 10021",
+    "website": "https://asiasociety.org/new-york/plan-your-visit",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$15 adult / $10 student",
+    "hours": {
+      "mon": null,
+      "tue": [11, 18],
+      "wed": [11, 18],
+      "thu": [11, 18],
+      "fri": [11, 18],
+      "sat": [11, 18],
+      "sun": [11, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 11,
+        "end": 18,
+        "price": 0,
+        "label": "Free admission on Fridays",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Friday closing time can vary by season and exhibition."
+  },
+  {
+    "id": "china-institute",
+    "name": "China Institute Gallery",
+    "dcla_match": "China Institute in America",
+    "category": "Art & Culture",
+    "address": "100 Washington Street, New York, NY 10006",
+    "website": "https://chinainstitute.org/gallery-exhibitions/",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$15 adult / $10 student",
+    "hours": {
+      "mon": [10, 17],
+      "tue": [10, 17],
+      "wed": [10, 17],
+      "thu": [10, 20],
+      "fri": [10, 20],
+      "sat": [10, 17],
+      "sun": [10, 17]
+    },
+    "access_programs": [
+      {
+        "days": ["thu", "fri"],
+        "start": 17,
+        "end": 20,
+        "price": 0,
+        "label": "Free Thursday and Friday, 5-8 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Hours apply when an exhibition is on view."
+  },
+  {
+    "id": "cooper-hewitt",
+    "name": "Cooper Hewitt, Smithsonian Design Museum",
+    "dcla_match": "Cooper-Hewitt, National Design Museum",
+    "category": "Design",
+    "address": "2 East 91st Street, New York, NY 10128",
+    "website": "https://www.cooperhewitt.org/visit/plan-your-visit/",
+    "adult_price": 22,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$22 adult / $10 student",
+    "hours": {
+      "mon": [10, 18],
+      "tue": [10, 18],
+      "wed": [10, 18],
+      "thu": [10, 18],
+      "fri": [10, 18],
+      "sat": [10, 18],
+      "sun": [10, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        "start": 17,
+        "end": 18,
+        "price": 1,
+        "label": "Pay what you wish, 5-6 PM daily",
+        "eligibility": "all",
+        "frequency": "daily",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "The filter represents pay-what-you-wish as $1."
+  },
+  {
+    "id": "frick",
+    "name": "The Frick Collection",
+    "dcla_match": "Frick Collection",
+    "category": "Art",
+    "address": "1 East 70th Street, New York, NY 10021",
+    "website": "https://www.frick.org/visit",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$30 adult / $17 student",
+    "hours": {
+      "mon": [10.5, 17.5],
+      "tue": null,
+      "wed": [10.5, 17.5],
+      "thu": [10.5, 17.5],
+      "fri": [10.5, 17.5],
+      "sat": [10.5, 17.5],
+      "sun": [10.5, 17.5]
+    },
+    "access_programs": [
+      {
+        "days": ["wed"],
+        "start": 13.5,
+        "end": 17.5,
+        "price": 1,
+        "label": "Pay what you wish Wednesday, 1:30-5:30 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      },
+      {
+        "days": ["fri"],
+        "start": 17.5,
+        "end": 21,
+        "price": 0,
+        "label": "Free First Friday, 5:30-9 PM",
+        "eligibility": "all",
+        "frequency": "first-friday",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Late hours occur on selected First Fridays, not every Friday."
+  },
+  {
+    "id": "guggenheim",
+    "name": "Solomon R. Guggenheim Museum",
+    "dcla_match": null,
+    "category": "Art",
+    "address": "1071 Fifth Avenue, New York, NY 10128",
+    "latitude": 40.78298,
+    "longitude": -73.95897,
+    "website": "https://www.guggenheim.org/plan-your-visit",
+    "adult_price": 30,
+    "student_price": 19,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$30 adult / $19 student",
+    "hours": {
+      "mon": [10.5, 17.5],
+      "tue": [10.5, 17.5],
+      "wed": [10.5, 17.5],
+      "thu": [10.5, 17.5],
+      "fri": [10.5, 17.5],
+      "sat": [10.5, 17.5],
+      "sun": [10.5, 17.5]
+    },
+    "access_programs": [
+      {
+        "days": ["tue", "sun"],
+        "start": 16,
+        "end": 17.5,
+        "price": 1,
+        "label": "Pay what you wish Tuesday and Sunday, 4-5:30 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "The filter represents pay-what-you-wish as $1."
+  },
+  {
+    "id": "icp",
+    "name": "International Center of Photography",
+    "dcla_match": "International Center of Photography",
+    "category": "Photography",
+    "address": "84 Ludlow Street, New York, NY 10002",
+    "website": "https://www.icp.org/visit",
+    "adult_price": 18,
+    "student_price": 12,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$18 adult / $12 student",
+    "hours": {
+      "mon": [10.5, 18.5],
+      "tue": [10.5, 18.5],
+      "wed": [10.5, 18.5],
+      "thu": [10.5, 20],
+      "fri": [10.5, 18.5],
+      "sat": [10.5, 18.5],
+      "sun": [10.5, 18.5]
+    },
+    "access_programs": [
+      {
+        "days": ["thu"],
+        "start": 17,
+        "end": 20,
+        "price": 5,
+        "label": "$5 Thursday evenings, 5-8 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "DCLA lists a monthly free Thursday; ICP currently advertises $5 every Thursday."
+  },
+  {
+    "id": "japan-society",
+    "name": "Japan Society Gallery",
+    "dcla_match": "Japan Society, Inc.",
+    "category": "Art & Culture",
+    "address": "333 East 47th Street, New York, NY 10017",
+    "website": "https://japansociety.org/about/visit-us/",
+    "adult_price": 12,
+    "student_price": 8,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$12 adult / $8 student",
+    "hours": {
+      "mon": null,
+      "tue": [11, 17],
+      "wed": [11, 17],
+      "thu": [11, 17],
+      "fri": [11, 17],
+      "sat": [12, 18],
+      "sun": [12, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 17,
+        "end": 19,
+        "price": 0,
+        "label": "Free First Friday, 5-7 PM",
+        "eligibility": "all",
+        "frequency": "first-friday",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Gallery hours apply only when exhibitions are open."
+  },
+  {
+    "id": "jewish-museum",
+    "name": "The Jewish Museum",
+    "dcla_match": "Jewish Museum",
+    "category": "Art & Culture",
+    "address": "1109 Fifth Avenue, New York, NY 10128",
+    "website": "https://thejewishmuseum.org/visit/",
+    "adult_price": 24,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$24 adult / $10 student",
+    "hours": {
+      "mon": [11, 18],
+      "tue": null,
+      "wed": null,
+      "thu": [11, 20],
+      "fri": [11, 18],
+      "sat": [11, 18],
+      "sun": [11, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["sat"],
+        "start": 11,
+        "end": 18,
+        "price": 0,
+        "label": "Free admission on Saturdays",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Open until 8 PM on Thursdays, but Saturday is the recurring free day."
+  },
+  {
+    "id": "morgan",
+    "name": "The Morgan Library & Museum",
+    "dcla_match": "Pierpont Morgan Library",
+    "category": "Art & Books",
+    "address": "225 Madison Avenue, New York, NY 10016",
+    "website": "https://www.themorgan.org/visit",
+    "adult_price": 25,
+    "student_price": 13,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$25 adult / $13 student",
+    "hours": {
+      "mon": null,
+      "tue": [10.5, 17],
+      "wed": [10.5, 17],
+      "thu": [10.5, 17],
+      "fri": [10.5, 20],
+      "sat": [10.5, 17],
+      "sun": [10.5, 17]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 17,
+        "end": 20,
+        "price": 0,
+        "label": "Free Friday, 5-8 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Free Friday tickets are released one week in advance."
+  },
+  {
+    "id": "mjh",
+    "name": "Museum of Jewish Heritage",
+    "dcla_match": "Museum of Jewish Heritage  A Living Memorial to the Holocaust",
+    "category": "History",
+    "address": "36 Battery Place, New York, NY 10280",
+    "website": "https://mjhnyc.org/visitor-information/",
+    "adult_price": 18,
+    "student_price": 12,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$18 adult / $12 student",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [10, 17],
+      "thu": [10, 20],
+      "fri": [10, 17],
+      "sat": null,
+      "sun": [10, 17]
+    },
+    "access_programs": [
+      {
+        "days": ["thu"],
+        "start": 16,
+        "end": 20,
+        "price": 0,
+        "label": "Free Thursday, 4-8 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Advance free-admission reservation is recommended."
+  },
+  {
+    "id": "moma",
+    "name": "The Museum of Modern Art",
+    "dcla_match": "Museum of Modern Art",
+    "category": "Art",
+    "address": "11 West 53rd Street, New York, NY 10019",
+    "website": "https://www.moma.org/visit/",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$30 adult / $17 student",
+    "hours": {
+      "mon": [10.5, 17.5],
+      "tue": [10.5, 17.5],
+      "wed": [10.5, 17.5],
+      "thu": [10.5, 17.5],
+      "fri": [10.5, 20.5],
+      "sat": [10.5, 17.5],
+      "sun": [10.5, 17.5]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 17.5,
+        "end": 20.5,
+        "price": 0,
+        "label": "Free Friday, 5:30-8:30 PM for NY State residents",
+        "eligibility": "ny_resident",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Free Friday admission requires New York State residency."
+  },
+  {
+    "id": "neue-galerie",
+    "name": "Neue Galerie New York",
+    "dcla_match": "Neue Galerie New York",
+    "category": "Art",
+    "address": "1048 Fifth Avenue, New York, NY 10028",
+    "website": "https://www.neuegalerie.org/visit",
+    "adult_price": 28,
+    "student_price": 15,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$28 adult / $15 student",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": null,
+      "fri": null,
+      "sat": null,
+      "sun": null
+    },
+    "access_programs": [],
+    "temporarily_closed": true,
+    "notes": "Closed for Summer 2026 construction; reopening is planned for Autumn 2026."
+  },
+  {
+    "id": "nyhistory",
+    "name": "The New York Historical",
+    "dcla_match": "New-York Historical Society",
+    "category": "History",
+    "address": "170 Central Park West, New York, NY 10024",
+    "website": "https://www.nyhistory.org/visit",
+    "adult_price": 24,
+    "student_price": 13,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$24 adult / $13 student",
+    "hours": {
+      "mon": null,
+      "tue": [11, 17],
+      "wed": [11, 17],
+      "thu": [11, 17],
+      "fri": [11, 20],
+      "sat": [11, 17],
+      "sun": [11, 17]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 17,
+        "end": 20,
+        "price": 1,
+        "label": "Pay what you wish Friday, 5-8 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "The filter represents pay-what-you-wish as $1."
+  },
+  {
+    "id": "poster-house",
+    "name": "Poster House",
+    "dcla_match": "Poster House",
+    "category": "Design",
+    "address": "119 West 23rd Street, New York, NY 10011",
+    "website": "https://www.posterhouse.org/hours-admission-location/",
+    "adult_price": 15,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$15 adult / $10 student",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [10, 18],
+      "fri": [10, 20],
+      "sat": [10, 18],
+      "sun": [10, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 10,
+        "end": 20,
+        "price": 0,
+        "label": "Free admission on Fridays",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Friday is both the free day and the regular late-closing day."
+  },
+  {
+    "id": "studio-museum",
+    "name": "Studio Museum in Harlem",
+    "dcla_match": "Studio Museum in Harlem",
+    "category": "Art",
+    "address": "144 West 125th Street, New York, NY 10027",
+    "website": "https://www.studiomuseum.org/visit",
+    "adult_price": 16,
+    "student_price": 9,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "Pay what you can; $16 adult / $9 student suggested",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [11, 18],
+      "thu": [11, 18],
+      "fri": [11, 21],
+      "sat": [11, 18],
+      "sun": [11, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["sun"],
+        "start": 11,
+        "end": 18,
+        "price": 0,
+        "label": "Free Studio Sundays",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "The museum reopened in its new building and is open until 9 PM on Fridays."
+  },
+  {
+    "id": "whitney",
+    "name": "Whitney Museum of American Art",
+    "dcla_match": "Whitney Museum of American Art",
+    "category": "Art",
+    "address": "99 Gansevoort Street, New York, NY 10014",
+    "website": "https://whitney.org/visit/free-admission",
+    "adult_price": 30,
+    "student_price": 25,
+    "ny_resident_price": null,
+    "under_25_price": 0,
+    "standard_price_label": "$30 adult; free for visitors 25 and under",
+    "hours": {
+      "mon": [10.5, 18],
+      "tue": [10.5, 18],
+      "wed": [10.5, 18],
+      "thu": [10.5, 18],
+      "fri": [10.5, 22],
+      "sat": [10.5, 18],
+      "sun": [10.5, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["fri"],
+        "start": 17,
+        "end": 22,
+        "price": 0,
+        "label": "Free Friday Night, 5-10 PM",
+        "eligibility": "all",
+        "frequency": "weekly",
+        "reservation_required": true
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "The summer 2026 schedule temporarily includes seven-day opening."
+  },
+  {
+    "id": "met",
+    "name": "The Metropolitan Museum of Art",
+    "dcla_match": "Metropolitan Museum of Art",
+    "category": "Art",
+    "address": "1000 Fifth Avenue, New York, NY 10028",
+    "website": "https://www.metmuseum.org/plan-your-visit",
+    "adult_price": 30,
+    "student_price": 17,
+    "ny_resident_price": 1,
+    "under_25_price": null,
+    "standard_price_label": "$30 adult / $17 student; pay what you wish for NY residents and tri-state students",
+    "hours": {
+      "mon": [10, 17],
+      "tue": [10, 17],
+      "wed": null,
+      "thu": [10, 17],
+      "fri": [10, 21],
+      "sat": [10, 21],
+      "sun": [10, 17]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "The pay-what-you-wish minimum is $0.01; the filter represents it as $1."
+  },
+  {
+    "id": "afam",
+    "name": "American Folk Art Museum",
+    "dcla_match": "American Folk Art Museum",
+    "category": "Art",
+    "address": "2 Lincoln Square, New York, NY 10023",
+    "website": "https://folkartmuseum.org/news/visitor-guidelines/",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0,
+    "under_25_price": 0,
+    "standard_price_label": "Always free",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [11.5, 18],
+      "thu": [11.5, 18],
+      "fri": [11.5, 18],
+      "sat": [11.5, 18],
+      "sun": [11.5, 18]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "Admission is always free, but regular hours end at 6 PM."
+  },
+  {
+    "id": "museum-fit",
+    "name": "The Museum at FIT",
+    "dcla_match": null,
+    "category": "Fashion",
+    "address": "227 West 27th Street, New York, NY 10001",
+    "latitude": 40.74672,
+    "longitude": -73.9949,
+    "website": "https://www.fitnyc.edu/museum/",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0,
+    "under_25_price": 0,
+    "standard_price_label": "Always free",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [12, 20],
+      "thu": [12, 20],
+      "fri": [12, 20],
+      "sat": [10, 17],
+      "sun": [10, 17]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "A free museum with three regular late evenings each week."
+  },
+  {
+    "id": "leslie-lohman",
+    "name": "Leslie-Lohman Museum of Art",
+    "dcla_match": "Leslie-Lohman Museum of Gay and Lesbian Art",
+    "category": "Queer Art",
+    "address": "26 Wooster Street, New York, NY 10013",
+    "website": "https://www.leslielohman.org/visit/",
+    "adult_price": 10,
+    "student_price": 10,
+    "ny_resident_price": null,
+    "under_25_price": null,
+    "standard_price_label": "$10 suggested donation",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [12, 17],
+      "thu": [12, 18],
+      "fri": [12, 18],
+      "sat": [12, 18],
+      "sun": [12, 18]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "The admission amount is suggested rather than mandatory."
+  },
+  {
+    "id": "drawing-center",
+    "name": "The Drawing Center",
+    "dcla_match": "Drawing Center, Inc.",
+    "category": "Art",
+    "address": "35 Wooster Street, New York, NY 10013",
+    "website": "https://drawingcenter.org/visit",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0,
+    "under_25_price": 0,
+    "standard_price_label": "Always free",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": [12, 18],
+      "thu": [12, 18],
+      "fri": [12, 18],
+      "sat": [12, 18],
+      "sun": [12, 18]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "Admission is free, but regular hours end at 6 PM."
+  },
+  {
+    "id": "el-museo",
+    "name": "El Museo del Barrio",
+    "dcla_match": "Amigos del Museo del Barrio",
+    "category": "Latinx Art",
+    "address": "1230 Fifth Avenue, New York, NY 10029",
+    "website": "https://elmuseo.org/visit/plan-your-visit/",
+    "adult_price": 9,
+    "student_price": 5,
+    "ny_resident_price": 1,
+    "under_25_price": null,
+    "standard_price_label": "Pay what you can; $9 adult / $5 student suggested",
+    "hours": {
+      "mon": null,
+      "tue": null,
+      "wed": null,
+      "thu": [11, 17],
+      "fri": [11, 17],
+      "sat": [11, 17],
+      "sun": [11, 17]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "Admission also includes same-day entry to the Museum of the City of New York."
+  },
+  {
+    "id": "mcny",
+    "name": "Museum of the City of New York",
+    "dcla_match": "Museum of the City of New York",
+    "category": "History",
+    "address": "1220 Fifth Avenue, New York, NY 10029",
+    "website": "https://www.mcny.org/visit",
+    "adult_price": 23,
+    "student_price": 14,
+    "ny_resident_price": 1,
+    "under_25_price": null,
+    "standard_price_label": "$23 adult / $14 student; pay what you can for NYC residents",
+    "hours": {
+      "mon": [10, 17],
+      "tue": [10, 17],
+      "wed": [10, 21],
+      "thu": [10, 17],
+      "fri": [10, 17],
+      "sat": [10, 18],
+      "sun": [10, 18]
+    },
+    "access_programs": [
+      {
+        "days": ["wed"],
+        "start": 10,
+        "end": 21,
+        "price": 0,
+        "label": "Free Wednesday; open until 9 PM in Summer 2026",
+        "eligibility": "all",
+        "frequency": "seasonal-weekly",
+        "reservation_required": false
+      }
+    ],
+    "temporarily_closed": false,
+    "notes": "Summer Wednesday late hours run July 1 through September 2, 2026."
+  },
+  {
+    "id": "nmai",
+    "name": "National Museum of the American Indian",
+    "dcla_match": null,
+    "category": "Indigenous Culture",
+    "address": "One Bowling Green, New York, NY 10004",
+    "latitude": 40.704,
+    "longitude": -74.0137,
+    "website": "https://americanindian.si.edu/visit/ny",
+    "adult_price": 0,
+    "student_price": 0,
+    "ny_resident_price": 0,
+    "under_25_price": 0,
+    "standard_price_label": "Always free",
+    "hours": {
+      "mon": [10, 17],
+      "tue": [10, 17],
+      "wed": [10, 17],
+      "thu": [10, 17],
+      "fri": [10, 17],
+      "sat": [10, 17],
+      "sun": [10, 17]
+    },
+    "access_programs": [],
+    "temporarily_closed": false,
+    "notes": "Admission is always free; no ticket is required."
+  }
+]

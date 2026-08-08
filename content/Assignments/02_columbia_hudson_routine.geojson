@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "name": "Columbia to Hudson Course-Day Mental Map",
+  "description": "Six places I regularly or occasionally visit on Columbia course days, moving from class and transit toward the Hudson River waterfront. This is a destination-based mental map rather than a map of where I live.",
+  "bbox": [
+    -73.973253,
+    40.803562,
+    -73.960643,
+    40.819444
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "routine_01",
+      "properties": {
+        "place_name": "Columbia University campus",
+        "category": "class",
+        "sequence": 1,
+        "time_of_day": "late morning",
+        "frequency": "class days",
+        "water_relationship": "upland origin",
+        "personal_note": "I begin course days here and orient the rest of the route from campus.",
+        "location_precision": "approximate landmark point",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96249,
+          40.807751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "routine_02",
+      "properties": {
+        "place_name": "116 St-Columbia University subway",
+        "category": "transit",
+        "sequence": 2,
+        "time_of_day": "before or after class",
+        "frequency": "class days",
+        "water_relationship": "city connection",
+        "personal_note": "This station is my usual connection between the course-day routine and the rest of the city.",
+        "location_precision": "approximate station entrance",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96411,
+          40.80772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "routine_03",
+      "properties": {
+        "place_name": "Hungarian Pastry Shop",
+        "category": "coffee and study",
+        "sequence": 3,
+        "time_of_day": "afternoon",
+        "frequency": "occasional class days",
+        "water_relationship": "inland pause",
+        "personal_note": "This represents a recurring pause for coffee, reading, or conversation near campus.",
+        "location_precision": "business location",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.963683,
+          40.803562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "routine_04",
+      "properties": {
+        "place_name": "Riverside Park entrance near West 116th Street",
+        "category": "park entrance",
+        "sequence": 4,
+        "time_of_day": "afternoon",
+        "frequency": "weekly",
+        "water_relationship": "transition toward waterfront",
+        "personal_note": "I turn west here when I want a quieter route and a visual break from campus streets.",
+        "location_precision": "approximate entrance point",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.969829,
+          40.808557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "routine_05",
+      "properties": {
+        "place_name": "Hudson River Greenway near West 116th Street",
+        "category": "waterfront walk",
+        "sequence": 5,
+        "time_of_day": "late afternoon",
+        "frequency": "weekly",
+        "water_relationship": "direct waterfront experience",
+        "personal_note": "This is where the mental map opens from neighborhood streets to the scale of the Hudson River.",
+        "location_precision": "approximate path point",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.973253,
+          40.809239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "routine_06",
+      "properties": {
+        "place_name": "West Harlem Piers Park",
+        "category": "waterfront destination",
+        "sequence": 6,
+        "time_of_day": "late afternoon or evening",
+        "frequency": "occasional",
+        "water_relationship": "direct waterfront experience",
+        "personal_note": "This is a longer waterfront destination when I have time to continue north after class.",
+        "location_precision": "park landmark point",
+        "source": "mental map and manual digitization"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.960643,
+          40.819444
+        ]
+      }
+    }
+  ]
+}
