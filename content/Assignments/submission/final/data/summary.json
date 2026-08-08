@@ -1,0 +1,31 @@
+{
+  "total_garden_records": 536,
+  "mapped_gardens": 429,
+  "assigned_to_hvi_nta": 429,
+  "gardens_in_high_hvi": 280,
+  "high_hvi_neighborhoods": 81,
+  "neighborhoods_with_gardens": 92,
+  "jurisdiction_counts": {
+    "nyc_parks": 218,
+    "land_trust": 98,
+    "other_public": 105,
+    "private": 8
+  },
+  "jurisdiction_labels": {
+    "nyc_parks": "NYC Parks / DPR",
+    "land_trust": "Land trust / nonprofit",
+    "other_public": "Other public agency",
+    "private": "Private / other"
+  },
+  "density_edges": [
+    0.34,
+    1.14,
+    1.88,
+    4.66,
+    9.21,
+    52.88
+  ],
+  "garden_dataset_date": "2026-07-22",
+  "hvi_geography": "2020 NTA",
+  "nta_release": "26B / May 2026"
+}

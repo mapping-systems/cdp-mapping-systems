@@ -1,0 +1,322 @@
+{
+  "type": "FeatureCollection",
+  "name": "weekday_routine_east_village_to_columbia",
+  "description": "A retrospective mental map of a typical weekday from waking in the East Village through commuting, class, studio work, an evening decompression walk, and the beginning of the trip home. Locations represent remembered activity stops rather than a precise GPS trace.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "sequence": 1,
+        "place": "Home near 327 East 8th Street",
+        "time_local": "07:30",
+        "activity": "Wake up and prepare for the day",
+        "place_type": "home",
+        "arrival_mode": "none",
+        "dwell_min": 40,
+        "stress_before": 1,
+        "stress_after": 2,
+        "memory_note": "The day begins quietly before the commute to campus.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.9813, 40.7256]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "sequence": 2,
+        "place": "First Avenue L subway station",
+        "time_local": "08:10",
+        "activity": "Enter the subway and take the Manhattan-bound L train",
+        "place_type": "transit",
+        "arrival_mode": "walk",
+        "dwell_min": 5,
+        "stress_before": 2,
+        "stress_after": 3,
+        "memory_note": "The commute begins with a walk north from home to East 14th Street.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98168, 40.73095]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "sequence": 3,
+        "place": "14th Street-Sixth Avenue subway station",
+        "time_local": "08:22",
+        "activity": "Arrive on the L train and transfer to the uptown 1 train",
+        "place_type": "transit_transfer",
+        "arrival_mode": "subway_L",
+        "dwell_min": 8,
+        "stress_before": 3,
+        "stress_after": 3,
+        "memory_note": "The transfer is the busiest and least direct part of the morning trip.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0002, 40.7382]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "sequence": 4,
+        "place": "116th Street-Columbia University subway station",
+        "time_local": "08:50",
+        "activity": "Exit the 1 train and arrive at Columbia",
+        "place_type": "transit",
+        "arrival_mode": "subway_1",
+        "dwell_min": 2,
+        "stress_before": 3,
+        "stress_after": 2,
+        "memory_note": "Emerging at 116th Street marks the transition from commuting to the school day.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96411, 40.80772]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "sequence": 5,
+        "place": "Starbucks at 2929 Broadway",
+        "time_local": "08:55",
+        "activity": "Buy morning coffee before class",
+        "place_type": "coffee",
+        "arrival_mode": "walk",
+        "dwell_min": 5,
+        "stress_before": 2,
+        "stress_after": 1,
+        "memory_note": "The short coffee stop creates a buffer between the subway and class.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96528, 40.80571]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "sequence": 6,
+        "place": "Avery Hall",
+        "time_local": "09:00",
+        "activity": "Attend morning class",
+        "place_type": "academic",
+        "arrival_mode": "walk",
+        "dwell_min": 210,
+        "stress_before": 2,
+        "stress_after": 4,
+        "memory_note": "Class begins the focused academic part of the day.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96255, 40.80773]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "sequence": 7,
+        "place": "Sweetgreen at 2937 Broadway",
+        "time_local": "12:30",
+        "activity": "Leave campus for lunch",
+        "place_type": "lunch",
+        "arrival_mode": "walk",
+        "dwell_min": 25,
+        "stress_before": 4,
+        "stress_after": 2,
+        "memory_note": "Lunch is a short break from class and studio work.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96479, 40.8065]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "sequence": 8,
+        "place": "Avery Hall",
+        "time_local": "13:00",
+        "activity": "Return to Avery Hall and work in studio until 5:45 PM",
+        "place_type": "academic",
+        "arrival_mode": "walk",
+        "dwell_min": 285,
+        "stress_before": 2,
+        "stress_after": 5,
+        "memory_note": "The longest continuous work period produces the highest stress level of the day.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96255, 40.80773]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "sequence": 9,
+        "place": "Avery Hall",
+        "time_local": "17:45",
+        "activity": "Leave studio after the afternoon work session",
+        "place_type": "academic",
+        "arrival_mode": "none",
+        "dwell_min": 0,
+        "stress_before": 5,
+        "stress_after": 5,
+        "memory_note": "The evening route begins with attention still focused on unfinished work.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96255, 40.80773]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "sequence": 10,
+        "place": "Hungarian Pastry Shop",
+        "time_local": "17:55",
+        "activity": "Buy coffee and change pace",
+        "place_type": "coffee",
+        "arrival_mode": "walk",
+        "dwell_min": 8,
+        "stress_before": 5,
+        "stress_after": 4,
+        "memory_note": "A familiar threshold between school work and the neighborhood.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96368, 40.80356]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "sequence": 11,
+        "place": "Morningside Park entrance at West 113th Street",
+        "time_local": "18:08",
+        "activity": "Enter the park and put away the phone",
+        "place_type": "park_entrance",
+        "arrival_mode": "walk",
+        "dwell_min": 2,
+        "stress_before": 4,
+        "stress_after": 3,
+        "memory_note": "Traffic noise begins to recede at the park edge.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.95828, 40.80282]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "sequence": 12,
+        "place": "Morningside Park pond",
+        "time_local": "18:16",
+        "activity": "Sit, drink coffee, and watch people pass",
+        "place_type": "open_space",
+        "arrival_mode": "walk",
+        "dwell_min": 18,
+        "stress_before": 3,
+        "stress_after": 1,
+        "memory_note": "This is the strongest reset point because the pace slows and the campus is no longer visible.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.95702, 40.80418]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "sequence": 13,
+        "place": "College Walk east gate",
+        "time_local": "18:43",
+        "activity": "Return to campus through a pedestrian space",
+        "place_type": "campus_open_space",
+        "arrival_mode": "walk",
+        "dwell_min": 3,
+        "stress_before": 2,
+        "stress_after": 2,
+        "memory_note": "Re-entering campus feels different after the park, even though the physical distance is short.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96208, 40.80748]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "sequence": 14,
+        "place": "Butler Library",
+        "time_local": "18:48",
+        "activity": "Begin an evening reading session",
+        "place_type": "academic",
+        "arrival_mode": "walk",
+        "dwell_min": 165,
+        "stress_before": 2,
+        "stress_after": 3,
+        "memory_note": "The park visit makes returning to focused work feel manageable.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96318, 40.80601]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "sequence": 15,
+        "place": "116th Street-Columbia University subway station",
+        "time_local": "21:35",
+        "activity": "End the campus day and begin the trip home",
+        "place_type": "transit",
+        "arrival_mode": "walk",
+        "dwell_min": 4,
+        "stress_before": 3,
+        "stress_after": 2,
+        "memory_note": "The station marks the boundary between the school day and the return to the East Village.",
+        "location_precision": "approximate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96411, 40.80772]
+      }
+    }
+  ]
+}
