@@ -37,7 +37,6 @@ distinguishes four barriers that are often collapsed into the word
 - `site/`: interactive MapLibre application.
 - `presentation/After_Six_NYC_Final_6_Slides.pptx`: final six-slide presentation.
 - `presentation/After_Six_NYC_Final_6_Slides.pdf`: shareable PDF version.
-- `presentation/After_Six_NYC_3m40s_Script.md`: timed English presentation script.
 
 ## Open the project
 

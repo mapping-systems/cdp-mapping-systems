@@ -43,7 +43,7 @@ into a public cultural-access planner. It combines 161 screened public cultural
 places, opening schedules, admission information, current programs, and a
 schedule-weighted subway graph. The folder includes the executed analytical
 notebook, data and source scripts, ten figures, the complete static website,
-the final six-slide deck, and presentation script.
+and the final six-slide deck.
 
 **Live website:** <https://mere0125.github.io/after-six-nyc/>
 
