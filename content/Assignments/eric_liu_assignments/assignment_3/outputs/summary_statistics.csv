@@ -1,0 +1,3 @@
+neighborhood,origins,median_euclidean_m,median_network_m,mean_network_m,median_penalty_m,median_circuity,median_walk_min,within_10_min_pct,within_15_min_pct
+Red Hook,150,3653.4,1404.26,1389.75,-2242.14,0.38,17.55,4.0,28.999999999999996
+Upper West Side,150,742.4,284.79,283.52,-424.26,0.44,3.56,100.0,100.0

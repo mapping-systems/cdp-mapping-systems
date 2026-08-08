@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Inspections Map</title>
+
+    <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="map" aria-label="Map of restaurant inspections"></div>
+      <aside class="map-panel">
+        <h1>Restaurant inspections</h1>
+        <p>Click the map to find each restaurant's most recent inspection within 500 meters.</p>
+
+        <div class="legend" aria-label="Seating choice legend">
+          <strong>Seating choice</strong>
+          <span><i class="swatch sidewalk"></i>Sidewalk</span>
+          <span><i class="swatch roadway"></i>Roadway</span>
+          <span><i class="swatch both"></i>Both</span>
+          <span><i class="swatch other"></i>Other / unknown</span>
+        </div>
+
+        <p class="distance-note">Larger, darker points are closer to your selected location.</p>
+        <p id="status" class="status" role="status">Select a location on the map.</p>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
