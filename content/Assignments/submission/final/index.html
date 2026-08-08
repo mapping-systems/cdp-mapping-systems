@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive study of community-garden density, land jurisdiction, and heat vulnerability across New York City neighborhoods."
+    />
+    <title>Gardens &amp; Heat</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@6.0.0/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="styles.css?v=8" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="story-panel" aria-labelledby="project-title">
+        <header>
+          <h1 id="project-title">Gardens &amp; Heat</h1>
+          <p class="introduction">
+            New York City’s Heat Vulnerability Index (HVI) shows which
+            neighborhoods are most at risk of heat-related illness and death.
+            It combines environmental and social conditions into a five-level
+            ranking, helping identify where heat exposure and residents’ ability
+            to stay safe overlap. Understanding this geography is important for
+            directing cooling resources and examining how community gardens fit
+            within the city’s broader heat-resilience network.
+          </p>
+        </header>
+
+        <section class="map-section" aria-labelledby="view-heading">
+          <div class="section-heading-row">
+            <h2 id="view-heading">Neighborhood view</h2>
+            <button id="focus-high-hvi" class="text-button" type="button">
+              Focus HVI 4–5
+            </button>
+          </div>
+
+          <label class="map-variable-control" for="map-variable">
+            <span>Map variable</span>
+            <select id="map-variable">
+              <option value="hvi">Composite HVI</option>
+              <option value="garden_influence">Garden influence · 10-minute walk</option>
+              <option value="park_adjusted">Park-adjusted heat pressure</option>
+              <option value="surface_temp">Surface temperature</option>
+              <option value="greenspace">Limited green cover</option>
+              <option value="pct_households_ac">Limited home AC</option>
+              <option value="median_income">Lower median income</option>
+              <option value="pct_black_pop">Structural inequity context</option>
+              <option value="density">Garden density</option>
+              <option value="open_space">NYC parks &amp; mapped open space</option>
+            </select>
+          </label>
+
+          <label class="opacity-control" for="layer-opacity">
+            <span>Layer opacity</span>
+            <input id="layer-opacity" type="range" min="35" max="90" value="68" />
+            <output id="layer-opacity-value" for="layer-opacity">68%</output>
+          </label>
+
+          <div id="hvi-legend" class="color-legend" aria-label="HVI legend">
+            <div class="legend-scale legend-scale--hvi" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="legend-labels">
+              <span>1 · lower</span>
+              <span>5 · highest</span>
+            </div>
+          </div>
+
+          <div
+            id="factor-legend"
+            class="color-legend"
+            aria-label="Selected heat-risk factor legend"
+            hidden
+          >
+            <div class="legend-scale legend-scale--hvi" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="legend-labels">
+              <span>lower relative risk</span>
+              <span>higher relative risk</span>
+            </div>
+            <p id="factor-legend-note">City percentile · all factors point toward higher vulnerability</p>
+          </div>
+
+          <div id="greenspace-key" class="greenspace-key" aria-label="Mapped open-space legend" hidden>
+            <span aria-hidden="true"></span>
+            <p>NYC parks &amp; mapped open space</p>
+          </div>
+
+          <div id="influence-legend" class="influence-legend" hidden>
+            <div class="legend-scale legend-scale--mono" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="legend-labels">
+              <span>HVI 1</span>
+              <span>HVI 5</span>
+            </div>
+            <div class="influence-key">
+              <span aria-hidden="true"></span>
+              <p>Brighter white = more overlapping garden catchments</p>
+            </div>
+            <p>0.5-mile circular proxy for an approximately 10-minute walk · not a street-network isochrone</p>
+          </div>
+
+          <div
+            id="density-legend"
+            class="color-legend"
+            aria-label="Garden-density legend"
+            hidden
+          >
+            <div class="legend-scale legend-scale--density" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="legend-labels">
+              <span>lower density</span>
+              <span>higher density</span>
+            </div>
+            <p>Quantiles among NTAs with gardens · gardens per square mile</p>
+          </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="jurisdiction-heading">
+          <h2 id="jurisdiction-heading">Garden land jurisdiction</h2>
+
+          <label class="filter-row">
+            <input type="checkbox" value="nyc_parks" checked />
+            <span class="dot dot--parks" aria-hidden="true"></span>
+            <span>NYC Parks / DPR</span>
+            <strong id="count-nyc-parks">—</strong>
+          </label>
+          <label class="filter-row">
+            <input type="checkbox" value="land_trust" checked />
+            <span class="dot dot--trust" aria-hidden="true"></span>
+            <span>Land trust / nonprofit</span>
+            <strong id="count-land-trust">—</strong>
+          </label>
+          <label class="filter-row">
+            <input type="checkbox" value="other_public" checked />
+            <span class="dot dot--public" aria-hidden="true"></span>
+            <span>Other public agency</span>
+            <strong id="count-other-public">—</strong>
+          </label>
+          <label class="filter-row">
+            <input type="checkbox" value="private" checked />
+            <span class="dot dot--private" aria-hidden="true"></span>
+            <span>Private / other</span>
+            <strong id="count-private">—</strong>
+          </label>
+        </section>
+
+        <section class="finding" aria-labelledby="finding-heading">
+          <p class="finding-label">Initial finding</p>
+          <h2 id="finding-heading">
+            Most mapped gardens are already located in high-risk neighborhoods.
+          </h2>
+          <p>
+            <span id="high-hvi-share">—</span> of mapped gardens fall in HVI
+            4–5 NTAs. This shows spatial coincidence—not evidence that a garden
+            reduces neighborhood heat vulnerability.
+          </p>
+        </section>
+
+        <footer class="method-note">
+          HVI already includes neighborhood green cover among several social
+          and environmental factors. Garden density is spatial—not per capita.
+          Jurisdiction describes the land record, not who performs daily garden
+          labor. Garden data: archived GreenThumb, July 2026. HVI: NYC Health,
+          2020 NTA geography. Open space: NYC Planimetric Database. Garden
+          influence uses overlapping 0.5-mile circular walking proxies.
+        </footer>
+      </aside>
+
+      <section class="map-panel" aria-label="Interactive HVI and community-garden map">
+        <div id="map"></div>
+        <div id="map-status" class="map-status" role="status">
+          Loading neighborhood data…
+        </div>
+        <div id="hover-tip" class="hover-tip" hidden></div>
+
+        <article id="neighborhood-card" class="detail-card" hidden>
+          <button
+            id="close-card"
+            class="card-close"
+            type="button"
+            aria-label="Close neighborhood details"
+          >
+            ×
+          </button>
+          <p id="card-kicker" class="card-kicker"></p>
+          <h2 id="card-name"></h2>
+
+          <div class="card-metrics">
+            <div><strong id="card-hvi"></strong><span>HVI</span></div>
+            <div><strong id="card-gardens"></strong><span>gardens</span></div>
+            <div><strong id="card-density"></strong><span>per sq. mile</span></div>
+          </div>
+
+          <section class="factor-profile" aria-labelledby="factor-profile-heading">
+            <div class="profile-heading-row">
+              <p id="factor-profile-heading">Five-factor vulnerability profile</p>
+              <span>NYC median</span>
+            </div>
+            <div id="factor-profile-bars"></div>
+            <p class="profile-note">
+              All bars point toward higher relative vulnerability. Structural
+              inequity reflects the effects of racism and historic disinvestment;
+              race itself is not a biological cause of heat risk.
+            </p>
+          </section>
+
+          <section class="adjusted-summary" aria-label="Experimental park-adjusted heat pressure">
+            <div>
+              <span>Formal park coverage</span>
+              <strong id="card-park-coverage"></strong>
+            </div>
+            <div>
+              <span>Park-adjusted pressure</span>
+              <strong id="card-adjusted-pressure"></strong>
+            </div>
+            <p>Equal-weight exploratory score · not the official HVI</p>
+          </section>
+
+          <div class="jurisdiction-breakdown">
+            <p>Garden land jurisdiction</p>
+            <div id="jurisdiction-bars"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="map.js?v=9"></script>
+  </body>
+</html>
