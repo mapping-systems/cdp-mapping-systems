@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Invisible Matters</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav" id="siteNav">
+    <button class="dot" id="navToggle" type="button" aria-label="Toggle chapter navigation" aria-expanded="false">
+      <span id="navCurrent">00</span>
+    </button>
+    <nav id="chapterNav" aria-label="Chapter navigation">
+      <a href="#laion" data-id="laion" data-index="01"><span>01</span><em>LAION-5B</em></a>
+      <a href="#platform" data-id="platform" data-index="02"><span>02</span><em>PLATFORM</em></a>
+      <a href="#dark-kitchens" data-id="dark-kitchens" data-index="03"><span>03</span><em>DARK KITCHENS</em></a>
+      <a href="#demo" data-id="demo" data-index="04"><span>04</span><em>DEMO</em></a>
+      <a href="#compression" data-id="compression" data-index="05"><span>05</span><em>COMPRESSION</em></a>
+    </nav>
+  </header>
+
+<main>
+<section id="opening" class="opening tracked" data-index="00">
+   <div class="title-trick" tabindex="0" aria-label="Invisible Matters">
+    <span class="paren">(</span>
+    <span class="hidden-word">invisible</span>
+    <span class="paren">)</span>
+    <span class="matters">matters</span>
+  </div>
+  <p class="deck">A spatial investigation into dark kitchens, platform visibility, and the infrastructure of food delivery.</p>  
+</section>
+
+<section class="interlude light quote-interlude">
+  <small>OPENING PROPOSITION</small>
+  <blockquote>“Our present mirrors the past; and the mirror foretells, augurs, and predicts, and so, makes the world.”</blockquote>
+
+  <p class="quote-attribution">
+    <strong>Nora N. Khan</strong>
+    <span>Mirror Stage: Selected Essays (2024)</span>
+  </p>
+</section>
+
+<section id="laion" class="split tracked" data-index="01">
+  <div class="media dark grid laion-media">
+
+    <div class="laion-video-stage" aria-live="polite">
+      <video id="laionVideo" src="assets/videos/laion-5b.mp4" muted playsinline controls preload="metadata"></video>
+
+      <div class="laion-video-placeholder" id="laionVideoPlaceholder">
+        <span>VIDEO PLACEHOLDER</span>
+        <strong id="laionVideoTitle">HARMFUL CONTENT FOUND</strong>
+        <small id="laionVideoNote">Add the final screen recording later.</small>
+      </div>
+    </div>
+  </div>
+
+  <article class="text laion-text">
+    <small>PRECEDENT STUDY</small>
+    <h2>Every filter determines what enters the dataset, what remains visible, and what disappears.</h2>
+
+    <div class="laion-accordion" aria-label="LAION-5B filtering issues">
+      <button class="laion-accordion-card active" type="button" data-video="failure" data-src="assets/videos/laion-5b.mp4" data-title="HARMFUL CONTENT FOUND" data-note="Future clip: show the reported harmful content findings and dataset evidence." aria-expanded="true">
+        <div class="laion-accordion-summary">
+          <b>01 / CONSEQUENCE</b>
+          <span>Harmful content was found inside LAION-5B.</span>
+        </div>
+        <div class="laion-accordion-detail">
+          <p>The dataset was found to contain illegal and harmful material, including child sexual abuse material.</p>
+        </div>
+      </button>
+
+      <div class="laion-cause-arrow" aria-hidden="true">
+        <span>WHY DID FILTERING FAIL?</span>
+        <strong>↓</strong>
+      </div>
+
+      <button class="laion-accordion-card" type="button" data-video="matching" data-src="assets/videos/clip.mp4" data-title="MODEL MATCHING" data-note="Future clip: show the CLIP matching and evidence interface." aria-expanded="false">
+        <div class="laion-accordion-summary">
+          <b>02 / MATCHING</b>
+          <span>The model defines what counts as similarity.</span>
+        </div>
+        <div class="laion-accordion-detail">
+          <p>A successful image-text match does not mean the image has been understood. The matching process remains model-defined and difficult to inspect.</p>
+        </div>
+      </button>
+
+      <button class="laion-accordion-card" type="button" data-video="language" data-src="assets/videos/cld3.mp4" data-title="LANGUAGE DETECTION" data-note="Future clip: show the language-classification failure." aria-expanded="false">
+        <div class="laion-accordion-summary">
+          <b>03 / LANGUAGE</b>
+          <span>Language detection redistributes the dataset.</span>
+        </div>
+        <div class="laion-accordion-detail">
+          <p>Errors in automated language detection change which subset an image enters and how the dataset is organized.</p>
+        </div>
+      </button>
+
+      <button class="laion-accordion-card" type="button" data-video="threshold" data-src="assets/videos/benchmark.mp4" data-title="THRESHOLD" data-note="Future clip: show similarity scores, benchmark logic, and low-score passes." aria-expanded="false">
+        <div class="laion-accordion-summary">
+          <b>04 / THRESHOLD</b>
+          <span>Passing a threshold does not make a sample meaningful or safe.</span>
+        </div>
+        <div class="laion-accordion-detail">
+          <p>Benchmarks and score thresholds define the minimum conditions for inclusion, even when many samples pass at very low similarity scores.</p>
+        </div>
+      </button>
+    </div>
+
+    <div class="laion-links" aria-label="LAION-5B case study links">
+      <a href="https://knowingmachines.org/models-all-the-way" target="_blank" rel="noopener noreferrer">
+        <span>ORIGINAL CASE STUDY</span>
+        <strong>Models All the Way Down ↗</strong>
+      </a>
+
+      <a href="https://qy2345-boop.github.io/models-all-the-way-precedent/" target="_blank" rel="noopener noreferrer">
+        <span>MY PRECEDENT STUDY</span>
+        <strong>Interactive Project ↗</strong>
+      </a>
+    </div>
+  </article>
+</section>
+
+<section class="interlude dark typewriter-interlude">
+  <blockquote>
+    <span class="typewriter-static-line">What happens when the logic</span>
+    <span class="typewriter-static-line">of a dataset begins to shape</span>
+    <span class="typewriter-dynamic-line">
+      <span class="typewriter-text" id="urbanLifeTypewriter" data-text="everyday urban life">everyday urban life</span><span class="typewriter-cursor" aria-hidden="true">|</span>?
+    </span>
+  </blockquote>
+</section>
+
+<section id="platform" class="split tracked" data-index="02">
+  <div class="media dark grid platform-media">
+    <div class="platform-dashboard show-methodology" aria-live="polite">
+      <div class="platform-methodology" aria-label="Platform data collection structure">
+        <div class="platform-methodology-images">
+          <img
+            class="platform-methodology-image"
+            src="assets/images/001.png"
+            alt="Diagram showing the Meituan platform, three modules, collected restaurant listings, and comparison metrics"
+          >
+
+          <img
+            class="platform-methodology-image"
+            src="assets/images/002.png"
+            alt="Diagram showing the five Beijing observation locations and three daily collection periods"
+          >
+        </div>
+
+        <div class="platform-methodology-equation">
+          <strong>5 ADDRESSES × 3 MODULES × TOP 200 LISTINGS × 3 TIME PERIODS</strong>
+          <span>= 9,000</span>
+          <small>TOTAL LISTINGS</small>
+        </div>
+      </div>
+      <div class="platform-dashboard-header">
+        <div>
+          <span>PLATFORM EVIDENCE / LUNCH</span>
+          <strong id="platformDashboardLocation">ALL LOCATIONS</strong>
+        </div>
+
+        <div class="platform-dashboard-controls">
+          <div class="platform-view-toggle" role="group" aria-label="Change dashboard view">
+            <button class="platform-view-button active" type="button" data-dashboard-view="module" aria-pressed="true">BY MODULE</button>
+            <button class="platform-view-button" type="button" data-dashboard-view="metric" aria-pressed="false">BY METRIC</button>
+          </div>
+
+          <div class="platform-location-tabs" role="tablist" aria-label="Select observation location">
+            <button class="platform-location-tab active" type="button" data-location="ALL LOCATIONS" aria-selected="true">ALL</button>
+            <button class="platform-location-tab" type="button" data-location="Wudaokou" aria-selected="false">WUDAOKOU</button>
+            <button class="platform-location-tab" type="button" data-location="WangjingSOHO" aria-selected="false">WANGJING</button>
+            <button class="platform-location-tab" type="button" data-location="Zhongguancun" aria-selected="false">ZHONGGUANCUN</button>
+            <button class="platform-location-tab" type="button" data-location="Qingnianlu" aria-selected="false">QINGNIANLU</button>
+            <button class="platform-location-tab" type="button" data-location="Fengtai" aria-selected="false">FENGTAI</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="platform-dashboard-view platform-dashboard-module-view active" data-dashboard-panel="module">
+        <article class="platform-module-card" data-module="food_recommend">
+          <div class="platform-module-card-heading">
+            <strong>Recommendation</strong>
+            <div class="platform-radar" data-radar-module="food_recommend" aria-label="Normalized radar chart for Recommendation"></div>
+          </div>
+          <div class="platform-module-metrics">
+            <div class="platform-module-metric" data-module-metric="displayed_price">
+              <small>DISPLAYED PRICE</small>
+              <strong id="moduleRecommendationPrice">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="distance_m">
+              <small>DELIVERY DISTANCE</small>
+              <strong id="moduleRecommendationDistance">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="delivery_time_min">
+              <small>DELIVERY TIME</small>
+              <strong id="moduleRecommendationTime">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="displayed_sales">
+              <small>DISPLAYED SALES</small>
+              <strong id="moduleRecommendationSales">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="platform-module-card" data-module="sharp_shooter">
+          <div class="platform-module-card-heading">
+            <strong>Shen Qiang Shou</strong>
+            <div class="platform-radar" data-radar-module="sharp_shooter" aria-label="Normalized radar chart for Shen Qiang Shou"></div>
+          </div>
+          <div class="platform-module-metrics">
+            <div class="platform-module-metric" data-module-metric="displayed_price">
+              <small>DISPLAYED PRICE</small>
+              <strong id="moduleSharpPrice">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="distance_m">
+              <small>DELIVERY DISTANCE</small>
+              <strong id="moduleSharpDistance">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="delivery_time_min">
+              <small>DELIVERY TIME</small>
+              <strong id="moduleSharpTime">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="displayed_sales">
+              <small>DISPLAYED SALES</small>
+              <strong id="moduleSharpSales">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="platform-module-card" data-module="pin_haofan">
+          <div class="platform-module-card-heading">
+            <strong>Pin Hao Fan</strong>
+            <div class="platform-radar" data-radar-module="pin_haofan" aria-label="Normalized radar chart for Pin Hao Fan"></div>
+          </div>
+          <div class="platform-module-metrics">
+            <div class="platform-module-metric" data-module-metric="displayed_price">
+              <small>DISPLAYED PRICE</small>
+              <strong id="modulePinPrice">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="distance_m">
+              <small>DELIVERY DISTANCE</small>
+              <strong id="modulePinDistance">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="delivery_time_min">
+              <small>DELIVERY TIME</small>
+              <strong id="modulePinTime">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+            <div class="platform-module-metric" data-module-metric="displayed_sales">
+              <small>DISPLAYED SALES</small>
+              <strong id="modulePinSales">—</strong>
+              <div class="platform-module-bar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="platform-module-rank" aria-hidden="true">
+                <span class="platform-rank-dots"></span>
+                <small class="platform-rank-label">—</small>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="platform-dashboard-view platform-dashboard-grid" data-dashboard-panel="metric" hidden>
+        <article class="platform-metric-card" data-metric="displayed_price">
+          <div class="platform-metric-heading">
+            <span>DISPLAYED PRICE</span>
+            <small>RMB</small>
+          </div>
+          <div class="platform-chart" id="platformPriceChart"></div>
+        </article>
+
+        <article class="platform-metric-card" data-metric="distance_m">
+          <div class="platform-metric-heading">
+            <span>DELIVERY DISTANCE</span>
+            <small>METERS</small>
+          </div>
+          <div class="platform-chart" id="platformDistanceChart"></div>
+        </article>
+
+        <article class="platform-metric-card" data-metric="delivery_time_min">
+          <div class="platform-metric-heading">
+            <span>DELIVERY TIME</span>
+            <small>MINUTES</small>
+          </div>
+          <div class="platform-chart" id="platformTimeChart"></div>
+        </article>
+
+        <article class="platform-metric-card" data-metric="displayed_sales">
+          <div class="platform-metric-heading">
+            <span>DISPLAYED SALES</span>
+            <small>PLATFORM VALUE</small>
+          </div>
+          <div class="platform-chart" id="platformSalesChart"></div>
+        </article>
+      </div>
+
+      <p class="platform-dashboard-note">Switch between module profiles and metric comparisons while keeping the selected location fixed.</p>
+    </div>
+  </div>
+
+  <article class="text platform-text">
+    <small>FOOD-DELIVERY PLATFORM</small>
+    <h2>Platforms do not neutrally display which restaurants exist. They make visible the restaurants that best fit their own rules.</h2>
+
+    <div class="platform-menu" aria-label="Platform sorting evidence">
+      <button class="platform-menu-card active" type="button" data-view="sample" data-title="DATA COLLECTION" data-note="Five locations · three time periods · top-ranked shops from each module" aria-pressed="true">
+        <div class="platform-card-summary">
+          <b>01 / DATA COLLECTION</b>
+          <span>Five locations, three time periods, and the top-ranked restaurants from each module.</span>
+        </div>
+        <div class="platform-card-detail">
+        </div>
+      </button>
+
+      <div class="platform-cause-arrow" aria-hidden="true">
+        <span>WHAT DOES EACH MODULE REWARD?</span>
+        <strong>↓</strong>
+      </div>
+
+      <button class="platform-menu-card" type="button" data-view="recommendation" data-title="RECOMMENDATION" data-note="Higher-value and higher-spending merchants" aria-pressed="false">
+        <div class="platform-card-summary">
+          <b>02 / RECOMMENDATION</b>
+          <span>Higher-value and higher-spending merchants.</span>
+        </div>
+        <div class="platform-card-detail">
+          <p>This module tends to favor restaurants that fit a higher-value profile rather than simply reproducing what is popular offline.</p>
+        </div>
+      </button>
+
+      <button class="platform-menu-card" type="button" data-view="shen-qiang-shou" data-title="SHEN QIANG SHOU" data-note="Sales volume · wider reach · promotional competition" aria-pressed="false">
+        <div class="platform-card-summary">
+          <b>03 / SHEN QIANG SHOU</b>
+          <span>Sales volume, wider reach, and promotional competition.</span>
+        </div>
+        <div class="platform-card-detail">
+          <p>This module rewards restaurants that can compete through volume, visibility, and participation in promotional mechanisms.</p>
+        </div>
+      </button>
+
+      <button class="platform-menu-card" type="button" data-view="pin-hao-fan" data-title="PIN HAO FAN" data-note="Low price · short-range delivery" aria-pressed="false">
+        <div class="platform-card-summary">
+          <b>04 / PIN HAO FAN</b>
+          <span>Low price and short-range delivery.</span>
+        </div>
+        <div class="platform-card-detail">
+          <p>This module favors standardized meals that can remain inexpensive, travel short distances, and move efficiently through delivery logistics.</p>
+        </div>
+      </button>
+    </div>
+  </article>
+</section>
+
+<section id="receipt-evidence" class="split tracked receipt-evidence is-scattered" data-index="02">
+  <div class="media dark grid receipt-evidence-media">
+    <div class="receipt-evidence-stage" aria-label="Paired delivery receipts from recommendation and Pin Hao Fan">
+      <div class="receipt-evidence-heading">
+        <small>TRANSACTION EVIDENCE</small>
+        <strong>THE SAME MEAL, DIFFERENT PLATFORM ENTRANCES</strong>
+      </div>
+
+      <div class="receipt-pair-grid">
+        <div class="receipt-row-label">RECOMMENDATION</div>
+
+        <figure class="receipt-card" data-pair="1-1" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/1-o-1.png" alt="Recommendation receipt for pair 1">
+            <img class="receipt-mask" src="assets/receipts/mask/1-o-1.png" alt="Highlighted recommendation price for pair 1">
+            <img class="receipt-label" src="assets/receipts/label/1-o-1.png" alt="Address grouping label for recommendation receipt pair 1">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="1-2" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/1-o-2.png" alt="Recommendation receipt for pair 2">
+            <img class="receipt-mask" src="assets/receipts/mask/1-o-2.png" alt="Highlighted recommendation price for pair 2">
+            <img class="receipt-label" src="assets/receipts/label/1-o-2.png" alt="Address grouping label for recommendation receipt pair 2">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-1" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-o-1.png" alt="Recommendation receipt for pair 3">
+            <img class="receipt-mask" src="assets/receipts/mask/2-o-1.png" alt="Highlighted recommendation price for pair 3">
+            <img class="receipt-label" src="assets/receipts/label/2-o-1.png" alt="Address grouping label for recommendation receipt pair 3">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-2" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-o-2.png" alt="Recommendation receipt for pair 4">
+            <img class="receipt-mask" src="assets/receipts/mask/2-o-2.png" alt="Highlighted recommendation price for pair 4">
+            <img class="receipt-label" src="assets/receipts/label/2-o-2.png" alt="Address grouping label for recommendation receipt pair 4">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-3" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-o-3.png" alt="Recommendation receipt for pair 5">
+            <img class="receipt-mask" src="assets/receipts/mask/2-o-3.png" alt="Highlighted recommendation price for pair 5">
+            <img class="receipt-label" src="assets/receipts/label/2-o-3.png" alt="Address grouping label for recommendation receipt pair 5">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-4" data-channel="recommendation">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-o-4.png" alt="Recommendation receipt for pair 6">
+            <img class="receipt-mask" src="assets/receipts/mask/2-o-4.png" alt="Highlighted recommendation price for pair 6">
+            <img class="receipt-label" src="assets/receipts/label/2-o-4.png" alt="Address grouping label for recommendation receipt pair 6">
+          </div>
+        </figure>
+
+        <div class="receipt-row-label">PIN HAO FAN</div>
+
+        <figure class="receipt-card" data-pair="1-1" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/1-p-1.png" alt="Pin Hao Fan receipt for pair 1">
+            <img class="receipt-mask" src="assets/receipts/mask/1-p-1.png" alt="Highlighted Pin Hao Fan price for pair 1">
+            <img class="receipt-label" src="assets/receipts/label/1-p-1.png" alt="Address grouping label for Pin Hao Fan receipt pair 1">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="1-2" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/1-p-2.png" alt="Pin Hao Fan receipt for pair 2">
+            <img class="receipt-mask" src="assets/receipts/mask/1-p-2.png" alt="Highlighted Pin Hao Fan price for pair 2">
+            <img class="receipt-label" src="assets/receipts/label/1-p-2.png" alt="Address grouping label for Pin Hao Fan receipt pair 2">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-1" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-p-1.png" alt="Pin Hao Fan receipt for pair 3">
+            <img class="receipt-mask" src="assets/receipts/mask/2-p-1.png" alt="Highlighted Pin Hao Fan price for pair 3">
+            <img class="receipt-label" src="assets/receipts/label/2-p-1.png" alt="Address grouping label for Pin Hao Fan receipt pair 3">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-2" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-p-2.png" alt="Pin Hao Fan receipt for pair 4">
+            <img class="receipt-mask" src="assets/receipts/mask/2-p-2.png" alt="Highlighted Pin Hao Fan price for pair 4">
+            <img class="receipt-label" src="assets/receipts/label/2-p-2.png" alt="Address grouping label for Pin Hao Fan receipt pair 4">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-3" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-p-3.png" alt="Pin Hao Fan receipt for pair 5">
+            <img class="receipt-mask" src="assets/receipts/mask/2-p-3.png" alt="Highlighted Pin Hao Fan price for pair 5">
+            <img class="receipt-label" src="assets/receipts/label/2-p-3.png" alt="Address grouping label for Pin Hao Fan receipt pair 5">
+          </div>
+        </figure>
+
+        <figure class="receipt-card" data-pair="2-4" data-channel="pin-haofan">
+          <div class="receipt-image-stack">
+            <img class="receipt-original" src="assets/receipts/original/2-p-4.png" alt="Pin Hao Fan receipt for pair 6">
+            <img class="receipt-mask" src="assets/receipts/mask/2-p-4.png" alt="Highlighted Pin Hao Fan price for pair 6">
+            <img class="receipt-label" src="assets/receipts/label/2-p-4.png" alt="Address grouping label for Pin Hao Fan receipt pair 6">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <article class="text receipt-evidence-text">
+    <small>PLATFORM TRANSACTION CHANNELS</small>
+    <h2>The receipts reveal two different operations behind the platform interface.</h2>
+
+    <div class="receipt-evidence-accordion" aria-label="Receipt evidence findings">
+      <button class="receipt-evidence-card" type="button" data-receipt-view="price" aria-expanded="false">
+        <div class="receipt-evidence-card-summary">
+          <b>01 / DIFFERENT ENTRANCES, DIFFERENT PRICES</b>
+          <span>The same meal can be reorganized through different transaction channels.</span>
+        </div>
+
+        <div class="receipt-evidence-card-detail">
+          <div class="receipt-mechanism-grid">
+            <article class="receipt-mechanism-card">
+              <b>PRICE SEGMENTATION</b>
+              <p>Different users enter through different price conditions.</p>
+            </article>
+
+            <article class="receipt-mechanism-card">
+              <b>DEMAND AGGREGATION</b>
+              <p>Discounted orders can be gathered into more predictable demand.</p>
+            </article>
+
+            <article class="receipt-mechanism-card">
+              <b>DELIVERY ORGANIZATION</b>
+              <p>Standardized orders may be easier to batch and fulfil.</p>
+            </article>
+
+            <article class="receipt-mechanism-card">
+              <b>MARKET COMPETITION</b>
+              <p>Subsidized prices can attract users and expand platform share.</p>
+            </article>
+          </div>
+        </div>
+      </button>
+
+      <button class="receipt-evidence-card" type="button" data-receipt-view="address" aria-expanded="false">
+        <div class="receipt-evidence-card-summary">
+          <b>02 / DIFFERENT RESTAURANTS, REPEATED ADDRESSES</b>
+          <span>Apparently distinct restaurants can converge on the same small set of physical addresses.</span>
+        </div>
+
+        <div class="receipt-evidence-card-detail">
+          <p class="receipt-address-summary">The platform may present many separate restaurant identities while their physical production sites remain concentrated.</p>
+        </div>
+      </button>
+    </div>
+  </article>
+</section>
+
+<section id="platform-transition" class="platform-transition" data-index="02" aria-labelledby="platformTransitionTitle" hidden>
+  <h2 id="platformTransitionTitle" class="sr-only">What the platform rewards and does not reward</h2>
+
+  <div class="platform-transition-half platform-transition-rewarded">
+    <small>WHAT THE PLATFORM REWARDS</small>
+    <h3>What remains visible to the system</h3>
+
+    <ul>
+      <li><span>01</span>Low displayed price</li>
+      <li><span>02</span>High sales volume</li>
+      <li><span>03</span>Short delivery time</li>
+      <li><span>04</span>Wide delivery reach</li>
+      <li><span>05</span>Promotional performance</li>
+    </ul>
+  </div>
+
+  <div class="platform-transition-half platform-transition-unrewarded">
+    <small>WHAT THE PLATFORM DOES NOT REWARD</small>
+    <h3>What remains invisible to the platform</h3>
+
+    <ul>
+      <li><span>01</span>Dining space</li>
+      <li><span>02</span>Street visibility</li>
+      <li><span>03</span>Customer access</li>
+      <li><span>04</span>Interior experience</li>
+      <li><span>05</span>A recognizable storefront</li>
+    </ul>
+  </div>
+</section>
+
+<section id="dark-kitchens" class="split tracked dark-kitchen-investigation" data-index="03">
+  <div class="media dark grid dark-kitchen-media">
+    <div class="dark-kitchen-board" aria-live="polite">
+      <svg class="dark-kitchen-links" aria-hidden="true"></svg>
+
+      <div class="dark-kitchen-board-label">
+        <small>03 / DARK KITCHENS</small>
+        <strong>FIELD EVIDENCE + SPATIAL TYPOLOGIES</strong>
+      </div>
+
+      <div class="dark-kitchen-node-layer" id="darkKitchenNodeLayer">
+        <p class="dark-kitchen-board-placeholder">Typology diagrams and field photographs will form an interactive evidence map here.</p>
+      </div>
+    </div>
+  </div>
+
+  <article class="text dark-kitchen-text">
+    <small>SPATIAL INVESTIGATION</small>
+    <h2>Dark kitchens are ordinary urban spaces reorganized for platform-based food production.</h2>
+
+    <div class="dark-kitchen-accordion" aria-label="Dark-kitchen investigation">
+      <button class="dark-kitchen-card active" type="button" data-dark-kitchen-view="definition" aria-expanded="true">
+        <div class="dark-kitchen-card-summary">
+          <b>01 / WHAT IS A DARK KITCHEN?</b>
+          <span>A delivery-oriented food-production space with limited or no conventional dining room or street-facing storefront.</span>
+        </div>
+
+        <div class="dark-kitchen-card-detail">
+          <p>The term describes an operating model rather than a single architectural form. A dark kitchen may occupy a basement, market stall, retail unit, enclosed compound, alley building, or another space adapted for platform-based food production.</p>
+        </div>
+      </button>
+
+      <button class="dark-kitchen-card" type="button" data-dark-kitchen-view="typology" aria-expanded="false">
+        <div class="dark-kitchen-card-summary">
+          <b>02 / FIELD TYPOLOGIES</b>
+          <span>Field investigation revealed several recurring relationships between production space, access, and surrounding urban form.</span>
+        </div>
+      </button>
+
+      <div class="dark-kitchen-filter-dock" role="group" aria-label="Filter dark-kitchen typologies">
+        <button type="button" class="active" data-typology="all">ALL</button>
+        <button type="button" data-typology="hutong-alley">HUTONG ALLEY</button>
+        <button type="button" data-typology="basement">BASEMENT</button>
+        <button type="button" data-typology="enclosed-zone">ENCLOSED ZONE</button>
+        <button type="button" data-typology="podium-retail">PODIUM RETAIL</button>
+        <button type="button" data-typology="retail-cluster">RETAIL CLUSTER</button>
+        <button type="button" data-typology="market">MARKET</button>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="demo" class="split tracked demo-section" data-index="04">
+  <div class="media dark grid demo-media">
+    <div class="demo-video-stage" aria-live="polite">
+      <video id="demoVideo" src="assets/videos/demo.mp4" muted playsinline controls preload="metadata"></video>
+      <div class="demo-video-placeholder" id="demoVideoPlaceholder">
+        <small>04 / PROJECT DEMO</small>
+        <strong>SCREEN RECORDING PLACEHOLDER</strong>
+        <span>Add the final walkthrough video here.</span>
+      </div>
+    </div>
+  </div>
+
+  <article class="text demo-text">
+    <small>FROM OBSERVATION TO CLASSIFICATION</small>
+    <h2>The demo turns platform traces and spatial clues into a reviewable classification workflow.</h2>
+
+    <div class="demo-process-card">
+      <div class="demo-process-heading">
+        <b>01 / FILTERING PROCESS</b>
+        <span>Potential ghost kitchens were identified by combining shared addresses, unusual building types, missing storefront images, and kitchen-only photographs.</span>
+      </div>
+
+      <p>Conventional malls, food courts, chain stores, and clearly visible storefronts were excluded, while ambiguous cases were manually reviewed.</p>
+
+      <div class="demo-process-steps" aria-label="Filtering process counts">
+        <div><strong>9,652</strong><span>Raw restaurant listings</span></div>
+        <div><strong>6,520</strong><span>Conventional locations excluded</span></div>
+        <div><strong>591</strong><span>Large-mall cases excluded</span></div>
+        <div><strong>1,032</strong><span>High-confidence shared-location candidates</span></div>
+        <div><strong>932</strong><span>Hidden-location cases manually verified</span></div>
+        <div><strong>1,964</strong><span>Potential ghost kitchens identified</span></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="interlude light materiality-interlude">
+  <blockquote class="materiality-quote">
+    “Artificial intelligence is both embodied and material, made from natural resources, fuel, human labor, infrastructures, logistics, histories, and classifications.”
+  </blockquote>
+
+  <p class="materiality-attribution">
+    <strong>Kate Crawford</strong>
+    <span>Atlas of AI (2021)</span>
+  </p>
+</section>
+
+<section id="compression" class="split tracked future-section" data-index="05">
+  <div class="media grid lightgrid future-media">
+    <div class="label">05 / NEXT RESEARCH PHASE</div>
+
+    <div class="future-research-map" aria-label="Next research agenda">
+      <article class="future-column future-known">
+        <small>WHAT IS KNOWN</small>
+        <strong>Spatial patterns</strong>
+        <ul>
+          <li>Dark kitchens occupy ordinary buildings</li>
+          <li>Multiple brands share addresses</li>
+          <li>Production is hidden from the street</li>
+          <li>Similar types recur across districts</li>
+        </ul>
+      </article>
+
+      <article class="future-column future-hidden">
+        <small>WHAT REMAINS HIDDEN</small>
+        <strong>Economic and labor conditions</strong>
+        <ul>
+          <li>Rent and site selection</li>
+          <li>Platform fees and margins</li>
+          <li>Order volume and risk</li>
+          <li>Merchant and rider conditions</li>
+        </ul>
+      </article>
+
+      <article class="future-column future-methods">
+        <small>NEXT QUESTION</small>
+        <strong>Why here, and who bears the cost?</strong>
+        <ul>
+          <li>Do lower rents attract dark kitchens?</li>
+          <li>Does foot traffic still matter?</li>
+          <li>How do delivery zones shape location?</li>
+          <li>Who carries the risk?</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <article class="text future-text">
+    <small>NEXT RESEARCH PHASE</small>
+    <h2>Food-delivery platforms also depend on space, rent, labor, logistics, and infrastructure.</h2>
+
+    <p class="future-summary">The locations have been identified. The next phase will examine how these spaces are sustained through rent, platform fees, order volume, labor conditions, and the distribution of risk across merchants, workers, and platforms.</p>
+
+   
+  </article>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

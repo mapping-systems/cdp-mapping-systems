@@ -1,0 +1,14 @@
+html,body{margin:0;width:100%;height:100%;font-family:Arial,Helvetica,sans-serif;background:#f5f3ee}
+#map{position:absolute;inset:0}
+.panel{position:absolute;top:24px;left:24px;width:310px;padding:18px 20px;box-sizing:border-box;background:rgba(250,248,242,.92);border:1px solid rgba(25,25,25,.18);backdrop-filter:blur(8px);z-index:2}
+.eyebrow{font-size:10px;letter-spacing:.15em;margin-bottom:9px;color:#666}
+h1{font-size:21px;line-height:1.1;font-weight:500;margin:0 0 10px}
+p{font-size:12px;line-height:1.45;margin:0;color:#444}
+.legend{margin-top:18px}.legend-title{font-size:11px;margin-bottom:7px}
+.gradient{height:9px;background:linear-gradient(90deg,#fee5d9 0%,#fcbba1 25%,#fc9272 50%,#ef3b2c 75%,#99000d 100%)}
+.legend-scale{display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:#666}
+.height-note{margin-top:12px;font-size:11px}
+.coverage-note{margin-top:16px;padding-top:12px;border-top:1px solid rgba(25,25,25,.15);font-size:10px;line-height:1.4;color:#666}
+.maplibregl-popup-content{font-family:Arial,Helvetica,sans-serif;font-size:12px;padding:12px 14px}
+.popup-title{font-weight:700;margin-bottom:6px}.popup-row{display:flex;gap:14px;justify-content:space-between;margin:3px 0}
+@media(max-width:640px){.panel{top:12px;left:12px;right:12px;width:auto}}
