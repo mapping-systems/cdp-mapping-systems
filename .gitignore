@@ -34,3 +34,5 @@ node_modules/
 __pycache__/
 *.pyc
 /cdptools.egg-info
+content/Assignments/project/damage/damage data/UNOSAT_CE20130604SYR_Syria_Damage_Assessment_2016_shp/
+content/Assignments/project/damage/damage data/damage sites aleppo/
