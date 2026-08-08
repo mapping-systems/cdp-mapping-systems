@@ -1,0 +1,2 @@
+# A raw browser archive may contain cookies, tokens, and private request data.
+inputs/*.raw.har

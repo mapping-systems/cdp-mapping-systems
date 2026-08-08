@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "name": "generalized_morningside_study_route",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "route-01",
+        "name": "Generalized weekday study route",
+        "feature_type": "route",
+        "sequence": 0,
+        "narrative": "A privacy-preserving mental map connecting public transit, studio, library, and park edge.",
+        "privacy_level": "generalized public-place route",
+        "privacy_note": "Illustrative route; not exported location history and not an exact GPS trace."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.96419, 40.80767],
+          [-73.96372, 40.80782],
+          [-73.96248, 40.80793],
+          [-73.96142, 40.80835],
+          [-73.96073, 40.80876],
+          [-73.96135, 40.80812],
+          [-73.96234, 40.80749],
+          [-73.96317, 40.80664],
+          [-73.96165, 40.80625],
+          [-73.95972, 40.80578],
+          [-73.95704, 40.80528]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "stop-01",
+        "name": "116 St–Columbia University subway entrance",
+        "feature_type": "stop",
+        "sequence": 1,
+        "activity": "arrival / departure",
+        "narrative": "Transit access anchors the west end of the route.",
+        "privacy_level": "public place",
+        "observation": "Transit access anchors the west end of the route."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96419, 40.80767]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "stop-02",
+        "name": "Fayerweather Hall",
+        "feature_type": "stop",
+        "sequence": 2,
+        "activity": "studio / class",
+        "narrative": "The route's primary daytime destination.",
+        "privacy_level": "public institutional place",
+        "observation": "The route's primary daytime destination."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96073, 40.80876]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "stop-03",
+        "name": "Butler Library",
+        "feature_type": "stop",
+        "sequence": 3,
+        "activity": "study",
+        "narrative": "A second indoor work location along the routine.",
+        "privacy_level": "public institutional place",
+        "observation": "A second indoor work location along the routine."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.96317, 40.80664]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "stop-04",
+        "name": "Morningside Park west entrance",
+        "feature_type": "stop",
+        "sequence": 4,
+        "activity": "outdoor break",
+        "narrative": "The park edge marks a shift from campus interiors to public open space.",
+        "privacy_level": "public place",
+        "observation": "The park edge marks a shift from campus interiors to public open space."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.95704, 40.80528]
+      }
+    }
+  ]
+}

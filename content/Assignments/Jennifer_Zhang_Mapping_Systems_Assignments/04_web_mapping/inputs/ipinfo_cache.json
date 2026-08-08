@@ -1,0 +1,72 @@
+{
+  "2600:9000:2140:4c00:1:b79c:7440:93a1": {
+    "city": "Seattle",
+    "country": "US",
+    "ip": "2600:9000:2140:4c00:1:b79c:7440:93a1",
+    "loc": "47.6062,-122.3321",
+    "org": "AS16509 Amazon.com, Inc.",
+    "postal": "98101",
+    "region": "Washington",
+    "timezone": "America/Los_Angeles"
+  },
+  "2600:9000:28b2:3a00:1:b79c:7440:93a1": {
+    "city": "Seattle",
+    "country": "US",
+    "ip": "2600:9000:28b2:3a00:1:b79c:7440:93a1",
+    "loc": "47.6062,-122.3321",
+    "org": "AS16509 Amazon.com, Inc.",
+    "postal": "98101",
+    "region": "Washington",
+    "timezone": "America/Los_Angeles"
+  },
+  "2600:9000:28b2:9600:1:b79c:7440:93a1": {
+    "city": "Seattle",
+    "country": "US",
+    "ip": "2600:9000:28b2:9600:1:b79c:7440:93a1",
+    "loc": "47.6062,-122.3321",
+    "org": "AS16509 Amazon.com, Inc.",
+    "postal": "98101",
+    "region": "Washington",
+    "timezone": "America/Los_Angeles"
+  },
+  "2606:4700:20::681a:dcc": {
+    "city": "San Francisco",
+    "country": "US",
+    "ip": "2606:4700:20::681a:dcc",
+    "loc": "37.7621,-122.3971",
+    "org": "AS13335 Cloudflare, Inc.",
+    "postal": "94107",
+    "region": "California",
+    "timezone": "America/Los_Angeles"
+  },
+  "2606:4700:20::ac43:479f": {
+    "city": "San Francisco",
+    "country": "US",
+    "ip": "2606:4700:20::ac43:479f",
+    "loc": "37.7621,-122.3971",
+    "org": "AS13335 Cloudflare, Inc.",
+    "postal": "94107",
+    "region": "California",
+    "timezone": "America/Los_Angeles"
+  },
+  "2606:50c0:8000::153": {
+    "city": "San Francisco",
+    "country": "US",
+    "ip": "2606:50c0:8000::153",
+    "loc": "37.7621,-122.3971",
+    "org": "AS54113 Fastly, Inc.",
+    "postal": "94107",
+    "region": "California",
+    "timezone": "America/Los_Angeles"
+  },
+  "2606:50c0:8001::153": {
+    "city": "San Francisco",
+    "country": "US",
+    "ip": "2606:50c0:8001::153",
+    "loc": "37.7621,-122.3971",
+    "org": "AS54113 Fastly, Inc.",
+    "postal": "94107",
+    "region": "California",
+    "timezone": "America/Los_Angeles"
+  }
+}

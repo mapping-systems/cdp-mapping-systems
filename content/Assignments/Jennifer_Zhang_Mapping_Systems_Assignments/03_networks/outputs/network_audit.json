@@ -1,0 +1,16 @@
+{
+  "graph_snapshot_sha256": "79a0d3b2da417b40011061f0a882b055bf9aa321e4bef1a610bd51d309737af1",
+  "graph_nodes": 2431,
+  "graph_edges": 3856,
+  "network_type": "walk",
+  "measured_places": 4,
+  "unique_pairs_expected": 6,
+  "unique_pairs_calculated": 6,
+  "reachable_pairs": 6,
+  "maximum_snap_connector_m": 20.138522042386665,
+  "network_not_shorter_than_euclidean": true,
+  "minimum_detour_ratio": 1.3272115014366435,
+  "maximum_detour_ratio": 1.8192598430697429,
+  "figures_created": 8,
+  "interactive_map": "09_interactive_routes.html"
+}

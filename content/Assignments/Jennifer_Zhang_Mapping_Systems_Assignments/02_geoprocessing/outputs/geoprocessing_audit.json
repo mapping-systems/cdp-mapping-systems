@@ -1,0 +1,23 @@
+{
+  "personal_input_features": 5,
+  "route_features": 1,
+  "stop_features": 4,
+  "related_wifi_input_records": 3319,
+  "analysis_crs": "EPSG:2263",
+  "output_crs": "EPSG:4326",
+  "route_buffer_m": 250.0,
+  "route_length_m": 1177.1,
+  "wifi_records_intersecting_route_buffer": 15,
+  "corridor_access_type_counts": {
+    "Free": 15
+  },
+  "nearest_join_missing": 0,
+  "nearest_distance_min_m": 8.9,
+  "nearest_distance_max_m": 183.4,
+  "route_sample_interval_m": 25.0,
+  "route_sample_count": 49,
+  "route_sample_nearest_distance_median": 204.2,
+  "route_sample_nearest_distance_max": 404.8,
+  "route_samples_within_250m_pct": 71.4,
+  "output_stop_rows": 4
+}

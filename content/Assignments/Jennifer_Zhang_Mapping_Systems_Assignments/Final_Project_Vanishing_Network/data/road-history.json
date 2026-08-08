@@ -1,0 +1,42 @@
+{
+  "title": "Hailun mapped drivable-road history",
+  "source": "ohsome API 1.10.4 / OpenStreetMap history",
+  "source_url": "https://docs.ohsome.org/ohsome-api/stable/endpoints.html",
+  "retrieved": "2026-07-30",
+  "boundary": "OpenStreetMap relation 2755368, exact polygon",
+  "boundary_area_km2": 4653.47,
+  "filter": "(highway=motorway or motorway_link or trunk or trunk_link or primary or primary_link or secondary or secondary_link or tertiary or tertiary_link or unclassified or residential or service or living_street or track) and geometry:line",
+  "claim": "OSM mapping coverage through time, not road construction dates",
+  "historical_segment_geometry_available": false,
+  "map_encoding": "Current clipped road geometry is varied by the historical aggregate length index; it does not locate historical additions.",
+  "records": [
+    {
+      "year": 2014,
+      "mapped_length_m": 115845.92,
+      "mapped_length_km": 115.8,
+      "osm_way_count": 6,
+      "km_per_100_km2": 2.5
+    },
+    {
+      "year": 2015,
+      "mapped_length_m": 333007.39,
+      "mapped_length_km": 333.0,
+      "osm_way_count": 13,
+      "km_per_100_km2": 7.2
+    },
+    {
+      "year": 2020,
+      "mapped_length_m": 1097822.17,
+      "mapped_length_km": 1097.8,
+      "osm_way_count": 778,
+      "km_per_100_km2": 23.6
+    },
+    {
+      "year": 2025,
+      "mapped_length_m": 1351692.45,
+      "mapped_length_km": 1351.7,
+      "osm_way_count": 823,
+      "km_per_100_km2": 29.0
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+feature_id,name,feature_type,sequence,activity,narrative,privacy_level,nearest_wifi_objectid,nearest_wifi_name,nearest_provider,nearest_access_type,nearest_location_type,nearest_distance_m,distance_along_route_m,wifi_records_within_250m
+stop-01,116 St–Columbia University subway entrance,stop,1,arrival / departure,Transit access anchors the west end of the route.,public place,11390,116 St-Columbia University (1),Transit Wireless,Free,Subway Station,8.883277600580945,0.0,7
+stop-02,Fayerweather Hall,stop,2,studio / class,The route's primary daytime destination.,public institutional place,12896,mn-09-120546,LinkNYC - Citybridge,Free,Outdoor Kiosk,160.72651425357168,323.135058685478,3
+stop-03,Butler Library,stop,3,study,A second indoor work location along the routine.,public institutional place,11390,116 St-Columbia University (1),Transit Wireless,Free,Subway Station,143.97382142418124,637.8821135822126,8
+stop-04,Morningside Park west entrance,stop,4,outdoor break,The park edge marks a shift from campus interiors to public open space.,public place,11389,"116 St (A, B,C)",Transit Wireless,Free,Subway Station,183.3790398299,1177.1280846674215,4

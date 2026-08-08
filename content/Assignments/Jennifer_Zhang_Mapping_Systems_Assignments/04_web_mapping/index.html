@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive web map of approximate server and CDN locations extracted from a HAR file."
+    />
+    <title>Where does one page load from? · Web Mapping</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://server.arcgisonline.com" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#map">Skip to the map</a>
+
+    <main class="map-shell">
+      <div id="map" aria-label="Interactive map of approximate web request server locations"></div>
+      <div class="map-shade" aria-hidden="true"></div>
+      <div class="noise" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="wordmark" href="https://jzhang2468.github.io/mapping-system-final-project/" target="_blank" rel="noreferrer">
+          <span class="wordmark-box">WR</span>
+          <span><strong>WEB REQUESTS</strong><small>HAR / SERVER LOCATIONS</small></span>
+        </a>
+        <div class="top-actions">
+          <a class="text-action" href="https://jzhang2468.github.io/mapping-system-final-project/" target="_blank" rel="noreferrer">
+            Captured site <span aria-hidden="true">↗</span>
+          </a>
+          <button id="reset-view" class="text-action" type="button">Reset view</button>
+          <button id="open-method" class="square-action" type="button" aria-controls="method-panel" aria-expanded="false">
+            <span aria-hidden="true">i</span><span class="sr-only">Open method panel</span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="evidence-nav" aria-label="Filter request types">
+        <p class="micro-label">REQUEST LAYERS</p>
+        <button class="filter-button is-active" type="button" data-role="all" aria-pressed="true">
+          <span class="filter-index">00</span><span class="filter-name">All requests</span><strong id="all-filter-count">—</strong>
+        </button>
+        <button class="filter-button" type="button" data-role="site" aria-pressed="false">
+          <span class="filter-index">01</span><span class="filter-name">Site code + data</span><strong id="site-filter-count">—</strong>
+        </button>
+        <button class="filter-button" type="button" data-role="terrain" aria-pressed="false">
+          <span class="filter-index">02</span><span class="filter-name">Terrain tiles</span><strong id="terrain-filter-count">—</strong>
+        </button>
+        <button class="filter-button" type="button" data-role="imagery" aria-pressed="false">
+          <span class="filter-index">03</span><span class="filter-name">Imagery tiles</span><strong id="imagery-filter-count">—</strong>
+        </button>
+      </nav>
+
+      <section class="story-panel" aria-labelledby="page-title">
+        <p class="eyebrow">04 / WEB MAPPING</p>
+        <h1 id="page-title">WHERE DOES<br />ONE PAGE<br /><span>LOAD FROM?</span></h1>
+        <p class="story-copy">
+          A Chrome HAR records every request made while a page loads. These points map the approximate IP locations behind one visit to <em>Vanishing Network</em>.
+        </p>
+      </section>
+
+      <aside class="metrics-panel" aria-labelledby="metrics-title">
+        <div class="panel-heading">
+          <p id="metrics-title" class="micro-label">CAPTURE SUMMARY</p>
+          <span class="accuracy-badge">APPROXIMATE</span>
+        </div>
+        <div class="metric-grid" aria-live="polite">
+          <div><strong id="request-count">—</strong><span>requests</span></div>
+          <div><strong id="server-count">—</strong><span>server IPs</span></div>
+          <div><strong id="place-count">—</strong><span>mapped places</span></div>
+        </div>
+        <div class="location-list" id="location-list"></div>
+        <p class="metrics-note">
+          The map locates server and CDN IP labels. It does not locate the visitor, author, or subject of the website.
+        </p>
+      </aside>
+
+      <section class="host-rail" aria-labelledby="host-rail-title">
+        <div class="rail-heading">
+          <p id="host-rail-title" class="micro-label">REQUEST SHARE BY RESOURCE</p>
+          <p id="status" class="status" aria-live="polite">Loading static GeoJSON…</p>
+        </div>
+        <div id="share-bar" class="share-bar" aria-label="Proportional request counts by resource type"></div>
+        <div id="share-labels" class="share-labels"></div>
+      </section>
+
+      <aside id="method-panel" class="method-panel" aria-labelledby="method-title" aria-hidden="true" inert>
+        <div class="method-header">
+          <p class="eyebrow">METHOD / LIMITS</p>
+          <button id="close-method" class="close-button" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close method panel</span></button>
+        </div>
+        <h2 id="method-title">HAR → GEOJSON → WEB MAP</h2>
+        <ol class="workflow-list">
+          <li><span>01</span><div><strong>Capture</strong><p>Clear Chrome's Network log, reload the selected public page, and export the HAR.</p></div></li>
+          <li><span>02</span><div><strong>Extract</strong><p>Read each request URL and <code>serverIPAddress</code> with the instructor's Python workflow.</p></div></li>
+          <li><span>03</span><div><strong>Geolocate</strong><p>Convert each unique public IP into an approximate latitude and longitude.</p></div></li>
+          <li><span>04</span><div><strong>Map</strong><p>Load the generated static GeoJSON as a Leaflet layer and group exact co-locations.</p></div></li>
+        </ol>
+        <div class="method-caveat">
+          <p class="micro-label">WHAT THE DATA CANNOT SAY</p>
+          <p>CDNs and anycast networks can make one IP appear at a database label or network edge rather than a single physical machine. The result is a snapshot of web infrastructure, not a route trace and not a map of people.</p>
+        </div>
+        <div class="method-links">
+          <a href="outputs/ip_locations.geojson" download>Download GeoJSON ↓</a>
+          <a href="https://github.com/mapping-systems/geolocate-har-file" target="_blank" rel="noreferrer">Instructor workflow ↗</a>
+        </div>
+      </aside>
+
+      <ul id="accessible-server-list" class="sr-only" aria-label="Mapped server records"></ul>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="outputs/ip_locations.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

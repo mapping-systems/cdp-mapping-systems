@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "name": "morningside_public_study_locations",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "place-01",
+        "sequence": 1,
+        "name": "116 St–Columbia University subway entrance",
+        "short_name": "116 St subway",
+        "role": "transit",
+        "privacy_level": "public place"
+      },
+      "geometry": {"type": "Point", "coordinates": [-73.96419, 40.80767]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "place-02",
+        "sequence": 2,
+        "name": "Fayerweather Hall",
+        "short_name": "Fayerweather Hall",
+        "role": "studio / class",
+        "privacy_level": "public institutional place"
+      },
+      "geometry": {"type": "Point", "coordinates": [-73.96073, 40.80876]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "place-03",
+        "sequence": 3,
+        "name": "Butler Library",
+        "short_name": "Butler Library",
+        "role": "study",
+        "privacy_level": "public institutional place"
+      },
+      "geometry": {"type": "Point", "coordinates": [-73.96317, 40.80664]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": "place-04",
+        "sequence": 4,
+        "name": "Morningside Park west entrance",
+        "short_name": "Morningside Park",
+        "role": "outdoor break",
+        "privacy_level": "public place"
+      },
+      "geometry": {"type": "Point", "coordinates": [-73.95704, 40.80528]}
+    }
+  ]
+}
