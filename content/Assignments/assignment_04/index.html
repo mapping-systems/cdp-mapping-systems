@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uber Eats HAR Network Geography</title>
+
+  <link
+    href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="hud-stack">
+    <section class="title-card">
+      <div class="eyebrow">NETWORK TRACE</div>
+      <h1>Where Does Uber Eats Connect?</h1>
+    </section>
+
+    <section class="legend" id="provider-filter">
+      <div class="legend-title">PROVIDER</div>
+      <button class="provider-item active" data-provider="All"><span class="dot"></span>ALL</button>
+      <button class="provider-item" data-provider="Uber"><span class="dot"></span>UBER</button>
+      <button class="provider-item" data-provider="Google"><span class="dot"></span>GOOGLE</button>
+      <button class="provider-item" data-provider="Microsoft"><span class="dot"></span>MICROSOFT</button>
+      <button class="provider-item" data-provider="TikTok"><span class="dot"></span>TIKTOK</button>
+      <button class="provider-item" data-provider="X / Twitter"><span class="dot"></span>X / TWITTER</button>
+      <button class="provider-item" data-provider="Pinterest"><span class="dot"></span>PINTEREST</button>
+      <button class="provider-item" data-provider="Amazon / AWS"><span class="dot"></span>AMAZON / AWS</button>
+      <button class="provider-item" data-provider="The Trade Desk"><span class="dot"></span>THE TRADE DESK</button>
+      <button class="provider-item" data-provider="Other"><span class="dot"></span>OTHER</button>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Kitchen Rental Geography — Beijing</title>
+  <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="map"></div>
+  <div class="panel">
+    <div class="eyebrow">BEIJING · ASSIGNMENT 02</div>
+    <h1>Dark Kitchen Rental Geography</h1>
+    <p>Color = median delivery-oriented asking rent. Height = high-confidence dark kitchen count.</p>
+    <div class="legend">
+      <div class="legend-title">Delivery-oriented rent</div>
+      <div class="gradient"></div>
+      <div class="legend-scale"><span>Lower</span><span>Higher</span></div>
+      <div class="height-note">Taller hex = more dark kitchens</div>
+    </div>
+    <div class="coverage-note">Empty areas indicate missing rental observations, not zero rent or zero activity.</div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

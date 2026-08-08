@@ -1,0 +1,162 @@
+{
+  "time_period": "lunch",
+  "aggregation": "median within each location; ALL LOCATIONS is median of location medians",
+  "data": {
+    "ALL LOCATIONS": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 24.0,
+        "displayed_sales": 3000.0,
+        "distance_m": 1200.0,
+        "delivery_time_min": 34.0,
+        "sample_n": 1000
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.9,
+        "displayed_sales": 7000.0,
+        "distance_m": 700.0,
+        "delivery_time_min": 30.5,
+        "sample_n": 1000
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 6.85,
+        "displayed_sales": 600.0,
+        "distance_m": 1400.0,
+        "delivery_time_min": 28.0,
+        "sample_n": 1000
+      }
+    },
+    "Qingnianlu": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 25.0,
+        "displayed_sales": 3000.0,
+        "distance_m": 1900.0,
+        "delivery_time_min": 34.0,
+        "sample_n": 200
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.9,
+        "displayed_sales": 7000.0,
+        "distance_m": 1200.0,
+        "delivery_time_min": 31.5,
+        "sample_n": 200
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 6.9,
+        "displayed_sales": 800.0,
+        "distance_m": 1700.0,
+        "delivery_time_min": 25.0,
+        "sample_n": 200
+      }
+    },
+    "Zhongguancun": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 24.0,
+        "displayed_sales": 4000.0,
+        "distance_m": 1300.0,
+        "delivery_time_min": 43.0,
+        "sample_n": 200
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.9,
+        "displayed_sales": 6500.0,
+        "distance_m": 800.0,
+        "delivery_time_min": 30.5,
+        "sample_n": 200
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 6.85,
+        "displayed_sales": 350.0,
+        "distance_m": 1400.0,
+        "delivery_time_min": 30.0,
+        "sample_n": 200
+      }
+    },
+    "Fengtai": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 23.0,
+        "displayed_sales": 2000.0,
+        "distance_m": 1100.0,
+        "delivery_time_min": 28.0,
+        "sample_n": 200
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.9,
+        "displayed_sales": 4000.0,
+        "distance_m": 700.0,
+        "delivery_time_min": 32.0,
+        "sample_n": 200
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 6.4,
+        "displayed_sales": 600.0,
+        "distance_m": 861.0,
+        "delivery_time_min": 25.0,
+        "sample_n": 200
+      }
+    },
+    "Wudaokou": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 24.0,
+        "displayed_sales": 4000.0,
+        "distance_m": 1200.0,
+        "delivery_time_min": 35.0,
+        "sample_n": 200
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.45,
+        "displayed_sales": 9999.0,
+        "distance_m": 400.0,
+        "delivery_time_min": 30.0,
+        "sample_n": 200
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 8.14,
+        "displayed_sales": 550.0,
+        "distance_m": 2450.0,
+        "delivery_time_min": 35.5,
+        "sample_n": 200
+      }
+    },
+    "WangjingSOHO": {
+      "food_recommend": {
+        "label": "Recommendation",
+        "displayed_price": 25.0,
+        "displayed_sales": 3000.0,
+        "distance_m": 1000.0,
+        "delivery_time_min": 31.0,
+        "sample_n": 200
+      },
+      "sharp_shooter": {
+        "label": "Shen Qiang Shou",
+        "displayed_price": 17.9,
+        "displayed_sales": 8499.5,
+        "distance_m": 450.0,
+        "delivery_time_min": 30.0,
+        "sample_n": 200
+      },
+      "pin_haofan": {
+        "label": "Pin Hao Fan",
+        "displayed_price": 6.4,
+        "displayed_sales": 750.0,
+        "distance_m": 1300.0,
+        "delivery_time_min": 28.0,
+        "sample_n": 200
+      }
+    }
+  }
+}
