@@ -1,0 +1,70 @@
+iso3: CHE
+category:
+  name: railways
+  formats:
+  - gpkg
+  - shp
+  - geojson
+  - kml
+  skip_pcodes: false
+  boundary_resolution: null
+  hdx:
+    title: Railways
+    notes: 'Railway lines and stations tagged `railway=*`: rail lines, tram tracks,
+      and stations. Useful for transport accessibility analysis and basemap context.
+
+
+      Coverage reflects where volunteer mappers have been active. Urban areas are
+      usually well represented, remote areas may be sparse. Cross-check critical decisions
+      with local field knowledge.
+
+
+      - Source: [OpenStreetMap](https://www.openstreetmap.org), a free, collaborative
+      world map
+
+      - Tags: [railway](https://wiki.openstreetmap.org/wiki/Key:railway)
+
+      - Part of the [exports grid on HDX](https://data.humdata.org/organization/hot/)
+      by [HOT](https://www.hotosm.org/)
+
+      '
+    tags:
+    - facilities-infrastructure
+    - geodata
+    - railways
+    - transportation
+    license: hdx-odc-odbl
+    license_url: https://opendatacommons.org/licenses/odbl/1-0/
+    caveats: OpenStreetMap data is crowd sourced and cannot be considered to be exhaustive
+    dataset_source: OpenStreetMap contributors
+  overture:
+    enabled: false
+    theme: ''
+    feature_type: ''
+    select: []
+    where: []
+  osm:
+    enabled: true
+    select:
+    - feature_id AS id
+    - tags['name'] AS name
+    - tags['name:en'] AS name_en
+    - tags['railway'] AS railway
+    - tags['ele'] AS ele
+    - tags['operator:type'] AS operator_type
+    - tags['layer'] AS layer
+    - tags['addr:full'] AS addr_full
+    - tags['addr:city'] AS addr_city
+    - tags['source'] AS source
+    where: []
+    filter:
+      railway:
+      - rail
+      - station
+  transliterate:
+  - target: name_latin
+    source: name
+    prefer: name_en
+  temporal:
+    column: update_time
+source: osm

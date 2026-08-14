@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Trace — Web Mapping Assignment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="map"></div>
+
+<header id="panel">
+  <div class="eyebrow">Web Mapping · HAR Analysis</div>
+  <h1>Request Trace</h1>
+  <p class="sub">Every dot is a server that answered a request while loading the NAVER, the largest search engine in South Korea. The locations are traced from a HAR file back to a point on the globe.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-value" id="stat-count">–</span>
+      <span class="stat-label">requests</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-ips">–</span>
+      <span class="stat-label">unique IPs</span>
+    </div>
+  </div>
+</header>
+
+<div id="detail" class="detail hidden">
+  <button id="detail-close" aria-label="Close">×</button>
+  <div class="detail-ip" id="detail-ip">—</div>
+  <div class="detail-url" id="detail-url">—</div>
+</div>
+
+<div id="legend">
+  <span class="dot"></span> server that responded to a request
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

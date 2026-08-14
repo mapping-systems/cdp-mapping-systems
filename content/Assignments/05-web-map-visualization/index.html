@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open Restaurants — Seating Type &amp; Distance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <div id="legend">
+    <div class="legend-row"><span class="swatch" style="background:#FF6B35"></span> Your click location</div>
+    <div class="legend-row small-label">Glowing ring shows the 1,000 m search boundary</div>
+    <hr />
+    <h3>Restaurant distance</h3>
+    <div class="gradient-bar"></div>
+    <div class="gradient-labels"><span>closest</span><span>farthest</span></div>
+    <div class="legend-row small-label" style="margin-top:6px;">Thin lines connect each restaurant back to your click</div>
+  </div>
+
+  <div id="instructions">Click anywhere on the map to find nearby Open Restaurants.</div>
+
+  <script src="map.js"></script>
+</body>
+</html>

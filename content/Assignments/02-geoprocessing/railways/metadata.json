@@ -1,0 +1,433 @@
+{
+  "feature_count": 42066,
+  "geometry_types": {
+    "LINESTRING": 40821,
+    "POINT": 1234,
+    "POLYGON": 10,
+    "MULTIPOLYGON": 1
+  },
+  "bbox": [
+    5.9854625,
+    45.8295275,
+    10.286768,
+    47.7487009
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "VARCHAR",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "distinct_count": 42066,
+      "top_values": []
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "null_count": 40711,
+      "null_percent": 96.78,
+      "distinct_count": 1271,
+      "top_values": []
+    },
+    {
+      "name": "name_en",
+      "type": "VARCHAR",
+      "null_count": 42062,
+      "null_percent": 99.99,
+      "distinct_count": 4,
+      "top_values": [
+        {
+          "value": "Jungfraujoch",
+          "count": 1
+        },
+        {
+          "value": "Kleine Scheidegg",
+          "count": 1
+        },
+        {
+          "value": "Basel German Railway Station",
+          "count": 1
+        },
+        {
+          "value": "Geneva Railway Station",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "name_de",
+      "type": "VARCHAR",
+      "null_count": 42042,
+      "null_percent": 99.94,
+      "distinct_count": 24,
+      "top_values": [
+        {
+          "value": "Genf Flughafen",
+          "count": 1
+        },
+        {
+          "value": "Eigergletscher",
+          "count": 1
+        },
+        {
+          "value": "Jungfraujoch",
+          "count": 1
+        },
+        {
+          "value": "Kleine Scheidegg",
+          "count": 1
+        },
+        {
+          "value": "Pfauen",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "name_gsw",
+      "type": "VARCHAR",
+      "null_count": 42057,
+      "null_percent": 99.98,
+      "distinct_count": 2,
+      "top_values": [
+        {
+          "value": "\u00d6BB Feldkirch \u2013 Buchs",
+          "count": 8
+        },
+        {
+          "value": "Stei am Rhy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "name_fr",
+      "type": "VARCHAR",
+      "null_count": 42046,
+      "null_percent": 99.95,
+      "distinct_count": 20,
+      "top_values": [
+        {
+          "value": "Rarogne",
+          "count": 1
+        },
+        {
+          "value": "Vi\u00e8ge",
+          "count": 1
+        },
+        {
+          "value": "Jungfraujoch",
+          "count": 1
+        },
+        {
+          "value": "Lucerne",
+          "count": 1
+        },
+        {
+          "value": "Lo\u00e8che",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "railway",
+      "type": "VARCHAR",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "distinct_count": 2,
+      "top_values": [
+        {
+          "value": "rail",
+          "count": 40821
+        },
+        {
+          "value": "station",
+          "count": 1245
+        }
+      ]
+    },
+    {
+      "name": "ele",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "operator_type",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "layer",
+      "type": "VARCHAR",
+      "null_count": 36298,
+      "null_percent": 86.29,
+      "distinct_count": 10,
+      "top_values": [
+        {
+          "value": "1",
+          "count": 4257
+        },
+        {
+          "value": "-1",
+          "count": 911
+        },
+        {
+          "value": "-2",
+          "count": 270
+        },
+        {
+          "value": "2",
+          "count": 186
+        },
+        {
+          "value": "-3",
+          "count": 62
+        }
+      ]
+    },
+    {
+      "name": "addr_full",
+      "type": "VARCHAR",
+      "null_count": 42064,
+      "null_percent": 100.0,
+      "distinct_count": 2,
+      "top_values": [
+        {
+          "value": "M\u00fchledorfstrasse 20, 3018 Bern",
+          "count": 1
+        },
+        {
+          "value": "B\u00fcmplizstrasse 202, 3018 Bern",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "addr_city",
+      "type": "VARCHAR",
+      "null_count": 42030,
+      "null_percent": 99.91,
+      "distinct_count": 34,
+      "top_values": [
+        {
+          "value": "Z\u00fcrich",
+          "count": 3
+        },
+        {
+          "value": "Rupperswil",
+          "count": 1
+        },
+        {
+          "value": "Thun",
+          "count": 1
+        },
+        {
+          "value": "Saint-Prex",
+          "count": 1
+        },
+        {
+          "value": "Russin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "source",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "adm0_pcode",
+      "type": "VARCHAR",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "distinct_count": 1,
+      "top_values": [
+        {
+          "value": "CHE",
+          "count": 42066
+        }
+      ]
+    },
+    {
+      "name": "adm0_name",
+      "type": "VARCHAR",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "distinct_count": 1,
+      "top_values": [
+        {
+          "value": "Switzerland",
+          "count": 42066
+        }
+      ]
+    },
+    {
+      "name": "adm1_pcode",
+      "type": "VARCHAR",
+      "null_count": 13,
+      "null_percent": 0.03,
+      "distinct_count": 26,
+      "top_values": [
+        {
+          "value": "70761945B4468941998498",
+          "count": 7579
+        },
+        {
+          "value": "70761945B78940680080703",
+          "count": 5692
+        },
+        {
+          "value": "70761945B85268669280160",
+          "count": 3170
+        },
+        {
+          "value": "70761945B11338788345342",
+          "count": 3061
+        },
+        {
+          "value": "70761945B95773795125249",
+          "count": 3030
+        }
+      ]
+    },
+    {
+      "name": "adm1_name",
+      "type": "VARCHAR",
+      "null_count": 13,
+      "null_percent": 0.03,
+      "distinct_count": 26,
+      "top_values": [
+        {
+          "value": "Z\u00fcrich",
+          "count": 7579
+        },
+        {
+          "value": "Bern",
+          "count": 5692
+        },
+        {
+          "value": "Vaud",
+          "count": 3170
+        },
+        {
+          "value": "Aargau",
+          "count": 3061
+        },
+        {
+          "value": "Ticino",
+          "count": 3030
+        }
+      ]
+    },
+    {
+      "name": "adm2_pcode",
+      "type": "VARCHAR",
+      "null_count": 13,
+      "null_percent": 0.03,
+      "distinct_count": 163,
+      "top_values": [
+        {
+          "value": "98125504B49363097971591",
+          "count": 2441
+        },
+        {
+          "value": "98125504B82321291336172",
+          "count": 1200
+        },
+        {
+          "value": "98125504B37328358973812",
+          "count": 1153
+        },
+        {
+          "value": "98125504B92328974580060",
+          "count": 1131
+        },
+        {
+          "value": "98125504B26983600896673",
+          "count": 1113
+        }
+      ]
+    },
+    {
+      "name": "adm2_name",
+      "type": "VARCHAR",
+      "null_count": 13,
+      "null_percent": 0.03,
+      "distinct_count": 163,
+      "top_values": [
+        {
+          "value": "Z\u00fcrich",
+          "count": 2441
+        },
+        {
+          "value": "Arlesheim",
+          "count": 1200
+        },
+        {
+          "value": "Gen\u00e8ve",
+          "count": 1153
+        },
+        {
+          "value": "Bern",
+          "count": 1131
+        },
+        {
+          "value": "Basel",
+          "count": 1113
+        }
+      ]
+    },
+    {
+      "name": "adm3_pcode",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "adm3_name",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "adm4_pcode",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "adm4_name",
+      "type": "VARCHAR",
+      "null_count": 42066,
+      "null_percent": 100.0,
+      "distinct_count": 0,
+      "top_values": []
+    },
+    {
+      "name": "name_latin",
+      "type": "VARCHAR",
+      "null_count": 40711,
+      "null_percent": 96.78,
+      "distinct_count": 1270,
+      "top_values": []
+    }
+  ],
+  "summary": "42,066 features. geometry types: 40,821 LINESTRING, 1,234 POINT, 10 POLYGON, 1 MULTIPOLYGON. 16 of 24 columns are >=50% null (name, name_en, name_de, name_gsw, name_fr, ele, operator_type, layer, addr_full, addr_city, source, adm3_pcode, adm3_name, adm4_pcode, adm4_name, name_latin).",
+  "temporal": null
+}

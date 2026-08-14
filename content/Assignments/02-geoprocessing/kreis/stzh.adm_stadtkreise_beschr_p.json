@@ -1,0 +1,138 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "stzh.adm_stadtkreise_beschr_p",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5319800266, 47.3458196853 ]
+			},
+			"properties" : {
+				"objid" : "1",
+				"objectid" : 1
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5578558878, 47.3521329089 ]
+			},
+			"properties" : {
+				"objid" : "2",
+				"objectid" : 2
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5254433999, 47.4212437221 ]
+			},
+			"properties" : {
+				"objid" : "3",
+				"objectid" : 3
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5743532965, 47.4028865226 ]
+			},
+			"properties" : {
+				"objid" : "4",
+				"objectid" : 4
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.4995069785, 47.4064859967 ]
+			},
+			"properties" : {
+				"objid" : "5",
+				"objectid" : 5
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5466735661, 47.392191815 ]
+			},
+			"properties" : {
+				"objid" : "6",
+				"objectid" : 6
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.4823120763, 47.3838972366 ]
+			},
+			"properties" : {
+				"objid" : "7",
+				"objectid" : 7
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5199684845, 47.3882165628 ]
+			},
+			"properties" : {
+				"objid" : "8",
+				"objectid" : 8
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5189353726, 47.379623708 ]
+			},
+			"properties" : {
+				"objid" : "9",
+				"objectid" : 9
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5411201401, 47.3728527494 ]
+			},
+			"properties" : {
+				"objid" : "10",
+				"objectid" : 10
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5777873771, 47.3711844335 ]
+			},
+			"properties" : {
+				"objid" : "11",
+				"objectid" : 11
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 8.5067775124, 47.3620944291 ]
+			},
+			"properties" : {
+				"objid" : "12",
+				"objectid" : 12
+			}
+		}
+	]
+}
